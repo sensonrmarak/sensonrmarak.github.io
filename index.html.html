@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Notes on Life</title>
+  
+  <!-- Fonts: Playfair Display for headings & Inter for reading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #faf8f5;
+      --card-bg: #ffffff;
+      --text-main: #2b2a27;
+      --text-muted: #737069;
+      --accent: #8b5e3c;
+      --accent-soft: #f2ebe3;
+      --border: #e8e3dc;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.7;
+      padding: 0 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 0 6rem;
+    }
+
+    /* --- Header / Bio --- */
+    header {
+      margin-bottom: 4rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2.5rem;
+    }
+
+    .site-title {
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .site-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .bio-box {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      background: var(--card-bg);
+      padding: 1.25rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .bio-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: #e2dad1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .bio-text {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* --- Filters --- */
+    .filter-tags {
+      display: flex;
+      gap: 0.6rem;
+      margin-bottom: 2.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+
+    .tag-btn {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tag-btn.active, .tag-btn:hover {
+      background: var(--text-main);
+      color: #fff;
+      border-color: var(--text-main);
+    }
+
+    /* --- Post Feed --- */
+    .posts-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .post-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.03);
+    }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .post-category {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 0.15rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .post-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      line-height: 1.35;
+      margin-bottom: 0.75rem;
+    }
+
+    .post-excerpt {
+      color: var(--text-muted);
+      font-size: 1rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .read-more {
+      margin-top: 1.25rem;
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    /* --- Modal for Reading Post --- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      border-radius: 16px;
+      max-width: 680px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 3rem 2.5rem;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: transparent;
+      border: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .modal-title {
+      font-family: var(--font-serif);
+      font-size: 2.1rem;
+      line-height: 1.3;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-body p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      color: #383733;
+    }
+
+    /* --- Newsletter Box --- */
+    .subscribe-card {
+      margin-top: 5rem;
+      background: var(--accent-soft);
+      border-radius: 14px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    .subscribe-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .subscribe-form {
+      display: flex;
+      max-width: 400px;
+      margin: 1.5rem auto 0;
+      gap: 0.5rem;
+    }
+
+    .subscribe-form input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .subscribe-form button {
+      background: var(--text-main);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.4rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1 class="site-title">Quiet Observations</h1>
+      <p class="site-subtitle">Daily essays on living simply, thinking clearly, and noticing the little things.</p>
+      
+      <div class="bio-box">
+        <div class="bio-avatar">✍️</div>
+        <p class="bio-text">
+          Written by <strong>Your Name</strong>. A record of lessons learned, quiet mornings, and navigating life one day at a time.
+        </p>
+      </div>
+    </header>
+
+    <!-- Category Filters -->
+    <div class="filter-tags">
+      <button class="tag-btn active" onclick="filterPosts('all')">All Entries</button>
+      <button class="tag-btn" onclick="filterPosts('Solitude')">Solitude</button>
+      <button class="tag-btn" onclick="filterPosts('Mindset')">Mindset</button>
+      <button class="tag-btn" onclick="filterPosts('Routine')">Routine</button>
+    </div>
+
+    <!-- Blog Posts Feed -->
+    <main class="posts-list" id="postFeed">
+      <!-- Posts are injected dynamically via JavaScript -->
+    </main>
+
+    <!-- Daily Newsletter Signup -->
+    <section class="subscribe-card">
+      <h3>One thought in your inbox every morning</h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">No spam. Just an honest reflection to start your day.</p>
+      <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <footer>
+      &copy; <span id="year"></span> Daily Life Notes • Built for reflection.
+    </footer>
+  </div>
+
+  <!-- Full Post Reading Modal -->
+  <div class="modal-overlay" id="readModal" onclick="closeModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="post-meta" id="modalMeta"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript to handle daily post entries and reading views -->
+  <script>
+    // -------------------------------------------------------------
+    // ADD YOUR DAILY POSTS HERE
+    // -------------------------------------------------------------
+    const posts = [
+      {
+        id: 1,
+        title: "The art of doing nothing on a Sunday morning",
+        date: "October 24, 2024",
+        category: "Solitude",
+        excerpt: "We often feel guilty for lingering in bed or drinking coffee without looking at a screen. But stillness isn't emptiness; it's room for the mind to settle.",
+        content: `
+          <p>We often treat stillness as wasted time. In a world optimized for output, sitting quietly with a warm cup of coffee feels almost rebellious.</p>
+          <p>This morning, I watched dust motes float through a patch of light on the wooden floor. I didn't reach for my phone. I didn't make a to-do list. For twenty minutes, my mind simply breathed.</p>
+          <p>When you allow yourself to do nothing, you discover what your thoughts actually feel like when they aren't being pushed around by notifications. Stillness is not wasted time; it is the ground from which clarity grows.</p>
+        `
+      },
+      {
+        id: 2,
+        title: "Why you don't need a 5 AM routine to be happy",
+        date: "October 23, 2024",
+        category: "Routine",
+        excerpt: "Productivity culture promises enlightenment at dawn. But natural rhythms matter more than forcing yourself into someone else's mold.",
+        content: `
+          <p>For months, I tried waking up at 5:00 AM because every self-improvement book claimed it was the secret to victory. All it gave me was brain fog by 2:00 PM and an unhealthy obsession with espresso.</p>
+          <p>True discipline isn't about waking up early just to prove you can endure discomfort. It's about being fully awake and engaged during the hours you are alive.</p>
+          <p>Find the pace that allows you to be kind, present, and creative. The sunrise is beautiful, but so is a restful sleep.</p>
+        `
+      },
+      {
+        id: 3,
+        title: "Letting go of conversations that never happened",
+        date: "October 22, 2024",
+        category: "Mindset",
+        excerpt: "How much mental energy do we spend preparing arguments, justifications, and speeches to people who aren't even in the room?",
+        content: `
+          <p>I caught myself yesterday preparing an elaborate defense for a decision nobody had questioned. I was pacing around the kitchen, debating an imaginary critic.</p>
+          <p>The human brain loves drafting scripts for emergencies that never arrive. It craves certainty so deeply that it invents friction just to have something to solve.</p>
+          <p>Whenever you catch yourself in an imaginary confrontation, pause and ask: <em>Is this conversation happening right now?</em> If the answer is no, drop the script.</p>
+        `
+      }
+    ];
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Render Posts
+    function renderPosts(filteredList) {
+      const container = document.getElementById("postFeed");
+      container.innerHTML = "";
+
+      filteredList.forEach(post => {
+        const card = document.createElement("article");
+        card.className = "post-card";
+        card.onclick = () => openPost(post.id);
+
+        card.innerHTML = `
+          <div class="post-meta">
+            <span class="post-category">${post.category}</span>
+            <span>•</span>
+            <time>${post.date}</time>
+          </div>
+          <h2 class="post-title">${post.title}</h2>
+          <p class="post-excerpt">${post.excerpt}</p>
+          <span class="read-more">Read entry →</span>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Filter by Category
+    function filterPosts(cat) {
+      document.querySelectorAll(".tag-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.textContent.toLowerCase() === cat.toLowerCase() || (cat === 'all' && btn.textContent === 'All Entries'));
+      });
+
+      if (cat === "all") {
+        renderPosts(posts);
+      } else {
+        renderPosts(posts.filter(p => p.category.toLowerCase() === cat.toLowerCase()));
+      }
+    }
+
+    // Modal view
+    function openPost(id) {
+      const post = posts.find(p => p.id === id);
+      if (!post) return;
+
+      document.getElementById("modalMeta").innerHTML = `
+        <span class="post-category">${post.category}</span>
+        <span>•</span>
+        <time>${post.date}</time>
+      `;
+      document.getElementById("modalTitle").innerText = post.title;
+      document.getElementById("modalBody").innerHTML = post.content;
+      
+      document.getElementById("readModal").style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      document.getElementById("readModal").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    // Initial render
+    renderPosts(posts);
+  </script>
+</body>
+</html>
