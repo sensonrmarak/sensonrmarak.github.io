@@ -2,18 +2,23 @@ import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import { ThreeCanvas } from "@remotion/three";
 import * as THREE from "three";
 
-type S = "lowpoly" | "diorama" | "paper" | "toon" | "night";
+type S = "lowpoly" | "diorama" | "paper" | "toon" | "night" | "autumn" | "winter" | "clay" | "pastel" | "sunset";
 const pal = {
   lowpoly: { sky: "#bfe3f2", ground: "#8ccf7e", roof: "#e07a5f", wall: "#f4e1c1", tree: "#4f9d69", trunk: "#8d5a3b" },
   diorama: { sky: "#f6efe4", ground: "#7fbf6a", roof: "#c9584a", wall: "#fff3dc", tree: "#3f8f5a", trunk: "#7a4e30" },
   paper: { sky: "#f3e6cf", ground: "#a7c97a", roof: "#d96c4f", wall: "#fbf2e0", tree: "#6aa86a", trunk: "#9a6a44" },
   toon: { sky: "#7fd3ff", ground: "#6ee06e", roof: "#ff5a5a", wall: "#fff1b8", tree: "#22b04a", trunk: "#a0522d" },
+  autumn: { sky: "#f7d9a8", ground: "#c9a25a", roof: "#7a3b2e", wall: "#f1dcb8", tree: "#e0702a", trunk: "#5e3a24" },
+  winter: { sky: "#dce9f5", ground: "#f7fbff", roof: "#3d5a80", wall: "#e8d9c4", tree: "#2f6b5a", trunk: "#5a3d2b" },
+  clay: { sky: "#ffe8d6", ground: "#9ed39b", roof: "#f08a6e", wall: "#fff0d9", tree: "#5fbf7a", trunk: "#b07850" },
+  pastel: { sky: "#fde2f3", ground: "#c8f0d8", roof: "#b8a3ff", wall: "#fff7e6", tree: "#9fe0c8", trunk: "#d8a7b1" },
+  sunset: { sky: "#ff9a62", ground: "#6b8a4a", roof: "#9c3d3d", wall: "#f5c99a", tree: "#3e6b3a", trunk: "#4a2e20" },
   night: { sky: "#0d1633", ground: "#2c5450", roof: "#5a3550", wall: "#3b3f5c", tree: "#173a33", trunk: "#3a2a22" },
 };
 
 const Mat = ({ s, color, flat = true }: { s: S; color: string; flat?: boolean }) =>
   s === "toon" ? <meshToonMaterial color={color} /> :
-  <meshStandardMaterial color={color} flatShading={flat} roughness={s === "paper" ? 1 : 0.8} />;
+  <meshStandardMaterial color={color} flatShading={s !== "clay" && s !== "pastel" && flat} roughness={s === "paper" ? 1 : 0.8} />;
 
 const Outline = ({ s, children }: { s: S; children: React.ReactNode }) => <>{children}</>;
 
@@ -28,7 +33,7 @@ const House = ({ s, p, x, z, r = 0 }: { s: S; p: any; x: number; z: number; r?: 
 const Tree = ({ s, p, x, z, h = 1 }: { s: S; p: any; x: number; z: number; h?: number }) => (
   <group position={[x, 0, z]} scale={h}>
     <mesh position={[0, 0.3, 0]} castShadow><cylinderGeometry args={[0.08, 0.1, 0.6, 6]} /><Mat s={s} color={p.trunk} /></mesh>
-    <mesh position={[0, 0.9, 0]} castShadow>{s === "paper" ? <coneGeometry args={[0.45, 1, 3]} /> : <icosahedronGeometry args={[0.5, 0]} />}<Mat s={s} color={p.tree} /></mesh>
+    <mesh position={[0, 0.9, 0]} castShadow>{s === "paper" ? <coneGeometry args={[0.45, 1, 3]} /> : (s === "clay" || s === "pastel" ? <sphereGeometry args={[0.5, 24, 24]} /> : s === "winter" ? <coneGeometry args={[0.5, 1.2, 7]} /> : <icosahedronGeometry args={[0.5, 0]} />)}<Mat s={s} color={p.tree} /></mesh>
   </group>
 );
 
@@ -65,7 +70,7 @@ export const StyleScene = ({ style }: { style: S }) => {
   const a = f * 0.008 + 0.6;
   const d = style === "diorama" ? 9 : 7.5;
   const cam = new THREE.Vector3(Math.sin(a) * d, style === "diorama" ? 5.5 : 3.2, Math.cos(a) * d);
-  const titles: Record<S, string> = { lowpoly: "1 · Low-poly storybook", diorama: "2 · Diorama / tiny world", paper: "3 · Paper pop-up book", toon: "4 · Toon-shaded", night: "5 · Cosy night magic" };
+  const titles: Record<S, string> = { autumn: "6 · Golden autumn", winter: "7 · Snowy winter", clay: "8 · Soft clay (claymation)", pastel: "9 · Pastel dreamland", sunset: "10 · Sunset glow", lowpoly: "1 · Low-poly storybook", diorama: "2 · Diorama / tiny world", paper: "3 · Paper pop-up book", toon: "4 · Toon-shaded", night: "5 · Cosy night magic" };
   return (
     <AbsoluteFill style={{ background: style === "diorama" ? "radial-gradient(#fffaf0,#e9dcc6)" : pal[style].sky }}>
       <ThreeCanvas width={width} height={height} shadows
@@ -73,10 +78,13 @@ export const StyleScene = ({ style }: { style: S }) => {
         onCreated={({ camera }) => camera.lookAt(0, 0.6, 0)}>
         <CamLook pos={cam} />
         {style === "night" ? <><ambientLight intensity={1.1} color="#6a7bd6" /><directionalLight position={[6, 9, -14]} intensity={1.2} color="#9fb4ff" /><Stars /><Fireflies f={f} /></>
-          : <><ambientLight intensity={style === "toon" ? 0.6 : 0.55} /><directionalLight position={[5, 8, 4]} intensity={style === "paper" ? 1.2 : 1.6} castShadow shadow-mapSize={[2048, 2048]} /></>}
+          : <><ambientLight intensity={style === "toon" ? 0.6 : 0.55} /><directionalLight position={style === "sunset" ? [-8, 2.5, 3] : [5, 8, 4]} color={style === "sunset" ? "#ffb070" : style === "autumn" ? "#ffe0b0" : "#ffffff"} intensity={style === "paper" ? 1.2 : style === "sunset" ? 2.4 : 1.6} castShadow shadow-mapSize={[2048, 2048]} /></>}
         {style !== "diorama" && style !== "night" && <fog attach="fog" args={[pal[style].sky, 12, 30]} />}
         <Village s={style} />
       </ThreeCanvas>
+      {style === "sunset" && <AbsoluteFill style={{ background: "linear-gradient(#ff7b54 0%,#ffb26b 30%,transparent 45%)", mixBlendMode: "soft-light" }} />}
+      {style === "winter" && <AbsoluteFill>{Array.from({ length: 90 }, (_, i) => <div key={i} style={{ position: "absolute", left: `${(i * 37) % 100}%`, top: `${((i * 53) % 100 + f * (0.3 + (i % 5) * 0.1)) % 100}%`, width: 6 + (i % 3) * 3, height: 6 + (i % 3) * 3, borderRadius: "50%", background: "white", opacity: 0.85 }} />)}</AbsoluteFill>}
+      {style === "autumn" && <AbsoluteFill>{Array.from({ length: 30 }, (_, i) => <div key={i} style={{ position: "absolute", left: `${((i * 41) % 100 + Math.sin(f * 0.05 + i) * 3)}%`, top: `${((i * 29) % 100 + f * 0.4) % 100}%`, width: 14, height: 9, borderRadius: "50% 0", background: ["#e0702a", "#c9452a", "#f2b134"][i % 3], transform: `rotate(${f * 3 + i * 40}deg)` }} />)}</AbsoluteFill>}
       {style === "paper" && <AbsoluteFill style={{ background: "repeating-linear-gradient(45deg,rgba(120,90,50,.05) 0 2px,transparent 2px 6px)", mixBlendMode: "multiply" }} />}
       {style === "diorama" && <AbsoluteFill style={{ backdropFilter: "blur(0px)", background: "linear-gradient(rgba(255,255,255,.35),transparent 25%,transparent 75%,rgba(255,255,255,.35))" }} />}
       <div style={{ position: "absolute", left: 40, top: 30, fontFamily: "sans-serif", fontWeight: 800, fontSize: 56, color: style === "night" ? "#ffe9a8" : "#2b2b2b", textShadow: "0 2px 8px rgba(0,0,0,.25)" }}>{titles[style]}</div>
