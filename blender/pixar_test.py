@@ -98,11 +98,16 @@ sc.frame_start, sc.frame_end, sc.render.fps = 1, 72, 24
 for f, z, rz in [(1, 0, -15), (18, 0.25, -5), (36, 0, 10), (54, 0.25, -5), (72, 0, -15)]:
     root.location.z = z; root.rotation_euler.z = math.radians(rz)
     root.keyframe_insert("location", frame=f); root.keyframe_insert("rotation_euler", frame=f)
+# Wave with the right arm
+arm = [p for p in parts if p.name.startswith("arm")][-1]
+arm.location.z += 0.25
+for f, a in [(1, 0), (12, 150), (20, 120), (28, 150), (36, 120), (44, 150), (60, 0), (72, 0)]:
+    arm.rotation_euler = (0, math.radians(a), 0); arm.keyframe_insert("rotation_euler", frame=f)
 cam.keyframe_insert("location", frame=1); cam.location = (0.9, -5.6, 1.85); cam.keyframe_insert("location", frame=72)
 
 r = sc.render; r.engine = "CYCLES"; sc.cycles.device = "CPU"
-sc.cycles.samples = 64 if mode == "anim" else 256; sc.cycles.use_denoising = False  # this Blender build lacks OpenImageDenoise; set True with the official build
-r.resolution_x, r.resolution_y = (960, 540) if mode == "anim" else (1280, 720)
+sc.cycles.samples = 40 if mode == "anim" else 256; sc.cycles.use_denoising = False  # this Blender build lacks OpenImageDenoise; set True with the official build
+r.resolution_x, r.resolution_y = (854, 480) if mode == "anim" else (1280, 720)
 sc.view_settings.view_transform = "AgX"; sc.view_settings.look = "AgX - Medium High Contrast"
 import os; out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out")
 if mode == "still":
