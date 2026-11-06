@@ -1,2 +1,4 @@
 node_modules
 out
+public/moss/soundtrack.wav
+__pycache__
