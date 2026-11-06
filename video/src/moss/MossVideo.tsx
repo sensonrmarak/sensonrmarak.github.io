@@ -33,7 +33,7 @@ TL.segments.forEach((seg, si) => {
   flush();
 });
 
-const Captions = () => {
+export const Captions = () => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const T = f / fps;
@@ -66,7 +66,7 @@ const LanternDot = ({ size = 34 }: { size?: number }) => (
     margin: "0 16px" }} />
 );
 
-const Title = () => {
+export const Title = () => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const T = f / fps;
@@ -85,7 +85,7 @@ const Title = () => {
   );
 };
 
-const MoralCard = () => {
+export const MoralCard = () => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const T = f / fps;
