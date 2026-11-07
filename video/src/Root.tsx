@@ -6,6 +6,8 @@ import { MossVideo, MOSS_FRAMES } from "./moss/MossVideo";
 import { MossAIEdit } from "./moss/MossAIEdit";
 import { ZonesLesson, ZONES_FRAMES, ZONES_FPS } from "./zones/ZonesLesson";
 import { UpscBranded, brandedFrames } from "./brand/UpscBrand";
+import { MonsoonLesson, MONSOON_FRAMES, MONSOON_FPS } from "./monsoon/MonsoonLesson";
+const MonsoonBranded = () => <UpscBranded contentFrames={MONSOON_FRAMES} variant="ink" corner="bottom-right"><MonsoonLesson /></UpscBranded>;
 const ZonesLessonBranded = () => <UpscBranded contentFrames={ZONES_FRAMES} variant="ink" corner="bottom-right"><ZonesLesson /></UpscBranded>;
 
 export const RemotionRoot = () => (
@@ -19,5 +21,7 @@ export const RemotionRoot = () => (
   <Composition id="MossAIEdit" component={MossAIEdit} durationInFrames={MOSS_FRAMES} fps={24} width={1080} height={1920} />
   <Composition id="ZonesLesson" component={ZonesLesson} durationInFrames={ZONES_FRAMES} fps={ZONES_FPS} width={2560} height={1440} />
   <Composition id="ZonesLessonBranded" component={ZonesLessonBranded} durationInFrames={brandedFrames(ZONES_FRAMES, ZONES_FPS)} fps={ZONES_FPS} width={2560} height={1440} />
+  <Composition id="MonsoonLesson" component={MonsoonLesson} durationInFrames={MONSOON_FRAMES} fps={MONSOON_FPS} width={2560} height={1440} />
+  <Composition id="UpscMonsoon" component={MonsoonBranded} durationInFrames={brandedFrames(MONSOON_FRAMES, MONSOON_FPS)} fps={MONSOON_FPS} width={2560} height={1440} />
   </>
 );
