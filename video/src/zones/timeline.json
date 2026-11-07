@@ -9,117 +9,117 @@
     {
      "text": "Why",
      "start": 0.0,
-     "end": 0.292
+     "end": 0.27
     },
     {
      "text": "does",
-     "start": 0.292,
-     "end": 0.648
+     "start": 0.27,
+     "end": 0.49
     },
     {
      "text": "Earth",
-     "start": 0.648,
-     "end": 1.069
+     "start": 0.49,
+     "end": 0.83
     },
     {
      "text": "have",
-     "start": 1.069,
-     "end": 1.426
+     "start": 0.83,
+     "end": 1.02
     },
     {
      "text": "seasons?",
-     "start": 1.426,
-     "end": 2.577
+     "start": 1.02,
+     "end": 1.84
     },
     {
      "text": "And",
-     "start": 2.577,
-     "end": 2.869
+     "start": 2.435,
+     "end": 2.605
     },
     {
      "text": "why",
-     "start": 2.869,
-     "end": 3.16
+     "start": 2.605,
+     "end": 2.835
     },
     {
      "text": "are",
-     "start": 3.16,
-     "end": 3.452
+     "start": 2.835,
+     "end": 2.875
     },
     {
      "text": "some",
-     "start": 3.452,
-     "end": 3.808
+     "start": 2.875,
+     "end": 3.185
     },
     {
      "text": "places",
-     "start": 3.808,
-     "end": 4.295
+     "start": 3.185,
+     "end": 3.625
     },
     {
      "text": "hot",
-     "start": 4.295,
-     "end": 4.586
+     "start": 3.625,
+     "end": 4.015
     },
     {
      "text": "all",
-     "start": 4.586,
-     "end": 5.568
+     "start": 4.015,
+     "end": 4.355
     },
     {
      "text": "year?",
-     "start": 5.568,
-     "end": 5.924
+     "start": 4.355,
+     "end": 4.705
     },
     {
      "text": "Let's",
-     "start": 5.924,
-     "end": 6.346
+     "start": 5.485,
+     "end": 5.745
     },
     {
      "text": "find",
-     "start": 6.346,
-     "end": 6.702
+     "start": 5.745,
+     "end": 6.045
     },
     {
      "text": "out",
-     "start": 6.702,
-     "end": 6.994
+     "start": 6.045,
+     "end": 6.325
     },
     {
      "text": "with",
-     "start": 6.994,
-     "end": 7.35
+     "start": 6.325,
+     "end": 6.435
     },
     {
      "text": "a",
-     "start": 7.35,
-     "end": 7.512
+     "start": 6.435,
+     "end": 6.475
     },
     {
      "text": "model",
-     "start": 7.512,
-     "end": 8.844
+     "start": 6.475,
+     "end": 6.825
     },
     {
      "text": "you",
-     "start": 8.844,
-     "end": 9.135
+     "start": 6.825,
+     "end": 6.975
     },
     {
      "text": "can",
-     "start": 9.135,
-     "end": 9.427
+     "start": 6.975,
+     "end": 7.145
     },
     {
      "text": "play",
-     "start": 9.427,
-     "end": 9.784
+     "start": 7.145,
+     "end": 7.405
     },
     {
      "text": "with.",
-     "start": 9.784,
-     "end": 10.14
+     "start": 7.405,
+     "end": 7.775
     }
    ]
   },
@@ -130,153 +130,153 @@
    "words": [
     {
      "text": "This",
-     "start": 10.88,
-     "end": 11.208
+     "start": 10.9,
+     "end": 11.07
     },
     {
      "text": "is",
-     "start": 11.208,
-     "end": 11.417
+     "start": 11.07,
+     "end": 11.14
     },
     {
      "text": "an",
-     "start": 11.417,
-     "end": 11.625
+     "start": 11.14,
+     "end": 11.2
     },
     {
      "text": "orrery.",
-     "start": 11.625,
-     "end": 12.073
+     "start": 11.2,
+     "end": 11.32
     },
     {
      "text": "The",
-     "start": 12.073,
-     "end": 12.741
+     "start": 11.32,
+     "end": 11.38
     },
     {
      "text": "Sun",
-     "start": 12.741,
-     "end": 13.009
+     "start": 11.38,
+     "end": 11.54
     },
     {
      "text": "sits",
-     "start": 13.009,
-     "end": 13.337
+     "start": 11.54,
+     "end": 11.72
     },
     {
      "text": "in",
-     "start": 13.337,
-     "end": 13.546
+     "start": 11.72,
+     "end": 11.8
     },
     {
      "text": "the",
-     "start": 13.546,
-     "end": 13.815
+     "start": 11.8,
+     "end": 11.87
     },
     {
      "text": "middle,",
-     "start": 13.815,
-     "end": 14.262
+     "start": 11.87,
+     "end": 12.25
     },
     {
      "text": "and",
-     "start": 14.262,
-     "end": 14.53
+     "start": 12.64,
+     "end": 12.76
     },
     {
      "text": "an",
-     "start": 14.53,
-     "end": 15.059
+     "start": 12.76,
+     "end": 12.89
     },
     {
      "text": "arm",
-     "start": 15.059,
-     "end": 15.327
+     "start": 12.89,
+     "end": 13.31
     },
     {
      "text": "carries",
-     "start": 15.327,
-     "end": 15.834
+     "start": 13.31,
+     "end": 13.77
     },
     {
      "text": "Earth",
-     "start": 15.834,
-     "end": 17.072
+     "start": 13.77,
+     "end": 14.13
     },
     {
      "text": "around",
-     "start": 17.072,
-     "end": 17.519
+     "start": 14.13,
+     "end": 14.47
     },
     {
      "text": "it,",
-     "start": 17.519,
-     "end": 17.728
+     "start": 14.47,
+     "end": 14.75
     },
     {
      "text": "once",
-     "start": 17.728,
-     "end": 18.056
+     "start": 15.06,
+     "end": 15.45
     },
     {
      "text": "a",
-     "start": 18.056,
-     "end": 18.205
+     "start": 15.45,
+     "end": 15.51
     },
     {
      "text": "year.",
-     "start": 18.205,
-     "end": 18.533
+     "start": 15.51,
+     "end": 15.87
     },
     {
      "text": "Earth's",
-     "start": 18.533,
-     "end": 19.04
+     "start": 17.01,
+     "end": 17.2
     },
     {
      "text": "axis",
-     "start": 19.04,
-     "end": 19.368
+     "start": 17.2,
+     "end": 17.8
     },
     {
      "text": "is",
-     "start": 19.368,
-     "end": 19.577
+     "start": 17.8,
+     "end": 17.92
     },
     {
      "text": "tilted",
-     "start": 19.577,
-     "end": 20.024
+     "start": 17.92,
+     "end": 18.46
     },
     {
      "text": "by",
-     "start": 20.024,
-     "end": 20.233
+     "start": 18.46,
+     "end": 18.64
     },
     {
      "text": "twenty-three",
-     "start": 20.233,
-     "end": 21.828
+     "start": 18.64,
+     "end": 19.49
     },
     {
      "text": "and",
-     "start": 21.828,
-     "end": 22.096
+     "start": 19.49,
+     "end": 19.63
     },
     {
      "text": "a",
-     "start": 22.096,
-     "end": 22.245
+     "start": 19.63,
+     "end": 19.68
     },
     {
      "text": "half",
-     "start": 22.245,
-     "end": 22.573
+     "start": 19.68,
+     "end": 20.0
     },
     {
      "text": "degrees.",
-     "start": 22.573,
-     "end": 23.08
+     "start": 20.0,
+     "end": 20.69
     }
    ]
   },
@@ -287,163 +287,163 @@
    "words": [
     {
      "text": "On",
-     "start": 23.35,
-     "end": 23.593
+     "start": 23.56,
+     "end": 23.87
     },
     {
      "text": "the",
-     "start": 23.593,
-     "end": 23.904
+     "start": 23.87,
+     "end": 24.36
     },
     {
      "text": "twenty-first",
-     "start": 23.904,
-     "end": 24.84
+     "start": 24.36,
+     "end": 25.11
     },
     {
      "text": "of",
-     "start": 24.84,
-     "end": 25.082
+     "start": 25.11,
+     "end": 25.32
     },
     {
      "text": "June,",
-     "start": 25.082,
-     "end": 26.203
+     "start": 25.32,
+     "end": 25.49
     },
     {
      "text": "the",
-     "start": 26.203,
-     "end": 26.515
+     "start": 27.65,
+     "end": 27.71
     },
     {
      "text": "north",
-     "start": 26.515,
-     "end": 26.966
+     "start": 27.71,
+     "end": 28.04
     },
     {
      "text": "leans",
-     "start": 26.966,
-     "end": 27.416
+     "start": 28.04,
+     "end": 28.49
     },
     {
      "text": "toward",
-     "start": 27.416,
-     "end": 27.936
+     "start": 28.49,
+     "end": 29.02
     },
     {
      "text": "the",
-     "start": 27.936,
-     "end": 28.247
+     "start": 29.02,
+     "end": 29.26
     },
     {
      "text": "Sun.",
-     "start": 28.247,
-     "end": 28.559
+     "start": 29.26,
+     "end": 29.7
     },
     {
      "text": "The",
-     "start": 28.559,
-     "end": 28.871
+     "start": 29.7,
+     "end": 30.037
     },
     {
      "text": "Sun",
-     "start": 28.871,
-     "end": 29.183
+     "start": 30.037,
+     "end": 30.374
     },
     {
      "text": "is",
-     "start": 29.183,
-     "end": 29.425
+     "start": 30.374,
+     "end": 30.635
     },
     {
      "text": "overhead",
-     "start": 29.425,
-     "end": 30.454
+     "start": 30.635,
+     "end": 31.346
     },
     {
      "text": "at",
-     "start": 30.454,
-     "end": 30.696
+     "start": 31.346,
+     "end": 31.608
     },
     {
      "text": "twenty-three",
-     "start": 30.696,
-     "end": 31.631
+     "start": 31.608,
+     "end": 32.619
     },
     {
      "text": "and",
-     "start": 31.631,
-     "end": 32.713
+     "start": 32.619,
+     "end": 32.955
     },
     {
      "text": "a",
-     "start": 32.713,
-     "end": 32.887
+     "start": 32.955,
+     "end": 33.142
     },
     {
      "text": "half",
-     "start": 32.887,
-     "end": 33.268
+     "start": 33.142,
+     "end": 33.554
     },
     {
      "text": "degrees",
-     "start": 33.268,
-     "end": 33.857
+     "start": 33.554,
+     "end": 34.19
     },
     {
      "text": "north,",
-     "start": 33.857,
-     "end": 35.187
+     "start": 34.19,
+     "end": 34.677
     },
     {
      "text": "and",
-     "start": 35.187,
-     "end": 35.499
+     "start": 34.677,
+     "end": 35.013
     },
     {
      "text": "the",
-     "start": 35.499,
-     "end": 35.811
+     "start": 35.013,
+     "end": 35.35
     },
     {
      "text": "days",
-     "start": 35.811,
-     "end": 36.192
+     "start": 35.35,
+     "end": 35.762
     },
     {
      "text": "are",
-     "start": 36.192,
-     "end": 36.503
+     "start": 35.762,
+     "end": 36.098
     },
     {
      "text": "long.",
-     "start": 36.503,
-     "end": 36.885
+     "start": 36.098,
+     "end": 36.51
     },
     {
      "text": "It's",
-     "start": 36.885,
-     "end": 37.266
+     "start": 36.51,
+     "end": 36.97
     },
     {
      "text": "summer",
-     "start": 37.266,
-     "end": 37.785
+     "start": 37.44,
+     "end": 37.57
     },
     {
      "text": "in",
-     "start": 37.785,
-     "end": 38.028
+     "start": 37.57,
+     "end": 37.7
     },
     {
      "text": "the",
-     "start": 38.028,
-     "end": 38.34
+     "start": 37.7,
+     "end": 38.23
     },
     {
      "text": "north.",
-     "start": 38.34,
-     "end": 38.79
+     "start": 38.23,
+     "end": 38.46
     }
    ]
   },
@@ -454,153 +454,153 @@
    "words": [
     {
      "text": "Six",
-     "start": 39.52,
-     "end": 39.718
+     "start": 39.55,
+     "end": 39.793
     },
     {
      "text": "months",
-     "start": 39.718,
-     "end": 40.047
+     "start": 39.793,
+     "end": 40.198
     },
     {
      "text": "later,",
-     "start": 40.047,
-     "end": 40.332
+     "start": 40.198,
+     "end": 40.55
     },
     {
      "text": "the",
-     "start": 40.332,
-     "end": 40.53
+     "start": 40.55,
+     "end": 40.793
     },
     {
      "text": "axis",
-     "start": 40.53,
-     "end": 40.771
+     "start": 40.793,
+     "end": 41.09
     },
     {
      "text": "still",
-     "start": 40.771,
-     "end": 41.057
+     "start": 41.09,
+     "end": 41.441
     },
     {
      "text": "points",
-     "start": 41.057,
-     "end": 41.746
+     "start": 41.441,
+     "end": 41.846
     },
     {
      "text": "the",
-     "start": 41.746,
-     "end": 41.943
+     "start": 41.846,
+     "end": 42.09
     },
     {
      "text": "same",
-     "start": 41.943,
-     "end": 42.185
+     "start": 42.09,
+     "end": 42.387
     },
     {
      "text": "way.",
-     "start": 42.185,
-     "end": 42.382
+     "start": 42.387,
+     "end": 42.63
     },
     {
      "text": "Now",
-     "start": 42.382,
-     "end": 42.58
+     "start": 43.28,
+     "end": 43.498
     },
     {
      "text": "the",
-     "start": 42.58,
-     "end": 43.408
+     "start": 43.498,
+     "end": 43.716
     },
     {
      "text": "north",
-     "start": 43.408,
-     "end": 43.693
+     "start": 43.716,
+     "end": 44.032
     },
     {
      "text": "leans",
-     "start": 43.693,
-     "end": 43.978
+     "start": 44.032,
+     "end": 44.347
     },
     {
      "text": "away,",
-     "start": 43.978,
-     "end": 44.22
+     "start": 44.347,
+     "end": 44.613
     },
     {
      "text": "and",
-     "start": 44.22,
-     "end": 44.417
+     "start": 44.613,
+     "end": 44.832
     },
     {
      "text": "the",
-     "start": 44.417,
-     "end": 45.085
+     "start": 44.832,
+     "end": 45.05
     },
     {
      "text": "days",
-     "start": 45.085,
-     "end": 45.326
+     "start": 45.05,
+     "end": 45.317
     },
     {
      "text": "are",
-     "start": 45.326,
-     "end": 45.524
+     "start": 45.317,
+     "end": 45.535
     },
     {
      "text": "short.",
-     "start": 45.524,
-     "end": 45.809
+     "start": 45.535,
+     "end": 45.85
     },
     {
      "text": "It's",
-     "start": 45.809,
-     "end": 46.321
+     "start": 46.12,
+     "end": 46.452
     },
     {
      "text": "winter",
-     "start": 46.321,
-     "end": 46.65
+     "start": 46.452,
+     "end": 46.905
     },
     {
      "text": "in",
-     "start": 46.65,
-     "end": 46.804
+     "start": 46.905,
+     "end": 47.116
     },
     {
      "text": "the",
-     "start": 46.804,
-     "end": 48.011
+     "start": 47.116,
+     "end": 47.388
     },
     {
      "text": "north,",
-     "start": 48.011,
-     "end": 48.297
+     "start": 47.388,
+     "end": 47.78
     },
     {
      "text": "and",
-     "start": 48.297,
-     "end": 48.494
+     "start": 47.78,
+     "end": 48.052
     },
     {
      "text": "summer",
-     "start": 48.494,
-     "end": 48.823
+     "start": 48.052,
+     "end": 48.505
     },
     {
      "text": "in",
-     "start": 48.823,
-     "end": 48.977
+     "start": 48.505,
+     "end": 48.716
     },
     {
      "text": "the",
-     "start": 48.977,
-     "end": 49.175
+     "start": 48.716,
+     "end": 48.988
     },
     {
      "text": "south.",
-     "start": 49.175,
-     "end": 49.46
+     "start": 48.988,
+     "end": 49.38
     }
    ]
   },
@@ -611,118 +611,118 @@
    "words": [
     {
      "text": "Watch",
-     "start": 49.94,
-     "end": 50.312
+     "start": 50.24,
+     "end": 50.55
     },
     {
      "text": "a",
-     "start": 50.312,
-     "end": 50.454
+     "start": 50.55,
+     "end": 50.7
     },
     {
      "text": "whole",
-     "start": 50.454,
-     "end": 50.826
+     "start": 50.95,
+     "end": 51.09
     },
     {
      "text": "year.",
-     "start": 50.826,
-     "end": 51.14
+     "start": 51.09,
+     "end": 51.24
     },
     {
      "text": "The",
-     "start": 51.14,
-     "end": 51.398
+     "start": 51.24,
+     "end": 51.31
     },
     {
      "text": "axis",
-     "start": 51.398,
-     "end": 51.712
+     "start": 51.31,
+     "end": 52.06
     },
     {
      "text": "never",
-     "start": 51.712,
-     "end": 52.974
+     "start": 52.98,
+     "end": 53.15
     },
     {
      "text": "turns.",
-     "start": 52.974,
-     "end": 53.345
+     "start": 53.15,
+     "end": 53.28
     },
     {
      "text": "Inside",
-     "start": 53.345,
-     "end": 53.774
+     "start": 53.28,
+     "end": 53.53
     },
     {
      "text": "the",
-     "start": 53.774,
-     "end": 54.031
+     "start": 53.53,
+     "end": 53.67
     },
     {
      "text": "arm,",
-     "start": 54.031,
-     "end": 54.608
+     "start": 53.67,
+     "end": 54.13
     },
     {
      "text": "a",
-     "start": 54.608,
-     "end": 54.751
+     "start": 54.44,
+     "end": 54.53
     },
     {
      "text": "belt",
-     "start": 54.751,
-     "end": 55.066
+     "start": 54.53,
+     "end": 54.95
     },
     {
      "text": "between",
-     "start": 55.066,
-     "end": 55.552
+     "start": 54.95,
+     "end": 55.32
     },
     {
      "text": "two",
-     "start": 55.552,
-     "end": 55.809
+     "start": 55.32,
+     "end": 55.71
     },
     {
      "text": "equal",
-     "start": 55.809,
-     "end": 56.18
+     "start": 55.71,
+     "end": 56.12
     },
     {
      "text": "pulleys",
-     "start": 56.18,
-     "end": 56.666
+     "start": 56.12,
+     "end": 56.71
     },
     {
      "text": "keeps",
-     "start": 56.666,
-     "end": 57.298
+     "start": 56.94,
+     "end": 57.25
     },
     {
      "text": "it",
-     "start": 57.298,
-     "end": 57.498
+     "start": 57.25,
+     "end": 57.36
     },
     {
      "text": "pointing",
-     "start": 57.498,
-     "end": 58.041
+     "start": 57.36,
+     "end": 57.9
     },
     {
      "text": "the",
-     "start": 58.041,
-     "end": 58.298
+     "start": 57.9,
+     "end": 57.98
     },
     {
      "text": "same",
-     "start": 58.298,
-     "end": 58.613
+     "start": 57.98,
+     "end": 58.42
     },
     {
      "text": "way.",
-     "start": 58.613,
-     "end": 58.87
+     "start": 58.42,
+     "end": 58.78
     }
    ]
   },
@@ -733,188 +733,188 @@
    "words": [
     {
      "text": "The",
-     "start": 59.6,
-     "end": 59.868
+     "start": 59.61,
+     "end": 59.71
     },
     {
      "text": "tilt",
-     "start": 59.868,
-     "end": 60.195
+     "start": 59.71,
+     "end": 60.13
     },
     {
      "text": "also",
-     "start": 60.195,
-     "end": 60.522
+     "start": 60.13,
+     "end": 60.59
     },
     {
      "text": "splits",
-     "start": 60.522,
-     "end": 60.968
+     "start": 60.59,
+     "end": 61.04
     },
     {
      "text": "Earth",
-     "start": 60.968,
-     "end": 61.355
+     "start": 61.16,
+     "end": 61.43
     },
     {
      "text": "into",
-     "start": 61.355,
-     "end": 61.682
+     "start": 61.43,
+     "end": 61.74
     },
     {
      "text": "three",
-     "start": 61.682,
-     "end": 62.069
+     "start": 61.74,
+     "end": 62.28
     },
     {
      "text": "heat",
-     "start": 62.069,
-     "end": 62.396
+     "start": 62.28,
+     "end": 62.64
     },
     {
      "text": "zones.",
-     "start": 62.396,
-     "end": 62.783
+     "start": 62.64,
+     "end": 63.22
     },
     {
      "text": "Between",
-     "start": 62.783,
-     "end": 64.059
+     "start": 63.97,
+     "end": 64.3
     },
     {
      "text": "the",
-     "start": 64.059,
-     "end": 64.327
+     "start": 64.3,
+     "end": 64.38
     },
     {
      "text": "tropics",
-     "start": 64.327,
-     "end": 64.832
+     "start": 64.38,
+     "end": 65.06
     },
     {
      "text": "is",
-     "start": 64.832,
-     "end": 65.04
+     "start": 65.18,
+     "end": 65.27
     },
     {
      "text": "the",
-     "start": 65.04,
-     "end": 65.308
+     "start": 65.27,
+     "end": 65.4
     },
     {
      "text": "Torrid",
-     "start": 65.308,
-     "end": 65.754
+     "start": 65.4,
+     "end": 65.97
     },
     {
      "text": "Zone,",
-     "start": 65.754,
-     "end": 66.082
+     "start": 65.97,
+     "end": 66.41
     },
     {
      "text": "the",
-     "start": 66.082,
-     "end": 66.349
+     "start": 66.91,
+     "end": 67.07
     },
     {
      "text": "only",
-     "start": 66.349,
-     "end": 67.197
+     "start": 67.07,
+     "end": 67.41
     },
     {
      "text": "place",
-     "start": 67.197,
-     "end": 67.583
+     "start": 67.41,
+     "end": 67.74
     },
     {
      "text": "the",
-     "start": 67.583,
-     "end": 67.851
+     "start": 67.74,
+     "end": 67.86
     },
     {
      "text": "Sun",
-     "start": 67.851,
-     "end": 68.119
+     "start": 67.86,
+     "end": 68.3
     },
     {
      "text": "can",
-     "start": 68.119,
-     "end": 68.387
+     "start": 68.3,
+     "end": 68.42
     },
     {
      "text": "be",
-     "start": 68.387,
-     "end": 68.595
+     "start": 68.42,
+     "end": 68.55
     },
     {
      "text": "straight",
-     "start": 68.595,
-     "end": 69.16
+     "start": 68.55,
+     "end": 69.03
     },
     {
      "text": "overhead.",
-     "start": 69.16,
-     "end": 70.455
+     "start": 69.03,
+     "end": 69.68
     },
     {
      "text": "It's",
-     "start": 70.455,
-     "end": 70.782
+     "start": 70.46,
+     "end": 70.61
     },
     {
      "text": "hot",
-     "start": 70.782,
-     "end": 71.05
+     "start": 70.61,
+     "end": 71.06
     },
     {
      "text": "all",
-     "start": 71.05,
-     "end": 71.318
+     "start": 71.06,
+     "end": 71.37
     },
     {
      "text": "year,",
-     "start": 71.318,
-     "end": 71.645
+     "start": 71.37,
+     "end": 71.68
     },
     {
      "text": "with",
-     "start": 71.645,
-     "end": 72.392
+     "start": 72.21,
+     "end": 72.33
     },
     {
      "text": "about",
-     "start": 72.392,
-     "end": 72.779
+     "start": 72.33,
+     "end": 72.62
     },
     {
      "text": "twelve",
-     "start": 72.779,
-     "end": 73.225
+     "start": 72.62,
+     "end": 73.04
     },
     {
      "text": "hours",
-     "start": 73.225,
-     "end": 73.612
+     "start": 73.04,
+     "end": 73.38
     },
     {
      "text": "of",
-     "start": 73.612,
-     "end": 73.82
+     "start": 73.38,
+     "end": 73.47
     },
     {
      "text": "daylight",
-     "start": 73.82,
-     "end": 74.386
+     "start": 73.47,
+     "end": 74.19
     },
     {
      "text": "every",
-     "start": 74.386,
-     "end": 74.772
+     "start": 74.19,
+     "end": 74.57
     },
     {
      "text": "day.",
-     "start": 74.772,
-     "end": 75.04
+     "start": 74.57,
+     "end": 74.98
     }
    ]
   },
@@ -926,132 +926,132 @@
     {
      "text": "From",
      "start": 75.96,
-     "end": 76.386
+     "end": 76.15
     },
     {
      "text": "twenty-three",
-     "start": 76.386,
-     "end": 77.432
+     "start": 76.15,
+     "end": 76.73
     },
     {
      "text": "and",
-     "start": 77.432,
-     "end": 77.781
+     "start": 76.73,
+     "end": 76.87
     },
     {
      "text": "a",
-     "start": 77.781,
-     "end": 77.974
+     "start": 76.87,
+     "end": 76.93
     },
     {
      "text": "half",
-     "start": 77.974,
-     "end": 78.4
+     "start": 76.93,
+     "end": 77.4
     },
     {
      "text": "to",
-     "start": 78.4,
-     "end": 78.671
+     "start": 77.4,
+     "end": 77.53
     },
     {
      "text": "sixty-six",
-     "start": 78.671,
-     "end": 79.855
+     "start": 77.53,
+     "end": 78.32
     },
     {
      "text": "and",
-     "start": 79.855,
-     "end": 80.203
+     "start": 78.32,
+     "end": 78.41
     },
     {
      "text": "a",
-     "start": 80.203,
-     "end": 80.397
+     "start": 78.41,
+     "end": 78.45
     },
     {
      "text": "half",
-     "start": 80.397,
-     "end": 80.823
+     "start": 78.45,
+     "end": 78.7
     },
     {
      "text": "degrees",
-     "start": 80.823,
-     "end": 81.902
+     "start": 78.7,
+     "end": 79.27
     },
     {
      "text": "are",
-     "start": 81.902,
-     "end": 82.25
+     "start": 79.63,
+     "end": 79.76
     },
     {
      "text": "the",
-     "start": 82.25,
-     "end": 82.599
+     "start": 79.76,
+     "end": 79.87
     },
     {
      "text": "Temperate",
-     "start": 82.599,
-     "end": 84.012
+     "start": 79.87,
+     "end": 80.42
     },
     {
      "text": "Zones,",
-     "start": 84.012,
-     "end": 84.516
+     "start": 80.42,
+     "end": 81.0
     },
     {
      "text": "with",
-     "start": 84.516,
-     "end": 84.942
+     "start": 81.39,
+     "end": 81.55
     },
     {
      "text": "four",
-     "start": 84.942,
-     "end": 85.698
+     "start": 81.55,
+     "end": 82.06
     },
     {
      "text": "strong",
-     "start": 85.698,
-     "end": 86.279
+     "start": 82.06,
+     "end": 82.53
     },
     {
      "text": "seasons:",
-     "start": 86.279,
-     "end": 86.938
+     "start": 82.53,
+     "end": 83.27
     },
     {
      "text": "long",
-     "start": 86.938,
-     "end": 88.244
+     "start": 83.87,
+     "end": 84.2
     },
     {
      "text": "summer",
-     "start": 88.244,
-     "end": 88.825
+     "start": 84.2,
+     "end": 84.48
     },
     {
      "text": "days,",
-     "start": 88.825,
-     "end": 89.251
+     "start": 84.48,
+     "end": 85.01
     },
     {
      "text": "and",
-     "start": 89.251,
-     "end": 89.599
+     "start": 85.35,
+     "end": 85.49
     },
     {
      "text": "short",
-     "start": 89.599,
-     "end": 90.103
+     "start": 85.49,
+     "end": 86.1
     },
     {
      "text": "winter",
-     "start": 90.103,
-     "end": 90.684
+     "start": 86.1,
+     "end": 86.54
     },
     {
      "text": "days.",
-     "start": 90.684,
-     "end": 91.11
+     "start": 86.54,
+     "end": 86.99
     }
    ]
   },
@@ -1062,98 +1062,98 @@
    "words": [
     {
      "text": "Beyond",
-     "start": 91.74,
-     "end": 92.072
+     "start": 91.77,
+     "end": 92.154
     },
     {
      "text": "the",
-     "start": 92.072,
-     "end": 92.27
+     "start": 92.154,
+     "end": 92.384
     },
     {
      "text": "polar",
-     "start": 92.27,
-     "end": 92.898
+     "start": 92.384,
+     "end": 92.717
     },
     {
      "text": "circles",
-     "start": 92.898,
-     "end": 93.273
+     "start": 92.717,
+     "end": 93.152
     },
     {
      "text": "are",
-     "start": 93.273,
-     "end": 93.472
+     "start": 93.152,
+     "end": 93.383
     },
     {
      "text": "the",
-     "start": 93.472,
-     "end": 93.671
+     "start": 93.383,
+     "end": 93.613
     },
     {
      "text": "Frigid",
-     "start": 93.671,
-     "end": 94.003
+     "start": 93.613,
+     "end": 93.997
     },
     {
      "text": "Zones.",
-     "start": 94.003,
-     "end": 94.29
+     "start": 93.997,
+     "end": 94.33
     },
     {
      "text": "In",
-     "start": 94.29,
-     "end": 94.445
+     "start": 94.45,
+     "end": 94.692
     },
     {
      "text": "summer,",
-     "start": 94.445,
-     "end": 95.396
+     "start": 94.692,
+     "end": 95.21
     },
     {
      "text": "the",
-     "start": 95.396,
-     "end": 95.595
+     "start": 95.21,
+     "end": 95.52
     },
     {
      "text": "Sun",
-     "start": 95.595,
-     "end": 95.794
+     "start": 95.52,
+     "end": 95.831
     },
     {
      "text": "never",
-     "start": 95.794,
-     "end": 96.591
+     "start": 95.831,
+     "end": 96.28
     },
     {
      "text": "sets.",
-     "start": 96.591,
-     "end": 96.834
+     "start": 96.28,
+     "end": 96.66
     },
     {
      "text": "In",
-     "start": 96.834,
-     "end": 96.989
+     "start": 96.7,
+     "end": 96.82
     },
     {
      "text": "winter,",
-     "start": 96.989,
-     "end": 97.321
+     "start": 96.82,
+     "end": 97.0
     },
     {
      "text": "it",
-     "start": 97.321,
-     "end": 97.475
+     "start": 97.0,
+     "end": 97.07
     },
     {
      "text": "never",
-     "start": 97.475,
-     "end": 97.763
+     "start": 97.07,
+     "end": 97.23
     },
     {
      "text": "rises.",
-     "start": 97.763,
-     "end": 98.05
+     "start": 97.23,
+     "end": 97.99
     }
    ]
   },
@@ -1164,198 +1164,198 @@
    "words": [
     {
      "text": "So",
-     "start": 98.84,
-     "end": 99.051
+     "start": 98.85,
+     "end": 99.12
     },
     {
      "text": "which",
-     "start": 99.051,
-     "end": 99.443
+     "start": 99.12,
+     "end": 99.57
     },
     {
      "text": "zone",
-     "start": 99.443,
-     "end": 99.775
+     "start": 99.57,
+     "end": 99.96
     },
     {
      "text": "is",
-     "start": 99.775,
-     "end": 99.986
+     "start": 99.96,
+     "end": 100.08
     },
     {
      "text": "a",
-     "start": 99.986,
-     "end": 100.137
+     "start": 100.08,
+     "end": 100.13
     },
     {
      "text": "city",
-     "start": 100.137,
-     "end": 100.469
+     "start": 100.13,
+     "end": 100.55
     },
     {
      "text": "in?",
-     "start": 100.469,
-     "end": 100.68
+     "start": 100.55,
+     "end": 100.8
     },
     {
      "text": "Just",
-     "start": 100.68,
-     "end": 101.702
+     "start": 101.45,
+     "end": 101.78
     },
     {
      "text": "look",
-     "start": 101.702,
-     "end": 102.034
+     "start": 101.78,
+     "end": 101.97
     },
     {
      "text": "at",
-     "start": 102.034,
-     "end": 102.245
+     "start": 101.97,
+     "end": 102.03
     },
     {
      "text": "its",
-     "start": 102.245,
-     "end": 102.516
+     "start": 102.03,
+     "end": 102.21
     },
     {
      "text": "latitude.",
-     "start": 102.516,
-     "end": 103.829
+     "start": 102.21,
+     "end": 102.98
     },
     {
      "text": "Singapore,",
-     "start": 103.829,
-     "end": 104.463
+     "start": 103.67,
+     "end": 104.35
     },
     {
      "text": "near",
-     "start": 104.463,
-     "end": 104.795
+     "start": 104.35,
+     "end": 104.54
     },
     {
      "text": "the",
-     "start": 104.795,
-     "end": 105.066
+     "start": 104.54,
+     "end": 104.66
     },
     {
      "text": "equator,",
-     "start": 105.066,
-     "end": 105.919
+     "start": 104.66,
+     "end": 105.28
     },
     {
      "text": "is",
-     "start": 105.919,
-     "end": 106.13
+     "start": 105.6,
+     "end": 105.84
     },
     {
      "text": "torrid.",
-     "start": 106.13,
-     "end": 107.422
+     "start": 105.84,
+     "end": 106.47
     },
     {
      "text": "London,",
-     "start": 107.422,
-     "end": 107.875
+     "start": 107.28,
+     "end": 107.77
     },
     {
      "text": "at",
-     "start": 107.875,
-     "end": 108.086
+     "start": 107.77,
+     "end": 107.88
     },
     {
      "text": "fifty-one",
-     "start": 108.086,
-     "end": 108.719
+     "start": 107.88,
+     "end": 108.39
     },
     {
      "text": "degrees",
-     "start": 108.719,
-     "end": 109.232
+     "start": 108.39,
+     "end": 108.81
     },
     {
      "text": "north,",
-     "start": 109.232,
-     "end": 109.964
+     "start": 108.81,
+     "end": 109.3
     },
     {
      "text": "is",
-     "start": 109.964,
-     "end": 110.175
+     "start": 109.6,
+     "end": 109.8
     },
     {
      "text": "temperate.",
-     "start": 110.175,
-     "end": 111.559
+     "start": 109.8,
+     "end": 110.47
     },
     {
      "text": "And",
-     "start": 111.559,
-     "end": 111.83
+     "start": 111.21,
+     "end": 111.44
     },
     {
      "text": "Longyearbyen,",
-     "start": 111.83,
-     "end": 112.905
+     "start": 111.44,
+     "end": 112.34
     },
     {
      "text": "at",
-     "start": 112.905,
-     "end": 113.116
+     "start": 112.59,
+     "end": 112.71
     },
     {
      "text": "seventy-eight",
-     "start": 113.116,
-     "end": 113.991
+     "start": 112.71,
+     "end": 113.36
     },
     {
      "text": "degrees",
-     "start": 113.991,
-     "end": 114.863
+     "start": 113.36,
+     "end": 113.82
     },
     {
      "text": "north,",
-     "start": 114.863,
-     "end": 115.256
+     "start": 113.82,
+     "end": 114.43
     },
     {
      "text": "is",
-     "start": 115.256,
-     "end": 115.467
+     "start": 114.74,
+     "end": 115.03
     },
     {
      "text": "frigid,",
-     "start": 115.467,
-     "end": 116.329
+     "start": 115.03,
+     "end": 115.65
     },
     {
      "text": "with",
-     "start": 116.329,
-     "end": 116.661
+     "start": 116.04,
+     "end": 116.19
     },
     {
      "text": "the",
-     "start": 116.661,
-     "end": 116.932
+     "start": 116.19,
+     "end": 116.27
     },
     {
      "text": "midnight",
-     "start": 116.932,
-     "end": 117.506
+     "start": 116.27,
+     "end": 116.85
     },
     {
      "text": "sun",
-     "start": 117.506,
-     "end": 117.777
+     "start": 116.85,
+     "end": 117.35
     },
     {
      "text": "in",
-     "start": 117.777,
-     "end": 117.988
+     "start": 117.45,
+     "end": 117.7
     },
     {
      "text": "June.",
-     "start": 117.988,
-     "end": 118.32
+     "start": 117.7,
+     "end": 118.25
     }
    ]
   },
@@ -1366,62 +1366,62 @@
    "words": [
     {
      "text": "Remember:",
-     "start": 119.07,
-     "end": 119.678
+     "start": 119.08,
+     "end": 119.54
     },
     {
      "text": "the",
-     "start": 119.678,
-     "end": 120.526
+     "start": 120.22,
+     "end": 120.32
     },
     {
      "text": "tilt",
-     "start": 120.526,
-     "end": 120.878
+     "start": 120.32,
+     "end": 120.84
     },
     {
      "text": "makes",
-     "start": 120.878,
-     "end": 121.293
+     "start": 120.84,
+     "end": 121.17
     },
     {
      "text": "the",
-     "start": 121.293,
-     "end": 121.581
+     "start": 121.17,
+     "end": 121.29
     },
     {
      "text": "seasons,",
-     "start": 121.581,
-     "end": 122.525
+     "start": 121.29,
+     "end": 122.02
     },
     {
      "text": "and",
-     "start": 122.525,
-     "end": 122.813
+     "start": 122.43,
+     "end": 122.63
     },
     {
      "text": "latitude",
-     "start": 122.813,
-     "end": 123.421
+     "start": 122.63,
+     "end": 123.48
     },
     {
      "text": "decides",
-     "start": 123.421,
-     "end": 124.224
+     "start": 123.68,
+     "end": 124.34
     },
     {
      "text": "your",
-     "start": 124.224,
-     "end": 124.576
+     "start": 124.34,
+     "end": 124.53
     },
     {
      "text": "heat",
-     "start": 124.576,
-     "end": 124.928
+     "start": 124.53,
+     "end": 124.89
     },
     {
      "text": "zone.",
-     "start": 124.928,
+     "start": 124.89,
      "end": 125.28
     }
    ]
