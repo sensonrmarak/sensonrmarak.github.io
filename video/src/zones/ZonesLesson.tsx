@@ -20,22 +20,22 @@ const sm = (a: number, b: number, t: number) => interpolate(t, [a, b], [0, 1], {
 
 /* zoom-ins: [start, end, scale, originX%, originY%] in narration seconds */
 const ZOOMS: [number, number, number, number, number][] = [
-  [27.5, 38.4, 1.32, 66, 28], [42.5, 49.2, 1.32, 66, 28],
-  [92.0, 98.4, 1.3, 70, 26], [103.0, 118.2, 1.28, 66, 30],
+  [26.2, 34.5, 1.3, 58, 30], [37.2, 46.8, 1.3, 64, 32],
+  [89.0, 94.0, 1.28, 60, 28], [103.3, 118.4, 1.25, 64, 30],
 ];
+const BASE = 1.1;                             // the 2K footage is framed a little tighter than the page
 const Footage = () => {
   const { fps } = useVideoConfig();
   const T = useCurrentFrame() / fps;
-  let s = 1, ox = 50, oy = 50;
+  let s = BASE, ox = 55, oy = 42;
   for (const [a, b, k, x, y] of ZOOMS) {
     const w = sm(a, a + 1.2, T) * (1 - sm(b - 1.2, b, T));
-    if (w > 0) { s = 1 + (k - 1) * w; ox = x; oy = y; }
+    if (w > 0) { s = BASE + (k - BASE) * w; ox = 55 + (x - 55) * w; oy = 42 + (y - 42) * w; }
   }
   const v: React.CSSProperties = { width: "100%", height: "100%", objectFit: "cover" };
   return (
     <AbsoluteFill style={{ transform: `scale(${s})`, transformOrigin: `${ox}% ${oy}%` }}>
-      <Sequence durationInFrames={Math.round(CUT * fps)}><OffthreadVideo src={staticFile("zones/clip1.mp4")} style={v} muted /></Sequence>
-      <Sequence from={Math.round(CUT * fps)}><OffthreadVideo src={staticFile("zones/clip2.mp4")} style={v} muted /></Sequence>
+      <OffthreadVideo src={staticFile("zones/footage_2k.mp4")} style={v} muted />
     </AbsoluteFill>
   );
 };
@@ -46,8 +46,8 @@ const SECTIONS: [number, string][] = [[TL.segments[1].start, "Lesson 1 · Why Ea
 const Section = () => {
   const T = useCurrentFrame() / useVideoConfig().fps;
   const cur = [...SECTIONS].reverse().find(([t]) => T >= t - 0.2);
-  if (!cur || T > TL.segments[9].start - 0.3) return null;
-  const o = sm(cur[0] - 0.2, cur[0] + 0.5, T) * (1 - sm(TL.segments[9].start - 0.8, TL.segments[9].start - 0.3, T));
+  if (!cur || T > cur[0] + 3.4) return null;                 // shown briefly so it never covers the graphics for long
+  const o = sm(cur[0] - 0.2, cur[0] + 0.4, T) * (1 - sm(cur[0] + 2.8, cur[0] + 3.4, T));
   return (
     <AbsoluteFill style={{ alignItems: "center", top: 26, opacity: o }}>
       <div style={{ fontFamily: FRED, fontWeight: 600, fontSize: 30, color: PAPER, background: INK, padding: "10px 26px", borderRadius: 999 }}>{cur[1]}</div>

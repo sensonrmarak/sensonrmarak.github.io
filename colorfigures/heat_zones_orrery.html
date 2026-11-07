@@ -736,6 +736,52 @@ function latLine(c, r, ax, lat, w, dash){
 }
 const landAt = (lat, lon) => Math.abs(lat) < 62 && (Math.sin(rad(lon * 2 + 40)) * Math.cos(rad(lat * 1.6)) > .45 || (lat > 15 && lat < 55 && Math.sin(rad(lon * 3 - 70)) > .55));
 
+
+/* ---------- degrees layer: tilt angle between the vertical and the axis, and the key latitude lines ---------- */
+function degSvg(st, c){
+  const k = st.deg || 0, kl = st.degLat == null ? k : st.degLat;
+  if (k <= 0 && kl <= 0) return '';
+  let s = '';
+  const halo = (x, y, txt, size, col = INK, anchor = 'middle') =>
+    `<text x="${f(x)}" y="${f(y)}" font-size="${f(size)}" text-anchor="${anchor}" font-family="ui-monospace,Menlo,monospace" font-weight="800" stroke="#f2efe7" stroke-width="${f(size * .32)}" paint-order="stroke" fill="${col}">${txt}</text>`;
+  const K = INK_K;
+  if (k > 0){
+    const V = [0, 0, 1], W = norm(sub(AX, V.map(x => x * Math.cos(TILT)))), R = ER + 11;
+    const vTop = [c[0], c[1], c[2] + ER + 15], vBot = [c[0], c[1], c[2] + ER - 2];
+    let g = `<path d="${pd([vBot, vTop], false)}" fill="none" stroke="${INK}" stroke-width="1.3" stroke-dasharray="3 2.5"/>`;
+    const arc = Array.from({length: 13}, (_, i) => { const t = TILT * i / 12; return [0, 1, 2].map(j => c[j] + R * (Math.cos(t) * V[j] + Math.sin(t) * W[j])); });
+    g += `<path d="${pd(arc, false)}" fill="none" stroke="#e2483d" stroke-width="2.2" stroke-linecap="round"/>`;
+    const mid = [0, 1, 2].map(j => c[j] + (R + 7) * (Math.cos(TILT / 2) * V[j] + Math.sin(TILT / 2) * W[j]));
+    const [mx, my] = P(...mid);
+    g += halo(mx, my - 2 * K, '23.5°', 13 * K, '#c8322a');
+    s += `<g opacity="${f(k)}">${g}</g>`;
+  }
+  return s;
+}
+
+/* latitude labels, drawn over everything, in a column on the side away from the Sun */
+function degLabels(st, c){
+  const kl = st.degLat == null ? (st.deg || 0) : st.degLat;
+  if (kl <= 0) return '';
+  const K = INK_K, u = norm(cross([0, 1, 0], AX)), v = cross(AX, u);
+  const [ex] = P(...c), [sx] = P(CX, CY, SUN_Z), side = sx > ex ? -1 : 1;
+  const Rs = [0, 1, 2].map(j => CAM_R[j] * .8 * side + CAM_V[j] * .6), lon = Math.atan2(dot(Rs, v), dot(Rs, u));
+  const halo = (x, y, txt) => `<text x="${f(x)}" y="${f(y)}" font-size="${f(10.5 * K)}" text-anchor="${side < 0 ? 'end' : 'start'}" font-family="ui-monospace,Menlo,monospace" font-weight="800" stroke="#f2efe7" stroke-width="${f(3.4 * K)}" paint-order="stroke" fill="${INK}">${txt}</text>`;
+  let g = '';
+  if (!st.zones) for (const la of [66.5, -66.5]) g += latLine(c, ER, AX, la, .9, true);
+  const items = [[66.5, '66.5°N ARCTIC'], [23.5, '23.5°N TROPIC'], [0, '0° EQUATOR'], [-23.5, '23.5°S TROPIC'], [-66.5, '66.5°S ANTARCTIC']]
+    .map(([la, txt]) => { const a = rad(la), p = [0, 1, 2].map(j => c[j] + ER * (AX[j] * Math.sin(a) + (u[j] * Math.cos(lon) + v[j] * Math.sin(lon)) * Math.cos(a)));
+      return { txt, scr: P(...p), seen: vis(norm(sub(p, c))) }; }).filter(it => it.seen);
+  if (!items.length) return '';
+  const colX = side < 0 ? Math.min(...items.map(it => it.scr[0])) - 24 * K : Math.max(...items.map(it => it.scr[0])) + 24 * K, gap = 15 * K;
+  let y = -1e9;
+  for (const it of items.sort((A, B) => A.scr[1] - B.scr[1])){ it.ly = Math.max(it.scr[1], y + gap); y = it.ly; }
+  for (const it of items){
+    g += `<circle cx="${f(it.scr[0])}" cy="${f(it.scr[1])}" r="${f(1.8 * K)}" fill="${INK}"/><path d="M${f(it.scr[0])} ${f(it.scr[1])}L${f(colX - side * 4 * K)} ${f(it.ly)}" fill="none" stroke="${INK}" stroke-width="1.1"/>`;
+    g += halo(colX, it.ly + 3.6 * K, it.txt);
+  }
+  return `<g opacity="${f(kl)}">${g}</g>`;
+}
 /* ---------- the earth: post, axis (split either side of the globe), globe, lines, sub-solar point ---------- */
 function earthParts(st, k){
   const c = earthC(st), [ex, ey] = armEnd(st), ts = toSun(st), out = [];
@@ -758,6 +804,7 @@ function earthParts(st, k){
     gl += latLine(c, ER, AX, cy.lat, 1.6, true).replace(`stroke="${INK}"`, 'stroke="#e2483d"');
     gl += rod(base, tip, .5, DARK, toneI, .6) + `<circle cx="${f(P(...tip)[0])}" cy="${f(P(...tip)[1])}" r="2.6" fill="#e2483d" stroke="${INK}" stroke-width="1"/>`;
     pin = tip; }
+  gl += degSvg(st, c);
   const sub3 = [0, 1, 2].map(i => c[i] + ts[i] * ER * 1.01);
   if (vis(ts)) gl += `<circle cx="${f(P(...sub3)[0])}" cy="${f(P(...sub3)[1])}" r="2.4" fill="#ffcf3a" stroke="${INK}" stroke-width="1"/>`;
   // terminator glow: a thin warm rim on the day side so the lit half reads
@@ -847,6 +894,7 @@ function scene(st, m){
   parts.push(...E.parts);
   if (k > 0) parts.push(...mechParts(st).map(p => ({ ...p, svg: `<g opacity="${f(k)}">${p.svg}</g>` })));
   s += byDepth(parts);
+  const degL = degLabels(st, earthC(st));
 
   // sunlight: parallel rays from the sun to the earth's day side
   if (st.rays){
@@ -859,6 +907,8 @@ function scene(st, m){
     s += r;
   }
 
+  s += degL;
+  if (st.zones && ((st.degLat == null ? st.deg : st.degLat) > .5) && st.city >= 0 && E.pin) s += xrCallouts([{ at: E.pin, text: CITIES[st.city].name, on: true }], [0, BX, 0, BY, 0, 80]);
   if (k > .6) s += xrCallouts([
     { at: [CX, CY, 13], text: 'FIXED PULLEY', on: st.moving },
     { at: [(CX + ex) / 2, (CY + ey) / 2, 13], text: 'DRIVE BELT', on: st.moving },
@@ -866,7 +916,7 @@ function scene(st, m){
     { at: [ex, ey, POST_Z1], text: 'EARTH POST', on: false },
     { at: [CX, CY, 30], text: 'PILLAR', on: false },
     { at: E.top, text: 'AXIS 23.5 DEG', on: true } ], [0, BX, 0, BY, 0, 80]);
-  else if (st.zones){ const u = norm(cross([0, 1, 0], AX)), v = cross(AX, u), lon = Math.atan2(dot(CAM_V, v), dot(CAM_V, u)) + .5;
+  else if (st.zones && !((st.degLat == null ? st.deg : st.degLat) > .5)){ const u = norm(cross([0, 1, 0], AX)), v = cross(AX, u), lon = Math.atan2(dot(CAM_V, v), dot(CAM_V, u)) + .5;
     const at = la => { const a = rad(la); return [0, 1, 2].map(i => E.c[i] + (AX[i] * Math.sin(a) + (u[i] * Math.cos(lon) + v[i] * Math.sin(lon)) * Math.cos(a)) * ER); };
     const dd = decl(st), cur = st.city >= 0 ? CITIES[st.city] : null;
     s += xrCallouts([
@@ -874,7 +924,7 @@ function scene(st, m){
       { at: at(0), text: 'TORRID ZONE', on: true }, { at: at(-45), text: 'S TEMPERATE ZONE', on: dd < 0 },
       { at: at(-78), text: 'S FRIGID ZONE', on: dd < 0 },
       ...(cur && E.pin ? [{ at: E.pin, text: cur.name, on: true }] : []) ], [0, BX, 0, BY, 0, 80]); }
-  else s += xrCallouts([
+  else if (!st.zones) s += xrCallouts([
     ...(st.city >= 0 && E.pin ? [{ at: E.pin, text: CITIES[st.city].name, on: true }] : []),
     { at: [CX, CY, SUN_Z + SUN_R], text: 'SUN', on: st.rays },
     { at: E.top, text: 'NORTH POLE', on: decl(st) > 5 },
@@ -938,7 +988,7 @@ ui = mountFigure({
   ],
   acts:{ earth: st => { const i = SEASONS.findIndex(s => ((st.th - s.th) % 360 + 360) % 360 < 1); goTo(st, SEASONS[(i + 1) % 4].th); },
          sun: st => { st.rays = !st.rays; } },
-  params:(st, q) => { if (q.has('th')) st.th = +q.get('th'); if (q.has('city')) st.city = +q.get('city'); if (q.get('zones') === '0') st.zones = false; if (q.get('rays') === '0') st.rays = false; },
+  params:(st, q) => { if (q.has('deg')) st.deg = +q.get('deg'); if (q.has('th')) st.th = +q.get('th'); if (q.has('city')) st.city = +q.get('city'); if (q.get('zones') === '0') st.zones = false; if (q.get('rays') === '0') st.rays = false; },
 });
 xrMount(() => ui, () => '');
 </script><style>@media (max-width:560px),(pointer:coarse){#art{filter:none!important}.ctl:has(#wb){display:none!important}}</style><style>@media (max-width:560px){html body .kpad{width:100%;box-sizing:border-box;justify-content:space-between;gap:10px;margin:10px 0 0;padding:0;border:0;background:none;box-shadow:none}
