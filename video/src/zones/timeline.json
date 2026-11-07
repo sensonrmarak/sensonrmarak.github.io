@@ -1,0 +1,1430 @@
+{
+ "total": 125.28,
+ "segments": [
+  {
+   "start": 0,
+   "end": 10.14,
+   "text": "Why does Earth have seasons? And why are some places hot all year? Let's find out with a model you can play with.",
+   "words": [
+    {
+     "text": "Why",
+     "start": 0.0,
+     "end": 0.292
+    },
+    {
+     "text": "does",
+     "start": 0.292,
+     "end": 0.648
+    },
+    {
+     "text": "Earth",
+     "start": 0.648,
+     "end": 1.069
+    },
+    {
+     "text": "have",
+     "start": 1.069,
+     "end": 1.426
+    },
+    {
+     "text": "seasons?",
+     "start": 1.426,
+     "end": 2.577
+    },
+    {
+     "text": "And",
+     "start": 2.577,
+     "end": 2.869
+    },
+    {
+     "text": "why",
+     "start": 2.869,
+     "end": 3.16
+    },
+    {
+     "text": "are",
+     "start": 3.16,
+     "end": 3.452
+    },
+    {
+     "text": "some",
+     "start": 3.452,
+     "end": 3.808
+    },
+    {
+     "text": "places",
+     "start": 3.808,
+     "end": 4.295
+    },
+    {
+     "text": "hot",
+     "start": 4.295,
+     "end": 4.586
+    },
+    {
+     "text": "all",
+     "start": 4.586,
+     "end": 5.568
+    },
+    {
+     "text": "year?",
+     "start": 5.568,
+     "end": 5.924
+    },
+    {
+     "text": "Let's",
+     "start": 5.924,
+     "end": 6.346
+    },
+    {
+     "text": "find",
+     "start": 6.346,
+     "end": 6.702
+    },
+    {
+     "text": "out",
+     "start": 6.702,
+     "end": 6.994
+    },
+    {
+     "text": "with",
+     "start": 6.994,
+     "end": 7.35
+    },
+    {
+     "text": "a",
+     "start": 7.35,
+     "end": 7.512
+    },
+    {
+     "text": "model",
+     "start": 7.512,
+     "end": 8.844
+    },
+    {
+     "text": "you",
+     "start": 8.844,
+     "end": 9.135
+    },
+    {
+     "text": "can",
+     "start": 9.135,
+     "end": 9.427
+    },
+    {
+     "text": "play",
+     "start": 9.427,
+     "end": 9.784
+    },
+    {
+     "text": "with.",
+     "start": 9.784,
+     "end": 10.14
+    }
+   ]
+  },
+  {
+   "start": 10.88,
+   "end": 23.08,
+   "text": "This is an orrery. The Sun sits in the middle, and an arm carries Earth around it, once a year. Earth's axis is tilted by twenty-three and a half degrees.",
+   "words": [
+    {
+     "text": "This",
+     "start": 10.88,
+     "end": 11.208
+    },
+    {
+     "text": "is",
+     "start": 11.208,
+     "end": 11.417
+    },
+    {
+     "text": "an",
+     "start": 11.417,
+     "end": 11.625
+    },
+    {
+     "text": "orrery.",
+     "start": 11.625,
+     "end": 12.073
+    },
+    {
+     "text": "The",
+     "start": 12.073,
+     "end": 12.741
+    },
+    {
+     "text": "Sun",
+     "start": 12.741,
+     "end": 13.009
+    },
+    {
+     "text": "sits",
+     "start": 13.009,
+     "end": 13.337
+    },
+    {
+     "text": "in",
+     "start": 13.337,
+     "end": 13.546
+    },
+    {
+     "text": "the",
+     "start": 13.546,
+     "end": 13.815
+    },
+    {
+     "text": "middle,",
+     "start": 13.815,
+     "end": 14.262
+    },
+    {
+     "text": "and",
+     "start": 14.262,
+     "end": 14.53
+    },
+    {
+     "text": "an",
+     "start": 14.53,
+     "end": 15.059
+    },
+    {
+     "text": "arm",
+     "start": 15.059,
+     "end": 15.327
+    },
+    {
+     "text": "carries",
+     "start": 15.327,
+     "end": 15.834
+    },
+    {
+     "text": "Earth",
+     "start": 15.834,
+     "end": 17.072
+    },
+    {
+     "text": "around",
+     "start": 17.072,
+     "end": 17.519
+    },
+    {
+     "text": "it,",
+     "start": 17.519,
+     "end": 17.728
+    },
+    {
+     "text": "once",
+     "start": 17.728,
+     "end": 18.056
+    },
+    {
+     "text": "a",
+     "start": 18.056,
+     "end": 18.205
+    },
+    {
+     "text": "year.",
+     "start": 18.205,
+     "end": 18.533
+    },
+    {
+     "text": "Earth's",
+     "start": 18.533,
+     "end": 19.04
+    },
+    {
+     "text": "axis",
+     "start": 19.04,
+     "end": 19.368
+    },
+    {
+     "text": "is",
+     "start": 19.368,
+     "end": 19.577
+    },
+    {
+     "text": "tilted",
+     "start": 19.577,
+     "end": 20.024
+    },
+    {
+     "text": "by",
+     "start": 20.024,
+     "end": 20.233
+    },
+    {
+     "text": "twenty-three",
+     "start": 20.233,
+     "end": 21.828
+    },
+    {
+     "text": "and",
+     "start": 21.828,
+     "end": 22.096
+    },
+    {
+     "text": "a",
+     "start": 22.096,
+     "end": 22.245
+    },
+    {
+     "text": "half",
+     "start": 22.245,
+     "end": 22.573
+    },
+    {
+     "text": "degrees.",
+     "start": 22.573,
+     "end": 23.08
+    }
+   ]
+  },
+  {
+   "start": 23.35,
+   "end": 38.79,
+   "text": "On the twenty-first of June, the north leans toward the Sun. The Sun is overhead at twenty-three and a half degrees north, and the days are long. It's summer in the north.",
+   "words": [
+    {
+     "text": "On",
+     "start": 23.35,
+     "end": 23.593
+    },
+    {
+     "text": "the",
+     "start": 23.593,
+     "end": 23.904
+    },
+    {
+     "text": "twenty-first",
+     "start": 23.904,
+     "end": 24.84
+    },
+    {
+     "text": "of",
+     "start": 24.84,
+     "end": 25.082
+    },
+    {
+     "text": "June,",
+     "start": 25.082,
+     "end": 26.203
+    },
+    {
+     "text": "the",
+     "start": 26.203,
+     "end": 26.515
+    },
+    {
+     "text": "north",
+     "start": 26.515,
+     "end": 26.966
+    },
+    {
+     "text": "leans",
+     "start": 26.966,
+     "end": 27.416
+    },
+    {
+     "text": "toward",
+     "start": 27.416,
+     "end": 27.936
+    },
+    {
+     "text": "the",
+     "start": 27.936,
+     "end": 28.247
+    },
+    {
+     "text": "Sun.",
+     "start": 28.247,
+     "end": 28.559
+    },
+    {
+     "text": "The",
+     "start": 28.559,
+     "end": 28.871
+    },
+    {
+     "text": "Sun",
+     "start": 28.871,
+     "end": 29.183
+    },
+    {
+     "text": "is",
+     "start": 29.183,
+     "end": 29.425
+    },
+    {
+     "text": "overhead",
+     "start": 29.425,
+     "end": 30.454
+    },
+    {
+     "text": "at",
+     "start": 30.454,
+     "end": 30.696
+    },
+    {
+     "text": "twenty-three",
+     "start": 30.696,
+     "end": 31.631
+    },
+    {
+     "text": "and",
+     "start": 31.631,
+     "end": 32.713
+    },
+    {
+     "text": "a",
+     "start": 32.713,
+     "end": 32.887
+    },
+    {
+     "text": "half",
+     "start": 32.887,
+     "end": 33.268
+    },
+    {
+     "text": "degrees",
+     "start": 33.268,
+     "end": 33.857
+    },
+    {
+     "text": "north,",
+     "start": 33.857,
+     "end": 35.187
+    },
+    {
+     "text": "and",
+     "start": 35.187,
+     "end": 35.499
+    },
+    {
+     "text": "the",
+     "start": 35.499,
+     "end": 35.811
+    },
+    {
+     "text": "days",
+     "start": 35.811,
+     "end": 36.192
+    },
+    {
+     "text": "are",
+     "start": 36.192,
+     "end": 36.503
+    },
+    {
+     "text": "long.",
+     "start": 36.503,
+     "end": 36.885
+    },
+    {
+     "text": "It's",
+     "start": 36.885,
+     "end": 37.266
+    },
+    {
+     "text": "summer",
+     "start": 37.266,
+     "end": 37.785
+    },
+    {
+     "text": "in",
+     "start": 37.785,
+     "end": 38.028
+    },
+    {
+     "text": "the",
+     "start": 38.028,
+     "end": 38.34
+    },
+    {
+     "text": "north.",
+     "start": 38.34,
+     "end": 38.79
+    }
+   ]
+  },
+  {
+   "start": 39.52,
+   "end": 49.46,
+   "text": "Six months later, the axis still points the same way. Now the north leans away, and the days are short. It's winter in the north, and summer in the south.",
+   "words": [
+    {
+     "text": "Six",
+     "start": 39.52,
+     "end": 39.718
+    },
+    {
+     "text": "months",
+     "start": 39.718,
+     "end": 40.047
+    },
+    {
+     "text": "later,",
+     "start": 40.047,
+     "end": 40.332
+    },
+    {
+     "text": "the",
+     "start": 40.332,
+     "end": 40.53
+    },
+    {
+     "text": "axis",
+     "start": 40.53,
+     "end": 40.771
+    },
+    {
+     "text": "still",
+     "start": 40.771,
+     "end": 41.057
+    },
+    {
+     "text": "points",
+     "start": 41.057,
+     "end": 41.746
+    },
+    {
+     "text": "the",
+     "start": 41.746,
+     "end": 41.943
+    },
+    {
+     "text": "same",
+     "start": 41.943,
+     "end": 42.185
+    },
+    {
+     "text": "way.",
+     "start": 42.185,
+     "end": 42.382
+    },
+    {
+     "text": "Now",
+     "start": 42.382,
+     "end": 42.58
+    },
+    {
+     "text": "the",
+     "start": 42.58,
+     "end": 43.408
+    },
+    {
+     "text": "north",
+     "start": 43.408,
+     "end": 43.693
+    },
+    {
+     "text": "leans",
+     "start": 43.693,
+     "end": 43.978
+    },
+    {
+     "text": "away,",
+     "start": 43.978,
+     "end": 44.22
+    },
+    {
+     "text": "and",
+     "start": 44.22,
+     "end": 44.417
+    },
+    {
+     "text": "the",
+     "start": 44.417,
+     "end": 45.085
+    },
+    {
+     "text": "days",
+     "start": 45.085,
+     "end": 45.326
+    },
+    {
+     "text": "are",
+     "start": 45.326,
+     "end": 45.524
+    },
+    {
+     "text": "short.",
+     "start": 45.524,
+     "end": 45.809
+    },
+    {
+     "text": "It's",
+     "start": 45.809,
+     "end": 46.321
+    },
+    {
+     "text": "winter",
+     "start": 46.321,
+     "end": 46.65
+    },
+    {
+     "text": "in",
+     "start": 46.65,
+     "end": 46.804
+    },
+    {
+     "text": "the",
+     "start": 46.804,
+     "end": 48.011
+    },
+    {
+     "text": "north,",
+     "start": 48.011,
+     "end": 48.297
+    },
+    {
+     "text": "and",
+     "start": 48.297,
+     "end": 48.494
+    },
+    {
+     "text": "summer",
+     "start": 48.494,
+     "end": 48.823
+    },
+    {
+     "text": "in",
+     "start": 48.823,
+     "end": 48.977
+    },
+    {
+     "text": "the",
+     "start": 48.977,
+     "end": 49.175
+    },
+    {
+     "text": "south.",
+     "start": 49.175,
+     "end": 49.46
+    }
+   ]
+  },
+  {
+   "start": 49.94,
+   "end": 58.87,
+   "text": "Watch a whole year. The axis never turns. Inside the arm, a belt between two equal pulleys keeps it pointing the same way.",
+   "words": [
+    {
+     "text": "Watch",
+     "start": 49.94,
+     "end": 50.312
+    },
+    {
+     "text": "a",
+     "start": 50.312,
+     "end": 50.454
+    },
+    {
+     "text": "whole",
+     "start": 50.454,
+     "end": 50.826
+    },
+    {
+     "text": "year.",
+     "start": 50.826,
+     "end": 51.14
+    },
+    {
+     "text": "The",
+     "start": 51.14,
+     "end": 51.398
+    },
+    {
+     "text": "axis",
+     "start": 51.398,
+     "end": 51.712
+    },
+    {
+     "text": "never",
+     "start": 51.712,
+     "end": 52.974
+    },
+    {
+     "text": "turns.",
+     "start": 52.974,
+     "end": 53.345
+    },
+    {
+     "text": "Inside",
+     "start": 53.345,
+     "end": 53.774
+    },
+    {
+     "text": "the",
+     "start": 53.774,
+     "end": 54.031
+    },
+    {
+     "text": "arm,",
+     "start": 54.031,
+     "end": 54.608
+    },
+    {
+     "text": "a",
+     "start": 54.608,
+     "end": 54.751
+    },
+    {
+     "text": "belt",
+     "start": 54.751,
+     "end": 55.066
+    },
+    {
+     "text": "between",
+     "start": 55.066,
+     "end": 55.552
+    },
+    {
+     "text": "two",
+     "start": 55.552,
+     "end": 55.809
+    },
+    {
+     "text": "equal",
+     "start": 55.809,
+     "end": 56.18
+    },
+    {
+     "text": "pulleys",
+     "start": 56.18,
+     "end": 56.666
+    },
+    {
+     "text": "keeps",
+     "start": 56.666,
+     "end": 57.298
+    },
+    {
+     "text": "it",
+     "start": 57.298,
+     "end": 57.498
+    },
+    {
+     "text": "pointing",
+     "start": 57.498,
+     "end": 58.041
+    },
+    {
+     "text": "the",
+     "start": 58.041,
+     "end": 58.298
+    },
+    {
+     "text": "same",
+     "start": 58.298,
+     "end": 58.613
+    },
+    {
+     "text": "way.",
+     "start": 58.613,
+     "end": 58.87
+    }
+   ]
+  },
+  {
+   "start": 59.6,
+   "end": 75.04,
+   "text": "The tilt also splits Earth into three heat zones. Between the tropics is the Torrid Zone, the only place the Sun can be straight overhead. It's hot all year, with about twelve hours of daylight every day.",
+   "words": [
+    {
+     "text": "The",
+     "start": 59.6,
+     "end": 59.868
+    },
+    {
+     "text": "tilt",
+     "start": 59.868,
+     "end": 60.195
+    },
+    {
+     "text": "also",
+     "start": 60.195,
+     "end": 60.522
+    },
+    {
+     "text": "splits",
+     "start": 60.522,
+     "end": 60.968
+    },
+    {
+     "text": "Earth",
+     "start": 60.968,
+     "end": 61.355
+    },
+    {
+     "text": "into",
+     "start": 61.355,
+     "end": 61.682
+    },
+    {
+     "text": "three",
+     "start": 61.682,
+     "end": 62.069
+    },
+    {
+     "text": "heat",
+     "start": 62.069,
+     "end": 62.396
+    },
+    {
+     "text": "zones.",
+     "start": 62.396,
+     "end": 62.783
+    },
+    {
+     "text": "Between",
+     "start": 62.783,
+     "end": 64.059
+    },
+    {
+     "text": "the",
+     "start": 64.059,
+     "end": 64.327
+    },
+    {
+     "text": "tropics",
+     "start": 64.327,
+     "end": 64.832
+    },
+    {
+     "text": "is",
+     "start": 64.832,
+     "end": 65.04
+    },
+    {
+     "text": "the",
+     "start": 65.04,
+     "end": 65.308
+    },
+    {
+     "text": "Torrid",
+     "start": 65.308,
+     "end": 65.754
+    },
+    {
+     "text": "Zone,",
+     "start": 65.754,
+     "end": 66.082
+    },
+    {
+     "text": "the",
+     "start": 66.082,
+     "end": 66.349
+    },
+    {
+     "text": "only",
+     "start": 66.349,
+     "end": 67.197
+    },
+    {
+     "text": "place",
+     "start": 67.197,
+     "end": 67.583
+    },
+    {
+     "text": "the",
+     "start": 67.583,
+     "end": 67.851
+    },
+    {
+     "text": "Sun",
+     "start": 67.851,
+     "end": 68.119
+    },
+    {
+     "text": "can",
+     "start": 68.119,
+     "end": 68.387
+    },
+    {
+     "text": "be",
+     "start": 68.387,
+     "end": 68.595
+    },
+    {
+     "text": "straight",
+     "start": 68.595,
+     "end": 69.16
+    },
+    {
+     "text": "overhead.",
+     "start": 69.16,
+     "end": 70.455
+    },
+    {
+     "text": "It's",
+     "start": 70.455,
+     "end": 70.782
+    },
+    {
+     "text": "hot",
+     "start": 70.782,
+     "end": 71.05
+    },
+    {
+     "text": "all",
+     "start": 71.05,
+     "end": 71.318
+    },
+    {
+     "text": "year,",
+     "start": 71.318,
+     "end": 71.645
+    },
+    {
+     "text": "with",
+     "start": 71.645,
+     "end": 72.392
+    },
+    {
+     "text": "about",
+     "start": 72.392,
+     "end": 72.779
+    },
+    {
+     "text": "twelve",
+     "start": 72.779,
+     "end": 73.225
+    },
+    {
+     "text": "hours",
+     "start": 73.225,
+     "end": 73.612
+    },
+    {
+     "text": "of",
+     "start": 73.612,
+     "end": 73.82
+    },
+    {
+     "text": "daylight",
+     "start": 73.82,
+     "end": 74.386
+    },
+    {
+     "text": "every",
+     "start": 74.386,
+     "end": 74.772
+    },
+    {
+     "text": "day.",
+     "start": 74.772,
+     "end": 75.04
+    }
+   ]
+  },
+  {
+   "start": 75.96,
+   "end": 91.11,
+   "text": "From twenty-three and a half to sixty-six and a half degrees are the Temperate Zones, with four strong seasons: long summer days, and short winter days.",
+   "words": [
+    {
+     "text": "From",
+     "start": 75.96,
+     "end": 76.386
+    },
+    {
+     "text": "twenty-three",
+     "start": 76.386,
+     "end": 77.432
+    },
+    {
+     "text": "and",
+     "start": 77.432,
+     "end": 77.781
+    },
+    {
+     "text": "a",
+     "start": 77.781,
+     "end": 77.974
+    },
+    {
+     "text": "half",
+     "start": 77.974,
+     "end": 78.4
+    },
+    {
+     "text": "to",
+     "start": 78.4,
+     "end": 78.671
+    },
+    {
+     "text": "sixty-six",
+     "start": 78.671,
+     "end": 79.855
+    },
+    {
+     "text": "and",
+     "start": 79.855,
+     "end": 80.203
+    },
+    {
+     "text": "a",
+     "start": 80.203,
+     "end": 80.397
+    },
+    {
+     "text": "half",
+     "start": 80.397,
+     "end": 80.823
+    },
+    {
+     "text": "degrees",
+     "start": 80.823,
+     "end": 81.902
+    },
+    {
+     "text": "are",
+     "start": 81.902,
+     "end": 82.25
+    },
+    {
+     "text": "the",
+     "start": 82.25,
+     "end": 82.599
+    },
+    {
+     "text": "Temperate",
+     "start": 82.599,
+     "end": 84.012
+    },
+    {
+     "text": "Zones,",
+     "start": 84.012,
+     "end": 84.516
+    },
+    {
+     "text": "with",
+     "start": 84.516,
+     "end": 84.942
+    },
+    {
+     "text": "four",
+     "start": 84.942,
+     "end": 85.698
+    },
+    {
+     "text": "strong",
+     "start": 85.698,
+     "end": 86.279
+    },
+    {
+     "text": "seasons:",
+     "start": 86.279,
+     "end": 86.938
+    },
+    {
+     "text": "long",
+     "start": 86.938,
+     "end": 88.244
+    },
+    {
+     "text": "summer",
+     "start": 88.244,
+     "end": 88.825
+    },
+    {
+     "text": "days,",
+     "start": 88.825,
+     "end": 89.251
+    },
+    {
+     "text": "and",
+     "start": 89.251,
+     "end": 89.599
+    },
+    {
+     "text": "short",
+     "start": 89.599,
+     "end": 90.103
+    },
+    {
+     "text": "winter",
+     "start": 90.103,
+     "end": 90.684
+    },
+    {
+     "text": "days.",
+     "start": 90.684,
+     "end": 91.11
+    }
+   ]
+  },
+  {
+   "start": 91.74,
+   "end": 98.05,
+   "text": "Beyond the polar circles are the Frigid Zones. In summer, the Sun never sets. In winter, it never rises.",
+   "words": [
+    {
+     "text": "Beyond",
+     "start": 91.74,
+     "end": 92.072
+    },
+    {
+     "text": "the",
+     "start": 92.072,
+     "end": 92.27
+    },
+    {
+     "text": "polar",
+     "start": 92.27,
+     "end": 92.898
+    },
+    {
+     "text": "circles",
+     "start": 92.898,
+     "end": 93.273
+    },
+    {
+     "text": "are",
+     "start": 93.273,
+     "end": 93.472
+    },
+    {
+     "text": "the",
+     "start": 93.472,
+     "end": 93.671
+    },
+    {
+     "text": "Frigid",
+     "start": 93.671,
+     "end": 94.003
+    },
+    {
+     "text": "Zones.",
+     "start": 94.003,
+     "end": 94.29
+    },
+    {
+     "text": "In",
+     "start": 94.29,
+     "end": 94.445
+    },
+    {
+     "text": "summer,",
+     "start": 94.445,
+     "end": 95.396
+    },
+    {
+     "text": "the",
+     "start": 95.396,
+     "end": 95.595
+    },
+    {
+     "text": "Sun",
+     "start": 95.595,
+     "end": 95.794
+    },
+    {
+     "text": "never",
+     "start": 95.794,
+     "end": 96.591
+    },
+    {
+     "text": "sets.",
+     "start": 96.591,
+     "end": 96.834
+    },
+    {
+     "text": "In",
+     "start": 96.834,
+     "end": 96.989
+    },
+    {
+     "text": "winter,",
+     "start": 96.989,
+     "end": 97.321
+    },
+    {
+     "text": "it",
+     "start": 97.321,
+     "end": 97.475
+    },
+    {
+     "text": "never",
+     "start": 97.475,
+     "end": 97.763
+    },
+    {
+     "text": "rises.",
+     "start": 97.763,
+     "end": 98.05
+    }
+   ]
+  },
+  {
+   "start": 98.84,
+   "end": 118.32,
+   "text": "So which zone is a city in? Just look at its latitude. Singapore, near the equator, is torrid. London, at fifty-one degrees north, is temperate. And Longyearbyen, at seventy-eight degrees north, is frigid, with the midnight sun in June.",
+   "words": [
+    {
+     "text": "So",
+     "start": 98.84,
+     "end": 99.051
+    },
+    {
+     "text": "which",
+     "start": 99.051,
+     "end": 99.443
+    },
+    {
+     "text": "zone",
+     "start": 99.443,
+     "end": 99.775
+    },
+    {
+     "text": "is",
+     "start": 99.775,
+     "end": 99.986
+    },
+    {
+     "text": "a",
+     "start": 99.986,
+     "end": 100.137
+    },
+    {
+     "text": "city",
+     "start": 100.137,
+     "end": 100.469
+    },
+    {
+     "text": "in?",
+     "start": 100.469,
+     "end": 100.68
+    },
+    {
+     "text": "Just",
+     "start": 100.68,
+     "end": 101.702
+    },
+    {
+     "text": "look",
+     "start": 101.702,
+     "end": 102.034
+    },
+    {
+     "text": "at",
+     "start": 102.034,
+     "end": 102.245
+    },
+    {
+     "text": "its",
+     "start": 102.245,
+     "end": 102.516
+    },
+    {
+     "text": "latitude.",
+     "start": 102.516,
+     "end": 103.829
+    },
+    {
+     "text": "Singapore,",
+     "start": 103.829,
+     "end": 104.463
+    },
+    {
+     "text": "near",
+     "start": 104.463,
+     "end": 104.795
+    },
+    {
+     "text": "the",
+     "start": 104.795,
+     "end": 105.066
+    },
+    {
+     "text": "equator,",
+     "start": 105.066,
+     "end": 105.919
+    },
+    {
+     "text": "is",
+     "start": 105.919,
+     "end": 106.13
+    },
+    {
+     "text": "torrid.",
+     "start": 106.13,
+     "end": 107.422
+    },
+    {
+     "text": "London,",
+     "start": 107.422,
+     "end": 107.875
+    },
+    {
+     "text": "at",
+     "start": 107.875,
+     "end": 108.086
+    },
+    {
+     "text": "fifty-one",
+     "start": 108.086,
+     "end": 108.719
+    },
+    {
+     "text": "degrees",
+     "start": 108.719,
+     "end": 109.232
+    },
+    {
+     "text": "north,",
+     "start": 109.232,
+     "end": 109.964
+    },
+    {
+     "text": "is",
+     "start": 109.964,
+     "end": 110.175
+    },
+    {
+     "text": "temperate.",
+     "start": 110.175,
+     "end": 111.559
+    },
+    {
+     "text": "And",
+     "start": 111.559,
+     "end": 111.83
+    },
+    {
+     "text": "Longyearbyen,",
+     "start": 111.83,
+     "end": 112.905
+    },
+    {
+     "text": "at",
+     "start": 112.905,
+     "end": 113.116
+    },
+    {
+     "text": "seventy-eight",
+     "start": 113.116,
+     "end": 113.991
+    },
+    {
+     "text": "degrees",
+     "start": 113.991,
+     "end": 114.863
+    },
+    {
+     "text": "north,",
+     "start": 114.863,
+     "end": 115.256
+    },
+    {
+     "text": "is",
+     "start": 115.256,
+     "end": 115.467
+    },
+    {
+     "text": "frigid,",
+     "start": 115.467,
+     "end": 116.329
+    },
+    {
+     "text": "with",
+     "start": 116.329,
+     "end": 116.661
+    },
+    {
+     "text": "the",
+     "start": 116.661,
+     "end": 116.932
+    },
+    {
+     "text": "midnight",
+     "start": 116.932,
+     "end": 117.506
+    },
+    {
+     "text": "sun",
+     "start": 117.506,
+     "end": 117.777
+    },
+    {
+     "text": "in",
+     "start": 117.777,
+     "end": 117.988
+    },
+    {
+     "text": "June.",
+     "start": 117.988,
+     "end": 118.32
+    }
+   ]
+  },
+  {
+   "start": 119.07,
+   "end": 125.28,
+   "text": "Remember: the tilt makes the seasons, and latitude decides your heat zone.",
+   "words": [
+    {
+     "text": "Remember:",
+     "start": 119.07,
+     "end": 119.678
+    },
+    {
+     "text": "the",
+     "start": 119.678,
+     "end": 120.526
+    },
+    {
+     "text": "tilt",
+     "start": 120.526,
+     "end": 120.878
+    },
+    {
+     "text": "makes",
+     "start": 120.878,
+     "end": 121.293
+    },
+    {
+     "text": "the",
+     "start": 121.293,
+     "end": 121.581
+    },
+    {
+     "text": "seasons,",
+     "start": 121.581,
+     "end": 122.525
+    },
+    {
+     "text": "and",
+     "start": 122.525,
+     "end": 122.813
+    },
+    {
+     "text": "latitude",
+     "start": 122.813,
+     "end": 123.421
+    },
+    {
+     "text": "decides",
+     "start": 123.421,
+     "end": 124.224
+    },
+    {
+     "text": "your",
+     "start": 124.224,
+     "end": 124.576
+    },
+    {
+     "text": "heat",
+     "start": 124.576,
+     "end": 124.928
+    },
+    {
+     "text": "zone.",
+     "start": 124.928,
+     "end": 125.28
+    }
+   ]
+  }
+ ]
+}

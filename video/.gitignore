@@ -2,3 +2,4 @@ node_modules
 out
 public/moss/soundtrack.wav
 __pycache__
+public/zones/soundtrack.wav
