@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heat Zones Orrery</title></head><body>
+<script src="core.js"></script>
+<script>
+/* Heat zones orrery: why Earth's tilt causes seasons, how the seasons play out in the three heat zones, and which zone a city is in.
+   HEAT ZONES (set by the tilt, 23.5 deg):
+   TORRID    between the Tropic of Cancer (23.5 N) and the Tropic of Capricorn (23.5 S): the only place the Sun can ever be
+             straight overhead (it is, twice a year, as the overhead point swings between the tropics). Hot all year,
+             day length always close to 12 h, seasons are wet and dry rather than hot and cold.
+   TEMPERATE 23.5 to 66.5 deg, north and south: the Sun is never overhead and never stays up or down all day, so the
+             seasons are strong: long high-sun summer days, short low-sun winter days. North and south have opposite seasons.
+   FRIGID    beyond the Arctic and Antarctic Circles (66.5 deg): the Sun is always low; at least one day a year it never sets
+             (midnight sun) and one day it never rises (polar night), up to six months each at the poles.
+   Seasons orrery mechanics follow.
+   HOW IT REALLY WORKS
+   1. The Sun sits on a fixed central pillar. An arm turns around the pillar and carries the Earth round it (one turn = one year).
+   2. Earth's axis is tilted 23.5 degrees. In a real tellurion a belt runs from a FIXED pulley on the pillar to an EQUAL pulley
+      under the Earth: because the two pulleys are the same size, the Earth's post never turns relative to the room as the arm
+      goes round, so the axis always leans the same way in space (towards the back wall, +x here).
+   3. June: the Earth is behind the Sun (low x) and its north pole leans TOWARD the Sun: the Sun is overhead at 23.5 N
+      (Tropic of Cancer), northern days are long -> northern summer. December: the Earth is in front and the north leans AWAY.
+   4. September / March: the lean is sideways to the Sun, the Sun is overhead at the equator, day and night are equal.
+   PARTS
+   base:      walnut board, felt feet
+   sun:       brass pillar, sun globe, collar
+   arm:       hub ring on the pillar, arm case (two cheeks + lid), end bearing
+   mechanism: fixed sun pulley (on the pillar), drive belt, earth pulley (same size), earth post, bottom bearing
+   earth:     globe (oceans, land, ice caps, night side), tilted axis rod, equator, tropics, sub-solar point, N cap */
+
+const BX = 136, BY = 136, BH = 4;                       // board
+const CX = 68, CY = 68;                                  // pillar centre
+const SUN_Z = 62, SUN_R = 15;
+const ARM_R = 50, ARM_Z0 = 10, ARM_Z1 = 16, ARM_W = 11;
+const POST_Z1 = 26, AX_L = 22;                          // earth post top (bottom bearing) and axis length below the globe centre
+const ER = 21;                                           // earth radius
+const TILT = 23.5 * Math.PI / 180;
+const AX = norm([Math.sin(TILT), 0, Math.cos(TILT)]);    // the axis leans toward +x, always
+const PUL_R = 6.5;                                       // both pulleys
+const BRASS = { l:'#f2cf6b', m:'#d3a640', d:'#8a6520' }, WAL = { l:'#b98457', m:'#9a6a40', d:'#5e3d22' };
+const SUNM = { l:'#ffd84d', m:'#f7b733', d:'#d98a1c' };
+const OCEAN = { l:'#7cc0ef', m:'#5a9fd6', d:'#2f6aa3' }, LAND = { l:'#8fcf73', m:'#6fb257', d:'#3f7a34' }, ICE = { l:'#fbfcfd', m:'#e4e9ee', d:'#b9c2cc' };
+const NIGHT = '#26324f', NIGHT_LAND = '#2f3d3a', NIGHT_ICE = '#5d6780';
+const BELT = '#3a3330';
+const ZONE = { torrid: matOf('#f2874a'), temperate: matOf('#a8d66f'), frigid: matOf('#d7ecfa') };
+const zoneOf = lat => Math.abs(lat) < 23.5 ? 'TORRID' : Math.abs(lat) < 66.5 ? 'TEMPERATE' : 'FRIGID';
+const CITIES = [
+  { name:'SINGAPORE', lat: 1.35 }, { name:'NAIROBI', lat: -1.29 }, { name:'MUMBAI', lat: 19.08 }, { name:'RIO DE JANEIRO', lat: -22.91 },
+  { name:'DELHI', lat: 28.61 }, { name:'CAIRO', lat: 30.04 }, { name:'SYDNEY', lat: -33.87 }, { name:'CAPE TOWN', lat: -33.92 },
+  { name:'TOKYO', lat: 35.68 }, { name:'NEW YORK', lat: 40.71 }, { name:'LONDON', lat: 51.51 }, { name:'REYKJAVIK', lat: 64.15 },
+  { name:'TROMSO', lat: 69.65 }, { name:'MURMANSK', lat: 68.97 }, { name:'LONGYEARBYEN', lat: 78.22 }, { name:'MCMURDO STATION', lat: -77.85 } ];
+const SEASONS = [
+  { label:'June solstice', th: 180 }, { label:'September equinox', th: 270 },
+  { label:'December solstice', th: 360 }, { label:'March equinox', th: 450 } ];
+
+const rad = d => d * Math.PI / 180;
+const armEnd = st => [CX + ARM_R * Math.cos(rad(st.th)), CY + ARM_R * Math.sin(rad(st.th))];
+const earthC = st => { const [x, y] = armEnd(st); return [x + AX[0] * (AX_L), y + AX[1] * AX_L, POST_Z1 + AX[2] * AX_L]; };
+const toSun = st => { const [x, y] = armEnd(st); return norm([CX - x, CY - y, 0]); };   // the orbit direction (the post rides the arm end)
+const decl = st => Math.asin(dot(toSun(st), AX)) * 180 / Math.PI;           // latitude where the Sun is overhead
+
+/* a globe whose latitude bands follow the axis ax; col(n, lat, lon) gives each small face its colour */
+function globe(c, r, ax, col, nLat = 16, nLon = 32){
+  const u = norm(cross([0, 1, 0], ax)), v = cross(ax, u);
+  const pt = (lat, lon) => { const a = rad(lat), b = rad(lon), cr = r * Math.cos(a), sr = r * Math.sin(a);
+    return [0, 1, 2].map(i => c[i] + ax[i] * sr + (u[i] * Math.cos(b) + v[i] * Math.sin(b)) * cr); };
+  let s = '', all = [];
+  for (let i = 0; i < nLat; i++){
+    const la0 = -88 + 176 * i / nLat, la1 = -88 + 176 * (i + 1) / nLat, lm = (la0 + la1) / 2;
+    for (let j = 0; j < nLon; j++){
+      const lo0 = 360 * j / nLon, lo1 = 360 * (j + 1) / nLon;
+      const q = [pt(la0, lo0), pt(la0, lo1), pt(la1, lo1), pt(la1, lo0)];
+      const n = norm(sub(avg(q), c));
+      if (vis(n)) s += face(pd(q), col(n, lm, (lo0 + lo1) / 2));
+    }
+  }
+  for (let j = 0; j < 36; j++) for (const la of [-80, -60, -40, -20, 0, 20, 40, 60, 80]) all.push(pt(la, j * 10));
+  for (const sgn of [1, -1]){ const capN = ax.map(x => x * sgn);       // tiny pole caps
+    if (vis(capN)) s += fill(pd(Array.from({length: nLon}, (_, j) => pt(88 * sgn, 360 * j / nLon))), col(capN, 89 * sgn, 0)); }
+  return { svg: s + hullInk(all, 2.2), pt };
+}
+/* a line of latitude on the globe, inked only where it faces the viewer */
+function latLine(c, r, ax, lat, w, dash){
+  const u = norm(cross([0, 1, 0], ax)), v = cross(ax, u);
+  let d = '', run = [];
+  const flush = () => { if (run.length > 1) d += pd(run, false); run = []; };
+  for (let j = 0; j <= 72; j++){
+    const b = rad(j * 5), a = rad(lat), p = [0, 1, 2].map(i => c[i] + ax[i] * r * Math.sin(a) + (u[i] * Math.cos(b) + v[i] * Math.sin(b)) * r * Math.cos(a) * 1.005);
+    if (vis(norm(sub(p, c)))) run.push(p); else flush();
+  }
+  flush();
+  return d ? `<path d="${d}" fill="none" stroke="${INK}" stroke-width="${w}" ${dash ? 'stroke-dasharray="2.2 2"' : ''} stroke-linecap="round"/>` : '';
+}
+const landAt = (lat, lon) => Math.abs(lat) < 62 && (Math.sin(rad(lon * 2 + 40)) * Math.cos(rad(lat * 1.6)) > .45 || (lat > 15 && lat < 55 && Math.sin(rad(lon * 3 - 70)) > .55));
+
+/* ---------- the earth: post, axis (split either side of the globe), globe, lines, sub-solar point ---------- */
+function earthParts(st, k){
+  const c = earthC(st), [ex, ey] = armEnd(st), ts = toSun(st), out = [];
+  const g = globe(c, ER, AX, (n, lat, lon) => {
+    const lit = dot(n, ts) > 0, ice = Math.abs(lat) > 66.5, land = landAt(lat, lon);
+    if (st.zones){ const zm = Math.abs(lat) < 23.5 ? ZONE.torrid : Math.abs(lat) < 66.5 ? ZONE.temperate : ZONE.frigid;
+      return lit ? tone(n, zm) : mix(zm.m, NIGHT, .45); }
+    if (!lit) return ice ? NIGHT_ICE : land ? NIGHT_LAND : NIGHT;
+    return tone(n, ice ? ICE : land ? LAND : OCEAN);
+  });
+  let gl = g.svg + latLine(c, ER, AX, 0, 1.1, false);
+  for (const la of [23.5, -23.5]) gl += latLine(c, ER, AX, la, st.zones ? 1.4 : .8, !st.zones);
+  if (st.zones) for (const la of [66.5, -66.5]) gl += latLine(c, ER, AX, la, 1.4, false);
+  // the chosen city: its line of latitude and a pin on the side facing the viewer
+  let pin = null;
+  if (st.city >= 0){ const cy = CITIES[st.city], u = norm(cross([0, 1, 0], AX)), v = cross(AX, u);
+    const V = CAM_V, lon = Math.atan2(dot(V, v), dot(V, u)), a = rad(cy.lat);
+    const dir = [0, 1, 2].map(i => AX[i] * Math.sin(a) + (u[i] * Math.cos(lon) + v[i] * Math.sin(lon)) * Math.cos(a));
+    const base = [0, 1, 2].map(i => c[i] + dir[i] * ER), tip = [0, 1, 2].map(i => c[i] + dir[i] * (ER + 5));
+    gl += latLine(c, ER, AX, cy.lat, 1.6, true).replace(`stroke="${INK}"`, 'stroke="#e2483d"');
+    gl += rod(base, tip, .5, DARK, toneI, .6) + `<circle cx="${f(P(...tip)[0])}" cy="${f(P(...tip)[1])}" r="2.6" fill="#e2483d" stroke="${INK}" stroke-width="1"/>`;
+    pin = tip; }
+  const sub3 = [0, 1, 2].map(i => c[i] + ts[i] * ER * 1.01);
+  if (vis(ts)) gl += `<circle cx="${f(P(...sub3)[0])}" cy="${f(P(...sub3)[1])}" r="2.4" fill="#ffcf3a" stroke="${INK}" stroke-width="1"/>`;
+  // terminator glow: a thin warm rim on the day side so the lit half reads
+  const bot = [0, 1, 2].map(i => c[i] - AX[i] * AX_L), top = [0, 1, 2].map(i => c[i] + AX[i] * (ER + 7));
+  const lower = rod(bot, [0, 1, 2].map(i => c[i] - AX[i] * ER), .9, METAL, toneI, .8);
+  const upper = rod([0, 1, 2].map(i => c[i] + AX[i] * ER), top, .9, METAL, toneI, .8)
+    + `<circle cx="${f(P(...top)[0])}" cy="${f(P(...top)[1])}" r="1.8" fill="#e2483d" stroke="${INK}" stroke-width=".9"/>`;
+  const front = p => depthOf(p) > depthOf(c);
+  const post = cyl(ex, ey, ARM_Z1, POST_Z1, 1.8, BRASS, toneI, 1) + cyl(ex, ey, POST_Z1 - 1.5, POST_Z1 + .5, 3, BRASS, toneI, 1);
+  const earthSvg = (front(bot) ? '' : lower) + (front(top) ? '' : upper) + act('earth', gl) + (front(bot) ? lower : '') + (front(top) ? upper : '');
+  out.push({ box: [[ex - 3.5, ey - 3.5, ARM_Z1], [ex + 3.5, ey + 3.5, POST_Z1 + .5]], svg: post });
+  out.push({ box: [[c[0] - ER - 2, c[1] - ER - 2, c[2] - ER - 2], [c[0] + ER + 2, c[1] + ER + 2, c[2] + ER + 8]], svg: earthSvg });
+  return { parts: out, c, sub3, top, pin };
+}
+
+/* ---------- the arm: hub on the pillar, a case out to the earth post; split in pieces so it sorts ---------- */
+function armCorners(st, r0, r1, z0, z1, w){
+  const a = rad(st.th), d = [Math.cos(a), Math.sin(a)], n = [-d[1], d[0]];
+  const q = (r, s, z) => [CX + d[0] * r + n[0] * s * w / 2, CY + d[1] * r + n[1] * s * w / 2, z];
+  return { lo: [q(r0, -1, z0), q(r1, -1, z0), q(r1, 1, z0), q(r0, 1, z0)], hi: [q(r0, -1, z1), q(r1, -1, z1), q(r1, 1, z1), q(r0, 1, z1)] };
+}
+const bbox = pts => [[0, 1, 2].map(i => Math.min(...pts.map(p => p[i]))), [0, 1, 2].map(i => Math.max(...pts.map(p => p[i])))];
+function armParts(st, m, k){
+  const out = [], N = 5, r0 = 9.5, r1 = ARM_R + 5;
+  for (let i = 0; i < N; i++){
+    const a = r0 + (r1 - r0) * i / N, b = r0 + (r1 - r0) * (i + 1) / N, { lo, hi } = armCorners(st, a, b, ARM_Z0, ARM_Z1, ARM_W);
+    let s = loft(lo, hi, n => tone(n, m)) + (vis([0, 0, 1]) ? fill(pd(hi), tone([0, 0, 1], m)) : '');
+    s += hullInk([...lo, ...hi], 1.6);
+    if (vis([0, 0, 1])) s += line([hi[0], hi[1]], 1.2) + line([hi[3], hi[2]], 1.2);
+    out.push({ box: bbox([...lo, ...hi]), svg: k > 0 ? `<g opacity="${f(1 - .82 * k)}">${s}</g>` : s });
+  }
+  // rounded end cap under the earth post
+  const [ex, ey] = armEnd(st);
+  out.push({ box: [[ex - 6, ey - 6, ARM_Z0], [ex + 6, ey + 6, ARM_Z1 + .2]], svg: `<g opacity="${f(1 - .82 * k)}">${cyl(ex, ey, ARM_Z0, ARM_Z1 + .2, ARM_W / 2, m, tone, 1.2)}</g>` });
+  return out;
+}
+
+/* ---------- see-through: the belt drive that keeps the axis parallel ---------- */
+function pulley(x, y, z0, z1, r, m, turn){
+  const A = on(PZ(z0), ellUV(x, y, r, r, 28)), B = on(PZ(z1), ellUV(x, y, r, r, 28));
+  let s = loft(A, B, n => toneI(n, m)) + fill(pd(B), toneI([0, 0, 1], m)) + hullInk([...A, ...B], 1) + ink(pd(B), .8);
+  // groove + spokes so it reads as a pulley, and so you can see whether it turns
+  s += ink(pd(on(PZ(z1 + .05), ellUV(x, y, r * .62, r * .62, 20))), .7);
+  for (let i = 0; i < 3; i++){ const a = turn + i * 2 * Math.PI / 3; s += line([[x, y, z1 + .06], [x + Math.cos(a) * r * .6, y + Math.sin(a) * r * .6, z1 + .06]], .9); }
+  return s + fill(pd(on(PZ(z1 + .07), ellUV(x, y, 1.3, 1.3, 10))), INK);
+}
+function mechParts(st){
+  const out = [], [ex, ey] = armEnd(st), z0 = 11.6, z1 = 14.2, a = rad(st.th), d = [Math.cos(a), Math.sin(a)], n = [-d[1], d[0]];
+  // both pulleys keep their spokes fixed to the room (the sun one is fixed; the earth one is held parallel by the belt)
+  out.push({ box: [[CX - PUL_R, CY - PUL_R, z0], [CX + PUL_R, CY + PUL_R, z1]], svg: pulley(CX, CY, z0, z1, PUL_R, METAL, 0) });
+  out.push({ box: [[ex - PUL_R, ey - PUL_R, z0], [ex + PUL_R, ey + PUL_R, z1]], svg: pulley(ex, ey, z0, z1, PUL_R, BRASS, 0) });
+  // the belt: two straight runs tangent to both pulleys, in short pieces so they sort with the pulleys
+  for (const s of [-1, 1]){
+    const p0 = [CX + n[0] * PUL_R * s, CY + n[1] * PUL_R * s], p1 = [ex + n[0] * PUL_R * s, ey + n[1] * PUL_R * s];
+    for (let i = 0; i < 6; i++){
+      const t0 = i / 6, t1 = (i + 1) / 6, A = [p0[0] + (p1[0] - p0[0]) * t0, p0[1] + (p1[1] - p0[1]) * t0], B = [p0[0] + (p1[0] - p0[0]) * t1, p0[1] + (p1[1] - p0[1]) * t1];
+      const q = [[A[0], A[1], z0 + .5], [B[0], B[1], z0 + .5], [B[0], B[1], z1 - .5], [A[0], A[1], z1 - .5]];
+      out.push({ box: bbox(q), svg: shape(q, BELT, .6) });
+    }
+  }
+  return out;
+}
+
+/* ---------- scene ---------- */
+let MECH_LABELS = '';
+function scene(st, m){
+  const k = ease(st.xr || 0);
+  const c = earthC(st), [ex, ey] = armEnd(st);
+  let s = board(0, 0, BX, BY, BH, 8, WAL);
+  // one shadow for the whole orrery, on the board
+  const shadowPts = [];
+  for (let j = 0; j < 16; j++){ const a = j * Math.PI / 8;
+    shadowPts.push([CX + Math.cos(a) * SUN_R, CY + Math.sin(a) * SUN_R, SUN_Z], [CX + Math.cos(a) * 3, CY + Math.sin(a) * 3, BH]);
+  }
+  s += castShadow(shadowPts, BH, boardTop(0, 0, BX, BY, BH, 8));
+  const eS = []; for (let j = 0; j < 16; j++){ const a = j * Math.PI / 8; eS.push([c[0] + Math.cos(a) * ER, c[1] + Math.sin(a) * ER, c[2]], [ex + Math.cos(a) * 3, ey + Math.sin(a) * 3, ARM_Z0]); }
+  s += castShadow(eS, BH, boardTop(0, 0, BX, BY, BH, 8));
+
+  // the sun: pillar, collar, globe (one sorted item; the arm starts outside the collar)
+  const pillar = cyl(CX, CY, BH, ARM_Z0, 3, BRASS, toneI, 1.2) + cyl(CX, CY, ARM_Z0, ARM_Z1, 9, m, tone, 1.4)
+    + cyl(CX, CY, ARM_Z1, SUN_Z - SUN_R + 2, 2.6, BRASS, toneI, 1.2) + cyl(CX, CY, SUN_Z - SUN_R - 1, SUN_Z - SUN_R + 2, 5, BRASS, toneI, 1);
+  const sun = globe([CX, CY, SUN_Z], SUN_R, [0, 0, 1], n => mix(SUNM.l, SUNM.m, Math.max(0, .5 - dot(rotV(n), LIN) * .5)), 16, 32).svg;
+  const glow = `<circle cx="${f(P(CX, CY, SUN_Z)[0])}" cy="${f(P(CX, CY, SUN_Z)[1])}" r="${f(SUN_R * 1.55 * CAM_K)}" fill="#ffd84d" opacity=".18"/>`;
+  const parts = [{ box: [[CX - SUN_R, CY - SUN_R, BH], [CX + SUN_R, CY + SUN_R, SUN_Z + SUN_R]], svg: act('sun', pillar + glow + sun) }];
+  parts.push(...armParts(st, m, k));
+  const E = earthParts(st, k);
+  parts.push(...E.parts);
+  if (k > 0) parts.push(...mechParts(st).map(p => ({ ...p, svg: `<g opacity="${f(k)}">${p.svg}</g>` })));
+  s += byDepth(parts);
+
+  // sunlight: parallel rays from the sun to the earth's day side
+  if (st.rays){
+    const ts = toSun(st), u = norm(cross(ts, [0, 0, 1])); let r = '';
+    for (const off of [-8, 0, 8]){
+      const a = [CX + u[0] * off * .6 - ts[0] * SUN_R, CY + u[1] * off * .6 - ts[1] * SUN_R, SUN_Z - 6 + off * .4];
+      const b = [c[0] + u[0] * off * .6 + ts[0] * ER * .9, c[1] + u[1] * off * .6 + ts[1] * ER * .9, c[2] + off * .4];
+      r += `<path d="${pd([a, b], false)}" fill="none" stroke="#f7b733" stroke-width="2.2" stroke-dasharray="5 3" opacity=".85" stroke-linecap="round"/>`;
+    }
+    s += r;
+  }
+
+  if (k > .6) s += xrCallouts([
+    { at: [CX, CY, 13], text: 'FIXED PULLEY', on: st.moving },
+    { at: [(CX + ex) / 2, (CY + ey) / 2, 13], text: 'DRIVE BELT', on: st.moving },
+    { at: [ex, ey, 13], text: 'EARTH PULLEY', on: st.moving },
+    { at: [ex, ey, POST_Z1], text: 'EARTH POST', on: false },
+    { at: [CX, CY, 30], text: 'PILLAR', on: false },
+    { at: E.top, text: 'AXIS 23.5 DEG', on: true } ], [0, BX, 0, BY, 0, 80]);
+  else if (st.zones){ const u = norm(cross([0, 1, 0], AX)), v = cross(AX, u), lon = Math.atan2(dot(CAM_V, v), dot(CAM_V, u)) + .5;
+    const at = la => { const a = rad(la); return [0, 1, 2].map(i => E.c[i] + (AX[i] * Math.sin(a) + (u[i] * Math.cos(lon) + v[i] * Math.sin(lon)) * Math.cos(a)) * ER); };
+    const dd = decl(st), cur = st.city >= 0 ? CITIES[st.city] : null;
+    s += xrCallouts([
+      { at: at(78), text: 'N FRIGID ZONE', on: dd > 0 }, { at: at(45), text: 'N TEMPERATE ZONE', on: dd > 0 },
+      { at: at(0), text: 'TORRID ZONE', on: true }, { at: at(-45), text: 'S TEMPERATE ZONE', on: dd < 0 },
+      { at: at(-78), text: 'S FRIGID ZONE', on: dd < 0 },
+      ...(cur && E.pin ? [{ at: E.pin, text: cur.name, on: true }] : []) ], [0, BX, 0, BY, 0, 80]); }
+  else s += xrCallouts([
+    ...(st.city >= 0 && E.pin ? [{ at: E.pin, text: CITIES[st.city].name, on: true }] : []),
+    { at: [CX, CY, SUN_Z + SUN_R], text: 'SUN', on: st.rays },
+    { at: E.top, text: 'NORTH POLE', on: decl(st) > 5 },
+    ...(vis(toSun(st)) ? [{ at: E.sub3, text: 'SUN OVERHEAD', on: true }] : []),
+    { at: [ex, ey, ARM_Z1], text: 'ORBIT ARM', on: st.moving } ], [0, BX, 0, BY, 0, 80]);
+  return s;
+}
+
+/* ---------- behaviour ---------- */
+const MONTHS = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+const dateOf = th => { const days = ((th - 180) % 360 + 360) % 360 / 360 * 365.25; const d = new Date(Date.UTC(2026, 5, 21) + days * 864e5);
+  return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}`; };
+const seasonN = th => ['SUMMER', 'AUTUMN', 'WINTER', 'SPRING'][Math.floor((((th - 180) % 360 + 360) % 360) / 90)];
+const OPP = { SUMMER: 'WINTER', WINTER: 'SUMMER', AUTUMN: 'SPRING', SPRING: 'AUTUMN' };
+const dayLen = (latDeg, dDeg) => { const x = -Math.tan(rad(latDeg)) * Math.tan(rad(dDeg)); const h = Math.acos(Math.max(-1, Math.min(1, x))) * 180 / Math.PI;
+  const hrs = 2 * h / 15; return `${Math.floor(hrs)}H ${String(Math.round((hrs % 1) * 60)).padStart(2, '0')}`; };
+
+const dayStr = (lat, dd) => { const x = -Math.tan(rad(lat)) * Math.tan(rad(dd)); if (x <= -1) return 'MIDNIGHT SUN'; if (x >= 1) return 'POLAR NIGHT'; return dayLen(lat, dd); };
+function citySeason(lat, th, dd){
+  if (Math.abs(lat) < 23.5) return Math.abs(dd - lat) < 3 ? 'SUN OVERHEAD' : 'HOT ALL YEAR';
+  const n = seasonN(th); return lat > 0 ? n : OPP[n];
+}
+let ui;
+function goTo(st, target){
+  let to = target; while (to <= st.th + .5) to += 360;          // always forward along the orbit
+  if (to - st.th > 360) to -= 360;
+  const from = st.th, t0 = performance.now(), dur = 900 + (to - from) * 6;
+  st.moving = true; st.run = false;
+  ui.animate(() => { const t = Math.min(1, (performance.now() - t0) / dur); st.th = from + (to - from) * ease(t);
+    if (t >= 1){ st.th = ((st.th % 360) + 360) % 360 || 360; st.moving = false; } return t < 1; });
+}
+function year(st){
+  if (st.run){ st.run = false; st.moving = false; return; }
+  st.run = true; st.moving = true; let last = performance.now();
+  ui.animate(() => { if (!st.run) return false; const now = performance.now(); st.th += (now - last) * 360 / 9000; last = now;
+    if (st.th > 720) st.th -= 360; return true; });
+}
+
+ui = mountFigure({
+  fig:'08', turn:'full', title:'Heat Zones Orrery', palette:'cobalt',
+  idea:'Earth leans the same way all year, so each half takes turns leaning toward the Sun.',
+  size:[BX, BY, SUN_Z + SUN_R + 4], center:[BX/2, BY/2],
+  state:{ th: 180, rays: true, moving: false, run: false, zones: true, city: -1 },
+  scene,
+  stats: st => { const dd = decl(st), od = `${Math.abs(dd).toFixed(1)}${dd > .3 ? 'N' : dd < -.3 ? 'S' : ''}`;
+    const out = [{ label:'DATE', value: dateOf(st.th) }, { label:'SUN OVERHEAD', value: od, small: true }];
+    if (st.city >= 0){ const cy = CITIES[st.city], z = zoneOf(cy.lat);
+      out.push({ label: cy.name, value: `${Math.abs(cy.lat).toFixed(1)}${cy.lat >= 0 ? 'N' : 'S'} ${z}`, small: true },
+        { label:'SEASON', value: citySeason(cy.lat, st.th, dd), small: true }, { label:'DAYLIGHT', value: dayStr(cy.lat, dd), small: true }); }
+    else out.push({ label:'N FRIGID 75N', value: dayStr(75, dd), small: true }, { label:'TORRID 10N', value: dayStr(10, dd), small: true },
+      { label:'S FRIGID 75S', value: dayStr(-75, dd), small: true });
+    return out; },
+  buttons:[
+    { label:'Go to', choices: st => SEASONS.map(s => ({ label: s.label, current: Math.abs(((st.th - s.th) % 360 + 360) % 360) < 1,
+        onClick: st => goTo(st, s.th) })) },
+    { label:'Orbit a year', onClick: st => year(st) },
+    { label:'Heat zones', onClick: st => { st.zones = !st.zones; } },
+    { label:'City', choices: st => [{ label:'none', current: st.city < 0, onClick: st => { st.city = -1; } },
+        ...CITIES.map((cy, i) => ({ label: `${cy.name} (${zoneOf(cy.lat).toLowerCase()})`, current: st.city === i, onClick: st => { st.city = i; } }))] },
+    { label:'Sunlight', onClick: st => { st.rays = !st.rays; } },
+  ],
+  acts:{ earth: st => { const i = SEASONS.findIndex(s => ((st.th - s.th) % 360 + 360) % 360 < 1); goTo(st, SEASONS[(i + 1) % 4].th); },
+         sun: st => { st.rays = !st.rays; } },
+  params:(st, q) => { if (q.has('th')) st.th = +q.get('th'); if (q.has('city')) st.city = +q.get('city'); if (q.get('zones') === '0') st.zones = false; if (q.get('rays') === '0') st.rays = false; },
+});
+xrMount(() => ui, () => '');
+</script></body></html>
