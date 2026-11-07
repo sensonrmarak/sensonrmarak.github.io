@@ -549,3 +549,6 @@ export const Outro = ({ T }: SP) => {
     </>
   );
 };
+
+/* every map base drawn in the video (pre-rendered to PNG by MonsoonStatics) */
+export const MAP_BASES = [{ view: INDIA, box: MAPBOX }, { view: WIDE, box: WIDEBOX }, { view: ITCZ_VIEW, box: WIDEBOX }, { view: JET_VIEW, box: WIDEBOX }, { view: AS_VIEW, box: WIDEBOX }];

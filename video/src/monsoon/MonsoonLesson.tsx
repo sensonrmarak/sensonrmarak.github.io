@@ -5,7 +5,7 @@ import * as S from "./scenes";
 
 /* UPSC Animated · Indian Monsoon. Designed at 1920x1080 and drawn at 2560x1440 (vectors scaled 4/3).
    Layout: card y 74-880 (graphics), caption strip y 905-1060 (nothing else drawn there), chapter label top-left. */
-export const MONSOON_FPS = 30;
+export const MONSOON_FPS = 24;
 export const MONSOON_FRAMES = Math.ceil(NAR.total * MONSOON_FPS);
 
 const Icon = ({ kind }: { kind: "calendar" | "gears" | "thermo" }) => (

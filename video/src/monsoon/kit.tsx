@@ -1,5 +1,6 @@
-import React from "react";
-import { AbsoluteFill, continueRender, delayRender, interpolate, staticFile } from "remotion";
+import React, { useContext } from "react";
+import { AbsoluteFill, Img, continueRender, delayRender, interpolate, staticFile } from "remotion";
+import { StaticMode } from "./map";
 import narration from "./narration.json";
 
 /* ---------- Cartoon Explainer kit: parchment paper, inked card, the boxy host, arrows, clouds, rain ---------- */
@@ -53,10 +54,18 @@ export const Defs = () => (
   </svg>
 );
 
-export const Paper = () => (
+export const Paper = () => useContext(StaticMode) ? (
   <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 42%, #f6eedd 0%, ${C.paper} 55%, ${C.paper2} 100%)` }}>
     <svg width="100%" height="100%" style={{ position: "absolute", inset: 0 }}><rect width="100%" height="100%" filter="url(#grain)" /></svg>
   </AbsoluteFill>
+) : <Img src={staticFile("monsoon/static/paper.png")} style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080 }} />;
+export const CardFrame = () => (
+  <svg width={CARD.w + 40} height={CARD.h + 40} style={{ position: "absolute", left: -20, top: -20, overflow: "visible" }}>
+    <g transform="translate(20 20)">
+      <rect x={8} y={10} width={CARD.w - 10} height={CARD.h - 10} rx={22} fill="rgba(60,40,20,0.10)" filter="url(#soft)" />
+      <g filter="url(#wob)"><rect x={4} y={4} width={CARD.w - 8} height={CARD.h - 8} rx={20} fill={C.card} stroke={C.ink} strokeWidth={4.5} /></g>
+    </g>
+  </svg>
 );
 
 /* the inked card that holds each diagram (x, y, w, h in design px) */
@@ -65,10 +74,7 @@ export const Card = ({ title, t, children, appear = 0 }: { title: string; t: num
   const o = sm(appear - 0.25, appear + 0.25, t), s = 0.96 + 0.04 * o;
   return (
     <div style={{ position: "absolute", left: CARD.x, top: CARD.y, width: CARD.w, height: CARD.h, opacity: o, transform: `scale(${s})`, transformOrigin: "50% 50%" }}>
-      <svg width={CARD.w} height={CARD.h} style={{ position: "absolute", inset: 0, overflow: "visible" }}>
-        <rect x={8} y={10} width={CARD.w - 10} height={CARD.h - 10} rx={22} fill="rgba(60,40,20,0.10)" filter="url(#soft)" />
-        <g filter="url(#wob)"><rect x={4} y={4} width={CARD.w - 8} height={CARD.h - 8} rx={20} fill={C.card} stroke={C.ink} strokeWidth={4.5} /></g>
-      </svg>
+      <Img src={staticFile("monsoon/static/card.png")} style={{ position: "absolute", left: -20, top: -20, width: CARD.w + 40, height: CARD.h + 40 }} />
       <div style={{ position: "absolute", left: 0, right: 0, top: 22, textAlign: "center", fontFamily: FONT_SC, fontSize: 46, color: C.ink, letterSpacing: 1 }}>{title}</div>
       {children}
     </div>

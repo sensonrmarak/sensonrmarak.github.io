@@ -1,4 +1,5 @@
-import React from "react";
+import React, { createContext, useContext } from "react";
+import { Img, staticFile } from "remotion";
 import mapdata from "./mapdata.json";
 import { C, Label, Peaks } from "./kit";
 
@@ -11,27 +12,41 @@ export const P = (lon: number, lat: number) => [X(lon), Y(lat)];
 export const PP = (pts: number[][]) => pts.map(([lo, la]) => P(lo, la));
 
 export type View = { lon0: number; lon1: number; lat0: number; lat1: number };
-/** A map placed at (left, top, w, h) in card px; children get the projection and `u` (svg units per screen px). */
-export const MapView = ({ left, top, w, h, view, children, landO = 1, indiaFill = C.india, seaColor = C.sea }:
+/** true while pre-rendering the static layers (paper, card frame, map land) to PNG */
+export const StaticMode = createContext(false);
+export const baseKey = (v: View, w: number, h: number) => `${v.lon0}_${v.lon1}_${v.lat0}_${v.lat1}_${w}x${h}`.replace(/-/g, "m");
+/** A map placed at (left, top, w, h) in card px; children get the projection and `u` (svg units per screen px).
+    Layers: sea (vector, can be tinted) -> land + India (pre-rendered PNG, 2x) -> live overlays (vector). */
+export const MapView = ({ left, top, w, h, view, children, indiaFill = C.india, seaColor = C.sea }:
   { left: number; top: number; w: number; h: number; view: View; children?: (u: number) => React.ReactNode; landO?: number; indiaFill?: string; seaColor?: string }) => {
+  const isStatic = useContext(StaticMode);
   const x0 = X(view.lon0), x1 = X(view.lon1), y0 = Y(view.lat1), y1 = Y(view.lat0);
-  const vw = x1 - x0, vh = y1 - y0, u = Math.max(vw / w, vh / h);
-  return (
-    <svg width={w} height={h} viewBox={`${x0} ${y0} ${vw} ${vh}`} preserveAspectRatio="xMidYMid meet" style={{ position: "absolute", left, top, overflow: "hidden", borderRadius: 14 }}>
-      <rect x={x0 - 50} y={y0 - 50} width={vw + 100} height={vh + 100} fill={seaColor} />
-      {/* sea texture: faint wave strokes */}
-      {Array.from({ length: 26 }, (_, i) => {
-        const yy = y0 + (vh * (i + 0.5)) / 26, xx = x0 + ((i * 97) % 9) * vw / 9;
-        return <path key={i} d={`M${xx} ${yy} q ${12 * u} ${-7 * u} ${24 * u} 0 t ${24 * u} 0`} fill="none" stroke="#b8d2d6" strokeWidth={3 * u} opacity={0.8} />;
-      })}
-      <g opacity={landO}>{MD.land.map((d, i) => <path key={i} d={d} fill={C.land} stroke="#b9a988" strokeWidth={2.2 * u} strokeLinejoin="round" />)}</g>
-      {/* India: inked outline drawn first, fills on top hide the internal (state) edges */}
+  const vw = x1 - x0, vh = y1 - y0, u = Math.max(vw / w, vh / h), vb = `${x0} ${y0} ${vw} ${vh}`;
+  const box: React.CSSProperties = { position: "absolute", left, top, width: w, height: h, overflow: "hidden", borderRadius: 14 };
+  const land = (
+    <svg width={w} height={h} viewBox={vb} preserveAspectRatio="xMidYMid meet" style={{ position: "absolute", inset: 0 }}>
+      {MD.land.map((d, i) => <path key={i} d={d} fill={C.land} stroke="#b9a988" strokeWidth={2.2 * u} strokeLinejoin="round" />)}
       <g filter="url(#wob)">
         {MD.india.map((p) => <path key={"s" + p.id} d={p.d} fill="none" stroke={C.ink} strokeWidth={7 * u} strokeLinejoin="round" />)}
         {MD.india.map((p) => <path key={"f" + p.id} d={p.d} fill={indiaFill} stroke={indiaFill} strokeWidth={0.6 * u} />)}
       </g>
-      {children && children(u)}
     </svg>
+  );
+  if (isStatic) return <div style={box}>{land}</div>;
+  return (
+    <div style={box}>
+      <svg width={w} height={h} viewBox={vb} preserveAspectRatio="xMidYMid meet" style={{ position: "absolute", inset: 0 }}>
+        <rect x={x0 - 50} y={y0 - 50} width={vw + 100} height={vh + 100} fill={seaColor} />
+        {Array.from({ length: 26 }, (_, i) => {
+          const yy = y0 + (vh * (i + 0.5)) / 26, xx = x0 + ((i * 97) % 9) * vw / 9;
+          return <path key={i} d={`M${xx} ${yy} q ${12 * u} ${-7 * u} ${24 * u} 0 t ${24 * u} 0`} fill="none" stroke="#b8d2d6" strokeWidth={3 * u} opacity={0.8} />;
+        })}
+      </svg>
+      <Img src={staticFile(`monsoon/static/map_${baseKey(view, w, h)}.png`)} style={{ position: "absolute", inset: 0, width: w, height: h }} />
+      <svg width={w} height={h} viewBox={vb} preserveAspectRatio="xMidYMid meet" style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+        {children && children(u)}
+      </svg>
+    </div>
   );
 };
 
