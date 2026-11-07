@@ -94,7 +94,16 @@ const Card = ({ from, to, children }: { from: number; to: number; children: Reac
   );
 };
 
-export const ZonesLesson = () => {
+/* The composition is 2560x1440 (2K); the layout is designed at 1920x1080 and scaled up 4/3 as vectors, so text stays
+   sharp and the 2560x1440 footage is shown pixel for pixel. */
+export const ZonesLesson = () => (
+  <AbsoluteFill style={{ background: PAPER }}>
+    <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, transform: "scale(1.3333333)", transformOrigin: "0 0" }}>
+      <ZonesLessonInner />
+    </div>
+  </AbsoluteFill>
+);
+const ZonesLessonInner = () => {
   const { fps, durationInFrames } = useVideoConfig();
   const f = useCurrentFrame();
   const fade = interpolate(f, [0, 15], [1, 0], { extrapolateRight: "clamp" }) + interpolate(f, [durationInFrames - 40, durationInFrames - 1], [0, 1], { extrapolateLeft: "clamp" });

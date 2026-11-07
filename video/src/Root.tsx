@@ -15,6 +15,6 @@ export const RemotionRoot = () => (
   <Composition id="MossCast" component={CastTest} durationInFrames={1} fps={24} width={1080} height={1080} />
   <Composition id="MossSilverTrail" component={MossVideo} durationInFrames={MOSS_FRAMES} fps={24} width={1080} height={1920} />
   <Composition id="MossAIEdit" component={MossAIEdit} durationInFrames={MOSS_FRAMES} fps={24} width={1080} height={1920} />
-  <Composition id="ZonesLesson" component={ZonesLesson} durationInFrames={ZONES_FRAMES} fps={ZONES_FPS} width={1920} height={1080} />
+  <Composition id="ZonesLesson" component={ZonesLesson} durationInFrames={ZONES_FRAMES} fps={ZONES_FPS} width={2560} height={1440} />
   </>
 );
