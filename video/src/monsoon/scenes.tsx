@@ -61,7 +61,7 @@ const ONSET = [{ name: "Kerala", lon: 76.95, lat: 8.5, doy: 151, lab: "1 Jun" },
   { name: "Mumbai", lon: 72.88, lat: 19.08, doy: 161, lab: "11 Jun" }, { name: "Delhi", lon: 77.21, lat: 28.61, doy: 177, lab: "27 Jun" }];
 const frontLat = (doy: number) => interp(doy, [146, 151, 160, 161, 177, 188], [6, 9.5, 18.6, 20.4, 28.6, 38.5]);
 export const SouthWest = ({ T }: SP) => {
-  const s = segOf("sw"), a = cue("sw", "reach"), b = cue("sw", "eighth") + 0.6;
+  const s = segOf("sw"), a = cue("sw", "reach"), b = cue("sw", "eighth") + 0.15;
   const doy = interp(T, [a - 0.6, b], [146, 188]), E = frontLat(doy);
   const front = (lo: number) => [lo, E + 0.35 * (lo - 77)];
   return (

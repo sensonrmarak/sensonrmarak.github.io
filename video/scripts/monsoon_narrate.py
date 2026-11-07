@@ -32,17 +32,19 @@ SEG = [
  ("impact", "For farmers, cities and reservoirs, this means more floods, and more droughts, sometimes in the same season.", None, 0.5),
  ("outro", "Remember: the monsoon is a seasonal reversal of winds, driven by heat, by Earth's spin, and by the oceans. And a warming climate is making it more extreme.", None, 0.9),
 ]
-VOICE, SPEED = os.environ.get("VOICE", "bf_emma"), float(os.environ.get("SPEED", "0.94"))
+VOICE, SPEED = os.environ.get("VOICE", "bf_emma"), float(os.environ.get("SPEED", "0.84"))
+EXTRA_PAUSE = float(os.environ.get("EXTRA_PAUSE", "0.7"))   # added breathing room between scenes
 k = Kokoro(f"{K}/model.onnx", f"{K}/voices.npz")
 sr, parts, meta, t = 24000, [], [], 0.0
 for sid, text, cap, pause in SEG:
+    pause += EXTRA_PAUSE * (1.6 if sid in ("p1", "p2", "p3") else 1.0)
     parts.append(np.zeros(int(pause * sr), np.float32)); t += pause
-    a, sr = k.create(text, voice=VOICE, speed=SPEED, lang="en-gb")
+    a, sr = k.create(text, voice=VOICE, speed=SPEED, lang="en-gb", sentence_pause=0.55, clause_pause=0.18)
     parts.append(a.astype(np.float32))
     meta.append({"id": sid, "speak": text, "text": cap or text, "start": round(t, 3), "end": round(t + len(a) / sr, 3)})
     t += len(a) / sr
     print(f"{sid:9s} {meta[-1]['start']:7.2f} {meta[-1]['end']:7.2f}")
-parts.append(np.zeros(int(1.0 * sr), np.float32)); t += 1.0
+parts.append(np.zeros(int(1.8 * sr), np.float32)); t += 1.8
 audio = np.concatenate(parts); audio = audio / np.abs(audio).max() * 0.9
 sf.write(os.path.join(ROOT, "public/monsoon/narration.wav"), audio, sr)
 json.dump({"total": round(t, 3), "voice": VOICE, "segments": meta}, open(os.path.join(ROOT, "src/monsoon/narration.json"), "w"), indent=1)
