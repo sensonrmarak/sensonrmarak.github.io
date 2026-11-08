@@ -8,12 +8,10 @@ Two videos. Copy each block into YouTube Studio. The settings that are the same 
 
 **File:** `upsc_seasons_what_why_how_2k.mp4` (6:40)
 
-### Title (pick one; under 100 characters)
-1. Why Do We Have Seasons? Solstices, Tropics and Climate Zones | UPSC Geography Explained
-2. Summer and Winter Solstice, Latitude and Longitude, Why Climates Differ | UPSC Geography
-3. Earth's Tilt, Solstices and Heat Zones: What, Why and How | UPSC Prelims and Mains Geography
+### Title (final; follows the video's order: lines, then tilt, then solstices, then climates)
+**Latitude, Earth's Tilt, Solstices & Why Climates Differ | UPSC Geography**
 
-Recommended: **1**. It starts with the question students actually search for.
+Thumbnail: `thumbnails/thumb_seasons_1280x720.jpg`. See `youtube_growth_plan.md` for the reasoning.
 
 ### Description
 ```
@@ -81,12 +79,10 @@ upsc geography, why do we have seasons, summer solstice, winter solstice, equino
 
 **File:** `upsc_monsoon_what_why_how_2k.mp4` (4:48)
 
-### Title (pick one)
-1. Indian Monsoon Explained: What, Why and How It's Changing | UPSC Geography
-2. How the Indian Monsoon Works: El Niño, ITCZ, Jet Streams and Climate Change | UPSC
-3. Southwest and Northeast Monsoon, Causes and New Trends (IMD Data) | UPSC Prelims and Mains
+### Title (final; follows the video's order: what, then why, then how it is changing)
+**Indian Monsoon: 2 Phases, 5 Causes & How It's Changing | UPSC**
 
-Recommended: **1**.
+Thumbnail: `thumbnails/thumb_monsoon_1280x720.jpg`.
 
 ### Description
 ```
