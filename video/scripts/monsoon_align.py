@@ -3,16 +3,16 @@
 import json, os, re, subprocess
 from pocketsphinx import Decoder, get_model_path
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-P = os.path.join(ROOT, "src/monsoon/narration.json")
+P = os.path.join(ROOT, os.environ.get("NAR_JSON", "src/monsoon/narration.json"))
 tl = json.load(open(P)); SR = 16000
-raw = subprocess.run(["ffmpeg", "-v", "error", "-i", os.path.join(ROOT, "public/monsoon/narration.wav"), "-ac", "1", "-ar", "16000", "-f", "s16le", "-"], capture_output=True, check=True).stdout
+raw = subprocess.run(["ffmpeg", "-v", "error", "-i", os.path.join(ROOT, os.environ.get("NAR_WAV", "public/monsoon/narration.wav")), "-ac", "1", "-ar", "16000", "-f", "s16le", "-"], capture_output=True, check=True).stdout
 mp = get_model_path()
 dec = Decoder(hmm=os.path.join(mp, "en-us/en-us"), dict=os.path.join(mp, "en-us/cmudict-en-us.dict"), loglevel="FATAL", beam=1e-80, wbeam=1e-60, pbeam=1e-80)
 for w, ph in {"coriolis": "K AO R IY OW L IH S", "deccan": "D EH K AH N", "ganga": "G AA NG G AH", "ghats": "G AA T S", "nadu": "N AA D UW"}.items():
     dec.add_word(w, ph, True)
 norm = lambda tok: [p.strip("'.") for p in re.split(r"-", tok.lower().strip('".,!?:;')) if p.strip("'.")]
 # spoken token groups shown differently in the captions
-REPL = {"itcz": [(["I.", "T.", "C.", "Z."], "ITCZ.")], "lpa": [(["eighty-seven", "centimetres,"], "87 cm,")],
+REPL = __import__("json").loads(os.environ.get("REPL_JSON", "null")) or {"itcz": [(["I.", "T.", "C.", "Z."], "ITCZ.")], "lpa": [(["eighty-seven", "centimetres,"], "87 cm,")],
         "ocean": [(["Nino"], "Niño"), (["Nina"], "Niña")]}
 for s in tl["segments"]:
     toks = s["speak"].split(); parts = [norm(t) for t in toks]; flat = [p for ps in parts for p in ps]
