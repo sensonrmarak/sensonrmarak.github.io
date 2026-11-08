@@ -1,514 +1,744 @@
 {
- "total": 192.228,
+ "total": 283.711,
  "voice": "bf_emma",
  "segments": [
   {
    "id": "intro",
-   "speak": "The Indian monsoon, in three parts: its two phases, what drives it, and how it is changing.",
-   "text": "The Indian monsoon, in three parts: its two phases, what drives it, and how it is changing.",
+   "speak": "This lesson answers three questions about the Indian monsoon. What is it? Why does it happen? And how is it changing? The facts come from the India Meteorological Department, ISRO, and the Indian Institute of Tropical Meteorology.",
+   "text": "This lesson answers three questions about the Indian monsoon. What is it? Why does it happen? And how is it changing? The facts come from the India Meteorological Department, ISRO, and the Indian Institute of Tropical Meteorology.",
    "start": 1.5,
-   "end": 7.409,
+   "end": 16.348,
    "words": [
     {
-     "text": "The",
+     "text": "This",
      "start": 1.51,
-     "end": 1.69
+     "end": 1.71
     },
     {
-     "text": "Indian",
-     "start": 1.69,
-     "end": 2.03
+     "text": "lesson",
+     "start": 1.71,
+     "end": 2.13
     },
     {
-     "text": "monsoon,",
-     "start": 2.03,
-     "end": 2.76
-    },
-    {
-     "text": "in",
-     "start": 2.76,
-     "end": 2.94
+     "text": "answers",
+     "start": 2.13,
+     "end": 2.57
     },
     {
      "text": "three",
-     "start": 2.94,
-     "end": 3.15
+     "start": 2.57,
+     "end": 2.83
     },
     {
-     "text": "parts:",
-     "start": 3.15,
-     "end": 3.75
+     "text": "questions",
+     "start": 2.83,
+     "end": 3.35
     },
     {
-     "text": "its",
-     "start": 4.24,
-     "end": 4.44
+     "text": "about",
+     "start": 3.35,
+     "end": 3.57
     },
     {
-     "text": "two",
-     "start": 4.44,
-     "end": 4.65
+     "text": "the",
+     "start": 3.57,
+     "end": 3.68
     },
     {
-     "text": "phases,",
-     "start": 4.65,
-     "end": 5.33
+     "text": "Indian",
+     "start": 3.68,
+     "end": 4.01
     },
     {
-     "text": "what",
-     "start": 5.33,
-     "end": 5.51
+     "text": "monsoon.",
+     "start": 4.01,
+     "end": 4.74
     },
     {
-     "text": "drives",
-     "start": 5.51,
-     "end": 5.9
-    },
-    {
-     "text": "it,",
-     "start": 5.9,
-     "end": 6.1
-    },
-    {
-     "text": "and",
-     "start": 6.1,
-     "end": 6.21
-    },
-    {
-     "text": "how",
-     "start": 6.21,
-     "end": 6.4
-    },
-    {
-     "text": "it",
-     "start": 6.4,
-     "end": 6.54
+     "text": "What",
+     "start": 5.48,
+     "end": 5.65
     },
     {
      "text": "is",
-     "start": 6.54,
-     "end": 6.66
+     "start": 5.65,
+     "end": 5.79
     },
     {
-     "text": "changing.",
-     "start": 6.66,
-     "end": 7.36
+     "text": "it?",
+     "start": 5.79,
+     "end": 6.18
+    },
+    {
+     "text": "Why",
+     "start": 6.18,
+     "end": 6.34
+    },
+    {
+     "text": "does",
+     "start": 6.34,
+     "end": 6.51
+    },
+    {
+     "text": "it",
+     "start": 6.51,
+     "end": 6.62
+    },
+    {
+     "text": "happen?",
+     "start": 6.62,
+     "end": 7.16
+    },
+    {
+     "text": "And",
+     "start": 7.56,
+     "end": 7.69
+    },
+    {
+     "text": "how",
+     "start": 7.69,
+     "end": 7.91
+    },
+    {
+     "text": "is",
+     "start": 7.91,
+     "end": 8.05
+    },
+    {
+     "text": "it",
+     "start": 8.05,
+     "end": 8.17
+    },
+    {
+     "text": "changing?",
+     "start": 8.17,
+     "end": 8.82
+    },
+    {
+     "text": "The",
+     "start": 9.47,
+     "end": 9.55
+    },
+    {
+     "text": "facts",
+     "start": 9.55,
+     "end": 9.98
+    },
+    {
+     "text": "come",
+     "start": 9.98,
+     "end": 10.22
+    },
+    {
+     "text": "from",
+     "start": 10.22,
+     "end": 10.4
+    },
+    {
+     "text": "the",
+     "start": 10.4,
+     "end": 10.54
+    },
+    {
+     "text": "India",
+     "start": 10.54,
+     "end": 10.92
+    },
+    {
+     "text": "Meteorological",
+     "start": 10.92,
+     "end": 11.89
+    },
+    {
+     "text": "Department,",
+     "start": 11.89,
+     "end": 12.62
+    },
+    {
+     "text": "ISRO,",
+     "start": 12.62,
+     "end": 13.17
+    },
+    {
+     "text": "and",
+     "start": 13.36,
+     "end": 13.5
+    },
+    {
+     "text": "the",
+     "start": 13.5,
+     "end": 13.62
+    },
+    {
+     "text": "Indian",
+     "start": 13.62,
+     "end": 14.03
+    },
+    {
+     "text": "Institute",
+     "start": 14.03,
+     "end": 14.68
+    },
+    {
+     "text": "of",
+     "start": 14.68,
+     "end": 14.8
+    },
+    {
+     "text": "Tropical",
+     "start": 14.8,
+     "end": 15.28
+    },
+    {
+     "text": "Meteorology.",
+     "start": 15.28,
+     "end": 16.3
     }
    ]
   },
   {
    "id": "p1",
-   "speak": "Part one: the two phases.",
-   "text": "Part one: the two phases.",
-   "start": 9.529,
-   "end": 11.492,
+   "speak": "Part one. What is the monsoon?",
+   "text": "Part one. What is the monsoon?",
+   "start": 18.468,
+   "end": 20.623,
    "words": [
     {
      "text": "Part",
-     "start": 9.569,
-     "end": 9.889
+     "start": 18.548,
+     "end": 18.828
     },
     {
-     "text": "one:",
-     "start": 9.889,
-     "end": 10.239
+     "text": "one.",
+     "start": 18.828,
+     "end": 19.218
+    },
+    {
+     "text": "What",
+     "start": 19.218,
+     "end": 19.468
+    },
+    {
+     "text": "is",
+     "start": 19.468,
+     "end": 19.588
     },
     {
      "text": "the",
-     "start": 10.239,
-     "end": 10.319
+     "start": 19.588,
+     "end": 19.678
     },
     {
-     "text": "two",
-     "start": 10.319,
-     "end": 10.549
-    },
-    {
-     "text": "phases.",
-     "start": 10.549,
-     "end": 11.379
+     "text": "monsoon?",
+     "start": 19.678,
+     "end": 20.438
     }
    ]
   },
   {
    "id": "sw",
-   "speak": "The first is the southwest monsoon, from June to September. Moist winds from the Indian Ocean reach Kerala around the first of June, and cover the whole country by about the eighth of July.",
-   "text": "The first is the southwest monsoon, from June to September. Moist winds from the Indian Ocean reach Kerala around the first of June, and cover the whole country by about the eighth of July.",
-   "start": 12.692,
-   "end": 24.745,
+   "speak": "What is the southwest monsoon? It is a seasonal reversal of winds, from June to September. On I M D's normal dates, moist winds from the Indian Ocean reach Kerala around the first of June, and cover the whole country by about the eighth of July.",
+   "text": "What is the southwest monsoon? It is a seasonal reversal of winds, from June to September. On IMD's normal dates, moist winds from the Indian Ocean reach Kerala around the first of June, and cover the whole country by about the eighth of July.",
+   "start": 21.823,
+   "end": 37.993,
    "words": [
     {
-     "text": "The",
-     "start": 12.702,
-     "end": 12.802
-    },
-    {
-     "text": "first",
-     "start": 12.802,
-     "end": 13.292
+     "text": "What",
+     "start": 21.833,
+     "end": 22.033
     },
     {
      "text": "is",
-     "start": 13.292,
-     "end": 13.452
+     "start": 22.033,
+     "end": 22.163
     },
     {
      "text": "the",
-     "start": 13.452,
-     "end": 13.552
+     "start": 22.163,
+     "end": 22.263
     },
     {
      "text": "southwest",
-     "start": 13.552,
-     "end": 14.192
+     "start": 22.263,
+     "end": 22.903
     },
     {
-     "text": "monsoon,",
-     "start": 14.192,
-     "end": 14.902
+     "text": "monsoon?",
+     "start": 22.903,
+     "end": 23.633
+    },
+    {
+     "text": "It",
+     "start": 24.173,
+     "end": 24.303
+    },
+    {
+     "text": "is",
+     "start": 24.303,
+     "end": 24.423
+    },
+    {
+     "text": "a",
+     "start": 24.423,
+     "end": 24.463
+    },
+    {
+     "text": "seasonal",
+     "start": 24.463,
+     "end": 25.073
+    },
+    {
+     "text": "reversal",
+     "start": 25.073,
+     "end": 25.613
+    },
+    {
+     "text": "of",
+     "start": 25.613,
+     "end": 25.743
+    },
+    {
+     "text": "winds,",
+     "start": 25.743,
+     "end": 26.393
     },
     {
      "text": "from",
-     "start": 15.252,
-     "end": 15.432
+     "start": 26.393,
+     "end": 26.593
     },
     {
      "text": "June",
-     "start": 15.432,
-     "end": 15.732
+     "start": 26.593,
+     "end": 26.893
     },
     {
      "text": "to",
-     "start": 15.732,
-     "end": 15.822
+     "start": 26.893,
+     "end": 26.983
     },
     {
      "text": "September.",
-     "start": 15.822,
-     "end": 16.532
+     "start": 26.983,
+     "end": 27.653
     },
     {
-     "text": "Moist",
-     "start": 17.512,
-     "end": 17.822
+     "text": "On",
+     "start": 28.713,
+     "end": 28.913
+    },
+    {
+     "text": "IMD's",
+     "start": 28.913,
+     "end": 29.583
+    },
+    {
+     "text": "normal",
+     "start": 29.583,
+     "end": 29.963
+    },
+    {
+     "text": "dates,",
+     "start": 29.963,
+     "end": 30.533
+    },
+    {
+     "text": "moist",
+     "start": 30.853,
+     "end": 31.183
     },
     {
      "text": "winds",
-     "start": 17.822,
-     "end": 18.232
+     "start": 31.183,
+     "end": 31.593
     },
     {
      "text": "from",
-     "start": 18.232,
-     "end": 18.382
+     "start": 31.593,
+     "end": 31.743
     },
     {
      "text": "the",
-     "start": 18.382,
-     "end": 18.532
+     "start": 31.743,
+     "end": 31.873
     },
     {
      "text": "Indian",
-     "start": 18.532,
-     "end": 18.972
+     "start": 31.873,
+     "end": 32.263
     },
     {
      "text": "Ocean",
-     "start": 18.972,
-     "end": 19.422
+     "start": 32.263,
+     "end": 32.743
     },
     {
      "text": "reach",
-     "start": 19.422,
-     "end": 19.692
+     "start": 32.743,
+     "end": 33.013
     },
     {
      "text": "Kerala",
-     "start": 19.692,
-     "end": 20.072
+     "start": 33.013,
+     "end": 33.403
     },
     {
      "text": "around",
-     "start": 20.072,
-     "end": 20.452
+     "start": 33.403,
+     "end": 33.763
     },
     {
      "text": "the",
-     "start": 20.452,
-     "end": 20.512
+     "start": 33.763,
+     "end": 33.823
     },
     {
      "text": "first",
-     "start": 20.512,
-     "end": 20.892
+     "start": 33.823,
+     "end": 34.203
     },
     {
      "text": "of",
-     "start": 20.892,
-     "end": 20.962
+     "start": 34.203,
+     "end": 34.273
     },
     {
      "text": "June,",
-     "start": 20.962,
-     "end": 21.412
+     "start": 34.273,
+     "end": 34.723
     },
     {
      "text": "and",
-     "start": 21.802,
-     "end": 21.942
+     "start": 35.113,
+     "end": 35.233
     },
     {
      "text": "cover",
-     "start": 21.942,
-     "end": 22.212
+     "start": 35.233,
+     "end": 35.523
     },
     {
      "text": "the",
-     "start": 22.212,
-     "end": 22.312
+     "start": 35.523,
+     "end": 35.623
     },
     {
      "text": "whole",
-     "start": 22.312,
-     "end": 22.582
+     "start": 35.623,
+     "end": 35.893
     },
     {
      "text": "country",
-     "start": 22.582,
-     "end": 23.162
+     "start": 35.893,
+     "end": 36.413
     },
     {
      "text": "by",
-     "start": 23.162,
-     "end": 23.422
+     "start": 36.413,
+     "end": 36.683
     },
     {
      "text": "about",
-     "start": 23.422,
-     "end": 23.682
+     "start": 36.683,
+     "end": 36.933
     },
     {
      "text": "the",
-     "start": 23.682,
-     "end": 23.802
+     "start": 36.933,
+     "end": 37.053
     },
     {
      "text": "eighth",
-     "start": 23.802,
-     "end": 24.062
+     "start": 37.053,
+     "end": 37.313
     },
     {
      "text": "of",
-     "start": 24.062,
-     "end": 24.122
+     "start": 37.313,
+     "end": 37.383
     },
     {
      "text": "July.",
-     "start": 24.122,
-     "end": 24.632
+     "start": 37.383,
+     "end": 37.943
     }
    ]
   },
   {
    "id": "share",
-   "speak": "This one season brings nearly three quarters of India's annual rainfall.",
-   "text": "This one season brings nearly three quarters of India's annual rainfall.",
-   "start": 25.945,
-   "end": 30.233,
+   "speak": "Why does it matter so much? I M D data show this one season brings nearly three quarters of India's annual rainfall.",
+   "text": "Why does it matter so much? IMD data show this one season brings nearly three quarters of India's annual rainfall.",
+   "start": 39.193,
+   "end": 46.809,
    "words": [
     {
-     "text": "This",
-     "start": 25.955,
-     "end": 26.205
+     "text": "Why",
+     "start": 39.213,
+     "end": 39.483
+    },
+    {
+     "text": "does",
+     "start": 39.483,
+     "end": 39.663
+    },
+    {
+     "text": "it",
+     "start": 39.663,
+     "end": 39.763
+    },
+    {
+     "text": "matter",
+     "start": 39.763,
+     "end": 40.073
+    },
+    {
+     "text": "so",
+     "start": 40.073,
+     "end": 40.363
+    },
+    {
+     "text": "much?",
+     "start": 40.363,
+     "end": 40.843
+    },
+    {
+     "text": "IMD",
+     "start": 41.443,
+     "end": 42.003
+    },
+    {
+     "text": "data",
+     "start": 42.003,
+     "end": 42.403
+    },
+    {
+     "text": "show",
+     "start": 42.403,
+     "end": 42.723
+    },
+    {
+     "text": "this",
+     "start": 42.723,
+     "end": 42.963
     },
     {
      "text": "one",
-     "start": 26.205,
-     "end": 26.425
+     "start": 42.963,
+     "end": 43.173
     },
     {
      "text": "season",
-     "start": 26.425,
-     "end": 26.935
+     "start": 43.173,
+     "end": 43.653
     },
     {
      "text": "brings",
-     "start": 26.935,
-     "end": 27.315
+     "start": 43.653,
+     "end": 43.983
     },
     {
      "text": "nearly",
-     "start": 27.315,
-     "end": 27.625
+     "start": 43.983,
+     "end": 44.263
     },
     {
      "text": "three",
-     "start": 27.625,
-     "end": 27.925
+     "start": 44.263,
+     "end": 44.563
     },
     {
      "text": "quarters",
-     "start": 27.925,
-     "end": 28.425
+     "start": 44.563,
+     "end": 45.123
     },
     {
      "text": "of",
-     "start": 28.425,
-     "end": 28.525
+     "start": 45.123,
+     "end": 45.223
     },
     {
      "text": "India's",
-     "start": 28.525,
-     "end": 29.105
+     "start": 45.223,
+     "end": 45.733
     },
     {
      "text": "annual",
-     "start": 29.105,
-     "end": 29.485
+     "start": 45.733,
+     "end": 46.073
     },
     {
      "text": "rainfall.",
-     "start": 29.485,
-     "end": 30.185
+     "start": 46.073,
+     "end": 46.763
     }
    ]
   },
   {
    "id": "arabian",
-   "speak": "It arrives in two branches. The Arabian Sea branch strikes the Western Ghats, drenching the windward slopes, while the Deccan beyond lies in a rain shadow.",
-   "text": "It arrives in two branches. The Arabian Sea branch strikes the Western Ghats, drenching the windward slopes, while the Deccan beyond lies in a rain shadow.",
-   "start": 31.533,
-   "end": 41.368,
+   "speak": "How does it spread across India? It arrives in two branches. The Arabian Sea branch strikes the Western Ghats, drenching the windward slopes, while the Deccan beyond lies in a rain shadow.",
+   "text": "How does it spread across India? It arrives in two branches. The Arabian Sea branch strikes the Western Ghats, drenching the windward slopes, while the Deccan beyond lies in a rain shadow.",
+   "start": 48.109,
+   "end": 59.757,
    "words": [
     {
+     "text": "How",
+     "start": 48.119,
+     "end": 48.319
+    },
+    {
+     "text": "does",
+     "start": 48.319,
+     "end": 48.469
+    },
+    {
+     "text": "it",
+     "start": 48.469,
+     "end": 48.569
+    },
+    {
+     "text": "spread",
+     "start": 48.569,
+     "end": 48.859
+    },
+    {
+     "text": "across",
+     "start": 48.859,
+     "end": 49.159
+    },
+    {
+     "text": "India?",
+     "start": 49.159,
+     "end": 49.649
+    },
+    {
      "text": "It",
-     "start": 31.553,
-     "end": 31.733
+     "start": 50.229,
+     "end": 50.389
     },
     {
      "text": "arrives",
-     "start": 31.733,
-     "end": 32.193
+     "start": 50.389,
+     "end": 50.849
     },
     {
      "text": "in",
-     "start": 32.193,
-     "end": 32.353
+     "start": 50.849,
+     "end": 50.999
     },
     {
      "text": "two",
-     "start": 32.353,
-     "end": 32.583
+     "start": 50.999,
+     "end": 51.229
     },
     {
      "text": "branches.",
-     "start": 32.583,
-     "end": 33.253
+     "start": 51.229,
+     "end": 51.939
     },
     {
      "text": "The",
-     "start": 33.903,
-     "end": 34.083
+     "start": 52.589,
+     "end": 52.739
     },
     {
      "text": "Arabian",
-     "start": 34.083,
-     "end": 34.603
+     "start": 52.739,
+     "end": 53.259
     },
     {
      "text": "Sea",
-     "start": 34.603,
-     "end": 34.853
+     "start": 53.259,
+     "end": 53.519
     },
     {
      "text": "branch",
-     "start": 34.853,
-     "end": 35.253
+     "start": 53.519,
+     "end": 53.929
     },
     {
      "text": "strikes",
-     "start": 35.253,
-     "end": 35.703
+     "start": 53.929,
+     "end": 54.379
     },
     {
      "text": "the",
-     "start": 35.703,
-     "end": 35.793
+     "start": 54.379,
+     "end": 54.469
     },
     {
      "text": "Western",
-     "start": 35.793,
-     "end": 36.203
+     "start": 54.469,
+     "end": 54.889
     },
     {
      "text": "Ghats,",
-     "start": 36.203,
-     "end": 36.723
+     "start": 54.889,
+     "end": 55.469
     },
     {
      "text": "drenching",
-     "start": 36.923,
-     "end": 37.353
+     "start": 55.469,
+     "end": 55.879
     },
     {
      "text": "the",
-     "start": 37.353,
-     "end": 37.423
+     "start": 55.879,
+     "end": 55.949
     },
     {
      "text": "windward",
-     "start": 37.423,
-     "end": 37.803
+     "start": 55.949,
+     "end": 56.329
     },
     {
      "text": "slopes,",
-     "start": 37.803,
-     "end": 38.453
+     "start": 56.329,
+     "end": 56.999
     },
     {
      "text": "while",
-     "start": 38.763,
-     "end": 38.893
+     "start": 57.169,
+     "end": 57.289
     },
     {
      "text": "the",
-     "start": 38.893,
-     "end": 38.973
+     "start": 57.289,
+     "end": 57.369
     },
     {
      "text": "Deccan",
-     "start": 38.973,
-     "end": 39.363
+     "start": 57.369,
+     "end": 57.789
     },
     {
      "text": "beyond",
-     "start": 39.363,
-     "end": 39.813
+     "start": 57.789,
+     "end": 58.239
     },
     {
      "text": "lies",
-     "start": 39.813,
-     "end": 40.243
+     "start": 58.239,
+     "end": 58.679
     },
     {
      "text": "in",
-     "start": 40.243,
-     "end": 40.373
+     "start": 58.679,
+     "end": 58.779
     },
     {
      "text": "a",
-     "start": 40.373,
-     "end": 40.423
+     "start": 58.779,
+     "end": 58.829
     },
     {
      "text": "rain",
-     "start": 40.423,
-     "end": 40.733
+     "start": 58.829,
+     "end": 59.139
     },
     {
      "text": "shadow.",
-     "start": 40.733,
-     "end": 41.283
+     "start": 59.139,
+     "end": 59.689
     }
    ]
   },
@@ -516,1798 +746,2697 @@
    "id": "bengal",
    "speak": "The Bay of Bengal branch soaks the northeast, then turns west along the Himalayas, across the Ganga plains.",
    "text": "The Bay of Bengal branch soaks the northeast, then turns west along the Himalayas, across the Ganga plains.",
-   "start": 42.568,
-   "end": 49.395,
+   "start": 60.957,
+   "end": 67.784,
    "words": [
     {
      "text": "The",
-     "start": 42.568,
-     "end": 42.688
+     "start": 60.957,
+     "end": 61.077
     },
     {
      "text": "Bay",
-     "start": 42.688,
-     "end": 42.928
+     "start": 61.077,
+     "end": 61.317
     },
     {
      "text": "of",
-     "start": 42.928,
-     "end": 43.008
+     "start": 61.317,
+     "end": 61.397
     },
     {
      "text": "Bengal",
-     "start": 43.008,
-     "end": 43.508
+     "start": 61.397,
+     "end": 61.907
     },
     {
      "text": "branch",
-     "start": 43.508,
-     "end": 43.928
+     "start": 61.907,
+     "end": 62.307
     },
     {
      "text": "soaks",
-     "start": 43.928,
-     "end": 44.338
+     "start": 62.307,
+     "end": 62.727
     },
     {
      "text": "the",
-     "start": 44.338,
-     "end": 44.418
+     "start": 62.727,
+     "end": 62.807
     },
     {
      "text": "northeast,",
-     "start": 44.418,
-     "end": 45.198
+     "start": 62.807,
+     "end": 63.587
     },
     {
      "text": "then",
-     "start": 45.628,
-     "end": 45.858
+     "start": 64.027,
+     "end": 64.247
     },
     {
      "text": "turns",
-     "start": 45.858,
-     "end": 46.208
+     "start": 64.247,
+     "end": 64.597
     },
     {
      "text": "west",
-     "start": 46.208,
-     "end": 46.578
+     "start": 64.597,
+     "end": 64.967
     },
     {
      "text": "along",
-     "start": 46.578,
-     "end": 46.838
+     "start": 64.967,
+     "end": 65.227
     },
     {
      "text": "the",
-     "start": 46.838,
-     "end": 46.898
+     "start": 65.227,
+     "end": 65.287
     },
     {
      "text": "Himalayas,",
-     "start": 46.898,
-     "end": 47.698
+     "start": 65.287,
+     "end": 66.087
     },
     {
      "text": "across",
-     "start": 47.918,
-     "end": 48.238
+     "start": 66.307,
+     "end": 66.627
     },
     {
      "text": "the",
-     "start": 48.238,
-     "end": 48.328
+     "start": 66.627,
+     "end": 66.717
     },
     {
      "text": "Ganga",
-     "start": 48.328,
-     "end": 48.658
+     "start": 66.717,
+     "end": 67.047
     },
     {
      "text": "plains.",
-     "start": 48.658,
-     "end": 49.348
+     "start": 67.047,
+     "end": 67.737
     }
    ]
   },
   {
    "id": "ne",
-   "speak": "The second phase is the northeast, or retreating, monsoon, from October to December. The winds reverse, and blow from land to sea.",
-   "text": "The second phase is the northeast, or retreating, monsoon, from October to December. The winds reverse, and blow from land to sea.",
-   "start": 50.795,
-   "end": 59.179,
+   "speak": "What is the northeast monsoon? It is the retreating phase, from October to December. The winds reverse, and blow from land to sea.",
+   "text": "What is the northeast monsoon? It is the retreating phase, from October to December. The winds reverse, and blow from land to sea.",
+   "start": 69.184,
+   "end": 77.419,
    "words": [
     {
-     "text": "The",
-     "start": 50.805,
-     "end": 50.905
-    },
-    {
-     "text": "second",
-     "start": 50.905,
-     "end": 51.275
-    },
-    {
-     "text": "phase",
-     "start": 51.275,
-     "end": 51.695
+     "text": "What",
+     "start": 69.194,
+     "end": 69.434
     },
     {
      "text": "is",
-     "start": 51.695,
-     "end": 51.855
+     "start": 69.434,
+     "end": 69.574
     },
     {
      "text": "the",
-     "start": 51.855,
-     "end": 51.955
+     "start": 69.574,
+     "end": 69.664
     },
     {
-     "text": "northeast,",
-     "start": 51.955,
-     "end": 52.765
+     "text": "northeast",
+     "start": 69.664,
+     "end": 70.264
     },
     {
-     "text": "or",
-     "start": 52.995,
-     "end": 53.175
+     "text": "monsoon?",
+     "start": 70.264,
+     "end": 71.014
     },
     {
-     "text": "retreating,",
-     "start": 53.175,
-     "end": 53.795
+     "text": "It",
+     "start": 71.424,
+     "end": 71.564
     },
     {
-     "text": "monsoon,",
-     "start": 53.795,
-     "end": 54.435
+     "text": "is",
+     "start": 71.564,
+     "end": 71.694
+    },
+    {
+     "text": "the",
+     "start": 71.694,
+     "end": 71.814
+    },
+    {
+     "text": "retreating",
+     "start": 71.814,
+     "end": 72.344
+    },
+    {
+     "text": "phase,",
+     "start": 72.344,
+     "end": 72.904
     },
     {
      "text": "from",
-     "start": 54.435,
-     "end": 54.645
+     "start": 72.904,
+     "end": 73.054
     },
     {
      "text": "October",
-     "start": 54.645,
-     "end": 55.115
+     "start": 73.054,
+     "end": 73.554
     },
     {
      "text": "to",
-     "start": 55.115,
-     "end": 55.235
+     "start": 73.554,
+     "end": 73.674
     },
     {
      "text": "December.",
-     "start": 55.235,
-     "end": 55.885
+     "start": 73.674,
+     "end": 74.314
     },
     {
      "text": "The",
-     "start": 56.575,
-     "end": 56.675
+     "start": 74.904,
+     "end": 75.004
     },
     {
      "text": "winds",
-     "start": 56.675,
-     "end": 57.045
+     "start": 75.004,
+     "end": 75.384
     },
     {
      "text": "reverse,",
-     "start": 57.045,
-     "end": 57.665
+     "start": 75.384,
+     "end": 75.944
     },
     {
      "text": "and",
-     "start": 57.665,
-     "end": 57.855
+     "start": 75.944,
+     "end": 76.094
     },
     {
      "text": "blow",
-     "start": 57.855,
-     "end": 58.095
+     "start": 76.094,
+     "end": 76.324
     },
     {
      "text": "from",
-     "start": 58.095,
-     "end": 58.295
+     "start": 76.324,
+     "end": 76.544
     },
     {
      "text": "land",
-     "start": 58.295,
-     "end": 58.595
+     "start": 76.544,
+     "end": 76.834
     },
     {
      "text": "to",
-     "start": 58.595,
-     "end": 58.675
+     "start": 76.834,
+     "end": 76.914
     },
     {
      "text": "sea.",
-     "start": 58.675,
-     "end": 59.145
+     "start": 76.914,
+     "end": 77.394
     }
    ]
   },
   {
    "id": "tn",
-   "speak": "They are mostly dry, but after crossing the Bay of Bengal they bring rain to the Tamil Nadu coast, which gets about half of its yearly rain in this season.",
-   "text": "They are mostly dry, but after crossing the Bay of Bengal they bring rain to the Tamil Nadu coast, which gets about half of its yearly rain in this season.",
-   "start": 60.379,
-   "end": 69.915,
+   "speak": "Why does Tamil Nadu get rain in winter? These winds are mostly dry, but after crossing the Bay of Bengal they pick up moisture. I M D data show Tamil Nadu gets about forty-eight percent of its yearly rain in this season.",
+   "text": "Why does Tamil Nadu get rain in winter? These winds are mostly dry, but after crossing the Bay of Bengal they pick up moisture. IMD data show Tamil Nadu gets about 48% of its yearly rain in this season.",
+   "start": 78.619,
+   "end": 92.955,
    "words": [
     {
-     "text": "They",
-     "start": 60.419,
-     "end": 60.649
+     "text": "Why",
+     "start": 78.619,
+     "end": 78.859
     },
     {
-     "text": "are",
-     "start": 60.649,
-     "end": 60.679
-    },
-    {
-     "text": "mostly",
-     "start": 60.679,
-     "end": 61.139
-    },
-    {
-     "text": "dry,",
-     "start": 61.139,
-     "end": 61.649
-    },
-    {
-     "text": "but",
-     "start": 62.159,
-     "end": 62.299
-    },
-    {
-     "text": "after",
-     "start": 62.299,
-     "end": 62.569
-    },
-    {
-     "text": "crossing",
-     "start": 62.569,
-     "end": 63.019
-    },
-    {
-     "text": "the",
-     "start": 63.019,
-     "end": 63.099
-    },
-    {
-     "text": "Bay",
-     "start": 63.099,
-     "end": 63.339
-    },
-    {
-     "text": "of",
-     "start": 63.339,
-     "end": 63.409
-    },
-    {
-     "text": "Bengal",
-     "start": 63.409,
-     "end": 64.049
-    },
-    {
-     "text": "they",
-     "start": 64.049,
-     "end": 64.249
-    },
-    {
-     "text": "bring",
-     "start": 64.249,
-     "end": 64.519
-    },
-    {
-     "text": "rain",
-     "start": 64.519,
-     "end": 64.859
-    },
-    {
-     "text": "to",
-     "start": 64.859,
-     "end": 64.959
-    },
-    {
-     "text": "the",
-     "start": 64.959,
-     "end": 65.039
+     "text": "does",
+     "start": 78.859,
+     "end": 79.079
     },
     {
      "text": "Tamil",
-     "start": 65.039,
-     "end": 65.389
+     "start": 79.079,
+     "end": 79.419
     },
     {
      "text": "Nadu",
-     "start": 65.389,
-     "end": 65.779
+     "start": 79.419,
+     "end": 79.729
     },
     {
-     "text": "coast,",
-     "start": 65.779,
-     "end": 66.439
-    },
-    {
-     "text": "which",
-     "start": 66.909,
-     "end": 67.119
-    },
-    {
-     "text": "gets",
-     "start": 67.119,
-     "end": 67.399
-    },
-    {
-     "text": "about",
-     "start": 67.399,
-     "end": 67.709
-    },
-    {
-     "text": "half",
-     "start": 67.709,
-     "end": 68.089
-    },
-    {
-     "text": "of",
-     "start": 68.089,
-     "end": 68.159
-    },
-    {
-     "text": "its",
-     "start": 68.159,
-     "end": 68.349
-    },
-    {
-     "text": "yearly",
-     "start": 68.349,
-     "end": 68.719
+     "text": "get",
+     "start": 79.729,
+     "end": 79.929
     },
     {
      "text": "rain",
-     "start": 68.719,
-     "end": 69.029
+     "start": 79.929,
+     "end": 80.209
     },
     {
      "text": "in",
-     "start": 69.029,
-     "end": 69.179
+     "start": 80.209,
+     "end": 80.289
+    },
+    {
+     "text": "winter?",
+     "start": 80.289,
+     "end": 80.849
+    },
+    {
+     "text": "These",
+     "start": 81.399,
+     "end": 81.639
+    },
+    {
+     "text": "winds",
+     "start": 81.639,
+     "end": 81.959
+    },
+    {
+     "text": "are",
+     "start": 81.959,
+     "end": 81.989
+    },
+    {
+     "text": "mostly",
+     "start": 81.989,
+     "end": 82.399
+    },
+    {
+     "text": "dry,",
+     "start": 82.399,
+     "end": 82.929
+    },
+    {
+     "text": "but",
+     "start": 83.279,
+     "end": 83.419
+    },
+    {
+     "text": "after",
+     "start": 83.419,
+     "end": 83.669
+    },
+    {
+     "text": "crossing",
+     "start": 83.669,
+     "end": 84.119
+    },
+    {
+     "text": "the",
+     "start": 84.119,
+     "end": 84.189
+    },
+    {
+     "text": "Bay",
+     "start": 84.189,
+     "end": 84.429
+    },
+    {
+     "text": "of",
+     "start": 84.429,
+     "end": 84.499
+    },
+    {
+     "text": "Bengal",
+     "start": 84.499,
+     "end": 85.149
+    },
+    {
+     "text": "they",
+     "start": 85.149,
+     "end": 85.379
+    },
+    {
+     "text": "pick",
+     "start": 85.379,
+     "end": 85.629
+    },
+    {
+     "text": "up",
+     "start": 85.629,
+     "end": 85.759
+    },
+    {
+     "text": "moisture.",
+     "start": 85.759,
+     "end": 86.369
+    },
+    {
+     "text": "IMD",
+     "start": 87.429,
+     "end": 88.029
+    },
+    {
+     "text": "data",
+     "start": 88.029,
+     "end": 88.379
+    },
+    {
+     "text": "show",
+     "start": 88.379,
+     "end": 88.669
+    },
+    {
+     "text": "Tamil",
+     "start": 88.669,
+     "end": 89.039
+    },
+    {
+     "text": "Nadu",
+     "start": 89.039,
+     "end": 89.399
+    },
+    {
+     "text": "gets",
+     "start": 89.399,
+     "end": 89.689
+    },
+    {
+     "text": "about",
+     "start": 89.689,
+     "end": 90.009
+    },
+    {
+     "text": "48%",
+     "start": 90.009,
+     "end": 91.159
+    },
+    {
+     "text": "of",
+     "start": 91.159,
+     "end": 91.229
+    },
+    {
+     "text": "its",
+     "start": 91.229,
+     "end": 91.419
+    },
+    {
+     "text": "yearly",
+     "start": 91.419,
+     "end": 91.789
+    },
+    {
+     "text": "rain",
+     "start": 91.789,
+     "end": 92.099
+    },
+    {
+     "text": "in",
+     "start": 92.099,
+     "end": 92.229
     },
     {
      "text": "this",
-     "start": 69.179,
-     "end": 69.349
+     "start": 92.229,
+     "end": 92.369
     },
     {
      "text": "season.",
-     "start": 69.349,
-     "end": 69.859
+     "start": 92.369,
+     "end": 92.909
     }
    ]
   },
   {
    "id": "p2",
-   "speak": "Part two: the core drivers.",
-   "text": "Part two: the core drivers.",
-   "start": 72.135,
-   "end": 74.119,
+   "speak": "Part two. Why does the monsoon happen?",
+   "text": "Part two. Why does the monsoon happen?",
+   "start": 95.175,
+   "end": 97.713,
    "words": [
     {
      "text": "Part",
-     "start": 72.195,
-     "end": 72.505
+     "start": 95.225,
+     "end": 95.535
     },
     {
-     "text": "two:",
-     "start": 72.505,
-     "end": 72.865
+     "text": "two.",
+     "start": 95.535,
+     "end": 95.995
+    },
+    {
+     "text": "Why",
+     "start": 95.995,
+     "end": 96.215
+    },
+    {
+     "text": "does",
+     "start": 96.215,
+     "end": 96.395
     },
     {
      "text": "the",
-     "start": 72.865,
-     "end": 72.955
+     "start": 96.395,
+     "end": 96.475
     },
     {
-     "text": "core",
-     "start": 72.955,
-     "end": 73.225
+     "text": "monsoon",
+     "start": 96.475,
+     "end": 97.035
     },
     {
-     "text": "drivers.",
-     "start": 73.225,
-     "end": 74.015
+     "text": "happen?",
+     "start": 97.035,
+     "end": 97.575
     }
    ]
   },
   {
    "id": "heat",
-   "speak": "First, differential heating. In summer, the land heats up faster than the sea. Low pressure forms over northwest India, and high pressure over the Indian Ocean, so air rushes from sea to land.",
-   "text": "First, differential heating. In summer, the land heats up faster than the sea. Low pressure forms over northwest India, and high pressure over the Indian Ocean, so air rushes from sea to land.",
-   "start": 75.419,
-   "end": 87.92,
+   "speak": "Why do the winds blow from sea to land? First, differential heating. In summer, the land heats up faster than the sea. Low pressure forms over northwest India, and high pressure over the Indian Ocean, so air rushes from sea to land.",
+   "text": "Why do the winds blow from sea to land? First, differential heating. In summer, the land heats up faster than the sea. Low pressure forms over northwest India, and high pressure over the Indian Ocean, so air rushes from sea to land.",
+   "start": 99.013,
+   "end": 114.011,
    "words": [
     {
-     "text": "First,",
-     "start": 75.429,
-     "end": 76.019
+     "text": "Why",
+     "start": 99.023,
+     "end": 99.243
     },
     {
-     "text": "differential",
-     "start": 76.019,
-     "end": 76.559
-    },
-    {
-     "text": "heating.",
-     "start": 76.559,
-     "end": 77.109
-    },
-    {
-     "text": "In",
-     "start": 77.659,
-     "end": 77.789
-    },
-    {
-     "text": "summer,",
-     "start": 77.789,
-     "end": 78.139
+     "text": "do",
+     "start": 99.243,
+     "end": 99.373
     },
     {
      "text": "the",
-     "start": 78.139,
-     "end": 78.249
+     "start": 99.373,
+     "end": 99.453
     },
     {
-     "text": "land",
-     "start": 78.249,
-     "end": 78.629
+     "text": "winds",
+     "start": 99.453,
+     "end": 99.783
     },
     {
-     "text": "heats",
-     "start": 78.629,
-     "end": 78.979
-    },
-    {
-     "text": "up",
-     "start": 78.979,
-     "end": 79.119
-    },
-    {
-     "text": "faster",
-     "start": 79.119,
-     "end": 79.589
-    },
-    {
-     "text": "than",
-     "start": 79.589,
-     "end": 79.759
-    },
-    {
-     "text": "the",
-     "start": 79.759,
-     "end": 79.819
-    },
-    {
-     "text": "sea.",
-     "start": 79.819,
-     "end": 80.329
-    },
-    {
-     "text": "Low",
-     "start": 80.999,
-     "end": 81.209
-    },
-    {
-     "text": "pressure",
-     "start": 81.209,
-     "end": 81.579
-    },
-    {
-     "text": "forms",
-     "start": 81.579,
-     "end": 82.029
-    },
-    {
-     "text": "over",
-     "start": 82.029,
-     "end": 82.199
-    },
-    {
-     "text": "northwest",
-     "start": 82.199,
-     "end": 82.779
-    },
-    {
-     "text": "India,",
-     "start": 82.779,
-     "end": 83.289
-    },
-    {
-     "text": "and",
-     "start": 83.289,
-     "end": 83.449
-    },
-    {
-     "text": "high",
-     "start": 83.449,
-     "end": 83.719
-    },
-    {
-     "text": "pressure",
-     "start": 83.719,
-     "end": 84.189
-    },
-    {
-     "text": "over",
-     "start": 84.189,
-     "end": 84.389
-    },
-    {
-     "text": "the",
-     "start": 84.389,
-     "end": 84.559
-    },
-    {
-     "text": "Indian",
-     "start": 84.559,
-     "end": 84.909
-    },
-    {
-     "text": "Ocean,",
-     "start": 84.909,
-     "end": 85.439
-    },
-    {
-     "text": "so",
-     "start": 85.789,
-     "end": 86.019
-    },
-    {
-     "text": "air",
-     "start": 86.019,
-     "end": 86.289
-    },
-    {
-     "text": "rushes",
-     "start": 86.289,
-     "end": 86.759
+     "text": "blow",
+     "start": 99.783,
+     "end": 100.063
     },
     {
      "text": "from",
-     "start": 86.759,
-     "end": 86.899
+     "start": 100.063,
+     "end": 100.253
     },
     {
      "text": "sea",
-     "start": 86.899,
-     "end": 87.189
+     "start": 100.253,
+     "end": 100.503
     },
     {
      "text": "to",
-     "start": 87.189,
-     "end": 87.309
+     "start": 100.503,
+     "end": 100.613
+    },
+    {
+     "text": "land?",
+     "start": 100.613,
+     "end": 101.093
+    },
+    {
+     "text": "First,",
+     "start": 101.553,
+     "end": 102.223
+    },
+    {
+     "text": "differential",
+     "start": 102.223,
+     "end": 102.763
+    },
+    {
+     "text": "heating.",
+     "start": 102.763,
+     "end": 103.303
+    },
+    {
+     "text": "In",
+     "start": 103.913,
+     "end": 104.033
+    },
+    {
+     "text": "summer,",
+     "start": 104.033,
+     "end": 104.423
+    },
+    {
+     "text": "the",
+     "start": 104.423,
+     "end": 104.553
+    },
+    {
+     "text": "land",
+     "start": 104.553,
+     "end": 104.953
+    },
+    {
+     "text": "heats",
+     "start": 104.953,
+     "end": 105.313
+    },
+    {
+     "text": "up",
+     "start": 105.313,
+     "end": 105.443
+    },
+    {
+     "text": "faster",
+     "start": 105.443,
+     "end": 105.913
+    },
+    {
+     "text": "than",
+     "start": 105.913,
+     "end": 106.073
+    },
+    {
+     "text": "the",
+     "start": 106.073,
+     "end": 106.133
+    },
+    {
+     "text": "sea.",
+     "start": 106.133,
+     "end": 106.633
+    },
+    {
+     "text": "Low",
+     "start": 107.323,
+     "end": 107.533
+    },
+    {
+     "text": "pressure",
+     "start": 107.533,
+     "end": 107.903
+    },
+    {
+     "text": "forms",
+     "start": 107.903,
+     "end": 108.353
+    },
+    {
+     "text": "over",
+     "start": 108.353,
+     "end": 108.523
+    },
+    {
+     "text": "northwest",
+     "start": 108.523,
+     "end": 109.073
+    },
+    {
+     "text": "India,",
+     "start": 109.073,
+     "end": 109.563
+    },
+    {
+     "text": "and",
+     "start": 109.563,
+     "end": 109.703
+    },
+    {
+     "text": "high",
+     "start": 109.703,
+     "end": 109.963
+    },
+    {
+     "text": "pressure",
+     "start": 109.963,
+     "end": 110.443
+    },
+    {
+     "text": "over",
+     "start": 110.443,
+     "end": 110.643
+    },
+    {
+     "text": "the",
+     "start": 110.643,
+     "end": 110.813
+    },
+    {
+     "text": "Indian",
+     "start": 110.813,
+     "end": 111.153
+    },
+    {
+     "text": "Ocean,",
+     "start": 111.153,
+     "end": 111.703
+    },
+    {
+     "text": "so",
+     "start": 111.933,
+     "end": 112.163
+    },
+    {
+     "text": "air",
+     "start": 112.163,
+     "end": 112.413
+    },
+    {
+     "text": "rushes",
+     "start": 112.413,
+     "end": 112.883
+    },
+    {
+     "text": "from",
+     "start": 112.883,
+     "end": 113.023
+    },
+    {
+     "text": "sea",
+     "start": 113.023,
+     "end": 113.293
+    },
+    {
+     "text": "to",
+     "start": 113.293,
+     "end": 113.413
     },
     {
      "text": "land.",
-     "start": 87.309,
-     "end": 87.869
+     "start": 113.413,
+     "end": 113.963
     }
    ]
   },
   {
    "id": "coriolis",
-   "speak": "Second, the Coriolis force. The southeast trade winds cross the equator, and are deflected to the right, turning into the southwest monsoon winds.",
-   "text": "Second, the Coriolis force. The southeast trade winds cross the equator, and are deflected to the right, turning into the southwest monsoon winds.",
-   "start": 89.22,
-   "end": 98.521,
+   "speak": "How do they turn southwest? Second, the Coriolis force. The southeast trade winds cross the equator, and are deflected to the right, turning into the southwest monsoon winds.",
+   "text": "How do they turn southwest? Second, the Coriolis force. The southeast trade winds cross the equator, and are deflected to the right, turning into the southwest monsoon winds.",
+   "start": 115.311,
+   "end": 126.575,
    "words": [
     {
+     "text": "How",
+     "start": 115.321,
+     "end": 115.521
+    },
+    {
+     "text": "do",
+     "start": 115.521,
+     "end": 115.631
+    },
+    {
+     "text": "they",
+     "start": 115.631,
+     "end": 115.761
+    },
+    {
+     "text": "turn",
+     "start": 115.761,
+     "end": 116.071
+    },
+    {
+     "text": "southwest?",
+     "start": 116.071,
+     "end": 116.901
+    },
+    {
      "text": "Second,",
-     "start": 89.23,
-     "end": 89.82
+     "start": 117.331,
+     "end": 117.941
     },
     {
      "text": "the",
-     "start": 89.82,
-     "end": 89.9
+     "start": 117.941,
+     "end": 118.041
     },
     {
      "text": "Coriolis",
-     "start": 89.9,
-     "end": 90.6
+     "start": 118.041,
+     "end": 118.761
     },
     {
      "text": "force.",
-     "start": 90.6,
-     "end": 91.12
+     "start": 118.761,
+     "end": 119.321
     },
     {
      "text": "The",
-     "start": 91.81,
-     "end": 91.89
+     "start": 119.951,
+     "end": 120.051
     },
     {
      "text": "southeast",
-     "start": 91.89,
-     "end": 92.55
+     "start": 120.051,
+     "end": 120.711
     },
     {
      "text": "trade",
-     "start": 92.55,
-     "end": 92.83
+     "start": 120.711,
+     "end": 120.991
     },
     {
      "text": "winds",
-     "start": 92.83,
-     "end": 93.18
+     "start": 120.991,
+     "end": 121.351
     },
     {
      "text": "cross",
-     "start": 93.18,
-     "end": 93.47
+     "start": 121.351,
+     "end": 121.641
     },
     {
      "text": "the",
-     "start": 93.47,
-     "end": 93.6
+     "start": 121.641,
+     "end": 121.761
     },
     {
      "text": "equator,",
-     "start": 93.6,
-     "end": 94.37
+     "start": 121.761,
+     "end": 122.441
     },
     {
      "text": "and",
-     "start": 94.37,
-     "end": 94.51
+     "start": 122.441,
+     "end": 122.621
     },
     {
      "text": "are",
-     "start": 94.51,
-     "end": 94.57
+     "start": 122.621,
+     "end": 122.651
     },
     {
      "text": "deflected",
-     "start": 94.57,
-     "end": 95.13
+     "start": 122.651,
+     "end": 123.221
     },
     {
      "text": "to",
-     "start": 95.13,
-     "end": 95.22
+     "start": 123.221,
+     "end": 123.311
     },
     {
      "text": "the",
-     "start": 95.22,
-     "end": 95.33
+     "start": 123.311,
+     "end": 123.421
     },
     {
      "text": "right,",
-     "start": 95.33,
-     "end": 95.77
+     "start": 123.421,
+     "end": 123.861
     },
     {
      "text": "turning",
-     "start": 96.1,
-     "end": 96.5
+     "start": 124.161,
+     "end": 124.571
     },
     {
      "text": "into",
-     "start": 96.5,
-     "end": 96.66
+     "start": 124.571,
+     "end": 124.721
     },
     {
      "text": "the",
-     "start": 96.66,
-     "end": 96.73
+     "start": 124.721,
+     "end": 124.801
     },
     {
      "text": "southwest",
-     "start": 96.73,
-     "end": 97.39
+     "start": 124.801,
+     "end": 125.451
     },
     {
      "text": "monsoon",
-     "start": 97.39,
-     "end": 97.91
+     "start": 125.451,
+     "end": 125.981
     },
     {
      "text": "winds.",
-     "start": 97.91,
-     "end": 98.47
+     "start": 125.981,
+     "end": 126.531
     }
    ]
   },
   {
    "id": "itcz",
-   "speak": "Third, the shifting I. T. C. Z. By July, the Inter-Tropical Convergence Zone moves north over the Ganga plains, as the monsoon trough.",
-   "text": "Third, the shifting ITCZ. By July, the Inter-Tropical Convergence Zone moves north over the Ganga plains, as the monsoon trough.",
-   "start": 99.821,
-   "end": 109.037,
+   "speak": "What is the monsoon trough? Third, the shifting I. T. C. Z. By July, the Inter-Tropical Convergence Zone moves north over the Ganga plains, as the monsoon trough.",
+   "text": "What is the monsoon trough? Third, the shifting ITCZ. By July, the Inter-Tropical Convergence Zone moves north over the Ganga plains, as the monsoon trough.",
+   "start": 127.875,
+   "end": 138.84,
    "words": [
     {
-     "text": "Third,",
-     "start": 99.831,
-     "end": 100.271
+     "text": "What",
+     "start": 127.885,
+     "end": 128.105
+    },
+    {
+     "text": "is",
+     "start": 128.105,
+     "end": 128.235
     },
     {
      "text": "the",
-     "start": 100.271,
-     "end": 100.341
-    },
-    {
-     "text": "shifting",
-     "start": 100.341,
-     "end": 100.771
-    },
-    {
-     "text": "ITCZ.",
-     "start": 100.771,
-     "end": 102.521
-    },
-    {
-     "text": "By",
-     "start": 103.401,
-     "end": 103.561
-    },
-    {
-     "text": "July,",
-     "start": 103.561,
-     "end": 104.091
-    },
-    {
-     "text": "the",
-     "start": 104.091,
-     "end": 104.251
-    },
-    {
-     "text": "Inter-Tropical",
-     "start": 104.251,
-     "end": 104.861
-    },
-    {
-     "text": "Convergence",
-     "start": 104.861,
-     "end": 105.581
-    },
-    {
-     "text": "Zone",
-     "start": 105.581,
-     "end": 105.851
-    },
-    {
-     "text": "moves",
-     "start": 105.851,
-     "end": 106.181
-    },
-    {
-     "text": "north",
-     "start": 106.181,
-     "end": 106.491
-    },
-    {
-     "text": "over",
-     "start": 106.491,
-     "end": 106.641
-    },
-    {
-     "text": "the",
-     "start": 106.641,
-     "end": 106.731
-    },
-    {
-     "text": "Ganga",
-     "start": 106.731,
-     "end": 107.061
-    },
-    {
-     "text": "plains,",
-     "start": 107.061,
-     "end": 107.671
-    },
-    {
-     "text": "as",
-     "start": 107.671,
-     "end": 107.831
-    },
-    {
-     "text": "the",
-     "start": 107.831,
-     "end": 107.921
+     "start": 128.235,
+     "end": 128.315
     },
     {
      "text": "monsoon",
-     "start": 107.921,
-     "end": 108.481
+     "start": 128.315,
+     "end": 128.865
+    },
+    {
+     "text": "trough?",
+     "start": 128.865,
+     "end": 129.345
+    },
+    {
+     "text": "Third,",
+     "start": 129.765,
+     "end": 130.215
+    },
+    {
+     "text": "the",
+     "start": 130.215,
+     "end": 130.305
+    },
+    {
+     "text": "shifting",
+     "start": 130.305,
+     "end": 130.755
+    },
+    {
+     "text": "ITCZ.",
+     "start": 130.755,
+     "end": 132.325
+    },
+    {
+     "text": "By",
+     "start": 133.185,
+     "end": 133.345
+    },
+    {
+     "text": "July,",
+     "start": 133.345,
+     "end": 133.875
+    },
+    {
+     "text": "the",
+     "start": 133.875,
+     "end": 134.045
+    },
+    {
+     "text": "Inter-Tropical",
+     "start": 134.045,
+     "end": 134.675
+    },
+    {
+     "text": "Convergence",
+     "start": 134.675,
+     "end": 135.385
+    },
+    {
+     "text": "Zone",
+     "start": 135.385,
+     "end": 135.655
+    },
+    {
+     "text": "moves",
+     "start": 135.655,
+     "end": 135.985
+    },
+    {
+     "text": "north",
+     "start": 135.985,
+     "end": 136.305
+    },
+    {
+     "text": "over",
+     "start": 136.305,
+     "end": 136.455
+    },
+    {
+     "text": "the",
+     "start": 136.455,
+     "end": 136.535
+    },
+    {
+     "text": "Ganga",
+     "start": 136.535,
+     "end": 136.855
+    },
+    {
+     "text": "plains,",
+     "start": 136.855,
+     "end": 137.485
+    },
+    {
+     "text": "as",
+     "start": 137.485,
+     "end": 137.645
+    },
+    {
+     "text": "the",
+     "start": 137.645,
+     "end": 137.725
+    },
+    {
+     "text": "monsoon",
+     "start": 137.725,
+     "end": 138.285
     },
     {
      "text": "trough.",
-     "start": 108.481,
-     "end": 108.991
+     "start": 138.285,
+     "end": 138.775
     }
    ]
   },
   {
    "id": "jet",
-   "speak": "Fourth, the jet streams and the Tibetan Plateau. The heated plateau helps push the westerly jet north of the Himalayas, and a tropical easterly jet sets up over the peninsula, triggering the burst of the monsoon.",
-   "text": "Fourth, the jet streams and the Tibetan Plateau. The heated plateau helps push the westerly jet north of the Himalayas, and a tropical easterly jet sets up over the peninsula, triggering the burst of the monsoon.",
-   "start": 110.337,
-   "end": 123.607,
+   "speak": "How does the monsoon burst? Fourth, the jet streams and the Tibetan Plateau. The heated plateau helps push the westerly jet north of the Himalayas, and a tropical easterly jet sets up over the peninsula, triggering the burst of the monsoon.",
+   "text": "How does the monsoon burst? Fourth, the jet streams and the Tibetan Plateau. The heated plateau helps push the westerly jet north of the Himalayas, and a tropical easterly jet sets up over the peninsula, triggering the burst of the monsoon.",
+   "start": 140.14,
+   "end": 155.265,
    "words": [
     {
-     "text": "Fourth,",
-     "start": 110.347,
-     "end": 110.857
+     "text": "How",
+     "start": 140.15,
+     "end": 140.34
+    },
+    {
+     "text": "does",
+     "start": 140.34,
+     "end": 140.48
     },
     {
      "text": "the",
-     "start": 110.857,
-     "end": 110.967
+     "start": 140.48,
+     "end": 140.55
+    },
+    {
+     "text": "monsoon",
+     "start": 140.55,
+     "end": 141.12
+    },
+    {
+     "text": "burst?",
+     "start": 141.12,
+     "end": 141.72
+    },
+    {
+     "text": "Fourth,",
+     "start": 142.21,
+     "end": 142.8
+    },
+    {
+     "text": "the",
+     "start": 142.8,
+     "end": 142.95
     },
     {
      "text": "jet",
-     "start": 110.967,
-     "end": 111.247
+     "start": 142.95,
+     "end": 143.25
     },
     {
      "text": "streams",
-     "start": 111.247,
-     "end": 111.837
+     "start": 143.25,
+     "end": 143.82
     },
     {
      "text": "and",
-     "start": 111.837,
-     "end": 111.977
+     "start": 143.82,
+     "end": 143.93
     },
     {
      "text": "the",
-     "start": 111.977,
-     "end": 112.047
+     "start": 143.93,
+     "end": 143.99
     },
     {
      "text": "Tibetan",
-     "start": 112.047,
-     "end": 112.567
+     "start": 143.99,
+     "end": 144.47
     },
     {
      "text": "Plateau.",
-     "start": 112.567,
-     "end": 113.167
+     "start": 144.47,
+     "end": 145.07
     },
     {
      "text": "The",
-     "start": 113.997,
-     "end": 114.067
+     "start": 145.89,
+     "end": 145.97
     },
     {
      "text": "heated",
-     "start": 114.067,
-     "end": 114.417
+     "start": 145.97,
+     "end": 146.31
     },
     {
      "text": "plateau",
-     "start": 114.417,
-     "end": 114.907
+     "start": 146.31,
+     "end": 146.81
     },
     {
      "text": "helps",
-     "start": 114.907,
-     "end": 115.247
+     "start": 146.81,
+     "end": 147.15
     },
     {
      "text": "push",
-     "start": 115.247,
-     "end": 115.507
+     "start": 147.15,
+     "end": 147.44
     },
     {
      "text": "the",
-     "start": 115.507,
-     "end": 115.607
+     "start": 147.44,
+     "end": 147.53
     },
     {
      "text": "westerly",
-     "start": 115.607,
-     "end": 116.117
+     "start": 147.53,
+     "end": 148.05
     },
     {
      "text": "jet",
-     "start": 116.117,
-     "end": 116.527
+     "start": 148.05,
+     "end": 148.45
     },
     {
      "text": "north",
-     "start": 116.527,
-     "end": 116.827
+     "start": 148.45,
+     "end": 148.73
     },
     {
      "text": "of",
-     "start": 116.827,
-     "end": 116.897
+     "start": 148.73,
+     "end": 148.8
     },
     {
      "text": "the",
-     "start": 116.897,
-     "end": 116.967
+     "start": 148.8,
+     "end": 148.87
     },
     {
      "text": "Himalayas,",
-     "start": 116.967,
-     "end": 117.777
+     "start": 148.87,
+     "end": 149.66
     },
     {
      "text": "and",
-     "start": 118.227,
-     "end": 118.347
+     "start": 150.05,
+     "end": 150.17
     },
     {
      "text": "a",
-     "start": 118.347,
-     "end": 118.397
+     "start": 150.17,
+     "end": 150.22
     },
     {
      "text": "tropical",
-     "start": 118.397,
-     "end": 118.887
+     "start": 150.22,
+     "end": 150.71
     },
     {
      "text": "easterly",
-     "start": 118.887,
-     "end": 119.367
+     "start": 150.71,
+     "end": 151.17
     },
     {
      "text": "jet",
-     "start": 119.367,
-     "end": 119.757
+     "start": 151.17,
+     "end": 151.57
     },
     {
      "text": "sets",
-     "start": 119.757,
-     "end": 120.117
+     "start": 151.57,
+     "end": 151.92
     },
     {
      "text": "up",
-     "start": 120.117,
-     "end": 120.287
+     "start": 151.92,
+     "end": 152.09
     },
     {
      "text": "over",
-     "start": 120.287,
-     "end": 120.457
+     "start": 152.09,
+     "end": 152.26
     },
     {
      "text": "the",
-     "start": 120.457,
-     "end": 120.547
+     "start": 152.26,
+     "end": 152.35
     },
     {
      "text": "peninsula,",
-     "start": 120.547,
-     "end": 121.277
+     "start": 152.35,
+     "end": 153.08
     },
     {
      "text": "triggering",
-     "start": 121.677,
-     "end": 122.117
+     "start": 153.4,
+     "end": 153.83
     },
     {
      "text": "the",
-     "start": 122.117,
-     "end": 122.207
+     "start": 153.83,
+     "end": 153.91
     },
     {
      "text": "burst",
-     "start": 122.207,
-     "end": 122.627
+     "start": 153.91,
+     "end": 154.33
     },
     {
      "text": "of",
-     "start": 122.627,
-     "end": 122.717
+     "start": 154.33,
+     "end": 154.4
     },
     {
      "text": "the",
-     "start": 122.717,
-     "end": 122.797
+     "start": 154.4,
+     "end": 154.47
     },
     {
      "text": "monsoon.",
-     "start": 122.797,
-     "end": 123.537
+     "start": 154.47,
+     "end": 155.22
     }
    ]
   },
   {
    "id": "ocean",
-   "speak": "And fifth, the oceans. El Nino tends to weaken the monsoon, La Nina tends to strengthen it, and a positive Indian Ocean Dipole can help.",
-   "text": "And fifth, the oceans. El Ni\u00f1o tends to weaken the monsoon, La Ni\u00f1a tends to strengthen it, and a positive Indian Ocean Dipole can help.",
-   "start": 124.907,
-   "end": 134.208,
+   "speak": "How do the oceans change it? And fifth, the oceans. I M D tracks them closely. El Nino tends to weaken the monsoon, La Nina tends to strengthen it, and a positive Indian Ocean Dipole can help.",
+   "text": "How do the oceans change it? And fifth, the oceans. IMD tracks them closely. El Ni\u00f1o tends to weaken the monsoon, La Ni\u00f1a tends to strengthen it, and a positive Indian Ocean Dipole can help.",
+   "start": 156.565,
+   "end": 169.749,
    "words": [
     {
+     "text": "How",
+     "start": 156.575,
+     "end": 156.775
+    },
+    {
+     "text": "do",
+     "start": 156.775,
+     "end": 156.895
+    },
+    {
+     "text": "the",
+     "start": 156.895,
+     "end": 157.045
+    },
+    {
+     "text": "oceans",
+     "start": 157.045,
+     "end": 157.495
+    },
+    {
+     "text": "change",
+     "start": 157.495,
+     "end": 157.885
+    },
+    {
+     "text": "it?",
+     "start": 157.885,
+     "end": 158.205
+    },
+    {
      "text": "And",
-     "start": 124.907,
-     "end": 125.107
+     "start": 158.585,
+     "end": 158.715
     },
     {
      "text": "fifth,",
-     "start": 125.107,
-     "end": 125.517
+     "start": 158.715,
+     "end": 159.115
     },
     {
      "text": "the",
-     "start": 125.517,
-     "end": 125.687
+     "start": 159.115,
+     "end": 159.295
     },
     {
      "text": "oceans.",
-     "start": 125.687,
-     "end": 126.347
+     "start": 159.295,
+     "end": 159.985
+    },
+    {
+     "text": "IMD",
+     "start": 160.575,
+     "end": 161.145
+    },
+    {
+     "text": "tracks",
+     "start": 161.145,
+     "end": 161.505
+    },
+    {
+     "text": "them",
+     "start": 161.505,
+     "end": 161.685
+    },
+    {
+     "text": "closely.",
+     "start": 161.685,
+     "end": 162.355
     },
     {
      "text": "El",
-     "start": 127.037,
-     "end": 127.207
+     "start": 162.995,
+     "end": 163.165
     },
     {
      "text": "Ni\u00f1o",
-     "start": 127.207,
-     "end": 127.567
+     "start": 163.165,
+     "end": 163.535
     },
     {
      "text": "tends",
-     "start": 127.567,
-     "end": 127.917
+     "start": 163.535,
+     "end": 163.875
     },
     {
      "text": "to",
-     "start": 127.917,
-     "end": 128.037
+     "start": 163.875,
+     "end": 163.995
     },
     {
      "text": "weaken",
-     "start": 128.037,
-     "end": 128.377
+     "start": 163.995,
+     "end": 164.335
     },
     {
      "text": "the",
-     "start": 128.377,
-     "end": 128.437
+     "start": 164.335,
+     "end": 164.395
     },
     {
      "text": "monsoon,",
-     "start": 128.437,
-     "end": 129.187
+     "start": 164.395,
+     "end": 165.135
     },
     {
      "text": "La",
-     "start": 129.437,
-     "end": 129.557
+     "start": 165.135,
+     "end": 165.275
     },
     {
      "text": "Ni\u00f1a",
-     "start": 129.557,
-     "end": 129.877
+     "start": 165.275,
+     "end": 165.585
     },
     {
      "text": "tends",
-     "start": 129.877,
-     "end": 130.217
+     "start": 165.585,
+     "end": 165.895
     },
     {
      "text": "to",
-     "start": 130.217,
-     "end": 130.317
+     "start": 165.895,
+     "end": 166.005
     },
     {
      "text": "strengthen",
-     "start": 130.317,
-     "end": 130.857
+     "start": 166.005,
+     "end": 166.545
     },
     {
      "text": "it,",
-     "start": 130.857,
-     "end": 131.137
+     "start": 166.545,
+     "end": 166.915
     },
     {
      "text": "and",
-     "start": 131.417,
-     "end": 131.547
+     "start": 166.915,
+     "end": 167.055
     },
     {
      "text": "a",
-     "start": 131.547,
-     "end": 131.587
+     "start": 167.055,
+     "end": 167.095
     },
     {
      "text": "positive",
-     "start": 131.587,
-     "end": 132.097
+     "start": 167.095,
+     "end": 167.605
     },
     {
      "text": "Indian",
-     "start": 132.097,
-     "end": 132.577
+     "start": 167.605,
+     "end": 168.105
     },
     {
      "text": "Ocean",
-     "start": 132.577,
-     "end": 133.007
+     "start": 168.105,
+     "end": 168.545
     },
     {
      "text": "Dipole",
-     "start": 133.007,
-     "end": 133.507
+     "start": 168.545,
+     "end": 169.065
     },
     {
      "text": "can",
-     "start": 133.507,
-     "end": 133.687
+     "start": 169.065,
+     "end": 169.255
     },
     {
      "text": "help.",
-     "start": 133.687,
-     "end": 134.137
+     "start": 169.255,
+     "end": 169.675
     }
    ]
   },
   {
    "id": "p3",
-   "speak": "Part three: recent shifts and climate change.",
-   "text": "Part three: recent shifts and climate change.",
-   "start": 136.428,
-   "end": 139.372,
+   "speak": "Part three. How is the monsoon changing?",
+   "text": "Part three. How is the monsoon changing?",
+   "start": 171.969,
+   "end": 174.529,
    "words": [
     {
      "text": "Part",
-     "start": 136.478,
-     "end": 136.778
+     "start": 172.009,
+     "end": 172.329
     },
     {
-     "text": "three:",
-     "start": 136.778,
-     "end": 137.188
+     "text": "three.",
+     "start": 172.329,
+     "end": 172.709
     },
     {
-     "text": "recent",
-     "start": 137.188,
-     "end": 137.648
+     "text": "How",
+     "start": 172.709,
+     "end": 172.939
     },
     {
-     "text": "shifts",
-     "start": 137.648,
-     "end": 138.138
+     "text": "is",
+     "start": 172.939,
+     "end": 173.089
     },
     {
-     "text": "and",
-     "start": 138.138,
-     "end": 138.278
+     "text": "the",
+     "start": 173.089,
+     "end": 173.169
     },
     {
-     "text": "climate",
-     "start": 138.278,
-     "end": 138.668
+     "text": "monsoon",
+     "start": 173.169,
+     "end": 173.729
     },
     {
-     "text": "change.",
-     "start": 138.668,
-     "end": 139.278
+     "text": "changing?",
+     "start": 173.729,
+     "end": 174.419
     }
    ]
   },
   {
    "id": "lpa",
-   "speak": "Season totals still swing around a long period average of eighty-seven centimetres, but the way the rain falls is changing.",
-   "text": "Season totals still swing around a long period average of 87 cm, but the way the rain falls is changing.",
-   "start": 140.572,
-   "end": 148.316,
+   "speak": "What counts as a normal monsoon? I M D compares each season with a long period average of eighty-seven centimetres, for nineteen seventy-one to twenty twenty. Totals still swing around it, but the way the rain falls is changing.",
+   "text": "What counts as a normal monsoon? IMD compares each season with a long period average of 87 cm, for 1971 to 2020. Totals still swing around it, but the way the rain falls is changing.",
+   "start": 175.729,
+   "end": 191.025,
    "words": [
     {
-     "text": "Season",
-     "start": 140.582,
-     "end": 141.012
+     "text": "What",
+     "start": 175.749,
+     "end": 175.969
     },
     {
-     "text": "totals",
-     "start": 141.012,
-     "end": 141.572
+     "text": "counts",
+     "start": 175.969,
+     "end": 176.419
     },
     {
-     "text": "still",
-     "start": 141.572,
-     "end": 141.892
-    },
-    {
-     "text": "swing",
-     "start": 141.892,
-     "end": 142.312
-    },
-    {
-     "text": "around",
-     "start": 142.312,
-     "end": 142.592
+     "text": "as",
+     "start": 176.419,
+     "end": 176.549
     },
     {
      "text": "a",
-     "start": 142.592,
-     "end": 142.632
+     "start": 176.549,
+     "end": 176.589
+    },
+    {
+     "text": "normal",
+     "start": 176.589,
+     "end": 176.949
+    },
+    {
+     "text": "monsoon?",
+     "start": 176.949,
+     "end": 177.719
+    },
+    {
+     "text": "IMD",
+     "start": 178.329,
+     "end": 178.919
+    },
+    {
+     "text": "compares",
+     "start": 178.919,
+     "end": 179.429
+    },
+    {
+     "text": "each",
+     "start": 179.429,
+     "end": 179.689
+    },
+    {
+     "text": "season",
+     "start": 179.689,
+     "end": 180.159
+    },
+    {
+     "text": "with",
+     "start": 180.159,
+     "end": 180.289
+    },
+    {
+     "text": "a",
+     "start": 180.289,
+     "end": 180.349
     },
     {
      "text": "long",
-     "start": 142.632,
-     "end": 143.022
+     "start": 180.349,
+     "end": 180.729
     },
     {
      "text": "period",
-     "start": 143.022,
-     "end": 143.422
+     "start": 180.729,
+     "end": 181.159
     },
     {
      "text": "average",
-     "start": 143.422,
-     "end": 143.862
+     "start": 181.159,
+     "end": 181.569
     },
     {
      "text": "of",
-     "start": 143.862,
-     "end": 143.932
+     "start": 181.569,
+     "end": 181.639
     },
     {
-     "text": "87 cm,",
-     "start": 143.932,
-     "end": 145.492
+     "text": "87",
+     "start": 181.639,
+     "end": 182.404
+    },
+    {
+     "text": "cm,",
+     "start": 182.404,
+     "end": 183.169
+    },
+    {
+     "text": "for",
+     "start": 183.569,
+     "end": 183.679
+    },
+    {
+     "text": "1971",
+     "start": 183.679,
+     "end": 184.969
+    },
+    {
+     "text": "to",
+     "start": 184.969,
+     "end": 185.069
+    },
+    {
+     "text": "2020.",
+     "start": 185.069,
+     "end": 185.989
+    },
+    {
+     "text": "Totals",
+     "start": 186.899,
+     "end": 187.389
+    },
+    {
+     "text": "still",
+     "start": 187.389,
+     "end": 187.649
+    },
+    {
+     "text": "swing",
+     "start": 187.649,
+     "end": 187.989
+    },
+    {
+     "text": "around",
+     "start": 187.989,
+     "end": 188.359
+    },
+    {
+     "text": "it,",
+     "start": 188.359,
+     "end": 188.609
     },
     {
      "text": "but",
-     "start": 146.032,
-     "end": 146.162
+     "start": 188.779,
+     "end": 188.919
     },
     {
      "text": "the",
-     "start": 146.162,
-     "end": 146.232
+     "start": 188.919,
+     "end": 188.989
     },
     {
      "text": "way",
-     "start": 146.232,
-     "end": 146.462
+     "start": 188.989,
+     "end": 189.219
     },
     {
      "text": "the",
-     "start": 146.462,
-     "end": 146.562
+     "start": 189.219,
+     "end": 189.319
     },
     {
      "text": "rain",
-     "start": 146.562,
-     "end": 146.872
+     "start": 189.319,
+     "end": 189.659
     },
     {
      "text": "falls",
-     "start": 146.872,
-     "end": 147.432
+     "start": 189.659,
+     "end": 190.179
     },
     {
      "text": "is",
-     "start": 147.432,
-     "end": 147.582
+     "start": 190.179,
+     "end": 190.319
     },
     {
      "text": "changing.",
-     "start": 147.582,
-     "end": 148.262
+     "start": 190.319,
+     "end": 190.979
     }
    ]
   },
   {
    "id": "extreme",
-   "speak": "Studies show fewer days of moderate rain, and a sharp rise in extreme downpours over central India, with longer dry breaks in between.",
-   "text": "Studies show fewer days of moderate rain, and a sharp rise in extreme downpours over central India, with longer dry breaks in between.",
-   "start": 149.516,
-   "end": 158.54,
+   "speak": "How is the rain changing? A study led by I I T M Pune found a threefold rise in widespread extreme rain events over central India from nineteen fifty to twenty fifteen, with fewer days of moderate rain, and longer dry breaks in between.",
+   "text": "How is the rain changing? A study led by IITM Pune found a threefold rise in widespread extreme rain events over central India from 1950 to 2015, with fewer days of moderate rain, and longer dry breaks in between.",
+   "start": 192.225,
+   "end": 208.204,
    "words": [
     {
-     "text": "Studies",
-     "start": 149.526,
-     "end": 150.066
+     "text": "How",
+     "start": 192.245,
+     "end": 192.475
     },
     {
-     "text": "show",
-     "start": 150.066,
-     "end": 150.296
+     "text": "is",
+     "start": 192.475,
+     "end": 192.635
     },
     {
-     "text": "fewer",
-     "start": 150.296,
-     "end": 150.656
+     "text": "the",
+     "start": 192.635,
+     "end": 192.725
     },
     {
-     "text": "days",
-     "start": 150.656,
-     "end": 151.106
+     "text": "rain",
+     "start": 192.725,
+     "end": 193.015
     },
     {
-     "text": "of",
-     "start": 151.106,
-     "end": 151.176
+     "text": "changing?",
+     "start": 193.015,
+     "end": 193.655
     },
     {
-     "text": "moderate",
-     "start": 151.176,
-     "end": 151.596
+     "text": "A",
+     "start": 194.455,
+     "end": 194.505
     },
     {
-     "text": "rain,",
-     "start": 151.596,
-     "end": 152.106
+     "text": "study",
+     "start": 194.505,
+     "end": 194.885
     },
     {
-     "text": "and",
-     "start": 152.596,
-     "end": 152.706
+     "text": "led",
+     "start": 194.885,
+     "end": 195.115
+    },
+    {
+     "text": "by",
+     "start": 195.115,
+     "end": 195.375
+    },
+    {
+     "text": "IITM",
+     "start": 195.375,
+     "end": 196.275
+    },
+    {
+     "text": "Pune",
+     "start": 196.275,
+     "end": 196.665
+    },
+    {
+     "text": "found",
+     "start": 196.875,
+     "end": 197.165
     },
     {
      "text": "a",
-     "start": 152.706,
-     "end": 152.736
+     "start": 197.165,
+     "end": 197.195
     },
     {
-     "text": "sharp",
-     "start": 152.736,
-     "end": 153.186
+     "text": "threefold",
+     "start": 197.195,
+     "end": 197.795
     },
     {
      "text": "rise",
-     "start": 153.186,
-     "end": 153.646
+     "start": 197.795,
+     "end": 198.325
     },
     {
      "text": "in",
-     "start": 153.646,
-     "end": 153.776
+     "start": 198.325,
+     "end": 198.455
+    },
+    {
+     "text": "widespread",
+     "start": 198.455,
+     "end": 199.085
     },
     {
      "text": "extreme",
-     "start": 153.776,
-     "end": 154.266
+     "start": 199.085,
+     "end": 199.595
     },
     {
-     "text": "downpours",
-     "start": 154.266,
-     "end": 155.016
+     "text": "rain",
+     "start": 199.595,
+     "end": 199.865
+    },
+    {
+     "text": "events",
+     "start": 199.865,
+     "end": 200.275
     },
     {
      "text": "over",
-     "start": 155.016,
-     "end": 155.176
+     "start": 200.275,
+     "end": 200.465
     },
     {
      "text": "central",
-     "start": 155.176,
-     "end": 155.626
+     "start": 200.465,
+     "end": 200.925
     },
     {
-     "text": "India,",
-     "start": 155.626,
-     "end": 156.106
+     "text": "India",
+     "start": 200.925,
+     "end": 201.365
+    },
+    {
+     "text": "from",
+     "start": 201.365,
+     "end": 201.565
+    },
+    {
+     "text": "1950",
+     "start": 201.565,
+     "end": 202.375
+    },
+    {
+     "text": "to",
+     "start": 202.375,
+     "end": 202.485
+    },
+    {
+     "text": "2015,",
+     "start": 202.485,
+     "end": 203.405
     },
     {
      "text": "with",
-     "start": 156.606,
-     "end": 156.756
+     "start": 203.995,
+     "end": 204.155
+    },
+    {
+     "text": "fewer",
+     "start": 204.155,
+     "end": 204.465
+    },
+    {
+     "text": "days",
+     "start": 204.465,
+     "end": 204.845
+    },
+    {
+     "text": "of",
+     "start": 204.845,
+     "end": 204.915
+    },
+    {
+     "text": "moderate",
+     "start": 204.915,
+     "end": 205.305
+    },
+    {
+     "text": "rain,",
+     "start": 205.305,
+     "end": 205.785
+    },
+    {
+     "text": "and",
+     "start": 206.275,
+     "end": 206.395
     },
     {
      "text": "longer",
-     "start": 156.756,
-     "end": 157.076
+     "start": 206.395,
+     "end": 206.695
     },
     {
      "text": "dry",
-     "start": 157.076,
-     "end": 157.436
+     "start": 206.695,
+     "end": 207.055
     },
     {
      "text": "breaks",
-     "start": 157.436,
-     "end": 157.836
+     "start": 207.055,
+     "end": 207.435
     },
     {
      "text": "in",
-     "start": 157.836,
-     "end": 157.946
+     "start": 207.435,
+     "end": 207.595
     },
     {
      "text": "between.",
-     "start": 157.946,
-     "end": 158.486
+     "start": 207.595,
+     "end": 208.155
     }
    ]
   },
   {
    "id": "erratic",
-   "speak": "Onset and withdrawal have become more erratic, and withdrawal is often late.",
-   "text": "Onset and withdrawal have become more erratic, and withdrawal is often late.",
-   "start": 159.74,
-   "end": 164.604,
+   "speak": "What about its timing? Onset and withdrawal have become more erratic. I M D's normal date for withdrawal to begin is the seventeenth of September, but it is often late.",
+   "text": "What about its timing? Onset and withdrawal have become more erratic. IMD's normal date for withdrawal to begin is the 17th of September, but it is often late.",
+   "start": 209.404,
+   "end": 220.369,
    "words": [
     {
+     "text": "What",
+     "start": 209.414,
+     "end": 209.634
+    },
+    {
+     "text": "about",
+     "start": 209.634,
+     "end": 209.934
+    },
+    {
+     "text": "its",
+     "start": 209.934,
+     "end": 210.124
+    },
+    {
+     "text": "timing?",
+     "start": 210.124,
+     "end": 210.754
+    },
+    {
      "text": "Onset",
-     "start": 159.77,
-     "end": 160.37
+     "start": 211.224,
+     "end": 211.794
     },
     {
      "text": "and",
-     "start": 160.37,
-     "end": 160.48
+     "start": 211.794,
+     "end": 211.934
     },
     {
      "text": "withdrawal",
-     "start": 160.48,
-     "end": 161.06
+     "start": 211.934,
+     "end": 212.504
     },
     {
      "text": "have",
-     "start": 161.06,
-     "end": 161.2
+     "start": 212.504,
+     "end": 212.644
     },
     {
      "text": "become",
-     "start": 161.2,
-     "end": 161.55
+     "start": 212.644,
+     "end": 212.974
     },
     {
      "text": "more",
-     "start": 161.55,
-     "end": 161.8
+     "start": 212.974,
+     "end": 213.274
     },
     {
-     "text": "erratic,",
-     "start": 161.8,
-     "end": 162.53
+     "text": "erratic.",
+     "start": 213.274,
+     "end": 214.004
     },
     {
-     "text": "and",
-     "start": 162.86,
-     "end": 163.0
+     "text": "IMD's",
+     "start": 214.664,
+     "end": 215.234
+    },
+    {
+     "text": "normal",
+     "start": 215.234,
+     "end": 215.604
+    },
+    {
+     "text": "date",
+     "start": 215.604,
+     "end": 215.894
+    },
+    {
+     "text": "for",
+     "start": 215.894,
+     "end": 216.004
     },
     {
      "text": "withdrawal",
-     "start": 163.0,
-     "end": 163.54
+     "start": 216.004,
+     "end": 216.504
+    },
+    {
+     "text": "to",
+     "start": 216.504,
+     "end": 216.624
+    },
+    {
+     "text": "begin",
+     "start": 216.624,
+     "end": 217.084
     },
     {
      "text": "is",
-     "start": 163.54,
-     "end": 163.74
+     "start": 217.084,
+     "end": 217.244
+    },
+    {
+     "text": "the",
+     "start": 217.244,
+     "end": 217.334
+    },
+    {
+     "text": "17th",
+     "start": 217.334,
+     "end": 217.984
+    },
+    {
+     "text": "of",
+     "start": 217.984,
+     "end": 218.044
+    },
+    {
+     "text": "September,",
+     "start": 218.044,
+     "end": 218.714
+    },
+    {
+     "text": "but",
+     "start": 219.064,
+     "end": 219.204
+    },
+    {
+     "text": "it",
+     "start": 219.204,
+     "end": 219.334
+    },
+    {
+     "text": "is",
+     "start": 219.334,
+     "end": 219.484
     },
     {
      "text": "often",
-     "start": 163.74,
-     "end": 164.06
+     "start": 219.484,
+     "end": 219.804
     },
     {
      "text": "late.",
-     "start": 164.06,
-     "end": 164.53
+     "start": 219.804,
+     "end": 220.294
     }
    ]
   },
   {
    "id": "cyclone",
-   "speak": "And a warming Arabian Sea is fuelling more frequent and more intense cyclones.",
-   "text": "And a warming Arabian Sea is fuelling more frequent and more intense cyclones.",
-   "start": 165.804,
-   "end": 170.753,
+   "speak": "Why are there more storms over the Arabian Sea? Because it is warming. An I I T M Pune study found that cyclones there rose by about fifty-two percent in two thousand one to twenty nineteen, compared with the previous two decades.",
+   "text": "Why are there more storms over the Arabian Sea? Because it is warming. An IITM Pune study found that cyclones there rose by about 52% in 2001 to 2019, compared with the previous two decades.",
+   "start": 221.569,
+   "end": 236.716,
    "words": [
     {
-     "text": "And",
-     "start": 165.854,
-     "end": 165.994
+     "text": "Why",
+     "start": 221.589,
+     "end": 221.819
     },
     {
-     "text": "a",
-     "start": 165.994,
-     "end": 166.044
+     "text": "are",
+     "start": 221.819,
+     "end": 221.889
     },
     {
-     "text": "warming",
-     "start": 166.044,
-     "end": 166.484
+     "text": "there",
+     "start": 221.889,
+     "end": 222.069
+    },
+    {
+     "text": "more",
+     "start": 222.069,
+     "end": 222.269
+    },
+    {
+     "text": "storms",
+     "start": 222.269,
+     "end": 222.739
+    },
+    {
+     "text": "over",
+     "start": 222.739,
+     "end": 222.879
+    },
+    {
+     "text": "the",
+     "start": 222.879,
+     "end": 223.039
     },
     {
      "text": "Arabian",
-     "start": 166.484,
-     "end": 166.994
+     "start": 223.039,
+     "end": 223.549
     },
     {
-     "text": "Sea",
-     "start": 166.994,
-     "end": 167.434
+     "text": "Sea?",
+     "start": 223.549,
+     "end": 224.009
+    },
+    {
+     "text": "Because",
+     "start": 224.559,
+     "end": 224.839
+    },
+    {
+     "text": "it",
+     "start": 224.839,
+     "end": 224.979
     },
     {
      "text": "is",
-     "start": 167.434,
-     "end": 167.584
+     "start": 224.979,
+     "end": 225.119
     },
     {
-     "text": "fuelling",
-     "start": 167.584,
-     "end": 167.954
+     "text": "warming.",
+     "start": 225.119,
+     "end": 225.689
     },
     {
-     "text": "more",
-     "start": 167.954,
-     "end": 168.134
+     "text": "An",
+     "start": 226.549,
+     "end": 226.689
     },
     {
-     "text": "frequent",
-     "start": 168.134,
-     "end": 168.774
+     "text": "IITM",
+     "start": 226.689,
+     "end": 227.769
+    },
+    {
+     "text": "Pune",
+     "start": 227.769,
+     "end": 228.049
+    },
+    {
+     "text": "study",
+     "start": 228.049,
+     "end": 228.499
+    },
+    {
+     "text": "found",
+     "start": 228.499,
+     "end": 228.859
+    },
+    {
+     "text": "that",
+     "start": 228.859,
+     "end": 228.989
+    },
+    {
+     "text": "cyclones",
+     "start": 228.989,
+     "end": 229.649
+    },
+    {
+     "text": "there",
+     "start": 229.649,
+     "end": 229.849
+    },
+    {
+     "text": "rose",
+     "start": 229.849,
+     "end": 230.279
+    },
+    {
+     "text": "by",
+     "start": 230.279,
+     "end": 230.529
+    },
+    {
+     "text": "about",
+     "start": 230.529,
+     "end": 230.849
+    },
+    {
+     "text": "52%",
+     "start": 230.849,
+     "end": 231.939
+    },
+    {
+     "text": "in",
+     "start": 231.939,
+     "end": 232.109
+    },
+    {
+     "text": "2001",
+     "start": 232.109,
+     "end": 233.039
+    },
+    {
+     "text": "to",
+     "start": 233.039,
+     "end": 233.149
+    },
+    {
+     "text": "2019,",
+     "start": 233.149,
+     "end": 234.099
+    },
+    {
+     "text": "compared",
+     "start": 234.499,
+     "end": 234.979
+    },
+    {
+     "text": "with",
+     "start": 234.979,
+     "end": 235.109
+    },
+    {
+     "text": "the",
+     "start": 235.109,
+     "end": 235.179
+    },
+    {
+     "text": "previous",
+     "start": 235.179,
+     "end": 235.699
+    },
+    {
+     "text": "two",
+     "start": 235.699,
+     "end": 235.909
+    },
+    {
+     "text": "decades.",
+     "start": 235.909,
+     "end": 236.669
+    }
+   ]
+  },
+  {
+   "id": "track",
+   "speak": "How does India track the monsoon? From space, I M D uses ISRO's weather satellites, insat three D, three D R, and the newest, three D S. On the ground, it uses Doppler weather radars and thousands of rain gauges. I M D issues its monsoon forecast in April, and updates it at the end of May.",
+   "text": "How does India track the monsoon? From space, IMD uses ISRO's weather satellites, INSAT-3D, 3DR, and the newest, 3DS. On the ground, it uses Doppler weather radars and thousands of rain gauges. IMD issues its monsoon forecast in April, and updates it at the end of May.",
+   "start": 237.916,
+   "end": 257.863,
+   "words": [
+    {
+     "text": "How",
+     "start": 237.926,
+     "end": 238.126
+    },
+    {
+     "text": "does",
+     "start": 238.126,
+     "end": 238.346
+    },
+    {
+     "text": "India",
+     "start": 238.346,
+     "end": 238.676
+    },
+    {
+     "text": "track",
+     "start": 238.676,
+     "end": 238.976
+    },
+    {
+     "text": "the",
+     "start": 238.976,
+     "end": 239.046
+    },
+    {
+     "text": "monsoon?",
+     "start": 239.046,
+     "end": 239.786
+    },
+    {
+     "text": "From",
+     "start": 240.306,
+     "end": 240.456
+    },
+    {
+     "text": "space,",
+     "start": 240.456,
+     "end": 240.966
+    },
+    {
+     "text": "IMD",
+     "start": 240.966,
+     "end": 241.536
+    },
+    {
+     "text": "uses",
+     "start": 241.536,
+     "end": 241.896
+    },
+    {
+     "text": "ISRO's",
+     "start": 241.896,
+     "end": 242.316
+    },
+    {
+     "text": "weather",
+     "start": 242.316,
+     "end": 242.566
+    },
+    {
+     "text": "satellites,",
+     "start": 242.566,
+     "end": 243.406
+    },
+    {
+     "text": "INSAT-3D,",
+     "start": 243.406,
+     "end": 244.376
+    },
+    {
+     "text": "3DR,",
+     "start": 244.376,
+     "end": 245.346
     },
     {
      "text": "and",
-     "start": 169.024,
-     "end": 169.184
+     "start": 245.346,
+     "end": 245.486
     },
     {
-     "text": "more",
-     "start": 169.184,
-     "end": 169.404
+     "text": "the",
+     "start": 245.486,
+     "end": 245.546
     },
     {
-     "text": "intense",
-     "start": 169.404,
-     "end": 169.934
+     "text": "newest,",
+     "start": 245.546,
+     "end": 246.136
     },
     {
-     "text": "cyclones.",
-     "start": 169.934,
-     "end": 170.684
+     "text": "3DS.",
+     "start": 246.136,
+     "end": 247.006
+    },
+    {
+     "text": "On",
+     "start": 247.856,
+     "end": 247.986
+    },
+    {
+     "text": "the",
+     "start": 247.986,
+     "end": 248.056
+    },
+    {
+     "text": "ground,",
+     "start": 248.056,
+     "end": 248.696
+    },
+    {
+     "text": "it",
+     "start": 248.696,
+     "end": 248.786
+    },
+    {
+     "text": "uses",
+     "start": 248.786,
+     "end": 249.116
+    },
+    {
+     "text": "Doppler",
+     "start": 249.116,
+     "end": 249.506
+    },
+    {
+     "text": "weather",
+     "start": 249.506,
+     "end": 249.766
+    },
+    {
+     "text": "radars",
+     "start": 249.766,
+     "end": 250.396
+    },
+    {
+     "text": "and",
+     "start": 250.396,
+     "end": 250.526
+    },
+    {
+     "text": "thousands",
+     "start": 250.526,
+     "end": 251.036
+    },
+    {
+     "text": "of",
+     "start": 251.036,
+     "end": 251.136
+    },
+    {
+     "text": "rain",
+     "start": 251.136,
+     "end": 251.416
+    },
+    {
+     "text": "gauges.",
+     "start": 251.416,
+     "end": 252.056
+    },
+    {
+     "text": "IMD",
+     "start": 252.856,
+     "end": 253.486
+    },
+    {
+     "text": "issues",
+     "start": 253.486,
+     "end": 253.886
+    },
+    {
+     "text": "its",
+     "start": 253.886,
+     "end": 254.076
+    },
+    {
+     "text": "monsoon",
+     "start": 254.076,
+     "end": 254.646
+    },
+    {
+     "text": "forecast",
+     "start": 254.646,
+     "end": 255.256
+    },
+    {
+     "text": "in",
+     "start": 255.256,
+     "end": 255.396
+    },
+    {
+     "text": "April,",
+     "start": 255.396,
+     "end": 255.906
+    },
+    {
+     "text": "and",
+     "start": 256.236,
+     "end": 256.366
+    },
+    {
+     "text": "updates",
+     "start": 256.366,
+     "end": 256.836
+    },
+    {
+     "text": "it",
+     "start": 256.836,
+     "end": 256.966
+    },
+    {
+     "text": "at",
+     "start": 256.966,
+     "end": 257.036
+    },
+    {
+     "text": "the",
+     "start": 257.036,
+     "end": 257.126
+    },
+    {
+     "text": "end",
+     "start": 257.126,
+     "end": 257.326
+    },
+    {
+     "text": "of",
+     "start": 257.326,
+     "end": 257.406
+    },
+    {
+     "text": "May.",
+     "start": 257.406,
+     "end": 257.816
     }
    ]
   },
   {
    "id": "impact",
-   "speak": "For farmers, cities and reservoirs, this means more floods, and more droughts, sometimes in the same season.",
-   "text": "For farmers, cities and reservoirs, this means more floods, and more droughts, sometimes in the same season.",
-   "start": 171.953,
-   "end": 178.588,
+   "speak": "Why does this matter? For farmers, cities and reservoirs, it means more floods, and more droughts, sometimes in the same season.",
+   "text": "Why does this matter? For farmers, cities and reservoirs, it means more floods, and more droughts, sometimes in the same season.",
+   "start": 259.063,
+   "end": 266.572,
    "words": [
     {
-     "text": "For",
-     "start": 171.993,
-     "end": 172.093
+     "text": "Why",
+     "start": 259.083,
+     "end": 259.293
     },
     {
-     "text": "farmers,",
-     "start": 172.093,
-     "end": 172.623
-    },
-    {
-     "text": "cities",
-     "start": 172.623,
-     "end": 173.093
-    },
-    {
-     "text": "and",
-     "start": 173.093,
-     "end": 173.213
-    },
-    {
-     "text": "reservoirs,",
-     "start": 173.213,
-     "end": 173.933
+     "text": "does",
+     "start": 259.293,
+     "end": 259.483
     },
     {
      "text": "this",
-     "start": 174.213,
-     "end": 174.393
+     "start": 259.483,
+     "end": 259.673
     },
     {
-     "text": "means",
-     "start": 174.393,
-     "end": 174.693
+     "text": "matter?",
+     "start": 259.673,
+     "end": 260.163
     },
     {
-     "text": "more",
-     "start": 174.693,
-     "end": 174.883
+     "text": "For",
+     "start": 260.733,
+     "end": 260.833
     },
     {
-     "text": "floods,",
-     "start": 174.883,
-     "end": 175.513
+     "text": "farmers,",
+     "start": 260.833,
+     "end": 261.383
+    },
+    {
+     "text": "cities",
+     "start": 261.383,
+     "end": 261.853
     },
     {
      "text": "and",
-     "start": 175.513,
-     "end": 175.643
+     "start": 261.853,
+     "end": 261.973
+    },
+    {
+     "text": "reservoirs,",
+     "start": 261.973,
+     "end": 262.673
+    },
+    {
+     "text": "it",
+     "start": 262.673,
+     "end": 262.833
+    },
+    {
+     "text": "means",
+     "start": 262.833,
+     "end": 263.153
     },
     {
      "text": "more",
-     "start": 175.643,
-     "end": 175.853
+     "start": 263.153,
+     "end": 263.353
+    },
+    {
+     "text": "floods,",
+     "start": 263.353,
+     "end": 263.943
+    },
+    {
+     "text": "and",
+     "start": 263.943,
+     "end": 264.073
+    },
+    {
+     "text": "more",
+     "start": 264.073,
+     "end": 264.263
     },
     {
      "text": "droughts,",
-     "start": 175.853,
-     "end": 176.433
+     "start": 264.263,
+     "end": 264.863
     },
     {
      "text": "sometimes",
-     "start": 176.803,
-     "end": 177.463
+     "start": 264.863,
+     "end": 265.473
     },
     {
      "text": "in",
-     "start": 177.463,
-     "end": 177.563
+     "start": 265.473,
+     "end": 265.563
     },
     {
      "text": "the",
-     "start": 177.563,
-     "end": 177.623
+     "start": 265.563,
+     "end": 265.623
     },
     {
      "text": "same",
-     "start": 177.623,
-     "end": 177.943
+     "start": 265.623,
+     "end": 265.933
     },
     {
      "text": "season.",
-     "start": 177.943,
-     "end": 178.533
+     "start": 265.933,
+     "end": 266.503
     }
    ]
   },
   {
    "id": "outro",
-   "speak": "Remember: the monsoon is a seasonal reversal of winds, driven by heat, by Earth's spin, and by the oceans. And a warming climate is making it more extreme.",
-   "text": "Remember: the monsoon is a seasonal reversal of winds, driven by heat, by Earth's spin, and by the oceans. And a warming climate is making it more extreme.",
-   "start": 180.188,
-   "end": 190.428,
+   "speak": "So: what, why, and how. What: the monsoon is a seasonal reversal of winds. Why: it is driven by heat, by Earth's spin, and by the oceans. How it is changing: a warming climate is making it more extreme.",
+   "text": "So: what, why, and how. What: the monsoon is a seasonal reversal of winds. Why: it is driven by heat, by Earth's spin, and by the oceans. How it is changing: a warming climate is making it more extreme.",
+   "start": 268.172,
+   "end": 281.911,
    "words": [
     {
-     "text": "Remember:",
-     "start": 180.198,
-     "end": 180.908
+     "text": "So:",
+     "start": 268.182,
+     "end": 268.542
     },
     {
-     "text": "the",
-     "start": 180.908,
-     "end": 180.998
+     "text": "what,",
+     "start": 268.542,
+     "end": 268.792
     },
     {
-     "text": "monsoon",
-     "start": 180.998,
-     "end": 181.558
-    },
-    {
-     "text": "is",
-     "start": 181.558,
-     "end": 181.658
-    },
-    {
-     "text": "a",
-     "start": 181.658,
-     "end": 181.698
-    },
-    {
-     "text": "seasonal",
-     "start": 181.698,
-     "end": 182.288
-    },
-    {
-     "text": "reversal",
-     "start": 182.288,
-     "end": 182.808
-    },
-    {
-     "text": "of",
-     "start": 182.808,
-     "end": 182.948
-    },
-    {
-     "text": "winds,",
-     "start": 182.948,
-     "end": 183.518
-    },
-    {
-     "text": "driven",
-     "start": 183.898,
-     "end": 184.238
-    },
-    {
-     "text": "by",
-     "start": 184.238,
-     "end": 184.448
-    },
-    {
-     "text": "heat,",
-     "start": 184.448,
-     "end": 185.028
-    },
-    {
-     "text": "by",
-     "start": 185.028,
-     "end": 185.208
-    },
-    {
-     "text": "Earth's",
-     "start": 185.208,
-     "end": 185.638
-    },
-    {
-     "text": "spin,",
-     "start": 185.638,
-     "end": 186.058
+     "text": "why,",
+     "start": 268.792,
+     "end": 269.082
     },
     {
      "text": "and",
-     "start": 186.058,
-     "end": 186.198
+     "start": 269.082,
+     "end": 269.202
     },
     {
-     "text": "by",
-     "start": 186.198,
-     "end": 186.348
+     "text": "how.",
+     "start": 269.202,
+     "end": 269.682
+    },
+    {
+     "text": "What:",
+     "start": 270.132,
+     "end": 270.422
     },
     {
      "text": "the",
-     "start": 186.348,
-     "end": 186.528
+     "start": 270.422,
+     "end": 270.532
     },
     {
-     "text": "oceans.",
-     "start": 186.528,
-     "end": 187.128
-    },
-    {
-     "text": "And",
-     "start": 187.858,
-     "end": 187.988
-    },
-    {
-     "text": "a",
-     "start": 187.988,
-     "end": 188.028
-    },
-    {
-     "text": "warming",
-     "start": 188.028,
-     "end": 188.398
-    },
-    {
-     "text": "climate",
-     "start": 188.398,
-     "end": 188.868
+     "text": "monsoon",
+     "start": 270.532,
+     "end": 271.102
     },
     {
      "text": "is",
-     "start": 188.868,
-     "end": 188.998
+     "start": 271.102,
+     "end": 271.242
     },
     {
-     "text": "making",
-     "start": 188.998,
-     "end": 189.378
+     "text": "a",
+     "start": 271.242,
+     "end": 271.272
+    },
+    {
+     "text": "seasonal",
+     "start": 271.272,
+     "end": 271.842
+    },
+    {
+     "text": "reversal",
+     "start": 271.842,
+     "end": 272.362
+    },
+    {
+     "text": "of",
+     "start": 272.362,
+     "end": 272.482
+    },
+    {
+     "text": "winds.",
+     "start": 272.482,
+     "end": 272.992
+    },
+    {
+     "text": "Why:",
+     "start": 273.592,
+     "end": 274.012
     },
     {
      "text": "it",
-     "start": 189.378,
-     "end": 189.488
+     "start": 274.262,
+     "end": 274.402
+    },
+    {
+     "text": "is",
+     "start": 274.402,
+     "end": 274.532
+    },
+    {
+     "text": "driven",
+     "start": 274.532,
+     "end": 274.902
+    },
+    {
+     "text": "by",
+     "start": 274.902,
+     "end": 275.102
+    },
+    {
+     "text": "heat,",
+     "start": 275.102,
+     "end": 275.462
+    },
+    {
+     "text": "by",
+     "start": 275.462,
+     "end": 275.652
+    },
+    {
+     "text": "Earth's",
+     "start": 275.652,
+     "end": 276.042
+    },
+    {
+     "text": "spin,",
+     "start": 276.042,
+     "end": 276.452
+    },
+    {
+     "text": "and",
+     "start": 276.452,
+     "end": 276.582
+    },
+    {
+     "text": "by",
+     "start": 276.582,
+     "end": 276.732
+    },
+    {
+     "text": "the",
+     "start": 276.732,
+     "end": 276.902
+    },
+    {
+     "text": "oceans.",
+     "start": 276.902,
+     "end": 277.532
+    },
+    {
+     "text": "How",
+     "start": 278.212,
+     "end": 278.392
+    },
+    {
+     "text": "it",
+     "start": 278.392,
+     "end": 278.532
+    },
+    {
+     "text": "is",
+     "start": 278.532,
+     "end": 278.662
+    },
+    {
+     "text": "changing:",
+     "start": 278.662,
+     "end": 279.322
+    },
+    {
+     "text": "a",
+     "start": 279.542,
+     "end": 279.612
+    },
+    {
+     "text": "warming",
+     "start": 279.612,
+     "end": 280.002
+    },
+    {
+     "text": "climate",
+     "start": 280.002,
+     "end": 280.432
+    },
+    {
+     "text": "is",
+     "start": 280.432,
+     "end": 280.582
+    },
+    {
+     "text": "making",
+     "start": 280.582,
+     "end": 280.912
+    },
+    {
+     "text": "it",
+     "start": 280.912,
+     "end": 281.022
     },
     {
      "text": "more",
-     "start": 189.488,
-     "end": 189.708
+     "start": 281.022,
+     "end": 281.242
     },
     {
      "text": "extreme.",
-     "start": 189.708,
-     "end": 190.358
+     "start": 281.242,
+     "end": 281.842
     }
    ]
   }

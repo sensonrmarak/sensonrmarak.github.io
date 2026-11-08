@@ -1,3 +1,4 @@
+import { TAGCOL } from "./qa";
 import React from "react";
 import { Arrow, C, Card, CARD, Cloud, FONT, FONT_SC, Host, Label, cue, fmtDate, interp, lerp, segOf, sm } from "./kit";
 const mixHex = (a: string, b: string, k: number) => "#" + [1, 3, 5].map((i) => Math.round(parseInt(a.slice(i, i + 2), 16) * (1 - k) + parseInt(b.slice(i, i + 2), 16) * k).toString(16).padStart(2, "0")).join("");
@@ -33,9 +34,10 @@ export const Intro = ({ T }: SP) => {
             {[[70, 18], [77, 24], [86, 23], [80, 13]].map(([lo, la], i) => <Cloud key={i} x={X(lo + Math.sin(T * 0.4 + i) * 1.2)} y={Y(la)} s={46} u={u} T={T + i} rain={0.9} />)}
           </>)}
         </MapView>
-        <Line T={T} at={cue("intro", "two")} y={PANEL.top + 60} size={52}>1 · Two phases</Line>
-        <Line T={T} at={cue("intro", "drives")} y={PANEL.top + 170} size={52}>2 · Core drivers</Line>
-        <Line T={T} at={cue("intro", "changing")} y={PANEL.top + 280} size={52}>3 · Recent shifts</Line>
+        <Line T={T} at={cue("intro", "what")} y={PANEL.top + 60} size={52} color={TAGCOL.WHAT}>WHAT is the monsoon?</Line>
+        <Line T={T} at={cue("intro", "why")} y={PANEL.top + 170} size={52} color={TAGCOL.WHY}>WHY does it happen?</Line>
+        <Line T={T} at={cue("intro", "changing")} y={PANEL.top + 280} size={52} color={TAGCOL.HOW}>HOW is it changing?</Line>
+        <Line T={T} at={cue("intro", "facts")} y={PANEL.top + 420} size={32} color={C.soft}>Sources: IMD · ISRO · IITM Pune (MoES)</Line>
       </Card>
     </>
   );
@@ -202,7 +204,7 @@ export const NorthEast = ({ T }: SP) => {
   );
 };
 export const TamilNadu = ({ T }: SP) => {
-  const s = segOf("tn"), c = cue("tn", "crossing"), h = cue("tn", "half");
+  const s = segOf("tn"), c = cue("tn", "crossing"), h = cue("tn", "48");
   return (
     <>
       <Host t={T - s.start} T={T} mood={T > h ? "umbrella" : "idle"} />
@@ -218,7 +220,7 @@ export const TamilNadu = ({ T }: SP) => {
         </MapView>
         <Line T={T} at={c} y={PANEL.top + 20} size={40}>Picks up moisture over the Bay of Bengal</Line>
         <Line T={T} at={h - 0.6} y={PANEL.top + 170} size={36} color={C.soft} sc>Tamil Nadu's yearly rain from Oct to Dec</Line>
-        <Big T={T} at={h} y={PANEL.top + 230}>≈ 50%</Big>
+        <Big T={T} at={h} y={PANEL.top + 230}>≈ 48%</Big>
       </Card>
     </>
   );
@@ -226,7 +228,7 @@ export const TamilNadu = ({ T }: SP) => {
 
 /* =========================================================== 2a differential heating (cross-section) */
 export const Heating = ({ T }: SP) => {
-  const s = segOf("heat"), l = cue("heat", "land"), lo = cue("heat", "low"), hi = cue("heat", "high"), ru = cue("heat", "rushes");
+  const s = segOf("heat"), l = cue("heat", "land", 1), lo = cue("heat", "low"), hi = cue("heat", "high"), ru = cue("heat", "rushes");
   const landT = sm(l, l + 2.2, T), seaT = sm(l, l + 2.2, T) * 0.35;
   const flow = (T * 0.6) % 1;
   return (
@@ -270,7 +272,7 @@ export const Heating = ({ T }: SP) => {
 const WIDE: View = { lon0: 52, lon1: 102, lat0: -20, lat1: 32 };
 const WIDEBOX = { left: 34, top: 92, w: 900, h: 700 };
 export const Coriolis = ({ T }: SP) => {
-  const s = segOf("coriolis"), tr = cue("coriolis", "southeast"), cr = cue("coriolis", "cross"), df = cue("coriolis", "deflected"), sw = cue("coriolis", "southwest");
+  const s = segOf("coriolis"), tr = cue("coriolis", "southeast"), cr = cue("coriolis", "cross"), df = cue("coriolis", "deflected"), sw = cue("coriolis", "southwest", 1);
   return (
     <>
       <Host t={T - s.start} T={T} mood="point" />
@@ -300,7 +302,7 @@ const ITCZ_VIEW: View = { lon0: 55, lon1: 100, lat0: -14, lat1: 36 };
 const JAN = [[55, -6], [65, -7], [75, -8], [85, -9], [95, -8], [100, -8]];
 const JUL = [[55, 19], [62, 22], [70, 26.5], [76, 27.5], [82, 25], [88, 22], [95, 21], [100, 20.5]];
 export const Itcz = ({ T }: SP) => {
-  const s = segOf("itcz"), a = cue("itcz", "july") - 0.3, b = cue("itcz", "north") + 1.2, tr = cue("itcz", "trough");
+  const s = segOf("itcz"), a = cue("itcz", "july") - 0.3, b = cue("itcz", "north") + 1.2, tr = cue("itcz", "trough", 1);
   const k = sm(a, b, T), line = JAN.map((p, i) => [lerp(p[0], JUL[Math.min(i, JUL.length - 1)][0], 0), 0]).length ? null : null;
   const pts = JUL.map((q, i) => { const p = JAN[Math.min(i, JAN.length - 1)]; return [q[0], lerp(p[1] + (i >= JAN.length ? 0 : 0), q[1], k)]; });
   const month = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"][Math.min(6, Math.floor(k * 6.999))];
@@ -331,7 +333,7 @@ export const Itcz = ({ T }: SP) => {
 /* =========================================================== 2d jet streams + Tibet */
 const JET_VIEW: View = { lon0: 55, lon1: 105, lat0: 4, lat1: 45 };
 export const Jets = ({ T }: SP) => {
-  const s = segOf("jet"), he = cue("jet", "heated"), pu = cue("jet", "push"), ea = cue("jet", "easterly"), bu = cue("jet", "burst");
+  const s = segOf("jet"), he = cue("jet", "heated"), pu = cue("jet", "push"), ea = cue("jet", "easterly"), bu = cue("jet", "burst", 1);
   const k = sm(pu, pu + 2.2, T);
   const west = [[55, lerp(29, 40, k)], [68, lerp(28.5, 41.5, k)], [82, lerp(27.8, 41.5, k)], [96, lerp(28.2, 40.5, k)], [104, lerp(29, 40, k)]];
   const tib = [[79, 35.5], [84, 36], [90, 36.2], [96, 34.8], [99, 32], [95, 30], [89, 29.4], [83, 30.2], [79.5, 32.3]];
@@ -442,7 +444,8 @@ export const Extremes = ({ T }: SP) => {
           <g opacity={sm(e, e + 0.4, T)}><text x={1330} y={455} fontFamily={FONT} fontSize={34} textAnchor="end" fill={C.rain}>extreme downpours</text></g>
           <text x={1330} y={760} fontFamily={FONT} fontSize={26} textAnchor="end" fill={C.soft}>Illustrative pattern of one monsoon month (each square = a day)</text>
         </svg>
-        <div style={{ position: "absolute", left: 70, top: 680, fontFamily: FONT, fontSize: 34, color: C.ink, opacity: sm(e, e + 0.4, T) }}>Strongest rise in extreme rain: central India</div>
+        <div style={{ position: "absolute", left: 70, top: 625, fontFamily: FONT, fontSize: 96, lineHeight: 1, color: C.red, opacity: sm(cue("extreme", "threefold"), cue("extreme", "threefold") + 0.4, T) }}>3×</div>
+        <div style={{ position: "absolute", left: 210, top: 650, width: 1100, fontFamily: FONT, fontSize: 34, color: C.ink, opacity: sm(cue("extreme", "threefold"), cue("extreme", "threefold") + 0.4, T) }}>widespread extreme rain events over central India, 1950 to 2015</div>
       </Card>
     </>
   );
@@ -499,8 +502,49 @@ export const Cyclones = ({ T }: SP) => {
           </>)}
         </MapView>
         <Line T={T} at={wm} x={960} y={PANEL.top + 20} w={400} size={36} color={C.hot}>Sea surface warming</Line>
-        <Line T={T} at={cy - 0.6} x={960} y={PANEL.top + 120} w={400} size={36}>more frequent cyclones</Line>
-        <Line T={T} at={cy} x={960} y={PANEL.top + 190} w={400} size={36} color={C.red}>and more intense ones</Line>
+        <Line T={T} at={cy} x={960} y={PANEL.top + 100} w={400} size={36}>more frequent cyclones</Line>
+        <Big T={T} at={cue("cyclone", "52")} x={960} y={PANEL.top + 220} size={120}>+52%</Big>
+        <Line T={T} at={cue("cyclone", "52") + 0.3} x={960} y={PANEL.top + 360} w={400} size={32} color={C.soft}>cyclones in 2001–2019 vs 1982–2000</Line>
+      </Card>
+    </>
+  );
+};
+
+/* =========================================================== 3f tracking: ISRO satellites + IMD radars */
+const RADARS: [string, number, number][] = [["Delhi", 77.2, 28.6], ["Mumbai", 72.9, 19.1], ["Kolkata", 88.4, 22.6], ["Chennai", 80.3, 13.1], ["Bhuj", 69.7, 23.3], ["Nagpur", 79.1, 21.1]];
+export const Track = ({ T }: SP) => {
+  const s = segOf("track"), sp = cue("track", "space"), dp = cue("track", "doppler"), ap = cue("track", "april");
+  const scan = sm(sp, sp + 1, T);
+  return (
+    <>
+      <Host t={T - s.start} T={T} mood="point" />
+      <Card title="Watching the monsoon: ISRO and IMD" t={T} appear={s.start - 0.3}>
+        <MapView {...MAPBOX} view={INDIA}>{(u) => (
+          <>
+            <SeaLabels u={u} o={0.7} />
+            {[[71, 17], [76, 21], [85, 22], [80, 25]].map(([lo, la], i) => <Cloud key={i} x={X(lo + Math.sin(T * 0.3 + i))} y={Y(la)} s={38} u={u} T={T + i} o={0.8} />)}
+            {RADARS.map(([n, lo, la], i) => { const [x, y] = P(lo, la), o = sm(dp + i * 0.15, dp + 0.4 + i * 0.15, T), r = ((T * 0.8 + i * 0.3) % 1); return (
+              <g key={n} opacity={o}>
+                <circle cx={x} cy={y} r={(20 + 70 * r) * u} fill="none" stroke={C.green} strokeWidth={4 * u} opacity={1 - r} />
+                <circle cx={x} cy={y} r={9 * u} fill={C.green} stroke={C.ink} strokeWidth={3 * u} />
+              </g>); })}
+          </>)}
+        </MapView>
+        <svg width={CARD.w} height={CARD.h} style={{ position: "absolute", inset: 0, overflow: "visible" }}>
+          <g opacity={sm(sp - 0.3, sp + 0.3, T)} transform={`translate(${640 + Math.sin(T * 0.6) * 6} 150) rotate(-12)`} filter="url(#wob)">
+            <rect x={-80} y={-18} width={55} height={36} fill={C.rainLight} stroke={C.ink} strokeWidth={4} />
+            <rect x={25} y={-18} width={55} height={36} fill={C.rainLight} stroke={C.ink} strokeWidth={4} />
+            <rect x={-24} y={-30} width={48} height={60} rx={6} fill="#e8c46a" stroke={C.ink} strokeWidth={4} />
+          </g>
+          <path d="M 620 190 L 380 470 L 600 470 Z" fill="#ffe08a" opacity={0.28 * scan} />
+        </svg>
+        <Line T={T} at={sp} y={PANEL.top} size={36} color={C.soft} sc>From space · ISRO weather satellites</Line>
+        <Big T={T} at={cue("track", "insat")} y={PANEL.top + 50} size={70} color={C.rain}>INSAT-3D · 3DR · 3DS</Big>
+        <Line T={T} at={cue("track", "newest")} y={PANEL.top + 150} size={30} color={C.soft}>INSAT-3DS launched by ISRO in February 2024</Line>
+        <Line T={T} at={dp} y={PANEL.top + 240} size={36} color={C.soft} sc>On the ground · IMD</Line>
+        <Line T={T} at={dp} y={PANEL.top + 290} size={40} color={C.green}>Doppler weather radars and thousands of rain gauges</Line>
+        <Line T={T} at={ap} y={PANEL.top + 430} size={36} color={C.soft} sc>Forecast</Line>
+        <Line T={T} at={ap} y={PANEL.top + 480} size={40}>Issued in April, updated at the end of May</Line>
       </Card>
     </>
   );
@@ -542,9 +586,9 @@ export const Outro = ({ T }: SP) => {
     <>
       <Host t={T - s.start} T={T} mood="wave" />
       <Card title="Remember" t={T} appear={s.start - 0.3}>
-        <Line T={T} at={cue("outro", "seasonal")} x={120} w={1200} y={200} size={64}>A seasonal reversal of winds</Line>
-        <Line T={T} at={cue("outro", "driven")} x={120} w={1200} y={330} size={54} color={C.soft}>driven by heat, by Earth's spin, and by the oceans</Line>
-        <Line T={T} at={cue("outro", "warming")} x={120} w={1200} y={500} size={64} color={C.red}>A warming climate makes it more extreme</Line>
+        <Line T={T} at={cue("outro", "seasonal")} x={120} w={1200} y={200} size={64}>WHAT · a seasonal reversal of winds</Line>
+        <Line T={T} at={cue("outro", "driven")} x={120} w={1200} y={330} size={54} color={TAGCOL.WHY}>WHY · heat, Earth's spin and the oceans</Line>
+        <Line T={T} at={cue("outro", "warming")} x={120} w={1200} y={500} size={64} color={TAGCOL.HOW}>HOW it changes · a warming climate makes it more extreme</Line>
       </Card>
     </>
   );

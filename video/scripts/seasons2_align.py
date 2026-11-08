@@ -3,14 +3,14 @@ caption text (numbers written as digits) with a token diff.  /tmp/claude-0/psx/b
 import json, os, re, subprocess, difflib
 from pocketsphinx import Decoder, get_model_path
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-P = os.path.join(ROOT, "src/seasons2/narration.json")
+P = os.path.join(ROOT, os.environ.get("NAR_JSON", "src/seasons2/narration.json"))
 tl = json.load(open(P)); SR = 16000
-raw = subprocess.run(["ffmpeg", "-v", "error", "-i", os.path.join(ROOT, "public/seasons2/narration.wav"), "-ac", "1", "-ar", "16000", "-f", "s16le", "-"], capture_output=True, check=True).stdout
+raw = subprocess.run(["ffmpeg", "-v", "error", "-i", os.path.join(ROOT, os.environ.get("NAR_WAV", "public/seasons2/narration.wav")), "-ac", "1", "-ar", "16000", "-f", "s16le", "-"], capture_output=True, check=True).stdout
 mp = get_model_path()
 dec = Decoder(hmm=os.path.join(mp, "en-us/en-us"), dict=os.path.join(mp, "en-us/cmudict-en-us.dict"), loglevel="FATAL", beam=1e-80, wbeam=1e-60, pbeam=1e-80)
 EXTRA = {"mirzapur": "M IH R Z AA P UH R", "chhattisgarh": "CH AH T IY S G AA R", "jharkhand": "JH AA R K AA N D", "mizoram": "M IH Z AO R AE M",
          "tripura": "T R IH P UH R AH", "khejri": "K EH JH R IY", "babool": "B AH B UW L", "deodar": "D IY OW D AA R", "kalahari": "K AA L AH HH AA R IY",
-         "atacama": "AE T AH K AA M AH", "nicobar": "N IH K OW B AA R", "andaman": "AE N D AH M AE N", "ghats": "G AA T S", "convectional": "K AH N V EH K SH AH N AH L", "meridians": "M ER IH D IY AH N Z", "hemispheres": "HH EH M IH S F IH R Z", "rajasthan": "R AA JH AH S T AA N", "madhya": "M AH D Y AH", "equinoxes": "IY K W AH N AA K S IH Z", "canopies": "K AE N AH P IY Z"}
+         "atacama": "AE T AH K AA M AH", "nicobar": "N IH K OW B AA R", "andaman": "AE N D AH M AE N", "ghats": "G AA T S", "convectional": "K AH N V EH K SH AH N AH L", "meridians": "M ER IH D IY AH N Z", "hemispheres": "HH EH M IH S F IH R Z", "rajasthan": "R AA JH AH S T AA N", "madhya": "M AH D Y AH", "equinoxes": "IY K W AH N AA K S IH Z", "canopies": "K AE N AH P IY Z", "csir": "S IY EH S AY AA R", "insat": "IH N S AE T", "iitm": "AY AY T IY EH M", "pune": "P UW N EY", "itcz": "AY T IY S IY Z EH D", "deccan": "D EH K AH N", "coriolis": "K AO R IY OW L IH S", "nino": "N IY N Y OW", "nina": "N IY N Y AH", "kerala": "K EH R AH L AH", "ganga": "G AH NG G AA", "tibetan": "T IH B EH T AH N", "coromandel": "K AO R AH M AE N D AH L", "isro": "IH S R OW", "isro's": "IH S R OW Z", "nadu": "N AA D UW"}
 norm = lambda tok: [p.strip("'.") for p in re.split(r"-", tok.lower().strip('".,!?:;')) if p.strip("'.")]
 for s in tl["segments"]:
     for t in s["speak"].split():

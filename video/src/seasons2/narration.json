@@ -1,3959 +1,4769 @@
 {
- "total": 343.6,
+ "total": 395.561,
  "voice": "bf_emma",
  "segments": [
   {
    "id": "intro",
-   "speak": "Why does the Earth have seasons? And why are some places always hot and wet, while others are deserts? Let's build the answer, step by step.",
-   "text": "Why does the Earth have seasons? And why are some places always hot and wet, while others are deserts? Let's build the answer, step by step.",
+   "speak": "This lesson answers three questions. What are the imaginary lines, the solstices and the equinoxes? Why do we have seasons, and why do climates differ? And how do they shape our weather and forests? Let's build the answers, step by step.",
+   "text": "This lesson answers three questions. What are the imaginary lines, the solstices and the equinoxes? Why do we have seasons, and why do climates differ? And how do they shape our weather and forests? Let's build the answers, step by step.",
    "start": 1.5,
-   "end": 9.863,
+   "end": 16.177,
    "words": [
     {
-     "text": "Why",
+     "text": "This",
      "start": 1.51,
-     "end": 1.7
+     "end": 1.71
     },
     {
-     "text": "does",
-     "start": 1.7,
-     "end": 1.84
+     "text": "lesson",
+     "start": 1.71,
+     "end": 2.13
     },
     {
-     "text": "the",
-     "start": 1.84,
-     "end": 2.02
+     "text": "answers",
+     "start": 2.13,
+     "end": 2.57
     },
     {
-     "text": "Earth",
-     "start": 2.02,
-     "end": 2.23
+     "text": "three",
+     "start": 2.57,
+     "end": 2.81
     },
     {
-     "text": "have",
-     "start": 2.23,
-     "end": 2.4
+     "text": "questions.",
+     "start": 2.81,
+     "end": 3.51
     },
     {
-     "text": "seasons?",
-     "start": 2.4,
-     "end": 3.1
-    },
-    {
-     "text": "And",
-     "start": 3.54,
-     "end": 3.67
-    },
-    {
-     "text": "why",
-     "start": 3.67,
-     "end": 3.87
+     "text": "What",
+     "start": 4.06,
+     "end": 4.26
     },
     {
      "text": "are",
-     "start": 3.87,
-     "end": 3.9
+     "start": 4.26,
+     "end": 4.31
     },
     {
-     "text": "some",
-     "start": 3.9,
-     "end": 4.13
+     "text": "the",
+     "start": 4.31,
+     "end": 4.44
     },
     {
-     "text": "places",
-     "start": 4.13,
-     "end": 4.68
+     "text": "imaginary",
+     "start": 4.44,
+     "end": 5.07
     },
     {
-     "text": "always",
-     "start": 4.68,
-     "end": 5.04
+     "text": "lines,",
+     "start": 5.07,
+     "end": 5.66
     },
     {
-     "text": "hot",
-     "start": 5.04,
-     "end": 5.37
+     "text": "the",
+     "start": 5.66,
+     "end": 5.76
+    },
+    {
+     "text": "solstices",
+     "start": 5.76,
+     "end": 6.56
     },
     {
      "text": "and",
-     "start": 5.37,
-     "end": 5.48
-    },
-    {
-     "text": "wet,",
-     "start": 5.48,
-     "end": 5.83
-    },
-    {
-     "text": "while",
-     "start": 5.83,
-     "end": 6.04
-    },
-    {
-     "text": "others",
-     "start": 6.04,
-     "end": 6.36
-    },
-    {
-     "text": "are",
-     "start": 6.36,
-     "end": 6.42
-    },
-    {
-     "text": "deserts?",
-     "start": 6.42,
-     "end": 7.05
-    },
-    {
-     "text": "Let's",
-     "start": 7.59,
-     "end": 7.86
-    },
-    {
-     "text": "build",
-     "start": 7.86,
-     "end": 8.12
+     "start": 6.56,
+     "end": 6.69
     },
     {
      "text": "the",
-     "start": 8.12,
-     "end": 8.26
+     "start": 6.69,
+     "end": 6.8
     },
     {
-     "text": "answer,",
-     "start": 8.26,
-     "end": 8.8
+     "text": "equinoxes?",
+     "start": 6.8,
+     "end": 7.66
+    },
+    {
+     "text": "Why",
+     "start": 8.18,
+     "end": 8.34
+    },
+    {
+     "text": "do",
+     "start": 8.34,
+     "end": 8.46
+    },
+    {
+     "text": "we",
+     "start": 8.46,
+     "end": 8.55
+    },
+    {
+     "text": "have",
+     "start": 8.55,
+     "end": 8.74
+    },
+    {
+     "text": "seasons,",
+     "start": 8.74,
+     "end": 9.42
+    },
+    {
+     "text": "and",
+     "start": 9.42,
+     "end": 9.54
+    },
+    {
+     "text": "why",
+     "start": 9.54,
+     "end": 9.74
+    },
+    {
+     "text": "do",
+     "start": 9.74,
+     "end": 9.89
+    },
+    {
+     "text": "climates",
+     "start": 9.89,
+     "end": 10.37
+    },
+    {
+     "text": "differ?",
+     "start": 10.37,
+     "end": 10.85
+    },
+    {
+     "text": "And",
+     "start": 11.3,
+     "end": 11.42
+    },
+    {
+     "text": "how",
+     "start": 11.42,
+     "end": 11.61
+    },
+    {
+     "text": "do",
+     "start": 11.61,
+     "end": 11.73
+    },
+    {
+     "text": "they",
+     "start": 11.73,
+     "end": 11.87
+    },
+    {
+     "text": "shape",
+     "start": 11.87,
+     "end": 12.23
+    },
+    {
+     "text": "our",
+     "start": 12.23,
+     "end": 12.36
+    },
+    {
+     "text": "weather",
+     "start": 12.36,
+     "end": 12.64
+    },
+    {
+     "text": "and",
+     "start": 12.64,
+     "end": 12.74
+    },
+    {
+     "text": "forests?",
+     "start": 12.74,
+     "end": 13.44
+    },
+    {
+     "text": "Let's",
+     "start": 13.92,
+     "end": 14.19
+    },
+    {
+     "text": "build",
+     "start": 14.19,
+     "end": 14.43
+    },
+    {
+     "text": "the",
+     "start": 14.43,
+     "end": 14.56
+    },
+    {
+     "text": "answers,",
+     "start": 14.56,
+     "end": 15.08
     },
     {
      "text": "step",
-     "start": 8.8,
-     "end": 9.06
+     "start": 15.08,
+     "end": 15.45
     },
     {
      "text": "by",
-     "start": 9.06,
-     "end": 9.3
+     "start": 15.45,
+     "end": 15.66
     },
     {
      "text": "step.",
-     "start": 9.3,
-     "end": 9.78
+     "start": 15.66,
+     "end": 16.13
     }
    ]
   },
   {
    "id": "p1",
-   "speak": "Part one: the imaginary lines.",
-   "text": "Part one: the imaginary lines.",
-   "start": 11.983,
-   "end": 14.244,
+   "speak": "Part one. What are the imaginary lines?",
+   "text": "Part one. What are the imaginary lines?",
+   "start": 18.297,
+   "end": 20.857,
    "words": [
     {
      "text": "Part",
-     "start": 11.983,
-     "end": 12.313
+     "start": 18.337,
+     "end": 18.667
     },
     {
-     "text": "one:",
-     "start": 12.313,
-     "end": 12.663
+     "text": "one.",
+     "start": 18.667,
+     "end": 19.017
+    },
+    {
+     "text": "What",
+     "start": 19.017,
+     "end": 19.307
+    },
+    {
+     "text": "are",
+     "start": 19.307,
+     "end": 19.347
     },
     {
      "text": "the",
-     "start": 12.663,
-     "end": 12.823
+     "start": 19.347,
+     "end": 19.477
     },
     {
      "text": "imaginary",
-     "start": 12.823,
-     "end": 13.443
+     "start": 19.477,
+     "end": 20.107
     },
     {
-     "text": "lines.",
-     "start": 13.443,
-     "end": 14.183
+     "text": "lines?",
+     "start": 20.107,
+     "end": 20.797
     }
    ]
   },
   {
    "id": "lat",
-   "speak": "To locate any place on Earth, we use a grid of imaginary lines. Lines of latitude, or parallels, run east to west. They are measured from zero degrees at the Equator, to ninety degrees at each pole.",
-   "text": "To locate any place on Earth, we use a grid of imaginary lines. Lines of latitude, or parallels, run east to west. They are measured from zero degrees at the Equator, to ninety degrees at each pole.",
-   "start": 15.444,
-   "end": 28.457,
+   "speak": "What is latitude? To locate any place on Earth, we use a grid of imaginary lines. Lines of latitude, or parallels, run east to west. They are measured from zero degrees at the Equator, to ninety degrees at each pole.",
+   "text": "What is latitude? To locate any place on Earth, we use a grid of imaginary lines. Lines of latitude, or parallels, run east to west. They are measured from zero degrees at the Equator, to ninety degrees at each pole.",
+   "start": 22.057,
+   "end": 36.201,
    "words": [
     {
+     "text": "What",
+     "start": 22.067,
+     "end": 22.267
+    },
+    {
+     "text": "is",
+     "start": 22.267,
+     "end": 22.387
+    },
+    {
+     "text": "latitude?",
+     "start": 22.387,
+     "end": 23.107
+    },
+    {
      "text": "To",
-     "start": 15.454,
-     "end": 15.614
+     "start": 23.577,
+     "end": 23.707
     },
     {
      "text": "locate",
-     "start": 15.614,
-     "end": 16.104
+     "start": 23.707,
+     "end": 24.187
     },
     {
      "text": "any",
-     "start": 16.104,
-     "end": 16.254
+     "start": 24.187,
+     "end": 24.347
     },
     {
      "text": "place",
-     "start": 16.254,
-     "end": 16.604
+     "start": 24.347,
+     "end": 24.687
     },
     {
      "text": "on",
-     "start": 16.604,
-     "end": 16.744
+     "start": 24.687,
+     "end": 24.847
     },
     {
      "text": "Earth,",
-     "start": 16.744,
-     "end": 17.164
+     "start": 24.847,
+     "end": 25.327
     },
     {
      "text": "we",
-     "start": 17.424,
-     "end": 17.534
+     "start": 25.327,
+     "end": 25.447
     },
     {
      "text": "use",
-     "start": 17.534,
-     "end": 17.754
+     "start": 25.447,
+     "end": 25.667
     },
     {
      "text": "a",
-     "start": 17.754,
-     "end": 17.804
+     "start": 25.667,
+     "end": 25.717
     },
     {
      "text": "grid",
-     "start": 17.804,
-     "end": 18.104
+     "start": 25.717,
+     "end": 25.997
     },
     {
      "text": "of",
-     "start": 18.104,
-     "end": 18.194
+     "start": 25.997,
+     "end": 26.077
     },
     {
      "text": "imaginary",
-     "start": 18.194,
-     "end": 18.834
+     "start": 26.077,
+     "end": 26.697
     },
     {
      "text": "lines.",
-     "start": 18.834,
-     "end": 19.484
+     "start": 26.697,
+     "end": 27.347
     },
     {
      "text": "Lines",
-     "start": 20.274,
-     "end": 20.764
+     "start": 28.187,
+     "end": 28.677
     },
     {
      "text": "of",
-     "start": 20.764,
-     "end": 20.834
+     "start": 28.677,
+     "end": 28.747
     },
     {
      "text": "latitude,",
-     "start": 20.834,
-     "end": 21.514
+     "start": 28.747,
+     "end": 29.427
     },
     {
      "text": "or",
-     "start": 21.514,
-     "end": 21.664
+     "start": 29.427,
+     "end": 29.577
     },
     {
      "text": "parallels,",
-     "start": 21.664,
-     "end": 22.394
+     "start": 29.577,
+     "end": 30.317
     },
     {
      "text": "run",
-     "start": 22.394,
-     "end": 22.654
+     "start": 30.317,
+     "end": 30.567
     },
     {
      "text": "east",
-     "start": 22.654,
-     "end": 22.914
+     "start": 30.567,
+     "end": 30.827
     },
     {
      "text": "to",
-     "start": 22.914,
-     "end": 23.014
+     "start": 30.827,
+     "end": 30.927
     },
     {
      "text": "west.",
-     "start": 23.014,
-     "end": 23.574
+     "start": 30.927,
+     "end": 31.497
     },
     {
      "text": "They",
-     "start": 24.074,
-     "end": 24.244
+     "start": 31.917,
+     "end": 32.087
     },
     {
      "text": "are",
-     "start": 24.244,
-     "end": 24.274
+     "start": 32.087,
+     "end": 32.117
     },
     {
      "text": "measured",
-     "start": 24.274,
-     "end": 24.644
+     "start": 32.117,
+     "end": 32.507
     },
     {
      "text": "from",
-     "start": 24.644,
-     "end": 24.844
+     "start": 32.507,
+     "end": 32.707
     },
     {
      "text": "zero",
-     "start": 24.844,
-     "end": 25.284
+     "start": 32.707,
+     "end": 33.157
     },
     {
      "text": "degrees",
-     "start": 25.284,
-     "end": 25.744
+     "start": 33.157,
+     "end": 33.607
     },
     {
      "text": "at",
-     "start": 25.744,
-     "end": 25.824
+     "start": 33.607,
+     "end": 33.687
     },
     {
      "text": "the",
-     "start": 25.824,
-     "end": 25.924
+     "start": 33.687,
+     "end": 33.787
     },
     {
      "text": "Equator,",
-     "start": 25.924,
-     "end": 26.534
+     "start": 33.787,
+     "end": 34.497
     },
     {
      "text": "to",
-     "start": 26.714,
-     "end": 26.814
+     "start": 34.497,
+     "end": 34.607
     },
     {
      "text": "ninety",
-     "start": 26.814,
-     "end": 27.154
+     "start": 34.607,
+     "end": 34.947
     },
     {
      "text": "degrees",
-     "start": 27.154,
-     "end": 27.624
+     "start": 34.947,
+     "end": 35.377
     },
     {
      "text": "at",
-     "start": 27.624,
-     "end": 27.714
+     "start": 35.377,
+     "end": 35.477
     },
     {
      "text": "each",
-     "start": 27.714,
-     "end": 27.984
+     "start": 35.477,
+     "end": 35.747
     },
     {
      "text": "pole.",
-     "start": 27.984,
-     "end": 28.414
+     "start": 35.747,
+     "end": 36.157
     }
    ]
   },
   {
    "id": "lon",
-   "speak": "Lines of longitude, or meridians, run from pole to pole. They are measured from zero degrees at Greenwich, the Prime Meridian, to one hundred and eighty degrees east and west.",
-   "text": "Lines of longitude, or meridians, run from pole to pole. They are measured from zero degrees at Greenwich, the Prime Meridian, to one hundred and eighty degrees east and west.",
-   "start": 29.657,
-   "end": 40.857,
+   "speak": "What is longitude? Lines of longitude, or meridians, run from pole to pole. They are measured from zero degrees at Greenwich, the Prime Meridian, to one hundred and eighty degrees east and west.",
+   "text": "What is longitude? Lines of longitude, or meridians, run from pole to pole. They are measured from zero degrees at Greenwich, the Prime Meridian, to one hundred and eighty degrees east and west.",
+   "start": 37.401,
+   "end": 49.967,
    "words": [
     {
+     "text": "What",
+     "start": 37.421,
+     "end": 37.641
+    },
+    {
+     "text": "is",
+     "start": 37.641,
+     "end": 37.751
+    },
+    {
+     "text": "longitude?",
+     "start": 37.751,
+     "end": 38.591
+    },
+    {
      "text": "Lines",
-     "start": 29.717,
-     "end": 30.227
+     "start": 39.151,
+     "end": 39.641
     },
     {
      "text": "of",
-     "start": 30.227,
-     "end": 30.307
+     "start": 39.641,
+     "end": 39.721
     },
     {
      "text": "longitude,",
-     "start": 30.307,
-     "end": 31.097
+     "start": 39.721,
+     "end": 40.471
     },
     {
      "text": "or",
-     "start": 31.097,
-     "end": 31.237
+     "start": 40.471,
+     "end": 40.621
     },
     {
      "text": "meridians,",
-     "start": 31.237,
-     "end": 32.087
+     "start": 40.621,
+     "end": 41.451
     },
     {
      "text": "run",
-     "start": 32.087,
-     "end": 32.347
+     "start": 41.451,
+     "end": 41.711
     },
     {
      "text": "from",
-     "start": 32.347,
-     "end": 32.547
+     "start": 41.711,
+     "end": 41.911
     },
     {
      "text": "pole",
-     "start": 32.547,
-     "end": 32.887
+     "start": 41.911,
+     "end": 42.261
     },
     {
      "text": "to",
-     "start": 32.887,
-     "end": 32.997
+     "start": 42.261,
+     "end": 42.371
     },
     {
      "text": "pole.",
-     "start": 32.997,
-     "end": 33.497
+     "start": 42.371,
+     "end": 42.881
     },
     {
      "text": "They",
-     "start": 34.337,
-     "end": 34.537
+     "start": 43.681,
+     "end": 43.871
     },
     {
      "text": "are",
-     "start": 34.537,
-     "end": 34.567
+     "start": 43.871,
+     "end": 43.901
     },
     {
      "text": "measured",
-     "start": 34.567,
-     "end": 34.927
+     "start": 43.901,
+     "end": 44.291
     },
     {
      "text": "from",
-     "start": 34.927,
-     "end": 35.127
+     "start": 44.291,
+     "end": 44.491
     },
     {
      "text": "zero",
-     "start": 35.127,
-     "end": 35.547
+     "start": 44.491,
+     "end": 44.921
     },
     {
      "text": "degrees",
-     "start": 35.547,
-     "end": 36.007
+     "start": 44.921,
+     "end": 45.371
     },
     {
      "text": "at",
-     "start": 36.007,
-     "end": 36.107
+     "start": 45.371,
+     "end": 45.451
     },
     {
      "text": "Greenwich,",
-     "start": 36.107,
-     "end": 36.707
+     "start": 45.451,
+     "end": 46.051
     },
     {
      "text": "the",
-     "start": 37.057,
-     "end": 37.147
+     "start": 46.321,
+     "end": 46.411
     },
     {
      "text": "Prime",
-     "start": 37.147,
-     "end": 37.517
+     "start": 46.411,
+     "end": 46.761
     },
     {
      "text": "Meridian,",
-     "start": 37.517,
-     "end": 38.267
+     "start": 46.761,
+     "end": 47.431
     },
     {
      "text": "to",
-     "start": 38.267,
-     "end": 38.377
+     "start": 47.431,
+     "end": 47.551
     },
     {
      "text": "one",
-     "start": 38.377,
-     "end": 38.587
+     "start": 47.551,
+     "end": 47.751
     },
     {
      "text": "hundred",
-     "start": 38.587,
-     "end": 39.017
+     "start": 47.751,
+     "end": 48.141
     },
     {
      "text": "and",
-     "start": 39.017,
-     "end": 39.147
+     "start": 48.141,
+     "end": 48.241
     },
     {
      "text": "eighty",
-     "start": 39.147,
-     "end": 39.437
+     "start": 48.241,
+     "end": 48.541
     },
     {
      "text": "degrees",
-     "start": 39.437,
-     "end": 39.837
+     "start": 48.541,
+     "end": 48.951
     },
     {
      "text": "east",
-     "start": 39.837,
-     "end": 40.167
+     "start": 48.951,
+     "end": 49.261
     },
     {
      "text": "and",
-     "start": 40.167,
-     "end": 40.267
+     "start": 49.261,
+     "end": 49.361
     },
     {
      "text": "west.",
-     "start": 40.267,
-     "end": 40.797
+     "start": 49.361,
+     "end": 49.921
     }
    ]
   },
   {
    "id": "equator",
-   "speak": "The Equator is the longest parallel, about forty thousand and seventy-five kilometres around. It divides Earth into the Northern and Southern Hemispheres.",
-   "text": "The Equator is the longest parallel, about 40,075 km around. It divides Earth into the Northern and Southern Hemispheres.",
-   "start": 42.057,
-   "end": 52.041,
+   "speak": "What makes the Equator special? It is the longest parallel. NASA puts Earth's equatorial circumference at about forty thousand and seventy-five kilometres. It divides Earth into the Northern and Southern Hemispheres.",
+   "text": "What makes the Equator special? It is the longest parallel. NASA puts Earth's equatorial circumference at about 40,075 km. It divides Earth into the Northern and Southern Hemispheres.",
+   "start": 51.167,
+   "end": 64.991,
    "words": [
     {
-     "text": "The",
-     "start": 42.067,
-     "end": 42.217
+     "text": "What",
+     "start": 51.177,
+     "end": 51.367
+    },
+    {
+     "text": "makes",
+     "start": 51.367,
+     "end": 51.647
+    },
+    {
+     "text": "the",
+     "start": 51.647,
+     "end": 51.767
     },
     {
      "text": "Equator",
-     "start": 42.217,
-     "end": 42.757
+     "start": 51.767,
+     "end": 52.197
     },
     {
-     "text": "is",
-     "start": 42.757,
-     "end": 42.997
-    },
-    {
-     "text": "the",
-     "start": 42.997,
-     "end": 43.097
-    },
-    {
-     "text": "longest",
-     "start": 43.097,
-     "end": 43.647
-    },
-    {
-     "text": "parallel,",
-     "start": 43.647,
-     "end": 44.267
-    },
-    {
-     "text": "about",
-     "start": 44.707,
-     "end": 45.027
-    },
-    {
-     "text": "40,075",
-     "start": 45.027,
-     "end": 46.252
-    },
-    {
-     "text": "km",
-     "start": 46.252,
-     "end": 47.477
-    },
-    {
-     "text": "around.",
-     "start": 47.477,
-     "end": 48.057
+     "text": "special?",
+     "start": 52.197,
+     "end": 52.837
     },
     {
      "text": "It",
-     "start": 48.767,
-     "end": 48.887
+     "start": 53.327,
+     "end": 53.467
     },
     {
-     "text": "divides",
-     "start": 48.887,
-     "end": 49.367
-    },
-    {
-     "text": "Earth",
-     "start": 49.367,
-     "end": 49.747
-    },
-    {
-     "text": "into",
-     "start": 49.747,
-     "end": 49.927
+     "text": "is",
+     "start": 53.467,
+     "end": 53.597
     },
     {
      "text": "the",
-     "start": 49.927,
-     "end": 50.007
+     "start": 53.597,
+     "end": 53.707
+    },
+    {
+     "text": "longest",
+     "start": 53.707,
+     "end": 54.187
+    },
+    {
+     "text": "parallel.",
+     "start": 54.187,
+     "end": 54.827
+    },
+    {
+     "text": "NASA",
+     "start": 55.497,
+     "end": 55.887
+    },
+    {
+     "text": "puts",
+     "start": 55.887,
+     "end": 56.247
+    },
+    {
+     "text": "Earth's",
+     "start": 56.247,
+     "end": 56.597
+    },
+    {
+     "text": "equatorial",
+     "start": 56.597,
+     "end": 57.257
+    },
+    {
+     "text": "circumference",
+     "start": 57.257,
+     "end": 58.037
+    },
+    {
+     "text": "at",
+     "start": 58.037,
+     "end": 58.167
+    },
+    {
+     "text": "about",
+     "start": 58.167,
+     "end": 58.477
+    },
+    {
+     "text": "40,075",
+     "start": 58.477,
+     "end": 59.802
+    },
+    {
+     "text": "km.",
+     "start": 59.802,
+     "end": 61.127
+    },
+    {
+     "text": "It",
+     "start": 61.717,
+     "end": 61.817
+    },
+    {
+     "text": "divides",
+     "start": 61.817,
+     "end": 62.337
+    },
+    {
+     "text": "Earth",
+     "start": 62.337,
+     "end": 62.707
+    },
+    {
+     "text": "into",
+     "start": 62.707,
+     "end": 62.887
+    },
+    {
+     "text": "the",
+     "start": 62.887,
+     "end": 62.967
     },
     {
      "text": "Northern",
-     "start": 50.007,
-     "end": 50.607
+     "start": 62.967,
+     "end": 63.567
     },
     {
      "text": "and",
-     "start": 50.607,
-     "end": 50.747
+     "start": 63.567,
+     "end": 63.707
     },
     {
      "text": "Southern",
-     "start": 50.747,
-     "end": 51.107
+     "start": 63.707,
+     "end": 64.047
     },
     {
      "text": "Hemispheres.",
-     "start": 51.107,
-     "end": 51.987
+     "start": 64.047,
+     "end": 64.947
     }
    ]
   },
   {
    "id": "parallels",
-   "speak": "Four more parallels are special. The Tropic of Cancer, at twenty-three and a half degrees north. The Tropic of Capricorn, at twenty-three and a half degrees south. And the Arctic and Antarctic Circles, at sixty-six and a half degrees. Their positions are set by Earth's tilt.",
-   "text": "Four more parallels are special. The Tropic of Cancer, at 23.5\u00b0 N. The Tropic of Capricorn, at 23.5\u00b0 S. And the Arctic and Antarctic Circles, at 66.5\u00b0. Their positions are set by Earth's tilt.",
-   "start": 53.241,
-   "end": 70.5,
+   "speak": "Why are some parallels special? The Tropic of Cancer lies at twenty-three and a half degrees north, and the Tropic of Capricorn at twenty-three and a half degrees south. They are the limits where the Sun can be directly overhead. The Arctic and Antarctic Circles, at sixty-six and a half degrees, are the limits of the midnight Sun. All four are fixed by Earth's tilt.",
+   "text": "Why are some parallels special? The Tropic of Cancer lies at 23.5\u00b0 N, and the Tropic of Capricorn at 23.5\u00b0 S. They are the limits where the Sun can be directly overhead. The Arctic and Antarctic Circles, at 66.5\u00b0, are the limits of the midnight Sun. All four are fixed by Earth's tilt.",
+   "start": 66.191,
+   "end": 88.1,
    "words": [
     {
-     "text": "Four",
-     "start": 53.261,
-     "end": 53.561
+     "text": "Why",
+     "start": 66.211,
+     "end": 66.431
     },
     {
-     "text": "more",
-     "start": 53.561,
-     "end": 53.791
+     "text": "are",
+     "start": 66.431,
+     "end": 66.461
+    },
+    {
+     "text": "some",
+     "start": 66.461,
+     "end": 66.711
     },
     {
      "text": "parallels",
-     "start": 53.791,
-     "end": 54.381
+     "start": 66.711,
+     "end": 67.221
     },
     {
-     "text": "are",
-     "start": 54.381,
-     "end": 54.411
-    },
-    {
-     "text": "special.",
-     "start": 54.411,
-     "end": 55.081
+     "text": "special?",
+     "start": 67.221,
+     "end": 67.831
     },
     {
      "text": "The",
-     "start": 55.731,
-     "end": 55.811
+     "start": 68.461,
+     "end": 68.531
     },
     {
      "text": "Tropic",
-     "start": 55.811,
-     "end": 56.151
+     "start": 68.531,
+     "end": 68.881
     },
     {
      "text": "of",
-     "start": 56.151,
-     "end": 56.231
+     "start": 68.881,
+     "end": 68.961
     },
     {
-     "text": "Cancer,",
-     "start": 56.231,
-     "end": 56.721
+     "text": "Cancer",
+     "start": 68.961,
+     "end": 69.381
     },
     {
-     "text": "at",
-     "start": 56.721,
-     "end": 56.991
-    },
-    {
-     "text": "23.5\u00b0",
-     "start": 56.991,
-     "end": 57.956
-    },
-    {
-     "text": "N.",
-     "start": 57.956,
-     "end": 58.921
-    },
-    {
-     "text": "The",
-     "start": 59.361,
-     "end": 59.431
-    },
-    {
-     "text": "Tropic",
-     "start": 59.431,
-     "end": 59.771
-    },
-    {
-     "text": "of",
-     "start": 59.771,
-     "end": 59.861
-    },
-    {
-     "text": "Capricorn,",
-     "start": 59.861,
-     "end": 60.591
+     "text": "lies",
+     "start": 69.381,
+     "end": 69.721
     },
     {
      "text": "at",
-     "start": 60.591,
-     "end": 60.741
+     "start": 69.721,
+     "end": 69.821
     },
     {
      "text": "23.5\u00b0",
-     "start": 60.741,
-     "end": 61.751
+     "start": 69.821,
+     "end": 70.761
     },
     {
-     "text": "S.",
-     "start": 61.751,
-     "end": 62.761
-    },
-    {
-     "text": "And",
-     "start": 63.301,
-     "end": 63.431
-    },
-    {
-     "text": "the",
-     "start": 63.431,
-     "end": 63.561
-    },
-    {
-     "text": "Arctic",
-     "start": 63.561,
-     "end": 64.071
+     "text": "N,",
+     "start": 70.761,
+     "end": 71.701
     },
     {
      "text": "and",
-     "start": 64.071,
-     "end": 64.171
+     "start": 71.981,
+     "end": 72.111
     },
     {
-     "text": "Antarctic",
-     "start": 64.171,
-     "end": 64.791
+     "text": "the",
+     "start": 72.111,
+     "end": 72.181
     },
     {
-     "text": "Circles,",
-     "start": 64.791,
-     "end": 65.481
+     "text": "Tropic",
+     "start": 72.181,
+     "end": 72.531
+    },
+    {
+     "text": "of",
+     "start": 72.531,
+     "end": 72.621
+    },
+    {
+     "text": "Capricorn",
+     "start": 72.621,
+     "end": 73.231
     },
     {
      "text": "at",
-     "start": 65.481,
-     "end": 65.661
+     "start": 73.231,
+     "end": 73.341
     },
     {
-     "text": "66.5\u00b0.",
-     "start": 65.661,
-     "end": 67.531
+     "text": "23.5\u00b0",
+     "start": 73.341,
+     "end": 74.341
     },
     {
-     "text": "Their",
-     "start": 68.121,
-     "end": 68.281
+     "text": "S.",
+     "start": 74.341,
+     "end": 75.341
     },
     {
-     "text": "positions",
-     "start": 68.281,
-     "end": 68.951
+     "text": "They",
+     "start": 75.991,
+     "end": 76.201
     },
     {
      "text": "are",
-     "start": 68.951,
-     "end": 68.981
+     "start": 76.201,
+     "end": 76.251
     },
     {
-     "text": "set",
-     "start": 68.981,
-     "end": 69.291
+     "text": "the",
+     "start": 76.251,
+     "end": 76.351
+    },
+    {
+     "text": "limits",
+     "start": 76.351,
+     "end": 76.771
+    },
+    {
+     "text": "where",
+     "start": 76.771,
+     "end": 76.891
+    },
+    {
+     "text": "the",
+     "start": 76.891,
+     "end": 76.981
+    },
+    {
+     "text": "Sun",
+     "start": 76.981,
+     "end": 77.371
+    },
+    {
+     "text": "can",
+     "start": 77.371,
+     "end": 77.511
+    },
+    {
+     "text": "be",
+     "start": 77.511,
+     "end": 77.601
+    },
+    {
+     "text": "directly",
+     "start": 77.601,
+     "end": 78.251
+    },
+    {
+     "text": "overhead.",
+     "start": 78.251,
+     "end": 78.821
+    },
+    {
+     "text": "The",
+     "start": 79.371,
+     "end": 79.511
+    },
+    {
+     "text": "Arctic",
+     "start": 79.511,
+     "end": 79.961
+    },
+    {
+     "text": "and",
+     "start": 79.961,
+     "end": 80.051
+    },
+    {
+     "text": "Antarctic",
+     "start": 80.051,
+     "end": 80.641
+    },
+    {
+     "text": "Circles,",
+     "start": 80.641,
+     "end": 81.351
+    },
+    {
+     "text": "at",
+     "start": 81.461,
+     "end": 81.611
+    },
+    {
+     "text": "66.5\u00b0,",
+     "start": 81.611,
+     "end": 83.401
+    },
+    {
+     "text": "are",
+     "start": 83.511,
+     "end": 83.601
+    },
+    {
+     "text": "the",
+     "start": 83.601,
+     "end": 83.711
+    },
+    {
+     "text": "limits",
+     "start": 83.711,
+     "end": 84.141
+    },
+    {
+     "text": "of",
+     "start": 84.141,
+     "end": 84.221
+    },
+    {
+     "text": "the",
+     "start": 84.221,
+     "end": 84.301
+    },
+    {
+     "text": "midnight",
+     "start": 84.301,
+     "end": 84.761
+    },
+    {
+     "text": "Sun.",
+     "start": 84.761,
+     "end": 85.221
+    },
+    {
+     "text": "All",
+     "start": 85.901,
+     "end": 86.081
+    },
+    {
+     "text": "four",
+     "start": 86.081,
+     "end": 86.471
+    },
+    {
+     "text": "are",
+     "start": 86.471,
+     "end": 86.521
+    },
+    {
+     "text": "fixed",
+     "start": 86.521,
+     "end": 86.911
     },
     {
      "text": "by",
-     "start": 69.291,
-     "end": 69.521
+     "start": 86.911,
+     "end": 87.081
     },
     {
      "text": "Earth's",
-     "start": 69.521,
-     "end": 69.931
+     "start": 87.081,
+     "end": 87.541
     },
     {
      "text": "tilt.",
-     "start": 69.931,
-     "end": 70.441
+     "start": 87.541,
+     "end": 88.051
     }
    ]
   },
   {
    "id": "india",
-   "speak": "In India, the Tropic of Cancer passes through eight states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
-   "text": "In India, the Tropic of Cancer passes through eight states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
-   "start": 71.7,
-   "end": 81.961,
+   "speak": "Where does the Tropic of Cancer cross India? Survey of India maps show it passing through eight states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+   "text": "Where does the Tropic of Cancer cross India? Survey of India maps show it passing through eight states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+   "start": 89.3,
+   "end": 102.207,
    "words": [
     {
-     "text": "In",
-     "start": 71.7,
-     "end": 71.87
+     "text": "Where",
+     "start": 89.31,
+     "end": 89.49
     },
     {
-     "text": "India,",
-     "start": 71.87,
-     "end": 72.27
+     "text": "does",
+     "start": 89.49,
+     "end": 89.68
     },
     {
      "text": "the",
-     "start": 72.27,
-     "end": 72.39
+     "start": 89.68,
+     "end": 89.77
     },
     {
      "text": "Tropic",
-     "start": 72.39,
-     "end": 72.74
+     "start": 89.77,
+     "end": 90.16
     },
     {
      "text": "of",
-     "start": 72.74,
-     "end": 72.82
+     "start": 90.16,
+     "end": 90.24
     },
     {
      "text": "Cancer",
-     "start": 72.82,
-     "end": 73.3
+     "start": 90.24,
+     "end": 90.64
     },
     {
-     "text": "passes",
-     "start": 73.3,
-     "end": 73.82
+     "text": "cross",
+     "start": 90.64,
+     "end": 90.93
+    },
+    {
+     "text": "India?",
+     "start": 90.93,
+     "end": 91.41
+    },
+    {
+     "text": "Survey",
+     "start": 92.14,
+     "end": 92.55
+    },
+    {
+     "text": "of",
+     "start": 92.55,
+     "end": 92.61
+    },
+    {
+     "text": "India",
+     "start": 92.61,
+     "end": 92.92
+    },
+    {
+     "text": "maps",
+     "start": 92.92,
+     "end": 93.32
+    },
+    {
+     "text": "show",
+     "start": 93.32,
+     "end": 93.57
+    },
+    {
+     "text": "it",
+     "start": 93.57,
+     "end": 93.72
+    },
+    {
+     "text": "passing",
+     "start": 93.72,
+     "end": 94.15
     },
     {
      "text": "through",
-     "start": 73.82,
-     "end": 74.04
+     "start": 94.15,
+     "end": 94.34
     },
     {
      "text": "eight",
-     "start": 74.04,
-     "end": 74.3
+     "start": 94.34,
+     "end": 94.6
     },
     {
      "text": "states:",
-     "start": 74.3,
-     "end": 74.88
+     "start": 94.6,
+     "end": 95.2
     },
     {
      "text": "Gujarat,",
-     "start": 75.49,
-     "end": 76.2
+     "start": 95.72,
+     "end": 96.45
     },
     {
      "text": "Rajasthan,",
-     "start": 76.2,
-     "end": 76.99
+     "start": 96.45,
+     "end": 97.24
     },
     {
      "text": "Madhya",
-     "start": 76.99,
-     "end": 77.32
+     "start": 97.24,
+     "end": 97.59
     },
     {
      "text": "Pradesh,",
-     "start": 77.32,
-     "end": 77.96
+     "start": 97.59,
+     "end": 98.25
     },
     {
      "text": "Chhattisgarh,",
-     "start": 78.14,
-     "end": 78.86
+     "start": 98.36,
+     "end": 99.09
     },
     {
      "text": "Jharkhand,",
-     "start": 78.86,
-     "end": 79.58
+     "start": 99.09,
+     "end": 99.82
     },
     {
      "text": "West",
-     "start": 79.76,
-     "end": 80.02
+     "start": 99.98,
+     "end": 100.24
     },
     {
      "text": "Bengal,",
-     "start": 80.02,
-     "end": 80.59
+     "start": 100.24,
+     "end": 100.83
     },
     {
      "text": "Tripura,",
-     "start": 80.59,
-     "end": 81.14
+     "start": 100.83,
+     "end": 101.43
     },
     {
      "text": "and",
-     "start": 81.14,
-     "end": 81.27
+     "start": 101.43,
+     "end": 101.54
     },
     {
      "text": "Mizoram.",
-     "start": 81.27,
-     "end": 81.91
+     "start": 101.54,
+     "end": 102.14
     }
    ]
   },
   {
    "id": "time",
-   "speak": "Longitude decides time. Earth turns three hundred and sixty degrees in twenty-four hours: fifteen degrees every hour, or one degree every four minutes. Indian Standard Time is taken from eighty-two and a half degrees east, near Mirzapur, five and a half hours ahead of Greenwich.",
-   "text": "Longitude decides time. Earth turns 360\u00b0 in 24 hours: 15\u00b0 every hour, or 1\u00b0 every 4 minutes. Indian Standard Time is taken from 82.5\u00b0 E, near Mirzapur, 5 and a half hours ahead of Greenwich.",
-   "start": 83.161,
-   "end": 101.337,
+   "speak": "How does longitude set our clocks? Earth turns three hundred and sixty degrees in twenty-four hours: fifteen degrees every hour, or one degree every four minutes. Indian Standard Time, kept by the C S I R National Physical Laboratory, is taken from eighty-two and a half degrees east, near Mirzapur, five and a half hours ahead of Greenwich.",
+   "text": "How does longitude set our clocks? Earth turns 360\u00b0 in 24 hours: 15\u00b0 every hour, or 1\u00b0 every 4 minutes. Indian Standard Time, kept by the CSIR National Physical Laboratory, is taken from 82.5\u00b0 E, near Mirzapur, 5 and a half hours ahead of Greenwich.",
+   "start": 103.407,
+   "end": 125.615,
    "words": [
     {
-     "text": "Longitude",
-     "start": 83.201,
-     "end": 83.861
+     "text": "How",
+     "start": 103.417,
+     "end": 103.617
     },
     {
-     "text": "decides",
-     "start": 83.861,
-     "end": 84.381
+     "text": "does",
+     "start": 103.617,
+     "end": 103.847
     },
     {
-     "text": "time.",
-     "start": 84.381,
-     "end": 84.871
+     "text": "longitude",
+     "start": 103.847,
+     "end": 104.477
+    },
+    {
+     "text": "set",
+     "start": 104.477,
+     "end": 104.737
+    },
+    {
+     "text": "our",
+     "start": 104.737,
+     "end": 104.827
+    },
+    {
+     "text": "clocks?",
+     "start": 104.827,
+     "end": 105.397
     },
     {
      "text": "Earth",
-     "start": 85.621,
-     "end": 85.891
+     "start": 106.067,
+     "end": 106.287
     },
     {
      "text": "turns",
-     "start": 85.891,
-     "end": 86.281
+     "start": 106.287,
+     "end": 106.677
     },
     {
      "text": "360\u00b0",
-     "start": 86.281,
-     "end": 87.801
+     "start": 106.677,
+     "end": 108.207
     },
     {
      "text": "in",
-     "start": 87.801,
-     "end": 87.941
+     "start": 108.207,
+     "end": 108.337
     },
     {
      "text": "24",
-     "start": 87.941,
-     "end": 88.531
+     "start": 108.337,
+     "end": 108.927
     },
     {
      "text": "hours:",
-     "start": 88.531,
-     "end": 89.021
+     "start": 108.927,
+     "end": 109.417
     },
     {
      "text": "15\u00b0",
-     "start": 89.421,
-     "end": 90.241
+     "start": 109.827,
+     "end": 110.637
     },
     {
      "text": "every",
-     "start": 90.241,
-     "end": 90.561
+     "start": 110.637,
+     "end": 110.957
     },
     {
      "text": "hour,",
-     "start": 90.561,
-     "end": 91.041
+     "start": 110.957,
+     "end": 111.407
     },
     {
      "text": "or",
-     "start": 91.041,
-     "end": 91.181
+     "start": 111.407,
+     "end": 111.547
     },
     {
      "text": "1\u00b0",
-     "start": 91.181,
-     "end": 91.781
+     "start": 111.547,
+     "end": 112.177
     },
     {
      "text": "every",
-     "start": 91.781,
-     "end": 92.021
+     "start": 112.177,
+     "end": 112.417
     },
     {
      "text": "4",
-     "start": 92.021,
-     "end": 92.311
+     "start": 112.417,
+     "end": 112.707
     },
     {
      "text": "minutes.",
-     "start": 92.311,
-     "end": 92.861
+     "start": 112.707,
+     "end": 113.247
     },
     {
      "text": "Indian",
-     "start": 93.631,
-     "end": 94.021
+     "start": 114.097,
+     "end": 114.517
     },
     {
      "text": "Standard",
-     "start": 94.021,
-     "end": 94.481
+     "start": 114.517,
+     "end": 114.997
     },
     {
-     "text": "Time",
-     "start": 94.481,
-     "end": 94.841
+     "text": "Time,",
+     "start": 114.997,
+     "end": 115.477
+    },
+    {
+     "text": "kept",
+     "start": 115.627,
+     "end": 115.927
+    },
+    {
+     "text": "by",
+     "start": 115.927,
+     "end": 116.067
+    },
+    {
+     "text": "the",
+     "start": 116.067,
+     "end": 116.147
+    },
+    {
+     "text": "CSIR",
+     "start": 116.147,
+     "end": 117.127
+    },
+    {
+     "text": "National",
+     "start": 117.127,
+     "end": 117.537
+    },
+    {
+     "text": "Physical",
+     "start": 117.537,
+     "end": 117.967
+    },
+    {
+     "text": "Laboratory,",
+     "start": 117.967,
+     "end": 118.677
     },
     {
      "text": "is",
-     "start": 94.841,
-     "end": 94.971
+     "start": 119.077,
+     "end": 119.217
     },
     {
      "text": "taken",
-     "start": 94.971,
-     "end": 95.321
+     "start": 119.217,
+     "end": 119.567
     },
     {
      "text": "from",
-     "start": 95.321,
-     "end": 95.501
+     "start": 119.567,
+     "end": 119.757
     },
     {
      "text": "82.5\u00b0",
-     "start": 95.581,
-     "end": 96.611
+     "start": 119.827,
+     "end": 120.807
     },
     {
      "text": "E,",
-     "start": 96.611,
-     "end": 97.641
+     "start": 120.807,
+     "end": 121.787
     },
     {
      "text": "near",
-     "start": 97.931,
-     "end": 98.131
+     "start": 122.227,
+     "end": 122.427
     },
     {
      "text": "Mirzapur,",
-     "start": 98.131,
-     "end": 98.861
+     "start": 122.427,
+     "end": 123.307
     },
     {
      "text": "5",
-     "start": 99.061,
-     "end": 99.541
+     "start": 123.307,
+     "end": 123.767
     },
     {
      "text": "and",
-     "start": 99.541,
-     "end": 99.651
+     "start": 123.767,
+     "end": 123.867
     },
     {
      "text": "a",
-     "start": 99.651,
-     "end": 99.691
+     "start": 123.867,
+     "end": 123.917
     },
     {
      "text": "half",
-     "start": 99.691,
-     "end": 99.991
+     "start": 123.917,
+     "end": 124.207
     },
     {
      "text": "hours",
-     "start": 99.991,
-     "end": 100.361
+     "start": 124.207,
+     "end": 124.637
     },
     {
      "text": "ahead",
-     "start": 100.361,
-     "end": 100.591
+     "start": 124.637,
+     "end": 124.867
     },
     {
      "text": "of",
-     "start": 100.591,
-     "end": 100.671
+     "start": 124.867,
+     "end": 124.947
     },
     {
      "text": "Greenwich.",
-     "start": 100.671,
-     "end": 101.291
+     "start": 124.947,
+     "end": 125.567
     }
    ]
   },
   {
    "id": "p2",
-   "speak": "Part two: the tilt, and Earth's orbit.",
-   "text": "Part two: the tilt, and Earth's orbit.",
-   "start": 103.457,
-   "end": 105.868,
+   "speak": "Part two. Why do we have seasons?",
+   "text": "Part two. Why do we have seasons?",
+   "start": 127.735,
+   "end": 129.975,
    "words": [
     {
      "text": "Part",
-     "start": 103.497,
-     "end": 103.807
+     "start": 127.785,
+     "end": 128.105
     },
     {
-     "text": "two:",
-     "start": 103.807,
-     "end": 104.157
+     "text": "two.",
+     "start": 128.105,
+     "end": 128.475
     },
     {
-     "text": "the",
-     "start": 104.157,
-     "end": 104.267
+     "text": "Why",
+     "start": 128.475,
+     "end": 128.685
     },
     {
-     "text": "tilt,",
-     "start": 104.267,
-     "end": 104.687
+     "text": "do",
+     "start": 128.685,
+     "end": 128.815
     },
     {
-     "text": "and",
-     "start": 104.687,
-     "end": 104.867
+     "text": "we",
+     "start": 128.815,
+     "end": 128.895
     },
     {
-     "text": "Earth's",
-     "start": 104.867,
-     "end": 105.167
+     "text": "have",
+     "start": 128.895,
+     "end": 129.075
     },
     {
-     "text": "orbit.",
-     "start": 105.167,
-     "end": 105.727
+     "text": "seasons?",
+     "start": 129.075,
+     "end": 129.905
     }
    ]
   },
   {
    "id": "tilt",
-   "speak": "Earth's axis is tilted twenty-three and a half degrees from the vertical, so it makes an angle of sixty-six and a half degrees with the plane of its orbit. And it always points the same way, towards the Pole Star.",
-   "text": "Earth's axis is tilted 23.5\u00b0 from the vertical, so it makes an angle of 66.5\u00b0 with the plane of its orbit. And it always points the same way, towards the Pole Star.",
-   "start": 107.068,
-   "end": 120.145,
+   "speak": "What is Earth's tilt? NASA gives the axis a tilt of about twenty-three and a half degrees from the vertical, so it makes an angle of sixty-six and a half degrees with the plane of its orbit. And it always points the same way, towards the Pole Star.",
+   "text": "What is Earth's tilt? NASA gives the axis a tilt of about 23.5\u00b0 from the vertical, so it makes an angle of 66.5\u00b0 with the plane of its orbit. And it always points the same way, towards the Pole Star.",
+   "start": 131.175,
+   "end": 146.599,
    "words": [
     {
-     "text": "Earth's",
-     "start": 107.128,
-     "end": 107.468
-    },
-    {
-     "text": "axis",
-     "start": 107.468,
-     "end": 107.998
+     "text": "What",
+     "start": 131.195,
+     "end": 131.405
     },
     {
      "text": "is",
-     "start": 107.998,
-     "end": 108.158
+     "start": 131.405,
+     "end": 131.555
     },
     {
-     "text": "tilted",
-     "start": 108.158,
-     "end": 108.668
+     "text": "Earth's",
+     "start": 131.555,
+     "end": 131.945
+    },
+    {
+     "text": "tilt?",
+     "start": 131.945,
+     "end": 132.455
+    },
+    {
+     "text": "NASA",
+     "start": 133.075,
+     "end": 133.525
+    },
+    {
+     "text": "gives",
+     "start": 133.525,
+     "end": 133.765
+    },
+    {
+     "text": "the",
+     "start": 133.765,
+     "end": 133.895
+    },
+    {
+     "text": "axis",
+     "start": 133.895,
+     "end": 134.295
+    },
+    {
+     "text": "a",
+     "start": 134.295,
+     "end": 134.355
+    },
+    {
+     "text": "tilt",
+     "start": 134.355,
+     "end": 134.785
+    },
+    {
+     "text": "of",
+     "start": 134.785,
+     "end": 134.865
+    },
+    {
+     "text": "about",
+     "start": 134.865,
+     "end": 135.165
     },
     {
      "text": "23.5\u00b0",
-     "start": 108.668,
-     "end": 110.258
+     "start": 135.165,
+     "end": 136.785
     },
     {
      "text": "from",
-     "start": 110.258,
-     "end": 110.398
+     "start": 136.785,
+     "end": 136.935
     },
     {
      "text": "the",
-     "start": 110.398,
-     "end": 110.478
+     "start": 136.935,
+     "end": 137.005
     },
     {
      "text": "vertical,",
-     "start": 110.478,
-     "end": 111.138
+     "start": 137.005,
+     "end": 137.685
     },
     {
      "text": "so",
-     "start": 111.648,
-     "end": 111.778
+     "start": 138.155,
+     "end": 138.285
     },
     {
      "text": "it",
-     "start": 111.778,
-     "end": 111.878
+     "start": 138.285,
+     "end": 138.385
     },
     {
      "text": "makes",
-     "start": 111.878,
-     "end": 112.208
+     "start": 138.385,
+     "end": 138.715
     },
     {
      "text": "an",
-     "start": 112.208,
-     "end": 112.298
+     "start": 138.715,
+     "end": 138.805
     },
     {
      "text": "angle",
-     "start": 112.298,
-     "end": 112.678
+     "start": 138.805,
+     "end": 139.165
     },
     {
      "text": "of",
-     "start": 112.678,
-     "end": 112.768
+     "start": 139.165,
+     "end": 139.255
     },
     {
      "text": "66.5\u00b0",
-     "start": 112.768,
-     "end": 114.728
+     "start": 139.255,
+     "end": 141.225
     },
     {
      "text": "with",
-     "start": 114.728,
-     "end": 114.848
+     "start": 141.225,
+     "end": 141.355
     },
     {
      "text": "the",
-     "start": 114.848,
-     "end": 114.918
+     "start": 141.355,
+     "end": 141.425
     },
     {
      "text": "plane",
-     "start": 114.918,
-     "end": 115.228
+     "start": 141.425,
+     "end": 141.735
     },
     {
      "text": "of",
-     "start": 115.228,
-     "end": 115.298
+     "start": 141.735,
+     "end": 141.805
     },
     {
      "text": "its",
-     "start": 115.298,
-     "end": 115.478
+     "start": 141.805,
+     "end": 141.985
     },
     {
      "text": "orbit.",
-     "start": 115.478,
-     "end": 116.038
+     "start": 141.985,
+     "end": 142.495
     },
     {
      "text": "And",
-     "start": 116.828,
-     "end": 116.958
+     "start": 143.285,
+     "end": 143.415
     },
     {
      "text": "it",
-     "start": 116.958,
-     "end": 117.068
+     "start": 143.415,
+     "end": 143.535
     },
     {
      "text": "always",
-     "start": 117.068,
-     "end": 117.448
+     "start": 143.535,
+     "end": 143.905
     },
     {
      "text": "points",
-     "start": 117.448,
-     "end": 117.848
+     "start": 143.905,
+     "end": 144.305
     },
     {
      "text": "the",
-     "start": 117.848,
-     "end": 117.918
+     "start": 144.305,
+     "end": 144.395
     },
     {
      "text": "same",
-     "start": 117.918,
-     "end": 118.238
+     "start": 144.395,
+     "end": 144.715
     },
     {
      "text": "way,",
-     "start": 118.238,
-     "end": 118.608
+     "start": 144.715,
+     "end": 145.075
     },
     {
      "text": "towards",
-     "start": 118.788,
-     "end": 119.188
+     "start": 145.225,
+     "end": 145.615
     },
     {
      "text": "the",
-     "start": 119.188,
-     "end": 119.278
+     "start": 145.615,
+     "end": 145.705
     },
     {
      "text": "Pole",
-     "start": 119.278,
-     "end": 119.578
+     "start": 145.705,
+     "end": 146.015
     },
     {
      "text": "Star.",
-     "start": 119.578,
-     "end": 120.048
+     "start": 146.015,
+     "end": 146.505
     }
    ]
   },
   {
    "id": "orbit",
-   "speak": "Earth goes round the Sun once in about three hundred and sixty-five and a quarter days. As it moves, first one hemisphere, and then the other, leans towards the Sun. That is what makes the seasons.",
-   "text": "Earth goes round the Sun once in about 365 and a quarter days. As it moves, first one hemisphere, and then the other, leans towards the Sun. That is what makes the seasons.",
-   "start": 121.345,
-   "end": 133.484,
+   "speak": "How does the orbit create seasons? Earth goes round the Sun once in about three hundred and sixty-five and a quarter days. Because the axis keeps pointing the same way, first one hemisphere, and then the other, leans towards the Sun. That is what makes the seasons.",
+   "text": "How does the orbit create seasons? Earth goes round the Sun once in about 365 and a quarter days. Because the axis keeps pointing the same way, first one hemisphere, and then the other, leans towards the Sun. That is what makes the seasons.",
+   "start": 147.799,
+   "end": 163.82,
    "words": [
     {
+     "text": "How",
+     "start": 147.809,
+     "end": 147.979
+    },
+    {
+     "text": "does",
+     "start": 147.979,
+     "end": 148.119
+    },
+    {
+     "text": "the",
+     "start": 148.119,
+     "end": 148.229
+    },
+    {
+     "text": "orbit",
+     "start": 148.229,
+     "end": 148.589
+    },
+    {
+     "text": "create",
+     "start": 148.589,
+     "end": 148.969
+    },
+    {
+     "text": "seasons?",
+     "start": 148.969,
+     "end": 149.659
+    },
+    {
      "text": "Earth",
-     "start": 121.425,
-     "end": 121.685
+     "start": 150.259,
+     "end": 150.539
     },
     {
      "text": "goes",
-     "start": 121.685,
-     "end": 121.945
+     "start": 150.539,
+     "end": 150.799
     },
     {
      "text": "round",
-     "start": 121.945,
-     "end": 122.155
+     "start": 150.799,
+     "end": 151.009
     },
     {
      "text": "the",
-     "start": 122.155,
-     "end": 122.215
+     "start": 151.009,
+     "end": 151.069
     },
     {
      "text": "Sun",
-     "start": 122.215,
-     "end": 122.515
+     "start": 151.069,
+     "end": 151.369
     },
     {
      "text": "once",
-     "start": 122.515,
-     "end": 122.865
+     "start": 151.369,
+     "end": 151.719
     },
     {
      "text": "in",
-     "start": 122.865,
-     "end": 122.985
+     "start": 151.719,
+     "end": 151.839
     },
     {
      "text": "about",
-     "start": 122.985,
-     "end": 123.285
+     "start": 151.839,
+     "end": 152.129
     },
     {
      "text": "365",
-     "start": 123.285,
-     "end": 124.915
+     "start": 152.129,
+     "end": 153.749
     },
     {
      "text": "and",
-     "start": 124.915,
-     "end": 125.035
+     "start": 153.749,
+     "end": 153.859
     },
     {
      "text": "a",
-     "start": 125.035,
-     "end": 125.075
+     "start": 153.859,
+     "end": 153.899
     },
     {
      "text": "quarter",
-     "start": 125.075,
-     "end": 125.415
+     "start": 153.899,
+     "end": 154.249
     },
     {
      "text": "days.",
-     "start": 125.415,
-     "end": 125.985
+     "start": 154.249,
+     "end": 154.769
     },
     {
-     "text": "As",
-     "start": 126.785,
-     "end": 126.945
+     "text": "Because",
+     "start": 155.479,
+     "end": 155.759
     },
     {
-     "text": "it",
-     "start": 126.945,
-     "end": 127.035
+     "text": "the",
+     "start": 155.759,
+     "end": 155.909
     },
     {
-     "text": "moves,",
-     "start": 127.035,
-     "end": 127.655
+     "text": "axis",
+     "start": 155.909,
+     "end": 156.359
+    },
+    {
+     "text": "keeps",
+     "start": 156.359,
+     "end": 156.629
+    },
+    {
+     "text": "pointing",
+     "start": 156.629,
+     "end": 157.069
+    },
+    {
+     "text": "the",
+     "start": 157.069,
+     "end": 157.129
+    },
+    {
+     "text": "same",
+     "start": 157.129,
+     "end": 157.469
+    },
+    {
+     "text": "way,",
+     "start": 157.469,
+     "end": 157.799
     },
     {
      "text": "first",
-     "start": 127.835,
-     "end": 128.225
+     "start": 158.099,
+     "end": 158.449
     },
     {
      "text": "one",
-     "start": 128.225,
-     "end": 128.415
+     "start": 158.449,
+     "end": 158.629
     },
     {
      "text": "hemisphere,",
-     "start": 128.415,
-     "end": 129.025
+     "start": 158.629,
+     "end": 159.279
     },
     {
      "text": "and",
-     "start": 129.025,
-     "end": 129.235
+     "start": 159.279,
+     "end": 159.489
     },
     {
      "text": "then",
-     "start": 129.235,
-     "end": 129.355
+     "start": 159.489,
+     "end": 159.619
     },
     {
      "text": "the",
-     "start": 129.355,
-     "end": 129.475
+     "start": 159.619,
+     "end": 159.749
     },
     {
      "text": "other,",
-     "start": 129.475,
-     "end": 129.835
+     "start": 159.749,
+     "end": 160.129
     },
     {
      "text": "leans",
-     "start": 129.835,
-     "end": 130.175
+     "start": 160.129,
+     "end": 160.469
     },
     {
      "text": "towards",
-     "start": 130.175,
-     "end": 130.565
+     "start": 160.469,
+     "end": 160.839
     },
     {
      "text": "the",
-     "start": 130.565,
-     "end": 130.655
+     "start": 160.839,
+     "end": 160.939
     },
     {
      "text": "Sun.",
-     "start": 130.655,
-     "end": 131.085
+     "start": 160.939,
+     "end": 161.369
     },
     {
      "text": "That",
-     "start": 131.715,
-     "end": 132.025
+     "start": 162.039,
+     "end": 162.359
     },
     {
      "text": "is",
-     "start": 132.025,
-     "end": 132.165
+     "start": 162.359,
+     "end": 162.499
     },
     {
      "text": "what",
-     "start": 132.165,
-     "end": 132.315
+     "start": 162.499,
+     "end": 162.649
     },
     {
      "text": "makes",
-     "start": 132.315,
-     "end": 132.605
+     "start": 162.649,
+     "end": 162.959
     },
     {
      "text": "the",
-     "start": 132.605,
-     "end": 132.695
+     "start": 162.959,
+     "end": 163.049
     },
     {
      "text": "seasons.",
-     "start": 132.695,
-     "end": 133.425
+     "start": 163.049,
+     "end": 163.779
     }
    ]
   },
   {
    "id": "distance",
-   "speak": "It is not about distance. Earth is closest to the Sun in early January, about one hundred and forty-seven million kilometres away, and farthest in early July, about one hundred and fifty-two million kilometres. Yet January is winter in India.",
-   "text": "It is not about distance. Earth is closest to the Sun in early January, about 147 million km away, and farthest in early July, about 152 million km. Yet January is winter in India.",
-   "start": 134.684,
-   "end": 150.94,
+   "speak": "Why is it not about distance? NASA's data show Earth is closest to the Sun in early January, about one hundred and forty-seven million kilometres away, and farthest in early July, about one hundred and fifty-two million kilometres. Yet January is winter in India.",
+   "text": "Why is it not about distance? NASA's data show Earth is closest to the Sun in early January, about 147 million km away, and farthest in early July, about 152 million km. Yet January is winter in India.",
+   "start": 165.02,
+   "end": 182.556,
    "words": [
     {
-     "text": "It",
-     "start": 134.704,
-     "end": 134.864
+     "text": "Why",
+     "start": 165.03,
+     "end": 165.29
     },
     {
      "text": "is",
-     "start": 134.864,
-     "end": 134.984
+     "start": 165.29,
+     "end": 165.45
+    },
+    {
+     "text": "it",
+     "start": 165.45,
+     "end": 165.54
     },
     {
      "text": "not",
-     "start": 134.984,
-     "end": 135.214
+     "start": 165.54,
+     "end": 165.78
     },
     {
      "text": "about",
-     "start": 135.214,
-     "end": 135.494
+     "start": 165.78,
+     "end": 166.05
     },
     {
-     "text": "distance.",
-     "start": 135.494,
-     "end": 136.234
+     "text": "distance?",
+     "start": 166.05,
+     "end": 166.75
+    },
+    {
+     "text": "NASA's",
+     "start": 167.41,
+     "end": 167.76
+    },
+    {
+     "text": "data",
+     "start": 167.76,
+     "end": 168.16
+    },
+    {
+     "text": "show",
+     "start": 168.16,
+     "end": 168.46
     },
     {
      "text": "Earth",
-     "start": 137.034,
-     "end": 137.324
+     "start": 168.46,
+     "end": 168.76
     },
     {
      "text": "is",
-     "start": 137.324,
-     "end": 137.464
+     "start": 168.76,
+     "end": 168.88
     },
     {
      "text": "closest",
-     "start": 137.464,
-     "end": 137.954
+     "start": 168.88,
+     "end": 169.34
     },
     {
      "text": "to",
-     "start": 137.954,
-     "end": 138.044
+     "start": 169.34,
+     "end": 169.41
     },
     {
      "text": "the",
-     "start": 138.044,
-     "end": 138.124
+     "start": 169.41,
+     "end": 169.48
     },
     {
      "text": "Sun",
-     "start": 138.124,
-     "end": 138.504
+     "start": 169.48,
+     "end": 169.87
     },
     {
      "text": "in",
-     "start": 138.504,
-     "end": 138.674
+     "start": 169.87,
+     "end": 170.03
     },
     {
      "text": "early",
-     "start": 138.674,
-     "end": 138.894
+     "start": 170.03,
+     "end": 170.26
     },
     {
      "text": "January,",
-     "start": 138.894,
-     "end": 139.604
+     "start": 170.26,
+     "end": 170.94
     },
     {
      "text": "about",
-     "start": 139.874,
-     "end": 140.194
+     "start": 171.28,
+     "end": 171.57
     },
     {
      "text": "147",
-     "start": 140.194,
-     "end": 141.664
+     "start": 171.57,
+     "end": 173.02
     },
     {
      "text": "million",
-     "start": 141.664,
-     "end": 142.034
+     "start": 173.02,
+     "end": 173.4
     },
     {
      "text": "km",
-     "start": 142.034,
-     "end": 142.614
+     "start": 173.4,
+     "end": 173.97
     },
     {
      "text": "away,",
-     "start": 142.614,
-     "end": 143.064
+     "start": 173.97,
+     "end": 174.42
     },
     {
      "text": "and",
-     "start": 143.434,
-     "end": 143.564
+     "start": 174.82,
+     "end": 174.95
     },
     {
      "text": "farthest",
-     "start": 143.564,
-     "end": 144.194
+     "start": 174.95,
+     "end": 175.58
     },
     {
      "text": "in",
-     "start": 144.194,
-     "end": 144.404
+     "start": 175.58,
+     "end": 175.78
     },
     {
      "text": "early",
-     "start": 144.404,
-     "end": 144.644
+     "start": 175.78,
+     "end": 176.02
     },
     {
      "text": "July,",
-     "start": 144.644,
-     "end": 145.374
+     "start": 176.02,
+     "end": 176.59
     },
     {
      "text": "about",
-     "start": 145.374,
-     "end": 145.654
+     "start": 176.86,
+     "end": 177.14
     },
     {
      "text": "152",
-     "start": 145.654,
-     "end": 146.974
+     "start": 177.14,
+     "end": 178.43
     },
     {
      "text": "million",
-     "start": 146.974,
-     "end": 147.334
+     "start": 178.43,
+     "end": 178.8
     },
     {
      "text": "km.",
-     "start": 147.334,
-     "end": 148.104
+     "start": 178.8,
+     "end": 179.58
     },
     {
      "text": "Yet",
-     "start": 148.874,
-     "end": 149.104
+     "start": 180.44,
+     "end": 180.74
     },
     {
      "text": "January",
-     "start": 149.104,
-     "end": 149.674
+     "start": 180.74,
+     "end": 181.29
     },
     {
      "text": "is",
-     "start": 149.674,
-     "end": 149.814
+     "start": 181.29,
+     "end": 181.45
     },
     {
      "text": "winter",
-     "start": 149.814,
-     "end": 150.244
+     "start": 181.45,
+     "end": 181.87
     },
     {
      "text": "in",
-     "start": 150.244,
-     "end": 150.374
+     "start": 181.87,
+     "end": 182.01
     },
     {
      "text": "India.",
-     "start": 150.374,
-     "end": 150.824
+     "start": 182.01,
+     "end": 182.48
     }
    ]
   },
   {
    "id": "p3",
-   "speak": "Part three: solstices and equinoxes.",
-   "text": "Part three: solstices and equinoxes.",
-   "start": 153.06,
-   "end": 155.769,
+   "speak": "Part three. What are solstices and equinoxes, and how do they affect us?",
+   "text": "Part three. What are solstices and equinoxes, and how do they affect us?",
+   "start": 184.676,
+   "end": 188.857,
    "words": [
     {
      "text": "Part",
-     "start": 153.11,
-     "end": 153.41
+     "start": 184.686,
+     "end": 185.026
     },
     {
-     "text": "three:",
-     "start": 153.41,
-     "end": 153.87
+     "text": "three.",
+     "start": 185.026,
+     "end": 185.596
+    },
+    {
+     "text": "What",
+     "start": 185.596,
+     "end": 185.746
+    },
+    {
+     "text": "are",
+     "start": 185.746,
+     "end": 185.776
     },
     {
      "text": "solstices",
-     "start": 153.87,
-     "end": 154.66
+     "start": 185.776,
+     "end": 186.556
     },
     {
      "text": "and",
-     "start": 154.66,
-     "end": 154.82
+     "start": 186.556,
+     "end": 186.726
     },
     {
-     "text": "equinoxes.",
-     "start": 154.82,
-     "end": 155.72
+     "text": "equinoxes,",
+     "start": 186.726,
+     "end": 187.536
+    },
+    {
+     "text": "and",
+     "start": 187.536,
+     "end": 187.636
+    },
+    {
+     "text": "how",
+     "start": 187.636,
+     "end": 187.826
+    },
+    {
+     "text": "do",
+     "start": 187.826,
+     "end": 187.956
+    },
+    {
+     "text": "they",
+     "start": 187.956,
+     "end": 188.096
+    },
+    {
+     "text": "affect",
+     "start": 188.096,
+     "end": 188.476
+    },
+    {
+     "text": "us?",
+     "start": 188.476,
+     "end": 188.796
     }
    ]
   },
   {
    "id": "june",
-   "speak": "Around the twenty-first of June comes the summer solstice. The Sun is directly overhead at the Tropic of Cancer. It is the longest day in the Northern Hemisphere. Delhi gets about fourteen hours of daylight, and beyond the Arctic Circle, the Sun does not set at all.",
-   "text": "Around the 21st of June comes the summer solstice. The Sun is directly overhead at the Tropic of Cancer. It is the longest day in the Northern Hemisphere. Delhi gets about 14 hours of daylight, and beyond the Arctic Circle, the Sun does not set at all.",
-   "start": 156.969,
-   "end": 173.439,
+   "speak": "What happens at the summer solstice? Around the twenty-first of June, the Sun is directly overhead at the Tropic of Cancer. It is the longest day in the Northern Hemisphere. Delhi gets about fourteen hours of daylight, and beyond the Arctic Circle, the Sun does not set at all.",
+   "text": "What happens at the summer solstice? Around the 21st of June, the Sun is directly overhead at the Tropic of Cancer. It is the longest day in the Northern Hemisphere. Delhi gets about 14 hours of daylight, and beyond the Arctic Circle, the Sun does not set at all.",
+   "start": 190.057,
+   "end": 207.06,
    "words": [
     {
-     "text": "Around",
-     "start": 157.019,
-     "end": 157.309
+     "text": "What",
+     "start": 190.067,
+     "end": 190.257
+    },
+    {
+     "text": "happens",
+     "start": 190.257,
+     "end": 190.727
+    },
+    {
+     "text": "at",
+     "start": 190.727,
+     "end": 190.807
     },
     {
      "text": "the",
-     "start": 157.309,
-     "end": 157.379
-    },
-    {
-     "text": "21st",
-     "start": 157.379,
-     "end": 158.069
-    },
-    {
-     "text": "of",
-     "start": 158.069,
-     "end": 158.149
-    },
-    {
-     "text": "June",
-     "start": 158.149,
-     "end": 158.569
-    },
-    {
-     "text": "comes",
-     "start": 158.569,
-     "end": 158.889
-    },
-    {
-     "text": "the",
-     "start": 158.889,
-     "end": 158.979
+     "start": 190.807,
+     "end": 190.867
     },
     {
      "text": "summer",
-     "start": 158.979,
-     "end": 159.299
+     "start": 190.867,
+     "end": 191.187
     },
     {
-     "text": "solstice.",
-     "start": 159.299,
-     "end": 160.099
+     "text": "solstice?",
+     "start": 191.187,
+     "end": 191.977
     },
     {
-     "text": "The",
-     "start": 160.829,
-     "end": 160.909
+     "text": "Around",
+     "start": 192.617,
+     "end": 192.867
+    },
+    {
+     "text": "the",
+     "start": 192.867,
+     "end": 192.947
+    },
+    {
+     "text": "21st",
+     "start": 192.947,
+     "end": 193.607
+    },
+    {
+     "text": "of",
+     "start": 193.607,
+     "end": 193.677
+    },
+    {
+     "text": "June,",
+     "start": 193.677,
+     "end": 194.167
+    },
+    {
+     "text": "the",
+     "start": 194.167,
+     "end": 194.397
     },
     {
      "text": "Sun",
-     "start": 160.909,
-     "end": 161.319
+     "start": 194.397,
+     "end": 194.767
     },
     {
      "text": "is",
-     "start": 161.319,
-     "end": 161.479
+     "start": 194.767,
+     "end": 194.917
     },
     {
      "text": "directly",
-     "start": 161.479,
-     "end": 162.099
+     "start": 194.917,
+     "end": 195.537
     },
     {
      "text": "overhead",
-     "start": 162.099,
-     "end": 162.649
+     "start": 195.537,
+     "end": 196.107
     },
     {
      "text": "at",
-     "start": 162.649,
-     "end": 162.739
+     "start": 196.107,
+     "end": 196.197
     },
     {
      "text": "the",
-     "start": 162.739,
-     "end": 162.809
+     "start": 196.197,
+     "end": 196.277
     },
     {
      "text": "Tropic",
-     "start": 162.809,
-     "end": 163.159
+     "start": 196.277,
+     "end": 196.647
     },
     {
      "text": "of",
-     "start": 163.159,
-     "end": 163.239
+     "start": 196.647,
+     "end": 196.727
     },
     {
      "text": "Cancer.",
-     "start": 163.239,
-     "end": 163.799
+     "start": 196.727,
+     "end": 197.287
     },
     {
      "text": "It",
-     "start": 164.379,
-     "end": 164.529
+     "start": 197.997,
+     "end": 198.137
     },
     {
      "text": "is",
-     "start": 164.529,
-     "end": 164.659
+     "start": 198.137,
+     "end": 198.267
     },
     {
      "text": "the",
-     "start": 164.659,
-     "end": 164.759
+     "start": 198.267,
+     "end": 198.377
     },
     {
      "text": "longest",
-     "start": 164.759,
-     "end": 165.219
+     "start": 198.377,
+     "end": 198.827
     },
     {
      "text": "day",
-     "start": 165.219,
-     "end": 165.499
+     "start": 198.827,
+     "end": 199.097
     },
     {
      "text": "in",
-     "start": 165.499,
-     "end": 165.619
+     "start": 199.097,
+     "end": 199.227
     },
     {
      "text": "the",
-     "start": 165.619,
-     "end": 165.679
+     "start": 199.227,
+     "end": 199.287
     },
     {
      "text": "Northern",
-     "start": 165.679,
-     "end": 166.119
+     "start": 199.287,
+     "end": 199.727
     },
     {
      "text": "Hemisphere.",
-     "start": 166.119,
-     "end": 166.839
+     "start": 199.727,
+     "end": 200.427
     },
     {
      "text": "Delhi",
-     "start": 167.499,
-     "end": 167.799
+     "start": 201.077,
+     "end": 201.397
     },
     {
      "text": "gets",
-     "start": 167.799,
-     "end": 168.089
+     "start": 201.397,
+     "end": 201.707
     },
     {
      "text": "about",
-     "start": 168.089,
-     "end": 168.369
+     "start": 201.707,
+     "end": 202.007
     },
     {
      "text": "14",
-     "start": 168.369,
-     "end": 168.879
+     "start": 202.007,
+     "end": 202.527
     },
     {
      "text": "hours",
-     "start": 168.879,
-     "end": 169.209
+     "start": 202.527,
+     "end": 202.847
     },
     {
      "text": "of",
-     "start": 169.209,
-     "end": 169.289
+     "start": 202.847,
+     "end": 202.927
     },
     {
      "text": "daylight,",
-     "start": 169.289,
-     "end": 169.929
+     "start": 202.927,
+     "end": 203.567
     },
     {
      "text": "and",
-     "start": 170.259,
-     "end": 170.409
+     "start": 203.897,
+     "end": 204.047
     },
     {
      "text": "beyond",
-     "start": 170.409,
-     "end": 170.709
+     "start": 204.047,
+     "end": 204.327
     },
     {
      "text": "the",
-     "start": 170.709,
-     "end": 170.839
+     "start": 204.327,
+     "end": 204.447
     },
     {
      "text": "Arctic",
-     "start": 170.839,
-     "end": 171.229
+     "start": 204.447,
+     "end": 204.837
     },
     {
      "text": "Circle,",
-     "start": 171.229,
-     "end": 171.789
+     "start": 204.837,
+     "end": 205.387
     },
     {
      "text": "the",
-     "start": 171.789,
-     "end": 171.959
+     "start": 205.387,
+     "end": 205.567
     },
     {
      "text": "Sun",
-     "start": 171.959,
-     "end": 172.299
+     "start": 205.567,
+     "end": 205.917
     },
     {
      "text": "does",
-     "start": 172.299,
-     "end": 172.469
+     "start": 205.917,
+     "end": 206.087
     },
     {
      "text": "not",
-     "start": 172.469,
-     "end": 172.689
+     "start": 206.087,
+     "end": 206.297
     },
     {
      "text": "set",
-     "start": 172.689,
-     "end": 172.939
+     "start": 206.297,
+     "end": 206.557
     },
     {
      "text": "at",
-     "start": 172.939,
-     "end": 173.079
+     "start": 206.557,
+     "end": 206.697
     },
     {
      "text": "all.",
-     "start": 173.079,
-     "end": 173.399
+     "start": 206.697,
+     "end": 207.017
     }
    ]
   },
   {
    "id": "dec",
-   "speak": "Around the twenty-second of December comes the winter solstice. The Sun is overhead at the Tropic of Capricorn. Delhi's day shrinks to about ten hours, the Arctic has polar night, and the Southern Hemisphere has its summer.",
-   "text": "Around the 22nd of December comes the winter solstice. The Sun is overhead at the Tropic of Capricorn. Delhi's day shrinks to about 10 hours, the Arctic has polar night, and the Southern Hemisphere has its summer.",
-   "start": 174.639,
-   "end": 188.441,
+   "speak": "What happens at the winter solstice? Around the twenty-second of December, the Sun is overhead at the Tropic of Capricorn. Delhi's day shrinks to about ten hours, the Arctic has polar night, and the Southern Hemisphere has its summer.",
+   "text": "What happens at the winter solstice? Around the 22nd of December, the Sun is overhead at the Tropic of Capricorn. Delhi's day shrinks to about 10 hours, the Arctic has polar night, and the Southern Hemisphere has its summer.",
+   "start": 208.26,
+   "end": 222.809,
    "words": [
     {
-     "text": "Around",
-     "start": 174.699,
-     "end": 174.999
+     "text": "What",
+     "start": 208.28,
+     "end": 208.48
     },
     {
-     "text": "the",
-     "start": 174.999,
-     "end": 175.069
-    },
-    {
-     "text": "22nd",
-     "start": 175.069,
-     "end": 175.779
-    },
-    {
-     "text": "of",
-     "start": 175.779,
-     "end": 175.849
-    },
-    {
-     "text": "December",
-     "start": 175.849,
-     "end": 176.409
-    },
-    {
-     "text": "comes",
-     "start": 176.409,
-     "end": 176.779
-    },
-    {
-     "text": "the",
-     "start": 176.779,
-     "end": 176.869
-    },
-    {
-     "text": "winter",
-     "start": 176.869,
-     "end": 177.169
-    },
-    {
-     "text": "solstice.",
-     "start": 177.169,
-     "end": 177.919
-    },
-    {
-     "text": "The",
-     "start": 178.629,
-     "end": 178.729
-    },
-    {
-     "text": "Sun",
-     "start": 178.729,
-     "end": 179.099
-    },
-    {
-     "text": "is",
-     "start": 179.099,
-     "end": 179.249
-    },
-    {
-     "text": "overhead",
-     "start": 179.249,
-     "end": 179.729
+     "text": "happens",
+     "start": 208.48,
+     "end": 208.95
     },
     {
      "text": "at",
-     "start": 179.729,
-     "end": 179.799
+     "start": 208.95,
+     "end": 209.02
     },
     {
      "text": "the",
-     "start": 179.799,
-     "end": 179.869
+     "start": 209.02,
+     "end": 209.1
     },
     {
-     "text": "Tropic",
-     "start": 179.869,
-     "end": 180.269
+     "text": "winter",
+     "start": 209.1,
+     "end": 209.39
+    },
+    {
+     "text": "solstice?",
+     "start": 209.39,
+     "end": 210.16
+    },
+    {
+     "text": "Around",
+     "start": 210.83,
+     "end": 211.1
+    },
+    {
+     "text": "the",
+     "start": 211.1,
+     "end": 211.17
+    },
+    {
+     "text": "22nd",
+     "start": 211.17,
+     "end": 211.88
     },
     {
      "text": "of",
-     "start": 180.269,
-     "end": 180.349
+     "start": 211.88,
+     "end": 211.94
+    },
+    {
+     "text": "December,",
+     "start": 211.94,
+     "end": 212.58
+    },
+    {
+     "text": "the",
+     "start": 212.73,
+     "end": 212.82
+    },
+    {
+     "text": "Sun",
+     "start": 212.82,
+     "end": 213.16
+    },
+    {
+     "text": "is",
+     "start": 213.16,
+     "end": 213.3
+    },
+    {
+     "text": "overhead",
+     "start": 213.3,
+     "end": 213.82
+    },
+    {
+     "text": "at",
+     "start": 213.82,
+     "end": 213.9
+    },
+    {
+     "text": "the",
+     "start": 213.9,
+     "end": 213.97
+    },
+    {
+     "text": "Tropic",
+     "start": 213.97,
+     "end": 214.37
+    },
+    {
+     "text": "of",
+     "start": 214.37,
+     "end": 214.45
     },
     {
      "text": "Capricorn.",
-     "start": 180.349,
-     "end": 181.129
+     "start": 214.45,
+     "end": 215.21
     },
     {
      "text": "Delhi's",
-     "start": 181.809,
-     "end": 182.199
+     "start": 216.07,
+     "end": 216.49
     },
     {
      "text": "day",
-     "start": 182.199,
-     "end": 182.459
+     "start": 216.49,
+     "end": 216.78
     },
     {
      "text": "shrinks",
-     "start": 182.459,
-     "end": 182.879
+     "start": 216.78,
+     "end": 217.2
     },
     {
      "text": "to",
-     "start": 182.879,
-     "end": 183.019
+     "start": 217.2,
+     "end": 217.34
     },
     {
      "text": "about",
-     "start": 183.019,
-     "end": 183.359
+     "start": 217.34,
+     "end": 217.68
     },
     {
      "text": "10",
-     "start": 183.359,
-     "end": 183.609
+     "start": 217.68,
+     "end": 217.94
     },
     {
      "text": "hours,",
-     "start": 183.609,
-     "end": 184.169
+     "start": 217.94,
+     "end": 218.48
     },
     {
      "text": "the",
-     "start": 184.389,
-     "end": 184.549
+     "start": 218.79,
+     "end": 218.95
     },
     {
      "text": "Arctic",
-     "start": 184.549,
-     "end": 185.029
+     "start": 218.95,
+     "end": 219.43
     },
     {
      "text": "has",
-     "start": 185.029,
-     "end": 185.219
+     "start": 219.43,
+     "end": 219.62
     },
     {
      "text": "polar",
-     "start": 185.219,
-     "end": 185.569
+     "start": 219.62,
+     "end": 219.99
     },
     {
      "text": "night,",
-     "start": 185.569,
-     "end": 186.049
+     "start": 219.99,
+     "end": 220.48
     },
     {
      "text": "and",
-     "start": 186.369,
-     "end": 186.499
+     "start": 220.74,
+     "end": 220.87
     },
     {
      "text": "the",
-     "start": 186.499,
-     "end": 186.559
+     "start": 220.87,
+     "end": 220.93
     },
     {
      "text": "Southern",
-     "start": 186.559,
-     "end": 186.929
+     "start": 220.93,
+     "end": 221.31
     },
     {
      "text": "Hemisphere",
-     "start": 186.929,
-     "end": 187.529
+     "start": 221.31,
+     "end": 221.9
     },
     {
      "text": "has",
-     "start": 187.529,
-     "end": 187.749
+     "start": 221.9,
+     "end": 222.12
     },
     {
      "text": "its",
-     "start": 187.749,
-     "end": 187.969
+     "start": 222.12,
+     "end": 222.34
     },
     {
      "text": "summer.",
-     "start": 187.969,
-     "end": 188.359
+     "start": 222.34,
+     "end": 222.75
     }
    ]
   },
   {
    "id": "equinox",
-   "speak": "In between, around the twenty-first of March and the twenty-third of September, the Sun is overhead at the Equator. These are the equinoxes, when day and night are nearly equal everywhere.",
-   "text": "In between, around the 21st of March and the 23rd of September, the Sun is overhead at the Equator. These are the equinoxes, when day and night are nearly equal everywhere.",
-   "start": 189.641,
-   "end": 201.119,
+   "speak": "And what is an equinox? Around the twenty-first of March and the twenty-third of September, the Sun is overhead at the Equator. These are the equinoxes, when day and night are nearly equal everywhere.",
+   "text": "And what is an equinox? Around the 21st of March and the 23rd of September, the Sun is overhead at the Equator. These are the equinoxes, when day and night are nearly equal everywhere.",
+   "start": 224.009,
+   "end": 236.105,
    "words": [
     {
-     "text": "In",
-     "start": 189.661,
-     "end": 189.851
+     "text": "And",
+     "start": 224.019,
+     "end": 224.199
     },
     {
-     "text": "between,",
-     "start": 189.851,
-     "end": 190.541
-    },
-    {
-     "text": "around",
-     "start": 190.541,
-     "end": 190.821
-    },
-    {
-     "text": "the",
-     "start": 190.821,
-     "end": 190.901
-    },
-    {
-     "text": "21st",
-     "start": 190.901,
-     "end": 191.591
-    },
-    {
-     "text": "of",
-     "start": 191.591,
-     "end": 191.651
-    },
-    {
-     "text": "March",
-     "start": 191.651,
-     "end": 192.161
-    },
-    {
-     "text": "and",
-     "start": 192.161,
-     "end": 192.251
-    },
-    {
-     "text": "the",
-     "start": 192.251,
-     "end": 192.321
-    },
-    {
-     "text": "23rd",
-     "start": 192.321,
-     "end": 192.921
-    },
-    {
-     "text": "of",
-     "start": 192.921,
-     "end": 192.991
-    },
-    {
-     "text": "September,",
-     "start": 192.991,
-     "end": 193.651
-    },
-    {
-     "text": "the",
-     "start": 194.061,
-     "end": 194.151
-    },
-    {
-     "text": "Sun",
-     "start": 194.151,
-     "end": 194.521
+     "text": "what",
+     "start": 224.199,
+     "end": 224.459
     },
     {
      "text": "is",
-     "start": 194.521,
-     "end": 194.681
+     "start": 224.459,
+     "end": 224.599
     },
     {
-     "text": "overhead",
-     "start": 194.681,
-     "end": 195.191
+     "text": "an",
+     "start": 224.599,
+     "end": 224.759
     },
     {
-     "text": "at",
-     "start": 195.191,
-     "end": 195.291
+     "text": "equinox?",
+     "start": 224.759,
+     "end": 225.439
     },
     {
-     "text": "the",
-     "start": 195.291,
-     "end": 195.391
-    },
-    {
-     "text": "Equator.",
-     "start": 195.391,
-     "end": 196.031
-    },
-    {
-     "text": "These",
-     "start": 196.961,
-     "end": 197.331
-    },
-    {
-     "text": "are",
-     "start": 197.331,
-     "end": 197.391
+     "text": "Around",
+     "start": 226.039,
+     "end": 226.319
     },
     {
      "text": "the",
-     "start": 197.391,
-     "end": 197.611
+     "start": 226.319,
+     "end": 226.389
     },
     {
-     "text": "equinoxes,",
-     "start": 197.611,
-     "end": 198.411
+     "text": "21st",
+     "start": 226.389,
+     "end": 227.079
     },
     {
-     "text": "when",
-     "start": 198.671,
-     "end": 198.861
+     "text": "of",
+     "start": 227.079,
+     "end": 227.149
     },
     {
-     "text": "day",
-     "start": 198.861,
-     "end": 199.191
+     "text": "March",
+     "start": 227.149,
+     "end": 227.659
     },
     {
      "text": "and",
-     "start": 199.191,
-     "end": 199.301
+     "start": 227.659,
+     "end": 227.749
     },
     {
-     "text": "night",
-     "start": 199.301,
-     "end": 199.721
+     "text": "the",
+     "start": 227.749,
+     "end": 227.819
+    },
+    {
+     "text": "23rd",
+     "start": 227.819,
+     "end": 228.419
+    },
+    {
+     "text": "of",
+     "start": 228.419,
+     "end": 228.479
+    },
+    {
+     "text": "September,",
+     "start": 228.479,
+     "end": 229.139
+    },
+    {
+     "text": "the",
+     "start": 229.479,
+     "end": 229.569
+    },
+    {
+     "text": "Sun",
+     "start": 229.569,
+     "end": 229.919
+    },
+    {
+     "text": "is",
+     "start": 229.919,
+     "end": 230.079
+    },
+    {
+     "text": "overhead",
+     "start": 230.079,
+     "end": 230.589
+    },
+    {
+     "text": "at",
+     "start": 230.589,
+     "end": 230.679
+    },
+    {
+     "text": "the",
+     "start": 230.679,
+     "end": 230.779
+    },
+    {
+     "text": "Equator.",
+     "start": 230.779,
+     "end": 231.429
+    },
+    {
+     "text": "These",
+     "start": 232.199,
+     "end": 232.539
     },
     {
      "text": "are",
-     "start": 199.721,
-     "end": 199.751
+     "start": 232.539,
+     "end": 232.609
+    },
+    {
+     "text": "the",
+     "start": 232.609,
+     "end": 232.829
+    },
+    {
+     "text": "equinoxes,",
+     "start": 232.829,
+     "end": 233.629
+    },
+    {
+     "text": "when",
+     "start": 233.629,
+     "end": 233.879
+    },
+    {
+     "text": "day",
+     "start": 233.879,
+     "end": 234.169
+    },
+    {
+     "text": "and",
+     "start": 234.169,
+     "end": 234.279
+    },
+    {
+     "text": "night",
+     "start": 234.279,
+     "end": 234.669
+    },
+    {
+     "text": "are",
+     "start": 234.669,
+     "end": 234.719
     },
     {
      "text": "nearly",
-     "start": 199.751,
-     "end": 200.101
+     "start": 234.719,
+     "end": 235.099
     },
     {
      "text": "equal",
-     "start": 200.101,
-     "end": 200.451
+     "start": 235.099,
+     "end": 235.449
     },
     {
      "text": "everywhere.",
-     "start": 200.451,
-     "end": 201.061
+     "start": 235.449,
+     "end": 236.009
     }
    ]
   },
   {
    "id": "noon",
-   "speak": "The solstices set the extremes. At noon on the June solstice, the Sun stands about eighty-five degrees high over Delhi. On the December solstice, it is only about thirty-eight degrees high. Low sunlight spreads over more ground, and heats it far less.",
-   "text": "The solstices set the extremes. At noon on the June solstice, the Sun stands about 85\u00b0 high over Delhi. On the December solstice, it is only about 38\u00b0 high. Low sunlight spreads over more ground, and heats it far less.",
-   "start": 202.319,
-   "end": 218.66,
+   "speak": "How do the solstices change the heat we feel? At noon on the June solstice, the Sun stands about eighty-five degrees high over Delhi. On the December solstice, it is only about thirty-eight degrees high. Low sunlight spreads over more ground, and heats it far less.",
+   "text": "How do the solstices change the heat we feel? At noon on the June solstice, the Sun stands about 85\u00b0 high over Delhi. On the December solstice, it is only about 38\u00b0 high. Low sunlight spreads over more ground, and heats it far less.",
+   "start": 237.305,
+   "end": 254.201,
    "words": [
     {
-     "text": "The",
-     "start": 202.319,
-     "end": 202.409
+     "text": "How",
+     "start": 237.315,
+     "end": 237.495
+    },
+    {
+     "text": "do",
+     "start": 237.495,
+     "end": 237.605
+    },
+    {
+     "text": "the",
+     "start": 237.605,
+     "end": 237.685
     },
     {
      "text": "solstices",
-     "start": 202.409,
-     "end": 203.209
+     "start": 237.685,
+     "end": 238.415
     },
     {
-     "text": "set",
-     "start": 203.209,
-     "end": 203.399
+     "text": "change",
+     "start": 238.415,
+     "end": 238.775
     },
     {
      "text": "the",
-     "start": 203.399,
-     "end": 203.519
+     "start": 238.775,
+     "end": 238.845
     },
     {
-     "text": "extremes.",
-     "start": 203.519,
-     "end": 204.279
+     "text": "heat",
+     "start": 238.845,
+     "end": 239.145
+    },
+    {
+     "text": "we",
+     "start": 239.145,
+     "end": 239.235
+    },
+    {
+     "text": "feel?",
+     "start": 239.235,
+     "end": 239.695
     },
     {
      "text": "At",
-     "start": 204.789,
-     "end": 204.929
+     "start": 240.185,
+     "end": 240.315
     },
     {
      "text": "noon",
-     "start": 204.929,
-     "end": 205.239
+     "start": 240.315,
+     "end": 240.625
     },
     {
      "text": "on",
-     "start": 205.239,
-     "end": 205.349
+     "start": 240.625,
+     "end": 240.735
     },
     {
      "text": "the",
-     "start": 205.349,
-     "end": 205.429
+     "start": 240.735,
+     "end": 240.815
     },
     {
      "text": "June",
-     "start": 205.429,
-     "end": 205.729
+     "start": 240.815,
+     "end": 241.115
     },
     {
      "text": "solstice,",
-     "start": 205.729,
-     "end": 206.439
+     "start": 241.115,
+     "end": 241.825
     },
     {
      "text": "the",
-     "start": 206.439,
-     "end": 206.709
+     "start": 241.825,
+     "end": 242.125
     },
     {
      "text": "Sun",
-     "start": 206.709,
-     "end": 207.089
+     "start": 242.125,
+     "end": 242.495
     },
     {
      "text": "stands",
-     "start": 207.089,
-     "end": 207.439
+     "start": 242.495,
+     "end": 242.855
     },
     {
      "text": "about",
-     "start": 207.439,
-     "end": 207.729
+     "start": 242.855,
+     "end": 243.165
     },
     {
      "text": "85\u00b0",
-     "start": 207.729,
-     "end": 208.809
+     "start": 243.165,
+     "end": 244.245
     },
     {
      "text": "high",
-     "start": 208.809,
-     "end": 209.179
+     "start": 244.245,
+     "end": 244.615
     },
     {
      "text": "over",
-     "start": 209.179,
-     "end": 209.309
+     "start": 244.615,
+     "end": 244.745
     },
     {
      "text": "Delhi.",
-     "start": 209.309,
-     "end": 209.779
+     "start": 244.745,
+     "end": 245.215
     },
     {
      "text": "On",
-     "start": 210.429,
-     "end": 210.569
+     "start": 245.935,
+     "end": 246.075
     },
     {
      "text": "the",
-     "start": 210.569,
-     "end": 210.639
+     "start": 246.075,
+     "end": 246.145
     },
     {
      "text": "December",
-     "start": 210.639,
-     "end": 211.089
+     "start": 246.145,
+     "end": 246.605
     },
     {
      "text": "solstice,",
-     "start": 211.089,
-     "end": 211.839
+     "start": 246.605,
+     "end": 247.355
     },
     {
      "text": "it",
-     "start": 211.839,
-     "end": 212.059
+     "start": 247.355,
+     "end": 247.585
     },
     {
      "text": "is",
-     "start": 212.059,
-     "end": 212.169
+     "start": 247.585,
+     "end": 247.715
     },
     {
      "text": "only",
-     "start": 212.169,
-     "end": 212.509
+     "start": 247.715,
+     "end": 248.015
     },
     {
      "text": "about",
-     "start": 212.509,
-     "end": 212.819
+     "start": 248.015,
+     "end": 248.325
     },
     {
      "text": "38\u00b0",
-     "start": 212.819,
-     "end": 213.879
+     "start": 248.325,
+     "end": 249.365
     },
     {
      "text": "high.",
-     "start": 213.879,
-     "end": 214.309
+     "start": 249.365,
+     "end": 249.775
     },
     {
      "text": "Low",
-     "start": 215.029,
-     "end": 215.249
+     "start": 250.515,
+     "end": 250.745
     },
     {
      "text": "sunlight",
-     "start": 215.249,
-     "end": 215.769
+     "start": 250.745,
+     "end": 251.255
     },
     {
      "text": "spreads",
-     "start": 215.769,
-     "end": 216.159
+     "start": 251.255,
+     "end": 251.645
     },
     {
      "text": "over",
-     "start": 216.159,
-     "end": 216.329
+     "start": 251.645,
+     "end": 251.815
     },
     {
      "text": "more",
-     "start": 216.329,
-     "end": 216.579
+     "start": 251.815,
+     "end": 252.065
     },
     {
      "text": "ground,",
-     "start": 216.579,
-     "end": 217.279
+     "start": 252.065,
+     "end": 252.675
     },
     {
      "text": "and",
-     "start": 217.279,
-     "end": 217.409
+     "start": 252.825,
+     "end": 252.945
     },
     {
      "text": "heats",
-     "start": 217.409,
-     "end": 217.709
+     "start": 252.945,
+     "end": 253.245
     },
     {
      "text": "it",
-     "start": 217.709,
-     "end": 217.839
+     "start": 253.245,
+     "end": 253.375
     },
     {
      "text": "far",
-     "start": 217.839,
-     "end": 218.119
+     "start": 253.375,
+     "end": 253.655
     },
     {
      "text": "less.",
-     "start": 218.119,
-     "end": 218.599
+     "start": 253.655,
+     "end": 254.145
     }
    ]
   },
   {
    "id": "p4",
-   "speak": "Part four: why climates and forests differ.",
-   "text": "Part four: why climates and forests differ.",
-   "start": 220.36,
-   "end": 223.091,
+   "speak": "Part four. Why do climates and forests differ?",
+   "text": "Part four. Why do climates and forests differ?",
+   "start": 256.321,
+   "end": 259.244,
    "words": [
     {
      "text": "Part",
-     "start": 220.42,
-     "end": 220.74
+     "start": 256.381,
+     "end": 256.711
     },
     {
-     "text": "four:",
-     "start": 220.74,
-     "end": 221.07
+     "text": "four.",
+     "start": 256.711,
+     "end": 257.091
     },
     {
-     "text": "why",
-     "start": 221.07,
-     "end": 221.31
+     "text": "Why",
+     "start": 257.091,
+     "end": 257.331
+    },
+    {
+     "text": "do",
+     "start": 257.331,
+     "end": 257.481
     },
     {
      "text": "climates",
-     "start": 221.31,
-     "end": 221.85
+     "start": 257.481,
+     "end": 257.981
     },
     {
      "text": "and",
-     "start": 221.85,
-     "end": 221.95
+     "start": 257.981,
+     "end": 258.081
     },
     {
      "text": "forests",
-     "start": 221.95,
-     "end": 222.47
+     "start": 258.081,
+     "end": 258.611
     },
     {
-     "text": "differ.",
-     "start": 222.47,
-     "end": 222.95
+     "text": "differ?",
+     "start": 258.611,
+     "end": 259.071
     }
    ]
   },
   {
    "id": "eqzone",
-   "speak": "Near the Equator, the Sun is high all year, and days stay close to twelve hours. Hot, moist air rises every afternoon, bringing convectional rain almost daily. Temperatures stay around twenty-seven degrees Celsius, and rainfall often exceeds two thousand millimetres a year.",
-   "text": "Near the Equator, the Sun is high all year, and days stay close to 12 hours. Hot, moist air rises every afternoon, bringing convectional rain almost daily. Temperatures stay around 27 \u00b0C, and rainfall often exceeds 2,000 mm a year.",
-   "start": 224.291,
-   "end": 242.083,
+   "speak": "Why is the Equator hot and wet all year? Here the Sun is high in every season, and days stay close to twelve hours. Hot, moist air rises every afternoon, cools, and brings convectional rain almost daily. Temperatures stay around twenty-seven degrees Celsius, and rainfall often exceeds two thousand millimetres a year.",
+   "text": "Why is the Equator hot and wet all year? Here the Sun is high in every season, and days stay close to 12 hours. Hot, moist air rises every afternoon, cools, and brings convectional rain almost daily. Temperatures stay around 27 \u00b0C, and rainfall often exceeds 2,000 mm a year.",
+   "start": 260.444,
+   "end": 280.945,
    "words": [
     {
-     "text": "Near",
-     "start": 224.301,
-     "end": 224.531
-    },
-    {
-     "text": "the",
-     "start": 224.531,
-     "end": 224.641
-    },
-    {
-     "text": "Equator,",
-     "start": 224.641,
-     "end": 225.291
-    },
-    {
-     "text": "the",
-     "start": 225.291,
-     "end": 225.431
-    },
-    {
-     "text": "Sun",
-     "start": 225.431,
-     "end": 225.701
+     "text": "Why",
+     "start": 260.464,
+     "end": 260.704
     },
     {
      "text": "is",
-     "start": 225.701,
-     "end": 225.811
+     "start": 260.704,
+     "end": 260.864
     },
     {
-     "text": "high",
-     "start": 225.811,
-     "end": 226.111
+     "text": "the",
+     "start": 260.864,
+     "end": 260.964
+    },
+    {
+     "text": "Equator",
+     "start": 260.964,
+     "end": 261.334
+    },
+    {
+     "text": "hot",
+     "start": 261.334,
+     "end": 261.694
+    },
+    {
+     "text": "and",
+     "start": 261.694,
+     "end": 261.804
+    },
+    {
+     "text": "wet",
+     "start": 261.804,
+     "end": 262.034
     },
     {
      "text": "all",
-     "start": 226.111,
-     "end": 226.311
+     "start": 262.034,
+     "end": 262.174
     },
     {
-     "text": "year,",
-     "start": 226.311,
-     "end": 226.731
+     "text": "year?",
+     "start": 262.174,
+     "end": 262.554
     },
     {
-     "text": "and",
-     "start": 227.091,
-     "end": 227.251
+     "text": "Here",
+     "start": 263.124,
+     "end": 263.324
     },
     {
-     "text": "days",
-     "start": 227.251,
-     "end": 227.501
+     "text": "the",
+     "start": 263.324,
+     "end": 263.424
     },
     {
-     "text": "stay",
-     "start": 227.501,
-     "end": 227.761
+     "text": "Sun",
+     "start": 263.424,
+     "end": 263.724
     },
     {
-     "text": "close",
-     "start": 227.761,
-     "end": 228.071
+     "text": "is",
+     "start": 263.724,
+     "end": 263.824
     },
     {
-     "text": "to",
-     "start": 228.071,
-     "end": 228.181
+     "text": "high",
+     "start": 263.824,
+     "end": 264.174
     },
     {
-     "text": "12",
-     "start": 228.181,
-     "end": 228.481
-    },
-    {
-     "text": "hours.",
-     "start": 228.481,
-     "end": 229.021
-    },
-    {
-     "text": "Hot,",
-     "start": 229.801,
-     "end": 230.281
-    },
-    {
-     "text": "moist",
-     "start": 230.441,
-     "end": 230.781
-    },
-    {
-     "text": "air",
-     "start": 230.781,
-     "end": 230.991
-    },
-    {
-     "text": "rises",
-     "start": 230.991,
-     "end": 231.541
+     "text": "in",
+     "start": 264.174,
+     "end": 264.294
     },
     {
      "text": "every",
-     "start": 231.541,
-     "end": 231.821
+     "start": 264.294,
+     "end": 264.504
     },
     {
-     "text": "afternoon,",
-     "start": 231.821,
-     "end": 232.471
-    },
-    {
-     "text": "bringing",
-     "start": 232.631,
-     "end": 232.961
-    },
-    {
-     "text": "convectional",
-     "start": 232.961,
-     "end": 233.601
-    },
-    {
-     "text": "rain",
-     "start": 233.601,
-     "end": 233.911
-    },
-    {
-     "text": "almost",
-     "start": 233.911,
-     "end": 234.311
-    },
-    {
-     "text": "daily.",
-     "start": 234.311,
-     "end": 234.791
-    },
-    {
-     "text": "Temperatures",
-     "start": 235.551,
-     "end": 236.091
-    },
-    {
-     "text": "stay",
-     "start": 236.091,
-     "end": 236.411
-    },
-    {
-     "text": "around",
-     "start": 236.411,
-     "end": 236.661
-    },
-    {
-     "text": "27",
-     "start": 236.661,
-     "end": 237.511
-    },
-    {
-     "text": "\u00b0C,",
-     "start": 237.511,
-     "end": 238.361
+     "text": "season,",
+     "start": 264.504,
+     "end": 265.104
     },
     {
      "text": "and",
-     "start": 238.681,
-     "end": 238.831
+     "start": 265.224,
+     "end": 265.374
+    },
+    {
+     "text": "days",
+     "start": 265.374,
+     "end": 265.604
+    },
+    {
+     "text": "stay",
+     "start": 265.604,
+     "end": 265.864
+    },
+    {
+     "text": "close",
+     "start": 265.864,
+     "end": 266.174
+    },
+    {
+     "text": "to",
+     "start": 266.174,
+     "end": 266.284
+    },
+    {
+     "text": "12",
+     "start": 266.284,
+     "end": 266.584
+    },
+    {
+     "text": "hours.",
+     "start": 266.584,
+     "end": 267.124
+    },
+    {
+     "text": "Hot,",
+     "start": 267.774,
+     "end": 268.214
+    },
+    {
+     "text": "moist",
+     "start": 268.434,
+     "end": 268.774
+    },
+    {
+     "text": "air",
+     "start": 268.774,
+     "end": 269.004
+    },
+    {
+     "text": "rises",
+     "start": 269.004,
+     "end": 269.534
+    },
+    {
+     "text": "every",
+     "start": 269.534,
+     "end": 269.824
+    },
+    {
+     "text": "afternoon,",
+     "start": 269.824,
+     "end": 270.494
+    },
+    {
+     "text": "cools,",
+     "start": 270.494,
+     "end": 271.124
+    },
+    {
+     "text": "and",
+     "start": 271.264,
+     "end": 271.404
+    },
+    {
+     "text": "brings",
+     "start": 271.404,
+     "end": 271.664
+    },
+    {
+     "text": "convectional",
+     "start": 271.664,
+     "end": 272.354
+    },
+    {
+     "text": "rain",
+     "start": 272.354,
+     "end": 272.664
+    },
+    {
+     "text": "almost",
+     "start": 272.664,
+     "end": 273.064
+    },
+    {
+     "text": "daily.",
+     "start": 273.064,
+     "end": 273.534
+    },
+    {
+     "text": "Temperatures",
+     "start": 274.354,
+     "end": 274.894
+    },
+    {
+     "text": "stay",
+     "start": 274.894,
+     "end": 275.244
+    },
+    {
+     "text": "around",
+     "start": 275.244,
+     "end": 275.494
+    },
+    {
+     "text": "27",
+     "start": 275.494,
+     "end": 276.344
+    },
+    {
+     "text": "\u00b0C,",
+     "start": 276.344,
+     "end": 277.194
+    },
+    {
+     "text": "and",
+     "start": 277.534,
+     "end": 277.684
     },
     {
      "text": "rainfall",
-     "start": 238.831,
-     "end": 239.441
+     "start": 277.684,
+     "end": 278.274
     },
     {
      "text": "often",
-     "start": 239.441,
-     "end": 239.751
+     "start": 278.274,
+     "end": 278.624
     },
     {
      "text": "exceeds",
-     "start": 239.751,
-     "end": 240.241
+     "start": 278.624,
+     "end": 279.114
     },
     {
      "text": "2,000",
-     "start": 240.241,
-     "end": 240.876
+     "start": 279.114,
+     "end": 279.754
     },
     {
      "text": "mm",
-     "start": 240.876,
-     "end": 241.511
+     "start": 279.754,
+     "end": 280.394
     },
     {
      "text": "a",
-     "start": 241.511,
-     "end": 241.561
+     "start": 280.394,
+     "end": 280.434
     },
     {
      "text": "year.",
-     "start": 241.561,
-     "end": 242.011
+     "start": 280.434,
+     "end": 280.884
     }
    ]
   },
   {
    "id": "rainforest",
-   "speak": "This supports tropical evergreen rainforests, with tall, multi-layered canopies of trees like mahogany, ebony and rosewood. Think of the Amazon, the Congo basin, and in India, the Western Ghats and the Andaman and Nicobar Islands.",
-   "text": "This supports tropical evergreen rainforests, with tall, multi-layered canopies of trees like mahogany, ebony and rosewood. Think of the Amazon, the Congo basin, and in India, the Western Ghats and the Andaman and Nicobar Islands.",
-   "start": 243.283,
-   "end": 258.173,
+   "speak": "How does this shape the forests? It supports tropical evergreen rainforests, with tall, multi-layered canopies of trees like mahogany, ebony and rosewood. Think of the Amazon, the Congo basin, and in India, the Western Ghats and the Andaman and Nicobar Islands.",
+   "text": "How does this shape the forests? It supports tropical evergreen rainforests, with tall, multi-layered canopies of trees like mahogany, ebony and rosewood. Think of the Amazon, the Congo basin, and in India, the Western Ghats and the Andaman and Nicobar Islands.",
+   "start": 282.145,
+   "end": 298.849,
    "words": [
     {
-     "text": "This",
-     "start": 243.283,
-     "end": 243.473
+     "text": "How",
+     "start": 282.155,
+     "end": 282.325
+    },
+    {
+     "text": "does",
+     "start": 282.325,
+     "end": 282.495
+    },
+    {
+     "text": "this",
+     "start": 282.495,
+     "end": 282.655
+    },
+    {
+     "text": "shape",
+     "start": 282.655,
+     "end": 283.005
+    },
+    {
+     "text": "the",
+     "start": 283.005,
+     "end": 283.105
+    },
+    {
+     "text": "forests?",
+     "start": 283.105,
+     "end": 283.895
+    },
+    {
+     "text": "It",
+     "start": 284.395,
+     "end": 284.505
     },
     {
      "text": "supports",
-     "start": 243.473,
-     "end": 243.933
+     "start": 284.505,
+     "end": 284.965
     },
     {
      "text": "tropical",
-     "start": 243.933,
-     "end": 244.403
+     "start": 284.965,
+     "end": 285.435
     },
     {
      "text": "evergreen",
-     "start": 244.403,
-     "end": 244.893
+     "start": 285.435,
+     "end": 285.945
     },
     {
      "text": "rainforests,",
-     "start": 244.893,
-     "end": 245.793
+     "start": 285.945,
+     "end": 286.845
     },
     {
      "text": "with",
-     "start": 246.143,
-     "end": 246.293
+     "start": 287.075,
+     "end": 287.235
     },
     {
      "text": "tall,",
-     "start": 246.293,
-     "end": 246.703
+     "start": 287.235,
+     "end": 287.615
     },
     {
      "text": "multi-layered",
-     "start": 246.703,
-     "end": 247.453
+     "start": 287.615,
+     "end": 288.335
     },
     {
      "text": "canopies",
-     "start": 247.453,
-     "end": 248.043
+     "start": 288.335,
+     "end": 288.935
     },
     {
      "text": "of",
-     "start": 248.043,
-     "end": 248.123
+     "start": 288.935,
+     "end": 289.005
     },
     {
      "text": "trees",
-     "start": 248.123,
-     "end": 248.563
+     "start": 289.005,
+     "end": 289.455
     },
     {
      "text": "like",
-     "start": 248.563,
-     "end": 248.803
+     "start": 289.455,
+     "end": 289.685
     },
     {
      "text": "mahogany,",
-     "start": 248.803,
-     "end": 249.493
+     "start": 289.685,
+     "end": 290.335
     },
     {
      "text": "ebony",
-     "start": 249.493,
-     "end": 249.893
+     "start": 290.335,
+     "end": 290.775
     },
     {
      "text": "and",
-     "start": 249.893,
-     "end": 250.043
+     "start": 290.775,
+     "end": 290.905
     },
     {
      "text": "rosewood.",
-     "start": 250.043,
-     "end": 250.683
+     "start": 290.905,
+     "end": 291.495
     },
     {
      "text": "Think",
-     "start": 251.543,
-     "end": 251.763
+     "start": 292.325,
+     "end": 292.555
     },
     {
      "text": "of",
-     "start": 251.763,
-     "end": 251.853
+     "start": 292.555,
+     "end": 292.635
     },
     {
      "text": "the",
-     "start": 251.853,
-     "end": 251.983
+     "start": 292.635,
+     "end": 292.775
     },
     {
      "text": "Amazon,",
-     "start": 251.983,
-     "end": 252.603
+     "start": 292.775,
+     "end": 293.405
     },
     {
      "text": "the",
-     "start": 252.783,
-     "end": 252.873
+     "start": 293.545,
+     "end": 293.635
     },
     {
      "text": "Congo",
-     "start": 252.873,
-     "end": 253.283
+     "start": 293.635,
+     "end": 294.045
     },
     {
      "text": "basin,",
-     "start": 253.283,
-     "end": 253.883
+     "start": 294.045,
+     "end": 294.585
     },
     {
      "text": "and",
-     "start": 253.883,
-     "end": 254.073
+     "start": 294.585,
+     "end": 294.785
     },
     {
      "text": "in",
-     "start": 254.073,
-     "end": 254.203
+     "start": 294.785,
+     "end": 294.915
     },
     {
      "text": "India,",
-     "start": 254.203,
-     "end": 254.743
+     "start": 294.915,
+     "end": 295.425
     },
     {
      "text": "the",
-     "start": 255.163,
-     "end": 255.263
+     "start": 295.825,
+     "end": 295.925
     },
     {
      "text": "Western",
-     "start": 255.263,
-     "end": 255.683
+     "start": 295.925,
+     "end": 296.395
     },
     {
      "text": "Ghats",
-     "start": 255.683,
-     "end": 256.153
+     "start": 296.395,
+     "end": 296.855
     },
     {
      "text": "and",
-     "start": 256.153,
-     "end": 256.273
+     "start": 296.855,
+     "end": 296.955
     },
     {
      "text": "the",
-     "start": 256.273,
-     "end": 256.393
+     "start": 296.955,
+     "end": 297.075
     },
     {
      "text": "Andaman",
-     "start": 256.393,
-     "end": 256.873
+     "start": 297.075,
+     "end": 297.565
     },
     {
      "text": "and",
-     "start": 256.873,
-     "end": 257.013
+     "start": 297.565,
+     "end": 297.695
     },
     {
      "text": "Nicobar",
-     "start": 257.013,
-     "end": 257.493
+     "start": 297.695,
+     "end": 298.175
     },
     {
      "text": "Islands.",
-     "start": 257.493,
-     "end": 258.113
+     "start": 298.175,
+     "end": 298.805
     }
    ]
   },
   {
    "id": "tropics",
-   "speak": "Near the Tropics of Cancer and Capricorn, the air that rose at the Equator sinks back down. Sinking air is dry, and stops clouds from forming. That is why the world's great hot deserts lie near the tropics: the Sahara, the Arabian, India's Thar, the Kalahari, the Atacama, and the Australian deserts.",
-   "text": "Near the Tropics of Cancer and Capricorn, the air that rose at the Equator sinks back down. Sinking air is dry, and stops clouds from forming. That is why the world's great hot deserts lie near the tropics: the Sahara, the Arabian, India's Thar, the Kalahari, the Atacama, and the Australian deserts.",
-   "start": 259.373,
-   "end": 278.851,
+   "speak": "Why do deserts lie near the tropics? The air that rose at the Equator flows away high up, and sinks back down near the Tropics of Cancer and Capricorn. Sinking air is dry, and stops clouds from forming. That is why the world's great hot deserts lie near the tropics: the Sahara, the Arabian, India's Thar, the Kalahari, the Atacama, and the Australian deserts.",
+   "text": "Why do deserts lie near the tropics? The air that rose at the Equator flows away high up, and sinks back down near the Tropics of Cancer and Capricorn. Sinking air is dry, and stops clouds from forming. That is why the world's great hot deserts lie near the tropics: the Sahara, the Arabian, India's Thar, the Kalahari, the Atacama, and the Australian deserts.",
+   "start": 300.049,
+   "end": 322.748,
    "words": [
     {
-     "text": "Near",
-     "start": 259.383,
-     "end": 259.623
+     "text": "Why",
+     "start": 300.069,
+     "end": 300.289
     },
     {
-     "text": "the",
-     "start": 259.623,
-     "end": 259.723
-    },
-    {
-     "text": "Tropics",
-     "start": 259.723,
-     "end": 260.163
-    },
-    {
-     "text": "of",
-     "start": 260.163,
-     "end": 260.243
-    },
-    {
-     "text": "Cancer",
-     "start": 260.243,
-     "end": 260.743
-    },
-    {
-     "text": "and",
-     "start": 260.743,
-     "end": 260.873
-    },
-    {
-     "text": "Capricorn,",
-     "start": 260.873,
-     "end": 261.563
-    },
-    {
-     "text": "the",
-     "start": 261.803,
-     "end": 261.933
-    },
-    {
-     "text": "air",
-     "start": 261.933,
-     "end": 262.203
-    },
-    {
-     "text": "that",
-     "start": 262.203,
-     "end": 262.373
-    },
-    {
-     "text": "rose",
-     "start": 262.373,
-     "end": 262.703
-    },
-    {
-     "text": "at",
-     "start": 262.703,
-     "end": 262.773
-    },
-    {
-     "text": "the",
-     "start": 262.773,
-     "end": 262.863
-    },
-    {
-     "text": "Equator",
-     "start": 262.863,
-     "end": 263.343
-    },
-    {
-     "text": "sinks",
-     "start": 263.343,
-     "end": 263.743
-    },
-    {
-     "text": "back",
-     "start": 263.743,
-     "end": 263.973
-    },
-    {
-     "text": "down.",
-     "start": 263.973,
-     "end": 264.383
-    },
-    {
-     "text": "Sinking",
-     "start": 265.223,
-     "end": 265.673
-    },
-    {
-     "text": "air",
-     "start": 265.673,
-     "end": 265.903
-    },
-    {
-     "text": "is",
-     "start": 265.903,
-     "end": 266.093
-    },
-    {
-     "text": "dry,",
-     "start": 266.093,
-     "end": 266.633
-    },
-    {
-     "text": "and",
-     "start": 266.923,
-     "end": 267.053
-    },
-    {
-     "text": "stops",
-     "start": 267.053,
-     "end": 267.363
-    },
-    {
-     "text": "clouds",
-     "start": 267.363,
-     "end": 267.823
-    },
-    {
-     "text": "from",
-     "start": 267.823,
-     "end": 267.983
-    },
-    {
-     "text": "forming.",
-     "start": 267.983,
-     "end": 268.543
-    },
-    {
-     "text": "That",
-     "start": 269.273,
-     "end": 269.543
-    },
-    {
-     "text": "is",
-     "start": 269.543,
-     "end": 269.673
-    },
-    {
-     "text": "why",
-     "start": 269.673,
-     "end": 269.853
-    },
-    {
-     "text": "the",
-     "start": 269.853,
-     "end": 269.943
-    },
-    {
-     "text": "world's",
-     "start": 269.943,
-     "end": 270.313
-    },
-    {
-     "text": "great",
-     "start": 270.313,
-     "end": 270.633
-    },
-    {
-     "text": "hot",
-     "start": 270.633,
-     "end": 270.843
+     "text": "do",
+     "start": 300.289,
+     "end": 300.449
     },
     {
      "text": "deserts",
-     "start": 270.843,
-     "end": 271.263
+     "start": 300.449,
+     "end": 300.939
     },
     {
      "text": "lie",
-     "start": 271.263,
-     "end": 271.493
+     "start": 300.939,
+     "end": 301.139
     },
     {
      "text": "near",
-     "start": 271.493,
-     "end": 271.693
+     "start": 301.139,
+     "end": 301.329
     },
     {
      "text": "the",
-     "start": 271.693,
-     "end": 271.793
+     "start": 301.329,
+     "end": 301.409
     },
     {
-     "text": "tropics:",
-     "start": 271.793,
-     "end": 272.453
+     "text": "tropics?",
+     "start": 301.409,
+     "end": 302.049
     },
     {
-     "text": "the",
-     "start": 272.933,
-     "end": 273.023
+     "text": "The",
+     "start": 302.629,
+     "end": 302.759
     },
     {
-     "text": "Sahara,",
-     "start": 273.023,
-     "end": 273.713
+     "text": "air",
+     "start": 302.759,
+     "end": 303.009
     },
     {
-     "text": "the",
-     "start": 273.713,
-     "end": 273.903
+     "text": "that",
+     "start": 303.009,
+     "end": 303.169
     },
     {
-     "text": "Arabian,",
-     "start": 273.903,
-     "end": 274.513
+     "text": "rose",
+     "start": 303.169,
+     "end": 303.459
     },
     {
-     "text": "India's",
-     "start": 274.513,
-     "end": 274.993
-    },
-    {
-     "text": "Thar,",
-     "start": 274.993,
-     "end": 275.493
+     "text": "at",
+     "start": 303.459,
+     "end": 303.519
     },
     {
      "text": "the",
-     "start": 275.493,
-     "end": 275.583
+     "start": 303.519,
+     "end": 303.619
     },
     {
-     "text": "Kalahari,",
-     "start": 275.583,
-     "end": 276.383
+     "text": "Equator",
+     "start": 303.619,
+     "end": 304.089
     },
     {
-     "text": "the",
-     "start": 276.383,
-     "end": 276.533
+     "text": "flows",
+     "start": 304.089,
+     "end": 304.479
     },
     {
-     "text": "Atacama,",
-     "start": 276.533,
-     "end": 277.223
+     "text": "away",
+     "start": 304.479,
+     "end": 304.719
+    },
+    {
+     "text": "high",
+     "start": 304.719,
+     "end": 304.999
+    },
+    {
+     "text": "up,",
+     "start": 304.999,
+     "end": 305.279
     },
     {
      "text": "and",
-     "start": 277.223,
-     "end": 277.513
+     "start": 305.279,
+     "end": 305.599
+    },
+    {
+     "text": "sinks",
+     "start": 305.599,
+     "end": 305.939
+    },
+    {
+     "text": "back",
+     "start": 305.939,
+     "end": 306.229
+    },
+    {
+     "text": "down",
+     "start": 306.229,
+     "end": 306.459
+    },
+    {
+     "text": "near",
+     "start": 306.459,
+     "end": 306.579
     },
     {
      "text": "the",
-     "start": 277.513,
-     "end": 277.623
+     "start": 306.579,
+     "end": 306.659
+    },
+    {
+     "text": "Tropics",
+     "start": 306.659,
+     "end": 307.139
+    },
+    {
+     "text": "of",
+     "start": 307.139,
+     "end": 307.219
+    },
+    {
+     "text": "Cancer",
+     "start": 307.219,
+     "end": 307.659
+    },
+    {
+     "text": "and",
+     "start": 307.659,
+     "end": 307.799
+    },
+    {
+     "text": "Capricorn.",
+     "start": 307.799,
+     "end": 308.479
+    },
+    {
+     "text": "Sinking",
+     "start": 309.379,
+     "end": 309.849
+    },
+    {
+     "text": "air",
+     "start": 309.849,
+     "end": 310.099
+    },
+    {
+     "text": "is",
+     "start": 310.099,
+     "end": 310.239
+    },
+    {
+     "text": "dry,",
+     "start": 310.239,
+     "end": 310.719
+    },
+    {
+     "text": "and",
+     "start": 310.939,
+     "end": 311.069
+    },
+    {
+     "text": "stops",
+     "start": 311.069,
+     "end": 311.379
+    },
+    {
+     "text": "clouds",
+     "start": 311.379,
+     "end": 311.849
+    },
+    {
+     "text": "from",
+     "start": 311.849,
+     "end": 311.979
+    },
+    {
+     "text": "forming.",
+     "start": 311.979,
+     "end": 312.539
+    },
+    {
+     "text": "That",
+     "start": 313.179,
+     "end": 313.409
+    },
+    {
+     "text": "is",
+     "start": 313.409,
+     "end": 313.539
+    },
+    {
+     "text": "why",
+     "start": 313.539,
+     "end": 313.729
+    },
+    {
+     "text": "the",
+     "start": 313.729,
+     "end": 313.819
+    },
+    {
+     "text": "world's",
+     "start": 313.819,
+     "end": 314.189
+    },
+    {
+     "text": "great",
+     "start": 314.189,
+     "end": 314.509
+    },
+    {
+     "text": "hot",
+     "start": 314.509,
+     "end": 314.689
+    },
+    {
+     "text": "deserts",
+     "start": 314.689,
+     "end": 315.139
+    },
+    {
+     "text": "lie",
+     "start": 315.139,
+     "end": 315.359
+    },
+    {
+     "text": "near",
+     "start": 315.359,
+     "end": 315.549
+    },
+    {
+     "text": "the",
+     "start": 315.549,
+     "end": 315.639
+    },
+    {
+     "text": "tropics:",
+     "start": 315.639,
+     "end": 316.289
+    },
+    {
+     "text": "the",
+     "start": 316.749,
+     "end": 316.839
+    },
+    {
+     "text": "Sahara,",
+     "start": 316.839,
+     "end": 317.539
+    },
+    {
+     "text": "the",
+     "start": 317.539,
+     "end": 317.729
+    },
+    {
+     "text": "Arabian,",
+     "start": 317.729,
+     "end": 318.349
+    },
+    {
+     "text": "India's",
+     "start": 318.349,
+     "end": 318.869
+    },
+    {
+     "text": "Thar,",
+     "start": 318.869,
+     "end": 319.219
+    },
+    {
+     "text": "the",
+     "start": 319.219,
+     "end": 319.429
+    },
+    {
+     "text": "Kalahari,",
+     "start": 319.429,
+     "end": 320.289
+    },
+    {
+     "text": "the",
+     "start": 320.289,
+     "end": 320.439
+    },
+    {
+     "text": "Atacama,",
+     "start": 320.439,
+     "end": 321.119
+    },
+    {
+     "text": "and",
+     "start": 321.119,
+     "end": 321.399
+    },
+    {
+     "text": "the",
+     "start": 321.399,
+     "end": 321.519
     },
     {
      "text": "Australian",
-     "start": 277.623,
-     "end": 278.223
+     "start": 321.519,
+     "end": 322.119
     },
     {
      "text": "deserts.",
-     "start": 278.223,
-     "end": 278.783
+     "start": 322.119,
+     "end": 322.679
     }
    ]
   },
   {
    "id": "desert",
-   "speak": "Here, plants are thorny and drought-resistant: acacia, cactus, and in the Thar, khejri and babool, with long roots and small, waxy leaves to save water.",
-   "text": "Here, plants are thorny and drought-resistant: acacia, cactus, and in the Thar, khejri and babool, with long roots and small, waxy leaves to save water.",
-   "start": 280.051,
-   "end": 290.013,
+   "speak": "How do desert plants survive? They are thorny and drought-resistant: acacia, cactus, and in the Thar, khejri and babool, with long roots and small, waxy leaves to save water.",
+   "text": "How do desert plants survive? They are thorny and drought-resistant: acacia, cactus, and in the Thar, khejri and babool, with long roots and small, waxy leaves to save water.",
+   "start": 323.948,
+   "end": 335.148,
    "words": [
     {
-     "text": "Here,",
-     "start": 280.061,
-     "end": 280.441
+     "text": "How",
+     "start": 323.958,
+     "end": 324.188
+    },
+    {
+     "text": "do",
+     "start": 324.188,
+     "end": 324.368
+    },
+    {
+     "text": "desert",
+     "start": 324.368,
+     "end": 324.758
     },
     {
      "text": "plants",
-     "start": 280.441,
-     "end": 280.861
+     "start": 324.758,
+     "end": 325.118
+    },
+    {
+     "text": "survive?",
+     "start": 325.118,
+     "end": 325.658
+    },
+    {
+     "text": "They",
+     "start": 326.178,
+     "end": 326.338
     },
     {
      "text": "are",
-     "start": 280.861,
-     "end": 280.891
+     "start": 326.338,
+     "end": 326.378
     },
     {
      "text": "thorny",
-     "start": 280.891,
-     "end": 281.411
+     "start": 326.378,
+     "end": 326.928
     },
     {
      "text": "and",
-     "start": 281.411,
-     "end": 281.561
+     "start": 326.928,
+     "end": 327.078
     },
     {
      "text": "drought-resistant:",
-     "start": 281.561,
-     "end": 282.571
+     "start": 327.078,
+     "end": 328.078
     },
     {
      "text": "acacia,",
-     "start": 283.171,
-     "end": 283.781
+     "start": 328.668,
+     "end": 329.268
     },
     {
      "text": "cactus,",
-     "start": 283.901,
-     "end": 284.541
+     "start": 329.268,
+     "end": 329.938
     },
     {
      "text": "and",
-     "start": 284.541,
-     "end": 284.681
+     "start": 329.938,
+     "end": 330.078
     },
     {
      "text": "in",
-     "start": 284.681,
-     "end": 284.781
+     "start": 330.078,
+     "end": 330.178
     },
     {
      "text": "the",
-     "start": 284.781,
-     "end": 284.861
+     "start": 330.178,
+     "end": 330.258
     },
     {
      "text": "Thar,",
-     "start": 284.861,
-     "end": 285.331
+     "start": 330.258,
+     "end": 330.708
     },
     {
      "text": "khejri",
-     "start": 285.331,
-     "end": 285.781
+     "start": 330.708,
+     "end": 331.188
     },
     {
      "text": "and",
-     "start": 285.781,
-     "end": 285.911
+     "start": 331.188,
+     "end": 331.308
     },
     {
      "text": "babool,",
-     "start": 285.911,
-     "end": 286.431
+     "start": 331.308,
+     "end": 331.818
     },
     {
      "text": "with",
-     "start": 286.841,
-     "end": 286.991
+     "start": 332.058,
+     "end": 332.188
     },
     {
      "text": "long",
-     "start": 286.991,
-     "end": 287.361
+     "start": 332.188,
+     "end": 332.538
     },
     {
      "text": "roots",
-     "start": 287.361,
-     "end": 287.731
+     "start": 332.538,
+     "end": 332.928
     },
     {
      "text": "and",
-     "start": 287.731,
-     "end": 287.841
+     "start": 332.928,
+     "end": 333.038
     },
     {
      "text": "small,",
-     "start": 287.841,
-     "end": 288.271
+     "start": 333.038,
+     "end": 333.468
     },
     {
      "text": "waxy",
-     "start": 288.271,
-     "end": 288.751
+     "start": 333.468,
+     "end": 333.898
     },
     {
      "text": "leaves",
-     "start": 288.751,
-     "end": 289.051
+     "start": 333.898,
+     "end": 334.208
     },
     {
      "text": "to",
-     "start": 289.051,
-     "end": 289.161
+     "start": 334.208,
+     "end": 334.308
     },
     {
      "text": "save",
-     "start": 289.161,
-     "end": 289.491
+     "start": 334.308,
+     "end": 334.628
     },
     {
      "text": "water.",
-     "start": 289.491,
-     "end": 289.941
+     "start": 334.628,
+     "end": 335.098
     }
    ]
   },
   {
    "id": "india2",
-   "speak": "Most of India lies in between, where the monsoon brings seasonal rain. So its most widespread forests are tropical deciduous, with trees like teak and sal that shed their leaves in the dry season. The latest India State of Forest Report, for twenty twenty-three, puts forest cover at about twenty-one point seven six percent of India's area.",
-   "text": "Most of India lies in between, where the monsoon brings seasonal rain. So its most widespread forests are tropical deciduous, with trees like teak and sal that shed their leaves in the dry season. The latest India State of Forest Report, for 2023, puts forest cover at about 21.76% of India's area.",
-   "start": 291.213,
-   "end": 312.675,
+   "speak": "What forests does India have? Most of India lies in between, where the monsoon brings seasonal rain. So its most widespread forests are tropical deciduous, with trees like teak and sal that shed their leaves in the dry season. The Forest Survey of India's latest report, for twenty twenty-three, puts forest cover at about twenty-one point seven six percent of India's area.",
+   "text": "What forests does India have? Most of India lies in between, where the monsoon brings seasonal rain. So its most widespread forests are tropical deciduous, with trees like teak and sal that shed their leaves in the dry season. The Forest Survey of India's latest report, for 2023, puts forest cover at about 21.76% of India's area.",
+   "start": 336.348,
+   "end": 359.708,
    "words": [
     {
-     "text": "Most",
-     "start": 291.223,
-     "end": 291.513
-    },
-    {
-     "text": "of",
-     "start": 291.513,
-     "end": 291.573
-    },
-    {
-     "text": "India",
-     "start": 291.573,
-     "end": 291.943
-    },
-    {
-     "text": "lies",
-     "start": 291.943,
-     "end": 292.263
-    },
-    {
-     "text": "in",
-     "start": 292.263,
-     "end": 292.403
-    },
-    {
-     "text": "between,",
-     "start": 292.403,
-     "end": 292.953
-    },
-    {
-     "text": "where",
-     "start": 293.313,
-     "end": 293.423
-    },
-    {
-     "text": "the",
-     "start": 293.423,
-     "end": 293.503
-    },
-    {
-     "text": "monsoon",
-     "start": 293.503,
-     "end": 294.093
-    },
-    {
-     "text": "brings",
-     "start": 294.093,
-     "end": 294.353
-    },
-    {
-     "text": "seasonal",
-     "start": 294.353,
-     "end": 294.873
-    },
-    {
-     "text": "rain.",
-     "start": 294.873,
-     "end": 295.313
-    },
-    {
-     "text": "So",
-     "start": 296.043,
-     "end": 296.163
-    },
-    {
-     "text": "its",
-     "start": 296.163,
-     "end": 296.293
-    },
-    {
-     "text": "most",
-     "start": 296.293,
-     "end": 296.533
-    },
-    {
-     "text": "widespread",
-     "start": 296.533,
-     "end": 297.103
+     "text": "What",
+     "start": 336.368,
+     "end": 336.548
     },
     {
      "text": "forests",
-     "start": 297.103,
-     "end": 297.663
+     "start": 336.548,
+     "end": 336.998
     },
     {
-     "text": "are",
-     "start": 297.663,
-     "end": 297.703
-    },
-    {
-     "text": "tropical",
-     "start": 297.703,
-     "end": 298.203
-    },
-    {
-     "text": "deciduous,",
-     "start": 298.203,
-     "end": 298.933
-    },
-    {
-     "text": "with",
-     "start": 299.323,
-     "end": 299.463
-    },
-    {
-     "text": "trees",
-     "start": 299.463,
-     "end": 299.783
-    },
-    {
-     "text": "like",
-     "start": 299.783,
-     "end": 300.033
-    },
-    {
-     "text": "teak",
-     "start": 300.033,
-     "end": 300.403
-    },
-    {
-     "text": "and",
-     "start": 300.403,
-     "end": 300.543
-    },
-    {
-     "text": "sal",
-     "start": 300.543,
-     "end": 300.983
-    },
-    {
-     "text": "that",
-     "start": 300.983,
-     "end": 301.163
-    },
-    {
-     "text": "shed",
-     "start": 301.163,
-     "end": 301.473
-    },
-    {
-     "text": "their",
-     "start": 301.473,
-     "end": 301.663
-    },
-    {
-     "text": "leaves",
-     "start": 301.663,
-     "end": 302.033
-    },
-    {
-     "text": "in",
-     "start": 302.033,
-     "end": 302.153
-    },
-    {
-     "text": "the",
-     "start": 302.153,
-     "end": 302.233
-    },
-    {
-     "text": "dry",
-     "start": 302.233,
-     "end": 302.573
-    },
-    {
-     "text": "season.",
-     "start": 302.573,
-     "end": 303.173
-    },
-    {
-     "text": "The",
-     "start": 304.163,
-     "end": 304.243
-    },
-    {
-     "text": "latest",
-     "start": 304.243,
-     "end": 304.753
+     "text": "does",
+     "start": 336.998,
+     "end": 337.178
     },
     {
      "text": "India",
-     "start": 304.753,
-     "end": 305.103
+     "start": 337.178,
+     "end": 337.538
     },
     {
-     "text": "State",
-     "start": 305.103,
-     "end": 305.493
+     "text": "have?",
+     "start": 337.538,
+     "end": 338.018
+    },
+    {
+     "text": "Most",
+     "start": 338.508,
+     "end": 338.798
     },
     {
      "text": "of",
-     "start": 305.493,
-     "end": 305.553
+     "start": 338.798,
+     "end": 338.858
+    },
+    {
+     "text": "India",
+     "start": 338.858,
+     "end": 339.198
+    },
+    {
+     "text": "lies",
+     "start": 339.198,
+     "end": 339.538
+    },
+    {
+     "text": "in",
+     "start": 339.538,
+     "end": 339.678
+    },
+    {
+     "text": "between,",
+     "start": 339.678,
+     "end": 340.258
+    },
+    {
+     "text": "where",
+     "start": 340.418,
+     "end": 340.528
+    },
+    {
+     "text": "the",
+     "start": 340.528,
+     "end": 340.608
+    },
+    {
+     "text": "monsoon",
+     "start": 340.608,
+     "end": 341.198
+    },
+    {
+     "text": "brings",
+     "start": 341.198,
+     "end": 341.448
+    },
+    {
+     "text": "seasonal",
+     "start": 341.448,
+     "end": 341.948
+    },
+    {
+     "text": "rain.",
+     "start": 341.948,
+     "end": 342.358
+    },
+    {
+     "text": "So",
+     "start": 343.098,
+     "end": 343.218
+    },
+    {
+     "text": "its",
+     "start": 343.218,
+     "end": 343.348
+    },
+    {
+     "text": "most",
+     "start": 343.348,
+     "end": 343.588
+    },
+    {
+     "text": "widespread",
+     "start": 343.588,
+     "end": 344.168
+    },
+    {
+     "text": "forests",
+     "start": 344.168,
+     "end": 344.708
+    },
+    {
+     "text": "are",
+     "start": 344.708,
+     "end": 344.738
+    },
+    {
+     "text": "tropical",
+     "start": 344.738,
+     "end": 345.228
+    },
+    {
+     "text": "deciduous,",
+     "start": 345.228,
+     "end": 345.968
+    },
+    {
+     "text": "with",
+     "start": 346.328,
+     "end": 346.468
+    },
+    {
+     "text": "trees",
+     "start": 346.468,
+     "end": 346.788
+    },
+    {
+     "text": "like",
+     "start": 346.788,
+     "end": 347.048
+    },
+    {
+     "text": "teak",
+     "start": 347.048,
+     "end": 347.408
+    },
+    {
+     "text": "and",
+     "start": 347.408,
+     "end": 347.548
+    },
+    {
+     "text": "sal",
+     "start": 347.548,
+     "end": 347.978
+    },
+    {
+     "text": "that",
+     "start": 347.978,
+     "end": 348.148
+    },
+    {
+     "text": "shed",
+     "start": 348.148,
+     "end": 348.458
+    },
+    {
+     "text": "their",
+     "start": 348.458,
+     "end": 348.618
+    },
+    {
+     "text": "leaves",
+     "start": 348.618,
+     "end": 348.988
+    },
+    {
+     "text": "in",
+     "start": 348.988,
+     "end": 349.108
+    },
+    {
+     "text": "the",
+     "start": 349.108,
+     "end": 349.188
+    },
+    {
+     "text": "dry",
+     "start": 349.188,
+     "end": 349.538
+    },
+    {
+     "text": "season.",
+     "start": 349.538,
+     "end": 350.108
+    },
+    {
+     "text": "The",
+     "start": 351.088,
+     "end": 351.168
     },
     {
      "text": "Forest",
-     "start": 305.553,
-     "end": 306.013
+     "start": 351.168,
+     "end": 351.628
     },
     {
-     "text": "Report,",
-     "start": 306.013,
-     "end": 306.643
-    },
-    {
-     "text": "for",
-     "start": 306.643,
-     "end": 306.773
-    },
-    {
-     "text": "2023,",
-     "start": 306.773,
-     "end": 307.833
-    },
-    {
-     "text": "puts",
-     "start": 308.273,
-     "end": 308.533
-    },
-    {
-     "text": "forest",
-     "start": 308.533,
-     "end": 308.913
-    },
-    {
-     "text": "cover",
-     "start": 308.913,
-     "end": 309.193
-    },
-    {
-     "text": "at",
-     "start": 309.193,
-     "end": 309.393
-    },
-    {
-     "text": "about",
-     "start": 309.393,
-     "end": 309.663
-    },
-    {
-     "text": "21.76%",
-     "start": 309.663,
-     "end": 311.643
+     "text": "Survey",
+     "start": 351.628,
+     "end": 352.068
     },
     {
      "text": "of",
-     "start": 311.643,
-     "end": 311.713
+     "start": 352.068,
+     "end": 352.138
     },
     {
      "text": "India's",
-     "start": 311.713,
-     "end": 312.133
+     "start": 352.138,
+     "end": 352.628
+    },
+    {
+     "text": "latest",
+     "start": 352.628,
+     "end": 353.108
+    },
+    {
+     "text": "report,",
+     "start": 353.108,
+     "end": 353.668
+    },
+    {
+     "text": "for",
+     "start": 353.668,
+     "end": 353.758
+    },
+    {
+     "text": "2023,",
+     "start": 353.758,
+     "end": 354.838
+    },
+    {
+     "text": "puts",
+     "start": 355.248,
+     "end": 355.518
+    },
+    {
+     "text": "forest",
+     "start": 355.518,
+     "end": 355.918
+    },
+    {
+     "text": "cover",
+     "start": 355.918,
+     "end": 356.198
+    },
+    {
+     "text": "at",
+     "start": 356.198,
+     "end": 356.448
+    },
+    {
+     "text": "about",
+     "start": 356.448,
+     "end": 356.718
+    },
+    {
+     "text": "21.76%",
+     "start": 356.718,
+     "end": 358.728
+    },
+    {
+     "text": "of",
+     "start": 358.728,
+     "end": 358.788
+    },
+    {
+     "text": "India's",
+     "start": 358.788,
+     "end": 359.198
     },
     {
      "text": "area.",
-     "start": 312.133,
-     "end": 312.623
+     "start": 359.198,
+     "end": 359.628
     }
    ]
   },
   {
    "id": "poles",
-   "speak": "Further from the Equator, the Sun sits lower. The temperate zones grow deciduous and coniferous forests, like oak, pine and deodar, and the frigid zones have only tundra: mosses and lichens.",
-   "text": "Further from the Equator, the Sun sits lower. The temperate zones grow deciduous and coniferous forests, like oak, pine and deodar, and the frigid zones have only tundra: mosses and lichens.",
-   "start": 313.875,
-   "end": 326.696,
+   "speak": "How does vegetation change towards the poles? Further from the Equator, the Sun sits lower. The temperate zones grow deciduous and coniferous forests, like oak, pine and deodar, and the frigid zones have only tundra: mosses and lichens.",
+   "text": "How does vegetation change towards the poles? Further from the Equator, the Sun sits lower. The temperate zones grow deciduous and coniferous forests, like oak, pine and deodar, and the frigid zones have only tundra: mosses and lichens.",
+   "start": 360.908,
+   "end": 376.567,
    "words": [
     {
+     "text": "How",
+     "start": 360.918,
+     "end": 361.088
+    },
+    {
+     "text": "does",
+     "start": 361.088,
+     "end": 361.268
+    },
+    {
+     "text": "vegetation",
+     "start": 361.268,
+     "end": 362.028
+    },
+    {
+     "text": "change",
+     "start": 362.028,
+     "end": 362.388
+    },
+    {
+     "text": "towards",
+     "start": 362.388,
+     "end": 362.768
+    },
+    {
+     "text": "the",
+     "start": 362.768,
+     "end": 362.848
+    },
+    {
+     "text": "poles?",
+     "start": 362.848,
+     "end": 363.408
+    },
+    {
      "text": "Further",
-     "start": 313.885,
-     "end": 314.285
+     "start": 364.008,
+     "end": 364.378
     },
     {
      "text": "from",
-     "start": 314.285,
-     "end": 314.495
+     "start": 364.378,
+     "end": 364.588
     },
     {
      "text": "the",
-     "start": 314.495,
-     "end": 314.605
+     "start": 364.588,
+     "end": 364.688
     },
     {
      "text": "Equator,",
-     "start": 314.605,
-     "end": 315.225
+     "start": 364.688,
+     "end": 365.258
     },
     {
      "text": "the",
-     "start": 315.225,
-     "end": 315.355
+     "start": 365.258,
+     "end": 365.388
     },
     {
      "text": "Sun",
-     "start": 315.355,
-     "end": 315.785
+     "start": 365.388,
+     "end": 365.768
     },
     {
      "text": "sits",
-     "start": 315.785,
-     "end": 316.105
+     "start": 365.768,
+     "end": 366.088
     },
     {
      "text": "lower.",
-     "start": 316.105,
-     "end": 316.545
+     "start": 366.088,
+     "end": 366.508
     },
     {
      "text": "The",
-     "start": 317.375,
-     "end": 317.455
+     "start": 367.238,
+     "end": 367.318
     },
     {
      "text": "temperate",
-     "start": 317.455,
-     "end": 317.875
+     "start": 367.318,
+     "end": 367.768
     },
     {
      "text": "zones",
-     "start": 317.875,
-     "end": 318.365
+     "start": 367.768,
+     "end": 368.258
     },
     {
      "text": "grow",
-     "start": 318.365,
-     "end": 318.605
+     "start": 368.258,
+     "end": 368.498
     },
     {
      "text": "deciduous",
-     "start": 318.605,
-     "end": 319.305
+     "start": 368.498,
+     "end": 369.158
     },
     {
      "text": "and",
-     "start": 319.305,
-     "end": 319.425
+     "start": 369.158,
+     "end": 369.298
     },
     {
      "text": "coniferous",
-     "start": 319.425,
-     "end": 319.915
+     "start": 369.298,
+     "end": 369.758
     },
     {
      "text": "forests,",
-     "start": 319.915,
-     "end": 320.475
+     "start": 369.758,
+     "end": 370.338
     },
     {
      "text": "like",
-     "start": 320.475,
-     "end": 320.785
+     "start": 370.338,
+     "end": 370.648
     },
     {
      "text": "oak,",
-     "start": 320.785,
-     "end": 321.165
+     "start": 370.648,
+     "end": 371.028
     },
     {
      "text": "pine",
-     "start": 321.165,
-     "end": 321.635
+     "start": 371.028,
+     "end": 371.498
     },
     {
      "text": "and",
-     "start": 321.635,
-     "end": 321.785
+     "start": 371.498,
+     "end": 371.648
     },
     {
      "text": "deodar,",
-     "start": 321.785,
-     "end": 322.355
+     "start": 371.648,
+     "end": 372.208
     },
     {
      "text": "and",
-     "start": 322.755,
-     "end": 322.885
+     "start": 372.608,
+     "end": 372.748
     },
     {
      "text": "the",
-     "start": 322.885,
-     "end": 322.945
+     "start": 372.748,
+     "end": 372.808
     },
     {
      "text": "frigid",
-     "start": 322.945,
-     "end": 323.345
+     "start": 372.808,
+     "end": 373.208
     },
     {
      "text": "zones",
-     "start": 323.345,
-     "end": 323.785
+     "start": 373.208,
+     "end": 373.648
     },
     {
      "text": "have",
-     "start": 323.785,
-     "end": 323.945
+     "start": 373.648,
+     "end": 373.808
     },
     {
      "text": "only",
-     "start": 323.945,
-     "end": 324.275
+     "start": 373.808,
+     "end": 374.138
     },
     {
      "text": "tundra:",
-     "start": 324.275,
-     "end": 324.795
+     "start": 374.138,
+     "end": 374.658
     },
     {
      "text": "mosses",
-     "start": 325.305,
-     "end": 325.805
+     "start": 375.138,
+     "end": 375.648
     },
     {
      "text": "and",
-     "start": 325.805,
-     "end": 325.915
+     "start": 375.648,
+     "end": 375.778
     },
     {
      "text": "lichens.",
-     "start": 325.915,
-     "end": 326.655
+     "start": 375.778,
+     "end": 376.508
     }
    ]
   },
   {
    "id": "outro",
-   "speak": "Remember: imaginary lines locate places and set time. Earth's tilt creates the solstices and the seasons. And latitude, through the Sun's angle and the movement of air, decides climate and forests.",
-   "text": "Remember: imaginary lines locate places and set time. Earth's tilt creates the solstices and the seasons. And latitude, through the Sun's angle and the movement of air, decides climate and forests.",
-   "start": 328.296,
-   "end": 341.8,
+   "speak": "So: what, why, and how. What: imaginary lines locate places and set time. Why: Earth's tilt creates the solstices and the seasons. How: latitude, through the Sun's angle and the movement of air, decides climate and forests.",
+   "text": "So: what, why, and how. What: imaginary lines locate places and set time. Why: Earth's tilt creates the solstices and the seasons. How: latitude, through the Sun's angle and the movement of air, decides climate and forests.",
+   "start": 378.167,
+   "end": 393.761,
    "words": [
     {
-     "text": "Remember:",
-     "start": 328.316,
-     "end": 329.036
+     "text": "So:",
+     "start": 378.177,
+     "end": 378.537
+    },
+    {
+     "text": "what,",
+     "start": 378.537,
+     "end": 378.787
+    },
+    {
+     "text": "why,",
+     "start": 378.787,
+     "end": 379.117
+    },
+    {
+     "text": "and",
+     "start": 379.117,
+     "end": 379.217
+    },
+    {
+     "text": "how.",
+     "start": 379.217,
+     "end": 379.697
+    },
+    {
+     "text": "What:",
+     "start": 380.257,
+     "end": 380.557
     },
     {
      "text": "imaginary",
-     "start": 329.036,
-     "end": 329.656
+     "start": 380.557,
+     "end": 381.207
     },
     {
      "text": "lines",
-     "start": 329.656,
-     "end": 330.116
+     "start": 381.207,
+     "end": 381.577
     },
     {
      "text": "locate",
-     "start": 330.116,
-     "end": 330.536
+     "start": 381.577,
+     "end": 382.007
     },
     {
      "text": "places",
-     "start": 330.536,
-     "end": 331.126
+     "start": 382.007,
+     "end": 382.547
     },
     {
      "text": "and",
-     "start": 331.126,
-     "end": 331.246
+     "start": 382.547,
+     "end": 382.657
     },
     {
      "text": "set",
-     "start": 331.246,
-     "end": 331.496
+     "start": 382.657,
+     "end": 382.897
     },
     {
      "text": "time.",
-     "start": 331.496,
-     "end": 332.006
+     "start": 382.897,
+     "end": 383.377
+    },
+    {
+     "text": "Why:",
+     "start": 384.077,
+     "end": 384.527
     },
     {
      "text": "Earth's",
-     "start": 332.816,
-     "end": 333.166
+     "start": 384.777,
+     "end": 385.077
     },
     {
      "text": "tilt",
-     "start": 333.166,
-     "end": 333.546
+     "start": 385.077,
+     "end": 385.397
     },
     {
      "text": "creates",
-     "start": 333.546,
-     "end": 334.046
+     "start": 385.397,
+     "end": 385.887
     },
     {
      "text": "the",
-     "start": 334.046,
-     "end": 334.136
+     "start": 385.887,
+     "end": 385.977
     },
     {
      "text": "solstices",
-     "start": 334.136,
-     "end": 334.936
+     "start": 385.977,
+     "end": 386.727
     },
     {
      "text": "and",
-     "start": 334.936,
-     "end": 335.056
+     "start": 386.727,
+     "end": 386.847
     },
     {
      "text": "the",
-     "start": 335.056,
-     "end": 335.116
+     "start": 386.847,
+     "end": 386.907
     },
     {
      "text": "seasons.",
-     "start": 335.116,
-     "end": 335.876
+     "start": 386.907,
+     "end": 387.607
     },
     {
-     "text": "And",
-     "start": 336.436,
-     "end": 336.576
+     "text": "How:",
+     "start": 388.237,
+     "end": 388.757
     },
     {
      "text": "latitude,",
-     "start": 336.576,
-     "end": 337.346
+     "start": 388.957,
+     "end": 389.667
     },
     {
      "text": "through",
-     "start": 337.346,
-     "end": 337.536
+     "start": 389.667,
+     "end": 389.857
     },
     {
      "text": "the",
-     "start": 337.536,
-     "end": 337.606
+     "start": 389.857,
+     "end": 389.927
     },
     {
      "text": "Sun's",
-     "start": 337.606,
-     "end": 337.996
+     "start": 389.927,
+     "end": 390.327
     },
     {
      "text": "angle",
-     "start": 337.996,
-     "end": 338.426
+     "start": 390.327,
+     "end": 390.727
     },
     {
      "text": "and",
-     "start": 338.426,
-     "end": 338.546
+     "start": 390.727,
+     "end": 390.857
     },
     {
      "text": "the",
-     "start": 338.546,
-     "end": 338.606
+     "start": 390.857,
+     "end": 390.917
     },
     {
      "text": "movement",
-     "start": 338.606,
-     "end": 339.026
+     "start": 390.917,
+     "end": 391.347
     },
     {
      "text": "of",
-     "start": 339.026,
-     "end": 339.106
+     "start": 391.347,
+     "end": 391.417
     },
     {
      "text": "air,",
-     "start": 339.106,
-     "end": 339.516
+     "start": 391.417,
+     "end": 391.797
     },
     {
      "text": "decides",
-     "start": 339.826,
-     "end": 340.356
+     "start": 391.797,
+     "end": 392.347
     },
     {
      "text": "climate",
-     "start": 340.356,
-     "end": 340.876
+     "start": 392.347,
+     "end": 392.857
     },
     {
      "text": "and",
-     "start": 340.876,
-     "end": 340.996
+     "start": 392.857,
+     "end": 392.967
     },
     {
      "text": "forests.",
-     "start": 340.996,
-     "end": 341.736
+     "start": 392.967,
+     "end": 393.697
     }
    ]
   }

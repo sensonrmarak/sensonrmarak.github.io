@@ -2,6 +2,7 @@ import React from "react";
 import { AbsoluteFill, Audio, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { C, Defs, FONT, FONT_SC, NAR, Paper, sm } from "./kit";
 import * as S from "./scenes";
+import { QBadge, MONSOON_QA } from "./qa";
 
 /* UPSC Animated · Indian Monsoon. Designed at 1920x1080 and drawn at 2560x1440 (vectors scaled 4/3).
    Layout: card y 74-880 (graphics), caption strip y 905-1060 (nothing else drawn there), chapter label top-left. */
@@ -21,15 +22,15 @@ const Icon = ({ kind }: { kind: "calendar" | "gears" | "thermo" }) => (
 
 const SCENES: Record<string, (p: { T: number }) => React.ReactElement> = {
   intro: S.Intro,
-  p1: ({ T }) => <S.PartCard T={T} id="p1" n={1} title="The two phases" icon={<Icon kind="calendar" />} />,
+  p1: ({ T }) => <S.PartCard T={T} id="p1" n={1} title="What is the monsoon?" icon={<Icon kind="calendar" />} />,
   sw: S.SouthWest, share: S.Share, arabian: S.Arabian, bengal: S.Bengal, ne: S.NorthEast, tn: S.TamilNadu,
-  p2: ({ T }) => <S.PartCard T={T} id="p2" n={2} title="Core drivers: how it works" icon={<Icon kind="gears" />} />,
+  p2: ({ T }) => <S.PartCard T={T} id="p2" n={2} title="Why does it happen?" icon={<Icon kind="gears" />} />,
   heat: S.Heating, coriolis: S.Coriolis, itcz: S.Itcz, jet: S.Jets, ocean: S.Oceans,
-  p3: ({ T }) => <S.PartCard T={T} id="p3" n={3} title="Recent shifts and climate change" icon={<Icon kind="thermo" />} />,
-  lpa: S.Lpa, extreme: S.Extremes, erratic: S.Erratic, cyclone: S.Cyclones, impact: S.Impacts, outro: S.Outro,
+  p3: ({ T }) => <S.PartCard T={T} id="p3" n={3} title="How is it changing?" icon={<Icon kind="thermo" />} />,
+  lpa: S.Lpa, extreme: S.Extremes, erratic: S.Erratic, cyclone: S.Cyclones, track: S.Track, impact: S.Impacts, outro: S.Outro,
 };
-const PART = (id: string) => ["p1", "sw", "share", "arabian", "bengal", "ne", "tn"].includes(id) ? "Part 1 · Two phases"
-  : ["p2", "heat", "coriolis", "itcz", "jet", "ocean"].includes(id) ? "Part 2 · Core drivers" : ["intro"].includes(id) ? "" : id === "outro" ? "Summary" : "Part 3 · Recent shifts";
+const PART = (id: string) => ["p1", "sw", "share", "arabian", "bengal", "ne", "tn"].includes(id) ? "Part 1 · What is the monsoon?"
+  : ["p2", "heat", "coriolis", "itcz", "jet", "ocean"].includes(id) ? "Part 2 · Why does it happen?" : ["intro"].includes(id) ? "" : id === "outro" ? "Summary" : "Part 3 · How is it changing?";
 
 /* captions: a few words at a time in the strip below the card; the spoken word underlined in marker yellow */
 type W = { text: string; start: number; end: number };
@@ -66,6 +67,7 @@ const Inner = () => {
       <Defs />
       <Paper />
       <Scene T={T} />
+      <QBadge T={T} start={seg.start} end={NAR.segments[idx + 1]?.start ?? 1e9} qa={MONSOON_QA[seg.id]} />
       <div style={{ position: "absolute", left: 40, top: 20, fontFamily: FONT_SC, fontSize: 30, color: C.soft, letterSpacing: 1, opacity: part ? 1 : 0 }}>Indian Monsoon · {part}</div>
       <svg width={1920} height={1080} style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
         <path d="M 120 908 Q 960 902 1800 908" fill="none" stroke={C.ink} strokeWidth={2.5} strokeDasharray="10 9" opacity={0.35} />

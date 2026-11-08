@@ -3,6 +3,7 @@ import { AbsoluteFill, Audio, interpolate, staticFile, useCurrentFrame, useVideo
 import { C, Defs, FONT, FONT_SC, Paper, sm } from "../monsoon/kit";
 import { NAR } from "./parts";
 import * as S from "./scenes";
+import { QBadge, SEASONS_QA } from "../monsoon/qa";
 
 /* UPSC Animated · Seasons, solstices and heat zones. Same layout as the monsoon lesson:
    card y 74-880 (graphics), caption strip y 905-1060 (nothing else drawn there), chapter label top-left. */
@@ -22,18 +23,18 @@ const Icon = ({ kind }: { kind: "grid" | "orbit" | "sun" | "tree" }) => (
 
 const SCENES: Record<string, (p: { T: number }) => React.ReactElement> = {
   intro: S.Intro,
-  p1: ({ T }) => <S.PartCard T={T} id="p1" n={1} title="Imaginary lines on the globe" icon={<Icon kind="grid" />} />,
+  p1: ({ T }) => <S.PartCard T={T} id="p1" n={1} title="What are the imaginary lines?" icon={<Icon kind="grid" />} />,
   lat: S.Latitude, lon: S.Longitude, equator: S.Equator, parallels: S.Parallels, india: S.IndiaToc, time: S.TimeScene,
-  p2: ({ T }) => <S.PartCard T={T} id="p2" n={2} title="Tilt and revolution" icon={<Icon kind="orbit" />} />,
+  p2: ({ T }) => <S.PartCard T={T} id="p2" n={2} title="Why do we have seasons?" icon={<Icon kind="orbit" />} />,
   tilt: S.Tilt, orbit: S.Orbit, distance: S.Distance,
-  p3: ({ T }) => <S.PartCard T={T} id="p3" n={3} title="Solstices and equinoxes" icon={<Icon kind="sun" />} />,
+  p3: ({ T }) => <S.PartCard T={T} id="p3" n={3} title="What are solstices and equinoxes?" icon={<Icon kind="sun" />} />,
   june: S.June, dec: S.Dec, equinox: S.Equinox, noon: S.Noon,
-  p4: ({ T }) => <S.PartCard T={T} id="p4" n={4} title="Climate and forests by latitude" icon={<Icon kind="tree" />} />,
+  p4: ({ T }) => <S.PartCard T={T} id="p4" n={4} title="Why do climates and forests differ?" icon={<Icon kind="tree" />} />,
   eqzone: S.EqZone, rainforest: S.Rainforest, tropics: S.Tropics, desert: S.Desert, india2: S.India2, poles: S.Poles, outro: S.Outro,
 };
-const GROUPS: [string, string[]][] = [["Part 1 · Imaginary lines", ["p1", "lat", "lon", "equator", "parallels", "india", "time"]],
-  ["Part 2 · Tilt and orbit", ["p2", "tilt", "orbit", "distance"]], ["Part 3 · Solstices", ["p3", "june", "dec", "equinox", "noon"]],
-  ["Part 4 · Climate and forests", ["p4", "eqzone", "rainforest", "tropics", "desert", "india2", "poles"]], ["Summary", ["outro"]]];
+const GROUPS: [string, string[]][] = [["Part 1 · What are the imaginary lines?", ["p1", "lat", "lon", "equator", "parallels", "india", "time"]],
+  ["Part 2 · Why do we have seasons?", ["p2", "tilt", "orbit", "distance"]], ["Part 3 · What are solstices and equinoxes?", ["p3", "june", "dec", "equinox", "noon"]],
+  ["Part 4 · Why do climates differ?", ["p4", "eqzone", "rainforest", "tropics", "desert", "india2", "poles"]], ["Summary", ["outro"]]];
 const PART = (id: string) => GROUPS.find(([, ids]) => ids.includes(id))?.[0] ?? "";
 
 /* captions: a few words at a time in the strip below the card; the spoken word underlined in marker yellow */
@@ -71,6 +72,7 @@ const Inner = () => {
       <Defs />
       <Paper />
       <Scene T={T} />
+      <QBadge T={T} start={seg.start} end={NAR.segments[idx + 1]?.start ?? 1e9} qa={SEASONS_QA[seg.id]} />
       <div style={{ position: "absolute", left: 40, top: 20, fontFamily: FONT_SC, fontSize: 30, color: C.soft, letterSpacing: 1, opacity: part ? 1 : 0 }}>Seasons and Heat Zones · {part}</div>
       <svg width={1920} height={1080} style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
         <path d="M 120 908 Q 960 902 1800 908" fill="none" stroke={C.ink} strokeWidth={2.5} strokeDasharray="10 9" opacity={0.35} />

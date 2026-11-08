@@ -1,3 +1,4 @@
+import { TAGCOL } from "../monsoon/qa";
 import React from "react";
 import { Arrow, C, CARD, Card, Cloud, FONT, FONT_SC, Host, Label, lerp, sm } from "../monsoon/kit";
 import { MapView, P, X, Y } from "../monsoon/map";
@@ -18,8 +19,8 @@ export const Intro = ({ T }: SP) => {
       <Host t={t} T={T} mood="wave" />
       <Card title="Seasons, Solstices and Heat Zones" t={T} appear={s.start - 0.2}>
         <Svg><SunIcon x={1180} y={190} r={60} T={T} /><Globe cx={GX} cy={GY} r={GR} tilt={23.5} sunAngle={0} meridians={10} spin={T * 12} lats={KEY_LATS()} /></Svg>
-        {["1 · Imaginary lines", "2 · Tilt and orbit", "3 · Solstices and equinoxes", "4 · Climates and forests"].map((x, i) =>
-          <Line key={i} T={T} at={s.start + 0.8 + i * 1.1} y={PANEL.top + 230 + i * 92} size={48}>{x}</Line>)}
+        {([["WHAT", "are the imaginary lines, solstices and equinoxes?", "what"], ["WHY", "do we have seasons, and different climates?", "why"], ["HOW", "do they shape weather and forests?", "how"]] as const).map(([tg, x, w], i) =>
+          <Line key={i} T={T} at={cue("intro", w)} y={PANEL.top + 170 + i * 130} size={44} color={TAGCOL[tg]}>{`${tg} ${x}`}</Line>)}
       </Card>
     </>
   );
@@ -30,7 +31,7 @@ export const PartCard = ({ T, id, n, title, icon }: SP & { id: string; n: number
     <>
       <Host t={T - s.start} T={T} mood="wave" />
       <Card title={`Part ${n}`} t={T} appear={s.start - 0.3}>
-        <div style={{ position: "absolute", left: 0, right: 0, top: 230, textAlign: "center", fontFamily: FONT, fontSize: 104, color: C.ink }}>{title}</div>
+        <div style={{ position: "absolute", left: 0, right: 0, top: 240, textAlign: "center", fontFamily: FONT, fontSize: 84, color: C.ink }}>{title}</div>
         <div style={{ position: "absolute", left: 0, right: 0, top: 420, display: "flex", justifyContent: "center" }}>{icon}</div>
       </Card>
     </>
@@ -39,7 +40,7 @@ export const PartCard = ({ T, id, n, title, icon }: SP & { id: string; n: number
 
 /* =========================================================== part 1: lines */
 export const Latitude = ({ T }: SP) => {
-  const s = segOf("lat"), a = cue("lat", "latitude"), m = cue("lat", "measured");
+  const s = segOf("lat"), a = cue("lat", "latitude", 1), m = cue("lat", "measured");
   const lats = [0, 30, 60, -30, -60].map((lat, i) => ({ lat, color: lat === 0 ? C.red : "#2f6d9a", w: lat === 0 ? 5 : 3.5, o: sm(a + i * 0.35, a + 0.4 + i * 0.35, T) }));
   return (
     <>
@@ -59,7 +60,7 @@ export const Latitude = ({ T }: SP) => {
   );
 };
 export const Longitude = ({ T }: SP) => {
-  const s = segOf("lon"), a = cue("lon", "longitude"), g = cue("lon", "greenwich"), e = cue("lon", "east");
+  const s = segOf("lon"), a = cue("lon", "longitude", 1), g = cue("lon", "greenwich"), e = cue("lon", "east");
   return (
     <>
       <Host t={T - s.start} T={T} mood="point" />
@@ -175,7 +176,7 @@ export const TimeScene = ({ T }: SP) => {
 
 /* =========================================================== part 2: tilt and orbit */
 export const Tilt = ({ T }: SP) => {
-  const s = segOf("tilt"), a = cue("tilt", "tilted"), b = cue("tilt", "66.5"), p = cue("tilt", "pole");
+  const s = segOf("tilt"), a = cue("tilt", "tilt", 1), b = cue("tilt", "66.5"), p = cue("tilt", "pole");
   const tl = 23.5 * sm(a - 0.5, a + 0.6, T), r = 195, cx = 420, cy = 470, th = tl * Math.PI / 180;
   const arc = (R: number, a0: number, a1: number) => `M ${cx + R * Math.sin(a0)} ${cy - R * Math.cos(a0)} A ${R} ${R} 0 0 1 ${cx + R * Math.sin(a1)} ${cy - R * Math.cos(a1)}`;
   return (
@@ -436,9 +437,9 @@ export const Outro = ({ T }: SP) => {
     <>
       <Host t={T - s.start} T={T} mood="wave" />
       <Card title="Remember" t={T} appear={s.start - 0.3}>
-        <Line T={T} at={cue("outro", "imaginary")} x={110} y={170} w={1200} size={54}>Imaginary lines locate places and set time</Line>
-        <Line T={T} at={cue("outro", "tilt")} x={110} y={320} w={1200} size={54} color={C.sunDark}>Earth's 23.5° tilt creates solstices and seasons</Line>
-        <Line T={T} at={cue("outro", "latitude")} x={110} y={470} w={1200} size={54} color={C.red}>Latitude (Sun angle + air movement) decides climate and forests</Line>
+        <Line T={T} at={cue("outro", "imaginary")} x={110} y={170} w={1200} size={54}>WHAT · imaginary lines locate places and set time</Line>
+        <Line T={T} at={cue("outro", "tilt")} x={110} y={320} w={1200} size={54} color={TAGCOL.WHY}>WHY · Earth's 23.5° tilt creates solstices and seasons</Line>
+        <Line T={T} at={cue("outro", "latitude")} x={110} y={470} w={1200} size={54} color={TAGCOL.HOW}>HOW · latitude (Sun angle + air movement) decides climate and forests</Line>
       </Card>
     </>
   );
