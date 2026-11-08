@@ -8,6 +8,9 @@ import { ZonesLesson, ZONES_FRAMES, ZONES_FPS } from "./zones/ZonesLesson";
 import { UpscBranded, brandedFrames } from "./brand/UpscBrand";
 import { MonsoonLesson, MONSOON_FRAMES, MONSOON_FPS } from "./monsoon/MonsoonLesson";
 import { MonsoonStatics } from "./monsoon/Statics";
+import { SeasonsLesson, SEASONS_FRAMES, SEASONS_FPS } from "./seasons2/SeasonsLesson";
+import { SeasonsStatics } from "./seasons2/Statics";
+const SeasonsBranded = () => <UpscBranded contentFrames={SEASONS_FRAMES} variant="ink" corner="bottom-right"><SeasonsLesson /></UpscBranded>;
 const MonsoonBranded = () => <UpscBranded contentFrames={MONSOON_FRAMES} variant="ink" corner="bottom-right"><MonsoonLesson /></UpscBranded>;
 const ZonesLessonBranded = () => <UpscBranded contentFrames={ZONES_FRAMES} variant="ink" corner="bottom-right"><ZonesLesson /></UpscBranded>;
 
@@ -24,6 +27,9 @@ export const RemotionRoot = () => (
   <Composition id="ZonesLessonBranded" component={ZonesLessonBranded} durationInFrames={brandedFrames(ZONES_FRAMES, ZONES_FPS)} fps={ZONES_FPS} width={2560} height={1440} />
   <Composition id="MonsoonLesson" component={MonsoonLesson} durationInFrames={MONSOON_FRAMES} fps={MONSOON_FPS} width={2560} height={1440} />
   <Composition id="UpscMonsoon" component={MonsoonBranded} durationInFrames={brandedFrames(MONSOON_FRAMES, MONSOON_FPS)} fps={MONSOON_FPS} width={2560} height={1440} />
+  <Composition id="SeasonsLesson" component={SeasonsLesson} durationInFrames={SEASONS_FRAMES} fps={SEASONS_FPS} width={2560} height={1440} />
+  <Composition id="UpscSeasons" component={SeasonsBranded} durationInFrames={brandedFrames(SEASONS_FRAMES, SEASONS_FPS)} fps={SEASONS_FPS} width={2560} height={1440} />
+  <Composition id="SeasonsStatics" component={SeasonsStatics} durationInFrames={1} fps={30} width={2560} height={1440} defaultProps={{ layer: "world0" }} />
   <Composition id="MonsoonStatics" component={MonsoonStatics} durationInFrames={1} fps={30} width={2560} height={1440} defaultProps={{ layer: "paper" }} />
   </>
 );

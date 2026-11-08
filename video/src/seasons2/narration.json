@@ -1,0 +1,3961 @@
+{
+ "total": 343.6,
+ "voice": "bf_emma",
+ "segments": [
+  {
+   "id": "intro",
+   "speak": "Why does the Earth have seasons? And why are some places always hot and wet, while others are deserts? Let's build the answer, step by step.",
+   "text": "Why does the Earth have seasons? And why are some places always hot and wet, while others are deserts? Let's build the answer, step by step.",
+   "start": 1.5,
+   "end": 9.863,
+   "words": [
+    {
+     "text": "Why",
+     "start": 1.51,
+     "end": 1.7
+    },
+    {
+     "text": "does",
+     "start": 1.7,
+     "end": 1.84
+    },
+    {
+     "text": "the",
+     "start": 1.84,
+     "end": 2.02
+    },
+    {
+     "text": "Earth",
+     "start": 2.02,
+     "end": 2.23
+    },
+    {
+     "text": "have",
+     "start": 2.23,
+     "end": 2.4
+    },
+    {
+     "text": "seasons?",
+     "start": 2.4,
+     "end": 3.1
+    },
+    {
+     "text": "And",
+     "start": 3.54,
+     "end": 3.67
+    },
+    {
+     "text": "why",
+     "start": 3.67,
+     "end": 3.87
+    },
+    {
+     "text": "are",
+     "start": 3.87,
+     "end": 3.9
+    },
+    {
+     "text": "some",
+     "start": 3.9,
+     "end": 4.13
+    },
+    {
+     "text": "places",
+     "start": 4.13,
+     "end": 4.68
+    },
+    {
+     "text": "always",
+     "start": 4.68,
+     "end": 5.04
+    },
+    {
+     "text": "hot",
+     "start": 5.04,
+     "end": 5.37
+    },
+    {
+     "text": "and",
+     "start": 5.37,
+     "end": 5.48
+    },
+    {
+     "text": "wet,",
+     "start": 5.48,
+     "end": 5.83
+    },
+    {
+     "text": "while",
+     "start": 5.83,
+     "end": 6.04
+    },
+    {
+     "text": "others",
+     "start": 6.04,
+     "end": 6.36
+    },
+    {
+     "text": "are",
+     "start": 6.36,
+     "end": 6.42
+    },
+    {
+     "text": "deserts?",
+     "start": 6.42,
+     "end": 7.05
+    },
+    {
+     "text": "Let's",
+     "start": 7.59,
+     "end": 7.86
+    },
+    {
+     "text": "build",
+     "start": 7.86,
+     "end": 8.12
+    },
+    {
+     "text": "the",
+     "start": 8.12,
+     "end": 8.26
+    },
+    {
+     "text": "answer,",
+     "start": 8.26,
+     "end": 8.8
+    },
+    {
+     "text": "step",
+     "start": 8.8,
+     "end": 9.06
+    },
+    {
+     "text": "by",
+     "start": 9.06,
+     "end": 9.3
+    },
+    {
+     "text": "step.",
+     "start": 9.3,
+     "end": 9.78
+    }
+   ]
+  },
+  {
+   "id": "p1",
+   "speak": "Part one: the imaginary lines.",
+   "text": "Part one: the imaginary lines.",
+   "start": 11.983,
+   "end": 14.244,
+   "words": [
+    {
+     "text": "Part",
+     "start": 11.983,
+     "end": 12.313
+    },
+    {
+     "text": "one:",
+     "start": 12.313,
+     "end": 12.663
+    },
+    {
+     "text": "the",
+     "start": 12.663,
+     "end": 12.823
+    },
+    {
+     "text": "imaginary",
+     "start": 12.823,
+     "end": 13.443
+    },
+    {
+     "text": "lines.",
+     "start": 13.443,
+     "end": 14.183
+    }
+   ]
+  },
+  {
+   "id": "lat",
+   "speak": "To locate any place on Earth, we use a grid of imaginary lines. Lines of latitude, or parallels, run east to west. They are measured from zero degrees at the Equator, to ninety degrees at each pole.",
+   "text": "To locate any place on Earth, we use a grid of imaginary lines. Lines of latitude, or parallels, run east to west. They are measured from zero degrees at the Equator, to ninety degrees at each pole.",
+   "start": 15.444,
+   "end": 28.457,
+   "words": [
+    {
+     "text": "To",
+     "start": 15.454,
+     "end": 15.614
+    },
+    {
+     "text": "locate",
+     "start": 15.614,
+     "end": 16.104
+    },
+    {
+     "text": "any",
+     "start": 16.104,
+     "end": 16.254
+    },
+    {
+     "text": "place",
+     "start": 16.254,
+     "end": 16.604
+    },
+    {
+     "text": "on",
+     "start": 16.604,
+     "end": 16.744
+    },
+    {
+     "text": "Earth,",
+     "start": 16.744,
+     "end": 17.164
+    },
+    {
+     "text": "we",
+     "start": 17.424,
+     "end": 17.534
+    },
+    {
+     "text": "use",
+     "start": 17.534,
+     "end": 17.754
+    },
+    {
+     "text": "a",
+     "start": 17.754,
+     "end": 17.804
+    },
+    {
+     "text": "grid",
+     "start": 17.804,
+     "end": 18.104
+    },
+    {
+     "text": "of",
+     "start": 18.104,
+     "end": 18.194
+    },
+    {
+     "text": "imaginary",
+     "start": 18.194,
+     "end": 18.834
+    },
+    {
+     "text": "lines.",
+     "start": 18.834,
+     "end": 19.484
+    },
+    {
+     "text": "Lines",
+     "start": 20.274,
+     "end": 20.764
+    },
+    {
+     "text": "of",
+     "start": 20.764,
+     "end": 20.834
+    },
+    {
+     "text": "latitude,",
+     "start": 20.834,
+     "end": 21.514
+    },
+    {
+     "text": "or",
+     "start": 21.514,
+     "end": 21.664
+    },
+    {
+     "text": "parallels,",
+     "start": 21.664,
+     "end": 22.394
+    },
+    {
+     "text": "run",
+     "start": 22.394,
+     "end": 22.654
+    },
+    {
+     "text": "east",
+     "start": 22.654,
+     "end": 22.914
+    },
+    {
+     "text": "to",
+     "start": 22.914,
+     "end": 23.014
+    },
+    {
+     "text": "west.",
+     "start": 23.014,
+     "end": 23.574
+    },
+    {
+     "text": "They",
+     "start": 24.074,
+     "end": 24.244
+    },
+    {
+     "text": "are",
+     "start": 24.244,
+     "end": 24.274
+    },
+    {
+     "text": "measured",
+     "start": 24.274,
+     "end": 24.644
+    },
+    {
+     "text": "from",
+     "start": 24.644,
+     "end": 24.844
+    },
+    {
+     "text": "zero",
+     "start": 24.844,
+     "end": 25.284
+    },
+    {
+     "text": "degrees",
+     "start": 25.284,
+     "end": 25.744
+    },
+    {
+     "text": "at",
+     "start": 25.744,
+     "end": 25.824
+    },
+    {
+     "text": "the",
+     "start": 25.824,
+     "end": 25.924
+    },
+    {
+     "text": "Equator,",
+     "start": 25.924,
+     "end": 26.534
+    },
+    {
+     "text": "to",
+     "start": 26.714,
+     "end": 26.814
+    },
+    {
+     "text": "ninety",
+     "start": 26.814,
+     "end": 27.154
+    },
+    {
+     "text": "degrees",
+     "start": 27.154,
+     "end": 27.624
+    },
+    {
+     "text": "at",
+     "start": 27.624,
+     "end": 27.714
+    },
+    {
+     "text": "each",
+     "start": 27.714,
+     "end": 27.984
+    },
+    {
+     "text": "pole.",
+     "start": 27.984,
+     "end": 28.414
+    }
+   ]
+  },
+  {
+   "id": "lon",
+   "speak": "Lines of longitude, or meridians, run from pole to pole. They are measured from zero degrees at Greenwich, the Prime Meridian, to one hundred and eighty degrees east and west.",
+   "text": "Lines of longitude, or meridians, run from pole to pole. They are measured from zero degrees at Greenwich, the Prime Meridian, to one hundred and eighty degrees east and west.",
+   "start": 29.657,
+   "end": 40.857,
+   "words": [
+    {
+     "text": "Lines",
+     "start": 29.717,
+     "end": 30.227
+    },
+    {
+     "text": "of",
+     "start": 30.227,
+     "end": 30.307
+    },
+    {
+     "text": "longitude,",
+     "start": 30.307,
+     "end": 31.097
+    },
+    {
+     "text": "or",
+     "start": 31.097,
+     "end": 31.237
+    },
+    {
+     "text": "meridians,",
+     "start": 31.237,
+     "end": 32.087
+    },
+    {
+     "text": "run",
+     "start": 32.087,
+     "end": 32.347
+    },
+    {
+     "text": "from",
+     "start": 32.347,
+     "end": 32.547
+    },
+    {
+     "text": "pole",
+     "start": 32.547,
+     "end": 32.887
+    },
+    {
+     "text": "to",
+     "start": 32.887,
+     "end": 32.997
+    },
+    {
+     "text": "pole.",
+     "start": 32.997,
+     "end": 33.497
+    },
+    {
+     "text": "They",
+     "start": 34.337,
+     "end": 34.537
+    },
+    {
+     "text": "are",
+     "start": 34.537,
+     "end": 34.567
+    },
+    {
+     "text": "measured",
+     "start": 34.567,
+     "end": 34.927
+    },
+    {
+     "text": "from",
+     "start": 34.927,
+     "end": 35.127
+    },
+    {
+     "text": "zero",
+     "start": 35.127,
+     "end": 35.547
+    },
+    {
+     "text": "degrees",
+     "start": 35.547,
+     "end": 36.007
+    },
+    {
+     "text": "at",
+     "start": 36.007,
+     "end": 36.107
+    },
+    {
+     "text": "Greenwich,",
+     "start": 36.107,
+     "end": 36.707
+    },
+    {
+     "text": "the",
+     "start": 37.057,
+     "end": 37.147
+    },
+    {
+     "text": "Prime",
+     "start": 37.147,
+     "end": 37.517
+    },
+    {
+     "text": "Meridian,",
+     "start": 37.517,
+     "end": 38.267
+    },
+    {
+     "text": "to",
+     "start": 38.267,
+     "end": 38.377
+    },
+    {
+     "text": "one",
+     "start": 38.377,
+     "end": 38.587
+    },
+    {
+     "text": "hundred",
+     "start": 38.587,
+     "end": 39.017
+    },
+    {
+     "text": "and",
+     "start": 39.017,
+     "end": 39.147
+    },
+    {
+     "text": "eighty",
+     "start": 39.147,
+     "end": 39.437
+    },
+    {
+     "text": "degrees",
+     "start": 39.437,
+     "end": 39.837
+    },
+    {
+     "text": "east",
+     "start": 39.837,
+     "end": 40.167
+    },
+    {
+     "text": "and",
+     "start": 40.167,
+     "end": 40.267
+    },
+    {
+     "text": "west.",
+     "start": 40.267,
+     "end": 40.797
+    }
+   ]
+  },
+  {
+   "id": "equator",
+   "speak": "The Equator is the longest parallel, about forty thousand and seventy-five kilometres around. It divides Earth into the Northern and Southern Hemispheres.",
+   "text": "The Equator is the longest parallel, about 40,075 km around. It divides Earth into the Northern and Southern Hemispheres.",
+   "start": 42.057,
+   "end": 52.041,
+   "words": [
+    {
+     "text": "The",
+     "start": 42.067,
+     "end": 42.217
+    },
+    {
+     "text": "Equator",
+     "start": 42.217,
+     "end": 42.757
+    },
+    {
+     "text": "is",
+     "start": 42.757,
+     "end": 42.997
+    },
+    {
+     "text": "the",
+     "start": 42.997,
+     "end": 43.097
+    },
+    {
+     "text": "longest",
+     "start": 43.097,
+     "end": 43.647
+    },
+    {
+     "text": "parallel,",
+     "start": 43.647,
+     "end": 44.267
+    },
+    {
+     "text": "about",
+     "start": 44.707,
+     "end": 45.027
+    },
+    {
+     "text": "40,075",
+     "start": 45.027,
+     "end": 46.252
+    },
+    {
+     "text": "km",
+     "start": 46.252,
+     "end": 47.477
+    },
+    {
+     "text": "around.",
+     "start": 47.477,
+     "end": 48.057
+    },
+    {
+     "text": "It",
+     "start": 48.767,
+     "end": 48.887
+    },
+    {
+     "text": "divides",
+     "start": 48.887,
+     "end": 49.367
+    },
+    {
+     "text": "Earth",
+     "start": 49.367,
+     "end": 49.747
+    },
+    {
+     "text": "into",
+     "start": 49.747,
+     "end": 49.927
+    },
+    {
+     "text": "the",
+     "start": 49.927,
+     "end": 50.007
+    },
+    {
+     "text": "Northern",
+     "start": 50.007,
+     "end": 50.607
+    },
+    {
+     "text": "and",
+     "start": 50.607,
+     "end": 50.747
+    },
+    {
+     "text": "Southern",
+     "start": 50.747,
+     "end": 51.107
+    },
+    {
+     "text": "Hemispheres.",
+     "start": 51.107,
+     "end": 51.987
+    }
+   ]
+  },
+  {
+   "id": "parallels",
+   "speak": "Four more parallels are special. The Tropic of Cancer, at twenty-three and a half degrees north. The Tropic of Capricorn, at twenty-three and a half degrees south. And the Arctic and Antarctic Circles, at sixty-six and a half degrees. Their positions are set by Earth's tilt.",
+   "text": "Four more parallels are special. The Tropic of Cancer, at 23.5\u00b0 N. The Tropic of Capricorn, at 23.5\u00b0 S. And the Arctic and Antarctic Circles, at 66.5\u00b0. Their positions are set by Earth's tilt.",
+   "start": 53.241,
+   "end": 70.5,
+   "words": [
+    {
+     "text": "Four",
+     "start": 53.261,
+     "end": 53.561
+    },
+    {
+     "text": "more",
+     "start": 53.561,
+     "end": 53.791
+    },
+    {
+     "text": "parallels",
+     "start": 53.791,
+     "end": 54.381
+    },
+    {
+     "text": "are",
+     "start": 54.381,
+     "end": 54.411
+    },
+    {
+     "text": "special.",
+     "start": 54.411,
+     "end": 55.081
+    },
+    {
+     "text": "The",
+     "start": 55.731,
+     "end": 55.811
+    },
+    {
+     "text": "Tropic",
+     "start": 55.811,
+     "end": 56.151
+    },
+    {
+     "text": "of",
+     "start": 56.151,
+     "end": 56.231
+    },
+    {
+     "text": "Cancer,",
+     "start": 56.231,
+     "end": 56.721
+    },
+    {
+     "text": "at",
+     "start": 56.721,
+     "end": 56.991
+    },
+    {
+     "text": "23.5\u00b0",
+     "start": 56.991,
+     "end": 57.956
+    },
+    {
+     "text": "N.",
+     "start": 57.956,
+     "end": 58.921
+    },
+    {
+     "text": "The",
+     "start": 59.361,
+     "end": 59.431
+    },
+    {
+     "text": "Tropic",
+     "start": 59.431,
+     "end": 59.771
+    },
+    {
+     "text": "of",
+     "start": 59.771,
+     "end": 59.861
+    },
+    {
+     "text": "Capricorn,",
+     "start": 59.861,
+     "end": 60.591
+    },
+    {
+     "text": "at",
+     "start": 60.591,
+     "end": 60.741
+    },
+    {
+     "text": "23.5\u00b0",
+     "start": 60.741,
+     "end": 61.751
+    },
+    {
+     "text": "S.",
+     "start": 61.751,
+     "end": 62.761
+    },
+    {
+     "text": "And",
+     "start": 63.301,
+     "end": 63.431
+    },
+    {
+     "text": "the",
+     "start": 63.431,
+     "end": 63.561
+    },
+    {
+     "text": "Arctic",
+     "start": 63.561,
+     "end": 64.071
+    },
+    {
+     "text": "and",
+     "start": 64.071,
+     "end": 64.171
+    },
+    {
+     "text": "Antarctic",
+     "start": 64.171,
+     "end": 64.791
+    },
+    {
+     "text": "Circles,",
+     "start": 64.791,
+     "end": 65.481
+    },
+    {
+     "text": "at",
+     "start": 65.481,
+     "end": 65.661
+    },
+    {
+     "text": "66.5\u00b0.",
+     "start": 65.661,
+     "end": 67.531
+    },
+    {
+     "text": "Their",
+     "start": 68.121,
+     "end": 68.281
+    },
+    {
+     "text": "positions",
+     "start": 68.281,
+     "end": 68.951
+    },
+    {
+     "text": "are",
+     "start": 68.951,
+     "end": 68.981
+    },
+    {
+     "text": "set",
+     "start": 68.981,
+     "end": 69.291
+    },
+    {
+     "text": "by",
+     "start": 69.291,
+     "end": 69.521
+    },
+    {
+     "text": "Earth's",
+     "start": 69.521,
+     "end": 69.931
+    },
+    {
+     "text": "tilt.",
+     "start": 69.931,
+     "end": 70.441
+    }
+   ]
+  },
+  {
+   "id": "india",
+   "speak": "In India, the Tropic of Cancer passes through eight states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+   "text": "In India, the Tropic of Cancer passes through eight states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura, and Mizoram.",
+   "start": 71.7,
+   "end": 81.961,
+   "words": [
+    {
+     "text": "In",
+     "start": 71.7,
+     "end": 71.87
+    },
+    {
+     "text": "India,",
+     "start": 71.87,
+     "end": 72.27
+    },
+    {
+     "text": "the",
+     "start": 72.27,
+     "end": 72.39
+    },
+    {
+     "text": "Tropic",
+     "start": 72.39,
+     "end": 72.74
+    },
+    {
+     "text": "of",
+     "start": 72.74,
+     "end": 72.82
+    },
+    {
+     "text": "Cancer",
+     "start": 72.82,
+     "end": 73.3
+    },
+    {
+     "text": "passes",
+     "start": 73.3,
+     "end": 73.82
+    },
+    {
+     "text": "through",
+     "start": 73.82,
+     "end": 74.04
+    },
+    {
+     "text": "eight",
+     "start": 74.04,
+     "end": 74.3
+    },
+    {
+     "text": "states:",
+     "start": 74.3,
+     "end": 74.88
+    },
+    {
+     "text": "Gujarat,",
+     "start": 75.49,
+     "end": 76.2
+    },
+    {
+     "text": "Rajasthan,",
+     "start": 76.2,
+     "end": 76.99
+    },
+    {
+     "text": "Madhya",
+     "start": 76.99,
+     "end": 77.32
+    },
+    {
+     "text": "Pradesh,",
+     "start": 77.32,
+     "end": 77.96
+    },
+    {
+     "text": "Chhattisgarh,",
+     "start": 78.14,
+     "end": 78.86
+    },
+    {
+     "text": "Jharkhand,",
+     "start": 78.86,
+     "end": 79.58
+    },
+    {
+     "text": "West",
+     "start": 79.76,
+     "end": 80.02
+    },
+    {
+     "text": "Bengal,",
+     "start": 80.02,
+     "end": 80.59
+    },
+    {
+     "text": "Tripura,",
+     "start": 80.59,
+     "end": 81.14
+    },
+    {
+     "text": "and",
+     "start": 81.14,
+     "end": 81.27
+    },
+    {
+     "text": "Mizoram.",
+     "start": 81.27,
+     "end": 81.91
+    }
+   ]
+  },
+  {
+   "id": "time",
+   "speak": "Longitude decides time. Earth turns three hundred and sixty degrees in twenty-four hours: fifteen degrees every hour, or one degree every four minutes. Indian Standard Time is taken from eighty-two and a half degrees east, near Mirzapur, five and a half hours ahead of Greenwich.",
+   "text": "Longitude decides time. Earth turns 360\u00b0 in 24 hours: 15\u00b0 every hour, or 1\u00b0 every 4 minutes. Indian Standard Time is taken from 82.5\u00b0 E, near Mirzapur, 5 and a half hours ahead of Greenwich.",
+   "start": 83.161,
+   "end": 101.337,
+   "words": [
+    {
+     "text": "Longitude",
+     "start": 83.201,
+     "end": 83.861
+    },
+    {
+     "text": "decides",
+     "start": 83.861,
+     "end": 84.381
+    },
+    {
+     "text": "time.",
+     "start": 84.381,
+     "end": 84.871
+    },
+    {
+     "text": "Earth",
+     "start": 85.621,
+     "end": 85.891
+    },
+    {
+     "text": "turns",
+     "start": 85.891,
+     "end": 86.281
+    },
+    {
+     "text": "360\u00b0",
+     "start": 86.281,
+     "end": 87.801
+    },
+    {
+     "text": "in",
+     "start": 87.801,
+     "end": 87.941
+    },
+    {
+     "text": "24",
+     "start": 87.941,
+     "end": 88.531
+    },
+    {
+     "text": "hours:",
+     "start": 88.531,
+     "end": 89.021
+    },
+    {
+     "text": "15\u00b0",
+     "start": 89.421,
+     "end": 90.241
+    },
+    {
+     "text": "every",
+     "start": 90.241,
+     "end": 90.561
+    },
+    {
+     "text": "hour,",
+     "start": 90.561,
+     "end": 91.041
+    },
+    {
+     "text": "or",
+     "start": 91.041,
+     "end": 91.181
+    },
+    {
+     "text": "1\u00b0",
+     "start": 91.181,
+     "end": 91.781
+    },
+    {
+     "text": "every",
+     "start": 91.781,
+     "end": 92.021
+    },
+    {
+     "text": "4",
+     "start": 92.021,
+     "end": 92.311
+    },
+    {
+     "text": "minutes.",
+     "start": 92.311,
+     "end": 92.861
+    },
+    {
+     "text": "Indian",
+     "start": 93.631,
+     "end": 94.021
+    },
+    {
+     "text": "Standard",
+     "start": 94.021,
+     "end": 94.481
+    },
+    {
+     "text": "Time",
+     "start": 94.481,
+     "end": 94.841
+    },
+    {
+     "text": "is",
+     "start": 94.841,
+     "end": 94.971
+    },
+    {
+     "text": "taken",
+     "start": 94.971,
+     "end": 95.321
+    },
+    {
+     "text": "from",
+     "start": 95.321,
+     "end": 95.501
+    },
+    {
+     "text": "82.5\u00b0",
+     "start": 95.581,
+     "end": 96.611
+    },
+    {
+     "text": "E,",
+     "start": 96.611,
+     "end": 97.641
+    },
+    {
+     "text": "near",
+     "start": 97.931,
+     "end": 98.131
+    },
+    {
+     "text": "Mirzapur,",
+     "start": 98.131,
+     "end": 98.861
+    },
+    {
+     "text": "5",
+     "start": 99.061,
+     "end": 99.541
+    },
+    {
+     "text": "and",
+     "start": 99.541,
+     "end": 99.651
+    },
+    {
+     "text": "a",
+     "start": 99.651,
+     "end": 99.691
+    },
+    {
+     "text": "half",
+     "start": 99.691,
+     "end": 99.991
+    },
+    {
+     "text": "hours",
+     "start": 99.991,
+     "end": 100.361
+    },
+    {
+     "text": "ahead",
+     "start": 100.361,
+     "end": 100.591
+    },
+    {
+     "text": "of",
+     "start": 100.591,
+     "end": 100.671
+    },
+    {
+     "text": "Greenwich.",
+     "start": 100.671,
+     "end": 101.291
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "speak": "Part two: the tilt, and Earth's orbit.",
+   "text": "Part two: the tilt, and Earth's orbit.",
+   "start": 103.457,
+   "end": 105.868,
+   "words": [
+    {
+     "text": "Part",
+     "start": 103.497,
+     "end": 103.807
+    },
+    {
+     "text": "two:",
+     "start": 103.807,
+     "end": 104.157
+    },
+    {
+     "text": "the",
+     "start": 104.157,
+     "end": 104.267
+    },
+    {
+     "text": "tilt,",
+     "start": 104.267,
+     "end": 104.687
+    },
+    {
+     "text": "and",
+     "start": 104.687,
+     "end": 104.867
+    },
+    {
+     "text": "Earth's",
+     "start": 104.867,
+     "end": 105.167
+    },
+    {
+     "text": "orbit.",
+     "start": 105.167,
+     "end": 105.727
+    }
+   ]
+  },
+  {
+   "id": "tilt",
+   "speak": "Earth's axis is tilted twenty-three and a half degrees from the vertical, so it makes an angle of sixty-six and a half degrees with the plane of its orbit. And it always points the same way, towards the Pole Star.",
+   "text": "Earth's axis is tilted 23.5\u00b0 from the vertical, so it makes an angle of 66.5\u00b0 with the plane of its orbit. And it always points the same way, towards the Pole Star.",
+   "start": 107.068,
+   "end": 120.145,
+   "words": [
+    {
+     "text": "Earth's",
+     "start": 107.128,
+     "end": 107.468
+    },
+    {
+     "text": "axis",
+     "start": 107.468,
+     "end": 107.998
+    },
+    {
+     "text": "is",
+     "start": 107.998,
+     "end": 108.158
+    },
+    {
+     "text": "tilted",
+     "start": 108.158,
+     "end": 108.668
+    },
+    {
+     "text": "23.5\u00b0",
+     "start": 108.668,
+     "end": 110.258
+    },
+    {
+     "text": "from",
+     "start": 110.258,
+     "end": 110.398
+    },
+    {
+     "text": "the",
+     "start": 110.398,
+     "end": 110.478
+    },
+    {
+     "text": "vertical,",
+     "start": 110.478,
+     "end": 111.138
+    },
+    {
+     "text": "so",
+     "start": 111.648,
+     "end": 111.778
+    },
+    {
+     "text": "it",
+     "start": 111.778,
+     "end": 111.878
+    },
+    {
+     "text": "makes",
+     "start": 111.878,
+     "end": 112.208
+    },
+    {
+     "text": "an",
+     "start": 112.208,
+     "end": 112.298
+    },
+    {
+     "text": "angle",
+     "start": 112.298,
+     "end": 112.678
+    },
+    {
+     "text": "of",
+     "start": 112.678,
+     "end": 112.768
+    },
+    {
+     "text": "66.5\u00b0",
+     "start": 112.768,
+     "end": 114.728
+    },
+    {
+     "text": "with",
+     "start": 114.728,
+     "end": 114.848
+    },
+    {
+     "text": "the",
+     "start": 114.848,
+     "end": 114.918
+    },
+    {
+     "text": "plane",
+     "start": 114.918,
+     "end": 115.228
+    },
+    {
+     "text": "of",
+     "start": 115.228,
+     "end": 115.298
+    },
+    {
+     "text": "its",
+     "start": 115.298,
+     "end": 115.478
+    },
+    {
+     "text": "orbit.",
+     "start": 115.478,
+     "end": 116.038
+    },
+    {
+     "text": "And",
+     "start": 116.828,
+     "end": 116.958
+    },
+    {
+     "text": "it",
+     "start": 116.958,
+     "end": 117.068
+    },
+    {
+     "text": "always",
+     "start": 117.068,
+     "end": 117.448
+    },
+    {
+     "text": "points",
+     "start": 117.448,
+     "end": 117.848
+    },
+    {
+     "text": "the",
+     "start": 117.848,
+     "end": 117.918
+    },
+    {
+     "text": "same",
+     "start": 117.918,
+     "end": 118.238
+    },
+    {
+     "text": "way,",
+     "start": 118.238,
+     "end": 118.608
+    },
+    {
+     "text": "towards",
+     "start": 118.788,
+     "end": 119.188
+    },
+    {
+     "text": "the",
+     "start": 119.188,
+     "end": 119.278
+    },
+    {
+     "text": "Pole",
+     "start": 119.278,
+     "end": 119.578
+    },
+    {
+     "text": "Star.",
+     "start": 119.578,
+     "end": 120.048
+    }
+   ]
+  },
+  {
+   "id": "orbit",
+   "speak": "Earth goes round the Sun once in about three hundred and sixty-five and a quarter days. As it moves, first one hemisphere, and then the other, leans towards the Sun. That is what makes the seasons.",
+   "text": "Earth goes round the Sun once in about 365 and a quarter days. As it moves, first one hemisphere, and then the other, leans towards the Sun. That is what makes the seasons.",
+   "start": 121.345,
+   "end": 133.484,
+   "words": [
+    {
+     "text": "Earth",
+     "start": 121.425,
+     "end": 121.685
+    },
+    {
+     "text": "goes",
+     "start": 121.685,
+     "end": 121.945
+    },
+    {
+     "text": "round",
+     "start": 121.945,
+     "end": 122.155
+    },
+    {
+     "text": "the",
+     "start": 122.155,
+     "end": 122.215
+    },
+    {
+     "text": "Sun",
+     "start": 122.215,
+     "end": 122.515
+    },
+    {
+     "text": "once",
+     "start": 122.515,
+     "end": 122.865
+    },
+    {
+     "text": "in",
+     "start": 122.865,
+     "end": 122.985
+    },
+    {
+     "text": "about",
+     "start": 122.985,
+     "end": 123.285
+    },
+    {
+     "text": "365",
+     "start": 123.285,
+     "end": 124.915
+    },
+    {
+     "text": "and",
+     "start": 124.915,
+     "end": 125.035
+    },
+    {
+     "text": "a",
+     "start": 125.035,
+     "end": 125.075
+    },
+    {
+     "text": "quarter",
+     "start": 125.075,
+     "end": 125.415
+    },
+    {
+     "text": "days.",
+     "start": 125.415,
+     "end": 125.985
+    },
+    {
+     "text": "As",
+     "start": 126.785,
+     "end": 126.945
+    },
+    {
+     "text": "it",
+     "start": 126.945,
+     "end": 127.035
+    },
+    {
+     "text": "moves,",
+     "start": 127.035,
+     "end": 127.655
+    },
+    {
+     "text": "first",
+     "start": 127.835,
+     "end": 128.225
+    },
+    {
+     "text": "one",
+     "start": 128.225,
+     "end": 128.415
+    },
+    {
+     "text": "hemisphere,",
+     "start": 128.415,
+     "end": 129.025
+    },
+    {
+     "text": "and",
+     "start": 129.025,
+     "end": 129.235
+    },
+    {
+     "text": "then",
+     "start": 129.235,
+     "end": 129.355
+    },
+    {
+     "text": "the",
+     "start": 129.355,
+     "end": 129.475
+    },
+    {
+     "text": "other,",
+     "start": 129.475,
+     "end": 129.835
+    },
+    {
+     "text": "leans",
+     "start": 129.835,
+     "end": 130.175
+    },
+    {
+     "text": "towards",
+     "start": 130.175,
+     "end": 130.565
+    },
+    {
+     "text": "the",
+     "start": 130.565,
+     "end": 130.655
+    },
+    {
+     "text": "Sun.",
+     "start": 130.655,
+     "end": 131.085
+    },
+    {
+     "text": "That",
+     "start": 131.715,
+     "end": 132.025
+    },
+    {
+     "text": "is",
+     "start": 132.025,
+     "end": 132.165
+    },
+    {
+     "text": "what",
+     "start": 132.165,
+     "end": 132.315
+    },
+    {
+     "text": "makes",
+     "start": 132.315,
+     "end": 132.605
+    },
+    {
+     "text": "the",
+     "start": 132.605,
+     "end": 132.695
+    },
+    {
+     "text": "seasons.",
+     "start": 132.695,
+     "end": 133.425
+    }
+   ]
+  },
+  {
+   "id": "distance",
+   "speak": "It is not about distance. Earth is closest to the Sun in early January, about one hundred and forty-seven million kilometres away, and farthest in early July, about one hundred and fifty-two million kilometres. Yet January is winter in India.",
+   "text": "It is not about distance. Earth is closest to the Sun in early January, about 147 million km away, and farthest in early July, about 152 million km. Yet January is winter in India.",
+   "start": 134.684,
+   "end": 150.94,
+   "words": [
+    {
+     "text": "It",
+     "start": 134.704,
+     "end": 134.864
+    },
+    {
+     "text": "is",
+     "start": 134.864,
+     "end": 134.984
+    },
+    {
+     "text": "not",
+     "start": 134.984,
+     "end": 135.214
+    },
+    {
+     "text": "about",
+     "start": 135.214,
+     "end": 135.494
+    },
+    {
+     "text": "distance.",
+     "start": 135.494,
+     "end": 136.234
+    },
+    {
+     "text": "Earth",
+     "start": 137.034,
+     "end": 137.324
+    },
+    {
+     "text": "is",
+     "start": 137.324,
+     "end": 137.464
+    },
+    {
+     "text": "closest",
+     "start": 137.464,
+     "end": 137.954
+    },
+    {
+     "text": "to",
+     "start": 137.954,
+     "end": 138.044
+    },
+    {
+     "text": "the",
+     "start": 138.044,
+     "end": 138.124
+    },
+    {
+     "text": "Sun",
+     "start": 138.124,
+     "end": 138.504
+    },
+    {
+     "text": "in",
+     "start": 138.504,
+     "end": 138.674
+    },
+    {
+     "text": "early",
+     "start": 138.674,
+     "end": 138.894
+    },
+    {
+     "text": "January,",
+     "start": 138.894,
+     "end": 139.604
+    },
+    {
+     "text": "about",
+     "start": 139.874,
+     "end": 140.194
+    },
+    {
+     "text": "147",
+     "start": 140.194,
+     "end": 141.664
+    },
+    {
+     "text": "million",
+     "start": 141.664,
+     "end": 142.034
+    },
+    {
+     "text": "km",
+     "start": 142.034,
+     "end": 142.614
+    },
+    {
+     "text": "away,",
+     "start": 142.614,
+     "end": 143.064
+    },
+    {
+     "text": "and",
+     "start": 143.434,
+     "end": 143.564
+    },
+    {
+     "text": "farthest",
+     "start": 143.564,
+     "end": 144.194
+    },
+    {
+     "text": "in",
+     "start": 144.194,
+     "end": 144.404
+    },
+    {
+     "text": "early",
+     "start": 144.404,
+     "end": 144.644
+    },
+    {
+     "text": "July,",
+     "start": 144.644,
+     "end": 145.374
+    },
+    {
+     "text": "about",
+     "start": 145.374,
+     "end": 145.654
+    },
+    {
+     "text": "152",
+     "start": 145.654,
+     "end": 146.974
+    },
+    {
+     "text": "million",
+     "start": 146.974,
+     "end": 147.334
+    },
+    {
+     "text": "km.",
+     "start": 147.334,
+     "end": 148.104
+    },
+    {
+     "text": "Yet",
+     "start": 148.874,
+     "end": 149.104
+    },
+    {
+     "text": "January",
+     "start": 149.104,
+     "end": 149.674
+    },
+    {
+     "text": "is",
+     "start": 149.674,
+     "end": 149.814
+    },
+    {
+     "text": "winter",
+     "start": 149.814,
+     "end": 150.244
+    },
+    {
+     "text": "in",
+     "start": 150.244,
+     "end": 150.374
+    },
+    {
+     "text": "India.",
+     "start": 150.374,
+     "end": 150.824
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "speak": "Part three: solstices and equinoxes.",
+   "text": "Part three: solstices and equinoxes.",
+   "start": 153.06,
+   "end": 155.769,
+   "words": [
+    {
+     "text": "Part",
+     "start": 153.11,
+     "end": 153.41
+    },
+    {
+     "text": "three:",
+     "start": 153.41,
+     "end": 153.87
+    },
+    {
+     "text": "solstices",
+     "start": 153.87,
+     "end": 154.66
+    },
+    {
+     "text": "and",
+     "start": 154.66,
+     "end": 154.82
+    },
+    {
+     "text": "equinoxes.",
+     "start": 154.82,
+     "end": 155.72
+    }
+   ]
+  },
+  {
+   "id": "june",
+   "speak": "Around the twenty-first of June comes the summer solstice. The Sun is directly overhead at the Tropic of Cancer. It is the longest day in the Northern Hemisphere. Delhi gets about fourteen hours of daylight, and beyond the Arctic Circle, the Sun does not set at all.",
+   "text": "Around the 21st of June comes the summer solstice. The Sun is directly overhead at the Tropic of Cancer. It is the longest day in the Northern Hemisphere. Delhi gets about 14 hours of daylight, and beyond the Arctic Circle, the Sun does not set at all.",
+   "start": 156.969,
+   "end": 173.439,
+   "words": [
+    {
+     "text": "Around",
+     "start": 157.019,
+     "end": 157.309
+    },
+    {
+     "text": "the",
+     "start": 157.309,
+     "end": 157.379
+    },
+    {
+     "text": "21st",
+     "start": 157.379,
+     "end": 158.069
+    },
+    {
+     "text": "of",
+     "start": 158.069,
+     "end": 158.149
+    },
+    {
+     "text": "June",
+     "start": 158.149,
+     "end": 158.569
+    },
+    {
+     "text": "comes",
+     "start": 158.569,
+     "end": 158.889
+    },
+    {
+     "text": "the",
+     "start": 158.889,
+     "end": 158.979
+    },
+    {
+     "text": "summer",
+     "start": 158.979,
+     "end": 159.299
+    },
+    {
+     "text": "solstice.",
+     "start": 159.299,
+     "end": 160.099
+    },
+    {
+     "text": "The",
+     "start": 160.829,
+     "end": 160.909
+    },
+    {
+     "text": "Sun",
+     "start": 160.909,
+     "end": 161.319
+    },
+    {
+     "text": "is",
+     "start": 161.319,
+     "end": 161.479
+    },
+    {
+     "text": "directly",
+     "start": 161.479,
+     "end": 162.099
+    },
+    {
+     "text": "overhead",
+     "start": 162.099,
+     "end": 162.649
+    },
+    {
+     "text": "at",
+     "start": 162.649,
+     "end": 162.739
+    },
+    {
+     "text": "the",
+     "start": 162.739,
+     "end": 162.809
+    },
+    {
+     "text": "Tropic",
+     "start": 162.809,
+     "end": 163.159
+    },
+    {
+     "text": "of",
+     "start": 163.159,
+     "end": 163.239
+    },
+    {
+     "text": "Cancer.",
+     "start": 163.239,
+     "end": 163.799
+    },
+    {
+     "text": "It",
+     "start": 164.379,
+     "end": 164.529
+    },
+    {
+     "text": "is",
+     "start": 164.529,
+     "end": 164.659
+    },
+    {
+     "text": "the",
+     "start": 164.659,
+     "end": 164.759
+    },
+    {
+     "text": "longest",
+     "start": 164.759,
+     "end": 165.219
+    },
+    {
+     "text": "day",
+     "start": 165.219,
+     "end": 165.499
+    },
+    {
+     "text": "in",
+     "start": 165.499,
+     "end": 165.619
+    },
+    {
+     "text": "the",
+     "start": 165.619,
+     "end": 165.679
+    },
+    {
+     "text": "Northern",
+     "start": 165.679,
+     "end": 166.119
+    },
+    {
+     "text": "Hemisphere.",
+     "start": 166.119,
+     "end": 166.839
+    },
+    {
+     "text": "Delhi",
+     "start": 167.499,
+     "end": 167.799
+    },
+    {
+     "text": "gets",
+     "start": 167.799,
+     "end": 168.089
+    },
+    {
+     "text": "about",
+     "start": 168.089,
+     "end": 168.369
+    },
+    {
+     "text": "14",
+     "start": 168.369,
+     "end": 168.879
+    },
+    {
+     "text": "hours",
+     "start": 168.879,
+     "end": 169.209
+    },
+    {
+     "text": "of",
+     "start": 169.209,
+     "end": 169.289
+    },
+    {
+     "text": "daylight,",
+     "start": 169.289,
+     "end": 169.929
+    },
+    {
+     "text": "and",
+     "start": 170.259,
+     "end": 170.409
+    },
+    {
+     "text": "beyond",
+     "start": 170.409,
+     "end": 170.709
+    },
+    {
+     "text": "the",
+     "start": 170.709,
+     "end": 170.839
+    },
+    {
+     "text": "Arctic",
+     "start": 170.839,
+     "end": 171.229
+    },
+    {
+     "text": "Circle,",
+     "start": 171.229,
+     "end": 171.789
+    },
+    {
+     "text": "the",
+     "start": 171.789,
+     "end": 171.959
+    },
+    {
+     "text": "Sun",
+     "start": 171.959,
+     "end": 172.299
+    },
+    {
+     "text": "does",
+     "start": 172.299,
+     "end": 172.469
+    },
+    {
+     "text": "not",
+     "start": 172.469,
+     "end": 172.689
+    },
+    {
+     "text": "set",
+     "start": 172.689,
+     "end": 172.939
+    },
+    {
+     "text": "at",
+     "start": 172.939,
+     "end": 173.079
+    },
+    {
+     "text": "all.",
+     "start": 173.079,
+     "end": 173.399
+    }
+   ]
+  },
+  {
+   "id": "dec",
+   "speak": "Around the twenty-second of December comes the winter solstice. The Sun is overhead at the Tropic of Capricorn. Delhi's day shrinks to about ten hours, the Arctic has polar night, and the Southern Hemisphere has its summer.",
+   "text": "Around the 22nd of December comes the winter solstice. The Sun is overhead at the Tropic of Capricorn. Delhi's day shrinks to about 10 hours, the Arctic has polar night, and the Southern Hemisphere has its summer.",
+   "start": 174.639,
+   "end": 188.441,
+   "words": [
+    {
+     "text": "Around",
+     "start": 174.699,
+     "end": 174.999
+    },
+    {
+     "text": "the",
+     "start": 174.999,
+     "end": 175.069
+    },
+    {
+     "text": "22nd",
+     "start": 175.069,
+     "end": 175.779
+    },
+    {
+     "text": "of",
+     "start": 175.779,
+     "end": 175.849
+    },
+    {
+     "text": "December",
+     "start": 175.849,
+     "end": 176.409
+    },
+    {
+     "text": "comes",
+     "start": 176.409,
+     "end": 176.779
+    },
+    {
+     "text": "the",
+     "start": 176.779,
+     "end": 176.869
+    },
+    {
+     "text": "winter",
+     "start": 176.869,
+     "end": 177.169
+    },
+    {
+     "text": "solstice.",
+     "start": 177.169,
+     "end": 177.919
+    },
+    {
+     "text": "The",
+     "start": 178.629,
+     "end": 178.729
+    },
+    {
+     "text": "Sun",
+     "start": 178.729,
+     "end": 179.099
+    },
+    {
+     "text": "is",
+     "start": 179.099,
+     "end": 179.249
+    },
+    {
+     "text": "overhead",
+     "start": 179.249,
+     "end": 179.729
+    },
+    {
+     "text": "at",
+     "start": 179.729,
+     "end": 179.799
+    },
+    {
+     "text": "the",
+     "start": 179.799,
+     "end": 179.869
+    },
+    {
+     "text": "Tropic",
+     "start": 179.869,
+     "end": 180.269
+    },
+    {
+     "text": "of",
+     "start": 180.269,
+     "end": 180.349
+    },
+    {
+     "text": "Capricorn.",
+     "start": 180.349,
+     "end": 181.129
+    },
+    {
+     "text": "Delhi's",
+     "start": 181.809,
+     "end": 182.199
+    },
+    {
+     "text": "day",
+     "start": 182.199,
+     "end": 182.459
+    },
+    {
+     "text": "shrinks",
+     "start": 182.459,
+     "end": 182.879
+    },
+    {
+     "text": "to",
+     "start": 182.879,
+     "end": 183.019
+    },
+    {
+     "text": "about",
+     "start": 183.019,
+     "end": 183.359
+    },
+    {
+     "text": "10",
+     "start": 183.359,
+     "end": 183.609
+    },
+    {
+     "text": "hours,",
+     "start": 183.609,
+     "end": 184.169
+    },
+    {
+     "text": "the",
+     "start": 184.389,
+     "end": 184.549
+    },
+    {
+     "text": "Arctic",
+     "start": 184.549,
+     "end": 185.029
+    },
+    {
+     "text": "has",
+     "start": 185.029,
+     "end": 185.219
+    },
+    {
+     "text": "polar",
+     "start": 185.219,
+     "end": 185.569
+    },
+    {
+     "text": "night,",
+     "start": 185.569,
+     "end": 186.049
+    },
+    {
+     "text": "and",
+     "start": 186.369,
+     "end": 186.499
+    },
+    {
+     "text": "the",
+     "start": 186.499,
+     "end": 186.559
+    },
+    {
+     "text": "Southern",
+     "start": 186.559,
+     "end": 186.929
+    },
+    {
+     "text": "Hemisphere",
+     "start": 186.929,
+     "end": 187.529
+    },
+    {
+     "text": "has",
+     "start": 187.529,
+     "end": 187.749
+    },
+    {
+     "text": "its",
+     "start": 187.749,
+     "end": 187.969
+    },
+    {
+     "text": "summer.",
+     "start": 187.969,
+     "end": 188.359
+    }
+   ]
+  },
+  {
+   "id": "equinox",
+   "speak": "In between, around the twenty-first of March and the twenty-third of September, the Sun is overhead at the Equator. These are the equinoxes, when day and night are nearly equal everywhere.",
+   "text": "In between, around the 21st of March and the 23rd of September, the Sun is overhead at the Equator. These are the equinoxes, when day and night are nearly equal everywhere.",
+   "start": 189.641,
+   "end": 201.119,
+   "words": [
+    {
+     "text": "In",
+     "start": 189.661,
+     "end": 189.851
+    },
+    {
+     "text": "between,",
+     "start": 189.851,
+     "end": 190.541
+    },
+    {
+     "text": "around",
+     "start": 190.541,
+     "end": 190.821
+    },
+    {
+     "text": "the",
+     "start": 190.821,
+     "end": 190.901
+    },
+    {
+     "text": "21st",
+     "start": 190.901,
+     "end": 191.591
+    },
+    {
+     "text": "of",
+     "start": 191.591,
+     "end": 191.651
+    },
+    {
+     "text": "March",
+     "start": 191.651,
+     "end": 192.161
+    },
+    {
+     "text": "and",
+     "start": 192.161,
+     "end": 192.251
+    },
+    {
+     "text": "the",
+     "start": 192.251,
+     "end": 192.321
+    },
+    {
+     "text": "23rd",
+     "start": 192.321,
+     "end": 192.921
+    },
+    {
+     "text": "of",
+     "start": 192.921,
+     "end": 192.991
+    },
+    {
+     "text": "September,",
+     "start": 192.991,
+     "end": 193.651
+    },
+    {
+     "text": "the",
+     "start": 194.061,
+     "end": 194.151
+    },
+    {
+     "text": "Sun",
+     "start": 194.151,
+     "end": 194.521
+    },
+    {
+     "text": "is",
+     "start": 194.521,
+     "end": 194.681
+    },
+    {
+     "text": "overhead",
+     "start": 194.681,
+     "end": 195.191
+    },
+    {
+     "text": "at",
+     "start": 195.191,
+     "end": 195.291
+    },
+    {
+     "text": "the",
+     "start": 195.291,
+     "end": 195.391
+    },
+    {
+     "text": "Equator.",
+     "start": 195.391,
+     "end": 196.031
+    },
+    {
+     "text": "These",
+     "start": 196.961,
+     "end": 197.331
+    },
+    {
+     "text": "are",
+     "start": 197.331,
+     "end": 197.391
+    },
+    {
+     "text": "the",
+     "start": 197.391,
+     "end": 197.611
+    },
+    {
+     "text": "equinoxes,",
+     "start": 197.611,
+     "end": 198.411
+    },
+    {
+     "text": "when",
+     "start": 198.671,
+     "end": 198.861
+    },
+    {
+     "text": "day",
+     "start": 198.861,
+     "end": 199.191
+    },
+    {
+     "text": "and",
+     "start": 199.191,
+     "end": 199.301
+    },
+    {
+     "text": "night",
+     "start": 199.301,
+     "end": 199.721
+    },
+    {
+     "text": "are",
+     "start": 199.721,
+     "end": 199.751
+    },
+    {
+     "text": "nearly",
+     "start": 199.751,
+     "end": 200.101
+    },
+    {
+     "text": "equal",
+     "start": 200.101,
+     "end": 200.451
+    },
+    {
+     "text": "everywhere.",
+     "start": 200.451,
+     "end": 201.061
+    }
+   ]
+  },
+  {
+   "id": "noon",
+   "speak": "The solstices set the extremes. At noon on the June solstice, the Sun stands about eighty-five degrees high over Delhi. On the December solstice, it is only about thirty-eight degrees high. Low sunlight spreads over more ground, and heats it far less.",
+   "text": "The solstices set the extremes. At noon on the June solstice, the Sun stands about 85\u00b0 high over Delhi. On the December solstice, it is only about 38\u00b0 high. Low sunlight spreads over more ground, and heats it far less.",
+   "start": 202.319,
+   "end": 218.66,
+   "words": [
+    {
+     "text": "The",
+     "start": 202.319,
+     "end": 202.409
+    },
+    {
+     "text": "solstices",
+     "start": 202.409,
+     "end": 203.209
+    },
+    {
+     "text": "set",
+     "start": 203.209,
+     "end": 203.399
+    },
+    {
+     "text": "the",
+     "start": 203.399,
+     "end": 203.519
+    },
+    {
+     "text": "extremes.",
+     "start": 203.519,
+     "end": 204.279
+    },
+    {
+     "text": "At",
+     "start": 204.789,
+     "end": 204.929
+    },
+    {
+     "text": "noon",
+     "start": 204.929,
+     "end": 205.239
+    },
+    {
+     "text": "on",
+     "start": 205.239,
+     "end": 205.349
+    },
+    {
+     "text": "the",
+     "start": 205.349,
+     "end": 205.429
+    },
+    {
+     "text": "June",
+     "start": 205.429,
+     "end": 205.729
+    },
+    {
+     "text": "solstice,",
+     "start": 205.729,
+     "end": 206.439
+    },
+    {
+     "text": "the",
+     "start": 206.439,
+     "end": 206.709
+    },
+    {
+     "text": "Sun",
+     "start": 206.709,
+     "end": 207.089
+    },
+    {
+     "text": "stands",
+     "start": 207.089,
+     "end": 207.439
+    },
+    {
+     "text": "about",
+     "start": 207.439,
+     "end": 207.729
+    },
+    {
+     "text": "85\u00b0",
+     "start": 207.729,
+     "end": 208.809
+    },
+    {
+     "text": "high",
+     "start": 208.809,
+     "end": 209.179
+    },
+    {
+     "text": "over",
+     "start": 209.179,
+     "end": 209.309
+    },
+    {
+     "text": "Delhi.",
+     "start": 209.309,
+     "end": 209.779
+    },
+    {
+     "text": "On",
+     "start": 210.429,
+     "end": 210.569
+    },
+    {
+     "text": "the",
+     "start": 210.569,
+     "end": 210.639
+    },
+    {
+     "text": "December",
+     "start": 210.639,
+     "end": 211.089
+    },
+    {
+     "text": "solstice,",
+     "start": 211.089,
+     "end": 211.839
+    },
+    {
+     "text": "it",
+     "start": 211.839,
+     "end": 212.059
+    },
+    {
+     "text": "is",
+     "start": 212.059,
+     "end": 212.169
+    },
+    {
+     "text": "only",
+     "start": 212.169,
+     "end": 212.509
+    },
+    {
+     "text": "about",
+     "start": 212.509,
+     "end": 212.819
+    },
+    {
+     "text": "38\u00b0",
+     "start": 212.819,
+     "end": 213.879
+    },
+    {
+     "text": "high.",
+     "start": 213.879,
+     "end": 214.309
+    },
+    {
+     "text": "Low",
+     "start": 215.029,
+     "end": 215.249
+    },
+    {
+     "text": "sunlight",
+     "start": 215.249,
+     "end": 215.769
+    },
+    {
+     "text": "spreads",
+     "start": 215.769,
+     "end": 216.159
+    },
+    {
+     "text": "over",
+     "start": 216.159,
+     "end": 216.329
+    },
+    {
+     "text": "more",
+     "start": 216.329,
+     "end": 216.579
+    },
+    {
+     "text": "ground,",
+     "start": 216.579,
+     "end": 217.279
+    },
+    {
+     "text": "and",
+     "start": 217.279,
+     "end": 217.409
+    },
+    {
+     "text": "heats",
+     "start": 217.409,
+     "end": 217.709
+    },
+    {
+     "text": "it",
+     "start": 217.709,
+     "end": 217.839
+    },
+    {
+     "text": "far",
+     "start": 217.839,
+     "end": 218.119
+    },
+    {
+     "text": "less.",
+     "start": 218.119,
+     "end": 218.599
+    }
+   ]
+  },
+  {
+   "id": "p4",
+   "speak": "Part four: why climates and forests differ.",
+   "text": "Part four: why climates and forests differ.",
+   "start": 220.36,
+   "end": 223.091,
+   "words": [
+    {
+     "text": "Part",
+     "start": 220.42,
+     "end": 220.74
+    },
+    {
+     "text": "four:",
+     "start": 220.74,
+     "end": 221.07
+    },
+    {
+     "text": "why",
+     "start": 221.07,
+     "end": 221.31
+    },
+    {
+     "text": "climates",
+     "start": 221.31,
+     "end": 221.85
+    },
+    {
+     "text": "and",
+     "start": 221.85,
+     "end": 221.95
+    },
+    {
+     "text": "forests",
+     "start": 221.95,
+     "end": 222.47
+    },
+    {
+     "text": "differ.",
+     "start": 222.47,
+     "end": 222.95
+    }
+   ]
+  },
+  {
+   "id": "eqzone",
+   "speak": "Near the Equator, the Sun is high all year, and days stay close to twelve hours. Hot, moist air rises every afternoon, bringing convectional rain almost daily. Temperatures stay around twenty-seven degrees Celsius, and rainfall often exceeds two thousand millimetres a year.",
+   "text": "Near the Equator, the Sun is high all year, and days stay close to 12 hours. Hot, moist air rises every afternoon, bringing convectional rain almost daily. Temperatures stay around 27 \u00b0C, and rainfall often exceeds 2,000 mm a year.",
+   "start": 224.291,
+   "end": 242.083,
+   "words": [
+    {
+     "text": "Near",
+     "start": 224.301,
+     "end": 224.531
+    },
+    {
+     "text": "the",
+     "start": 224.531,
+     "end": 224.641
+    },
+    {
+     "text": "Equator,",
+     "start": 224.641,
+     "end": 225.291
+    },
+    {
+     "text": "the",
+     "start": 225.291,
+     "end": 225.431
+    },
+    {
+     "text": "Sun",
+     "start": 225.431,
+     "end": 225.701
+    },
+    {
+     "text": "is",
+     "start": 225.701,
+     "end": 225.811
+    },
+    {
+     "text": "high",
+     "start": 225.811,
+     "end": 226.111
+    },
+    {
+     "text": "all",
+     "start": 226.111,
+     "end": 226.311
+    },
+    {
+     "text": "year,",
+     "start": 226.311,
+     "end": 226.731
+    },
+    {
+     "text": "and",
+     "start": 227.091,
+     "end": 227.251
+    },
+    {
+     "text": "days",
+     "start": 227.251,
+     "end": 227.501
+    },
+    {
+     "text": "stay",
+     "start": 227.501,
+     "end": 227.761
+    },
+    {
+     "text": "close",
+     "start": 227.761,
+     "end": 228.071
+    },
+    {
+     "text": "to",
+     "start": 228.071,
+     "end": 228.181
+    },
+    {
+     "text": "12",
+     "start": 228.181,
+     "end": 228.481
+    },
+    {
+     "text": "hours.",
+     "start": 228.481,
+     "end": 229.021
+    },
+    {
+     "text": "Hot,",
+     "start": 229.801,
+     "end": 230.281
+    },
+    {
+     "text": "moist",
+     "start": 230.441,
+     "end": 230.781
+    },
+    {
+     "text": "air",
+     "start": 230.781,
+     "end": 230.991
+    },
+    {
+     "text": "rises",
+     "start": 230.991,
+     "end": 231.541
+    },
+    {
+     "text": "every",
+     "start": 231.541,
+     "end": 231.821
+    },
+    {
+     "text": "afternoon,",
+     "start": 231.821,
+     "end": 232.471
+    },
+    {
+     "text": "bringing",
+     "start": 232.631,
+     "end": 232.961
+    },
+    {
+     "text": "convectional",
+     "start": 232.961,
+     "end": 233.601
+    },
+    {
+     "text": "rain",
+     "start": 233.601,
+     "end": 233.911
+    },
+    {
+     "text": "almost",
+     "start": 233.911,
+     "end": 234.311
+    },
+    {
+     "text": "daily.",
+     "start": 234.311,
+     "end": 234.791
+    },
+    {
+     "text": "Temperatures",
+     "start": 235.551,
+     "end": 236.091
+    },
+    {
+     "text": "stay",
+     "start": 236.091,
+     "end": 236.411
+    },
+    {
+     "text": "around",
+     "start": 236.411,
+     "end": 236.661
+    },
+    {
+     "text": "27",
+     "start": 236.661,
+     "end": 237.511
+    },
+    {
+     "text": "\u00b0C,",
+     "start": 237.511,
+     "end": 238.361
+    },
+    {
+     "text": "and",
+     "start": 238.681,
+     "end": 238.831
+    },
+    {
+     "text": "rainfall",
+     "start": 238.831,
+     "end": 239.441
+    },
+    {
+     "text": "often",
+     "start": 239.441,
+     "end": 239.751
+    },
+    {
+     "text": "exceeds",
+     "start": 239.751,
+     "end": 240.241
+    },
+    {
+     "text": "2,000",
+     "start": 240.241,
+     "end": 240.876
+    },
+    {
+     "text": "mm",
+     "start": 240.876,
+     "end": 241.511
+    },
+    {
+     "text": "a",
+     "start": 241.511,
+     "end": 241.561
+    },
+    {
+     "text": "year.",
+     "start": 241.561,
+     "end": 242.011
+    }
+   ]
+  },
+  {
+   "id": "rainforest",
+   "speak": "This supports tropical evergreen rainforests, with tall, multi-layered canopies of trees like mahogany, ebony and rosewood. Think of the Amazon, the Congo basin, and in India, the Western Ghats and the Andaman and Nicobar Islands.",
+   "text": "This supports tropical evergreen rainforests, with tall, multi-layered canopies of trees like mahogany, ebony and rosewood. Think of the Amazon, the Congo basin, and in India, the Western Ghats and the Andaman and Nicobar Islands.",
+   "start": 243.283,
+   "end": 258.173,
+   "words": [
+    {
+     "text": "This",
+     "start": 243.283,
+     "end": 243.473
+    },
+    {
+     "text": "supports",
+     "start": 243.473,
+     "end": 243.933
+    },
+    {
+     "text": "tropical",
+     "start": 243.933,
+     "end": 244.403
+    },
+    {
+     "text": "evergreen",
+     "start": 244.403,
+     "end": 244.893
+    },
+    {
+     "text": "rainforests,",
+     "start": 244.893,
+     "end": 245.793
+    },
+    {
+     "text": "with",
+     "start": 246.143,
+     "end": 246.293
+    },
+    {
+     "text": "tall,",
+     "start": 246.293,
+     "end": 246.703
+    },
+    {
+     "text": "multi-layered",
+     "start": 246.703,
+     "end": 247.453
+    },
+    {
+     "text": "canopies",
+     "start": 247.453,
+     "end": 248.043
+    },
+    {
+     "text": "of",
+     "start": 248.043,
+     "end": 248.123
+    },
+    {
+     "text": "trees",
+     "start": 248.123,
+     "end": 248.563
+    },
+    {
+     "text": "like",
+     "start": 248.563,
+     "end": 248.803
+    },
+    {
+     "text": "mahogany,",
+     "start": 248.803,
+     "end": 249.493
+    },
+    {
+     "text": "ebony",
+     "start": 249.493,
+     "end": 249.893
+    },
+    {
+     "text": "and",
+     "start": 249.893,
+     "end": 250.043
+    },
+    {
+     "text": "rosewood.",
+     "start": 250.043,
+     "end": 250.683
+    },
+    {
+     "text": "Think",
+     "start": 251.543,
+     "end": 251.763
+    },
+    {
+     "text": "of",
+     "start": 251.763,
+     "end": 251.853
+    },
+    {
+     "text": "the",
+     "start": 251.853,
+     "end": 251.983
+    },
+    {
+     "text": "Amazon,",
+     "start": 251.983,
+     "end": 252.603
+    },
+    {
+     "text": "the",
+     "start": 252.783,
+     "end": 252.873
+    },
+    {
+     "text": "Congo",
+     "start": 252.873,
+     "end": 253.283
+    },
+    {
+     "text": "basin,",
+     "start": 253.283,
+     "end": 253.883
+    },
+    {
+     "text": "and",
+     "start": 253.883,
+     "end": 254.073
+    },
+    {
+     "text": "in",
+     "start": 254.073,
+     "end": 254.203
+    },
+    {
+     "text": "India,",
+     "start": 254.203,
+     "end": 254.743
+    },
+    {
+     "text": "the",
+     "start": 255.163,
+     "end": 255.263
+    },
+    {
+     "text": "Western",
+     "start": 255.263,
+     "end": 255.683
+    },
+    {
+     "text": "Ghats",
+     "start": 255.683,
+     "end": 256.153
+    },
+    {
+     "text": "and",
+     "start": 256.153,
+     "end": 256.273
+    },
+    {
+     "text": "the",
+     "start": 256.273,
+     "end": 256.393
+    },
+    {
+     "text": "Andaman",
+     "start": 256.393,
+     "end": 256.873
+    },
+    {
+     "text": "and",
+     "start": 256.873,
+     "end": 257.013
+    },
+    {
+     "text": "Nicobar",
+     "start": 257.013,
+     "end": 257.493
+    },
+    {
+     "text": "Islands.",
+     "start": 257.493,
+     "end": 258.113
+    }
+   ]
+  },
+  {
+   "id": "tropics",
+   "speak": "Near the Tropics of Cancer and Capricorn, the air that rose at the Equator sinks back down. Sinking air is dry, and stops clouds from forming. That is why the world's great hot deserts lie near the tropics: the Sahara, the Arabian, India's Thar, the Kalahari, the Atacama, and the Australian deserts.",
+   "text": "Near the Tropics of Cancer and Capricorn, the air that rose at the Equator sinks back down. Sinking air is dry, and stops clouds from forming. That is why the world's great hot deserts lie near the tropics: the Sahara, the Arabian, India's Thar, the Kalahari, the Atacama, and the Australian deserts.",
+   "start": 259.373,
+   "end": 278.851,
+   "words": [
+    {
+     "text": "Near",
+     "start": 259.383,
+     "end": 259.623
+    },
+    {
+     "text": "the",
+     "start": 259.623,
+     "end": 259.723
+    },
+    {
+     "text": "Tropics",
+     "start": 259.723,
+     "end": 260.163
+    },
+    {
+     "text": "of",
+     "start": 260.163,
+     "end": 260.243
+    },
+    {
+     "text": "Cancer",
+     "start": 260.243,
+     "end": 260.743
+    },
+    {
+     "text": "and",
+     "start": 260.743,
+     "end": 260.873
+    },
+    {
+     "text": "Capricorn,",
+     "start": 260.873,
+     "end": 261.563
+    },
+    {
+     "text": "the",
+     "start": 261.803,
+     "end": 261.933
+    },
+    {
+     "text": "air",
+     "start": 261.933,
+     "end": 262.203
+    },
+    {
+     "text": "that",
+     "start": 262.203,
+     "end": 262.373
+    },
+    {
+     "text": "rose",
+     "start": 262.373,
+     "end": 262.703
+    },
+    {
+     "text": "at",
+     "start": 262.703,
+     "end": 262.773
+    },
+    {
+     "text": "the",
+     "start": 262.773,
+     "end": 262.863
+    },
+    {
+     "text": "Equator",
+     "start": 262.863,
+     "end": 263.343
+    },
+    {
+     "text": "sinks",
+     "start": 263.343,
+     "end": 263.743
+    },
+    {
+     "text": "back",
+     "start": 263.743,
+     "end": 263.973
+    },
+    {
+     "text": "down.",
+     "start": 263.973,
+     "end": 264.383
+    },
+    {
+     "text": "Sinking",
+     "start": 265.223,
+     "end": 265.673
+    },
+    {
+     "text": "air",
+     "start": 265.673,
+     "end": 265.903
+    },
+    {
+     "text": "is",
+     "start": 265.903,
+     "end": 266.093
+    },
+    {
+     "text": "dry,",
+     "start": 266.093,
+     "end": 266.633
+    },
+    {
+     "text": "and",
+     "start": 266.923,
+     "end": 267.053
+    },
+    {
+     "text": "stops",
+     "start": 267.053,
+     "end": 267.363
+    },
+    {
+     "text": "clouds",
+     "start": 267.363,
+     "end": 267.823
+    },
+    {
+     "text": "from",
+     "start": 267.823,
+     "end": 267.983
+    },
+    {
+     "text": "forming.",
+     "start": 267.983,
+     "end": 268.543
+    },
+    {
+     "text": "That",
+     "start": 269.273,
+     "end": 269.543
+    },
+    {
+     "text": "is",
+     "start": 269.543,
+     "end": 269.673
+    },
+    {
+     "text": "why",
+     "start": 269.673,
+     "end": 269.853
+    },
+    {
+     "text": "the",
+     "start": 269.853,
+     "end": 269.943
+    },
+    {
+     "text": "world's",
+     "start": 269.943,
+     "end": 270.313
+    },
+    {
+     "text": "great",
+     "start": 270.313,
+     "end": 270.633
+    },
+    {
+     "text": "hot",
+     "start": 270.633,
+     "end": 270.843
+    },
+    {
+     "text": "deserts",
+     "start": 270.843,
+     "end": 271.263
+    },
+    {
+     "text": "lie",
+     "start": 271.263,
+     "end": 271.493
+    },
+    {
+     "text": "near",
+     "start": 271.493,
+     "end": 271.693
+    },
+    {
+     "text": "the",
+     "start": 271.693,
+     "end": 271.793
+    },
+    {
+     "text": "tropics:",
+     "start": 271.793,
+     "end": 272.453
+    },
+    {
+     "text": "the",
+     "start": 272.933,
+     "end": 273.023
+    },
+    {
+     "text": "Sahara,",
+     "start": 273.023,
+     "end": 273.713
+    },
+    {
+     "text": "the",
+     "start": 273.713,
+     "end": 273.903
+    },
+    {
+     "text": "Arabian,",
+     "start": 273.903,
+     "end": 274.513
+    },
+    {
+     "text": "India's",
+     "start": 274.513,
+     "end": 274.993
+    },
+    {
+     "text": "Thar,",
+     "start": 274.993,
+     "end": 275.493
+    },
+    {
+     "text": "the",
+     "start": 275.493,
+     "end": 275.583
+    },
+    {
+     "text": "Kalahari,",
+     "start": 275.583,
+     "end": 276.383
+    },
+    {
+     "text": "the",
+     "start": 276.383,
+     "end": 276.533
+    },
+    {
+     "text": "Atacama,",
+     "start": 276.533,
+     "end": 277.223
+    },
+    {
+     "text": "and",
+     "start": 277.223,
+     "end": 277.513
+    },
+    {
+     "text": "the",
+     "start": 277.513,
+     "end": 277.623
+    },
+    {
+     "text": "Australian",
+     "start": 277.623,
+     "end": 278.223
+    },
+    {
+     "text": "deserts.",
+     "start": 278.223,
+     "end": 278.783
+    }
+   ]
+  },
+  {
+   "id": "desert",
+   "speak": "Here, plants are thorny and drought-resistant: acacia, cactus, and in the Thar, khejri and babool, with long roots and small, waxy leaves to save water.",
+   "text": "Here, plants are thorny and drought-resistant: acacia, cactus, and in the Thar, khejri and babool, with long roots and small, waxy leaves to save water.",
+   "start": 280.051,
+   "end": 290.013,
+   "words": [
+    {
+     "text": "Here,",
+     "start": 280.061,
+     "end": 280.441
+    },
+    {
+     "text": "plants",
+     "start": 280.441,
+     "end": 280.861
+    },
+    {
+     "text": "are",
+     "start": 280.861,
+     "end": 280.891
+    },
+    {
+     "text": "thorny",
+     "start": 280.891,
+     "end": 281.411
+    },
+    {
+     "text": "and",
+     "start": 281.411,
+     "end": 281.561
+    },
+    {
+     "text": "drought-resistant:",
+     "start": 281.561,
+     "end": 282.571
+    },
+    {
+     "text": "acacia,",
+     "start": 283.171,
+     "end": 283.781
+    },
+    {
+     "text": "cactus,",
+     "start": 283.901,
+     "end": 284.541
+    },
+    {
+     "text": "and",
+     "start": 284.541,
+     "end": 284.681
+    },
+    {
+     "text": "in",
+     "start": 284.681,
+     "end": 284.781
+    },
+    {
+     "text": "the",
+     "start": 284.781,
+     "end": 284.861
+    },
+    {
+     "text": "Thar,",
+     "start": 284.861,
+     "end": 285.331
+    },
+    {
+     "text": "khejri",
+     "start": 285.331,
+     "end": 285.781
+    },
+    {
+     "text": "and",
+     "start": 285.781,
+     "end": 285.911
+    },
+    {
+     "text": "babool,",
+     "start": 285.911,
+     "end": 286.431
+    },
+    {
+     "text": "with",
+     "start": 286.841,
+     "end": 286.991
+    },
+    {
+     "text": "long",
+     "start": 286.991,
+     "end": 287.361
+    },
+    {
+     "text": "roots",
+     "start": 287.361,
+     "end": 287.731
+    },
+    {
+     "text": "and",
+     "start": 287.731,
+     "end": 287.841
+    },
+    {
+     "text": "small,",
+     "start": 287.841,
+     "end": 288.271
+    },
+    {
+     "text": "waxy",
+     "start": 288.271,
+     "end": 288.751
+    },
+    {
+     "text": "leaves",
+     "start": 288.751,
+     "end": 289.051
+    },
+    {
+     "text": "to",
+     "start": 289.051,
+     "end": 289.161
+    },
+    {
+     "text": "save",
+     "start": 289.161,
+     "end": 289.491
+    },
+    {
+     "text": "water.",
+     "start": 289.491,
+     "end": 289.941
+    }
+   ]
+  },
+  {
+   "id": "india2",
+   "speak": "Most of India lies in between, where the monsoon brings seasonal rain. So its most widespread forests are tropical deciduous, with trees like teak and sal that shed their leaves in the dry season. The latest India State of Forest Report, for twenty twenty-three, puts forest cover at about twenty-one point seven six percent of India's area.",
+   "text": "Most of India lies in between, where the monsoon brings seasonal rain. So its most widespread forests are tropical deciduous, with trees like teak and sal that shed their leaves in the dry season. The latest India State of Forest Report, for 2023, puts forest cover at about 21.76% of India's area.",
+   "start": 291.213,
+   "end": 312.675,
+   "words": [
+    {
+     "text": "Most",
+     "start": 291.223,
+     "end": 291.513
+    },
+    {
+     "text": "of",
+     "start": 291.513,
+     "end": 291.573
+    },
+    {
+     "text": "India",
+     "start": 291.573,
+     "end": 291.943
+    },
+    {
+     "text": "lies",
+     "start": 291.943,
+     "end": 292.263
+    },
+    {
+     "text": "in",
+     "start": 292.263,
+     "end": 292.403
+    },
+    {
+     "text": "between,",
+     "start": 292.403,
+     "end": 292.953
+    },
+    {
+     "text": "where",
+     "start": 293.313,
+     "end": 293.423
+    },
+    {
+     "text": "the",
+     "start": 293.423,
+     "end": 293.503
+    },
+    {
+     "text": "monsoon",
+     "start": 293.503,
+     "end": 294.093
+    },
+    {
+     "text": "brings",
+     "start": 294.093,
+     "end": 294.353
+    },
+    {
+     "text": "seasonal",
+     "start": 294.353,
+     "end": 294.873
+    },
+    {
+     "text": "rain.",
+     "start": 294.873,
+     "end": 295.313
+    },
+    {
+     "text": "So",
+     "start": 296.043,
+     "end": 296.163
+    },
+    {
+     "text": "its",
+     "start": 296.163,
+     "end": 296.293
+    },
+    {
+     "text": "most",
+     "start": 296.293,
+     "end": 296.533
+    },
+    {
+     "text": "widespread",
+     "start": 296.533,
+     "end": 297.103
+    },
+    {
+     "text": "forests",
+     "start": 297.103,
+     "end": 297.663
+    },
+    {
+     "text": "are",
+     "start": 297.663,
+     "end": 297.703
+    },
+    {
+     "text": "tropical",
+     "start": 297.703,
+     "end": 298.203
+    },
+    {
+     "text": "deciduous,",
+     "start": 298.203,
+     "end": 298.933
+    },
+    {
+     "text": "with",
+     "start": 299.323,
+     "end": 299.463
+    },
+    {
+     "text": "trees",
+     "start": 299.463,
+     "end": 299.783
+    },
+    {
+     "text": "like",
+     "start": 299.783,
+     "end": 300.033
+    },
+    {
+     "text": "teak",
+     "start": 300.033,
+     "end": 300.403
+    },
+    {
+     "text": "and",
+     "start": 300.403,
+     "end": 300.543
+    },
+    {
+     "text": "sal",
+     "start": 300.543,
+     "end": 300.983
+    },
+    {
+     "text": "that",
+     "start": 300.983,
+     "end": 301.163
+    },
+    {
+     "text": "shed",
+     "start": 301.163,
+     "end": 301.473
+    },
+    {
+     "text": "their",
+     "start": 301.473,
+     "end": 301.663
+    },
+    {
+     "text": "leaves",
+     "start": 301.663,
+     "end": 302.033
+    },
+    {
+     "text": "in",
+     "start": 302.033,
+     "end": 302.153
+    },
+    {
+     "text": "the",
+     "start": 302.153,
+     "end": 302.233
+    },
+    {
+     "text": "dry",
+     "start": 302.233,
+     "end": 302.573
+    },
+    {
+     "text": "season.",
+     "start": 302.573,
+     "end": 303.173
+    },
+    {
+     "text": "The",
+     "start": 304.163,
+     "end": 304.243
+    },
+    {
+     "text": "latest",
+     "start": 304.243,
+     "end": 304.753
+    },
+    {
+     "text": "India",
+     "start": 304.753,
+     "end": 305.103
+    },
+    {
+     "text": "State",
+     "start": 305.103,
+     "end": 305.493
+    },
+    {
+     "text": "of",
+     "start": 305.493,
+     "end": 305.553
+    },
+    {
+     "text": "Forest",
+     "start": 305.553,
+     "end": 306.013
+    },
+    {
+     "text": "Report,",
+     "start": 306.013,
+     "end": 306.643
+    },
+    {
+     "text": "for",
+     "start": 306.643,
+     "end": 306.773
+    },
+    {
+     "text": "2023,",
+     "start": 306.773,
+     "end": 307.833
+    },
+    {
+     "text": "puts",
+     "start": 308.273,
+     "end": 308.533
+    },
+    {
+     "text": "forest",
+     "start": 308.533,
+     "end": 308.913
+    },
+    {
+     "text": "cover",
+     "start": 308.913,
+     "end": 309.193
+    },
+    {
+     "text": "at",
+     "start": 309.193,
+     "end": 309.393
+    },
+    {
+     "text": "about",
+     "start": 309.393,
+     "end": 309.663
+    },
+    {
+     "text": "21.76%",
+     "start": 309.663,
+     "end": 311.643
+    },
+    {
+     "text": "of",
+     "start": 311.643,
+     "end": 311.713
+    },
+    {
+     "text": "India's",
+     "start": 311.713,
+     "end": 312.133
+    },
+    {
+     "text": "area.",
+     "start": 312.133,
+     "end": 312.623
+    }
+   ]
+  },
+  {
+   "id": "poles",
+   "speak": "Further from the Equator, the Sun sits lower. The temperate zones grow deciduous and coniferous forests, like oak, pine and deodar, and the frigid zones have only tundra: mosses and lichens.",
+   "text": "Further from the Equator, the Sun sits lower. The temperate zones grow deciduous and coniferous forests, like oak, pine and deodar, and the frigid zones have only tundra: mosses and lichens.",
+   "start": 313.875,
+   "end": 326.696,
+   "words": [
+    {
+     "text": "Further",
+     "start": 313.885,
+     "end": 314.285
+    },
+    {
+     "text": "from",
+     "start": 314.285,
+     "end": 314.495
+    },
+    {
+     "text": "the",
+     "start": 314.495,
+     "end": 314.605
+    },
+    {
+     "text": "Equator,",
+     "start": 314.605,
+     "end": 315.225
+    },
+    {
+     "text": "the",
+     "start": 315.225,
+     "end": 315.355
+    },
+    {
+     "text": "Sun",
+     "start": 315.355,
+     "end": 315.785
+    },
+    {
+     "text": "sits",
+     "start": 315.785,
+     "end": 316.105
+    },
+    {
+     "text": "lower.",
+     "start": 316.105,
+     "end": 316.545
+    },
+    {
+     "text": "The",
+     "start": 317.375,
+     "end": 317.455
+    },
+    {
+     "text": "temperate",
+     "start": 317.455,
+     "end": 317.875
+    },
+    {
+     "text": "zones",
+     "start": 317.875,
+     "end": 318.365
+    },
+    {
+     "text": "grow",
+     "start": 318.365,
+     "end": 318.605
+    },
+    {
+     "text": "deciduous",
+     "start": 318.605,
+     "end": 319.305
+    },
+    {
+     "text": "and",
+     "start": 319.305,
+     "end": 319.425
+    },
+    {
+     "text": "coniferous",
+     "start": 319.425,
+     "end": 319.915
+    },
+    {
+     "text": "forests,",
+     "start": 319.915,
+     "end": 320.475
+    },
+    {
+     "text": "like",
+     "start": 320.475,
+     "end": 320.785
+    },
+    {
+     "text": "oak,",
+     "start": 320.785,
+     "end": 321.165
+    },
+    {
+     "text": "pine",
+     "start": 321.165,
+     "end": 321.635
+    },
+    {
+     "text": "and",
+     "start": 321.635,
+     "end": 321.785
+    },
+    {
+     "text": "deodar,",
+     "start": 321.785,
+     "end": 322.355
+    },
+    {
+     "text": "and",
+     "start": 322.755,
+     "end": 322.885
+    },
+    {
+     "text": "the",
+     "start": 322.885,
+     "end": 322.945
+    },
+    {
+     "text": "frigid",
+     "start": 322.945,
+     "end": 323.345
+    },
+    {
+     "text": "zones",
+     "start": 323.345,
+     "end": 323.785
+    },
+    {
+     "text": "have",
+     "start": 323.785,
+     "end": 323.945
+    },
+    {
+     "text": "only",
+     "start": 323.945,
+     "end": 324.275
+    },
+    {
+     "text": "tundra:",
+     "start": 324.275,
+     "end": 324.795
+    },
+    {
+     "text": "mosses",
+     "start": 325.305,
+     "end": 325.805
+    },
+    {
+     "text": "and",
+     "start": 325.805,
+     "end": 325.915
+    },
+    {
+     "text": "lichens.",
+     "start": 325.915,
+     "end": 326.655
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "speak": "Remember: imaginary lines locate places and set time. Earth's tilt creates the solstices and the seasons. And latitude, through the Sun's angle and the movement of air, decides climate and forests.",
+   "text": "Remember: imaginary lines locate places and set time. Earth's tilt creates the solstices and the seasons. And latitude, through the Sun's angle and the movement of air, decides climate and forests.",
+   "start": 328.296,
+   "end": 341.8,
+   "words": [
+    {
+     "text": "Remember:",
+     "start": 328.316,
+     "end": 329.036
+    },
+    {
+     "text": "imaginary",
+     "start": 329.036,
+     "end": 329.656
+    },
+    {
+     "text": "lines",
+     "start": 329.656,
+     "end": 330.116
+    },
+    {
+     "text": "locate",
+     "start": 330.116,
+     "end": 330.536
+    },
+    {
+     "text": "places",
+     "start": 330.536,
+     "end": 331.126
+    },
+    {
+     "text": "and",
+     "start": 331.126,
+     "end": 331.246
+    },
+    {
+     "text": "set",
+     "start": 331.246,
+     "end": 331.496
+    },
+    {
+     "text": "time.",
+     "start": 331.496,
+     "end": 332.006
+    },
+    {
+     "text": "Earth's",
+     "start": 332.816,
+     "end": 333.166
+    },
+    {
+     "text": "tilt",
+     "start": 333.166,
+     "end": 333.546
+    },
+    {
+     "text": "creates",
+     "start": 333.546,
+     "end": 334.046
+    },
+    {
+     "text": "the",
+     "start": 334.046,
+     "end": 334.136
+    },
+    {
+     "text": "solstices",
+     "start": 334.136,
+     "end": 334.936
+    },
+    {
+     "text": "and",
+     "start": 334.936,
+     "end": 335.056
+    },
+    {
+     "text": "the",
+     "start": 335.056,
+     "end": 335.116
+    },
+    {
+     "text": "seasons.",
+     "start": 335.116,
+     "end": 335.876
+    },
+    {
+     "text": "And",
+     "start": 336.436,
+     "end": 336.576
+    },
+    {
+     "text": "latitude,",
+     "start": 336.576,
+     "end": 337.346
+    },
+    {
+     "text": "through",
+     "start": 337.346,
+     "end": 337.536
+    },
+    {
+     "text": "the",
+     "start": 337.536,
+     "end": 337.606
+    },
+    {
+     "text": "Sun's",
+     "start": 337.606,
+     "end": 337.996
+    },
+    {
+     "text": "angle",
+     "start": 337.996,
+     "end": 338.426
+    },
+    {
+     "text": "and",
+     "start": 338.426,
+     "end": 338.546
+    },
+    {
+     "text": "the",
+     "start": 338.546,
+     "end": 338.606
+    },
+    {
+     "text": "movement",
+     "start": 338.606,
+     "end": 339.026
+    },
+    {
+     "text": "of",
+     "start": 339.026,
+     "end": 339.106
+    },
+    {
+     "text": "air,",
+     "start": 339.106,
+     "end": 339.516
+    },
+    {
+     "text": "decides",
+     "start": 339.826,
+     "end": 340.356
+    },
+    {
+     "text": "climate",
+     "start": 340.356,
+     "end": 340.876
+    },
+    {
+     "text": "and",
+     "start": 340.876,
+     "end": 340.996
+    },
+    {
+     "text": "forests.",
+     "start": 340.996,
+     "end": 341.736
+    }
+   ]
+  }
+ ]
+}
