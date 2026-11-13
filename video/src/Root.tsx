@@ -11,6 +11,8 @@ import { MonsoonStatics } from "./monsoon/Statics";
 import { SeasonsLesson, SEASONS_FRAMES, SEASONS_FPS } from "./seasons2/SeasonsLesson";
 import { SeasonsStatics } from "./seasons2/Statics";
 import { ThumbSeasons, ThumbMonsoon } from "./thumbs/Thumbs";
+import { WbLesson, WB_FRAMES, WB_FPS } from "./wb/WbLesson";
+const WbBranded = () => <UpscBranded contentFrames={WB_FRAMES} variant="ink" corner="bottom-right" opacity={0.35}><WbLesson /></UpscBranded>;
 const SeasonsBranded = () => <UpscBranded contentFrames={SEASONS_FRAMES} variant="ink" corner="bottom-right"><SeasonsLesson /></UpscBranded>;
 const MonsoonBranded = () => <UpscBranded contentFrames={MONSOON_FRAMES} variant="ink" corner="bottom-right"><MonsoonLesson /></UpscBranded>;
 const ZonesLessonBranded = () => <UpscBranded contentFrames={ZONES_FRAMES} variant="ink" corner="bottom-right"><ZonesLesson /></UpscBranded>;
@@ -33,6 +35,8 @@ export const RemotionRoot = () => (
   <Composition id="SeasonsStatics" component={SeasonsStatics} durationInFrames={1} fps={30} width={2560} height={1440} defaultProps={{ layer: "world0" }} />
   <Composition id="ThumbSeasons" component={ThumbSeasons} durationInFrames={1} fps={30} width={1920} height={1080} />
   <Composition id="ThumbMonsoon" component={ThumbMonsoon} durationInFrames={1} fps={30} width={1920} height={1080} />
+  <Composition id="WbLesson" component={WbLesson} durationInFrames={WB_FRAMES} fps={WB_FPS} width={3840} height={2160} />
+  <Composition id="UpscWbMonsoon" component={WbBranded} durationInFrames={brandedFrames(WB_FRAMES, WB_FPS)} fps={WB_FPS} width={3840} height={2160} />
   <Composition id="MonsoonStatics" component={MonsoonStatics} durationInFrames={1} fps={30} width={2560} height={1440} defaultProps={{ layer: "paper" }} />
   </>
 );
