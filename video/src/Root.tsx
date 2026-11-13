@@ -12,7 +12,7 @@ import { SeasonsLesson, SEASONS_FRAMES, SEASONS_FPS } from "./seasons2/SeasonsLe
 import { SeasonsStatics } from "./seasons2/Statics";
 import { ThumbSeasons, ThumbMonsoon } from "./thumbs/Thumbs";
 import { WbLesson, WB_FRAMES, WB_FPS } from "./wb/WbLesson";
-const WbBranded = () => <UpscBranded contentFrames={WB_FRAMES} variant="ink" corner="bottom-right" opacity={0.35}><WbLesson /></UpscBranded>;
+const WbBranded = () => <UpscBranded contentFrames={WB_FRAMES} variant="seal" corner="bottom-right" opacity={0.95} size={0.085}><WbLesson /></UpscBranded>;
 const SeasonsBranded = () => <UpscBranded contentFrames={SEASONS_FRAMES} variant="ink" corner="bottom-right"><SeasonsLesson /></UpscBranded>;
 const MonsoonBranded = () => <UpscBranded contentFrames={MONSOON_FRAMES} variant="ink" corner="bottom-right"><MonsoonLesson /></UpscBranded>;
 const ZonesLessonBranded = () => <UpscBranded contentFrames={ZONES_FRAMES} variant="ink" corner="bottom-right"><ZonesLesson /></UpscBranded>;
