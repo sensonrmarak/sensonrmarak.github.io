@@ -1,0 +1,834 @@
+{
+ "fps": 24,
+ "total": 73.95,
+ "shots": [
+  0.0,
+  6.88,
+  17.21,
+  25.87,
+  36.93,
+  40.03,
+  47.94,
+  58.34
+ ],
+ "segments": [
+  {
+   "start": 0.5,
+   "end": 6.68,
+   "text": "In Oakenvale, the Harvest Lantern Fair was glowing on the far side of Fernwhistle Hill.",
+   "words": [
+    {
+     "text": "In",
+     "start": 0.5,
+     "end": 0.721
+    },
+    {
+     "text": "Oakenvale,",
+     "start": 0.721,
+     "end": 1.385
+    },
+    {
+     "text": "the",
+     "start": 1.385,
+     "end": 1.939
+    },
+    {
+     "text": "Harvest",
+     "start": 1.939,
+     "end": 2.477
+    },
+    {
+     "text": "Lantern",
+     "start": 2.477,
+     "end": 3.014
+    },
+    {
+     "text": "Fair",
+     "start": 3.014,
+     "end": 3.362
+    },
+    {
+     "text": "was",
+     "start": 3.362,
+     "end": 3.646
+    },
+    {
+     "text": "glowing",
+     "start": 3.646,
+     "end": 4.183
+    },
+    {
+     "text": "on",
+     "start": 4.183,
+     "end": 4.404
+    },
+    {
+     "text": "the",
+     "start": 4.404,
+     "end": 4.689
+    },
+    {
+     "text": "far",
+     "start": 4.689,
+     "end": 4.973
+    },
+    {
+     "text": "side",
+     "start": 4.973,
+     "end": 5.321
+    },
+    {
+     "text": "of",
+     "start": 5.321,
+     "end": 5.542
+    },
+    {
+     "text": "Fernwhistle",
+     "start": 5.542,
+     "end": 6.332
+    },
+    {
+     "text": "Hill.",
+     "start": 6.332,
+     "end": 6.68
+    }
+   ]
+  },
+  {
+   "start": 7.13,
+   "end": 17.01,
+   "text": "\"Last one there is a slowpoke!\" laughed Juniper the squirrel, and off she zipped. Pebble the rabbit hopped after her. Hop, hop... gone!",
+   "words": [
+    {
+     "text": "\"Last",
+     "start": 7.13,
+     "end": 7.427
+    },
+    {
+     "text": "one",
+     "start": 7.427,
+     "end": 7.669
+    },
+    {
+     "text": "there",
+     "start": 7.669,
+     "end": 8.02
+    },
+    {
+     "text": "is",
+     "start": 8.02,
+     "end": 8.208
+    },
+    {
+     "text": "a",
+     "start": 8.208,
+     "end": 8.343
+    },
+    {
+     "text": "slowpoke!\"",
+     "start": 8.343,
+     "end": 8.855
+    },
+    {
+     "text": "laughed",
+     "start": 8.855,
+     "end": 9.594
+    },
+    {
+     "text": "Juniper",
+     "start": 9.594,
+     "end": 10.052
+    },
+    {
+     "text": "the",
+     "start": 10.052,
+     "end": 10.295
+    },
+    {
+     "text": "squirrel,",
+     "start": 10.295,
+     "end": 10.807
+    },
+    {
+     "text": "and",
+     "start": 10.807,
+     "end": 11.39
+    },
+    {
+     "text": "off",
+     "start": 11.39,
+     "end": 11.632
+    },
+    {
+     "text": "she",
+     "start": 11.632,
+     "end": 11.875
+    },
+    {
+     "text": "zipped.",
+     "start": 11.875,
+     "end": 12.989
+    },
+    {
+     "text": "Pebble",
+     "start": 12.989,
+     "end": 13.394
+    },
+    {
+     "text": "the",
+     "start": 13.394,
+     "end": 13.636
+    },
+    {
+     "text": "rabbit",
+     "start": 13.636,
+     "end": 14.041
+    },
+    {
+     "text": "hopped",
+     "start": 14.041,
+     "end": 14.445
+    },
+    {
+     "text": "after",
+     "start": 14.445,
+     "end": 15.286
+    },
+    {
+     "text": "her.",
+     "start": 15.286,
+     "end": 15.828
+    },
+    {
+     "text": "Hop,",
+     "start": 15.828,
+     "end": 16.071
+    },
+    {
+     "text": "hop...",
+     "start": 16.071,
+     "end": 16.713
+    },
+    {
+     "text": "gone!",
+     "start": 16.713,
+     "end": 17.01
+    }
+   ]
+  },
+  {
+   "start": 17.46,
+   "end": 25.67,
+   "text": "Little Moss the snail just smiled, and kept to the path. Slow and steady, one silvery inch at a time.",
+   "words": [
+    {
+     "text": "Little",
+     "start": 17.46,
+     "end": 17.973
+    },
+    {
+     "text": "Moss",
+     "start": 17.973,
+     "end": 18.35
+    },
+    {
+     "text": "the",
+     "start": 18.35,
+     "end": 18.657
+    },
+    {
+     "text": "snail",
+     "start": 18.657,
+     "end": 19.102
+    },
+    {
+     "text": "just",
+     "start": 19.102,
+     "end": 19.479
+    },
+    {
+     "text": "smiled,",
+     "start": 19.479,
+     "end": 19.992
+    },
+    {
+     "text": "and",
+     "start": 19.992,
+     "end": 20.3
+    },
+    {
+     "text": "kept",
+     "start": 20.3,
+     "end": 20.676
+    },
+    {
+     "text": "to",
+     "start": 20.676,
+     "end": 20.916
+    },
+    {
+     "text": "the",
+     "start": 20.916,
+     "end": 21.693
+    },
+    {
+     "text": "path.",
+     "start": 21.693,
+     "end": 22.07
+    },
+    {
+     "text": "Slow",
+     "start": 22.07,
+     "end": 22.446
+    },
+    {
+     "text": "and",
+     "start": 22.446,
+     "end": 22.754
+    },
+    {
+     "text": "steady,",
+     "start": 22.754,
+     "end": 23.617
+    },
+    {
+     "text": "one",
+     "start": 23.617,
+     "end": 23.925
+    },
+    {
+     "text": "silvery",
+     "start": 23.925,
+     "end": 24.507
+    },
+    {
+     "text": "inch",
+     "start": 24.507,
+     "end": 24.883
+    },
+    {
+     "text": "at",
+     "start": 24.883,
+     "end": 25.123
+    },
+    {
+     "text": "a",
+     "start": 25.123,
+     "end": 25.294
+    },
+    {
+     "text": "time.",
+     "start": 25.294,
+     "end": 25.67
+    }
+   ]
+  },
+  {
+   "start": 26.12,
+   "end": 36.73,
+   "text": "But as the sun slipped down, a thick fog came rolling in. Juniper stopped. Pebble stopped. Every tree looked the same.",
+   "words": [
+    {
+     "text": "But",
+     "start": 26.12,
+     "end": 26.433
+    },
+    {
+     "text": "as",
+     "start": 26.433,
+     "end": 26.676
+    },
+    {
+     "text": "the",
+     "start": 26.676,
+     "end": 26.988
+    },
+    {
+     "text": "sun",
+     "start": 26.988,
+     "end": 27.301
+    },
+    {
+     "text": "slipped",
+     "start": 27.301,
+     "end": 27.892
+    },
+    {
+     "text": "down,",
+     "start": 27.892,
+     "end": 28.564
+    },
+    {
+     "text": "a",
+     "start": 28.564,
+     "end": 28.738
+    },
+    {
+     "text": "thick",
+     "start": 28.738,
+     "end": 29.189
+    },
+    {
+     "text": "fog",
+     "start": 29.189,
+     "end": 29.502
+    },
+    {
+     "text": "came",
+     "start": 29.502,
+     "end": 29.884
+    },
+    {
+     "text": "rolling",
+     "start": 29.884,
+     "end": 30.474
+    },
+    {
+     "text": "in.",
+     "start": 30.474,
+     "end": 31.398
+    },
+    {
+     "text": "Juniper",
+     "start": 31.398,
+     "end": 31.988
+    },
+    {
+     "text": "stopped.",
+     "start": 31.988,
+     "end": 33.049
+    },
+    {
+     "text": "Pebble",
+     "start": 33.049,
+     "end": 33.57
+    },
+    {
+     "text": "stopped.",
+     "start": 33.57,
+     "end": 34.68
+    },
+    {
+     "text": "Every",
+     "start": 34.68,
+     "end": 35.132
+    },
+    {
+     "text": "tree",
+     "start": 35.132,
+     "end": 35.514
+    },
+    {
+     "text": "looked",
+     "start": 35.514,
+     "end": 36.035
+    },
+    {
+     "text": "the",
+     "start": 36.035,
+     "end": 36.348
+    },
+    {
+     "text": "same.",
+     "start": 36.348,
+     "end": 36.73
+    }
+   ]
+  },
+  {
+   "start": 37.18,
+   "end": 39.83,
+   "text": "\"Which way is the Fair?\" Pebble whispered.",
+   "words": [
+    {
+     "text": "\"Which",
+     "start": 37.18,
+     "end": 37.504
+    },
+    {
+     "text": "way",
+     "start": 37.504,
+     "end": 37.729
+    },
+    {
+     "text": "is",
+     "start": 37.729,
+     "end": 37.903
+    },
+    {
+     "text": "the",
+     "start": 37.903,
+     "end": 38.128
+    },
+    {
+     "text": "Fair?\"",
+     "start": 38.128,
+     "end": 38.402
+    },
+    {
+     "text": "Pebble",
+     "start": 38.402,
+     "end": 39.306
+    },
+    {
+     "text": "whispered.",
+     "start": 39.306,
+     "end": 39.83
+    }
+   ]
+  },
+  {
+   "start": 40.28,
+   "end": 47.74,
+   "text": "Then, through the fog, something shimmered. A thin silver line, glowing in the moonlight. \"It's Moss's trail!\"",
+   "words": [
+    {
+     "text": "Then,",
+     "start": 40.28,
+     "end": 40.575
+    },
+    {
+     "text": "through",
+     "start": 40.575,
+     "end": 41.342
+    },
+    {
+     "text": "the",
+     "start": 41.342,
+     "end": 41.584
+    },
+    {
+     "text": "fog,",
+     "start": 41.584,
+     "end": 41.826
+    },
+    {
+     "text": "something",
+     "start": 41.826,
+     "end": 42.69
+    },
+    {
+     "text": "shimmered.",
+     "start": 42.69,
+     "end": 43.254
+    },
+    {
+     "text": "A",
+     "start": 43.254,
+     "end": 43.938
+    },
+    {
+     "text": "thin",
+     "start": 43.938,
+     "end": 44.234
+    },
+    {
+     "text": "silver",
+     "start": 44.234,
+     "end": 44.636
+    },
+    {
+     "text": "line,",
+     "start": 44.636,
+     "end": 44.932
+    },
+    {
+     "text": "glowing",
+     "start": 44.932,
+     "end": 45.389
+    },
+    {
+     "text": "in",
+     "start": 45.389,
+     "end": 45.577
+    },
+    {
+     "text": "the",
+     "start": 45.577,
+     "end": 45.818
+    },
+    {
+     "text": "moonlight.",
+     "start": 45.818,
+     "end": 46.692
+    },
+    {
+     "text": "\"It's",
+     "start": 46.692,
+     "end": 46.988
+    },
+    {
+     "text": "Moss's",
+     "start": 46.988,
+     "end": 47.391
+    },
+    {
+     "text": "trail!\"",
+     "start": 47.391,
+     "end": 47.74
+    }
+   ]
+  },
+  {
+   "start": 48.19,
+   "end": 58.14,
+   "text": "They followed it, step by step, until the fog melted away, and there was Moss, waiting at the gate of the Fair.",
+   "words": [
+    {
+     "text": "They",
+     "start": 48.19,
+     "end": 48.567
+    },
+    {
+     "text": "followed",
+     "start": 48.567,
+     "end": 49.217
+    },
+    {
+     "text": "it,",
+     "start": 49.217,
+     "end": 49.457
+    },
+    {
+     "text": "step",
+     "start": 49.457,
+     "end": 50.663
+    },
+    {
+     "text": "by",
+     "start": 50.663,
+     "end": 50.903
+    },
+    {
+     "text": "step,",
+     "start": 50.903,
+     "end": 51.28
+    },
+    {
+     "text": "until",
+     "start": 51.28,
+     "end": 51.725
+    },
+    {
+     "text": "the",
+     "start": 51.725,
+     "end": 52.033
+    },
+    {
+     "text": "fog",
+     "start": 52.033,
+     "end": 52.341
+    },
+    {
+     "text": "melted",
+     "start": 52.341,
+     "end": 53.145
+    },
+    {
+     "text": "away,",
+     "start": 53.145,
+     "end": 53.521
+    },
+    {
+     "text": "and",
+     "start": 53.521,
+     "end": 53.829
+    },
+    {
+     "text": "there",
+     "start": 53.829,
+     "end": 54.274
+    },
+    {
+     "text": "was",
+     "start": 54.274,
+     "end": 54.583
+    },
+    {
+     "text": "Moss,",
+     "start": 54.583,
+     "end": 55.299
+    },
+    {
+     "text": "waiting",
+     "start": 55.299,
+     "end": 55.881
+    },
+    {
+     "text": "at",
+     "start": 55.881,
+     "end": 56.531
+    },
+    {
+     "text": "the",
+     "start": 56.531,
+     "end": 56.839
+    },
+    {
+     "text": "gate",
+     "start": 56.839,
+     "end": 57.216
+    },
+    {
+     "text": "of",
+     "start": 57.216,
+     "end": 57.455
+    },
+    {
+     "text": "the",
+     "start": 57.455,
+     "end": 57.763
+    },
+    {
+     "text": "Fair.",
+     "start": 57.763,
+     "end": 58.14
+    }
+   ]
+  },
+  {
+   "start": 58.59,
+   "end": 63.39,
+   "text": "\"You're not slow, Moss,\" said Juniper. \"You're the one who lit the way.\"",
+   "words": [
+    {
+     "text": "\"You're",
+     "start": 58.59,
+     "end": 58.996
+    },
+    {
+     "text": "not",
+     "start": 58.996,
+     "end": 59.24
+    },
+    {
+     "text": "slow,",
+     "start": 59.24,
+     "end": 59.537
+    },
+    {
+     "text": "Moss,\"",
+     "start": 59.537,
+     "end": 59.835
+    },
+    {
+     "text": "said",
+     "start": 59.835,
+     "end": 60.483
+    },
+    {
+     "text": "Juniper.",
+     "start": 60.483,
+     "end": 60.943
+    },
+    {
+     "text": "\"You're",
+     "start": 60.943,
+     "end": 61.929
+    },
+    {
+     "text": "the",
+     "start": 61.929,
+     "end": 62.172
+    },
+    {
+     "text": "one",
+     "start": 62.172,
+     "end": 62.416
+    },
+    {
+     "text": "who",
+     "start": 62.416,
+     "end": 62.659
+    },
+    {
+     "text": "lit",
+     "start": 62.659,
+     "end": 62.903
+    },
+    {
+     "text": "the",
+     "start": 62.903,
+     "end": 63.146
+    },
+    {
+     "text": "way.\"",
+     "start": 63.146,
+     "end": 63.39
+    }
+   ]
+  },
+  {
+   "start": 63.84,
+   "end": 70.45,
+   "text": "Remember, little friends: slow is not small. Every gift can light someone's way.",
+   "words": [
+    {
+     "text": "Remember,",
+     "start": 63.84,
+     "end": 64.484
+    },
+    {
+     "text": "little",
+     "start": 64.484,
+     "end": 64.992
+    },
+    {
+     "text": "friends:",
+     "start": 64.992,
+     "end": 65.929
+    },
+    {
+     "text": "slow",
+     "start": 65.929,
+     "end": 66.301
+    },
+    {
+     "text": "is",
+     "start": 66.301,
+     "end": 66.539
+    },
+    {
+     "text": "not",
+     "start": 66.539,
+     "end": 66.844
+    },
+    {
+     "text": "small.",
+     "start": 66.844,
+     "end": 67.874
+    },
+    {
+     "text": "Every",
+     "start": 67.874,
+     "end": 68.315
+    },
+    {
+     "text": "gift",
+     "start": 68.315,
+     "end": 68.688
+    },
+    {
+     "text": "can",
+     "start": 68.688,
+     "end": 68.993
+    },
+    {
+     "text": "light",
+     "start": 68.993,
+     "end": 69.433
+    },
+    {
+     "text": "someone's",
+     "start": 69.433,
+     "end": 70.145
+    },
+    {
+     "text": "way.",
+     "start": 70.145,
+     "end": 70.45
+    }
+   ]
+  }
+ ]
+}
