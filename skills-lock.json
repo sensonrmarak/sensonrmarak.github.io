@@ -1,0 +1,65 @@
+{
+  "version": 2,
+  "skills": {
+    "anatomy": {
+      "source": "../../../tmp/claude-0/-home-user-sensonrmarak-github-io/1936bf62-e608-5487-b81b-ff2faaaa8de2/scratchpad/dl/anatomy",
+      "sourceType": "local",
+      "computedHash": "a9a04fcc6d8e5e8229657523b02779954821b31d630617cdb6457dfd34cd0993",
+      "installMode": "copy"
+    },
+    "archify": {
+      "source": "../../../tmp/claude-0/-home-user-sensonrmarak-github-io/1936bf62-e608-5487-b81b-ff2faaaa8de2/scratchpad/dl/archify",
+      "sourceType": "local",
+      "computedHash": "dcc4821a0dd36701d56e571910de4e20ca99a036810a3ba4d4261b0f078ad7a1",
+      "installMode": "copy"
+    },
+    "cad": {
+      "source": "../../../tmp/claude-0/-home-user-sensonrmarak-github-io/1936bf62-e608-5487-b81b-ff2faaaa8de2/scratchpad/dl/text-to-cad",
+      "sourceType": "local",
+      "computedHash": "d401611a5ac67261064403c9bd96404621c3617175295fb904f64e3f59c6df67",
+      "installMode": "copy"
+    },
+    "engineering-drawing": {
+      "source": "../../../tmp/claude-0/-home-user-sensonrmarak-github-io/1936bf62-e608-5487-b81b-ff2faaaa8de2/scratchpad/dl/text-to-cad",
+      "sourceType": "local",
+      "computedHash": "66806f40ebb5a229be1e8416fb8b75f5362d179c2289a559f226689440b77618",
+      "installMode": "copy"
+    },
+    "fea": {
+      "source": "../../../tmp/claude-0/-home-user-sensonrmarak-github-io/1936bf62-e608-5487-b81b-ff2faaaa8de2/scratchpad/dl/text-to-cad",
+      "sourceType": "local",
+      "computedHash": "d941bbe64f8ac2dbf12fba88ef7bf1b3c8287aeb74860771bb4f73c4f1bc1dbe",
+      "installMode": "copy"
+    },
+    "pcb": {
+      "source": "../../../tmp/claude-0/-home-user-sensonrmarak-github-io/1936bf62-e608-5487-b81b-ff2faaaa8de2/scratchpad/dl/text-to-cad",
+      "sourceType": "local",
+      "computedHash": "a22c69e2b9ba5919371d451457f1e89f61f27c5ebe1f27b3a20878b783320344",
+      "installMode": "copy"
+    },
+    "print3d": {
+      "source": "../../../tmp/claude-0/-home-user-sensonrmarak-github-io/1936bf62-e608-5487-b81b-ff2faaaa8de2/scratchpad/dl/text-to-cad",
+      "sourceType": "local",
+      "computedHash": "3f2d1a2f45ce95ffeeaa4464c052ca7ac910f37707d6994d059a7a50ba6c71cb",
+      "installMode": "copy"
+    },
+    "render": {
+      "source": "../../../tmp/claude-0/-home-user-sensonrmarak-github-io/1936bf62-e608-5487-b81b-ff2faaaa8de2/scratchpad/dl/text-to-cad",
+      "sourceType": "local",
+      "computedHash": "bf52539992b6e2ebdbcdbe6df9d9f1b2620a86106616c66bd2873987a1ad66bc",
+      "installMode": "copy"
+    },
+    "robot-simulation": {
+      "source": "../../../tmp/claude-0/-home-user-sensonrmarak-github-io/1936bf62-e608-5487-b81b-ff2faaaa8de2/scratchpad/dl/text-to-cad",
+      "sourceType": "local",
+      "computedHash": "73ce8ea67b2672d758825b482472a9ec338205a05d5ca385b269176ab2afef2f",
+      "installMode": "copy"
+    },
+    "sendcutsend": {
+      "source": "../../../tmp/claude-0/-home-user-sensonrmarak-github-io/1936bf62-e608-5487-b81b-ff2faaaa8de2/scratchpad/dl/text-to-cad",
+      "sourceType": "local",
+      "computedHash": "d6f00e9bfdac9c0c04deb2fb68860366f19dac7813c48232d352e7e0e41d49e4",
+      "installMode": "copy"
+    }
+  }
+}
