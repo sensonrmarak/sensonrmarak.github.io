@@ -1,5 +1,5 @@
 {
- "total": 542.77,
+ "total": 542.898,
  "voice": "bf_emma",
  "segments": [
   {
@@ -6359,335 +6359,340 @@
   },
   {
    "id": "outro",
-   "speak": "So here is the whole map in your mind. What: a seasonal reversal of winds, in two phases. Why: heating, the I T C Z, and the Himalayas. How it arrives: two branches, on a timetable, declared by three tests. Why it matters: crops, prices, and markets. And how we respond: store the rain, and prepare for a more extreme monsoon. If this helped, subscribe to UPSC Animated.",
-   "text": "So here is the whole map in your mind. What: a seasonal reversal of winds, in two phases. Why: heating, the ITCZ, and the Himalayas. How it arrives: two branches, on a timetable, declared by three tests. Why it matters: crops, prices, and markets. And how we respond: store the rain, and prepare for a more extreme monsoon. If this helped, subscribe to UPSC Animated.",
+   "speak": "So here is the whole map in your mind. What: a seasonal reversal of winds, in two phases. Why: heating, the I T C Z, and the Himalayas. How it arrives: two branches, on a timetable, declared by three tests. Why it matters: crops, prices, and markets. And how we respond: store the rain, and prepare for a more extreme monsoon. If this helped, subscribe to Modus and Rayzon.",
+   "text": "So here is the whole map in your mind. What: a seasonal reversal of winds, in two phases. Why: heating, the ITCZ, and the Himalayas. How it arrives: two branches, on a timetable, declared by three tests. Why it matters: crops, prices, and markets. And how we respond: store the rain, and prepare for a more extreme monsoon. If this helped, subscribe to Modus & Raison.",
    "start": 516.885,
-   "end": 540.97,
+   "end": 541.098,
    "words": [
     {
      "text": "So",
-     "start": 516.885,
-     "end": 517.093
+     "start": 516.895,
+     "end": 517.145
     },
     {
      "text": "here",
-     "start": 517.093,
-     "end": 517.42
+     "start": 517.145,
+     "end": 517.425
     },
     {
      "text": "is",
-     "start": 517.42,
-     "end": 517.628
+     "start": 517.425,
+     "end": 517.525
     },
     {
      "text": "the",
-     "start": 517.628,
-     "end": 517.896
+     "start": 517.525,
+     "end": 517.595
     },
     {
      "text": "whole",
-     "start": 517.896,
-     "end": 518.283
+     "start": 517.595,
+     "end": 517.855
     },
     {
      "text": "map",
-     "start": 518.283,
-     "end": 518.55
+     "start": 517.855,
+     "end": 518.125
     },
     {
      "text": "in",
-     "start": 518.55,
-     "end": 518.758
+     "start": 518.125,
+     "end": 518.205
     },
     {
      "text": "your",
-     "start": 518.758,
-     "end": 519.085
+     "start": 518.205,
+     "end": 518.315
     },
     {
      "text": "mind.",
-     "start": 519.085,
-     "end": 519.472
+     "start": 518.315,
+     "end": 518.805
     },
     {
      "text": "What:",
-     "start": 519.472,
-     "end": 519.858
+     "start": 519.415,
+     "end": 519.925
     },
     {
      "text": "a",
-     "start": 519.858,
-     "end": 520.007
+     "start": 519.925,
+     "end": 519.985
     },
     {
      "text": "seasonal",
-     "start": 520.007,
-     "end": 520.572
+     "start": 519.985,
+     "end": 520.555
     },
     {
      "text": "reversal",
-     "start": 520.572,
-     "end": 521.137
+     "start": 520.555,
+     "end": 521.075
     },
     {
      "text": "of",
-     "start": 521.137,
-     "end": 521.345
+     "start": 521.075,
+     "end": 521.205
     },
     {
      "text": "winds,",
-     "start": 521.345,
-     "end": 521.791
+     "start": 521.205,
+     "end": 521.615
     },
     {
      "text": "in",
-     "start": 521.791,
-     "end": 521.999
+     "start": 521.615,
+     "end": 521.745
     },
     {
      "text": "two",
-     "start": 521.999,
-     "end": 522.267
+     "start": 521.745,
+     "end": 521.955
     },
     {
      "text": "phases.",
-     "start": 522.267,
-     "end": 522.772
+     "start": 521.955,
+     "end": 522.645
     },
     {
      "text": "Why:",
-     "start": 522.772,
-     "end": 523.1
+     "start": 523.235,
+     "end": 523.575
     },
     {
      "text": "heating,",
-     "start": 523.1,
-     "end": 523.664
+     "start": 523.575,
+     "end": 524.085
     },
     {
      "text": "the",
-     "start": 523.664,
-     "end": 523.932
+     "start": 524.085,
+     "end": 524.215
     },
     {
      "text": "ITCZ,",
-     "start": 523.932,
-     "end": 524.586
+     "start": 524.215,
+     "end": 524.875
     },
     {
      "text": "and",
-     "start": 524.586,
-     "end": 524.854
+     "start": 524.875,
+     "end": 525.175
     },
     {
      "text": "the",
-     "start": 524.854,
-     "end": 525.121
+     "start": 525.175,
+     "end": 525.235
     },
     {
      "text": "Himalayas.",
-     "start": 525.121,
-     "end": 525.805
+     "start": 525.235,
+     "end": 526.015
     },
     {
      "text": "How",
-     "start": 525.805,
-     "end": 526.073
+     "start": 526.485,
+     "end": 526.615
     },
     {
      "text": "it",
-     "start": 526.073,
-     "end": 526.281
+     "start": 526.615,
+     "end": 526.765
     },
     {
      "text": "arrives:",
-     "start": 526.281,
-     "end": 526.846
+     "start": 526.765,
+     "end": 527.315
     },
     {
      "text": "two",
-     "start": 526.846,
-     "end": 527.114
+     "start": 527.315,
+     "end": 527.485
     },
     {
      "text": "branches,",
-     "start": 527.114,
-     "end": 527.738
+     "start": 527.485,
+     "end": 528.065
     },
     {
      "text": "on",
-     "start": 527.738,
-     "end": 527.946
+     "start": 528.065,
+     "end": 528.145
     },
     {
      "text": "a",
-     "start": 527.946,
-     "end": 528.095
+     "start": 528.145,
+     "end": 528.195
     },
     {
      "text": "timetable,",
-     "start": 528.095,
-     "end": 528.779
+     "start": 528.195,
+     "end": 528.825
     },
     {
      "text": "declared",
-     "start": 528.779,
-     "end": 529.344
+     "start": 528.825,
+     "end": 529.205
     },
     {
      "text": "by",
-     "start": 529.344,
-     "end": 529.552
+     "start": 529.205,
+     "end": 529.375
     },
     {
      "text": "three",
-     "start": 529.552,
-     "end": 529.938
+     "start": 529.375,
+     "end": 529.645
     },
     {
      "text": "tests.",
-     "start": 529.938,
-     "end": 530.384
+     "start": 529.645,
+     "end": 530.215
     },
     {
      "text": "Why",
-     "start": 530.384,
-     "end": 530.652
+     "start": 530.825,
+     "end": 531.005
     },
     {
      "text": "it",
-     "start": 530.652,
-     "end": 530.86
+     "start": 531.005,
+     "end": 531.065
     },
     {
      "text": "matters:",
-     "start": 530.86,
-     "end": 531.425
+     "start": 531.065,
+     "end": 531.615
     },
     {
      "text": "crops,",
-     "start": 531.425,
-     "end": 531.871
+     "start": 531.615,
+     "end": 532.035
     },
     {
      "text": "prices,",
-     "start": 531.871,
-     "end": 532.377
+     "start": 532.035,
+     "end": 532.595
     },
     {
      "text": "and",
-     "start": 532.377,
-     "end": 532.644
+     "start": 532.595,
+     "end": 532.695
     },
     {
      "text": "markets.",
-     "start": 532.644,
-     "end": 533.209
+     "start": 532.695,
+     "end": 533.345
     },
     {
      "text": "And",
-     "start": 533.209,
-     "end": 533.477
+     "start": 533.895,
+     "end": 534.005
     },
     {
      "text": "how",
-     "start": 533.477,
-     "end": 533.745
+     "start": 534.005,
+     "end": 534.185
     },
     {
      "text": "we",
-     "start": 533.745,
-     "end": 533.953
+     "start": 534.185,
+     "end": 534.295
     },
     {
      "text": "respond:",
-     "start": 533.953,
-     "end": 534.518
+     "start": 534.295,
+     "end": 534.995
     },
     {
      "text": "store",
-     "start": 534.518,
-     "end": 534.904
+     "start": 534.995,
+     "end": 535.215
     },
     {
      "text": "the",
-     "start": 534.904,
-     "end": 535.172
+     "start": 535.215,
+     "end": 535.315
     },
     {
      "text": "rain,",
-     "start": 535.172,
-     "end": 535.558
+     "start": 535.315,
+     "end": 535.695
     },
     {
      "text": "and",
-     "start": 535.558,
-     "end": 535.826
+     "start": 535.695,
+     "end": 535.805
     },
     {
      "text": "prepare",
-     "start": 535.826,
-     "end": 536.331
+     "start": 535.805,
+     "end": 536.155
     },
     {
      "text": "for",
-     "start": 536.331,
-     "end": 536.599
+     "start": 536.155,
+     "end": 536.295
     },
     {
      "text": "a",
-     "start": 536.599,
-     "end": 536.748
+     "start": 536.295,
+     "end": 536.325
     },
     {
      "text": "more",
-     "start": 536.748,
-     "end": 537.075
+     "start": 536.325,
+     "end": 536.555
     },
     {
      "text": "extreme",
-     "start": 537.075,
-     "end": 537.58
+     "start": 536.555,
+     "end": 537.015
     },
     {
      "text": "monsoon.",
-     "start": 537.58,
-     "end": 538.145
+     "start": 537.015,
+     "end": 537.775
     },
     {
      "text": "If",
-     "start": 538.145,
-     "end": 538.353
+     "start": 538.355,
+     "end": 538.485
     },
     {
      "text": "this",
-     "start": 538.353,
-     "end": 538.68
+     "start": 538.485,
+     "end": 538.675
     },
     {
      "text": "helped,",
-     "start": 538.68,
-     "end": 539.186
+     "start": 538.675,
+     "end": 539.055
     },
     {
      "text": "subscribe",
-     "start": 539.186,
-     "end": 539.81
+     "start": 539.055,
+     "end": 539.715
     },
     {
      "text": "to",
-     "start": 539.81,
-     "end": 540.018
+     "start": 539.715,
+     "end": 539.825
     },
     {
-     "text": "UPSC",
-     "start": 540.018,
-     "end": 540.346
+     "text": "Modus",
+     "start": 539.825,
+     "end": 540.315
     },
     {
-     "text": "Animated.",
-     "start": 540.346,
-     "end": 540.97
+     "text": "&",
+     "start": 540.315,
+     "end": 540.67
+    },
+    {
+     "text": "Raison.",
+     "start": 540.67,
+     "end": 541.025
     }
    ]
   }

@@ -39,6 +39,23 @@ export const EndCard = () => {
   );
 };
 
+/** End card for the Modus & Raison channel: the roundel on its own cream ground, with a subscribe line. */
+export const SealEndCard = () => {
+  const f = useCurrentFrame();
+  const { fps, durationInFrames, height } = useVideoConfig();
+  const a = interpolate(f, [0, fps * 0.8], [0, 1], { extrapolateRight: "clamp" });
+  const out = interpolate(f, [durationInFrames - fps * 0.6, durationInFrames - 1], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const zoom = interpolate(f, [0, durationInFrames], [0.97, 1.02]);
+  return (
+    <AbsoluteFill style={{ background: "#fdf7ec", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ opacity: a * out, display: "flex", flexDirection: "column", alignItems: "center", transform: `scale(${zoom})` }}>
+        <Img src={staticFile("brand/modus_raison_full.png")} style={{ width: height * 0.74, height: height * 0.74 }} />
+        <div style={{ fontFamily: "Georgia, 'Times New Roman', serif", fontSize: height * 0.045, color: "#14233f", letterSpacing: height * 0.006, marginTop: height * 0.01 }}>SUBSCRIBE FOR MORE</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 /** Wrap a video: its own frames first, then the end card; the watermark sits over the video (not the end card). */
 export const UpscBranded = ({ children, contentFrames, endSeconds = 4, corner = "bottom-right", variant = "ink", opacity = 0.2, size }:
   { children: React.ReactNode; contentFrames: number; endSeconds?: number; corner?: Corner; variant?: LogoVariant; opacity?: number; size?: number }) => {
@@ -49,7 +66,7 @@ export const UpscBranded = ({ children, contentFrames, endSeconds = 4, corner = 
         {children}
         <Watermark corner={corner} variant={variant} opacity={opacity} size={size} />
       </Sequence>
-      <Sequence from={contentFrames} durationInFrames={Math.round(endSeconds * fps)}><EndCard /></Sequence>
+      <Sequence from={contentFrames} durationInFrames={Math.round(endSeconds * fps)}>{variant === "seal" ? <SealEndCard /> : <EndCard />}</Sequence>
     </AbsoluteFill>
   );
 };

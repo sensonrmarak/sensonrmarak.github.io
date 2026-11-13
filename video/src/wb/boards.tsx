@@ -338,6 +338,6 @@ export const BOARDS: Board[] = [
     br("arrives", 660, 440, 500, 470, 80, 440, "HOW", "2 branches · timetable · 3 tests", G);
     br("matters", 1140, 440, 1300, 470, 1720, 440, "IMPACT", "crops · prices · markets", R, "end");
     br("respond", 900, 500, 900, 600, 900, 660, "RESPONSE", "store the rain · prepare for extremes", B, "middle");
-    b.t("subscribe", 900, 820, "Subscribe to UPSC Animated", { size: 44, c: R, anchor: "middle" });
+    b.t("subscribe", 900, 820, "Subscribe to Modus & Raison", { size: 44, c: R, anchor: "middle" });
   }),
 ];
