@@ -8,6 +8,7 @@ export type Word = { text: string; start: number; end: number };
 export type Seg = { id: string; text: string; start: number; end: number; words: Word[] };
 export const NAR = narration as unknown as { total: number; segments: Seg[] };
 export const BW = 1800, BH = 860;
+export const FOLLOW_CAM = false;
 export const K = "#23201d", B = "#2456c4", R = "#d23b2e", G = "#1f8a4c";
 
 export type Item =
@@ -155,7 +156,8 @@ export const BoardView = ({ board, T }: { board: Board; T: number }) => {
   const { items, cams } = board;
   // camera
   let v = { x: 0, y: 0, w: BW };
-  for (const c of cams) { const k = ease((T - c.at) / 1.3); v = { x: v.x + (c.x - v.x) * k, y: v.y + (c.y - v.y) * k, w: v.w + (c.w - v.w) * k }; }
+  // FOLLOW_CAM off: the whole board stays in view for the entire video, so nothing is ever cropped
+  if (FOLLOW_CAM) for (const c of cams) { const k = ease((T - c.at) / 1.3); v = { x: v.x + (c.x - v.x) * k, y: v.y + (c.y - v.y) * k, w: v.w + (c.w - v.w) * k }; }
   v.x = Math.max(0, Math.min(BW - v.w, v.x)); v.y = Math.max(0, Math.min(BH - (v.w * BH) / BW, v.y));
   const z = BW / v.w;
   // pen
