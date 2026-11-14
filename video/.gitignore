@@ -1,2 +1,5 @@
 node_modules/
 out/
+flight/out/*.wav
+flight/out/*.mp4
+flight/audio/
