@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Globe Arcs</title>
+<style>
+@font-face { font-family:"Archivo Black"; src:url("../motion-core/fonts/archivo-black.woff2") format("woff2"); font-weight:400 900; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-400.woff2") format("woff2"); font-weight:400; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-700.woff2") format("woff2"); font-weight:500 900; }
+@font-face { font-family:"Playfair Display"; src:url("../motion-core/fonts/playfair-display-italic.woff2") format("woff2"); font-style:italic; }
+:root { --ink:#0e0e0e; --paper:#efe9df; --accent:#ff4a1c; --blue:#2433ff; --pink:#f4a7c4; --yellow:#ffc21a; --lime:#c6ff3d;
+  --display: "Archivo Black","Arial Black","Helvetica Neue",Arial,sans-serif; --mono: "JetBrains Mono",ui-monospace,Menlo,monospace;
+  --serif: "Playfair Display",Georgia,"Times New Roman",serif; }
+html, body { margin:0; background:#111; overflow:hidden; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden; background:var(--ink); transform-origin:0 0;
+  font-family: var(--display); color: var(--ink); }
+canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="motion-globe-arcs" data-width="1920" data-height="1080" data-duration="6">
+<canvas id="cv"></canvas>
+</div>
+<script>
+// ---- motion kit (inlined so the file stands alone) ----
+const W = 1920, H = 1080;
+const clamp = (x, a = 0, b = 1) => (x < a ? a : x > b ? b : x);
+const seg = (t, a, b) => clamp((t - a) / (b - a));          // 0..1 progress of t through [a,b]
+const lerp = (a, b, k) => a + (b - a) * k;
+const E = {
+  lin: x => x,
+  in: x => x * x * x,
+  out: x => 1 - (1 - x) ** 3,
+  inOut: x => (x < 0.5 ? 4 * x * x * x : 1 - (-2 * x + 2) ** 3 / 2),
+  expo: x => (x >= 1 ? 1 : 1 - 2 ** (-10 * x)),
+  back: x => { const c = 1.70158; return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2; },
+  elastic: x => (x <= 0 ? 0 : x >= 1 ? 1 : 2 ** (-10 * x) * Math.sin((x * 10 - 0.75) * 2.0944) + 1),
+  bounce: x => { const n = 7.5625, d = 2.75;
+    if (x < 1 / d) return n * x * x; if (x < 2 / d) return n * (x -= 1.5 / d) * x + 0.75;
+    if (x < 2.5 / d) return n * (x -= 2.25 / d) * x + 0.9375; return n * (x -= 2.625 / d) * x + 0.984375; },
+};
+function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6d2b79f5) | 0;
+  let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+function ctx2d(id) { const c = document.getElementById(id); c.width = W; c.height = H; return c.getContext("2d"); }
+function rot(p, ax, ay, az = 0) { let [x, y, z] = p, c, s;
+  c = Math.cos(ax); s = Math.sin(ax); [y, z] = [y * c - z * s, y * s + z * c];
+  c = Math.cos(ay); s = Math.sin(ay); [x, z] = [x * c + z * s, -x * s + z * c];
+  c = Math.cos(az); s = Math.sin(az); [x, y] = [x * c - y * s, x * s + y * c];
+  return [x, y, z]; }
+function proj(p, f = 1400, cx = W / 2, cy = H / 2) { const k = f / (f + p[2]); return [cx + p[0] * k, cy + p[1] * k, k]; }
+function mix(c1, c2, k) { const a = parseInt(c1.slice(1), 16), b = parseInt(c2.slice(1), 16);
+  const ch = sh => Math.round(lerp((a >> sh) & 255, (b >> sh) & 255, k));
+  return `rgb(${ch(16)},${ch(8)},${ch(0)})`; }
+const C = { ink: "#0e0e0e", paper: "#efe9df", accent: "#ff4a1c", blue: "#2433ff",
+  pink: "#f4a7c4", yellow: "#ffc21a", lime: "#c6ff3d", white: "#ffffff" };
+// ---- end kit ----
+const DUR = 6;
+const g = ctx2d("cv");
+const N = 2200, R = 430, pts = [];
+for (let i = 0; i < N; i++) { const y = 1 - (i / (N - 1)) * 2, r = Math.sqrt(1 - y * y), th = i * 2.39996;
+  pts.push([Math.cos(th) * r, y, Math.sin(th) * r]); }
+const ll = (lat, lon) => { const a = lat * Math.PI / 180, b = lon * Math.PI / 180; return [Math.cos(a) * Math.sin(b), -Math.sin(a), Math.cos(a) * Math.cos(b)]; };
+const city = { ny: ll(40.7, -74), ldn: ll(51.5, -0.1), tok: ll(35.7, 139.7), syd: ll(-33.9, 151.2), sp: ll(-23.5, -46.6), dxb: ll(25.2, 55.3), sf: ll(37.8, -122.4), sg: ll(1.35, 103.8) };
+const arcs = [["sf", "ldn"], ["ny", "sp"], ["ldn", "dxb"], ["dxb", "sg"], ["sg", "syd"], ["tok", "sf"]];
+function slerp(a, b, u) { const d = Math.acos(clamp(a[0] * b[0] + a[1] * b[1] + a[2] * b[2], -1, 1)), s = Math.sin(d) || 1;
+  const ka = Math.sin((1 - u) * d) / s, kb = Math.sin(u * d) / s; return [a[0] * ka + b[0] * kb, a[1] * ka + b[1] * kb, a[2] * ka + b[2] * kb]; }
+function renderAt(t) {
+  g.fillStyle = C.ink; g.fillRect(0, 0, W, H);
+  const sc = lerp(0.6, 1, E.out(seg(t, 0, 1))), ay = t * 0.35 - 0.6, ax = 0.35, Rr = R * sc;
+  const P = v => { const q = rot(v, ax, ay); return [W / 2 + q[0] * Rr, H / 2 + q[1] * Rr, q[2]]; };
+  const fade = E.out(seg(t, 0, 1));
+  for (const p of pts) { const [x, y, z] = P(p);
+    g.fillStyle = z < 0 ? `rgba(239,233,223,${0.85 * fade})` : `rgba(239,233,223,${0.13 * fade})`;
+    g.fillRect(x - 1.6, y - 1.6, z < 0 ? 3.2 : 2.4, z < 0 ? 3.2 : 2.4); }
+  arcs.forEach(([a, b], i) => {
+    const p = seg(t, 1 + i * 0.45, 2.1 + i * 0.45); if (p <= 0) return;
+    const head = E.inOut(p), tail = Math.max(0, head - 0.5);
+    const A = city[a], B = city[b], steps = 60;
+    g.lineWidth = 4; g.lineCap = "round"; g.strokeStyle = C.accent; g.shadowColor = C.accent; g.shadowBlur = 14;
+    g.beginPath(); let started = false;
+    for (let s = 0; s <= steps; s++) { const u = s / steps; if (u < tail || u > head) continue;
+      const v = slerp(A, B, u), h = 1 + 0.28 * Math.sin(Math.PI * u), [x, y, z] = P([v[0] * h, v[1] * h, v[2] * h]);
+      const hidden = z > 0 && Math.hypot(x - W / 2, y - H / 2) < Rr;
+      if (hidden) { started = false; continue; }
+      if (!started) { g.moveTo(x, y); started = true; } else g.lineTo(x, y); }
+    g.stroke(); g.shadowBlur = 0;
+    [[A, 0], [B, 1]].forEach(([v, end]) => { const [x, y, z] = P(v); if (z > 0) return;
+      const k = end ? seg(t, 2.1 + i * 0.45, 2.9 + i * 0.45) : seg(t, 1 + i * 0.45, 1.6 + i * 0.45); if (k <= 0) return;
+      g.fillStyle = C.accent; g.beginPath(); g.arc(x, y, 7, 0, 7); g.fill();
+      g.strokeStyle = `rgba(255,74,28,${1 - k})`; g.lineWidth = 3; g.beginPath(); g.arc(x, y, 7 + 40 * E.out(k), 0, 7); g.stroke(); });
+  });
+}
+// ---- boot: HyperFrames timeline + browser preview ----
+(function () {
+  const root = document.getElementById("root");
+  const fit = () => { const k = Math.min(innerWidth / W, innerHeight / H); root.style.transform = k < 1 ? `scale(${k})` : ""; };
+  fit(); addEventListener("resize", fit);
+  // In HyperFrames (GSAP loaded): one paused timeline whose tween calls renderAt with the scene's local time.
+  if (window.gsap) { const id = root.dataset.compositionId, tl = gsap.timeline({ paused: true });
+    tl.to({ p: 0 }, { p: 1, duration: DUR, ease: "none", onUpdate: () => renderAt(tl.time()) }, 0);
+    window.__timelines = window.__timelines || {}; window.__timelines[id] = tl; }
+  const q = new URLSearchParams(location.search);
+  const start = () => {
+    if (q.has("play")) { const s0 = performance.now();
+      const loop = () => { renderAt(((performance.now() - s0) / 1000) % DUR); requestAnimationFrame(loop); }; loop(); }
+    else renderAt(parseFloat(q.get("t")) || 0);
+  };
+  renderAt(parseFloat(q.get("t")) || 0);
+  document.fonts.ready.then(start);  // re-render once the bundled fonts are in
+})();
+</script>
+</body>
+</html>

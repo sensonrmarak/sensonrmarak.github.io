@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cursor Tour</title>
+<style>
+@font-face { font-family:"Archivo Black"; src:url("../motion-core/fonts/archivo-black.woff2") format("woff2"); font-weight:400 900; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-400.woff2") format("woff2"); font-weight:400; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-700.woff2") format("woff2"); font-weight:500 900; }
+@font-face { font-family:"Playfair Display"; src:url("../motion-core/fonts/playfair-display-italic.woff2") format("woff2"); font-style:italic; }
+:root { --ink:#0e0e0e; --paper:#efe9df; --accent:#ff4a1c; --blue:#2433ff; --pink:#f4a7c4; --yellow:#ffc21a; --lime:#c6ff3d;
+  --display: "Archivo Black","Arial Black","Helvetica Neue",Arial,sans-serif; --mono: "JetBrains Mono",ui-monospace,Menlo,monospace;
+  --serif: "Playfair Display",Georgia,"Times New Roman",serif; }
+html, body { margin:0; background:#111; overflow:hidden; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden; background:#dfe3ea; transform-origin:0 0;
+  font-family: var(--display); color: var(--ink); }
+canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+#cam { position:absolute; inset:0; transform-origin:0 0; }
+.win { position:absolute; left:260px; top:140px; width:1400px; height:800px; border-radius:22px; background:#fff;
+  box-shadow:0 40px 100px rgba(20,30,60,.22); overflow:hidden; font-family: var(--mono); }
+.bar { height:56px; background:#f3f4f7; display:flex; align-items:center; gap:10px; padding:0 22px; }
+.bar i { width:14px; height:14px; border-radius:50%; background:#d5d8de; display:inline-block; }
+.side { position:absolute; left:0; top:56px; bottom:0; width:280px; background:#f7f8fa; }
+#btn { position:absolute; left:360px; top:110px; padding:22px 34px; border-radius:14px; border:3px solid var(--blue); color:var(--blue); font:700 26px var(--mono); }
+.tg { position:absolute; left:360px; top:270px; width:120px; height:62px; border-radius:40px; background:#d9dce3; }
+#knob { position:absolute; top:6px; left:6px; width:50px; height:50px; border-radius:50%; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,.2); }
+.tl { position:absolute; left:510px; top:283px; font:600 26px var(--mono); color:#444; }
+.card { position:absolute; top:420px; width:300px; height:260px; border-radius:20px; background:#f2f3f6; }
+#card2 { outline:0 solid var(--accent); }
+#cursor { position:absolute; left:0; top:0; width:44px; height:44px; z-index:9; transform-origin:4px 4px; }
+#ring { position:absolute; width:90px; height:90px; margin:-45px 0 0 -45px; border-radius:50%; border:4px solid var(--blue); z-index:8; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="motion-cursor-tour" data-width="1920" data-height="1080" data-duration="7">
+<div id="cam">
+  <div class="win" id="win">
+    <div class="bar"><i></i><i></i><i></i></div><div class="side"></div>
+    <div id="btn">+ New project</div>
+    <div class="tg" id="tg"><div id="knob"></div></div><div class="tl">Auto-publish</div>
+    <div class="card" style="left:360px"></div><div class="card" id="card2" style="left:700px"></div><div class="card" style="left:1040px"></div>
+  </div>
+  <div id="ring"></div>
+  <svg id="cursor" viewBox="0 0 24 24"><path d="M3 2l7 19 2.6-7.4L20 11z" fill="#111" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+</div>
+</div>
+<script>
+// ---- motion kit (inlined so the file stands alone) ----
+const W = 1920, H = 1080;
+const clamp = (x, a = 0, b = 1) => (x < a ? a : x > b ? b : x);
+const seg = (t, a, b) => clamp((t - a) / (b - a));          // 0..1 progress of t through [a,b]
+const lerp = (a, b, k) => a + (b - a) * k;
+const E = {
+  lin: x => x,
+  in: x => x * x * x,
+  out: x => 1 - (1 - x) ** 3,
+  inOut: x => (x < 0.5 ? 4 * x * x * x : 1 - (-2 * x + 2) ** 3 / 2),
+  expo: x => (x >= 1 ? 1 : 1 - 2 ** (-10 * x)),
+  back: x => { const c = 1.70158; return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2; },
+  elastic: x => (x <= 0 ? 0 : x >= 1 ? 1 : 2 ** (-10 * x) * Math.sin((x * 10 - 0.75) * 2.0944) + 1),
+  bounce: x => { const n = 7.5625, d = 2.75;
+    if (x < 1 / d) return n * x * x; if (x < 2 / d) return n * (x -= 1.5 / d) * x + 0.75;
+    if (x < 2.5 / d) return n * (x -= 2.25 / d) * x + 0.9375; return n * (x -= 2.625 / d) * x + 0.984375; },
+};
+function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6d2b79f5) | 0;
+  let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+function ctx2d(id) { const c = document.getElementById(id); c.width = W; c.height = H; return c.getContext("2d"); }
+function rot(p, ax, ay, az = 0) { let [x, y, z] = p, c, s;
+  c = Math.cos(ax); s = Math.sin(ax); [y, z] = [y * c - z * s, y * s + z * c];
+  c = Math.cos(ay); s = Math.sin(ay); [x, z] = [x * c + z * s, -x * s + z * c];
+  c = Math.cos(az); s = Math.sin(az); [x, y] = [x * c - y * s, x * s + y * c];
+  return [x, y, z]; }
+function proj(p, f = 1400, cx = W / 2, cy = H / 2) { const k = f / (f + p[2]); return [cx + p[0] * k, cy + p[1] * k, k]; }
+function mix(c1, c2, k) { const a = parseInt(c1.slice(1), 16), b = parseInt(c2.slice(1), 16);
+  const ch = sh => Math.round(lerp((a >> sh) & 255, (b >> sh) & 255, k));
+  return `rgb(${ch(16)},${ch(8)},${ch(0)})`; }
+const C = { ink: "#0e0e0e", paper: "#efe9df", accent: "#ff4a1c", blue: "#2433ff",
+  pink: "#f4a7c4", yellow: "#ffc21a", lime: "#c6ff3d", white: "#ffffff" };
+// ---- end kit ----
+const DUR = 7;
+const WP = [{ x: 1500, y: 980, t: 0.8 }, { x: 760, y: 300, t: 2.0 }, { x: 680, y: 450, t: 3.6 }, { x: 960, y: 700, t: 5.2 }, { x: 1300, y: 900, t: 6.4 }];
+const clicks = [2.0, 3.6, 5.2], targets = [[760, 300], [680, 450], [960, 700]];
+function cursorAt(t) {
+  if (t <= WP[0].t) return [WP[0].x, WP[0].y];
+  for (let i = 0; i < WP.length - 1; i++) { const a = WP[i], b = WP[i + 1]; const t0 = a.t + 0.35;
+    if (t < t0) return [a.x, a.y];
+    if (t <= b.t) { const u = E.inOut(seg(t, t0, b.t)), dx = b.x - a.x, dy = b.y - a.y, L = Math.hypot(dx, dy) || 1;
+      const cx = (a.x + b.x) / 2 - dy / L * 90, cy = (a.y + b.y) / 2 + dx / L * 90;
+      return [(1 - u) ** 2 * a.x + 2 * (1 - u) * u * cx + u * u * b.x, (1 - u) ** 2 * a.y + 2 * (1 - u) * u * cy + u * u * b.y]; } }
+  const l = WP[WP.length - 1]; return [l.x, l.y]; }
+function renderAt(t) {
+  const rise = E.out(seg(t, 0, 0.6));
+  $("#win").style.transform = `translateY(${(1 - rise) * 80}px)`; $("#win").style.opacity = rise;
+  let zx = W / 2, zy = H / 2, z = 1;
+  targets.forEach(([x, y], i) => { const a = i ? clicks[i - 1] + 0.3 : 0.8, k = E.inOut(seg(t, a, clicks[i]));
+    if (t >= a) { zx = lerp(zx, x, k); zy = lerp(zy, y, k); z = lerp(z, 1.25, k); } });
+  const back = E.inOut(seg(t, 5.6, 6.4)); zx = lerp(zx, W / 2, back); zy = lerp(zy, H / 2, back); z = lerp(z, 1, back);
+  $("#cam").style.transform = `translate(${W / 2 - zx * z}px, ${H / 2 - zy * z}px) scale(${z})`;
+  const [cx, cy] = cursorAt(t);
+  let press = 1, ring = -1;
+  clicks.forEach(c => { if (t >= c - 0.09 && t < c + 0.09) press = 0.85; if (t >= c && t < c + 0.5) ring = seg(t, c, c + 0.5); });
+  $("#cursor").style.transform = `translate(${cx}px, ${cy}px) scale(${press})`;
+  $("#ring").style.transform = `translate(${cx}px, ${cy}px) scale(${ring < 0 ? 0 : E.out(ring)})`;
+  $("#ring").style.opacity = ring < 0 ? 0 : 1 - ring;
+  const b = t >= clicks[0]; $("#btn").style.background = b ? C.blue : "transparent"; $("#btn").style.color = b ? "#fff" : C.blue;
+  const tk = E.back(seg(t, clicks[1], clicks[1] + 0.3));
+  $("#knob").style.transform = `translateX(${58 * tk}px)`; $("#tg").style.background = tk > 0.5 ? C.accent : "#d9dce3";
+  const ck = E.back(seg(t, clicks[2], clicks[2] + 0.35));
+  $("#card2").style.transform = `translateY(${-24 * ck}px)`; $("#card2").style.outlineWidth = `${6 * clamp(ck)}px`;
+  $("#card2").style.boxShadow = `0 ${30 * ck}px ${60 * ck}px rgba(0,0,0,.15)`;
+}
+// ---- boot: HyperFrames timeline + browser preview ----
+(function () {
+  const root = document.getElementById("root");
+  const fit = () => { const k = Math.min(innerWidth / W, innerHeight / H); root.style.transform = k < 1 ? `scale(${k})` : ""; };
+  fit(); addEventListener("resize", fit);
+  // In HyperFrames (GSAP loaded): one paused timeline whose tween calls renderAt with the scene's local time.
+  if (window.gsap) { const id = root.dataset.compositionId, tl = gsap.timeline({ paused: true });
+    tl.to({ p: 0 }, { p: 1, duration: DUR, ease: "none", onUpdate: () => renderAt(tl.time()) }, 0);
+    window.__timelines = window.__timelines || {}; window.__timelines[id] = tl; }
+  const q = new URLSearchParams(location.search);
+  const start = () => {
+    if (q.has("play")) { const s0 = performance.now();
+      const loop = () => { renderAt(((performance.now() - s0) / 1000) % DUR); requestAnimationFrame(loop); }; loop(); }
+    else renderAt(parseFloat(q.get("t")) || 0);
+  };
+  renderAt(parseFloat(q.get("t")) || 0);
+  document.fonts.ready.then(start);  // re-render once the bundled fonts are in
+})();
+</script>
+</body>
+</html>

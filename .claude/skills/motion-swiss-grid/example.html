@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swiss Grid</title>
+<style>
+@font-face { font-family:"Archivo Black"; src:url("../motion-core/fonts/archivo-black.woff2") format("woff2"); font-weight:400 900; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-400.woff2") format("woff2"); font-weight:400; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-700.woff2") format("woff2"); font-weight:500 900; }
+@font-face { font-family:"Playfair Display"; src:url("../motion-core/fonts/playfair-display-italic.woff2") format("woff2"); font-style:italic; }
+:root { --ink:#0e0e0e; --paper:#efe9df; --accent:#ff4a1c; --blue:#2433ff; --pink:#f4a7c4; --yellow:#ffc21a; --lime:#c6ff3d;
+  --display: "Archivo Black","Arial Black","Helvetica Neue",Arial,sans-serif; --mono: "JetBrains Mono",ui-monospace,Menlo,monospace;
+  --serif: "Playfair Display",Georgia,"Times New Roman",serif; }
+html, body { margin:0; background:#111; overflow:hidden; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden; background:var(--paper); transform-origin:0 0;
+  font-family: var(--display); color: var(--ink); }
+canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+.gl { position:absolute; background:rgba(14,14,14,.18); }
+#big { position:absolute; font-size:560px; letter-spacing:-30px; line-height:.8; }
+#disc { position:absolute; border-radius:50%; background:#e3001b; }
+#bar { position:absolute; background:var(--ink); transform-origin:0 50%; }
+.tx { position:absolute; font:600 24px/1.35 var(--mono); }
+.tx b { display:block; font:400 40px/1 var(--display); margin-bottom:14px; letter-spacing:-1px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="motion-swiss-grid" data-width="1920" data-height="1080" data-duration="6">
+<div id="lines"></div>
+<div id="big">26</div><div id="disc"></div><div id="bar"></div>
+<div class="tx" id="t0"><b>Form</b>Every element sits on the grid. Nothing floats.</div>
+<div class="tx" id="t1"><b>Order</b>Flush left, ragged right, generous space.</div>
+<div class="tx" id="t2"><b>Rhythm</b>Moves land on the beat, never between.</div>
+</div>
+<script>
+// ---- motion kit (inlined so the file stands alone) ----
+const W = 1920, H = 1080;
+const clamp = (x, a = 0, b = 1) => (x < a ? a : x > b ? b : x);
+const seg = (t, a, b) => clamp((t - a) / (b - a));          // 0..1 progress of t through [a,b]
+const lerp = (a, b, k) => a + (b - a) * k;
+const E = {
+  lin: x => x,
+  in: x => x * x * x,
+  out: x => 1 - (1 - x) ** 3,
+  inOut: x => (x < 0.5 ? 4 * x * x * x : 1 - (-2 * x + 2) ** 3 / 2),
+  expo: x => (x >= 1 ? 1 : 1 - 2 ** (-10 * x)),
+  back: x => { const c = 1.70158; return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2; },
+  elastic: x => (x <= 0 ? 0 : x >= 1 ? 1 : 2 ** (-10 * x) * Math.sin((x * 10 - 0.75) * 2.0944) + 1),
+  bounce: x => { const n = 7.5625, d = 2.75;
+    if (x < 1 / d) return n * x * x; if (x < 2 / d) return n * (x -= 1.5 / d) * x + 0.75;
+    if (x < 2.5 / d) return n * (x -= 2.25 / d) * x + 0.9375; return n * (x -= 2.625 / d) * x + 0.984375; },
+};
+function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6d2b79f5) | 0;
+  let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+function ctx2d(id) { const c = document.getElementById(id); c.width = W; c.height = H; return c.getContext("2d"); }
+function rot(p, ax, ay, az = 0) { let [x, y, z] = p, c, s;
+  c = Math.cos(ax); s = Math.sin(ax); [y, z] = [y * c - z * s, y * s + z * c];
+  c = Math.cos(ay); s = Math.sin(ay); [x, z] = [x * c + z * s, -x * s + z * c];
+  c = Math.cos(az); s = Math.sin(az); [x, y] = [x * c - y * s, x * s + y * c];
+  return [x, y, z]; }
+function proj(p, f = 1400, cx = W / 2, cy = H / 2) { const k = f / (f + p[2]); return [cx + p[0] * k, cy + p[1] * k, k]; }
+function mix(c1, c2, k) { const a = parseInt(c1.slice(1), 16), b = parseInt(c2.slice(1), 16);
+  const ch = sh => Math.round(lerp((a >> sh) & 255, (b >> sh) & 255, k));
+  return `rgb(${ch(16)},${ch(8)},${ch(0)})`; }
+const C = { ink: "#0e0e0e", paper: "#efe9df", accent: "#ff4a1c", blue: "#2433ff",
+  pink: "#f4a7c4", yellow: "#ffc21a", lime: "#c6ff3d", white: "#ffffff" };
+// ---- end kit ----
+const DUR = 6;
+const M = 80, G = 24, COLS = 12, cw = (W - 2 * M - G * (COLS - 1)) / COLS, RH = (H - 2 * M) / 8;
+const col = n => M + n * (cw + G), row = n => M + n * RH, lines = [];
+for (let i = 0; i <= COLS; i++) { const d = document.createElement("div"); d.className = "gl"; Object.assign(d.style, { left: `${i < COLS ? col(i) : W - M}px`, top: `${M}px`, width: "1px", height: `${H - 2 * M}px`, transformOrigin: "50% 0" }); $("#lines").appendChild(d); lines.push([d, "Y", i]); }
+for (let j = 0; j <= 8; j++) { const d = document.createElement("div"); d.className = "gl"; Object.assign(d.style, { left: `${M}px`, top: `${row(j)}px`, height: "1px", width: `${W - 2 * M}px`, transformOrigin: "0 50%" }); $("#lines").appendChild(d); lines.push([d, "X", j + COLS]); }
+Object.assign($("#big").style, { left: `${col(0) - 20}px`, top: `${row(1)}px` });
+const dsz = 3 * cw + 2 * G; Object.assign($("#disc").style, { left: `${col(8)}px`, top: `${row(1)}px`, width: `${dsz}px`, height: `${dsz}px` });
+Object.assign($("#bar").style, { left: `${col(0)}px`, top: `${row(6)}px`, width: `${col(6) - col(0) - G}px`, height: "28px" });
+[0, 1, 2].forEach(i => Object.assign($("#t" + i).style, { left: `${col(6 + i * 2)}px`, top: `${row(6) - 10}px`, width: `${2 * cw + G - 10}px` }));
+function renderAt(t) {
+  const fadeL = lerp(1, 0.4, E.inOut(seg(t, 4.6, 5.2)));
+  lines.forEach(([d, ax, i]) => { const k = E.inOut(seg(t, i * 0.03, i * 0.03 + 0.5)); d.style.transform = `scale${ax}(${k})`; d.style.opacity = fadeL; });
+  const bk = E.expo(seg(t, 0.9, 1.5)); $("#big").style.transform = `translateX(${(1 - bk) * -900}px)`;
+  $("#disc").style.transform = `scale(${E.back(seg(t, 1.3, 1.8))})`;
+  $("#bar").style.transform = `scaleX(${E.expo(seg(t, 1.6, 2.1))})`;
+  [0, 1, 2].forEach(i => { const k = E.expo(seg(t, 2.0 + i * 0.15, 2.6 + i * 0.15)); const e = $("#t" + i);
+    e.style.transform = `translateY(${(1 - k) * 60}px)`; e.style.opacity = k > 0 ? 1 : 0; e.style.clipPath = `inset(0 0 ${(1 - k) * 100}% 0)`; });
+}
+// ---- boot: HyperFrames timeline + browser preview ----
+(function () {
+  const root = document.getElementById("root");
+  const fit = () => { const k = Math.min(innerWidth / W, innerHeight / H); root.style.transform = k < 1 ? `scale(${k})` : ""; };
+  fit(); addEventListener("resize", fit);
+  // In HyperFrames (GSAP loaded): one paused timeline whose tween calls renderAt with the scene's local time.
+  if (window.gsap) { const id = root.dataset.compositionId, tl = gsap.timeline({ paused: true });
+    tl.to({ p: 0 }, { p: 1, duration: DUR, ease: "none", onUpdate: () => renderAt(tl.time()) }, 0);
+    window.__timelines = window.__timelines || {}; window.__timelines[id] = tl; }
+  const q = new URLSearchParams(location.search);
+  const start = () => {
+    if (q.has("play")) { const s0 = performance.now();
+      const loop = () => { renderAt(((performance.now() - s0) / 1000) % DUR); requestAnimationFrame(loop); }; loop(); }
+    else renderAt(parseFloat(q.get("t")) || 0);
+  };
+  renderAt(parseFloat(q.get("t")) || 0);
+  document.fonts.ready.then(start);  // re-render once the bundled fonts are in
+})();
+</script>
+</body>
+</html>

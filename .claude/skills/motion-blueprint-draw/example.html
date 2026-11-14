@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blueprint Draw</title>
+<style>
+@font-face { font-family:"Archivo Black"; src:url("../motion-core/fonts/archivo-black.woff2") format("woff2"); font-weight:400 900; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-400.woff2") format("woff2"); font-weight:400; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-700.woff2") format("woff2"); font-weight:500 900; }
+@font-face { font-family:"Playfair Display"; src:url("../motion-core/fonts/playfair-display-italic.woff2") format("woff2"); font-style:italic; }
+:root { --ink:#0e0e0e; --paper:#efe9df; --accent:#ff4a1c; --blue:#2433ff; --pink:#f4a7c4; --yellow:#ffc21a; --lime:#c6ff3d;
+  --display: "Archivo Black","Arial Black","Helvetica Neue",Arial,sans-serif; --mono: "JetBrains Mono",ui-monospace,Menlo,monospace;
+  --serif: "Playfair Display",Georgia,"Times New Roman",serif; }
+html, body { margin:0; background:#111; overflow:hidden; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden; background:#173a8c; transform-origin:0 0;
+  font-family: var(--display); color: var(--ink); }
+canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+svg { position:absolute; inset:0; }
+.o { fill:none; stroke:#eef3ff; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+.c { fill:none; stroke:#9fb7ff; stroke-width:2; stroke-dasharray:18 8 4 8; }
+.d { fill:none; stroke:#cfe0ff; stroke-width:2; }
+.lab { fill:#eef3ff; font:600 26px var(--mono); letter-spacing:1px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="motion-blueprint-draw" data-width="1920" data-height="1080" data-duration="6">
+<svg viewBox="0 0 1920 1080" id="svg">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="1"/></pattern>
+    <pattern id="g2" width="200" height="200" patternUnits="userSpaceOnUse"><path d="M200 0H0V200" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1.5"/></pattern>
+    <clipPath id="cc"><rect id="ccr" x="0" y="0" width="0" height="1080"/></clipPath>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#cfe0ff"/></marker>
+  </defs>
+  <g id="grid"><rect width="1920" height="1080" fill="url(#g)"/><rect width="1920" height="1080" fill="url(#g2)"/></g>
+  <g class="draw">
+    <path class="o" d="M560 300 H1160 V420 H1060 V700 H660 V420 H560 Z"/>
+    <path class="o" d="M760 560 m-140 0 a140 140 0 1 0 280 0 a140 140 0 1 0 -280 0"/>
+    <path class="o" d="M860 560 m-60 0 a60 60 0 1 0 120 0 a60 60 0 1 0 -120 0"/>
+    <path class="o" d="M610 360 m-22 0 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0"/>
+    <path class="o" d="M1110 360 m-22 0 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0"/>
+    <path class="o" d="M1300 300 H1460 V700 H1300 Z M1300 420 H1460 M1340 300 V700 M1420 300 V700"/>
+  </g>
+  <g clip-path="url(#cc)"><path class="c" d="M500 560 H1220 M860 250 V760 M1380 250 V760"/></g>
+  <g class="draw">
+    <path class="d" d="M560 250 H1160" marker-start="url(#ar)" marker-end="url(#ar)"/>
+    <path class="d" d="M1210 300 V700" marker-start="url(#ar)" marker-end="url(#ar)"/>
+    <path class="d" d="M1300 760 H1460" marker-start="url(#ar)" marker-end="url(#ar)"/>
+    <path class="d" d="M1480 820 H1840 V1000 H1480 Z M1480 880 H1840"/>
+  </g>
+  <text class="lab" id="l1" x="800" y="235">600.00</text>
+  <text class="lab" id="l2" x="1225" y="510">400.00</text>
+  <text class="lab" id="l3" x="1335" y="800">160</text>
+  <text class="lab" id="l4" x="1500" y="862">HOUSING / A-02</text>
+  <text class="lab" id="l5" x="1500" y="940" style="font-size:20px">SCALE 1:4   REV C</text>
+</svg>
+</div>
+<script>
+// ---- motion kit (inlined so the file stands alone) ----
+const W = 1920, H = 1080;
+const clamp = (x, a = 0, b = 1) => (x < a ? a : x > b ? b : x);
+const seg = (t, a, b) => clamp((t - a) / (b - a));          // 0..1 progress of t through [a,b]
+const lerp = (a, b, k) => a + (b - a) * k;
+const E = {
+  lin: x => x,
+  in: x => x * x * x,
+  out: x => 1 - (1 - x) ** 3,
+  inOut: x => (x < 0.5 ? 4 * x * x * x : 1 - (-2 * x + 2) ** 3 / 2),
+  expo: x => (x >= 1 ? 1 : 1 - 2 ** (-10 * x)),
+  back: x => { const c = 1.70158; return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2; },
+  elastic: x => (x <= 0 ? 0 : x >= 1 ? 1 : 2 ** (-10 * x) * Math.sin((x * 10 - 0.75) * 2.0944) + 1),
+  bounce: x => { const n = 7.5625, d = 2.75;
+    if (x < 1 / d) return n * x * x; if (x < 2 / d) return n * (x -= 1.5 / d) * x + 0.75;
+    if (x < 2.5 / d) return n * (x -= 2.25 / d) * x + 0.9375; return n * (x -= 2.625 / d) * x + 0.984375; },
+};
+function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6d2b79f5) | 0;
+  let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+function ctx2d(id) { const c = document.getElementById(id); c.width = W; c.height = H; return c.getContext("2d"); }
+function rot(p, ax, ay, az = 0) { let [x, y, z] = p, c, s;
+  c = Math.cos(ax); s = Math.sin(ax); [y, z] = [y * c - z * s, y * s + z * c];
+  c = Math.cos(ay); s = Math.sin(ay); [x, z] = [x * c + z * s, -x * s + z * c];
+  c = Math.cos(az); s = Math.sin(az); [x, y] = [x * c - y * s, x * s + y * c];
+  return [x, y, z]; }
+function proj(p, f = 1400, cx = W / 2, cy = H / 2) { const k = f / (f + p[2]); return [cx + p[0] * k, cy + p[1] * k, k]; }
+function mix(c1, c2, k) { const a = parseInt(c1.slice(1), 16), b = parseInt(c2.slice(1), 16);
+  const ch = sh => Math.round(lerp((a >> sh) & 255, (b >> sh) & 255, k));
+  return `rgb(${ch(16)},${ch(8)},${ch(0)})`; }
+const C = { ink: "#0e0e0e", paper: "#efe9df", accent: "#ff4a1c", blue: "#2433ff",
+  pink: "#f4a7c4", yellow: "#ffc21a", lime: "#c6ff3d", white: "#ffffff" };
+// ---- end kit ----
+const DUR = 6;
+const paths = $$(".draw path"), lens = paths.map(p => p.getTotalLength());
+paths.forEach((p, i) => { p.style.strokeDasharray = lens[i]; });
+const nOut = 6, labels = ["#l1", "#l2", "#l3", "#l4", "#l5"].map($);
+function renderAt(t) {
+  $("#grid").style.opacity = E.out(seg(t, 0, 0.6));
+  paths.forEach((p, i) => {
+    const a = i < nOut ? 0.4 + i * 0.18 : 3.2 + (i - nOut) * 0.3 + (i === paths.length - 1 ? 1.2 : 0);
+    const k = E.inOut(seg(t, a, a + 0.7));
+    p.style.strokeDashoffset = lens[i] * (1 - k);
+    p.style.opacity = k > 0 ? 1 : 0;
+  });
+  $("#ccr").setAttribute("width", 1920 * E.inOut(seg(t, 2.4, 3.6)));
+  labels.forEach((l, i) => { const k = E.out(seg(t, 3.7 + i * 0.25, 4.2 + i * 0.25));
+    l.style.opacity = k; l.setAttribute("transform", `translate(${(1 - k) * -16},0)`); });
+}
+// ---- boot: HyperFrames timeline + browser preview ----
+(function () {
+  const root = document.getElementById("root");
+  const fit = () => { const k = Math.min(innerWidth / W, innerHeight / H); root.style.transform = k < 1 ? `scale(${k})` : ""; };
+  fit(); addEventListener("resize", fit);
+  // In HyperFrames (GSAP loaded): one paused timeline whose tween calls renderAt with the scene's local time.
+  if (window.gsap) { const id = root.dataset.compositionId, tl = gsap.timeline({ paused: true });
+    tl.to({ p: 0 }, { p: 1, duration: DUR, ease: "none", onUpdate: () => renderAt(tl.time()) }, 0);
+    window.__timelines = window.__timelines || {}; window.__timelines[id] = tl; }
+  const q = new URLSearchParams(location.search);
+  const start = () => {
+    if (q.has("play")) { const s0 = performance.now();
+      const loop = () => { renderAt(((performance.now() - s0) / 1000) % DUR); requestAnimationFrame(loop); }; loop(); }
+    else renderAt(parseFloat(q.get("t")) || 0);
+  };
+  renderAt(parseFloat(q.get("t")) || 0);
+  document.fonts.ready.then(start);  // re-render once the bundled fonts are in
+})();
+</script>
+</body>
+</html>

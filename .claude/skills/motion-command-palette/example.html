@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Command Palette</title>
+<style>
+@font-face { font-family:"Archivo Black"; src:url("../motion-core/fonts/archivo-black.woff2") format("woff2"); font-weight:400 900; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-400.woff2") format("woff2"); font-weight:400; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-700.woff2") format("woff2"); font-weight:500 900; }
+@font-face { font-family:"Playfair Display"; src:url("../motion-core/fonts/playfair-display-italic.woff2") format("woff2"); font-style:italic; }
+:root { --ink:#0e0e0e; --paper:#efe9df; --accent:#ff4a1c; --blue:#2433ff; --pink:#f4a7c4; --yellow:#ffc21a; --lime:#c6ff3d;
+  --display: "Archivo Black","Arial Black","Helvetica Neue",Arial,sans-serif; --mono: "JetBrains Mono",ui-monospace,Menlo,monospace;
+  --serif: "Playfair Display",Georgia,"Times New Roman",serif; }
+html, body { margin:0; background:#111; overflow:hidden; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden; background:#1b1d22; transform-origin:0 0;
+  font-family: var(--display); color: var(--ink); }
+canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+#app { position:absolute; inset:0; background:linear-gradient(135deg,#2a2e36,#1b1d22); }
+#app i { position:absolute; border-radius:16px; background:#343944; }
+#pal { position:absolute; left:50%; top:200px; width:960px; margin-left:-480px; border-radius:26px; background:#262a32; box-shadow:0 50px 120px rgba(0,0,0,.6);
+  overflow:hidden; font-family:var(--mono); color:#e6e8ec; border:1px solid #3a3f4a; }
+#q { height:110px; display:flex; align-items:center; padding:0 40px; font:500 40px var(--mono); border-bottom:1px solid #3a3f4a; }
+#q span { color:#7d8494; } #car { width:3px; height:46px; background:var(--accent); margin-left:3px; }
+.it { position:relative; height:90px; display:flex; align-items:center; gap:24px; padding:0 40px; font:500 32px var(--mono); overflow:hidden; z-index:1; }
+.it b { width:44px; height:44px; border-radius:12px; background:#3a3f4a; flex:none; }
+#hl { position:absolute; left:14px; right:14px; height:76px; border-radius:16px; background:rgba(255,74,28,.22); border:2px solid var(--accent); z-index:0; }
+.kc { position:absolute; bottom:90px; width:110px; height:110px; border-radius:22px; background:#2f333c; border:2px solid #4a505d; color:#fff; font:700 54px/106px var(--mono); text-align:center; }
+#toast { position:absolute; left:50%; bottom:80px; width:640px; margin-left:-320px; padding:30px 40px; border-radius:22px; background:#e9fbe0; color:#173b08; font:700 32px var(--mono); box-sizing:border-box; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="motion-command-palette" data-width="1920" data-height="1080" data-duration="7">
+<div id="app"><i style="left:60px;top:60px;width:340px;height:960px"></i><i style="left:440px;top:60px;width:1420px;height:140px"></i><i style="left:440px;top:240px;width:680px;height:400px"></i><i style="left:1160px;top:240px;width:700px;height:400px"></i><i style="left:440px;top:680px;width:1420px;height:340px"></i></div>
+<div id="pal"><div id="q"><span id="qt"></span><i id="car"></i></div><div id="list" style="position:relative;padding:12px 0"><div id="hl"></div></div></div>
+<div class="kc" id="k1" style="left:780px">⌘</div><div class="kc" id="k2" style="left:920px">K</div><div class="kc" id="k3" style="left:1060px;width:180px;font-size:34px">ENTER</div>
+<div id="toast">✓ Deployed to production</div>
+</div>
+<script>
+// ---- motion kit (inlined so the file stands alone) ----
+const W = 1920, H = 1080;
+const clamp = (x, a = 0, b = 1) => (x < a ? a : x > b ? b : x);
+const seg = (t, a, b) => clamp((t - a) / (b - a));          // 0..1 progress of t through [a,b]
+const lerp = (a, b, k) => a + (b - a) * k;
+const E = {
+  lin: x => x,
+  in: x => x * x * x,
+  out: x => 1 - (1 - x) ** 3,
+  inOut: x => (x < 0.5 ? 4 * x * x * x : 1 - (-2 * x + 2) ** 3 / 2),
+  expo: x => (x >= 1 ? 1 : 1 - 2 ** (-10 * x)),
+  back: x => { const c = 1.70158; return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2; },
+  elastic: x => (x <= 0 ? 0 : x >= 1 ? 1 : 2 ** (-10 * x) * Math.sin((x * 10 - 0.75) * 2.0944) + 1),
+  bounce: x => { const n = 7.5625, d = 2.75;
+    if (x < 1 / d) return n * x * x; if (x < 2 / d) return n * (x -= 1.5 / d) * x + 0.75;
+    if (x < 2.5 / d) return n * (x -= 2.25 / d) * x + 0.9375; return n * (x -= 2.625 / d) * x + 0.984375; },
+};
+function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6d2b79f5) | 0;
+  let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+function ctx2d(id) { const c = document.getElementById(id); c.width = W; c.height = H; return c.getContext("2d"); }
+function rot(p, ax, ay, az = 0) { let [x, y, z] = p, c, s;
+  c = Math.cos(ax); s = Math.sin(ax); [y, z] = [y * c - z * s, y * s + z * c];
+  c = Math.cos(ay); s = Math.sin(ay); [x, z] = [x * c + z * s, -x * s + z * c];
+  c = Math.cos(az); s = Math.sin(az); [x, y] = [x * c - y * s, x * s + y * c];
+  return [x, y, z]; }
+function proj(p, f = 1400, cx = W / 2, cy = H / 2) { const k = f / (f + p[2]); return [cx + p[0] * k, cy + p[1] * k, k]; }
+function mix(c1, c2, k) { const a = parseInt(c1.slice(1), 16), b = parseInt(c2.slice(1), 16);
+  const ch = sh => Math.round(lerp((a >> sh) & 255, (b >> sh) & 255, k));
+  return `rgb(${ch(16)},${ch(8)},${ch(0)})`; }
+const C = { ink: "#0e0e0e", paper: "#efe9df", accent: "#ff4a1c", blue: "#2433ff",
+  pink: "#f4a7c4", yellow: "#ffc21a", lime: "#c6ff3d", white: "#ffffff" };
+// ---- end kit ----
+const DUR = 7;
+const ITEMS = [["Deploy to production", 99], ["Deploy preview", 99], ["Open settings", 1.2], ["Duplicate project", 1.6], ["Invite teammate", 1.2], ["Export video", 1.85]];
+const KEYS = [[1.2, "d"], [1.6, "e"], [1.85, "p"], [2.15, "l"]], list = $("#list"), rows = [];
+ITEMS.forEach(([name, gone]) => { const d = document.createElement("div"); d.className = "it"; d.innerHTML = `<b></b>${name}`; list.appendChild(d); rows.push({ d, gone }); });
+function renderAt(t) {
+  const open = E.out(seg(t, 0.5, 0.9)), close = E.in(seg(t, 3.9, 4.15)), vis = open * (1 - close);
+  $("#app").style.filter = `blur(${8 * E.out(seg(t, 0.3, 0.8))}px) brightness(${1 - 0.4 * E.out(seg(t, 0.3, 0.8))})`;
+  $("#pal").style.opacity = vis; $("#pal").style.transform = `scale(${lerp(0.96, 1, open) * lerp(1, 0.97, close)})`;
+  const q = KEYS.filter(k => t >= k[0]).map(k => k[1]).join(""); $("#qt").innerHTML = q || "<span>Type a command…</span>";
+  $("#car").style.opacity = Math.floor(t * 2.5) % 2 || t < 2.4 ? 1 : 0;
+  rows.forEach(r => { const k = E.inOut(seg(t, r.gone, r.gone + 0.2)); r.d.style.height = `${90 * (1 - k)}px`; r.d.style.opacity = 1 - k; });
+  const row = E.inOut(seg(t, 2.8, 3.0)) - E.inOut(seg(t, 3.3, 3.5)), y = 12 + 7 + 90 * row;  // down to row 2, back up to row 1
+  $("#hl").style.top = `${y}px`; $("#hl").style.opacity = t > 1.0 ? 1 : 0;
+  const kp = (a, b) => { const k = seg(t, a, b); return k > 0 && k < 1 ? 1 - 0.1 * Math.sin(k * Math.PI) : 1; };
+  [["#k1", 0.3], ["#k2", 0.35], ["#k3", 3.9]].forEach(([id, a]) => { const on = seg(t, a - 0.1, a + 0.5); $(id).style.opacity = on > 0 && on < 1 ? 1 : 0;
+    $(id).style.transform = `scale(${kp(a, a + 0.18)})`; $(id).style.background = t > a && t < a + 0.2 ? C.accent : "#2f333c"; });
+  const tk = E.back(seg(t, 4.1, 4.6)); $("#toast").style.transform = `translateY(${(1 - tk) * 200}px)`; $("#toast").style.opacity = clamp(tk);
+}
+// ---- boot: HyperFrames timeline + browser preview ----
+(function () {
+  const root = document.getElementById("root");
+  const fit = () => { const k = Math.min(innerWidth / W, innerHeight / H); root.style.transform = k < 1 ? `scale(${k})` : ""; };
+  fit(); addEventListener("resize", fit);
+  // In HyperFrames (GSAP loaded): one paused timeline whose tween calls renderAt with the scene's local time.
+  if (window.gsap) { const id = root.dataset.compositionId, tl = gsap.timeline({ paused: true });
+    tl.to({ p: 0 }, { p: 1, duration: DUR, ease: "none", onUpdate: () => renderAt(tl.time()) }, 0);
+    window.__timelines = window.__timelines || {}; window.__timelines[id] = tl; }
+  const q = new URLSearchParams(location.search);
+  const start = () => {
+    if (q.has("play")) { const s0 = performance.now();
+      const loop = () => { renderAt(((performance.now() - s0) / 1000) % DUR); requestAnimationFrame(loop); }; loop(); }
+    else renderAt(parseFloat(q.get("t")) || 0);
+  };
+  renderAt(parseFloat(q.get("t")) || 0);
+  document.fonts.ready.then(start);  // re-render once the bundled fonts are in
+})();
+</script>
+</body>
+</html>

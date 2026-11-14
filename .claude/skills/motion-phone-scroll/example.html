@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phone Scroll</title>
+<style>
+@font-face { font-family:"Archivo Black"; src:url("../motion-core/fonts/archivo-black.woff2") format("woff2"); font-weight:400 900; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-400.woff2") format("woff2"); font-weight:400; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-700.woff2") format("woff2"); font-weight:500 900; }
+@font-face { font-family:"Playfair Display"; src:url("../motion-core/fonts/playfair-display-italic.woff2") format("woff2"); font-style:italic; }
+:root { --ink:#0e0e0e; --paper:#efe9df; --accent:#ff4a1c; --blue:#2433ff; --pink:#f4a7c4; --yellow:#ffc21a; --lime:#c6ff3d;
+  --display: "Archivo Black","Arial Black","Helvetica Neue",Arial,sans-serif; --mono: "JetBrains Mono",ui-monospace,Menlo,monospace;
+  --serif: "Playfair Display",Georgia,"Times New Roman",serif; }
+html, body { margin:0; background:#111; overflow:hidden; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden; background:var(--yellow); transform-origin:0 0;
+  font-family: var(--display); color: var(--ink); }
+canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+#hd { position:absolute; left:140px; top:330px; font-size:140px; line-height:.92; letter-spacing:-5px; }
+.ph { position:absolute; left:1150px; top:90px; width:440px; height:900px; border-radius:66px; background:#0b0b0b; box-shadow:0 60px 120px rgba(0,0,0,.3); }
+.sc { position:absolute; inset:16px; border-radius:52px; overflow:hidden; background:#fff; }
+#feed { position:absolute; left:0; right:0; top:0; }
+.post { margin:24px; height:420px; border-radius:30px; background:#f1f1f1; overflow:hidden; position:relative; }
+.img { position:absolute; left:0; right:0; top:-40px; height:420px; }
+#tap { position:absolute; width:90px; height:90px; margin:-45px 0 0 -45px; border-radius:50%; background:rgba(0,0,0,.25); z-index:5; }
+#heart { position:absolute; left:220px; top:440px; width:160px; height:160px; margin:-80px 0 0 -80px; z-index:6; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="motion-phone-scroll" data-width="1920" data-height="1080" data-duration="6">
+<div id="hd">Scroll<br>less.<br>Make<br>more.</div>
+<div class="ph" id="ph"><div class="sc"><div id="feed"></div><div id="tap"></div>
+<svg id="heart" viewBox="-60 -60 120 120"><g id="burst"></g><path id="hp" fill="#ff2d55" d="M0 30 C-40 5 -45 -25 -22 -32 C-10 -36 -2 -28 0 -20 C2 -28 10 -36 22 -32 C45 -25 40 5 0 30Z"/></svg></div></div>
+</div>
+<script>
+// ---- motion kit (inlined so the file stands alone) ----
+const W = 1920, H = 1080;
+const clamp = (x, a = 0, b = 1) => (x < a ? a : x > b ? b : x);
+const seg = (t, a, b) => clamp((t - a) / (b - a));          // 0..1 progress of t through [a,b]
+const lerp = (a, b, k) => a + (b - a) * k;
+const E = {
+  lin: x => x,
+  in: x => x * x * x,
+  out: x => 1 - (1 - x) ** 3,
+  inOut: x => (x < 0.5 ? 4 * x * x * x : 1 - (-2 * x + 2) ** 3 / 2),
+  expo: x => (x >= 1 ? 1 : 1 - 2 ** (-10 * x)),
+  back: x => { const c = 1.70158; return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2; },
+  elastic: x => (x <= 0 ? 0 : x >= 1 ? 1 : 2 ** (-10 * x) * Math.sin((x * 10 - 0.75) * 2.0944) + 1),
+  bounce: x => { const n = 7.5625, d = 2.75;
+    if (x < 1 / d) return n * x * x; if (x < 2 / d) return n * (x -= 1.5 / d) * x + 0.75;
+    if (x < 2.5 / d) return n * (x -= 2.25 / d) * x + 0.9375; return n * (x -= 2.625 / d) * x + 0.984375; },
+};
+function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6d2b79f5) | 0;
+  let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+function ctx2d(id) { const c = document.getElementById(id); c.width = W; c.height = H; return c.getContext("2d"); }
+function rot(p, ax, ay, az = 0) { let [x, y, z] = p, c, s;
+  c = Math.cos(ax); s = Math.sin(ax); [y, z] = [y * c - z * s, y * s + z * c];
+  c = Math.cos(ay); s = Math.sin(ay); [x, z] = [x * c + z * s, -x * s + z * c];
+  c = Math.cos(az); s = Math.sin(az); [x, y] = [x * c - y * s, x * s + y * c];
+  return [x, y, z]; }
+function proj(p, f = 1400, cx = W / 2, cy = H / 2) { const k = f / (f + p[2]); return [cx + p[0] * k, cy + p[1] * k, k]; }
+function mix(c1, c2, k) { const a = parseInt(c1.slice(1), 16), b = parseInt(c2.slice(1), 16);
+  const ch = sh => Math.round(lerp((a >> sh) & 255, (b >> sh) & 255, k));
+  return `rgb(${ch(16)},${ch(8)},${ch(0)})`; }
+const C = { ink: "#0e0e0e", paper: "#efe9df", accent: "#ff4a1c", blue: "#2433ff",
+  pink: "#f4a7c4", yellow: "#ffc21a", lime: "#c6ff3d", white: "#ffffff" };
+// ---- end kit ----
+const DUR = 6;
+const COLS = [C.accent, C.blue, C.pink, C.ink, C.lime, "#8b5cf6", C.yellow, C.accent, C.blue, C.pink, C.ink, C.lime];
+COLS.forEach(c => { const d = document.createElement("div"); d.className = "post"; d.innerHTML = `<div class="img" style="background:linear-gradient(160deg,${c},${mix(c, "#000000", .3)})"></div>`; $("#feed").appendChild(d); });
+const imgs = $$(".img"), br = rng(4);
+for (let i = 0; i < 10; i++) { const a = i / 10 * Math.PI * 2 + br() * 0.3, c = document.createElementNS("http://www.w3.org/2000/svg", "circle"); c.setAttribute("r", 6); c.setAttribute("fill", i % 2 ? "#ff2d55" : "#ffc21a"); c.dataset.a = a; $("#burst").appendChild(c); }
+function scrollAt(t) { const fl = t < 0.8 ? 0 : 2200 * 0.55 * (1 - Math.exp(-(t - 0.8) / 0.55));
+  const settle = t > 2.6 ? -30 * Math.exp(-(t - 2.6) * 6) * Math.sin((t - 2.6) * 14) : 0;
+  const s2 = t < 4.4 ? 0 : 700 * 0.4 * (1 - Math.exp(-(t - 4.4) / 0.4)); return fl + settle + s2; }
+function renderAt(t) {
+  const sin = E.out(seg(t, 0, 0.6)); $("#ph").style.transform = `translateX(${(1 - sin) * 700}px) rotate(6deg)`;
+  $("#hd").style.opacity = sin; $("#hd").style.transform = `translateY(${(1 - sin) * 60}px)`;
+  const y = scrollAt(t); $("#feed").style.transform = `translateY(${-y}px)`;
+  imgs.forEach(im => im.style.transform = `translateY(${y * 0.1 % 40}px)`);
+  const tk = seg(t, 3.3, 3.6); $("#tap").style.left = "220px"; $("#tap").style.top = "440px";
+  $("#tap").style.opacity = tk > 0 && tk < 1 ? Math.sin(tk * Math.PI) : 0; $("#tap").style.transform = `scale(${0.6 + 0.6 * tk})`;
+  const hk = seg(t, 3.5, 4.1); $("#hp").setAttribute("transform", `scale(${hk > 0 ? E.elastic(hk) * (1 - E.in(seg(t, 4.4, 4.7))) : 0})`);
+  [...$("#burst").children].forEach(c => { const a = +c.dataset.a, d = 70 * E.out(seg(t, 3.6, 4.1)); c.setAttribute("cx", Math.cos(a) * d); c.setAttribute("cy", Math.sin(a) * d);
+    c.setAttribute("opacity", t > 3.6 ? (1 - seg(t, 3.8, 4.2)).toFixed(2) : 0); });
+}
+// ---- boot: HyperFrames timeline + browser preview ----
+(function () {
+  const root = document.getElementById("root");
+  const fit = () => { const k = Math.min(innerWidth / W, innerHeight / H); root.style.transform = k < 1 ? `scale(${k})` : ""; };
+  fit(); addEventListener("resize", fit);
+  // In HyperFrames (GSAP loaded): one paused timeline whose tween calls renderAt with the scene's local time.
+  if (window.gsap) { const id = root.dataset.compositionId, tl = gsap.timeline({ paused: true });
+    tl.to({ p: 0 }, { p: 1, duration: DUR, ease: "none", onUpdate: () => renderAt(tl.time()) }, 0);
+    window.__timelines = window.__timelines || {}; window.__timelines[id] = tl; }
+  const q = new URLSearchParams(location.search);
+  const start = () => {
+    if (q.has("play")) { const s0 = performance.now();
+      const loop = () => { renderAt(((performance.now() - s0) / 1000) % DUR); requestAnimationFrame(loop); }; loop(); }
+    else renderAt(parseFloat(q.get("t")) || 0);
+  };
+  renderAt(parseFloat(q.get("t")) || 0);
+  document.fonts.ready.then(start);  // re-render once the bundled fonts are in
+})();
+</script>
+</body>
+</html>

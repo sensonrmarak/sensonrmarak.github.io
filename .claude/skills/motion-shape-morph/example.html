@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shape Morph</title>
+<style>
+@font-face { font-family:"Archivo Black"; src:url("../motion-core/fonts/archivo-black.woff2") format("woff2"); font-weight:400 900; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-400.woff2") format("woff2"); font-weight:400; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-700.woff2") format("woff2"); font-weight:500 900; }
+@font-face { font-family:"Playfair Display"; src:url("../motion-core/fonts/playfair-display-italic.woff2") format("woff2"); font-style:italic; }
+:root { --ink:#0e0e0e; --paper:#efe9df; --accent:#ff4a1c; --blue:#2433ff; --pink:#f4a7c4; --yellow:#ffc21a; --lime:#c6ff3d;
+  --display: "Archivo Black","Arial Black","Helvetica Neue",Arial,sans-serif; --mono: "JetBrains Mono",ui-monospace,Menlo,monospace;
+  --serif: "Playfair Display",Georgia,"Times New Roman",serif; }
+html, body { margin:0; background:#111; overflow:hidden; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden; background:var(--paper); transform-origin:0 0;
+  font-family: var(--display); color: var(--ink); }
+canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="motion-shape-morph" data-width="1920" data-height="1080" data-duration="6">
+<canvas id="cv"></canvas>
+</div>
+<script>
+// ---- motion kit (inlined so the file stands alone) ----
+const W = 1920, H = 1080;
+const clamp = (x, a = 0, b = 1) => (x < a ? a : x > b ? b : x);
+const seg = (t, a, b) => clamp((t - a) / (b - a));          // 0..1 progress of t through [a,b]
+const lerp = (a, b, k) => a + (b - a) * k;
+const E = {
+  lin: x => x,
+  in: x => x * x * x,
+  out: x => 1 - (1 - x) ** 3,
+  inOut: x => (x < 0.5 ? 4 * x * x * x : 1 - (-2 * x + 2) ** 3 / 2),
+  expo: x => (x >= 1 ? 1 : 1 - 2 ** (-10 * x)),
+  back: x => { const c = 1.70158; return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2; },
+  elastic: x => (x <= 0 ? 0 : x >= 1 ? 1 : 2 ** (-10 * x) * Math.sin((x * 10 - 0.75) * 2.0944) + 1),
+  bounce: x => { const n = 7.5625, d = 2.75;
+    if (x < 1 / d) return n * x * x; if (x < 2 / d) return n * (x -= 1.5 / d) * x + 0.75;
+    if (x < 2.5 / d) return n * (x -= 2.25 / d) * x + 0.9375; return n * (x -= 2.625 / d) * x + 0.984375; },
+};
+function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6d2b79f5) | 0;
+  let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+function ctx2d(id) { const c = document.getElementById(id); c.width = W; c.height = H; return c.getContext("2d"); }
+function rot(p, ax, ay, az = 0) { let [x, y, z] = p, c, s;
+  c = Math.cos(ax); s = Math.sin(ax); [y, z] = [y * c - z * s, y * s + z * c];
+  c = Math.cos(ay); s = Math.sin(ay); [x, z] = [x * c + z * s, -x * s + z * c];
+  c = Math.cos(az); s = Math.sin(az); [x, y] = [x * c - y * s, x * s + y * c];
+  return [x, y, z]; }
+function proj(p, f = 1400, cx = W / 2, cy = H / 2) { const k = f / (f + p[2]); return [cx + p[0] * k, cy + p[1] * k, k]; }
+function mix(c1, c2, k) { const a = parseInt(c1.slice(1), 16), b = parseInt(c2.slice(1), 16);
+  const ch = sh => Math.round(lerp((a >> sh) & 255, (b >> sh) & 255, k));
+  return `rgb(${ch(16)},${ch(8)},${ch(0)})`; }
+const C = { ink: "#0e0e0e", paper: "#efe9df", accent: "#ff4a1c", blue: "#2433ff",
+  pink: "#f4a7c4", yellow: "#ffc21a", lime: "#c6ff3d", white: "#ffffff" };
+// ---- end kit ----
+const DUR = 6;
+const g = ctx2d("cv"), N = 180;
+function poly(k, rIn = 1, rot0 = -Math.PI / 2) { const vs = [];
+  for (let i = 0; i < k * (rIn < 1 ? 2 : 1); i++) { const r = rIn < 1 && i % 2 ? rIn : 1, a = rot0 + i * Math.PI * 2 / (k * (rIn < 1 ? 2 : 1)); vs.push([Math.cos(a) * r, Math.sin(a) * r]); }
+  const segL = vs.map((v, i) => Math.hypot(vs[(i + 1) % vs.length][0] - v[0], vs[(i + 1) % vs.length][1] - v[1])), tot = segL.reduce((a, b) => a + b, 0), out = [];
+  for (let n = 0; n < N; n++) { let d = n / N * tot, i = 0; while (d > segL[i]) { d -= segL[i]; i++; }
+    const a = vs[i], b = vs[(i + 1) % vs.length], u = d / segL[i]; out.push([lerp(a[0], b[0], u), lerp(a[1], b[1], u)]); }
+  return out; }
+const circle = Array.from({ length: N }, (_, n) => { const a = -Math.PI / 2 + n / N * Math.PI * 2; return [Math.cos(a), Math.sin(a)]; });
+const shapes = [circle, poly(3), poly(4, 1, -Math.PI / 2), poly(5, 0.45)], cols = [C.ink, C.blue, C.yellow, C.accent];
+const T = [[1.0, 1.8], [2.3, 3.1], [3.6, 4.4]];
+function stateAt(t) { let pts = shapes[0], col = cols[0], rot = 0;
+  T.forEach(([a, b], i) => { const k = E.inOut(seg(t, a, b)); if (k > 0) { pts = pts.map((p, j) => [lerp(p[0], shapes[i + 1][j][0], k), lerp(p[1], shapes[i + 1][j][1], k)]);
+    col = mix(cols[i], cols[i + 1], k); rot += k * Math.PI / 2; } });
+  return { pts, col, rot: rot + Math.max(0, t - 4.4) * 0.4 }; }
+function draw(st, sc, fill) { g.save(); g.translate(W / 2, H / 2); g.rotate(st.rot); g.beginPath();
+  st.pts.forEach((p, i) => i ? g.lineTo(p[0] * sc, p[1] * sc) : g.moveTo(p[0] * sc, p[1] * sc)); g.closePath();
+  if (fill) { g.fillStyle = st.col; g.fill(); } else { g.strokeStyle = st.col; g.lineWidth = 4; g.stroke(); } g.restore(); }
+function renderAt(t) {
+  g.clearRect(0, 0, W, H);
+  const sc = 330 * E.back(seg(t, 0, 0.6));
+  if (t > 0.9) draw(stateAt(t - 0.25), sc * 1.12, false);
+  draw(stateAt(t), sc, true);
+}
+// ---- boot: HyperFrames timeline + browser preview ----
+(function () {
+  const root = document.getElementById("root");
+  const fit = () => { const k = Math.min(innerWidth / W, innerHeight / H); root.style.transform = k < 1 ? `scale(${k})` : ""; };
+  fit(); addEventListener("resize", fit);
+  // In HyperFrames (GSAP loaded): one paused timeline whose tween calls renderAt with the scene's local time.
+  if (window.gsap) { const id = root.dataset.compositionId, tl = gsap.timeline({ paused: true });
+    tl.to({ p: 0 }, { p: 1, duration: DUR, ease: "none", onUpdate: () => renderAt(tl.time()) }, 0);
+    window.__timelines = window.__timelines || {}; window.__timelines[id] = tl; }
+  const q = new URLSearchParams(location.search);
+  const start = () => {
+    if (q.has("play")) { const s0 = performance.now();
+      const loop = () => { renderAt(((performance.now() - s0) / 1000) % DUR); requestAnimationFrame(loop); }; loop(); }
+    else renderAt(parseFloat(q.get("t")) || 0);
+  };
+  renderAt(parseFloat(q.get("t")) || 0);
+  document.fonts.ready.then(start);  // re-render once the bundled fonts are in
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo Land</title>
+<style>
+@font-face { font-family:"Archivo Black"; src:url("../motion-core/fonts/archivo-black.woff2") format("woff2"); font-weight:400 900; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-400.woff2") format("woff2"); font-weight:400; }
+@font-face { font-family:"JetBrains Mono"; src:url("../motion-core/fonts/jetbrains-mono-700.woff2") format("woff2"); font-weight:500 900; }
+@font-face { font-family:"Playfair Display"; src:url("../motion-core/fonts/playfair-display-italic.woff2") format("woff2"); font-style:italic; }
+:root { --ink:#0e0e0e; --paper:#efe9df; --accent:#ff4a1c; --blue:#2433ff; --pink:#f4a7c4; --yellow:#ffc21a; --lime:#c6ff3d;
+  --display: "Archivo Black","Arial Black","Helvetica Neue",Arial,sans-serif; --mono: "JetBrains Mono",ui-monospace,Menlo,monospace;
+  --serif: "Playfair Display",Georgia,"Times New Roman",serif; }
+html, body { margin:0; background:#111; overflow:hidden; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden; background:var(--paper); transform-origin:0 0;
+  font-family: var(--display); color: var(--ink); }
+canvas { position:absolute; inset:0; width:100%; height:100%; display:block; }
+#mark { position:absolute; left:560px; top:330px; width:300px; height:300px; transform-origin:50% 100%; }
+#ring { position:absolute; left:710px; top:630px; width:120px; height:40px; margin:-20px 0 0 -60px; border-radius:50%; border:6px solid var(--accent); }
+#word { position:absolute; left:930px; top:375px; font-size:190px; letter-spacing:-7px; line-height:1; display:flex; overflow:hidden; padding-bottom:12px; }
+#word span { display:inline-block; }
+#tag { position:absolute; left:940px; top:600px; font:700 30px var(--mono); letter-spacing:3px; color:#6f6a61; }
+canvas { z-index:1; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="motion-logo-land" data-width="1920" data-height="1080" data-duration="5">
+<canvas id="cv"></canvas><div id="ring"></div>
+<svg id="mark" viewBox="0 0 300 300"><circle cx="150" cy="150" r="146" fill="#ff4a1c"/><path d="M95 95 h110 v40 h-70 v30 h55 v38 h-55 v62 h-40z" fill="#efe9df"/></svg>
+<div id="word"></div><div id="tag">MOTION, WRITTEN IN CODE — FRAMEWORK.STUDIO</div>
+</div>
+<script>
+// ---- motion kit (inlined so the file stands alone) ----
+const W = 1920, H = 1080;
+const clamp = (x, a = 0, b = 1) => (x < a ? a : x > b ? b : x);
+const seg = (t, a, b) => clamp((t - a) / (b - a));          // 0..1 progress of t through [a,b]
+const lerp = (a, b, k) => a + (b - a) * k;
+const E = {
+  lin: x => x,
+  in: x => x * x * x,
+  out: x => 1 - (1 - x) ** 3,
+  inOut: x => (x < 0.5 ? 4 * x * x * x : 1 - (-2 * x + 2) ** 3 / 2),
+  expo: x => (x >= 1 ? 1 : 1 - 2 ** (-10 * x)),
+  back: x => { const c = 1.70158; return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2; },
+  elastic: x => (x <= 0 ? 0 : x >= 1 ? 1 : 2 ** (-10 * x) * Math.sin((x * 10 - 0.75) * 2.0944) + 1),
+  bounce: x => { const n = 7.5625, d = 2.75;
+    if (x < 1 / d) return n * x * x; if (x < 2 / d) return n * (x -= 1.5 / d) * x + 0.75;
+    if (x < 2.5 / d) return n * (x -= 2.25 / d) * x + 0.9375; return n * (x -= 2.625 / d) * x + 0.984375; },
+};
+function rng(seed) { let s = seed >>> 0; return () => { s = (s + 0x6d2b79f5) | 0;
+  let t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+function ctx2d(id) { const c = document.getElementById(id); c.width = W; c.height = H; return c.getContext("2d"); }
+function rot(p, ax, ay, az = 0) { let [x, y, z] = p, c, s;
+  c = Math.cos(ax); s = Math.sin(ax); [y, z] = [y * c - z * s, y * s + z * c];
+  c = Math.cos(ay); s = Math.sin(ay); [x, z] = [x * c + z * s, -x * s + z * c];
+  c = Math.cos(az); s = Math.sin(az); [x, y] = [x * c - y * s, x * s + y * c];
+  return [x, y, z]; }
+function proj(p, f = 1400, cx = W / 2, cy = H / 2) { const k = f / (f + p[2]); return [cx + p[0] * k, cy + p[1] * k, k]; }
+function mix(c1, c2, k) { const a = parseInt(c1.slice(1), 16), b = parseInt(c2.slice(1), 16);
+  const ch = sh => Math.round(lerp((a >> sh) & 255, (b >> sh) & 255, k));
+  return `rgb(${ch(16)},${ch(8)},${ch(0)})`; }
+const C = { ink: "#0e0e0e", paper: "#efe9df", accent: "#ff4a1c", blue: "#2433ff",
+  pink: "#f4a7c4", yellow: "#ffc21a", lime: "#c6ff3d", white: "#ffffff" };
+// ---- end kit ----
+const DUR = 5;
+const g = ctx2d("cv"), WORD = "Frame.", r0 = rng(12), parts = Array.from({ length: 14 }, () => ({ a: -Math.PI * (0.05 + r0() * 0.9), v: 260 + r0() * 260, s: 5 + r0() * 7 }));
+[...WORD].forEach(ch => { const s = document.createElement("span"); s.textContent = ch; if (ch === ".") s.style.color = C.accent; $("#word").appendChild(s); });
+const letters = $$("#word span"), HIT = 0.7;
+function renderAt(t) {
+  const k = seg(t, 0.2, HIT), y = lerp(-760, 0, E.in(k));
+  let sx = 1, sy = 1;
+  if (t < HIT) { sx = lerp(1, 0.8, k); sy = lerp(1, 1.25, k); }
+  else { const q = seg(t, HIT, HIT + 0.12); const sq = Math.sin(q * Math.PI);
+    const el = E.elastic(seg(t, HIT + 0.06, HIT + 0.7)); sy = q < 1 ? lerp(1, 0.7, sq) : lerp(0.85, 1, el); sx = 1 / sy; }
+  $("#mark").style.transform = `translateY(${y}px) scale(${sx}, ${sy})`; $("#mark").style.opacity = t >= 0.2 ? 1 : 0;
+  const rk = seg(t, HIT, HIT + 0.7); $("#ring").style.transform = `scale(${1 + 5 * E.out(rk)})`; $("#ring").style.opacity = rk > 0 && rk < 1 ? 1 - rk : 0;
+  g.clearRect(0, 0, W, H);
+  const pk = seg(t, HIT, HIT + 0.9);
+  if (pk > 0 && pk < 1) parts.forEach(p => { const d = p.v * E.out(pk), x = 710 + Math.cos(p.a) * d, yy = 630 + Math.sin(p.a) * d + 260 * pk * pk;
+    g.fillStyle = C.accent; g.globalAlpha = 1 - pk; g.beginPath(); g.arc(x, yy, p.s * (1 - pk * 0.5), 0, 7); g.fill(); });
+  g.globalAlpha = 1;
+  letters.forEach((l, i) => { const lk = E.back(seg(t, 1.1 + i * 0.05, 1.5 + i * 0.05)); l.style.transform = `translateY(${(1 - lk) * 110}%)`; });
+  const tk = E.out(seg(t, 1.9, 2.5)); $("#tag").style.opacity = tk; $("#tag").style.transform = `translateY(${(1 - tk) * 20}px)`;
+}
+// ---- boot: HyperFrames timeline + browser preview ----
+(function () {
+  const root = document.getElementById("root");
+  const fit = () => { const k = Math.min(innerWidth / W, innerHeight / H); root.style.transform = k < 1 ? `scale(${k})` : ""; };
+  fit(); addEventListener("resize", fit);
+  // In HyperFrames (GSAP loaded): one paused timeline whose tween calls renderAt with the scene's local time.
+  if (window.gsap) { const id = root.dataset.compositionId, tl = gsap.timeline({ paused: true });
+    tl.to({ p: 0 }, { p: 1, duration: DUR, ease: "none", onUpdate: () => renderAt(tl.time()) }, 0);
+    window.__timelines = window.__timelines || {}; window.__timelines[id] = tl; }
+  const q = new URLSearchParams(location.search);
+  const start = () => {
+    if (q.has("play")) { const s0 = performance.now();
+      const loop = () => { renderAt(((performance.now() - s0) / 1000) % DUR); requestAnimationFrame(loop); }; loop(); }
+    else renderAt(parseFloat(q.get("t")) || 0);
+  };
+  renderAt(parseFloat(q.get("t")) || 0);
+  document.fonts.ready.then(start);  // re-render once the bundled fonts are in
+})();
+</script>
+</body>
+</html>
