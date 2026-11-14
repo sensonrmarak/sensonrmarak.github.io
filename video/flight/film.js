@@ -127,13 +127,15 @@ const beam = mkPoints(80, 1.5, 0.9);
 
 // ------------------------------------------------------------------ overlay helpers
 const labels = $("#labels"), lines = $("#lines"), LAB = {};
+lines.innerHTML = `<defs><marker id="ah" viewBox="0 0 12 12" refX="2" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M12 0L0 6L12 12L9 6z" fill="#d9a93a"/></marker></defs>`;
 function project(v) { const p = v.clone().project(camera); return [(p.x * 0.5 + 0.5) * W, (-p.y * 0.5 + 0.5) * H, p.z]; }
-function lab(key, html, at, o = {}) { let L = LAB[key]; if (!L) { const d = document.createElement("div"); d.className = "lab"; labels.appendChild(d); const ln = document.createElementNS("http://www.w3.org/2000/svg", "line"); ln.setAttribute("stroke", "#d9a93a"); ln.setAttribute("stroke-width", 3); lines.appendChild(ln);
-    const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle"); dot.setAttribute("r", 7); dot.setAttribute("fill", "#d9a93a"); lines.appendChild(dot); L = LAB[key] = { d, ln, dot, html: "" }; }
+function lab(key, html, at, o = {}) { let L = LAB[key]; if (!L) { const d = document.createElement("div"); d.className = "lab"; labels.appendChild(d); const ln = document.createElementNS("http://www.w3.org/2000/svg", "line"); ln.setAttribute("stroke", "#d9a93a"); ln.setAttribute("stroke-width", 4); ln.setAttribute("marker-start", "url(#ah)"); lines.appendChild(ln);
+    const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle"); dot.setAttribute("r", 0); dot.setAttribute("fill", "#d9a93a"); lines.appendChild(dot); L = LAB[key] = { d, ln, dot, html: "" }; }
   const op = clamp(o.op ?? 1); L.used = true; if (L.html !== html) { L.d.innerHTML = html; L.html = html; } L.d.className = "lab " + (o.cls || "");
   const [sx, sy] = Array.isArray(at) ? at : project(at), dx = o.dx ?? 0, dy = o.dy ?? 0, w = L.d.offsetWidth, h = L.d.offsetHeight;
   let bx = sx + dx - (dx < 0 ? w : dx === 0 ? w / 2 : 0), by = sy + dy - (dy < 0 ? h : dy === 0 ? h / 2 : 0);
-  bx = clamp(bx, 20, W - w - 20); by = clamp(by, 96, 900 - h);
+  if (o.abs) { bx = o.abs[0] - w / 2; by = o.abs[1]; }
+  bx = clamp(bx, o.minX ?? 20, W - w - 20); by = clamp(by, 96, 900 - h);
   L.d.style.opacity = op; L.d.style.transform = `translate(${bx.toFixed(1)}px,${by.toFixed(1)}px) scale(${(0.9 + 0.1 * op).toFixed(3)})`;
   const noLine = o.line === false || (dx === 0 && dy === 0), ax = clamp(sx, bx, bx + w), ay = clamp(sy, by, by + h);
   L.ln.setAttribute("x1", sx); L.ln.setAttribute("y1", sy); L.ln.setAttribute("x2", ax); L.ln.setAttribute("y2", ay); L.ln.setAttribute("opacity", noLine ? 0 : op); L.dot.setAttribute("cx", sx); L.dot.setAttribute("cy", sy); L.dot.setAttribute("opacity", noLine ? 0 : op); }
@@ -162,7 +164,7 @@ ov("hook", `<div class="huge" id="h1" style="top:150px">79 TONNES</div>
   <div class="card" id="h5" style="left:70px;top:560px;width:640px"><div class="k">IATA OUTLOOK · 2026</div><h3 style="font-size:60px;margin-top:6px">≈ 5 BILLION</h3><p>passengers expected to fly this year</p></div>`);
 $("#h2d").innerHTML = Array.from({ length: 13 }, () => `<i style="width:34px;height:34px;border-radius:9px 9px 14px 14px;background:var(--gold);display:inline-block"></i>`).join("");
 ov("forces", `<div class="card" id="f1" style="left:1280px;top:150px;width:580px"><div class="k">BALANCED FLIGHT</div><h3>LIFT = WEIGHT</h3><h3>THRUST = DRAG</h3><p>→ steady, level cruise</p></div>
-  <div class="card" id="f2" style="left:1280px;top:420px;width:580px"><div class="k">TO MANOEUVRE</div><p><b>Lift &gt; weight</b> → climb</p><p><b>Thrust &gt; drag</b> → speed up</p><p><b>Tilt the lift</b> → turn</p></div>`);
+  <div class="card" id="f2" style="left:60px;top:610px;width:560px"><div class="k">TO MANOEUVRE</div><p><b>Lift &gt; weight</b> → climb</p><p><b>Thrust &gt; drag</b> → speed up</p><p><b>Tilt the lift</b> → turn</p></div>`);
 ov("wing", `<div class="card" id="w1" style="left:60px;top:120px;width:560px"><div class="k">CROSS-SECTION OF A WING</div><h3>THE AIRFOIL</h3><p>Curved top · flatter bottom<br>Rounded front · sharp back</p></div>
   <div class="card" id="w2" style="left:1250px;top:120px;width:610px"><div class="k">NEWTON'S THIRD LAW</div><h3>AIR DOWN → WING UP</h3><p>Every action has an equal and opposite reaction.</p></div>
   <div class="card" id="w3" style="left:560px;top:110px;width:800px;text-align:center"><h3 style="font-size:38px;margin:0">THE WING TURNS THE AIR.<br>THE AIR LIFTS THE WING.</h3></div>`);
@@ -211,6 +213,16 @@ ov("end", `<div id="x0" style="position:absolute;inset:0;background:linear-gradi
 // stall curve
 { let d = ""; for (let a = 0; a <= 20; a += 0.5) { const cl = a <= 15 ? a / 15 : Math.max(0.35, 1 - (a - 15) / 5 * 0.85), x = 70 + a / 20 * 490, y = 420 - cl * 300; d += (a ? "L" : "M") + x + " " + y; } $("#clp").setAttribute("d", d); $("#cll").setAttribute("x1", 70 + 15 / 20 * 490); $("#cll").setAttribute("x2", 70 + 15 / 20 * 490); }
 
+const PLAB = {
+  nose: () => [[P.nose, "RADOME", "weather radar inside", [18.5, -0.3, 0]], [P.nose, "WINDSHIELD", "6 glass panes", [16.1, 1.35, 0.3]], [P.nose, "FLIGHT DECK", "pilots sit here", [14.3, 0.2, 1.7]]],
+  fuselage: () => [[P.fuselage, "PRESSURE CABIN", "passengers", [3, 1.95, 0]], [P.fuselage, "WINDOWS", "", [8, 0.45, 1.95]], [P.fuselage, "DOOR", "", [12.6, 0.1, 1.96]], [P.fuselage, "TAIL CONE", "APU inside", [-17.6, 1.2, 0]]],
+  wings: () => [[P.wingR, "WING BOX", "spars · ribs · skin", [-0.5, -0.3, 6]], [P.wingR, "WINGLET", "turned-up tip", [-5.5, 2.3, 17.5]], [P.wingL, "LEFT WING", "mirror image", [-1.5, -0.2, -9]]],
+  movables: () => [[P.movHosts[0], "SLATS", "front edge", [-1.3, -0.1, 10]], [P.movHosts[0], "FLAPS", "rear edge, inner", [-4.3, -0.6, 8.5]], [P.movHosts[0], "AILERON", "rear edge, outer", [-5.9, 0.4, 14.5]], [P.movHosts[0], "SPOILERS", "on top", [-2.5, 0.5, 9.3]]],
+  engines: () => [[P.engines, "FAN", "≈ 2 m across", [6.8, -2.25, 5.75]], [P.engines, "NACELLE", "engine cowl", [5.0, -1.15, 5.75]], [P.engines, "EXHAUST NOZZLE", "", [2.2, -2.3, 5.75]], [P.engines, "PYLON", "holds engine to wing", [4.4, -0.8, -5.75]]],
+  tail: () => [[P.tail, "VERTICAL FIN", "", [-13.6, 5.6, 0]], [P.tail, "RUDDER", "", [-17.3, 5.4, 0]], [P.tail, "HORIZONTAL STABILISER", "", [-15, 1.3, 3.4]], [P.tail, "ELEVATOR", "", [-17.4, 1.3, -3.6]]],
+  gear: () => [[P.gear, "NOSE GEAR", "2 wheels, steers", [13.6, -3.4, 0]], [P.gear, "MAIN GEAR", "2 × 2 wheels", [-1.2, -3.6, 3.6]], [P.gear, "SHOCK STRUT", "absorbs the landing", [-1.2, -2.4, -3.6]]],
+  fuel: () => [[P.fuel, "WING TANK", "inside each wing", [-0.3, -0.3, 7]], [P.fuel, "CENTRE TANK", "under the cabin", [0.4, -1.0, 0]], [P.fuel, "WING TANK", "", [-0.3, -0.3, -7]]],
+  systems: () => [[P.systems, "HYDRAULIC LINES", "move the surfaces", [-6, -0.5, 0.5]], [P.systems, "ELECTRICAL CABLES", "", [5, 0.2, -0.6]], [P.systems, "AVIONICS BAY", "flight computers", [16.2, 0.5, 0]]] };
 const PARTS = [
   ["nose", "01 · NOSE & COCKPIT", "Radome · weather radar · windshield (6 panes) · flight deck · pitot probes", "Rounded, pointed cone", "White skin · dark tinted glass", "Glass-fibre composite radome (radar passes through) · laminated glass and acrylic windshield"],
   ["fuselage", "02 · FUSELAGE", "Pressure cabin · doors · windows · cargo hold · frames and stringers", "Long tube ≈ 4 m wide, tapering to a tail cone", "White, gold cheatline", "Aluminium alloy (A320) · carbon-fibre composite (787, A350)"],
@@ -294,7 +306,11 @@ S.parts = (t, c, d, tg) => { A.visible = true; A.position.set(0, 0, 0); A.rotati
   let idx = -1; for (let i = 1; i <= 9; i++) if (t >= c[i]) idx = i - 1; const last = t >= c[10];
   if (idx >= 0 && !last) { const p = PARTS[idx], k = fin(t, c[idx + 1], 0.5); glow(MATS[p[0]], p[0] === "fuel" ? 0x3a8cff : 0xd9a93a, (p[0] === "systems" ? 1.6 : 0.85) * k);
     $("#pk").textContent = "SECTION " + p[1].slice(0, 2) + " OF 09"; $("#ph").textContent = p[1].slice(5);
-    $("#pb").innerHTML = `<p class="k" style="margin-top:14px">PARTS</p><p>${p[2]}</p><p class="k" style="margin-top:14px">SHAPE</p><p>${p[3]}</p><p class="k" style="margin-top:14px">COLOUR</p><p>${p[4]}</p><p class="k" style="margin-top:14px">MATERIAL</p><p>${p[5]}</p>`; rise("#p1", pop(t, c[idx + 1], 0.35)); }
+    $("#pb").innerHTML = `<p class="k" style="margin-top:14px">PARTS</p><p>${p[2]}</p><p class="k" style="margin-top:14px">SHAPE</p><p>${p[3]}</p><p class="k" style="margin-top:14px">COLOUR</p><p>${p[4]}</p><p class="k" style="margin-top:14px">MATERIAL</p><p>${p[5]}</p>`; rise("#p1", pop(t, c[idx + 1], 0.35));
+    A.updateMatrixWorld(true); const pl = PLAB[p[0]]().map(([g, name, sub, loc]) => { const w = g.localToWorld(V(...loc)), [sx, sy] = project(w); return { name, sub, w, sx, sy }; }).sort((u, v) => u.sx - v.sx);
+    // labels sit in one tidy row (above or below the aircraft), ordered left to right so the arrows never cross
+    const top = pl.reduce((q, l) => q + l.sy, 0) / pl.length < 480, rowY = top ? 120 : 800;
+    pl.forEach((l, i) => { const slot = 760 + (i + 0.5) * 1130 / pl.length; lab("pl" + i, l.sub ? `${l.name}<small>${l.sub}</small>` : l.name, l.w, { dx: 1, dy: 1, abs: [slot, rowY], op: fin(t, c[idx + 1] + 0.5 + i * 0.35, 0.35), minX: 730 }); }); }
   else if (last) { $("#pk").textContent = "MATERIALS · BOEING 787 AIRFRAME, BY WEIGHT"; $("#ph").textContent = "HALF IS CARBON FIBRE"; const rows = [["Carbon-fibre composite", 50, "#d9a93a"], ["Aluminium", 20, "#b9c0c9"], ["Titanium", 15, "#8fa0c8"], ["Steel", 10, "#6f7a8c"], ["Other", 5, "#4a5468"]];
     $("#pb").innerHTML = rows.map(([n, v, col], i) => `<p style="margin-top:20px">${n} <b style="float:right">${v}%</b></p><div style="height:22px;border-radius:8px;background:rgba(255,255,255,.14)"><div style="height:22px;border-radius:8px;background:${col};width:${v * 2 * E.out(seg(t, c[10] + 0.5 + i * 0.25, c[10] + 1.3 + i * 0.25))}%"></div></div>`).join(""); rise("#p1", 1); }
   else { $("#pk").textContent = "EXPLODED VIEW"; $("#ph").textContent = "9 SECTIONS"; $("#pb").innerHTML = "<p>Every visible part of an airliner, grouped by what it does.</p>"; rise("#p1", pop(t, 0.6)); } };
