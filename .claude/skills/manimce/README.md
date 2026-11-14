@@ -1,0 +1,119 @@
+# Manim Idea to Export Skill
+
+An agent skill that converts plain-language animation ideas into runnable **ManimCE** scenes and export-ready render commands.
+
+## What It Does
+
+- Translates text concepts and storyboard notes into scene blueprints.
+- Generates ManimCE code (`from manim import *`).
+- Runs an iteration loop (layout, timing, full draft, final export).
+- Produces explicit output contract: file path, render command, and tweak knobs.
+
+## Scope and Boundaries
+
+- Target engine: Manim Community Edition (`manim` package).
+- Excluded engine: ManimGL / `manimlib`.
+- Focus: idea-to-blueprint, code generation, preview-first render loop, final export guidance.
+
+## Intended Trigger
+
+Use when a request is fundamentally:
+
+- "Turn this explanation into Manim"
+- "Convert these bullets to animation code"
+- "Generate scene code and export command from this script"
+
+Not intended for `manimlib` / ManimGL codebases.
+
+## Structure
+
+- `SKILL.md`: main workflow and operating contract
+- `agents/openai.yaml`: UI metadata
+- `references/`: blueprinting, code-generation, render/export, quality checks, troubleshooting
+
+## Practical Usage  
+
+This skill includes guidance for visual quality, not just API correctness:
+
+- Build one clear idea per beat (avoid dense simultaneous changes).
+- Make timing explicit with `run_time`, `rate_func`, and intentional pauses.
+- Prefer progressive reveal (`Write`/`Create`/`LaggedStart`) over full-screen dumps.
+- Use proven graph motifs (`Axes`, `NumberPlane`, `NumberLine`, `ComplexPlane`) and staged annotations.
+- Iterate with a beauty-focused loop: layout -> timing -> rhythm -> final render.
+- Enforce layout-fit rules (text-in-box limits, arrow-label spacing, overlap checks).
+- Enforce causal animation order for process scenes (for example `L1->L2` before `L2->L3`).
+- Prefer transformation continuity (show where new objects come from) over object popping.
+- Use tracker-driven scenes and selective zoom/pan for stronger intuition.
+- Enforce frame-fit and centering (graphs/labels stay on-screen, no accidental clipping).
+- Use preview-first export: share 480p-style preview and wait for confirmation before full-quality render.
+- Keep text readable on screen using reading-time pacing (`word_count / wpm * 60 + 1s`).
+- Start with a mini blueprint and preference questions before detailed blueprint/code.
+
+See `references/visual-clarity-and-aesthetics.md`, `references/animation-philosophy-directives.md`, and `references/preflight-brief-and-preferences.md` for the full playbook.
+
+## Installation
+
+### One-line install examples
+
+```bash
+# Claude Code
+npx -y skills add https://github.com/Skheiller/manim-community-deep-skill --agent claude-code --skill manim-idea-to-export --global --yes
+
+# Gemini CLI (native)
+gemini skills install https://github.com/Skheiller/manim-community-deep-skill --scope user --consent
+
+# Codex
+npx -y skills add https://github.com/Skheiller/manim-community-deep-skill --agent codex --skill manim-idea-to-export --global --yes
+
+# Anti-Gravity
+npx -y skills add https://github.com/Skheiller/manim-community-deep-skill --agent antigravity --skill manim-idea-to-export --global --yes
+
+# Cursor
+npx -y skills add https://github.com/Skheiller/manim-community-deep-skill --agent cursor --skill manim-idea-to-export --global --yes
+```
+
+### General install (other agents supported by `skills` CLI)
+
+Install the same skill to every agent supported by the `skills` CLI:
+
+```bash
+npx -y skills add https://github.com/Skheiller/manim-community-deep-skill --skill manim-idea-to-export --agent '*' --global --yes
+```
+
+For any other client that supports folder-based `SKILL.md` loading, copy this repo into that client's skills directory:
+
+```bash
+AGENT_SKILLS_DIR="/path/to/your/agent/skills" && git clone "https://github.com/Skheiller/manim-community-deep-skill" /tmp/manim-idea-to-export-skill && mkdir -p "$AGENT_SKILLS_DIR/manim-idea-to-export" && rsync -a /tmp/manim-idea-to-export-skill/ "$AGENT_SKILLS_DIR/manim-idea-to-export/"
+```
+
+### Verify installation
+
+```bash
+npx -y skills list --global
+gemini skills list --all
+```
+
+## Quick Use Prompt
+
+`Use $manim-idea-to-export to convert my text idea into Manim scene code and export-ready render commands.`
+
+## Example Prompts
+
+1. Concept explanation:
+`Use $manim-idea-to-export to animate Newton's method as a 45-second scene with calm pacing and minimal camera motion.`
+2. Process diagram:
+`Use $manim-idea-to-export to turn these bullet points into a 2D pipeline animation with causal order and a preview-first render workflow.`
+
+## Example Output Contract
+
+A successful run should return:
+
+- Scene code
+- Suggested file path (for example `scenes/my_scene.py`)
+- Render command (for example `manim render -qh scenes/my_scene.py MyScene`)
+- Expected output path
+- Short list of tweak knobs
+
+## License
+
+MIT
