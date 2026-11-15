@@ -86,7 +86,7 @@ const bloom = new UnrealBloomPass(new THREE.Vector2(W, H), 0.55, 0.5, 0.9); comp
 const lens = new ShaderPass({ uniforms: { tDiffuse: { value: null }, seed: { value: 0 }, ca: { value: 0.0016 }, vig: { value: 0.32 }, grain: { value: 0.035 } }, vertexShader: "varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.); }",
   fragmentShader: "uniform sampler2D tDiffuse; uniform float seed, ca, vig, grain; varying vec2 vUv; float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898,78.233)) + seed) * 43758.5453); } void main(){ vec2 d = vUv - .5; float r2 = dot(d,d); vec2 o = d * ca * r2 * 4.; vec3 col = vec3(texture2D(tDiffuse, vUv + o).r, texture2D(tDiffuse, vUv).g, texture2D(tDiffuse, vUv - o).b); col *= 1. - vig * smoothstep(.15, .75, r2 * 2.2); col += (h(vUv * 1000.) - .5) * grain; gl_FragColor = vec4(col, 1.); }" });
 composer.addPass(lens);
-const acc = $("#acc"); acc.width = W * PR; acc.height = H * PR; const ax = acc.getContext("2d");
+const ROOMC = document.createElement("canvas"), acc = $("#acc"); acc.width = W * PR; acc.height = H * PR; const ax = acc.getContext("2d");
 
 // ---------------------------------------------------------------- lights: Sun with shadows, Mars bounce fill, cool rim, ignition flash
 const SUN = V(-1, 0.35, 0.6).normalize(), sun = new THREE.DirectionalLight(0xfff2e0, 2.7); sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); Object.assign(sun.shadow.camera, { left: -9, right: 9, top: 9, bottom: -9, near: 1, far: 80 }); sun.shadow.bias = -0.0004; sun.shadow.normalBias = 0.02;
@@ -180,7 +180,7 @@ const rings = Array.from({ length: 5 }, () => { const m = new THREE.Mesh(new THR
 const BAR = new THREE.Group(), BO = V(2600, 0, 0); BAR.position.copy(BO); scene.add(BAR);
 const barMat = col => new THREE.MeshPhysicalMaterial({ color: col, metalness: 0.2, roughness: 0.25, clearcoat: 1, clearcoatRoughness: 0.15, envMap: envTex, envMapIntensity: 0.9 });
 const barG = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), barMat(0x5b4bd6)), barM = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), barMat(0xd29a34)); BAR.add(barG, barM);
-const mirror = new Reflector(new THREE.PlaneGeometry(60, 60), { textureWidth: 1024 * PR, textureHeight: 1024 * PR, color: 0x555566 }); mirror.rotation.x = -Math.PI / 2; BAR.add(mirror);
+const mirror = new Reflector(new THREE.PlaneGeometry(60, 60), { textureWidth: 512 * PR, textureHeight: 512 * PR, color: 0x555566 }); mirror.rotation.x = -Math.PI / 2; BAR.add(mirror);
 const floorVeil = new THREE.Mesh(new THREE.CircleGeometry(30, 64), new THREE.MeshBasicMaterial({ color: 0x05060a, transparent: true, opacity: 0.72 })); floorVeil.rotation.x = -Math.PI / 2; floorVeil.position.y = 0.01; BAR.add(floorVeil);
 const barLight = new THREE.SpotLight(0xffffff, 0, 80, 0.6, 0.6); barLight.position.set(-6, 22, 14); barLight.target.position.set(0, 3, 0); BAR.add(barLight, barLight.target);
 const reel = new THREE.Group(); { const disc = new THREE.Mesh(new THREE.CylinderGeometry(0.9, 0.9, 0.22, 48), new THREE.MeshStandardMaterial({ color: 0x2a2d36, metalness: 0.7, roughness: 0.3, envMap: envTex })); disc.rotation.x = Math.PI / 2; reel.add(disc);
@@ -258,7 +258,7 @@ function shoot(t) {   // camera for time t; returns post settings
   if (t < c[3] || t >= SPLIT) craft.scale.setScalar(1); if (t >= c[8] && t < c[9] - 0.15) {} else barLight.intensity = 0;
   if (split) camera.setViewOffset(W, H, W * 0.25, 0, W, H); else camera.clearViewOffset(); camera.updateProjectionMatrix();
   const shake = burnK * 0.035; camera.position.add(V(Math.sin(t * 61) * shake, Math.cos(t * 53) * shake, 0)); camera.updateMatrixWorld();
-  sunFlare.intensity = flare; renderer.toneMappingExposure = exp; bokeh.uniforms.focus.value = focus; bokeh.uniforms.aperture.value = aper;
+  sunFlare.intensity = flare; renderer.toneMappingExposure = exp; bokeh.uniforms.focus.value = focus; bokeh.uniforms.aperture.value = aper; bokeh.enabled = aper > 0;
   bloom.strength = (t >= c[8] && t < c[9] - 0.15 ? 0.2 : 0.5) + 0.45 * burnK + 0.6 * (t > WIN && t < WIN + 1 ? 1 - seg(t, WIN, WIN + 1) : 0);
   return { split, cpos };
 }
@@ -275,7 +275,8 @@ window.renderAt = function (tg) {
     info = shoot(t); lens.uniforms.seed.value = Math.floor(t0 * FPS) * 1.37 + i; rpass.scene = scene; rpass.camera = camera; bokeh.scene = scene; bokeh.camera = camera; composer.render();
     ax.globalAlpha = 1 / (i + 1);
     if (info.split) { ax.drawImage(glc, 0, 0, glc.width / 2, glc.height, 0, 0, acc.width / 2, acc.height);
-      room_pose(t); rpass.scene = room; rpass.camera = roomCam; bokeh.uniforms.aperture.value = 0; composer.render(); ax.drawImage(glc, glc.width / 4, 0, glc.width / 2, glc.height, acc.width / 2, 0, acc.width / 2, acc.height);
+      if (i === 0) { room_pose(t0); rpass.scene = room; rpass.camera = roomCam; bokeh.enabled = false; composer.render(); ROOMC.width = glc.width / 2; ROOMC.height = glc.height; ROOMC.getContext('2d').drawImage(glc, glc.width / 4, 0, glc.width / 2, glc.height, 0, 0, glc.width / 2, glc.height); }
+      ax.drawImage(ROOMC, acc.width / 2, 0, acc.width / 2, acc.height);
       ax.globalAlpha = 1; ax.fillStyle = "rgba(255,255,255,.85)"; ax.fillRect(acc.width / 2 - 2 * PR, 0, 4 * PR, acc.height); }
     else ax.drawImage(glc, 0, 0); }
   overlays(t0, info);

@@ -1,0 +1,14 @@
+// node render_chunks.js workers fps dsf seg1,seg2 parts -> renders the given 10 s segments as `parts` chunks each, then joins them into out/segN/seg_XXXX.mp4
+const { chromium } = require('playwright'); const { spawn, execSync } = require('child_process'); const fs = require('fs'); const path = require('path');
+const NW = +process.argv[2], FPS = +process.argv[3], DSF = +process.argv[4], SEGS = process.argv[5].split(',').map(Number), PARTS = +process.argv[6], SEG = FPS * 10, OUT = path.join(__dirname, 'out', 'seg' + DSF);
+const TM = JSON.parse(fs.readFileSync(path.join(__dirname, 'timings.json'))), TOTAL = Math.ceil(TM.total * FPS); const jobs = [];
+for (const s of SEGS) for (let p = 0; p < PARTS; p++) { const a = s * SEG + Math.floor(p * SEG / PARTS), z = Math.min(TOTAL, s * SEG + Math.floor((p + 1) * SEG / PARTS)), f = path.join(OUT, `part_${s}_${p}.mp4`); if (a < z && !fs.existsSync(f)) jobs.push({ s, p, a, z, f }); }
+console.log(jobs.length, 'chunks'); const t0 = Date.now();
+async function worker() { const b = await chromium.launch({ args: ['--ignore-gpu-blocklist', '--enable-unsafe-swiftshader'] }); const pg = await b.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: DSF });
+  await pg.goto(`http://localhost:8765/mars3d/film.html?raw&mb=5&fps=${FPS}&pr=${DSF}`); await pg.waitForFunction('window.READY', null, { timeout: 180000 });
+  while (jobs.length) { const j = jobs.shift(), ff = spawn('ffmpeg', ['-v', 'error', '-y', '-f', 'image2pipe', '-c:v', 'mjpeg', '-framerate', String(FPS), '-i', '-', '-c:v', 'libx264', '-preset', 'fast', '-crf', '15', '-pix_fmt', 'yuv420p', j.f + '.part.mp4'], { stdio: ['pipe', 'inherit', 'inherit'] }), closed = new Promise(r => ff.on('close', r));
+    for (let f = j.a; f < j.z; f++) { await pg.evaluate(t => renderAt(t), f / FPS); const buf = await pg.screenshot({ type: 'jpeg', quality: 95 }); if (!ff.stdin.write(buf)) await new Promise(r => ff.stdin.once('drain', r)); }
+    ff.stdin.end(); if (await closed === 0) { fs.renameSync(j.f + '.part.mp4', j.f); console.log('chunk', j.s, j.p, 'done', ((Date.now() - t0) / 60000).toFixed(1), 'min'); } }
+  await b.close(); }
+Promise.all(Array.from({ length: NW }, worker)).then(() => { for (const s of SEGS) { const parts = Array.from({ length: PARTS }, (_, p) => path.join(OUT, `part_${s}_${p}.mp4`)); if (parts.every(fs.existsSync)) { fs.writeFileSync(path.join(OUT, `list_${s}.txt`), parts.map(p => `file '${p}'`).join('\n'));
+  execSync(`ffmpeg -v error -y -f concat -safe 0 -i ${path.join(OUT, `list_${s}.txt`)} -c copy ${path.join(OUT, `seg_${String(s).padStart(4, '0')}.mp4`)}`); console.log('joined seg', s); } } console.log('ALL DONE'); });
