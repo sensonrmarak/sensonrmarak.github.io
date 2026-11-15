@@ -5,7 +5,7 @@ const TM = JSON.parse(fs.readFileSync(path.join(__dirname, 'timings.json'))), TO
 const queue = []; for (let i = 0; i < NSEG; i++) if (!fs.existsSync(path.join(OUT, `seg_${String(i).padStart(4, '0')}.mp4`))) queue.push(i);
 console.log(`${TOTAL} frames, ${NSEG} segments, ${queue.length} to do, ${NW} workers`); const t0 = Date.now(); let done = 0;
 async function worker(w) { const b = await chromium.launch({ args: ['--ignore-gpu-blocklist', '--enable-unsafe-swiftshader'] }); const pg = await b.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: DSF });
-  await pg.goto('http://localhost:8765/mars3d/film.html?raw&pr=' + DSF); await pg.waitForFunction('window.READY', null, { timeout: 120000 });
+  await pg.goto('http://localhost:8765/mars3d/film.html?raw&mb=5&fps=' + FPS + '&pr=' + DSF); await pg.waitForFunction('window.READY', null, { timeout: 120000 });
   while (queue.length) { const i = queue.shift(), name = path.join(OUT, `seg_${String(i).padStart(4, '0')}`), a = i * SEG, z = Math.min(TOTAL, a + SEG);
     const ff = spawn('ffmpeg', ['-v', 'error', '-y', '-f', 'image2pipe', '-c:v', 'mjpeg', '-framerate', String(FPS), '-i', '-', '-c:v', 'libx264', '-preset', 'fast', '-crf', '15', '-pix_fmt', 'yuv420p', '-threads', '2', name + '.part.mp4'], { stdio: ['pipe', 'inherit', 'inherit'] });
     const closed = new Promise(r => ff.on('close', r));

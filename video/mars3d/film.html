@@ -17,6 +17,10 @@ html,body { margin:0; background:#000; overflow:hidden; }
 .sm { font:700 26px/1.2 "Body"; color:#ffd9a8; letter-spacing:2px; text-transform:uppercase; }
 .tag { font:800 44px/1 "Body"; color:#1b1440; background:#ffd36b; padding:16px 26px 14px; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.35); }
 .bar { width:400px; text-align:center; font:800 30px/1.25 "Body"; } .bar b { font:900 64px/1.1 "Body"; } .bar small { font:600 22px "Body"; color:#c7cdf0; }
+#hud { position:absolute; left:60px; bottom:60px; width:520px; opacity:0; background:rgba(6,12,28,.62); border:1px solid rgba(140,190,255,.35); border-radius:14px; padding:16px 20px; font-family:"Body"; backdrop-filter:blur(2px); }
+#hud .hk { font:800 15px "Body"; letter-spacing:3px; color:#8fb4ff; margin-bottom:8px; } #hst { font:800 19px "Body"; letter-spacing:1px; margin-bottom:10px; }
+#hud .hrow { display:flex; justify-content:space-between; font:700 17px "Body"; color:#c7d4f0; margin-top:4px; } #hud .hrow b { font:900 26px "Body"; color:#fff; } #hud i { font-style:normal; color:#7f8db0; font-size:13px; }
+#split { position:absolute; inset:0; opacity:0; pointer-events:none; } #split span { position:absolute; top:44px; font:800 18px "Body"; letter-spacing:3px; color:#dfe8ff; background:rgba(0,0,0,.45); padding:6px 12px; border-radius:6px; }
 #src { position:absolute; right:44px; top:40px; font:600 18px "Body"; color:#c7cdf0; background:rgba(255,255,255,.08); border-radius:8px; padding:7px 14px; }
 #logo { position:absolute; right:34px; bottom:28px; width:128px; height:128px; border-radius:50%; background:url(assets/logo.png) center/104% no-repeat #fbf5e9; box-shadow:0 6px 22px rgba(0,0,0,.45), 0 0 0 3px #e8b548; z-index:9; }
 #vig { position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,.6) 100%); }
@@ -25,7 +29,7 @@ html,body { margin:0; background:#000; overflow:hidden; }
 </head>
 <body>
 <div id="root">
-  <canvas id="gl"></canvas>
+  <canvas id="gl" style="visibility:hidden"></canvas><canvas id="acc" style="position:absolute;inset:0;width:1920px;height:1080px"></canvas>
   <div id="vig"></div>
   <div class="t big" id="date" style="left:0;width:1920px;text-align:center;top:150px">24 SEPTEMBER 2014</div>
   <div class="t sm" id="dist" style="left:120px;top:170px">224 million km from Earth</div>
@@ -42,6 +46,8 @@ html,body { margin:0; background:#000; overflow:hidden; }
   <div class="t sm" id="price2" style="left:0;top:0">≈ ₹450 crore</div>
   <div class="t big" id="title" style="left:0;width:1920px;text-align:center;top:330px">HOW DID INDIA<br>REACH MARS<br><span style="color:#ffd36b">SO CHEAPLY?</span></div>
   <div class="t bar" id="barG"></div><div class="t bar" id="barM"></div>
+  <div id="hud"><div class="hk">MANGALYAAN · TELEMETRY</div><div id="hst"></div><div class="hrow"><span>MAIN ENGINE BURN <i>(time-lapse)</i></span><b id="hburn">00:00</b></div><div class="hrow"><span>SPEED CUT (Δv)</span><b id="hdv">0 m/s</b></div></div>
+  <div id="split"><span style="left:40px">AT MARS</span><span style="left:1000px">ISRO MISSION CONTROL · BENGALURU</span></div>
   <div id="src"></div>
   <div id="flash"></div>
   <div id="logo"></div>
