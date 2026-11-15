@@ -3,7 +3,7 @@
 ## Files
 | What | File |
 |---|---|
-| Video, 3840×2160, 30 fps, 5:38 | `out/how-aircraft-fly-v7-4k.mp4` |
+| Video, 3840×2160, 30 fps, 5:38 (349 MiB upload copy; 807 MiB master kept as `out/how-aircraft-fly-v7-4k.mp4`) | `out/how-aircraft-fly-v7-4k-upload.mp4` |
 | Thumbnail to upload (1280×720, under 2 MB) | `out/thumbnail-1280.jpg` |
 | Thumbnail master (3840×2160) | `out/thumbnail-4k.png` |
 
