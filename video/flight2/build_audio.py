@@ -6,7 +6,7 @@ VOICE = sys.argv[1] if len(sys.argv) > 1 else "/tmp/piper/en_GB-alan-medium.onnx
 SR = 48000; GAP = 0.2; LEAD = 0.7; TAIL = 0.7
 script = json.load(open("script.json"))
 def synth(text, path):
-    x, sr = K.create(text, voice="am_michael", speed=1.12, lang="en-us")
+    x, sr = K.create(text, voice="am_fenrir", speed=0.975, lang="en-us")
     x = np.asarray(x, dtype=np.float32)
     n = int(len(x) * SR / sr); a = np.interp(np.linspace(0, len(x) - 1, n), np.arange(len(x)), x).astype(np.float32)
     nz = np.where(np.abs(a) > 0.01)[0]
