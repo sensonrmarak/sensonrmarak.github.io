@@ -1,0 +1,6700 @@
+{
+ "total": 542.898,
+ "voice": "bf_emma",
+ "segments": [
+  {
+   "id": "hook",
+   "speak": "Every year, one wind decides the price of your food, the interest on your loan, and the income of nearly half of India's workers. It arrives on a date you can almost set your calendar by. In twenty twenty-five, it reached Kerala on the twenty-fourth of May, the earliest since two thousand and nine. This is the Indian monsoon. Stay till the end, and you will be able to draw the whole system from memory.",
+   "text": "Every year, one wind decides the price of your food, the interest on your loan, and the income of nearly half of India's workers. It arrives on a date you can almost set your calendar by. In 2025, it reached Kerala on the 24th of May, the earliest since 2009. This is the Indian monsoon. Stay till the end, and you will be able to draw the whole system from memory.",
+   "start": 1.3,
+   "end": 25.044,
+   "words": [
+    {
+     "text": "Every",
+     "start": 1.31,
+     "end": 1.57
+    },
+    {
+     "text": "year,",
+     "start": 1.57,
+     "end": 1.94
+    },
+    {
+     "text": "one",
+     "start": 1.94,
+     "end": 2.17
+    },
+    {
+     "text": "wind",
+     "start": 2.17,
+     "end": 2.45
+    },
+    {
+     "text": "decides",
+     "start": 2.45,
+     "end": 2.96
+    },
+    {
+     "text": "the",
+     "start": 2.96,
+     "end": 3.05
+    },
+    {
+     "text": "price",
+     "start": 3.05,
+     "end": 3.38
+    },
+    {
+     "text": "of",
+     "start": 3.38,
+     "end": 3.46
+    },
+    {
+     "text": "your",
+     "start": 3.46,
+     "end": 3.62
+    },
+    {
+     "text": "food,",
+     "start": 3.62,
+     "end": 4.17
+    },
+    {
+     "text": "the",
+     "start": 4.38,
+     "end": 4.52
+    },
+    {
+     "text": "interest",
+     "start": 4.52,
+     "end": 4.94
+    },
+    {
+     "text": "on",
+     "start": 4.94,
+     "end": 5.03
+    },
+    {
+     "text": "your",
+     "start": 5.03,
+     "end": 5.22
+    },
+    {
+     "text": "loan,",
+     "start": 5.22,
+     "end": 5.66
+    },
+    {
+     "text": "and",
+     "start": 5.66,
+     "end": 5.82
+    },
+    {
+     "text": "the",
+     "start": 5.82,
+     "end": 5.95
+    },
+    {
+     "text": "income",
+     "start": 5.95,
+     "end": 6.36
+    },
+    {
+     "text": "of",
+     "start": 6.36,
+     "end": 6.45
+    },
+    {
+     "text": "nearly",
+     "start": 6.45,
+     "end": 6.74
+    },
+    {
+     "text": "half",
+     "start": 6.74,
+     "end": 7.12
+    },
+    {
+     "text": "of",
+     "start": 7.12,
+     "end": 7.2
+    },
+    {
+     "text": "India's",
+     "start": 7.2,
+     "end": 7.57
+    },
+    {
+     "text": "workers.",
+     "start": 7.57,
+     "end": 8.18
+    },
+    {
+     "text": "It",
+     "start": 8.86,
+     "end": 9.01
+    },
+    {
+     "text": "arrives",
+     "start": 9.01,
+     "end": 9.47
+    },
+    {
+     "text": "on",
+     "start": 9.47,
+     "end": 9.55
+    },
+    {
+     "text": "a",
+     "start": 9.55,
+     "end": 9.59
+    },
+    {
+     "text": "date",
+     "start": 9.59,
+     "end": 9.92
+    },
+    {
+     "text": "you",
+     "start": 9.92,
+     "end": 9.99
+    },
+    {
+     "text": "can",
+     "start": 9.99,
+     "end": 10.14
+    },
+    {
+     "text": "almost",
+     "start": 10.14,
+     "end": 10.49
+    },
+    {
+     "text": "set",
+     "start": 10.49,
+     "end": 10.72
+    },
+    {
+     "text": "your",
+     "start": 10.72,
+     "end": 10.81
+    },
+    {
+     "text": "calendar",
+     "start": 10.81,
+     "end": 11.24
+    },
+    {
+     "text": "by.",
+     "start": 11.24,
+     "end": 11.67
+    },
+    {
+     "text": "In",
+     "start": 12.41,
+     "end": 12.53
+    },
+    {
+     "text": "2025,",
+     "start": 12.53,
+     "end": 13.62
+    },
+    {
+     "text": "it",
+     "start": 13.92,
+     "end": 14.08
+    },
+    {
+     "text": "reached",
+     "start": 14.08,
+     "end": 14.4
+    },
+    {
+     "text": "Kerala",
+     "start": 14.4,
+     "end": 14.78
+    },
+    {
+     "text": "on",
+     "start": 14.78,
+     "end": 14.97
+    },
+    {
+     "text": "the",
+     "start": 14.97,
+     "end": 15.04
+    },
+    {
+     "text": "24th",
+     "start": 15.04,
+     "end": 15.65
+    },
+    {
+     "text": "of",
+     "start": 15.65,
+     "end": 15.72
+    },
+    {
+     "text": "May,",
+     "start": 15.72,
+     "end": 16.14
+    },
+    {
+     "text": "the",
+     "start": 16.35,
+     "end": 16.52
+    },
+    {
+     "text": "earliest",
+     "start": 16.52,
+     "end": 16.96
+    },
+    {
+     "text": "since",
+     "start": 16.96,
+     "end": 17.21
+    },
+    {
+     "text": "2009.",
+     "start": 17.21,
+     "end": 18.47
+    },
+    {
+     "text": "This",
+     "start": 19.32,
+     "end": 19.54
+    },
+    {
+     "text": "is",
+     "start": 19.54,
+     "end": 19.7
+    },
+    {
+     "text": "the",
+     "start": 19.7,
+     "end": 19.87
+    },
+    {
+     "text": "Indian",
+     "start": 19.87,
+     "end": 20.24
+    },
+    {
+     "text": "monsoon.",
+     "start": 20.24,
+     "end": 20.99
+    },
+    {
+     "text": "Stay",
+     "start": 21.5,
+     "end": 21.78
+    },
+    {
+     "text": "till",
+     "start": 21.78,
+     "end": 21.97
+    },
+    {
+     "text": "the",
+     "start": 21.97,
+     "end": 22.09
+    },
+    {
+     "text": "end,",
+     "start": 22.09,
+     "end": 22.51
+    },
+    {
+     "text": "and",
+     "start": 22.51,
+     "end": 22.71
+    },
+    {
+     "text": "you",
+     "start": 22.71,
+     "end": 22.82
+    },
+    {
+     "text": "will",
+     "start": 22.82,
+     "end": 22.91
+    },
+    {
+     "text": "be",
+     "start": 22.91,
+     "end": 23.02
+    },
+    {
+     "text": "able",
+     "start": 23.02,
+     "end": 23.22
+    },
+    {
+     "text": "to",
+     "start": 23.22,
+     "end": 23.33
+    },
+    {
+     "text": "draw",
+     "start": 23.33,
+     "end": 23.57
+    },
+    {
+     "text": "the",
+     "start": 23.57,
+     "end": 23.66
+    },
+    {
+     "text": "whole",
+     "start": 23.66,
+     "end": 23.92
+    },
+    {
+     "text": "system",
+     "start": 23.92,
+     "end": 24.34
+    },
+    {
+     "text": "from",
+     "start": 24.34,
+     "end": 24.53
+    },
+    {
+     "text": "memory.",
+     "start": 24.53,
+     "end": 25.0
+    }
+   ]
+  },
+  {
+   "id": "intro",
+   "speak": "What is the monsoon? The word comes from the Arabic mausim, meaning season of winds. It is a seasonal reversal of wind direction, driven by the temperature difference between the heated Indian landmass and the cooler oceans around it. It brings about seventy-five percent of India's annual rainfall. A strong monsoon means bumper crops and full reservoirs. A weak one can mean drought.",
+   "text": "What is the monsoon? The word comes from the Arabic mausim, meaning season of winds. It is a seasonal reversal of wind direction, driven by the temperature difference between the heated Indian landmass and the cooler oceans around it. It brings about 75 percent of India's annual rainfall. A strong monsoon means bumper crops and full reservoirs. A weak one can mean drought.",
+   "start": 26.344,
+   "end": 49.875,
+   "words": [
+    {
+     "text": "What",
+     "start": 26.354,
+     "end": 26.554
+    },
+    {
+     "text": "is",
+     "start": 26.554,
+     "end": 26.684
+    },
+    {
+     "text": "the",
+     "start": 26.684,
+     "end": 26.764
+    },
+    {
+     "text": "monsoon?",
+     "start": 26.764,
+     "end": 27.534
+    },
+    {
+     "text": "The",
+     "start": 27.964,
+     "end": 28.044
+    },
+    {
+     "text": "word",
+     "start": 28.044,
+     "end": 28.314
+    },
+    {
+     "text": "comes",
+     "start": 28.314,
+     "end": 28.634
+    },
+    {
+     "text": "from",
+     "start": 28.634,
+     "end": 28.784
+    },
+    {
+     "text": "the",
+     "start": 28.784,
+     "end": 28.914
+    },
+    {
+     "text": "Arabic",
+     "start": 28.914,
+     "end": 29.384
+    },
+    {
+     "text": "mausim,",
+     "start": 29.384,
+     "end": 29.934
+    },
+    {
+     "text": "meaning",
+     "start": 29.934,
+     "end": 30.254
+    },
+    {
+     "text": "season",
+     "start": 30.254,
+     "end": 30.704
+    },
+    {
+     "text": "of",
+     "start": 30.704,
+     "end": 30.814
+    },
+    {
+     "text": "winds.",
+     "start": 30.814,
+     "end": 31.344
+    },
+    {
+     "text": "It",
+     "start": 31.844,
+     "end": 31.974
+    },
+    {
+     "text": "is",
+     "start": 31.974,
+     "end": 32.094
+    },
+    {
+     "text": "a",
+     "start": 32.094,
+     "end": 32.134
+    },
+    {
+     "text": "seasonal",
+     "start": 32.134,
+     "end": 32.744
+    },
+    {
+     "text": "reversal",
+     "start": 32.744,
+     "end": 33.294
+    },
+    {
+     "text": "of",
+     "start": 33.294,
+     "end": 33.434
+    },
+    {
+     "text": "wind",
+     "start": 33.434,
+     "end": 33.664
+    },
+    {
+     "text": "direction,",
+     "start": 33.664,
+     "end": 34.354
+    },
+    {
+     "text": "driven",
+     "start": 34.644,
+     "end": 34.974
+    },
+    {
+     "text": "by",
+     "start": 34.974,
+     "end": 35.124
+    },
+    {
+     "text": "the",
+     "start": 35.124,
+     "end": 35.204
+    },
+    {
+     "text": "temperature",
+     "start": 35.204,
+     "end": 35.714
+    },
+    {
+     "text": "difference",
+     "start": 35.714,
+     "end": 36.184
+    },
+    {
+     "text": "between",
+     "start": 36.184,
+     "end": 36.484
+    },
+    {
+     "text": "the",
+     "start": 36.484,
+     "end": 36.544
+    },
+    {
+     "text": "heated",
+     "start": 36.544,
+     "end": 36.914
+    },
+    {
+     "text": "Indian",
+     "start": 36.914,
+     "end": 37.264
+    },
+    {
+     "text": "landmass",
+     "start": 37.264,
+     "end": 37.894
+    },
+    {
+     "text": "and",
+     "start": 37.894,
+     "end": 38.004
+    },
+    {
+     "text": "the",
+     "start": 38.004,
+     "end": 38.074
+    },
+    {
+     "text": "cooler",
+     "start": 38.074,
+     "end": 38.404
+    },
+    {
+     "text": "oceans",
+     "start": 38.404,
+     "end": 38.954
+    },
+    {
+     "text": "around",
+     "start": 38.954,
+     "end": 39.324
+    },
+    {
+     "text": "it.",
+     "start": 39.324,
+     "end": 39.584
+    },
+    {
+     "text": "It",
+     "start": 40.234,
+     "end": 40.364
+    },
+    {
+     "text": "brings",
+     "start": 40.364,
+     "end": 40.694
+    },
+    {
+     "text": "about",
+     "start": 40.694,
+     "end": 40.984
+    },
+    {
+     "text": "75",
+     "start": 40.984,
+     "end": 41.814
+    },
+    {
+     "text": "percent",
+     "start": 41.814,
+     "end": 42.294
+    },
+    {
+     "text": "of",
+     "start": 42.294,
+     "end": 42.364
+    },
+    {
+     "text": "India's",
+     "start": 42.364,
+     "end": 42.794
+    },
+    {
+     "text": "annual",
+     "start": 42.794,
+     "end": 43.124
+    },
+    {
+     "text": "rainfall.",
+     "start": 43.124,
+     "end": 43.834
+    },
+    {
+     "text": "A",
+     "start": 44.534,
+     "end": 44.594
+    },
+    {
+     "text": "strong",
+     "start": 44.594,
+     "end": 44.984
+    },
+    {
+     "text": "monsoon",
+     "start": 44.984,
+     "end": 45.574
+    },
+    {
+     "text": "means",
+     "start": 45.574,
+     "end": 45.894
+    },
+    {
+     "text": "bumper",
+     "start": 45.894,
+     "end": 46.214
+    },
+    {
+     "text": "crops",
+     "start": 46.214,
+     "end": 46.644
+    },
+    {
+     "text": "and",
+     "start": 46.644,
+     "end": 46.754
+    },
+    {
+     "text": "full",
+     "start": 46.754,
+     "end": 47.024
+    },
+    {
+     "text": "reservoirs.",
+     "start": 47.024,
+     "end": 47.754
+    },
+    {
+     "text": "A",
+     "start": 48.304,
+     "end": 48.364
+    },
+    {
+     "text": "weak",
+     "start": 48.364,
+     "end": 48.654
+    },
+    {
+     "text": "one",
+     "start": 48.654,
+     "end": 48.864
+    },
+    {
+     "text": "can",
+     "start": 48.864,
+     "end": 49.034
+    },
+    {
+     "text": "mean",
+     "start": 49.034,
+     "end": 49.264
+    },
+    {
+     "text": "drought.",
+     "start": 49.264,
+     "end": 49.814
+    }
+   ]
+  },
+  {
+   "id": "phases",
+   "speak": "The monsoon has two phases. Phase one is the southwest monsoon, the wet phase, from June to September. Winds blow from sea to land, and deliver about three quarters of the year's rain, most of all on the Western Ghats and the northeast. Phase two is the northeast, or retreating, monsoon, from October to December. Now the winds blow from land to sea. They are mostly dry, but they give Tamil Nadu about forty-eight percent of its annual rain, according to the I M D, and they also water coastal Andhra.",
+   "text": "The monsoon has two phases. Phase one is the southwest monsoon, the wet phase, from June to September. Winds blow from sea to land, and deliver about three quarters of the year's rain, most of all on the Western Ghats and the northeast. Phase two is the northeast, or retreating, monsoon, from October to December. Now the winds blow from land to sea. They are mostly dry, but they give Tamil Nadu about 48 percent of its annual rain, according to the IMD, and they also water coastal Andhra.",
+   "start": 51.175,
+   "end": 85.005,
+   "words": [
+    {
+     "text": "The",
+     "start": 51.175,
+     "end": 51.265
+    },
+    {
+     "text": "monsoon",
+     "start": 51.265,
+     "end": 51.815
+    },
+    {
+     "text": "has",
+     "start": 51.815,
+     "end": 52.045
+    },
+    {
+     "text": "two",
+     "start": 52.045,
+     "end": 52.275
+    },
+    {
+     "text": "phases.",
+     "start": 52.275,
+     "end": 53.025
+    },
+    {
+     "text": "Phase",
+     "start": 53.695,
+     "end": 54.065
+    },
+    {
+     "text": "one",
+     "start": 54.065,
+     "end": 54.325
+    },
+    {
+     "text": "is",
+     "start": 54.325,
+     "end": 54.485
+    },
+    {
+     "text": "the",
+     "start": 54.485,
+     "end": 54.565
+    },
+    {
+     "text": "southwest",
+     "start": 54.565,
+     "end": 55.135
+    },
+    {
+     "text": "monsoon,",
+     "start": 55.135,
+     "end": 55.885
+    },
+    {
+     "text": "the",
+     "start": 55.885,
+     "end": 56.065
+    },
+    {
+     "text": "wet",
+     "start": 56.065,
+     "end": 56.285
+    },
+    {
+     "text": "phase,",
+     "start": 56.285,
+     "end": 56.835
+    },
+    {
+     "text": "from",
+     "start": 56.835,
+     "end": 57.015
+    },
+    {
+     "text": "June",
+     "start": 57.015,
+     "end": 57.315
+    },
+    {
+     "text": "to",
+     "start": 57.315,
+     "end": 57.415
+    },
+    {
+     "text": "September.",
+     "start": 57.415,
+     "end": 58.075
+    },
+    {
+     "text": "Winds",
+     "start": 58.845,
+     "end": 59.215
+    },
+    {
+     "text": "blow",
+     "start": 59.215,
+     "end": 59.495
+    },
+    {
+     "text": "from",
+     "start": 59.495,
+     "end": 59.695
+    },
+    {
+     "text": "sea",
+     "start": 59.695,
+     "end": 60.005
+    },
+    {
+     "text": "to",
+     "start": 60.005,
+     "end": 60.125
+    },
+    {
+     "text": "land,",
+     "start": 60.125,
+     "end": 60.765
+    },
+    {
+     "text": "and",
+     "start": 60.765,
+     "end": 60.905
+    },
+    {
+     "text": "deliver",
+     "start": 60.905,
+     "end": 61.305
+    },
+    {
+     "text": "about",
+     "start": 61.305,
+     "end": 61.605
+    },
+    {
+     "text": "three",
+     "start": 61.605,
+     "end": 61.905
+    },
+    {
+     "text": "quarters",
+     "start": 61.905,
+     "end": 62.375
+    },
+    {
+     "text": "of",
+     "start": 62.375,
+     "end": 62.455
+    },
+    {
+     "text": "the",
+     "start": 62.455,
+     "end": 62.545
+    },
+    {
+     "text": "year's",
+     "start": 62.545,
+     "end": 62.925
+    },
+    {
+     "text": "rain,",
+     "start": 62.925,
+     "end": 63.385
+    },
+    {
+     "text": "most",
+     "start": 63.865,
+     "end": 64.145
+    },
+    {
+     "text": "of",
+     "start": 64.145,
+     "end": 64.225
+    },
+    {
+     "text": "all",
+     "start": 64.225,
+     "end": 64.465
+    },
+    {
+     "text": "on",
+     "start": 64.465,
+     "end": 64.595
+    },
+    {
+     "text": "the",
+     "start": 64.595,
+     "end": 64.665
+    },
+    {
+     "text": "Western",
+     "start": 64.665,
+     "end": 65.075
+    },
+    {
+     "text": "Ghats",
+     "start": 65.075,
+     "end": 65.525
+    },
+    {
+     "text": "and",
+     "start": 65.525,
+     "end": 65.645
+    },
+    {
+     "text": "the",
+     "start": 65.645,
+     "end": 65.705
+    },
+    {
+     "text": "northeast.",
+     "start": 65.705,
+     "end": 66.465
+    },
+    {
+     "text": "Phase",
+     "start": 67.085,
+     "end": 67.475
+    },
+    {
+     "text": "two",
+     "start": 67.475,
+     "end": 67.775
+    },
+    {
+     "text": "is",
+     "start": 67.775,
+     "end": 67.925
+    },
+    {
+     "text": "the",
+     "start": 67.925,
+     "end": 68.025
+    },
+    {
+     "text": "northeast,",
+     "start": 68.025,
+     "end": 68.935
+    },
+    {
+     "text": "or",
+     "start": 68.935,
+     "end": 69.105
+    },
+    {
+     "text": "retreating,",
+     "start": 69.105,
+     "end": 69.715
+    },
+    {
+     "text": "monsoon,",
+     "start": 69.715,
+     "end": 70.355
+    },
+    {
+     "text": "from",
+     "start": 70.355,
+     "end": 70.555
+    },
+    {
+     "text": "October",
+     "start": 70.555,
+     "end": 71.025
+    },
+    {
+     "text": "to",
+     "start": 71.025,
+     "end": 71.155
+    },
+    {
+     "text": "December.",
+     "start": 71.155,
+     "end": 71.795
+    },
+    {
+     "text": "Now",
+     "start": 72.785,
+     "end": 73.075
+    },
+    {
+     "text": "the",
+     "start": 73.075,
+     "end": 73.175
+    },
+    {
+     "text": "winds",
+     "start": 73.175,
+     "end": 73.505
+    },
+    {
+     "text": "blow",
+     "start": 73.505,
+     "end": 73.755
+    },
+    {
+     "text": "from",
+     "start": 73.755,
+     "end": 73.965
+    },
+    {
+     "text": "land",
+     "start": 73.965,
+     "end": 74.235
+    },
+    {
+     "text": "to",
+     "start": 74.235,
+     "end": 74.325
+    },
+    {
+     "text": "sea.",
+     "start": 74.325,
+     "end": 74.795
+    },
+    {
+     "text": "They",
+     "start": 75.335,
+     "end": 75.545
+    },
+    {
+     "text": "are",
+     "start": 75.545,
+     "end": 75.575
+    },
+    {
+     "text": "mostly",
+     "start": 75.575,
+     "end": 75.995
+    },
+    {
+     "text": "dry,",
+     "start": 75.995,
+     "end": 76.535
+    },
+    {
+     "text": "but",
+     "start": 76.835,
+     "end": 76.995
+    },
+    {
+     "text": "they",
+     "start": 76.995,
+     "end": 77.165
+    },
+    {
+     "text": "give",
+     "start": 77.165,
+     "end": 77.375
+    },
+    {
+     "text": "Tamil",
+     "start": 77.375,
+     "end": 77.735
+    },
+    {
+     "text": "Nadu",
+     "start": 77.735,
+     "end": 78.105
+    },
+    {
+     "text": "about",
+     "start": 78.105,
+     "end": 78.435
+    },
+    {
+     "text": "48",
+     "start": 78.435,
+     "end": 79.075
+    },
+    {
+     "text": "percent",
+     "start": 79.075,
+     "end": 79.535
+    },
+    {
+     "text": "of",
+     "start": 79.535,
+     "end": 79.595
+    },
+    {
+     "text": "its",
+     "start": 79.595,
+     "end": 79.755
+    },
+    {
+     "text": "annual",
+     "start": 79.755,
+     "end": 80.145
+    },
+    {
+     "text": "rain,",
+     "start": 80.145,
+     "end": 80.615
+    },
+    {
+     "text": "according",
+     "start": 80.955,
+     "end": 81.395
+    },
+    {
+     "text": "to",
+     "start": 81.395,
+     "end": 81.495
+    },
+    {
+     "text": "the",
+     "start": 81.495,
+     "end": 81.645
+    },
+    {
+     "text": "IMD,",
+     "start": 81.645,
+     "end": 82.505
+    },
+    {
+     "text": "and",
+     "start": 82.885,
+     "end": 83.025
+    },
+    {
+     "text": "they",
+     "start": 83.025,
+     "end": 83.155
+    },
+    {
+     "text": "also",
+     "start": 83.155,
+     "end": 83.565
+    },
+    {
+     "text": "water",
+     "start": 83.565,
+     "end": 83.885
+    },
+    {
+     "text": "coastal",
+     "start": 83.885,
+     "end": 84.415
+    },
+    {
+     "text": "Andhra.",
+     "start": 84.415,
+     "end": 84.885
+    }
+   ]
+  },
+  {
+   "id": "drivers",
+   "speak": "Why does it happen? Think of a giant sea breeze. First, differential heating. In summer, intense heat creates low pressure over the Thar Desert and the northern plains, while the cooler Indian Ocean holds high pressure. Air rushes from high to low, carrying moisture. Second, the I T C Z, a belt of low pressure near the Equator, shifts north over the Ganga plain and pulls the winds in. Third, the Himalayas. They act as a high wall, stop the moist winds from escaping into Central Asia, and force them to rise and drop their rain over India.",
+   "text": "Why does it happen? Think of a giant sea breeze. First, differential heating. In summer, intense heat creates low pressure over the Thar Desert and the northern plains, while the cooler Indian Ocean holds high pressure. Air rushes from high to low, carrying moisture. Second, the ITCZ, a belt of low pressure near the Equator, shifts north over the Ganga plain and pulls the winds in. Third, the Himalayas. They act as a high wall, stop the moist winds from escaping into Central Asia, and force them to rise and drop their rain over India.",
+   "start": 86.305,
+   "end": 121.735,
+   "words": [
+    {
+     "text": "Why",
+     "start": 86.315,
+     "end": 86.465
+    },
+    {
+     "text": "does",
+     "start": 86.465,
+     "end": 86.595
+    },
+    {
+     "text": "it",
+     "start": 86.595,
+     "end": 86.705
+    },
+    {
+     "text": "happen?",
+     "start": 86.705,
+     "end": 87.215
+    },
+    {
+     "text": "Think",
+     "start": 87.465,
+     "end": 87.665
+    },
+    {
+     "text": "of",
+     "start": 87.665,
+     "end": 87.745
+    },
+    {
+     "text": "a",
+     "start": 87.745,
+     "end": 87.795
+    },
+    {
+     "text": "giant",
+     "start": 87.795,
+     "end": 88.255
+    },
+    {
+     "text": "sea",
+     "start": 88.255,
+     "end": 88.545
+    },
+    {
+     "text": "breeze.",
+     "start": 88.545,
+     "end": 89.105
+    },
+    {
+     "text": "First,",
+     "start": 89.505,
+     "end": 90.065
+    },
+    {
+     "text": "differential",
+     "start": 90.065,
+     "end": 90.625
+    },
+    {
+     "text": "heating.",
+     "start": 90.625,
+     "end": 91.175
+    },
+    {
+     "text": "In",
+     "start": 91.855,
+     "end": 91.985
+    },
+    {
+     "text": "summer,",
+     "start": 91.985,
+     "end": 92.335
+    },
+    {
+     "text": "intense",
+     "start": 92.335,
+     "end": 92.935
+    },
+    {
+     "text": "heat",
+     "start": 92.935,
+     "end": 93.225
+    },
+    {
+     "text": "creates",
+     "start": 93.225,
+     "end": 93.695
+    },
+    {
+     "text": "low",
+     "start": 93.695,
+     "end": 93.945
+    },
+    {
+     "text": "pressure",
+     "start": 93.945,
+     "end": 94.375
+    },
+    {
+     "text": "over",
+     "start": 94.375,
+     "end": 94.525
+    },
+    {
+     "text": "the",
+     "start": 94.525,
+     "end": 94.625
+    },
+    {
+     "text": "Thar",
+     "start": 94.625,
+     "end": 94.955
+    },
+    {
+     "text": "Desert",
+     "start": 94.955,
+     "end": 95.395
+    },
+    {
+     "text": "and",
+     "start": 95.395,
+     "end": 95.495
+    },
+    {
+     "text": "the",
+     "start": 95.495,
+     "end": 95.555
+    },
+    {
+     "text": "northern",
+     "start": 95.555,
+     "end": 95.955
+    },
+    {
+     "text": "plains,",
+     "start": 95.955,
+     "end": 96.525
+    },
+    {
+     "text": "while",
+     "start": 96.775,
+     "end": 96.915
+    },
+    {
+     "text": "the",
+     "start": 96.915,
+     "end": 96.995
+    },
+    {
+     "text": "cooler",
+     "start": 96.995,
+     "end": 97.365
+    },
+    {
+     "text": "Indian",
+     "start": 97.365,
+     "end": 97.845
+    },
+    {
+     "text": "Ocean",
+     "start": 97.845,
+     "end": 98.275
+    },
+    {
+     "text": "holds",
+     "start": 98.275,
+     "end": 98.645
+    },
+    {
+     "text": "high",
+     "start": 98.645,
+     "end": 98.935
+    },
+    {
+     "text": "pressure.",
+     "start": 98.935,
+     "end": 99.415
+    },
+    {
+     "text": "Air",
+     "start": 100.275,
+     "end": 100.475
+    },
+    {
+     "text": "rushes",
+     "start": 100.475,
+     "end": 100.965
+    },
+    {
+     "text": "from",
+     "start": 100.965,
+     "end": 101.115
+    },
+    {
+     "text": "high",
+     "start": 101.115,
+     "end": 101.475
+    },
+    {
+     "text": "to",
+     "start": 101.475,
+     "end": 101.605
+    },
+    {
+     "text": "low,",
+     "start": 101.605,
+     "end": 102.005
+    },
+    {
+     "text": "carrying",
+     "start": 102.005,
+     "end": 102.495
+    },
+    {
+     "text": "moisture.",
+     "start": 102.495,
+     "end": 103.135
+    },
+    {
+     "text": "Second,",
+     "start": 103.765,
+     "end": 104.255
+    },
+    {
+     "text": "the",
+     "start": 104.255,
+     "end": 104.385
+    },
+    {
+     "text": "ITCZ,",
+     "start": 104.385,
+     "end": 105.075
+    },
+    {
+     "text": "a",
+     "start": 105.525,
+     "end": 105.605
+    },
+    {
+     "text": "belt",
+     "start": 105.605,
+     "end": 105.955
+    },
+    {
+     "text": "of",
+     "start": 105.955,
+     "end": 106.045
+    },
+    {
+     "text": "low",
+     "start": 106.045,
+     "end": 106.275
+    },
+    {
+     "text": "pressure",
+     "start": 106.275,
+     "end": 106.655
+    },
+    {
+     "text": "near",
+     "start": 106.655,
+     "end": 106.885
+    },
+    {
+     "text": "the",
+     "start": 106.885,
+     "end": 107.005
+    },
+    {
+     "text": "Equator,",
+     "start": 107.005,
+     "end": 107.635
+    },
+    {
+     "text": "shifts",
+     "start": 108.075,
+     "end": 108.455
+    },
+    {
+     "text": "north",
+     "start": 108.455,
+     "end": 108.795
+    },
+    {
+     "text": "over",
+     "start": 108.795,
+     "end": 108.955
+    },
+    {
+     "text": "the",
+     "start": 108.955,
+     "end": 109.045
+    },
+    {
+     "text": "Ganga",
+     "start": 109.045,
+     "end": 109.385
+    },
+    {
+     "text": "plain",
+     "start": 109.385,
+     "end": 109.805
+    },
+    {
+     "text": "and",
+     "start": 109.805,
+     "end": 109.935
+    },
+    {
+     "text": "pulls",
+     "start": 109.935,
+     "end": 110.275
+    },
+    {
+     "text": "the",
+     "start": 110.275,
+     "end": 110.365
+    },
+    {
+     "text": "winds",
+     "start": 110.365,
+     "end": 110.665
+    },
+    {
+     "text": "in.",
+     "start": 110.665,
+     "end": 110.965
+    },
+    {
+     "text": "Third,",
+     "start": 112.015,
+     "end": 112.575
+    },
+    {
+     "text": "the",
+     "start": 112.575,
+     "end": 112.655
+    },
+    {
+     "text": "Himalayas.",
+     "start": 112.655,
+     "end": 113.445
+    },
+    {
+     "text": "They",
+     "start": 113.965,
+     "end": 114.155
+    },
+    {
+     "text": "act",
+     "start": 114.155,
+     "end": 114.455
+    },
+    {
+     "text": "as",
+     "start": 114.455,
+     "end": 114.555
+    },
+    {
+     "text": "a",
+     "start": 114.555,
+     "end": 114.595
+    },
+    {
+     "text": "high",
+     "start": 114.595,
+     "end": 114.915
+    },
+    {
+     "text": "wall,",
+     "start": 114.915,
+     "end": 115.445
+    },
+    {
+     "text": "stop",
+     "start": 115.545,
+     "end": 115.835
+    },
+    {
+     "text": "the",
+     "start": 115.835,
+     "end": 115.915
+    },
+    {
+     "text": "moist",
+     "start": 115.915,
+     "end": 116.235
+    },
+    {
+     "text": "winds",
+     "start": 116.235,
+     "end": 116.595
+    },
+    {
+     "text": "from",
+     "start": 116.595,
+     "end": 116.715
+    },
+    {
+     "text": "escaping",
+     "start": 116.715,
+     "end": 117.305
+    },
+    {
+     "text": "into",
+     "start": 117.305,
+     "end": 117.465
+    },
+    {
+     "text": "Central",
+     "start": 117.465,
+     "end": 117.915
+    },
+    {
+     "text": "Asia,",
+     "start": 117.915,
+     "end": 118.425
+    },
+    {
+     "text": "and",
+     "start": 118.795,
+     "end": 118.945
+    },
+    {
+     "text": "force",
+     "start": 118.945,
+     "end": 119.235
+    },
+    {
+     "text": "them",
+     "start": 119.235,
+     "end": 119.405
+    },
+    {
+     "text": "to",
+     "start": 119.405,
+     "end": 119.525
+    },
+    {
+     "text": "rise",
+     "start": 119.525,
+     "end": 120.085
+    },
+    {
+     "text": "and",
+     "start": 120.085,
+     "end": 120.215
+    },
+    {
+     "text": "drop",
+     "start": 120.215,
+     "end": 120.465
+    },
+    {
+     "text": "their",
+     "start": 120.465,
+     "end": 120.675
+    },
+    {
+     "text": "rain",
+     "start": 120.675,
+     "end": 120.975
+    },
+    {
+     "text": "over",
+     "start": 120.975,
+     "end": 121.155
+    },
+    {
+     "text": "India.",
+     "start": 121.155,
+     "end": 121.625
+    }
+   ]
+  },
+  {
+   "id": "branches",
+   "speak": "When the monsoon hits the southern tip of India, it splits in two. The Arabian Sea branch slams into the Western Ghats and soaks the west coast. The Bay of Bengal branch moves up into the northeast, then turns west along the Ganga plain. The two branches finally meet over northwest India.",
+   "text": "When the monsoon hits the southern tip of India, it splits in two. The Arabian Sea branch slams into the Western Ghats and soaks the west coast. The Bay of Bengal branch moves up into the northeast, then turns west along the Ganga plain. The two branches finally meet over northwest India.",
+   "start": 123.035,
+   "end": 141.531,
+   "words": [
+    {
+     "text": "When",
+     "start": 123.045,
+     "end": 123.185
+    },
+    {
+     "text": "the",
+     "start": 123.185,
+     "end": 123.245
+    },
+    {
+     "text": "monsoon",
+     "start": 123.245,
+     "end": 123.825
+    },
+    {
+     "text": "hits",
+     "start": 123.825,
+     "end": 124.135
+    },
+    {
+     "text": "the",
+     "start": 124.135,
+     "end": 124.225
+    },
+    {
+     "text": "southern",
+     "start": 124.225,
+     "end": 124.605
+    },
+    {
+     "text": "tip",
+     "start": 124.605,
+     "end": 124.805
+    },
+    {
+     "text": "of",
+     "start": 124.805,
+     "end": 124.875
+    },
+    {
+     "text": "India,",
+     "start": 124.875,
+     "end": 125.375
+    },
+    {
+     "text": "it",
+     "start": 125.605,
+     "end": 125.715
+    },
+    {
+     "text": "splits",
+     "start": 125.715,
+     "end": 126.105
+    },
+    {
+     "text": "in",
+     "start": 126.105,
+     "end": 126.255
+    },
+    {
+     "text": "two.",
+     "start": 126.255,
+     "end": 126.665
+    },
+    {
+     "text": "The",
+     "start": 127.345,
+     "end": 127.515
+    },
+    {
+     "text": "Arabian",
+     "start": 127.515,
+     "end": 128.015
+    },
+    {
+     "text": "Sea",
+     "start": 128.015,
+     "end": 128.275
+    },
+    {
+     "text": "branch",
+     "start": 128.275,
+     "end": 128.675
+    },
+    {
+     "text": "slams",
+     "start": 128.675,
+     "end": 129.215
+    },
+    {
+     "text": "into",
+     "start": 129.215,
+     "end": 129.375
+    },
+    {
+     "text": "the",
+     "start": 129.375,
+     "end": 129.455
+    },
+    {
+     "text": "Western",
+     "start": 129.455,
+     "end": 129.885
+    },
+    {
+     "text": "Ghats",
+     "start": 129.885,
+     "end": 130.335
+    },
+    {
+     "text": "and",
+     "start": 130.335,
+     "end": 130.475
+    },
+    {
+     "text": "soaks",
+     "start": 130.475,
+     "end": 130.885
+    },
+    {
+     "text": "the",
+     "start": 130.885,
+     "end": 130.975
+    },
+    {
+     "text": "west",
+     "start": 130.975,
+     "end": 131.255
+    },
+    {
+     "text": "coast.",
+     "start": 131.255,
+     "end": 131.835
+    },
+    {
+     "text": "The",
+     "start": 132.455,
+     "end": 132.565
+    },
+    {
+     "text": "Bay",
+     "start": 132.565,
+     "end": 132.795
+    },
+    {
+     "text": "of",
+     "start": 132.795,
+     "end": 132.875
+    },
+    {
+     "text": "Bengal",
+     "start": 132.875,
+     "end": 133.365
+    },
+    {
+     "text": "branch",
+     "start": 133.365,
+     "end": 133.805
+    },
+    {
+     "text": "moves",
+     "start": 133.805,
+     "end": 134.115
+    },
+    {
+     "text": "up",
+     "start": 134.115,
+     "end": 134.265
+    },
+    {
+     "text": "into",
+     "start": 134.265,
+     "end": 134.425
+    },
+    {
+     "text": "the",
+     "start": 134.425,
+     "end": 134.495
+    },
+    {
+     "text": "northeast,",
+     "start": 134.495,
+     "end": 135.235
+    },
+    {
+     "text": "then",
+     "start": 135.575,
+     "end": 135.775
+    },
+    {
+     "text": "turns",
+     "start": 135.775,
+     "end": 136.135
+    },
+    {
+     "text": "west",
+     "start": 136.135,
+     "end": 136.555
+    },
+    {
+     "text": "along",
+     "start": 136.555,
+     "end": 136.855
+    },
+    {
+     "text": "the",
+     "start": 136.855,
+     "end": 136.925
+    },
+    {
+     "text": "Ganga",
+     "start": 136.925,
+     "end": 137.275
+    },
+    {
+     "text": "plain.",
+     "start": 137.275,
+     "end": 137.805
+    },
+    {
+     "text": "The",
+     "start": 138.505,
+     "end": 138.585
+    },
+    {
+     "text": "two",
+     "start": 138.585,
+     "end": 138.835
+    },
+    {
+     "text": "branches",
+     "start": 138.835,
+     "end": 139.445
+    },
+    {
+     "text": "finally",
+     "start": 139.445,
+     "end": 139.915
+    },
+    {
+     "text": "meet",
+     "start": 139.915,
+     "end": 140.215
+    },
+    {
+     "text": "over",
+     "start": 140.215,
+     "end": 140.395
+    },
+    {
+     "text": "northwest",
+     "start": 140.395,
+     "end": 140.985
+    },
+    {
+     "text": "India.",
+     "start": 140.985,
+     "end": 141.455
+    }
+   ]
+  },
+  {
+   "id": "shifts",
+   "speak": "Is the monsoon changing? Yes. Scientists at the Indian Institute of Tropical Meteorology in Pune found a threefold rise in widespread extreme rain events over central India between nineteen fifty and twenty fifteen. Monsoon depressions are weakening, more rain is shifting toward the peninsula, and regions like Marathwada and Vidarbha face repeated droughts. And El Nino, a warming of the Pacific, weakens the monsoon winds. In the El Nino year of twenty twenty-three, India received only ninety-four percent of its normal rain.",
+   "text": "Is the monsoon changing? Yes. Scientists at the Indian Institute of Tropical Meteorology in Pune found a threefold rise in widespread extreme rain events over central India between 1950 and 2015. Monsoon depressions are weakening, more rain is shifting toward the peninsula, and regions like Marathwada and Vidarbha face repeated droughts. And El Nino, a warming of the Pacific, weakens the monsoon winds. In the El Nino year of 2023, India received only 94 percent of its normal rain.",
+   "start": 142.831,
+   "end": 178.901,
+   "words": [
+    {
+     "text": "Is",
+     "start": 142.851,
+     "end": 143.011
+    },
+    {
+     "text": "the",
+     "start": 143.011,
+     "end": 143.091
+    },
+    {
+     "text": "monsoon",
+     "start": 143.091,
+     "end": 143.651
+    },
+    {
+     "text": "changing?",
+     "start": 143.651,
+     "end": 144.331
+    },
+    {
+     "text": "Yes.",
+     "start": 145.051,
+     "end": 145.601
+    },
+    {
+     "text": "Scientists",
+     "start": 146.241,
+     "end": 146.981
+    },
+    {
+     "text": "at",
+     "start": 146.981,
+     "end": 147.061
+    },
+    {
+     "text": "the",
+     "start": 147.061,
+     "end": 147.181
+    },
+    {
+     "text": "Indian",
+     "start": 147.181,
+     "end": 147.611
+    },
+    {
+     "text": "Institute",
+     "start": 147.611,
+     "end": 148.241
+    },
+    {
+     "text": "of",
+     "start": 148.241,
+     "end": 148.321
+    },
+    {
+     "text": "Tropical",
+     "start": 148.321,
+     "end": 148.781
+    },
+    {
+     "text": "Meteorology",
+     "start": 148.781,
+     "end": 149.641
+    },
+    {
+     "text": "in",
+     "start": 149.641,
+     "end": 149.801
+    },
+    {
+     "text": "Pune",
+     "start": 149.801,
+     "end": 150.211
+    },
+    {
+     "text": "found",
+     "start": 150.621,
+     "end": 150.921
+    },
+    {
+     "text": "a",
+     "start": 150.921,
+     "end": 150.961
+    },
+    {
+     "text": "threefold",
+     "start": 150.961,
+     "end": 151.551
+    },
+    {
+     "text": "rise",
+     "start": 151.551,
+     "end": 152.171
+    },
+    {
+     "text": "in",
+     "start": 152.171,
+     "end": 152.311
+    },
+    {
+     "text": "widespread",
+     "start": 152.311,
+     "end": 152.941
+    },
+    {
+     "text": "extreme",
+     "start": 152.941,
+     "end": 153.451
+    },
+    {
+     "text": "rain",
+     "start": 153.451,
+     "end": 153.741
+    },
+    {
+     "text": "events",
+     "start": 153.741,
+     "end": 154.181
+    },
+    {
+     "text": "over",
+     "start": 154.181,
+     "end": 154.381
+    },
+    {
+     "text": "central",
+     "start": 154.381,
+     "end": 154.831
+    },
+    {
+     "text": "India",
+     "start": 154.831,
+     "end": 155.331
+    },
+    {
+     "text": "between",
+     "start": 155.751,
+     "end": 156.051
+    },
+    {
+     "text": "1950",
+     "start": 156.051,
+     "end": 156.981
+    },
+    {
+     "text": "and",
+     "start": 156.981,
+     "end": 157.111
+    },
+    {
+     "text": "2015.",
+     "start": 157.111,
+     "end": 158.011
+    },
+    {
+     "text": "Monsoon",
+     "start": 158.641,
+     "end": 159.161
+    },
+    {
+     "text": "depressions",
+     "start": 159.161,
+     "end": 159.761
+    },
+    {
+     "text": "are",
+     "start": 159.761,
+     "end": 159.791
+    },
+    {
+     "text": "weakening,",
+     "start": 159.791,
+     "end": 160.391
+    },
+    {
+     "text": "more",
+     "start": 160.761,
+     "end": 161.011
+    },
+    {
+     "text": "rain",
+     "start": 161.011,
+     "end": 161.301
+    },
+    {
+     "text": "is",
+     "start": 161.301,
+     "end": 161.371
+    },
+    {
+     "text": "shifting",
+     "start": 161.371,
+     "end": 161.911
+    },
+    {
+     "text": "toward",
+     "start": 161.911,
+     "end": 162.181
+    },
+    {
+     "text": "the",
+     "start": 162.181,
+     "end": 162.251
+    },
+    {
+     "text": "peninsula,",
+     "start": 162.251,
+     "end": 163.001
+    },
+    {
+     "text": "and",
+     "start": 163.361,
+     "end": 163.541
+    },
+    {
+     "text": "regions",
+     "start": 163.541,
+     "end": 164.031
+    },
+    {
+     "text": "like",
+     "start": 164.031,
+     "end": 164.271
+    },
+    {
+     "text": "Marathwada",
+     "start": 164.271,
+     "end": 165.051
+    },
+    {
+     "text": "and",
+     "start": 165.051,
+     "end": 165.191
+    },
+    {
+     "text": "Vidarbha",
+     "start": 165.191,
+     "end": 165.691
+    },
+    {
+     "text": "face",
+     "start": 165.691,
+     "end": 166.091
+    },
+    {
+     "text": "repeated",
+     "start": 166.091,
+     "end": 166.561
+    },
+    {
+     "text": "droughts.",
+     "start": 166.561,
+     "end": 167.181
+    },
+    {
+     "text": "And",
+     "start": 167.961,
+     "end": 168.081
+    },
+    {
+     "text": "El",
+     "start": 168.081,
+     "end": 168.241
+    },
+    {
+     "text": "Nino,",
+     "start": 168.241,
+     "end": 168.721
+    },
+    {
+     "text": "a",
+     "start": 168.961,
+     "end": 169.051
+    },
+    {
+     "text": "warming",
+     "start": 169.051,
+     "end": 169.461
+    },
+    {
+     "text": "of",
+     "start": 169.461,
+     "end": 169.541
+    },
+    {
+     "text": "the",
+     "start": 169.541,
+     "end": 169.631
+    },
+    {
+     "text": "Pacific,",
+     "start": 169.631,
+     "end": 170.311
+    },
+    {
+     "text": "weakens",
+     "start": 170.541,
+     "end": 171.061
+    },
+    {
+     "text": "the",
+     "start": 171.061,
+     "end": 171.151
+    },
+    {
+     "text": "monsoon",
+     "start": 171.151,
+     "end": 171.711
+    },
+    {
+     "text": "winds.",
+     "start": 171.711,
+     "end": 172.241
+    },
+    {
+     "text": "In",
+     "start": 173.041,
+     "end": 173.181
+    },
+    {
+     "text": "the",
+     "start": 173.181,
+     "end": 173.291
+    },
+    {
+     "text": "El",
+     "start": 173.291,
+     "end": 173.491
+    },
+    {
+     "text": "Nino",
+     "start": 173.491,
+     "end": 173.811
+    },
+    {
+     "text": "year",
+     "start": 173.811,
+     "end": 174.101
+    },
+    {
+     "text": "of",
+     "start": 174.101,
+     "end": 174.181
+    },
+    {
+     "text": "2023,",
+     "start": 174.181,
+     "end": 175.241
+    },
+    {
+     "text": "India",
+     "start": 175.631,
+     "end": 175.981
+    },
+    {
+     "text": "received",
+     "start": 175.981,
+     "end": 176.461
+    },
+    {
+     "text": "only",
+     "start": 176.461,
+     "end": 176.661
+    },
+    {
+     "text": "94",
+     "start": 176.661,
+     "end": 177.291
+    },
+    {
+     "text": "percent",
+     "start": 177.291,
+     "end": 177.781
+    },
+    {
+     "text": "of",
+     "start": 177.781,
+     "end": 177.851
+    },
+    {
+     "text": "its",
+     "start": 177.851,
+     "end": 178.021
+    },
+    {
+     "text": "normal",
+     "start": 178.021,
+     "end": 178.391
+    },
+    {
+     "text": "rain.",
+     "start": 178.391,
+     "end": 178.841
+    }
+   ]
+  },
+  {
+   "id": "onset",
+   "speak": "How does the I M D declare that the monsoon has arrived? Not by the first shower. After the tenth of May, three tests must be passed together. One, rainfall. At least sixty percent of fourteen stations across Kerala, Lakshadweep and coastal Karnataka must record two point five millimetres or more, for two days in a row. Two, wind. Westerly winds must be deep, up to six hundred hectopascals, and blow at fifteen to twenty knots near the surface. Three, cloud. Outgoing longwave radiation, measured by satellites such as ISRO's INSAT three D, must fall below two hundred watts per square metre. Low radiation means thick, tall rain clouds.",
+   "text": "How does the IMD declare that the monsoon has arrived? Not by the first shower. After the 10th of May, three tests must be passed together. One, rainfall. At least 60 percent of 14 stations across Kerala, Lakshadweep and coastal Karnataka must record 2.5 mm or more, for two days in a row. Two, wind. Westerly winds must be deep, up to 600 hPa, and blow at 15 to 20 knots near the surface. Three, cloud. Outgoing longwave radiation, measured by satellites such as ISRO's INSAT three D, must fall below 200 W/m\u00b2. Low radiation means thick, tall rain clouds.",
+   "start": 180.201,
+   "end": 222.521,
+   "words": [
+    {
+     "text": "How",
+     "start": 180.211,
+     "end": 180.381
+    },
+    {
+     "text": "does",
+     "start": 180.381,
+     "end": 180.541
+    },
+    {
+     "text": "the",
+     "start": 180.541,
+     "end": 180.691
+    },
+    {
+     "text": "IMD",
+     "start": 180.691,
+     "end": 181.221
+    },
+    {
+     "text": "declare",
+     "start": 181.221,
+     "end": 181.631
+    },
+    {
+     "text": "that",
+     "start": 181.631,
+     "end": 181.791
+    },
+    {
+     "text": "the",
+     "start": 181.791,
+     "end": 181.861
+    },
+    {
+     "text": "monsoon",
+     "start": 181.861,
+     "end": 182.381
+    },
+    {
+     "text": "has",
+     "start": 182.381,
+     "end": 182.551
+    },
+    {
+     "text": "arrived?",
+     "start": 182.551,
+     "end": 183.151
+    },
+    {
+     "text": "Not",
+     "start": 183.681,
+     "end": 183.881
+    },
+    {
+     "text": "by",
+     "start": 183.881,
+     "end": 184.061
+    },
+    {
+     "text": "the",
+     "start": 184.061,
+     "end": 184.131
+    },
+    {
+     "text": "first",
+     "start": 184.131,
+     "end": 184.531
+    },
+    {
+     "text": "shower.",
+     "start": 184.531,
+     "end": 184.991
+    },
+    {
+     "text": "After",
+     "start": 185.791,
+     "end": 186.021
+    },
+    {
+     "text": "the",
+     "start": 186.021,
+     "end": 186.091
+    },
+    {
+     "text": "10th",
+     "start": 186.091,
+     "end": 186.391
+    },
+    {
+     "text": "of",
+     "start": 186.391,
+     "end": 186.461
+    },
+    {
+     "text": "May,",
+     "start": 186.461,
+     "end": 186.921
+    },
+    {
+     "text": "three",
+     "start": 186.921,
+     "end": 187.151
+    },
+    {
+     "text": "tests",
+     "start": 187.151,
+     "end": 187.591
+    },
+    {
+     "text": "must",
+     "start": 187.591,
+     "end": 187.791
+    },
+    {
+     "text": "be",
+     "start": 187.791,
+     "end": 187.891
+    },
+    {
+     "text": "passed",
+     "start": 187.891,
+     "end": 188.251
+    },
+    {
+     "text": "together.",
+     "start": 188.251,
+     "end": 188.731
+    },
+    {
+     "text": "One,",
+     "start": 189.401,
+     "end": 189.751
+    },
+    {
+     "text": "rainfall.",
+     "start": 189.751,
+     "end": 190.491
+    },
+    {
+     "text": "At",
+     "start": 190.991,
+     "end": 191.111
+    },
+    {
+     "text": "least",
+     "start": 191.111,
+     "end": 191.361
+    },
+    {
+     "text": "60",
+     "start": 191.361,
+     "end": 191.771
+    },
+    {
+     "text": "percent",
+     "start": 191.771,
+     "end": 192.221
+    },
+    {
+     "text": "of",
+     "start": 192.221,
+     "end": 192.301
+    },
+    {
+     "text": "14",
+     "start": 192.301,
+     "end": 192.731
+    },
+    {
+     "text": "stations",
+     "start": 192.731,
+     "end": 193.331
+    },
+    {
+     "text": "across",
+     "start": 193.331,
+     "end": 193.641
+    },
+    {
+     "text": "Kerala,",
+     "start": 193.641,
+     "end": 194.221
+    },
+    {
+     "text": "Lakshadweep",
+     "start": 194.221,
+     "end": 194.951
+    },
+    {
+     "text": "and",
+     "start": 194.951,
+     "end": 195.081
+    },
+    {
+     "text": "coastal",
+     "start": 195.081,
+     "end": 195.531
+    },
+    {
+     "text": "Karnataka",
+     "start": 195.531,
+     "end": 196.251
+    },
+    {
+     "text": "must",
+     "start": 196.581,
+     "end": 196.831
+    },
+    {
+     "text": "record",
+     "start": 196.831,
+     "end": 197.231
+    },
+    {
+     "text": "2.5",
+     "start": 197.231,
+     "end": 198.046
+    },
+    {
+     "text": "mm",
+     "start": 198.046,
+     "end": 198.861
+    },
+    {
+     "text": "or",
+     "start": 198.861,
+     "end": 198.991
+    },
+    {
+     "text": "more,",
+     "start": 198.991,
+     "end": 199.321
+    },
+    {
+     "text": "for",
+     "start": 199.641,
+     "end": 199.731
+    },
+    {
+     "text": "two",
+     "start": 199.731,
+     "end": 199.971
+    },
+    {
+     "text": "days",
+     "start": 199.971,
+     "end": 200.251
+    },
+    {
+     "text": "in",
+     "start": 200.251,
+     "end": 200.351
+    },
+    {
+     "text": "a",
+     "start": 200.351,
+     "end": 200.401
+    },
+    {
+     "text": "row.",
+     "start": 200.401,
+     "end": 200.871
+    },
+    {
+     "text": "Two,",
+     "start": 201.481,
+     "end": 201.801
+    },
+    {
+     "text": "wind.",
+     "start": 201.801,
+     "end": 202.261
+    },
+    {
+     "text": "Westerly",
+     "start": 202.731,
+     "end": 203.151
+    },
+    {
+     "text": "winds",
+     "start": 203.151,
+     "end": 203.531
+    },
+    {
+     "text": "must",
+     "start": 203.531,
+     "end": 203.801
+    },
+    {
+     "text": "be",
+     "start": 203.801,
+     "end": 203.911
+    },
+    {
+     "text": "deep,",
+     "start": 203.911,
+     "end": 204.301
+    },
+    {
+     "text": "up",
+     "start": 204.571,
+     "end": 204.701
+    },
+    {
+     "text": "to",
+     "start": 204.701,
+     "end": 204.811
+    },
+    {
+     "text": "600",
+     "start": 204.811,
+     "end": 205.551
+    },
+    {
+     "text": "hPa,",
+     "start": 205.551,
+     "end": 206.291
+    },
+    {
+     "text": "and",
+     "start": 206.291,
+     "end": 206.431
+    },
+    {
+     "text": "blow",
+     "start": 206.431,
+     "end": 206.701
+    },
+    {
+     "text": "at",
+     "start": 206.701,
+     "end": 206.791
+    },
+    {
+     "text": "15",
+     "start": 206.791,
+     "end": 207.171
+    },
+    {
+     "text": "to",
+     "start": 207.171,
+     "end": 207.261
+    },
+    {
+     "text": "20",
+     "start": 207.261,
+     "end": 207.581
+    },
+    {
+     "text": "knots",
+     "start": 207.581,
+     "end": 207.911
+    },
+    {
+     "text": "near",
+     "start": 207.911,
+     "end": 208.051
+    },
+    {
+     "text": "the",
+     "start": 208.051,
+     "end": 208.121
+    },
+    {
+     "text": "surface.",
+     "start": 208.121,
+     "end": 208.781
+    },
+    {
+     "text": "Three,",
+     "start": 209.581,
+     "end": 209.971
+    },
+    {
+     "text": "cloud.",
+     "start": 209.971,
+     "end": 210.501
+    },
+    {
+     "text": "Outgoing",
+     "start": 211.031,
+     "end": 211.571
+    },
+    {
+     "text": "longwave",
+     "start": 211.571,
+     "end": 212.031
+    },
+    {
+     "text": "radiation,",
+     "start": 212.031,
+     "end": 212.771
+    },
+    {
+     "text": "measured",
+     "start": 212.771,
+     "end": 213.111
+    },
+    {
+     "text": "by",
+     "start": 213.111,
+     "end": 213.281
+    },
+    {
+     "text": "satellites",
+     "start": 213.281,
+     "end": 213.911
+    },
+    {
+     "text": "such",
+     "start": 213.911,
+     "end": 214.141
+    },
+    {
+     "text": "as",
+     "start": 214.141,
+     "end": 214.241
+    },
+    {
+     "text": "ISRO's",
+     "start": 214.241,
+     "end": 214.721
+    },
+    {
+     "text": "INSAT",
+     "start": 214.721,
+     "end": 215.101
+    },
+    {
+     "text": "three",
+     "start": 215.101,
+     "end": 215.391
+    },
+    {
+     "text": "D,",
+     "start": 215.391,
+     "end": 215.761
+    },
+    {
+     "text": "must",
+     "start": 216.081,
+     "end": 216.351
+    },
+    {
+     "text": "fall",
+     "start": 216.351,
+     "end": 216.581
+    },
+    {
+     "text": "below",
+     "start": 216.581,
+     "end": 216.831
+    },
+    {
+     "text": "200",
+     "start": 216.831,
+     "end": 217.766
+    },
+    {
+     "text": "W/m\u00b2.",
+     "start": 217.766,
+     "end": 218.701
+    },
+    {
+     "text": "Low",
+     "start": 219.481,
+     "end": 219.741
+    },
+    {
+     "text": "radiation",
+     "start": 219.741,
+     "end": 220.451
+    },
+    {
+     "text": "means",
+     "start": 220.451,
+     "end": 220.791
+    },
+    {
+     "text": "thick,",
+     "start": 220.791,
+     "end": 221.161
+    },
+    {
+     "text": "tall",
+     "start": 221.161,
+     "end": 221.531
+    },
+    {
+     "text": "rain",
+     "start": 221.531,
+     "end": 221.821
+    },
+    {
+     "text": "clouds.",
+     "start": 221.821,
+     "end": 222.471
+    }
+   ]
+  },
+  {
+   "id": "agri",
+   "speak": "How does the monsoon run Indian farming? There are two crop seasons. Kharif crops are sown in June and July, when the rains arrive, and harvested in September and October. They need a lot of water: rice, maize, cotton, soybean, sugarcane and groundnut. Rabi crops are sown in October and November, as the monsoon retreats, and harvested in March and April. They use moisture left in the soil, and winter rain from western disturbances: wheat, barley, mustard, gram and peas. But rabi depends on the monsoon too. Monsoon rain fills the reservoirs and recharges the groundwater that irrigate the winter crop. And a dry spell in July can wipe out kharif seedlings.",
+   "text": "How does the monsoon run Indian farming? There are two crop seasons. Kharif crops are sown in June and July, when the rains arrive, and harvested in September and October. They need a lot of water: rice, maize, cotton, soybean, sugarcane and groundnut. Rabi crops are sown in October and November, as the monsoon retreats, and harvested in March and April. They use moisture left in the soil, and winter rain from western disturbances: wheat, barley, mustard, gram and peas. But rabi depends on the monsoon too. Monsoon rain fills the reservoirs and recharges the groundwater that irrigate the winter crop. And a dry spell in July can wipe out kharif seedlings.",
+   "start": 223.821,
+   "end": 266.462,
+   "words": [
+    {
+     "text": "How",
+     "start": 223.831,
+     "end": 224.001
+    },
+    {
+     "text": "does",
+     "start": 224.001,
+     "end": 224.141
+    },
+    {
+     "text": "the",
+     "start": 224.141,
+     "end": 224.211
+    },
+    {
+     "text": "monsoon",
+     "start": 224.211,
+     "end": 224.811
+    },
+    {
+     "text": "run",
+     "start": 224.811,
+     "end": 225.001
+    },
+    {
+     "text": "Indian",
+     "start": 225.001,
+     "end": 225.371
+    },
+    {
+     "text": "farming?",
+     "start": 225.371,
+     "end": 225.931
+    },
+    {
+     "text": "There",
+     "start": 226.241,
+     "end": 226.411
+    },
+    {
+     "text": "are",
+     "start": 226.411,
+     "end": 226.461
+    },
+    {
+     "text": "two",
+     "start": 226.461,
+     "end": 226.721
+    },
+    {
+     "text": "crop",
+     "start": 226.721,
+     "end": 226.971
+    },
+    {
+     "text": "seasons.",
+     "start": 226.971,
+     "end": 227.611
+    },
+    {
+     "text": "Kharif",
+     "start": 228.231,
+     "end": 228.591
+    },
+    {
+     "text": "crops",
+     "start": 228.591,
+     "end": 228.931
+    },
+    {
+     "text": "are",
+     "start": 228.931,
+     "end": 228.961
+    },
+    {
+     "text": "sown",
+     "start": 228.961,
+     "end": 229.271
+    },
+    {
+     "text": "in",
+     "start": 229.271,
+     "end": 229.421
+    },
+    {
+     "text": "June",
+     "start": 229.421,
+     "end": 229.681
+    },
+    {
+     "text": "and",
+     "start": 229.681,
+     "end": 229.791
+    },
+    {
+     "text": "July,",
+     "start": 229.791,
+     "end": 230.181
+    },
+    {
+     "text": "when",
+     "start": 230.181,
+     "end": 230.341
+    },
+    {
+     "text": "the",
+     "start": 230.341,
+     "end": 230.421
+    },
+    {
+     "text": "rains",
+     "start": 230.421,
+     "end": 230.771
+    },
+    {
+     "text": "arrive,",
+     "start": 230.771,
+     "end": 231.241
+    },
+    {
+     "text": "and",
+     "start": 231.241,
+     "end": 231.361
+    },
+    {
+     "text": "harvested",
+     "start": 231.361,
+     "end": 231.871
+    },
+    {
+     "text": "in",
+     "start": 231.871,
+     "end": 232.021
+    },
+    {
+     "text": "September",
+     "start": 232.021,
+     "end": 232.571
+    },
+    {
+     "text": "and",
+     "start": 232.571,
+     "end": 232.691
+    },
+    {
+     "text": "October.",
+     "start": 232.691,
+     "end": 233.271
+    },
+    {
+     "text": "They",
+     "start": 233.921,
+     "end": 234.041
+    },
+    {
+     "text": "need",
+     "start": 234.041,
+     "end": 234.271
+    },
+    {
+     "text": "a",
+     "start": 234.271,
+     "end": 234.321
+    },
+    {
+     "text": "lot",
+     "start": 234.321,
+     "end": 234.521
+    },
+    {
+     "text": "of",
+     "start": 234.521,
+     "end": 234.611
+    },
+    {
+     "text": "water:",
+     "start": 234.611,
+     "end": 235.141
+    },
+    {
+     "text": "rice,",
+     "start": 235.531,
+     "end": 236.001
+    },
+    {
+     "text": "maize,",
+     "start": 236.001,
+     "end": 236.571
+    },
+    {
+     "text": "cotton,",
+     "start": 236.571,
+     "end": 237.151
+    },
+    {
+     "text": "soybean,",
+     "start": 237.151,
+     "end": 237.811
+    },
+    {
+     "text": "sugarcane",
+     "start": 237.811,
+     "end": 238.431
+    },
+    {
+     "text": "and",
+     "start": 238.431,
+     "end": 238.551
+    },
+    {
+     "text": "groundnut.",
+     "start": 238.551,
+     "end": 239.231
+    },
+    {
+     "text": "Rabi",
+     "start": 239.961,
+     "end": 240.351
+    },
+    {
+     "text": "crops",
+     "start": 240.351,
+     "end": 240.691
+    },
+    {
+     "text": "are",
+     "start": 240.691,
+     "end": 240.721
+    },
+    {
+     "text": "sown",
+     "start": 240.721,
+     "end": 241.041
+    },
+    {
+     "text": "in",
+     "start": 241.041,
+     "end": 241.141
+    },
+    {
+     "text": "October",
+     "start": 241.141,
+     "end": 241.681
+    },
+    {
+     "text": "and",
+     "start": 241.681,
+     "end": 241.781
+    },
+    {
+     "text": "November,",
+     "start": 241.781,
+     "end": 242.491
+    },
+    {
+     "text": "as",
+     "start": 242.491,
+     "end": 242.641
+    },
+    {
+     "text": "the",
+     "start": 242.641,
+     "end": 242.731
+    },
+    {
+     "text": "monsoon",
+     "start": 242.731,
+     "end": 243.261
+    },
+    {
+     "text": "retreats,",
+     "start": 243.261,
+     "end": 243.891
+    },
+    {
+     "text": "and",
+     "start": 243.891,
+     "end": 244.061
+    },
+    {
+     "text": "harvested",
+     "start": 244.061,
+     "end": 244.651
+    },
+    {
+     "text": "in",
+     "start": 244.651,
+     "end": 244.791
+    },
+    {
+     "text": "March",
+     "start": 244.791,
+     "end": 245.221
+    },
+    {
+     "text": "and",
+     "start": 245.221,
+     "end": 245.321
+    },
+    {
+     "text": "April.",
+     "start": 245.321,
+     "end": 245.831
+    },
+    {
+     "text": "They",
+     "start": 246.471,
+     "end": 246.601
+    },
+    {
+     "text": "use",
+     "start": 246.601,
+     "end": 246.841
+    },
+    {
+     "text": "moisture",
+     "start": 246.841,
+     "end": 247.281
+    },
+    {
+     "text": "left",
+     "start": 247.281,
+     "end": 247.561
+    },
+    {
+     "text": "in",
+     "start": 247.561,
+     "end": 247.651
+    },
+    {
+     "text": "the",
+     "start": 247.651,
+     "end": 247.711
+    },
+    {
+     "text": "soil,",
+     "start": 247.711,
+     "end": 248.241
+    },
+    {
+     "text": "and",
+     "start": 248.481,
+     "end": 248.621
+    },
+    {
+     "text": "winter",
+     "start": 248.621,
+     "end": 248.951
+    },
+    {
+     "text": "rain",
+     "start": 248.951,
+     "end": 249.241
+    },
+    {
+     "text": "from",
+     "start": 249.241,
+     "end": 249.431
+    },
+    {
+     "text": "western",
+     "start": 249.431,
+     "end": 249.771
+    },
+    {
+     "text": "disturbances:",
+     "start": 249.771,
+     "end": 250.751
+    },
+    {
+     "text": "wheat,",
+     "start": 251.181,
+     "end": 251.801
+    },
+    {
+     "text": "barley,",
+     "start": 251.801,
+     "end": 252.241
+    },
+    {
+     "text": "mustard,",
+     "start": 252.241,
+     "end": 252.861
+    },
+    {
+     "text": "gram",
+     "start": 252.861,
+     "end": 253.261
+    },
+    {
+     "text": "and",
+     "start": 253.261,
+     "end": 253.391
+    },
+    {
+     "text": "peas.",
+     "start": 253.391,
+     "end": 253.891
+    },
+    {
+     "text": "But",
+     "start": 254.491,
+     "end": 254.641
+    },
+    {
+     "text": "rabi",
+     "start": 254.641,
+     "end": 255.041
+    },
+    {
+     "text": "depends",
+     "start": 255.041,
+     "end": 255.481
+    },
+    {
+     "text": "on",
+     "start": 255.481,
+     "end": 255.551
+    },
+    {
+     "text": "the",
+     "start": 255.551,
+     "end": 255.611
+    },
+    {
+     "text": "monsoon",
+     "start": 255.611,
+     "end": 256.171
+    },
+    {
+     "text": "too.",
+     "start": 256.171,
+     "end": 256.551
+    },
+    {
+     "text": "Monsoon",
+     "start": 257.301,
+     "end": 257.891
+    },
+    {
+     "text": "rain",
+     "start": 257.891,
+     "end": 258.211
+    },
+    {
+     "text": "fills",
+     "start": 258.211,
+     "end": 258.551
+    },
+    {
+     "text": "the",
+     "start": 258.551,
+     "end": 258.651
+    },
+    {
+     "text": "reservoirs",
+     "start": 258.651,
+     "end": 259.401
+    },
+    {
+     "text": "and",
+     "start": 259.401,
+     "end": 259.531
+    },
+    {
+     "text": "recharges",
+     "start": 259.531,
+     "end": 260.201
+    },
+    {
+     "text": "the",
+     "start": 260.201,
+     "end": 260.291
+    },
+    {
+     "text": "groundwater",
+     "start": 260.291,
+     "end": 260.931
+    },
+    {
+     "text": "that",
+     "start": 260.931,
+     "end": 261.111
+    },
+    {
+     "text": "irrigate",
+     "start": 261.111,
+     "end": 261.591
+    },
+    {
+     "text": "the",
+     "start": 261.591,
+     "end": 261.681
+    },
+    {
+     "text": "winter",
+     "start": 261.681,
+     "end": 261.971
+    },
+    {
+     "text": "crop.",
+     "start": 261.971,
+     "end": 262.361
+    },
+    {
+     "text": "And",
+     "start": 263.051,
+     "end": 263.171
+    },
+    {
+     "text": "a",
+     "start": 263.171,
+     "end": 263.221
+    },
+    {
+     "text": "dry",
+     "start": 263.221,
+     "end": 263.561
+    },
+    {
+     "text": "spell",
+     "start": 263.561,
+     "end": 263.911
+    },
+    {
+     "text": "in",
+     "start": 263.911,
+     "end": 264.081
+    },
+    {
+     "text": "July",
+     "start": 264.081,
+     "end": 264.541
+    },
+    {
+     "text": "can",
+     "start": 264.541,
+     "end": 264.751
+    },
+    {
+     "text": "wipe",
+     "start": 264.751,
+     "end": 265.061
+    },
+    {
+     "text": "out",
+     "start": 265.061,
+     "end": 265.271
+    },
+    {
+     "text": "kharif",
+     "start": 265.271,
+     "end": 265.691
+    },
+    {
+     "text": "seedlings.",
+     "start": 265.691,
+     "end": 266.401
+    }
+   ]
+  },
+  {
+   "id": "wettest",
+   "speak": "Where does it rain the most? In Meghalaya, the Khasi Hills form a funnel. Winds from the Bay of Bengal cross the plains of Bangladesh, hit the hills, and are forced to rise. This is orographic lift. So Mawsynram averages about eleven thousand eight hundred and seventy millimetres of rain a year, among the highest on Earth, with Cherrapunji close behind. On the Western Ghats, Amboli gets around seven thousand five hundred, Agumbe, the Cherrapunji of the south, about seven thousand two hundred, and Mahabaleshwar, source of the Krishna river, about five thousand six hundred.",
+   "text": "Where does it rain the most? In Meghalaya, the Khasi Hills form a funnel. Winds from the Bay of Bengal cross the plains of Bangladesh, hit the hills, and are forced to rise. This is orographic lift. So Mawsynram averages about 11,870 mm of rain a year, among the highest on Earth, with Cherrapunji close behind. On the Western Ghats, Amboli gets around 7,500, Agumbe, the Cherrapunji of the south, about 7,200, and Mahabaleshwar, source of the Krishna river, about 5,600.",
+   "start": 267.762,
+   "end": 303.512,
+   "words": [
+    {
+     "text": "Where",
+     "start": 267.782,
+     "end": 267.942
+    },
+    {
+     "text": "does",
+     "start": 267.942,
+     "end": 268.112
+    },
+    {
+     "text": "it",
+     "start": 268.112,
+     "end": 268.222
+    },
+    {
+     "text": "rain",
+     "start": 268.222,
+     "end": 268.512
+    },
+    {
+     "text": "the",
+     "start": 268.512,
+     "end": 268.572
+    },
+    {
+     "text": "most?",
+     "start": 268.572,
+     "end": 269.132
+    },
+    {
+     "text": "In",
+     "start": 269.632,
+     "end": 269.752
+    },
+    {
+     "text": "Meghalaya,",
+     "start": 269.752,
+     "end": 270.402
+    },
+    {
+     "text": "the",
+     "start": 270.402,
+     "end": 270.492
+    },
+    {
+     "text": "Khasi",
+     "start": 270.492,
+     "end": 270.942
+    },
+    {
+     "text": "Hills",
+     "start": 270.942,
+     "end": 271.322
+    },
+    {
+     "text": "form",
+     "start": 271.322,
+     "end": 271.532
+    },
+    {
+     "text": "a",
+     "start": 271.532,
+     "end": 271.562
+    },
+    {
+     "text": "funnel.",
+     "start": 271.562,
+     "end": 272.102
+    },
+    {
+     "text": "Winds",
+     "start": 272.682,
+     "end": 273.012
+    },
+    {
+     "text": "from",
+     "start": 273.012,
+     "end": 273.152
+    },
+    {
+     "text": "the",
+     "start": 273.152,
+     "end": 273.232
+    },
+    {
+     "text": "Bay",
+     "start": 273.232,
+     "end": 273.482
+    },
+    {
+     "text": "of",
+     "start": 273.482,
+     "end": 273.552
+    },
+    {
+     "text": "Bengal",
+     "start": 273.552,
+     "end": 274.072
+    },
+    {
+     "text": "cross",
+     "start": 274.072,
+     "end": 274.412
+    },
+    {
+     "text": "the",
+     "start": 274.412,
+     "end": 274.502
+    },
+    {
+     "text": "plains",
+     "start": 274.502,
+     "end": 274.922
+    },
+    {
+     "text": "of",
+     "start": 274.922,
+     "end": 274.982
+    },
+    {
+     "text": "Bangladesh,",
+     "start": 274.982,
+     "end": 275.712
+    },
+    {
+     "text": "hit",
+     "start": 275.882,
+     "end": 276.052
+    },
+    {
+     "text": "the",
+     "start": 276.052,
+     "end": 276.142
+    },
+    {
+     "text": "hills,",
+     "start": 276.142,
+     "end": 276.662
+    },
+    {
+     "text": "and",
+     "start": 276.662,
+     "end": 276.782
+    },
+    {
+     "text": "are",
+     "start": 276.782,
+     "end": 276.812
+    },
+    {
+     "text": "forced",
+     "start": 276.812,
+     "end": 277.162
+    },
+    {
+     "text": "to",
+     "start": 277.162,
+     "end": 277.262
+    },
+    {
+     "text": "rise.",
+     "start": 277.262,
+     "end": 277.862
+    },
+    {
+     "text": "This",
+     "start": 278.692,
+     "end": 278.942
+    },
+    {
+     "text": "is",
+     "start": 278.942,
+     "end": 279.132
+    },
+    {
+     "text": "orographic",
+     "start": 279.132,
+     "end": 279.772
+    },
+    {
+     "text": "lift.",
+     "start": 279.772,
+     "end": 280.232
+    },
+    {
+     "text": "So",
+     "start": 280.692,
+     "end": 280.902
+    },
+    {
+     "text": "Mawsynram",
+     "start": 280.902,
+     "end": 281.492
+    },
+    {
+     "text": "averages",
+     "start": 281.492,
+     "end": 282.072
+    },
+    {
+     "text": "about",
+     "start": 282.072,
+     "end": 282.352
+    },
+    {
+     "text": "11,870",
+     "start": 282.352,
+     "end": 283.577
+    },
+    {
+     "text": "mm",
+     "start": 283.577,
+     "end": 284.802
+    },
+    {
+     "text": "of",
+     "start": 284.802,
+     "end": 284.912
+    },
+    {
+     "text": "rain",
+     "start": 284.912,
+     "end": 285.162
+    },
+    {
+     "text": "a",
+     "start": 285.162,
+     "end": 285.222
+    },
+    {
+     "text": "year,",
+     "start": 285.222,
+     "end": 285.692
+    },
+    {
+     "text": "among",
+     "start": 286.092,
+     "end": 286.332
+    },
+    {
+     "text": "the",
+     "start": 286.332,
+     "end": 286.392
+    },
+    {
+     "text": "highest",
+     "start": 286.392,
+     "end": 286.962
+    },
+    {
+     "text": "on",
+     "start": 286.962,
+     "end": 287.122
+    },
+    {
+     "text": "Earth,",
+     "start": 287.122,
+     "end": 287.632
+    },
+    {
+     "text": "with",
+     "start": 287.632,
+     "end": 287.792
+    },
+    {
+     "text": "Cherrapunji",
+     "start": 287.792,
+     "end": 288.462
+    },
+    {
+     "text": "close",
+     "start": 288.462,
+     "end": 288.782
+    },
+    {
+     "text": "behind.",
+     "start": 288.782,
+     "end": 289.442
+    },
+    {
+     "text": "On",
+     "start": 290.062,
+     "end": 290.202
+    },
+    {
+     "text": "the",
+     "start": 290.202,
+     "end": 290.272
+    },
+    {
+     "text": "Western",
+     "start": 290.272,
+     "end": 290.682
+    },
+    {
+     "text": "Ghats,",
+     "start": 290.682,
+     "end": 291.202
+    },
+    {
+     "text": "Amboli",
+     "start": 291.332,
+     "end": 291.732
+    },
+    {
+     "text": "gets",
+     "start": 291.732,
+     "end": 292.052
+    },
+    {
+     "text": "around",
+     "start": 292.052,
+     "end": 292.332
+    },
+    {
+     "text": "7,500,",
+     "start": 292.332,
+     "end": 293.882
+    },
+    {
+     "text": "Agumbe,",
+     "start": 294.442,
+     "end": 294.932
+    },
+    {
+     "text": "the",
+     "start": 294.932,
+     "end": 295.112
+    },
+    {
+     "text": "Cherrapunji",
+     "start": 295.112,
+     "end": 295.842
+    },
+    {
+     "text": "of",
+     "start": 295.842,
+     "end": 295.922
+    },
+    {
+     "text": "the",
+     "start": 295.922,
+     "end": 296.012
+    },
+    {
+     "text": "south,",
+     "start": 296.012,
+     "end": 296.642
+    },
+    {
+     "text": "about",
+     "start": 296.642,
+     "end": 296.972
+    },
+    {
+     "text": "7,200,",
+     "start": 296.972,
+     "end": 298.462
+    },
+    {
+     "text": "and",
+     "start": 299.022,
+     "end": 299.152
+    },
+    {
+     "text": "Mahabaleshwar,",
+     "start": 299.152,
+     "end": 300.052
+    },
+    {
+     "text": "source",
+     "start": 300.052,
+     "end": 300.472
+    },
+    {
+     "text": "of",
+     "start": 300.472,
+     "end": 300.562
+    },
+    {
+     "text": "the",
+     "start": 300.562,
+     "end": 300.642
+    },
+    {
+     "text": "Krishna",
+     "start": 300.642,
+     "end": 301.042
+    },
+    {
+     "text": "river,",
+     "start": 301.042,
+     "end": 301.422
+    },
+    {
+     "text": "about",
+     "start": 301.672,
+     "end": 301.972
+    },
+    {
+     "text": "5,600.",
+     "start": 301.972,
+     "end": 303.462
+    }
+   ]
+  },
+  {
+   "id": "timetable",
+   "speak": "When does it reach you? These are the I M D's normal dates. Around the twenty-second of May, the Andaman and Nicobar Islands. On the first of June, Kerala. By about the eleventh of June, Mumbai and Kolkata. By the twentieth, central India. Near the end of June, Delhi. And by the eighth of July, the whole country is covered. Then the journey reverses. Withdrawal begins from west Rajasthan around the seventeenth of September, and is complete by about the fifteenth of October. Crossing the Bay of Bengal, the winds pick up moisture and become the northeast monsoon.",
+   "text": "When does it reach you? These are the IMD's normal dates. Around the 22nd of May, the Andaman and Nicobar Islands. On the first of June, Kerala. By about the 11th of June, Mumbai and Kolkata. By the 20th, central India. Near the end of June, Delhi. And by the 8th of July, the whole country is covered. Then the journey reverses. Withdrawal begins from west Rajasthan around the 17th of September, and is complete by about the 15th of October. Crossing the Bay of Bengal, the winds pick up moisture and become the northeast monsoon.",
+   "start": 304.812,
+   "end": 340.839,
+   "words": [
+    {
+     "text": "When",
+     "start": 304.822,
+     "end": 305.022
+    },
+    {
+     "text": "does",
+     "start": 305.022,
+     "end": 305.192
+    },
+    {
+     "text": "it",
+     "start": 305.192,
+     "end": 305.302
+    },
+    {
+     "text": "reach",
+     "start": 305.302,
+     "end": 305.612
+    },
+    {
+     "text": "you?",
+     "start": 305.612,
+     "end": 305.792
+    },
+    {
+     "text": "These",
+     "start": 306.172,
+     "end": 306.472
+    },
+    {
+     "text": "are",
+     "start": 306.472,
+     "end": 306.582
+    },
+    {
+     "text": "the",
+     "start": 306.582,
+     "end": 306.752
+    },
+    {
+     "text": "IMD's",
+     "start": 306.752,
+     "end": 307.452
+    },
+    {
+     "text": "normal",
+     "start": 307.452,
+     "end": 307.822
+    },
+    {
+     "text": "dates.",
+     "start": 307.822,
+     "end": 308.372
+    },
+    {
+     "text": "Around",
+     "start": 308.952,
+     "end": 309.222
+    },
+    {
+     "text": "the",
+     "start": 309.222,
+     "end": 309.292
+    },
+    {
+     "text": "22nd",
+     "start": 309.292,
+     "end": 309.972
+    },
+    {
+     "text": "of",
+     "start": 309.972,
+     "end": 310.042
+    },
+    {
+     "text": "May,",
+     "start": 310.042,
+     "end": 310.322
+    },
+    {
+     "text": "the",
+     "start": 310.322,
+     "end": 310.452
+    },
+    {
+     "text": "Andaman",
+     "start": 310.452,
+     "end": 310.952
+    },
+    {
+     "text": "and",
+     "start": 310.952,
+     "end": 311.092
+    },
+    {
+     "text": "Nicobar",
+     "start": 311.092,
+     "end": 311.562
+    },
+    {
+     "text": "Islands.",
+     "start": 311.562,
+     "end": 312.212
+    },
+    {
+     "text": "On",
+     "start": 312.772,
+     "end": 312.932
+    },
+    {
+     "text": "the",
+     "start": 312.932,
+     "end": 313.002
+    },
+    {
+     "text": "first",
+     "start": 313.002,
+     "end": 313.412
+    },
+    {
+     "text": "of",
+     "start": 313.412,
+     "end": 313.482
+    },
+    {
+     "text": "June,",
+     "start": 313.482,
+     "end": 313.862
+    },
+    {
+     "text": "Kerala.",
+     "start": 313.862,
+     "end": 314.402
+    },
+    {
+     "text": "By",
+     "start": 314.852,
+     "end": 315.032
+    },
+    {
+     "text": "about",
+     "start": 315.032,
+     "end": 315.272
+    },
+    {
+     "text": "the",
+     "start": 315.272,
+     "end": 315.362
+    },
+    {
+     "text": "11th",
+     "start": 315.362,
+     "end": 315.802
+    },
+    {
+     "text": "of",
+     "start": 315.802,
+     "end": 315.882
+    },
+    {
+     "text": "June,",
+     "start": 315.882,
+     "end": 316.302
+    },
+    {
+     "text": "Mumbai",
+     "start": 316.302,
+     "end": 316.862
+    },
+    {
+     "text": "and",
+     "start": 316.862,
+     "end": 317.002
+    },
+    {
+     "text": "Kolkata.",
+     "start": 317.002,
+     "end": 317.772
+    },
+    {
+     "text": "By",
+     "start": 318.282,
+     "end": 318.422
+    },
+    {
+     "text": "the",
+     "start": 318.422,
+     "end": 318.502
+    },
+    {
+     "text": "20th,",
+     "start": 318.502,
+     "end": 319.162
+    },
+    {
+     "text": "central",
+     "start": 319.162,
+     "end": 319.582
+    },
+    {
+     "text": "India.",
+     "start": 319.582,
+     "end": 320.042
+    },
+    {
+     "text": "Near",
+     "start": 320.572,
+     "end": 320.772
+    },
+    {
+     "text": "the",
+     "start": 320.772,
+     "end": 320.912
+    },
+    {
+     "text": "end",
+     "start": 320.912,
+     "end": 321.132
+    },
+    {
+     "text": "of",
+     "start": 321.132,
+     "end": 321.212
+    },
+    {
+     "text": "June,",
+     "start": 321.212,
+     "end": 321.552
+    },
+    {
+     "text": "Delhi.",
+     "start": 321.552,
+     "end": 322.042
+    },
+    {
+     "text": "And",
+     "start": 322.632,
+     "end": 322.772
+    },
+    {
+     "text": "by",
+     "start": 322.772,
+     "end": 322.902
+    },
+    {
+     "text": "the",
+     "start": 322.902,
+     "end": 323.032
+    },
+    {
+     "text": "8th",
+     "start": 323.032,
+     "end": 323.292
+    },
+    {
+     "text": "of",
+     "start": 323.292,
+     "end": 323.352
+    },
+    {
+     "text": "July,",
+     "start": 323.352,
+     "end": 323.902
+    },
+    {
+     "text": "the",
+     "start": 323.902,
+     "end": 323.992
+    },
+    {
+     "text": "whole",
+     "start": 323.992,
+     "end": 324.262
+    },
+    {
+     "text": "country",
+     "start": 324.262,
+     "end": 324.702
+    },
+    {
+     "text": "is",
+     "start": 324.702,
+     "end": 324.832
+    },
+    {
+     "text": "covered.",
+     "start": 324.832,
+     "end": 325.322
+    },
+    {
+     "text": "Then",
+     "start": 325.932,
+     "end": 326.222
+    },
+    {
+     "text": "the",
+     "start": 326.222,
+     "end": 326.312
+    },
+    {
+     "text": "journey",
+     "start": 326.312,
+     "end": 326.692
+    },
+    {
+     "text": "reverses.",
+     "start": 326.692,
+     "end": 327.522
+    },
+    {
+     "text": "Withdrawal",
+     "start": 328.142,
+     "end": 328.722
+    },
+    {
+     "text": "begins",
+     "start": 328.722,
+     "end": 329.162
+    },
+    {
+     "text": "from",
+     "start": 329.162,
+     "end": 329.332
+    },
+    {
+     "text": "west",
+     "start": 329.332,
+     "end": 329.602
+    },
+    {
+     "text": "Rajasthan",
+     "start": 329.602,
+     "end": 330.392
+    },
+    {
+     "text": "around",
+     "start": 330.392,
+     "end": 330.652
+    },
+    {
+     "text": "the",
+     "start": 330.652,
+     "end": 330.712
+    },
+    {
+     "text": "17th",
+     "start": 330.712,
+     "end": 331.312
+    },
+    {
+     "text": "of",
+     "start": 331.312,
+     "end": 331.372
+    },
+    {
+     "text": "September,",
+     "start": 331.372,
+     "end": 332.032
+    },
+    {
+     "text": "and",
+     "start": 332.402,
+     "end": 332.542
+    },
+    {
+     "text": "is",
+     "start": 332.542,
+     "end": 332.662
+    },
+    {
+     "text": "complete",
+     "start": 332.662,
+     "end": 333.172
+    },
+    {
+     "text": "by",
+     "start": 333.172,
+     "end": 333.382
+    },
+    {
+     "text": "about",
+     "start": 333.382,
+     "end": 333.612
+    },
+    {
+     "text": "the",
+     "start": 333.612,
+     "end": 333.672
+    },
+    {
+     "text": "15th",
+     "start": 333.672,
+     "end": 334.182
+    },
+    {
+     "text": "of",
+     "start": 334.182,
+     "end": 334.272
+    },
+    {
+     "text": "October.",
+     "start": 334.272,
+     "end": 334.852
+    },
+    {
+     "text": "Crossing",
+     "start": 335.652,
+     "end": 336.072
+    },
+    {
+     "text": "the",
+     "start": 336.072,
+     "end": 336.142
+    },
+    {
+     "text": "Bay",
+     "start": 336.142,
+     "end": 336.382
+    },
+    {
+     "text": "of",
+     "start": 336.382,
+     "end": 336.462
+    },
+    {
+     "text": "Bengal,",
+     "start": 336.462,
+     "end": 337.162
+    },
+    {
+     "text": "the",
+     "start": 337.322,
+     "end": 337.432
+    },
+    {
+     "text": "winds",
+     "start": 337.432,
+     "end": 337.812
+    },
+    {
+     "text": "pick",
+     "start": 337.812,
+     "end": 338.002
+    },
+    {
+     "text": "up",
+     "start": 338.002,
+     "end": 338.122
+    },
+    {
+     "text": "moisture",
+     "start": 338.122,
+     "end": 338.782
+    },
+    {
+     "text": "and",
+     "start": 338.782,
+     "end": 339.022
+    },
+    {
+     "text": "become",
+     "start": 339.022,
+     "end": 339.352
+    },
+    {
+     "text": "the",
+     "start": 339.352,
+     "end": 339.412
+    },
+    {
+     "text": "northeast",
+     "start": 339.412,
+     "end": 340.022
+    },
+    {
+     "text": "monsoon.",
+     "start": 340.022,
+     "end": 340.772
+    }
+   ]
+  },
+  {
+   "id": "harvest",
+   "speak": "Most of the year's water arrives in just four months. So how do we store it? Traditionally, Rajasthan built taankas, underground tanks that collect rooftop rain. Villages built johads and check dams, small earthen walls that hold runoff and recharge the groundwater. In the northeast, bamboo pipes carry spring water drop by drop to the crops. Modern cities add rooftop rainwater harvesting, where pipes lead rain from the roof through a filter into a recharge well. And permeable pavements and restored lakes turn the city into a sponge.",
+   "text": "Most of the year's water arrives in just four months. So how do we store it? Traditionally, Rajasthan built taankas, underground tanks that collect rooftop rain. Villages built johads and check dams, small earthen walls that hold runoff and recharge the groundwater. In the northeast, bamboo pipes carry spring water drop by drop to the crops. Modern cities add rooftop rainwater harvesting, where pipes lead rain from the roof through a filter into a recharge well. And permeable pavements and restored lakes turn the city into a sponge.",
+   "start": 342.139,
+   "end": 376.823,
+   "words": [
+    {
+     "text": "Most",
+     "start": 342.149,
+     "end": 342.489
+    },
+    {
+     "text": "of",
+     "start": 342.489,
+     "end": 342.549
+    },
+    {
+     "text": "the",
+     "start": 342.549,
+     "end": 342.629
+    },
+    {
+     "text": "year's",
+     "start": 342.629,
+     "end": 342.909
+    },
+    {
+     "text": "water",
+     "start": 342.909,
+     "end": 343.329
+    },
+    {
+     "text": "arrives",
+     "start": 343.329,
+     "end": 343.759
+    },
+    {
+     "text": "in",
+     "start": 343.759,
+     "end": 343.899
+    },
+    {
+     "text": "just",
+     "start": 343.899,
+     "end": 344.199
+    },
+    {
+     "text": "four",
+     "start": 344.199,
+     "end": 344.389
+    },
+    {
+     "text": "months.",
+     "start": 344.389,
+     "end": 344.889
+    },
+    {
+     "text": "So",
+     "start": 345.429,
+     "end": 345.569
+    },
+    {
+     "text": "how",
+     "start": 345.569,
+     "end": 345.769
+    },
+    {
+     "text": "do",
+     "start": 345.769,
+     "end": 345.899
+    },
+    {
+     "text": "we",
+     "start": 345.899,
+     "end": 345.999
+    },
+    {
+     "text": "store",
+     "start": 345.999,
+     "end": 346.359
+    },
+    {
+     "text": "it?",
+     "start": 346.359,
+     "end": 346.649
+    },
+    {
+     "text": "Traditionally,",
+     "start": 347.159,
+     "end": 347.849
+    },
+    {
+     "text": "Rajasthan",
+     "start": 347.849,
+     "end": 348.669
+    },
+    {
+     "text": "built",
+     "start": 348.669,
+     "end": 348.919
+    },
+    {
+     "text": "taankas,",
+     "start": 348.919,
+     "end": 349.699
+    },
+    {
+     "text": "underground",
+     "start": 349.959,
+     "end": 350.599
+    },
+    {
+     "text": "tanks",
+     "start": 350.599,
+     "end": 351.009
+    },
+    {
+     "text": "that",
+     "start": 351.009,
+     "end": 351.149
+    },
+    {
+     "text": "collect",
+     "start": 351.149,
+     "end": 351.539
+    },
+    {
+     "text": "rooftop",
+     "start": 351.539,
+     "end": 352.039
+    },
+    {
+     "text": "rain.",
+     "start": 352.039,
+     "end": 352.479
+    },
+    {
+     "text": "Villages",
+     "start": 353.339,
+     "end": 353.839
+    },
+    {
+     "text": "built",
+     "start": 353.839,
+     "end": 354.099
+    },
+    {
+     "text": "johads",
+     "start": 354.099,
+     "end": 354.719
+    },
+    {
+     "text": "and",
+     "start": 354.719,
+     "end": 354.849
+    },
+    {
+     "text": "check",
+     "start": 354.849,
+     "end": 355.109
+    },
+    {
+     "text": "dams,",
+     "start": 355.109,
+     "end": 355.659
+    },
+    {
+     "text": "small",
+     "start": 355.959,
+     "end": 356.409
+    },
+    {
+     "text": "earthen",
+     "start": 356.409,
+     "end": 356.709
+    },
+    {
+     "text": "walls",
+     "start": 356.709,
+     "end": 357.159
+    },
+    {
+     "text": "that",
+     "start": 357.159,
+     "end": 357.309
+    },
+    {
+     "text": "hold",
+     "start": 357.309,
+     "end": 357.589
+    },
+    {
+     "text": "runoff",
+     "start": 357.589,
+     "end": 358.039
+    },
+    {
+     "text": "and",
+     "start": 358.039,
+     "end": 358.179
+    },
+    {
+     "text": "recharge",
+     "start": 358.179,
+     "end": 358.749
+    },
+    {
+     "text": "the",
+     "start": 358.749,
+     "end": 358.829
+    },
+    {
+     "text": "groundwater.",
+     "start": 358.829,
+     "end": 359.559
+    },
+    {
+     "text": "In",
+     "start": 360.169,
+     "end": 360.309
+    },
+    {
+     "text": "the",
+     "start": 360.309,
+     "end": 360.369
+    },
+    {
+     "text": "northeast,",
+     "start": 360.369,
+     "end": 361.089
+    },
+    {
+     "text": "bamboo",
+     "start": 361.239,
+     "end": 361.619
+    },
+    {
+     "text": "pipes",
+     "start": 361.619,
+     "end": 362.029
+    },
+    {
+     "text": "carry",
+     "start": 362.029,
+     "end": 362.329
+    },
+    {
+     "text": "spring",
+     "start": 362.329,
+     "end": 362.739
+    },
+    {
+     "text": "water",
+     "start": 362.739,
+     "end": 362.999
+    },
+    {
+     "text": "drop",
+     "start": 362.999,
+     "end": 363.309
+    },
+    {
+     "text": "by",
+     "start": 363.309,
+     "end": 363.489
+    },
+    {
+     "text": "drop",
+     "start": 363.489,
+     "end": 363.769
+    },
+    {
+     "text": "to",
+     "start": 363.769,
+     "end": 363.879
+    },
+    {
+     "text": "the",
+     "start": 363.879,
+     "end": 363.949
+    },
+    {
+     "text": "crops.",
+     "start": 363.949,
+     "end": 364.509
+    },
+    {
+     "text": "Modern",
+     "start": 365.239,
+     "end": 365.569
+    },
+    {
+     "text": "cities",
+     "start": 365.569,
+     "end": 366.009
+    },
+    {
+     "text": "add",
+     "start": 366.009,
+     "end": 366.289
+    },
+    {
+     "text": "rooftop",
+     "start": 366.289,
+     "end": 366.839
+    },
+    {
+     "text": "rainwater",
+     "start": 366.839,
+     "end": 367.379
+    },
+    {
+     "text": "harvesting,",
+     "start": 367.379,
+     "end": 368.149
+    },
+    {
+     "text": "where",
+     "start": 368.569,
+     "end": 368.739
+    },
+    {
+     "text": "pipes",
+     "start": 368.739,
+     "end": 369.139
+    },
+    {
+     "text": "lead",
+     "start": 369.139,
+     "end": 369.369
+    },
+    {
+     "text": "rain",
+     "start": 369.369,
+     "end": 369.679
+    },
+    {
+     "text": "from",
+     "start": 369.679,
+     "end": 369.849
+    },
+    {
+     "text": "the",
+     "start": 369.849,
+     "end": 369.939
+    },
+    {
+     "text": "roof",
+     "start": 369.939,
+     "end": 370.189
+    },
+    {
+     "text": "through",
+     "start": 370.189,
+     "end": 370.389
+    },
+    {
+     "text": "a",
+     "start": 370.389,
+     "end": 370.449
+    },
+    {
+     "text": "filter",
+     "start": 370.449,
+     "end": 370.949
+    },
+    {
+     "text": "into",
+     "start": 370.949,
+     "end": 371.179
+    },
+    {
+     "text": "a",
+     "start": 371.179,
+     "end": 371.259
+    },
+    {
+     "text": "recharge",
+     "start": 371.259,
+     "end": 371.839
+    },
+    {
+     "text": "well.",
+     "start": 371.839,
+     "end": 372.269
+    },
+    {
+     "text": "And",
+     "start": 372.929,
+     "end": 373.089
+    },
+    {
+     "text": "permeable",
+     "start": 373.089,
+     "end": 373.549
+    },
+    {
+     "text": "pavements",
+     "start": 373.549,
+     "end": 374.169
+    },
+    {
+     "text": "and",
+     "start": 374.169,
+     "end": 374.279
+    },
+    {
+     "text": "restored",
+     "start": 374.279,
+     "end": 374.779
+    },
+    {
+     "text": "lakes",
+     "start": 374.779,
+     "end": 375.109
+    },
+    {
+     "text": "turn",
+     "start": 375.109,
+     "end": 375.399
+    },
+    {
+     "text": "the",
+     "start": 375.399,
+     "end": 375.459
+    },
+    {
+     "text": "city",
+     "start": 375.459,
+     "end": 375.799
+    },
+    {
+     "text": "into",
+     "start": 375.799,
+     "end": 376.029
+    },
+    {
+     "text": "a",
+     "start": 376.029,
+     "end": 376.079
+    },
+    {
+     "text": "sponge.",
+     "start": 376.079,
+     "end": 376.769
+    }
+   ]
+  },
+  {
+   "id": "economy",
+   "speak": "Why does a weak monsoon hurt everyone? Follow the chain. Rainfall below ninety percent of the long period average is a deficient monsoon. Kharif sowing falls. Food prices rise, especially pulses, rice and vegetables. Food is the largest part of India's consumer price index, so the Reserve Bank keeps interest rates high. About forty-six percent of India's workers depend on farming, so rural incomes fall. And sales of tractors, two-wheelers and consumer goods slow down. Farmers also pump more groundwater, which pushes up power demand.",
+   "text": "Why does a weak monsoon hurt everyone? Follow the chain. Rainfall below 90 percent of the long period average is a deficient monsoon. Kharif sowing falls. Food prices rise, especially pulses, rice and vegetables. Food is the largest part of India's consumer price index, so the Reserve Bank keeps interest rates high. About 46 percent of India's workers depend on farming, so rural incomes fall. And sales of tractors, two-wheelers and consumer goods slow down. Farmers also pump more groundwater, which pushes up power demand.",
+   "start": 378.123,
+   "end": 414.961,
+   "words": [
+    {
+     "text": "Why",
+     "start": 378.133,
+     "end": 378.323
+    },
+    {
+     "text": "does",
+     "start": 378.323,
+     "end": 378.493
+    },
+    {
+     "text": "a",
+     "start": 378.493,
+     "end": 378.543
+    },
+    {
+     "text": "weak",
+     "start": 378.543,
+     "end": 378.813
+    },
+    {
+     "text": "monsoon",
+     "start": 378.813,
+     "end": 379.303
+    },
+    {
+     "text": "hurt",
+     "start": 379.303,
+     "end": 379.623
+    },
+    {
+     "text": "everyone?",
+     "start": 379.623,
+     "end": 380.213
+    },
+    {
+     "text": "Follow",
+     "start": 380.673,
+     "end": 380.973
+    },
+    {
+     "text": "the",
+     "start": 380.973,
+     "end": 381.073
+    },
+    {
+     "text": "chain.",
+     "start": 381.073,
+     "end": 381.623
+    },
+    {
+     "text": "Rainfall",
+     "start": 382.243,
+     "end": 382.793
+    },
+    {
+     "text": "below",
+     "start": 382.793,
+     "end": 383.003
+    },
+    {
+     "text": "90",
+     "start": 383.003,
+     "end": 383.363
+    },
+    {
+     "text": "percent",
+     "start": 383.363,
+     "end": 383.773
+    },
+    {
+     "text": "of",
+     "start": 383.773,
+     "end": 383.833
+    },
+    {
+     "text": "the",
+     "start": 383.833,
+     "end": 383.913
+    },
+    {
+     "text": "long",
+     "start": 383.913,
+     "end": 384.253
+    },
+    {
+     "text": "period",
+     "start": 384.253,
+     "end": 384.623
+    },
+    {
+     "text": "average",
+     "start": 384.623,
+     "end": 385.033
+    },
+    {
+     "text": "is",
+     "start": 385.033,
+     "end": 385.163
+    },
+    {
+     "text": "a",
+     "start": 385.163,
+     "end": 385.213
+    },
+    {
+     "text": "deficient",
+     "start": 385.213,
+     "end": 385.683
+    },
+    {
+     "text": "monsoon.",
+     "start": 385.683,
+     "end": 386.363
+    },
+    {
+     "text": "Kharif",
+     "start": 386.883,
+     "end": 387.253
+    },
+    {
+     "text": "sowing",
+     "start": 387.253,
+     "end": 387.633
+    },
+    {
+     "text": "falls.",
+     "start": 387.633,
+     "end": 388.213
+    },
+    {
+     "text": "Food",
+     "start": 388.743,
+     "end": 389.053
+    },
+    {
+     "text": "prices",
+     "start": 389.053,
+     "end": 389.523
+    },
+    {
+     "text": "rise,",
+     "start": 389.523,
+     "end": 390.253
+    },
+    {
+     "text": "especially",
+     "start": 390.253,
+     "end": 390.813
+    },
+    {
+     "text": "pulses,",
+     "start": 390.813,
+     "end": 391.473
+    },
+    {
+     "text": "rice",
+     "start": 391.473,
+     "end": 391.963
+    },
+    {
+     "text": "and",
+     "start": 391.963,
+     "end": 392.113
+    },
+    {
+     "text": "vegetables.",
+     "start": 392.113,
+     "end": 392.863
+    },
+    {
+     "text": "Food",
+     "start": 393.523,
+     "end": 393.833
+    },
+    {
+     "text": "is",
+     "start": 393.833,
+     "end": 393.963
+    },
+    {
+     "text": "the",
+     "start": 393.963,
+     "end": 394.063
+    },
+    {
+     "text": "largest",
+     "start": 394.063,
+     "end": 394.633
+    },
+    {
+     "text": "part",
+     "start": 394.633,
+     "end": 394.923
+    },
+    {
+     "text": "of",
+     "start": 394.923,
+     "end": 394.993
+    },
+    {
+     "text": "India's",
+     "start": 394.993,
+     "end": 395.413
+    },
+    {
+     "text": "consumer",
+     "start": 395.413,
+     "end": 395.913
+    },
+    {
+     "text": "price",
+     "start": 395.913,
+     "end": 396.263
+    },
+    {
+     "text": "index,",
+     "start": 396.263,
+     "end": 397.103
+    },
+    {
+     "text": "so",
+     "start": 397.103,
+     "end": 397.233
+    },
+    {
+     "text": "the",
+     "start": 397.233,
+     "end": 397.323
+    },
+    {
+     "text": "Reserve",
+     "start": 397.323,
+     "end": 397.743
+    },
+    {
+     "text": "Bank",
+     "start": 397.743,
+     "end": 398.023
+    },
+    {
+     "text": "keeps",
+     "start": 398.023,
+     "end": 398.333
+    },
+    {
+     "text": "interest",
+     "start": 398.333,
+     "end": 398.753
+    },
+    {
+     "text": "rates",
+     "start": 398.753,
+     "end": 399.053
+    },
+    {
+     "text": "high.",
+     "start": 399.053,
+     "end": 399.523
+    },
+    {
+     "text": "About",
+     "start": 400.183,
+     "end": 400.503
+    },
+    {
+     "text": "46",
+     "start": 400.503,
+     "end": 401.173
+    },
+    {
+     "text": "percent",
+     "start": 401.173,
+     "end": 401.603
+    },
+    {
+     "text": "of",
+     "start": 401.603,
+     "end": 401.663
+    },
+    {
+     "text": "India's",
+     "start": 401.663,
+     "end": 402.103
+    },
+    {
+     "text": "workers",
+     "start": 402.103,
+     "end": 402.573
+    },
+    {
+     "text": "depend",
+     "start": 402.573,
+     "end": 402.933
+    },
+    {
+     "text": "on",
+     "start": 402.933,
+     "end": 403.033
+    },
+    {
+     "text": "farming,",
+     "start": 403.033,
+     "end": 403.653
+    },
+    {
+     "text": "so",
+     "start": 403.993,
+     "end": 404.153
+    },
+    {
+     "text": "rural",
+     "start": 404.153,
+     "end": 404.613
+    },
+    {
+     "text": "incomes",
+     "start": 404.613,
+     "end": 405.233
+    },
+    {
+     "text": "fall.",
+     "start": 405.233,
+     "end": 405.673
+    },
+    {
+     "text": "And",
+     "start": 406.433,
+     "end": 406.573
+    },
+    {
+     "text": "sales",
+     "start": 406.573,
+     "end": 406.953
+    },
+    {
+     "text": "of",
+     "start": 406.953,
+     "end": 407.023
+    },
+    {
+     "text": "tractors,",
+     "start": 407.023,
+     "end": 407.773
+    },
+    {
+     "text": "two-wheelers",
+     "start": 407.983,
+     "end": 408.683
+    },
+    {
+     "text": "and",
+     "start": 408.683,
+     "end": 408.813
+    },
+    {
+     "text": "consumer",
+     "start": 408.813,
+     "end": 409.343
+    },
+    {
+     "text": "goods",
+     "start": 409.343,
+     "end": 409.693
+    },
+    {
+     "text": "slow",
+     "start": 409.693,
+     "end": 410.003
+    },
+    {
+     "text": "down.",
+     "start": 410.003,
+     "end": 410.473
+    },
+    {
+     "text": "Farmers",
+     "start": 411.113,
+     "end": 411.623
+    },
+    {
+     "text": "also",
+     "start": 411.623,
+     "end": 411.993
+    },
+    {
+     "text": "pump",
+     "start": 411.993,
+     "end": 412.313
+    },
+    {
+     "text": "more",
+     "start": 412.313,
+     "end": 412.503
+    },
+    {
+     "text": "groundwater,",
+     "start": 412.503,
+     "end": 413.143
+    },
+    {
+     "text": "which",
+     "start": 413.143,
+     "end": 413.443
+    },
+    {
+     "text": "pushes",
+     "start": 413.443,
+     "end": 413.803
+    },
+    {
+     "text": "up",
+     "start": 413.803,
+     "end": 413.953
+    },
+    {
+     "text": "power",
+     "start": 413.953,
+     "end": 414.283
+    },
+    {
+     "text": "demand.",
+     "start": 414.283,
+     "end": 414.893
+    }
+   ]
+  },
+  {
+   "id": "climate",
+   "speak": "How is climate change rewriting the monsoon? The season's total still stays close to the long period average of eighty-seven centimetres. But the pattern inside it is changing. Warmer air holds more moisture, about seven percent more for every degree Celsius. So we get long dry spells, broken by short, extreme bursts. And the rain is shifting. I M D data show falling rainfall over Uttar Pradesh, Bihar and West Bengal, while parts of western India and the southern peninsula see heavier floods.",
+   "text": "How is climate change rewriting the monsoon? The season's total still stays close to the long period average of 87 cm. But the pattern inside it is changing. Warmer air holds more moisture, about seven percent more for every degree Celsius. So we get long dry spells, broken by short, extreme bursts. And the rain is shifting. IMD data show falling rainfall over Uttar Pradesh, Bihar and West Bengal, while parts of western India and the southern peninsula see heavier floods.",
+   "start": 416.261,
+   "end": 449.771,
+   "words": [
+    {
+     "text": "How",
+     "start": 416.271,
+     "end": 416.491
+    },
+    {
+     "text": "is",
+     "start": 416.491,
+     "end": 416.641
+    },
+    {
+     "text": "climate",
+     "start": 416.641,
+     "end": 417.051
+    },
+    {
+     "text": "change",
+     "start": 417.051,
+     "end": 417.481
+    },
+    {
+     "text": "rewriting",
+     "start": 417.481,
+     "end": 417.981
+    },
+    {
+     "text": "the",
+     "start": 417.981,
+     "end": 418.041
+    },
+    {
+     "text": "monsoon?",
+     "start": 418.041,
+     "end": 418.821
+    },
+    {
+     "text": "The",
+     "start": 419.361,
+     "end": 419.431
+    },
+    {
+     "text": "season's",
+     "start": 419.431,
+     "end": 419.931
+    },
+    {
+     "text": "total",
+     "start": 419.931,
+     "end": 420.331
+    },
+    {
+     "text": "still",
+     "start": 420.331,
+     "end": 420.611
+    },
+    {
+     "text": "stays",
+     "start": 420.611,
+     "end": 420.951
+    },
+    {
+     "text": "close",
+     "start": 420.951,
+     "end": 421.271
+    },
+    {
+     "text": "to",
+     "start": 421.271,
+     "end": 421.371
+    },
+    {
+     "text": "the",
+     "start": 421.371,
+     "end": 421.451
+    },
+    {
+     "text": "long",
+     "start": 421.451,
+     "end": 421.841
+    },
+    {
+     "text": "period",
+     "start": 421.841,
+     "end": 422.251
+    },
+    {
+     "text": "average",
+     "start": 422.251,
+     "end": 422.651
+    },
+    {
+     "text": "of",
+     "start": 422.651,
+     "end": 422.721
+    },
+    {
+     "text": "87",
+     "start": 422.721,
+     "end": 423.531
+    },
+    {
+     "text": "cm.",
+     "start": 423.531,
+     "end": 424.341
+    },
+    {
+     "text": "But",
+     "start": 424.901,
+     "end": 425.031
+    },
+    {
+     "text": "the",
+     "start": 425.031,
+     "end": 425.101
+    },
+    {
+     "text": "pattern",
+     "start": 425.101,
+     "end": 425.491
+    },
+    {
+     "text": "inside",
+     "start": 425.491,
+     "end": 426.021
+    },
+    {
+     "text": "it",
+     "start": 426.021,
+     "end": 426.151
+    },
+    {
+     "text": "is",
+     "start": 426.151,
+     "end": 426.271
+    },
+    {
+     "text": "changing.",
+     "start": 426.271,
+     "end": 426.921
+    },
+    {
+     "text": "Warmer",
+     "start": 427.821,
+     "end": 428.141
+    },
+    {
+     "text": "air",
+     "start": 428.141,
+     "end": 428.441
+    },
+    {
+     "text": "holds",
+     "start": 428.441,
+     "end": 428.821
+    },
+    {
+     "text": "more",
+     "start": 428.821,
+     "end": 429.031
+    },
+    {
+     "text": "moisture,",
+     "start": 429.031,
+     "end": 429.701
+    },
+    {
+     "text": "about",
+     "start": 430.061,
+     "end": 430.381
+    },
+    {
+     "text": "seven",
+     "start": 430.381,
+     "end": 430.821
+    },
+    {
+     "text": "percent",
+     "start": 430.821,
+     "end": 431.251
+    },
+    {
+     "text": "more",
+     "start": 431.251,
+     "end": 431.501
+    },
+    {
+     "text": "for",
+     "start": 431.501,
+     "end": 431.631
+    },
+    {
+     "text": "every",
+     "start": 431.631,
+     "end": 431.981
+    },
+    {
+     "text": "degree",
+     "start": 431.981,
+     "end": 432.341
+    },
+    {
+     "text": "Celsius.",
+     "start": 432.341,
+     "end": 433.111
+    },
+    {
+     "text": "So",
+     "start": 433.731,
+     "end": 433.891
+    },
+    {
+     "text": "we",
+     "start": 433.891,
+     "end": 433.981
+    },
+    {
+     "text": "get",
+     "start": 433.981,
+     "end": 434.141
+    },
+    {
+     "text": "long",
+     "start": 434.141,
+     "end": 434.491
+    },
+    {
+     "text": "dry",
+     "start": 434.491,
+     "end": 434.771
+    },
+    {
+     "text": "spells,",
+     "start": 434.771,
+     "end": 435.451
+    },
+    {
+     "text": "broken",
+     "start": 435.581,
+     "end": 435.941
+    },
+    {
+     "text": "by",
+     "start": 435.941,
+     "end": 436.091
+    },
+    {
+     "text": "short,",
+     "start": 436.091,
+     "end": 436.591
+    },
+    {
+     "text": "extreme",
+     "start": 436.591,
+     "end": 437.111
+    },
+    {
+     "text": "bursts.",
+     "start": 437.111,
+     "end": 437.721
+    },
+    {
+     "text": "And",
+     "start": 438.311,
+     "end": 438.431
+    },
+    {
+     "text": "the",
+     "start": 438.431,
+     "end": 438.501
+    },
+    {
+     "text": "rain",
+     "start": 438.501,
+     "end": 438.801
+    },
+    {
+     "text": "is",
+     "start": 438.801,
+     "end": 438.921
+    },
+    {
+     "text": "shifting.",
+     "start": 438.921,
+     "end": 439.581
+    },
+    {
+     "text": "IMD",
+     "start": 440.471,
+     "end": 441.091
+    },
+    {
+     "text": "data",
+     "start": 441.091,
+     "end": 441.511
+    },
+    {
+     "text": "show",
+     "start": 441.511,
+     "end": 441.801
+    },
+    {
+     "text": "falling",
+     "start": 441.801,
+     "end": 442.211
+    },
+    {
+     "text": "rainfall",
+     "start": 442.211,
+     "end": 442.761
+    },
+    {
+     "text": "over",
+     "start": 442.761,
+     "end": 443.001
+    },
+    {
+     "text": "Uttar",
+     "start": 443.001,
+     "end": 443.191
+    },
+    {
+     "text": "Pradesh,",
+     "start": 443.191,
+     "end": 443.841
+    },
+    {
+     "text": "Bihar",
+     "start": 443.841,
+     "end": 444.421
+    },
+    {
+     "text": "and",
+     "start": 444.421,
+     "end": 444.551
+    },
+    {
+     "text": "West",
+     "start": 444.551,
+     "end": 444.821
+    },
+    {
+     "text": "Bengal,",
+     "start": 444.821,
+     "end": 445.421
+    },
+    {
+     "text": "while",
+     "start": 445.861,
+     "end": 446.001
+    },
+    {
+     "text": "parts",
+     "start": 446.001,
+     "end": 446.351
+    },
+    {
+     "text": "of",
+     "start": 446.351,
+     "end": 446.441
+    },
+    {
+     "text": "western",
+     "start": 446.441,
+     "end": 446.811
+    },
+    {
+     "text": "India",
+     "start": 446.811,
+     "end": 447.261
+    },
+    {
+     "text": "and",
+     "start": 447.261,
+     "end": 447.391
+    },
+    {
+     "text": "the",
+     "start": 447.391,
+     "end": 447.451
+    },
+    {
+     "text": "southern",
+     "start": 447.451,
+     "end": 447.841
+    },
+    {
+     "text": "peninsula",
+     "start": 447.841,
+     "end": 448.481
+    },
+    {
+     "text": "see",
+     "start": 448.481,
+     "end": 448.781
+    },
+    {
+     "text": "heavier",
+     "start": 448.781,
+     "end": 449.101
+    },
+    {
+     "text": "floods.",
+     "start": 449.101,
+     "end": 449.701
+    }
+   ]
+  },
+  {
+   "id": "markets",
+   "speak": "How do markets react? In mid April, the I M D issues its first long range forecast. If it predicts above normal rain, farm commodity prices ease, and shares of tractor, two-wheeler, fertiliser and consumer goods companies tend to rise. If it predicts below normal rain, futures prices of pulses, soybean, mustard and guar seed tend to jump on the commodity exchange, and rural demand stocks tend to fall. This is how markets work, not investment advice.",
+   "text": "How do markets react? In mid April, the IMD issues its first long range forecast. If it predicts above normal rain, farm commodity prices ease, and shares of tractor, two-wheeler, fertiliser and consumer goods companies tend to rise. If it predicts below normal rain, futures prices of pulses, soybean, mustard and guar seed tend to jump on the commodity exchange, and rural demand stocks tend to fall. This is how markets work, not investment advice.",
+   "start": 451.071,
+   "end": 480.148,
+   "words": [
+    {
+     "text": "How",
+     "start": 451.091,
+     "end": 451.261
+    },
+    {
+     "text": "do",
+     "start": 451.261,
+     "end": 451.411
+    },
+    {
+     "text": "markets",
+     "start": 451.411,
+     "end": 451.901
+    },
+    {
+     "text": "react?",
+     "start": 451.901,
+     "end": 452.441
+    },
+    {
+     "text": "In",
+     "start": 453.021,
+     "end": 453.131
+    },
+    {
+     "text": "mid",
+     "start": 453.131,
+     "end": 453.301
+    },
+    {
+     "text": "April,",
+     "start": 453.301,
+     "end": 453.711
+    },
+    {
+     "text": "the",
+     "start": 453.711,
+     "end": 453.851
+    },
+    {
+     "text": "IMD",
+     "start": 453.851,
+     "end": 454.431
+    },
+    {
+     "text": "issues",
+     "start": 454.431,
+     "end": 454.771
+    },
+    {
+     "text": "its",
+     "start": 454.771,
+     "end": 454.961
+    },
+    {
+     "text": "first",
+     "start": 454.961,
+     "end": 455.261
+    },
+    {
+     "text": "long",
+     "start": 455.261,
+     "end": 455.521
+    },
+    {
+     "text": "range",
+     "start": 455.521,
+     "end": 455.861
+    },
+    {
+     "text": "forecast.",
+     "start": 455.861,
+     "end": 456.591
+    },
+    {
+     "text": "If",
+     "start": 457.121,
+     "end": 457.231
+    },
+    {
+     "text": "it",
+     "start": 457.231,
+     "end": 457.331
+    },
+    {
+     "text": "predicts",
+     "start": 457.331,
+     "end": 457.711
+    },
+    {
+     "text": "above",
+     "start": 457.711,
+     "end": 457.941
+    },
+    {
+     "text": "normal",
+     "start": 457.941,
+     "end": 458.321
+    },
+    {
+     "text": "rain,",
+     "start": 458.321,
+     "end": 458.761
+    },
+    {
+     "text": "farm",
+     "start": 459.011,
+     "end": 459.331
+    },
+    {
+     "text": "commodity",
+     "start": 459.331,
+     "end": 459.841
+    },
+    {
+     "text": "prices",
+     "start": 459.841,
+     "end": 460.271
+    },
+    {
+     "text": "ease,",
+     "start": 460.271,
+     "end": 460.771
+    },
+    {
+     "text": "and",
+     "start": 460.771,
+     "end": 460.901
+    },
+    {
+     "text": "shares",
+     "start": 460.901,
+     "end": 461.261
+    },
+    {
+     "text": "of",
+     "start": 461.261,
+     "end": 461.341
+    },
+    {
+     "text": "tractor,",
+     "start": 461.341,
+     "end": 461.881
+    },
+    {
+     "text": "two-wheeler,",
+     "start": 461.961,
+     "end": 462.511
+    },
+    {
+     "text": "fertiliser",
+     "start": 462.511,
+     "end": 463.231
+    },
+    {
+     "text": "and",
+     "start": 463.231,
+     "end": 463.341
+    },
+    {
+     "text": "consumer",
+     "start": 463.341,
+     "end": 463.811
+    },
+    {
+     "text": "goods",
+     "start": 463.811,
+     "end": 464.101
+    },
+    {
+     "text": "companies",
+     "start": 464.101,
+     "end": 464.641
+    },
+    {
+     "text": "tend",
+     "start": 464.641,
+     "end": 464.881
+    },
+    {
+     "text": "to",
+     "start": 464.881,
+     "end": 464.961
+    },
+    {
+     "text": "rise.",
+     "start": 464.961,
+     "end": 465.501
+    },
+    {
+     "text": "If",
+     "start": 466.291,
+     "end": 466.411
+    },
+    {
+     "text": "it",
+     "start": 466.411,
+     "end": 466.511
+    },
+    {
+     "text": "predicts",
+     "start": 466.511,
+     "end": 466.881
+    },
+    {
+     "text": "below",
+     "start": 466.881,
+     "end": 467.121
+    },
+    {
+     "text": "normal",
+     "start": 467.121,
+     "end": 467.541
+    },
+    {
+     "text": "rain,",
+     "start": 467.541,
+     "end": 467.981
+    },
+    {
+     "text": "futures",
+     "start": 468.271,
+     "end": 468.681
+    },
+    {
+     "text": "prices",
+     "start": 468.681,
+     "end": 469.161
+    },
+    {
+     "text": "of",
+     "start": 469.161,
+     "end": 469.221
+    },
+    {
+     "text": "pulses,",
+     "start": 469.221,
+     "end": 469.881
+    },
+    {
+     "text": "soybean,",
+     "start": 469.881,
+     "end": 470.481
+    },
+    {
+     "text": "mustard",
+     "start": 470.481,
+     "end": 470.911
+    },
+    {
+     "text": "and",
+     "start": 470.911,
+     "end": 471.041
+    },
+    {
+     "text": "guar",
+     "start": 471.041,
+     "end": 471.371
+    },
+    {
+     "text": "seed",
+     "start": 471.371,
+     "end": 471.821
+    },
+    {
+     "text": "tend",
+     "start": 471.821,
+     "end": 472.061
+    },
+    {
+     "text": "to",
+     "start": 472.061,
+     "end": 472.131
+    },
+    {
+     "text": "jump",
+     "start": 472.131,
+     "end": 472.481
+    },
+    {
+     "text": "on",
+     "start": 472.481,
+     "end": 472.581
+    },
+    {
+     "text": "the",
+     "start": 472.581,
+     "end": 472.651
+    },
+    {
+     "text": "commodity",
+     "start": 472.651,
+     "end": 473.171
+    },
+    {
+     "text": "exchange,",
+     "start": 473.171,
+     "end": 473.881
+    },
+    {
+     "text": "and",
+     "start": 474.271,
+     "end": 474.441
+    },
+    {
+     "text": "rural",
+     "start": 474.441,
+     "end": 474.731
+    },
+    {
+     "text": "demand",
+     "start": 474.731,
+     "end": 475.171
+    },
+    {
+     "text": "stocks",
+     "start": 475.171,
+     "end": 475.611
+    },
+    {
+     "text": "tend",
+     "start": 475.611,
+     "end": 475.861
+    },
+    {
+     "text": "to",
+     "start": 475.861,
+     "end": 475.931
+    },
+    {
+     "text": "fall.",
+     "start": 475.931,
+     "end": 476.411
+    },
+    {
+     "text": "This",
+     "start": 477.231,
+     "end": 477.441
+    },
+    {
+     "text": "is",
+     "start": 477.441,
+     "end": 477.571
+    },
+    {
+     "text": "how",
+     "start": 477.571,
+     "end": 477.751
+    },
+    {
+     "text": "markets",
+     "start": 477.751,
+     "end": 478.261
+    },
+    {
+     "text": "work,",
+     "start": 478.261,
+     "end": 478.711
+    },
+    {
+     "text": "not",
+     "start": 478.711,
+     "end": 478.961
+    },
+    {
+     "text": "investment",
+     "start": 478.961,
+     "end": 479.521
+    },
+    {
+     "text": "advice.",
+     "start": 479.521,
+     "end": 480.081
+    }
+   ]
+  },
+  {
+   "id": "tn",
+   "speak": "Finally, a success story. In two thousand and three, Tamil Nadu became the first Indian state to make rainwater harvesting compulsory for every building. The rule was strict: no harvesting system, no water connection. Roof water passes through a filter of sand, gravel and charcoal, and then into a recharge well. Within a few years, studies in Chennai reported the water table rising by several metres, and seawater intrusion being pushed back. Systems must be cleaned before each northeast monsoon.",
+   "text": "Finally, a success story. In 2003, Tamil Nadu became the first Indian state to make rainwater harvesting compulsory for every building. The rule was strict: no harvesting system, no water connection. Roof water passes through a filter of sand, gravel and charcoal, and then into a recharge well. Within a few years, studies in Chennai reported the water table rising by several metres, and seawater intrusion being pushed back. Systems must be cleaned before each northeast monsoon.",
+   "start": 481.448,
+   "end": 515.385,
+   "words": [
+    {
+     "text": "Finally,",
+     "start": 481.468,
+     "end": 482.098
+    },
+    {
+     "text": "a",
+     "start": 482.098,
+     "end": 482.138
+    },
+    {
+     "text": "success",
+     "start": 482.138,
+     "end": 482.638
+    },
+    {
+     "text": "story.",
+     "start": 482.638,
+     "end": 483.178
+    },
+    {
+     "text": "In",
+     "start": 483.878,
+     "end": 484.038
+    },
+    {
+     "text": "2003,",
+     "start": 484.038,
+     "end": 485.348
+    },
+    {
+     "text": "Tamil",
+     "start": 485.578,
+     "end": 485.918
+    },
+    {
+     "text": "Nadu",
+     "start": 485.918,
+     "end": 486.298
+    },
+    {
+     "text": "became",
+     "start": 486.298,
+     "end": 486.668
+    },
+    {
+     "text": "the",
+     "start": 486.668,
+     "end": 486.728
+    },
+    {
+     "text": "first",
+     "start": 486.728,
+     "end": 487.208
+    },
+    {
+     "text": "Indian",
+     "start": 487.208,
+     "end": 487.598
+    },
+    {
+     "text": "state",
+     "start": 487.598,
+     "end": 487.948
+    },
+    {
+     "text": "to",
+     "start": 487.948,
+     "end": 488.058
+    },
+    {
+     "text": "make",
+     "start": 488.058,
+     "end": 488.318
+    },
+    {
+     "text": "rainwater",
+     "start": 488.318,
+     "end": 488.908
+    },
+    {
+     "text": "harvesting",
+     "start": 488.908,
+     "end": 489.508
+    },
+    {
+     "text": "compulsory",
+     "start": 489.508,
+     "end": 490.168
+    },
+    {
+     "text": "for",
+     "start": 490.168,
+     "end": 490.288
+    },
+    {
+     "text": "every",
+     "start": 490.288,
+     "end": 490.628
+    },
+    {
+     "text": "building.",
+     "start": 490.628,
+     "end": 491.178
+    },
+    {
+     "text": "The",
+     "start": 491.828,
+     "end": 491.938
+    },
+    {
+     "text": "rule",
+     "start": 491.938,
+     "end": 492.268
+    },
+    {
+     "text": "was",
+     "start": 492.268,
+     "end": 492.398
+    },
+    {
+     "text": "strict:",
+     "start": 492.398,
+     "end": 492.978
+    },
+    {
+     "text": "no",
+     "start": 493.438,
+     "end": 493.658
+    },
+    {
+     "text": "harvesting",
+     "start": 493.658,
+     "end": 494.278
+    },
+    {
+     "text": "system,",
+     "start": 494.278,
+     "end": 494.808
+    },
+    {
+     "text": "no",
+     "start": 494.808,
+     "end": 495.068
+    },
+    {
+     "text": "water",
+     "start": 495.068,
+     "end": 495.368
+    },
+    {
+     "text": "connection.",
+     "start": 495.368,
+     "end": 496.078
+    },
+    {
+     "text": "Roof",
+     "start": 496.748,
+     "end": 497.008
+    },
+    {
+     "text": "water",
+     "start": 497.008,
+     "end": 497.298
+    },
+    {
+     "text": "passes",
+     "start": 497.298,
+     "end": 497.818
+    },
+    {
+     "text": "through",
+     "start": 497.818,
+     "end": 498.038
+    },
+    {
+     "text": "a",
+     "start": 498.038,
+     "end": 498.098
+    },
+    {
+     "text": "filter",
+     "start": 498.098,
+     "end": 498.588
+    },
+    {
+     "text": "of",
+     "start": 498.588,
+     "end": 498.658
+    },
+    {
+     "text": "sand,",
+     "start": 498.658,
+     "end": 499.228
+    },
+    {
+     "text": "gravel",
+     "start": 499.468,
+     "end": 499.828
+    },
+    {
+     "text": "and",
+     "start": 499.828,
+     "end": 499.978
+    },
+    {
+     "text": "charcoal,",
+     "start": 499.978,
+     "end": 500.608
+    },
+    {
+     "text": "and",
+     "start": 501.038,
+     "end": 501.178
+    },
+    {
+     "text": "then",
+     "start": 501.178,
+     "end": 501.338
+    },
+    {
+     "text": "into",
+     "start": 501.338,
+     "end": 501.588
+    },
+    {
+     "text": "a",
+     "start": 501.588,
+     "end": 501.668
+    },
+    {
+     "text": "recharge",
+     "start": 501.668,
+     "end": 502.248
+    },
+    {
+     "text": "well.",
+     "start": 502.248,
+     "end": 502.688
+    },
+    {
+     "text": "Within",
+     "start": 503.548,
+     "end": 503.768
+    },
+    {
+     "text": "a",
+     "start": 503.768,
+     "end": 503.808
+    },
+    {
+     "text": "few",
+     "start": 503.808,
+     "end": 504.008
+    },
+    {
+     "text": "years,",
+     "start": 504.008,
+     "end": 504.628
+    },
+    {
+     "text": "studies",
+     "start": 504.628,
+     "end": 505.058
+    },
+    {
+     "text": "in",
+     "start": 505.058,
+     "end": 505.208
+    },
+    {
+     "text": "Chennai",
+     "start": 505.208,
+     "end": 505.658
+    },
+    {
+     "text": "reported",
+     "start": 505.658,
+     "end": 506.138
+    },
+    {
+     "text": "the",
+     "start": 506.138,
+     "end": 506.208
+    },
+    {
+     "text": "water",
+     "start": 506.208,
+     "end": 506.518
+    },
+    {
+     "text": "table",
+     "start": 506.518,
+     "end": 506.958
+    },
+    {
+     "text": "rising",
+     "start": 506.958,
+     "end": 507.558
+    },
+    {
+     "text": "by",
+     "start": 507.558,
+     "end": 507.708
+    },
+    {
+     "text": "several",
+     "start": 507.708,
+     "end": 508.108
+    },
+    {
+     "text": "metres,",
+     "start": 508.108,
+     "end": 508.708
+    },
+    {
+     "text": "and",
+     "start": 509.088,
+     "end": 509.248
+    },
+    {
+     "text": "seawater",
+     "start": 509.248,
+     "end": 509.818
+    },
+    {
+     "text": "intrusion",
+     "start": 509.818,
+     "end": 510.408
+    },
+    {
+     "text": "being",
+     "start": 510.408,
+     "end": 510.608
+    },
+    {
+     "text": "pushed",
+     "start": 510.608,
+     "end": 510.928
+    },
+    {
+     "text": "back.",
+     "start": 510.928,
+     "end": 511.348
+    },
+    {
+     "text": "Systems",
+     "start": 512.048,
+     "end": 512.618
+    },
+    {
+     "text": "must",
+     "start": 512.618,
+     "end": 512.868
+    },
+    {
+     "text": "be",
+     "start": 512.868,
+     "end": 512.958
+    },
+    {
+     "text": "cleaned",
+     "start": 512.958,
+     "end": 513.408
+    },
+    {
+     "text": "before",
+     "start": 513.408,
+     "end": 513.688
+    },
+    {
+     "text": "each",
+     "start": 513.688,
+     "end": 514.018
+    },
+    {
+     "text": "northeast",
+     "start": 514.018,
+     "end": 514.608
+    },
+    {
+     "text": "monsoon.",
+     "start": 514.608,
+     "end": 515.318
+    }
+   ]
+  },
+  {
+   "id": "outro",
+   "speak": "So here is the whole map in your mind. What: a seasonal reversal of winds, in two phases. Why: heating, the I T C Z, and the Himalayas. How it arrives: two branches, on a timetable, declared by three tests. Why it matters: crops, prices, and markets. And how we respond: store the rain, and prepare for a more extreme monsoon. If this helped, subscribe to Modus and Rayzon.",
+   "text": "So here is the whole map in your mind. What: a seasonal reversal of winds, in two phases. Why: heating, the ITCZ, and the Himalayas. How it arrives: two branches, on a timetable, declared by three tests. Why it matters: crops, prices, and markets. And how we respond: store the rain, and prepare for a more extreme monsoon. If this helped, subscribe to Modus & Raison.",
+   "start": 516.885,
+   "end": 541.098,
+   "words": [
+    {
+     "text": "So",
+     "start": 516.895,
+     "end": 517.145
+    },
+    {
+     "text": "here",
+     "start": 517.145,
+     "end": 517.425
+    },
+    {
+     "text": "is",
+     "start": 517.425,
+     "end": 517.525
+    },
+    {
+     "text": "the",
+     "start": 517.525,
+     "end": 517.595
+    },
+    {
+     "text": "whole",
+     "start": 517.595,
+     "end": 517.855
+    },
+    {
+     "text": "map",
+     "start": 517.855,
+     "end": 518.125
+    },
+    {
+     "text": "in",
+     "start": 518.125,
+     "end": 518.205
+    },
+    {
+     "text": "your",
+     "start": 518.205,
+     "end": 518.315
+    },
+    {
+     "text": "mind.",
+     "start": 518.315,
+     "end": 518.805
+    },
+    {
+     "text": "What:",
+     "start": 519.415,
+     "end": 519.925
+    },
+    {
+     "text": "a",
+     "start": 519.925,
+     "end": 519.985
+    },
+    {
+     "text": "seasonal",
+     "start": 519.985,
+     "end": 520.555
+    },
+    {
+     "text": "reversal",
+     "start": 520.555,
+     "end": 521.075
+    },
+    {
+     "text": "of",
+     "start": 521.075,
+     "end": 521.205
+    },
+    {
+     "text": "winds,",
+     "start": 521.205,
+     "end": 521.615
+    },
+    {
+     "text": "in",
+     "start": 521.615,
+     "end": 521.745
+    },
+    {
+     "text": "two",
+     "start": 521.745,
+     "end": 521.955
+    },
+    {
+     "text": "phases.",
+     "start": 521.955,
+     "end": 522.645
+    },
+    {
+     "text": "Why:",
+     "start": 523.235,
+     "end": 523.575
+    },
+    {
+     "text": "heating,",
+     "start": 523.575,
+     "end": 524.085
+    },
+    {
+     "text": "the",
+     "start": 524.085,
+     "end": 524.215
+    },
+    {
+     "text": "ITCZ,",
+     "start": 524.215,
+     "end": 524.875
+    },
+    {
+     "text": "and",
+     "start": 524.875,
+     "end": 525.175
+    },
+    {
+     "text": "the",
+     "start": 525.175,
+     "end": 525.235
+    },
+    {
+     "text": "Himalayas.",
+     "start": 525.235,
+     "end": 526.015
+    },
+    {
+     "text": "How",
+     "start": 526.485,
+     "end": 526.615
+    },
+    {
+     "text": "it",
+     "start": 526.615,
+     "end": 526.765
+    },
+    {
+     "text": "arrives:",
+     "start": 526.765,
+     "end": 527.315
+    },
+    {
+     "text": "two",
+     "start": 527.315,
+     "end": 527.485
+    },
+    {
+     "text": "branches,",
+     "start": 527.485,
+     "end": 528.065
+    },
+    {
+     "text": "on",
+     "start": 528.065,
+     "end": 528.145
+    },
+    {
+     "text": "a",
+     "start": 528.145,
+     "end": 528.195
+    },
+    {
+     "text": "timetable,",
+     "start": 528.195,
+     "end": 528.825
+    },
+    {
+     "text": "declared",
+     "start": 528.825,
+     "end": 529.205
+    },
+    {
+     "text": "by",
+     "start": 529.205,
+     "end": 529.375
+    },
+    {
+     "text": "three",
+     "start": 529.375,
+     "end": 529.645
+    },
+    {
+     "text": "tests.",
+     "start": 529.645,
+     "end": 530.215
+    },
+    {
+     "text": "Why",
+     "start": 530.825,
+     "end": 531.005
+    },
+    {
+     "text": "it",
+     "start": 531.005,
+     "end": 531.065
+    },
+    {
+     "text": "matters:",
+     "start": 531.065,
+     "end": 531.615
+    },
+    {
+     "text": "crops,",
+     "start": 531.615,
+     "end": 532.035
+    },
+    {
+     "text": "prices,",
+     "start": 532.035,
+     "end": 532.595
+    },
+    {
+     "text": "and",
+     "start": 532.595,
+     "end": 532.695
+    },
+    {
+     "text": "markets.",
+     "start": 532.695,
+     "end": 533.345
+    },
+    {
+     "text": "And",
+     "start": 533.895,
+     "end": 534.005
+    },
+    {
+     "text": "how",
+     "start": 534.005,
+     "end": 534.185
+    },
+    {
+     "text": "we",
+     "start": 534.185,
+     "end": 534.295
+    },
+    {
+     "text": "respond:",
+     "start": 534.295,
+     "end": 534.995
+    },
+    {
+     "text": "store",
+     "start": 534.995,
+     "end": 535.215
+    },
+    {
+     "text": "the",
+     "start": 535.215,
+     "end": 535.315
+    },
+    {
+     "text": "rain,",
+     "start": 535.315,
+     "end": 535.695
+    },
+    {
+     "text": "and",
+     "start": 535.695,
+     "end": 535.805
+    },
+    {
+     "text": "prepare",
+     "start": 535.805,
+     "end": 536.155
+    },
+    {
+     "text": "for",
+     "start": 536.155,
+     "end": 536.295
+    },
+    {
+     "text": "a",
+     "start": 536.295,
+     "end": 536.325
+    },
+    {
+     "text": "more",
+     "start": 536.325,
+     "end": 536.555
+    },
+    {
+     "text": "extreme",
+     "start": 536.555,
+     "end": 537.015
+    },
+    {
+     "text": "monsoon.",
+     "start": 537.015,
+     "end": 537.775
+    },
+    {
+     "text": "If",
+     "start": 538.355,
+     "end": 538.485
+    },
+    {
+     "text": "this",
+     "start": 538.485,
+     "end": 538.675
+    },
+    {
+     "text": "helped,",
+     "start": 538.675,
+     "end": 539.055
+    },
+    {
+     "text": "subscribe",
+     "start": 539.055,
+     "end": 539.715
+    },
+    {
+     "text": "to",
+     "start": 539.715,
+     "end": 539.825
+    },
+    {
+     "text": "Modus",
+     "start": 539.825,
+     "end": 540.315
+    },
+    {
+     "text": "&",
+     "start": 540.315,
+     "end": 540.67
+    },
+    {
+     "text": "Raison.",
+     "start": 540.67,
+     "end": 541.025
+    }
+   ]
+  }
+ ]
+}

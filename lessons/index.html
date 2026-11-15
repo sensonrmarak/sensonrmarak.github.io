@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Seasons and Heat Zones</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: a single reading column on the figures' own drawing paper; each lesson is one view (hash routed),
+   figure first, then try-this steps, the idea, and a short self-check. One committed light "paper" look,
+   matching the hand-inked figures, so colours are set explicitly rather than themed. */
+:root {
+  --paper: #f2efe7;      /* the Colorfigures paper */
+  --card: #fbf9f3;
+  --ink: #231e16;
+  --ink-soft: #5d5446;
+  --rule: #d8d1c2;
+  --sun: #f4b829;        /* mustard: the Sun, highlights */
+  --torrid: #f2874a;
+  --temperate: #8cc45a;
+  --frigid: #a9d3ef;
+  --sky: #3f63a8;        /* links and focus */
+  --right: #2f8a4c;
+  --wrong: #c8432f;
+  --f-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --f-body: "Atkinson Hyperlegible", "Verdana", "Segoe UI", sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 17px/1.6 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+a { color: var(--sky); }
+:focus-visible { outline: 3px solid var(--sky); outline-offset: 2px; border-radius: 4px; }
+.wrap { max-width: 940px; margin: 0 auto; }
+
+/* top bar */
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px;
+  padding-block: 18px 14px; border-bottom: 1.5px solid var(--ink); }
+.brand { font: 800 19px/1.1 var(--f-display); text-decoration: none; color: var(--ink); display: flex; align-items: center; gap: 10px; }
+.brand .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--sun); border: 1.5px solid var(--ink); flex: none; }
+.steps { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.steps a { display: inline-flex; align-items: center; gap: 7px; text-decoration: none; color: var(--ink);
+  font: 700 12px/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase;
+  padding: 8px 12px; border: 1.5px solid var(--ink); border-radius: 999px; background: var(--card); }
+.steps a b { display: inline-grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; border: 1.2px solid var(--ink); font-size: 10px; }
+.steps a[aria-current="page"] { background: var(--ink); color: var(--paper); }
+.steps a[aria-current="page"] b { border-color: var(--paper); }
+
+/* views */
+.view { padding-top: 28px; }
+.eyebrow { font: 700 12px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 10px; }
+h1 { font: 800 clamp(30px, 5.4vw, 50px)/1.05 var(--f-display); margin: 0 0 12px; text-wrap: balance; letter-spacing: -.01em; }
+h2 { font: 800 25px/1.2 var(--f-display); margin: 0 0 10px; text-wrap: balance; }
+h3 { font: 700 17px/1.3 var(--f-body); margin: 0 0 6px; }
+.goal { font-size: 19px; color: var(--ink-soft); max-width: 62ch; margin: 0 0 22px; }
+section { margin-top: 38px; }
+p { max-width: 66ch; margin: 0 0 12px; }
+
+/* figure */
+.figure { background: #ece8de; border: 1.5px solid var(--ink); border-radius: 14px; overflow: hidden; }
+.figure iframe { display: block; width: 100%; height: 800px; border: 0; background: var(--paper); }
+.figcap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; padding: 10px 14px;
+  border-top: 1.5px solid var(--ink); background: var(--card); font: 500 12.5px/1.4 var(--f-mono); color: var(--ink-soft); }
+@media (max-width: 620px) { .figure iframe { height: 980px; } }
+
+/* try-this: a real sequence, so it is numbered */
+.try { counter-reset: t; list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.try li { counter-increment: t; display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start;
+  padding: 14px 16px; background: var(--card); border: 1.2px solid var(--rule); border-radius: 12px; }
+.try li::before { content: counter(t); display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
+  background: var(--sun); border: 1.5px solid var(--ink); font: 700 14px/1 var(--f-mono); }
+.try li > div { min-width: 0; }
+.btn { font: 700 12px/1 var(--f-mono); letter-spacing: .04em; border: 1.3px solid var(--ink); border-radius: 999px;
+  padding: 3px 9px; background: var(--paper); white-space: nowrap; }
+.notice { color: var(--ink-soft); }
+
+/* key facts */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.fact { padding: 16px; border: 1.5px solid var(--ink); border-radius: 12px; background: var(--card); min-width: 0; }
+.fact .num { font: 800 30px/1 var(--f-display); margin-bottom: 6px; }
+.fact p { margin: 0; font-size: 15.5px; }
+.zonecard { border-top: 10px solid var(--c); }
+
+.tablewrap { overflow-x: auto; border: 1.5px solid var(--ink); border-radius: 12px; background: var(--card); }
+table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 15.5px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 700 12px/1.2 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); background: #f5f2ea; }
+tr:last-child td { border-bottom: 0; }
+td.num { font-variant-numeric: tabular-nums; font-family: var(--f-mono); font-size: 14px; white-space: nowrap; }
+.chip { display: inline-block; font: 700 11.5px/1 var(--f-mono); letter-spacing: .06em; padding: 5px 9px; border-radius: 999px; border: 1.2px solid var(--ink); background: var(--c); white-space: nowrap; }
+
+video { width: 100%; max-width: 100%; display: block; border: 1.5px solid var(--ink); border-radius: 12px; background: #000; }
+
+/* quiz */
+.quiz { display: grid; gap: 14px; }
+.q { padding: 16px; border: 1.5px solid var(--ink); border-radius: 12px; background: var(--card); }
+.q fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.q legend { font-weight: 700; margin-bottom: 10px; padding: 0; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.opts button { font: 15px/1.3 var(--f-body); color: var(--ink); text-align: left; cursor: pointer;
+  padding: 9px 14px; border: 1.3px solid var(--ink); border-radius: 10px; background: var(--paper); }
+.opts button:hover { background: #fff; }
+.opts button.right { background: #dcefdc; border-color: var(--right); }
+.opts button.wrong { background: #f6ddd6; border-color: var(--wrong); }
+.fb { margin: 10px 0 0; font-size: 15.5px; min-height: 1.4em; }
+.fb.right { color: var(--right); } .fb.wrong { color: var(--wrong); }
+.score { font: 700 13px/1 var(--f-mono); letter-spacing: .06em; color: var(--ink-soft); }
+
+/* zone finder */
+.finder { display: grid; gap: 14px; padding: 18px; border: 1.5px solid var(--ink); border-radius: 12px; background: var(--card); }
+.finder label { font: 700 12px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.finder input[type=range] { width: 100%; accent-color: var(--ink); }
+.finder output { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+.finder .lat { font: 800 34px/1 var(--f-display); font-variant-numeric: tabular-nums; }
+.bar { position: relative; height: 26px; border: 1.5px solid var(--ink); border-radius: 8px; overflow: hidden;
+  background: linear-gradient(90deg, var(--frigid) 0 13.06%, var(--temperate) 13.06% 36.94%, var(--torrid) 36.94% 63.06%, var(--temperate) 63.06% 86.94%, var(--frigid) 86.94%); }
+.bar i { position: absolute; top: -2px; bottom: -2px; width: 3px; background: var(--ink); transform: translateX(-1.5px); }
+.barlbl { display: flex; justify-content: space-between; font: 500 11px/1 var(--f-mono); color: var(--ink-soft); }
+
+/* contents */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+.card { display: flex; flex-direction: column; gap: 10px; padding: 18px; border: 1.5px solid var(--ink); border-radius: 14px;
+  background: var(--card); color: var(--ink); text-decoration: none; min-width: 0; }
+.card:hover { background: #fff; }
+.card .eyebrow { margin: 0; }
+.card h2 { font-size: 22px; margin: 0; }
+.card p { margin: 0; font-size: 15.5px; color: var(--ink-soft); }
+.card .go { margin-top: auto; font: 700 12px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; }
+.swatches { display: flex; gap: 6px; }
+.swatches span { width: 22px; height: 12px; border-radius: 3px; border: 1.2px solid var(--ink); background: var(--c); }
+
+.pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin-top: 44px; padding-top: 18px; border-top: 1.5px solid var(--ink); }
+.pager a { font: 700 13px/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; text-decoration: none;
+  padding: 12px 16px; border: 1.5px solid var(--ink); border-radius: 999px; background: var(--card); color: var(--ink); }
+.pager a.next { background: var(--ink); color: var(--paper); margin-left: auto; }
+.credit { margin-top: 26px; font: 500 12px/1.5 var(--f-mono); color: var(--ink-soft); }
+@media (prefers-reduced-motion: no-preference) { .card, .opts button { transition: background .15s ease; } }
+</style></head><body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#start"><span class="dot" aria-hidden="true"></span>Seasons and Heat Zones</a>
+    <nav aria-label="Lessons"><ol class="steps">
+      <li><a href="#seasons" data-v="seasons"><b>1</b>Seasons</a></li>
+      <li><a href="#heat-zones" data-v="heat-zones"><b>2</b>Heat zones</a></li>
+      <li><a href="#cities" data-v="cities"><b>3</b>Cities</a></li>
+    </ol></nav>
+  </header>
+
+  <!-- ================= CONTENTS ================= -->
+  <main id="start" class="view" data-view>
+    <p class="eyebrow">A short course in three lessons</p>
+    <h1>Why does Earth have seasons, and why are some places always hot?</h1>
+    <p class="goal">Each lesson has a model you can turn, play and look inside. Work through them in order: each one builds on the last.</p>
+    <div class="cards">
+      <a class="card" href="#seasons">
+        <p class="eyebrow">Lesson 1 · about 10 min</p>
+        <h2>Why Earth's tilt causes seasons</h2>
+        <p>Move Earth round the Sun and watch which half leans toward it. Find out why it isn't about distance.</p>
+        <span class="go">Start lesson 1 →</span>
+      </a>
+      <a class="card" href="#heat-zones">
+        <p class="eyebrow">Lesson 2 · about 10 min</p>
+        <h2>The Torrid, Temperate and Frigid Zones</h2>
+        <div class="swatches" aria-hidden="true"><span style="--c:var(--torrid)"></span><span style="--c:var(--temperate)"></span><span style="--c:var(--frigid)"></span></div>
+        <p>See how the same tilt gives three very different kinds of year, from hot all year to midnight sun.</p>
+        <span class="go">Start lesson 2 →</span>
+      </a>
+      <a class="card" href="#cities">
+        <p class="eyebrow">Lesson 3 · about 10 min</p>
+        <h2>Which heat zone is a city in?</h2>
+        <p>Pin 16 cities on the globe, read their seasons and daylight, and use latitude to place any city yourself.</p>
+        <span class="go">Start lesson 3 →</span>
+      </a>
+    </div>
+    <p class="credit">Interactive figures made with Colorfigures (april-zhu.com/colorfigures).</p>
+  </main>
+
+  <!-- ================= LESSON 1 ================= -->
+  <main id="seasons" class="view" data-view hidden>
+    <p class="eyebrow">Lesson 1 of 3</p>
+    <h1>Why does Earth's tilt cause seasons?</h1>
+    <p class="goal">By the end you can explain what makes it summer in one half of the world and winter in the other, and why distance from the Sun is not the reason.</p>
+
+    <div class="figure">
+      <iframe title="Seasons orrery: an interactive model of Earth orbiting the Sun" loading="lazy" data-src="figures/seasons_orrery.html?th=180"></iframe>
+      <div class="figcap"><span>Seasons orrery: drag to turn it, use the buttons on the left</span><span>Fig. 07</span></div>
+    </div>
+
+    <section>
+      <h2>Try this</h2>
+      <ol class="try">
+        <li><div><h3>Start in June</h3><p class="notice">The model opens on 21 June. Look at the red tip of Earth's axis: the North Pole leans <strong>toward</strong> the Sun. The readout says the Sun is overhead at 23.5 N and a day at 45 N lasts over 15 hours.</p></div></li>
+        <li><div><h3>Go to December</h3><p class="notice">Press <span class="btn">Go to ▾</span> and choose December solstice. The axis still points the same way in the room, but now the north leans <strong>away</strong> from the Sun. Northern days shrink to about 8½ hours.</p></div></li>
+        <li><div><h3>Watch a whole year</h3><p class="notice">Press <span class="btn">Orbit a year</span>. Keep your eye on the axis: it never turns. That is the whole secret of the seasons.</p></div></li>
+        <li><div><h3>Look inside</h3><p class="notice">Switch on <span class="btn">See-through</span> and <span class="btn">Labels</span>. A belt between two equal pulleys keeps the model's axis parallel, just as nothing turns Earth's real axis as it orbits.</p></div></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>The idea</h2>
+      <p>Earth's axis is tilted by about 23.5 degrees, and it always points the same way in space. As Earth travels round the Sun, first one half and then the other leans toward the Sun.</p>
+      <p>The half leaning toward the Sun has summer for two reasons. The Sun climbs higher in the sky, so its light hits the ground more directly and each patch of ground gets more energy. And the days are longer, so there are more hours for the ground to warm up.</p>
+      <div class="facts">
+        <div class="fact"><div class="num">23.5°</div><p>Earth's tilt. It is why the Sun is overhead at 23.5 N in June and 23.5 S in December.</p></div>
+        <div class="fact"><div class="num">2 reasons</div><p>Leaning toward the Sun means more direct light and longer days.</p></div>
+        <div class="fact"><div class="num">Early Jan</div><p>When Earth is closest to the Sun: during northern winter. So distance is not the cause.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Watch</h2>
+      <p>A 45-second recap of the lesson.</p>
+      <video controls preload="metadata" playsinline data-src="media/seasons.mp4#t=2"></video>
+    </section>
+
+    <section>
+      <h2>Check yourself</h2>
+      <div class="quiz" data-quiz>
+        <div class="q"><fieldset><legend>1. What causes the seasons?</legend><div class="opts">
+          <button type="button">Earth gets closer to the Sun in summer</button>
+          <button type="button" data-right>Earth's tilted axis</button>
+          <button type="button">The Sun gets hotter and cooler</button>
+        </div></fieldset><p class="fb" aria-live="polite" data-why="Right: the tilt makes each half lean toward the Sun for part of the year."></p></div>
+        <div class="q"><fieldset><legend>2. In June, the Northern Hemisphere…</legend><div class="opts">
+          <button type="button" data-right>leans toward the Sun, so it has summer</button>
+          <button type="button">leans away from the Sun, so it has winter</button>
+          <button type="button">is sideways to the Sun, so day and night are equal</button>
+        </div></fieldset><p class="fb" aria-live="polite" data-why="Right: in June the North Pole tips toward the Sun, and the south has winter."></p></div>
+        <div class="q"><fieldset><legend>3. Why is the half tilted toward the Sun warmer?</legend><div class="opts">
+          <button type="button">It is much nearer the Sun</button>
+          <button type="button" data-right>The light is more direct and the days are longer</button>
+          <button type="button">There are fewer clouds there</button>
+        </div></fieldset><p class="fb" aria-live="polite" data-why="Right: higher Sun means stronger heating, and longer days mean more of it."></p></div>
+        <p class="score" data-score></p>
+      </div>
+    </section>
+
+    <nav class="pager" aria-label="Lesson navigation"><a href="#start">← Contents</a><a class="next" href="#heat-zones">Lesson 2: Heat zones →</a></nav>
+  </main>
+
+  <!-- ================= LESSON 2 ================= -->
+  <main id="heat-zones" class="view" data-view hidden>
+    <p class="eyebrow">Lesson 2 of 3</p>
+    <h1>How the seasons play out in the three heat zones</h1>
+    <p class="goal">By the end you can name the Torrid, Temperate and Frigid Zones, say where their edges are, and describe what a year feels like in each.</p>
+
+    <div class="figure">
+      <iframe title="Heat zones orrery: Earth painted in the three heat zones" loading="lazy" data-src="figures/heat_zones_orrery.html?th=180&labels=1"></iframe>
+      <div class="figcap"><span>Heat zones orrery: orange Torrid, green Temperate, pale Frigid</span><span>Fig. 08</span></div>
+    </div>
+
+    <section>
+      <h2>Try this</h2>
+      <ol class="try">
+        <li><div><h3>Find the zone edges</h3><p class="notice">The lines on the globe are the Tropics of Cancer and Capricorn (23.5 N and S) and the Arctic and Antarctic Circles (66.5 N and S). They are exactly where the tilt puts them.</p></div></li>
+        <li><div><h3>Follow the overhead Sun</h3><p class="notice">Press <span class="btn">Orbit a year</span> and watch "Sun overhead" on the right. It swings between 23.5 N and 23.5 S and never leaves the orange Torrid Zone.</p></div></li>
+        <li><div><h3>Compare daylight</h3><p class="notice">Go to the June solstice and read the three daylight figures: midnight sun at 75 N, about 12½ hours at 10 N, polar night at 75 S. Then go to December and see them swap.</p></div></li>
+        <li><div><h3>Switch the zones off and on</h3><p class="notice">Press <span class="btn">Heat zones</span> to see the ordinary Earth, then press it again. Notice the frigid caps are the parts that spend the longest in the dark.</p></div></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>The three zones</h2>
+      <div class="facts">
+        <div class="fact zonecard" style="--c:var(--torrid)"><h3>Torrid Zone</h3><p><strong>23.5 N to 23.5 S.</strong> The only place the Sun can be straight overhead, which happens twice a year. Hot all year, with about 12 hours of daylight every day. The seasons are wet and dry rather than hot and cold.</p></div>
+        <div class="fact zonecard" style="--c:var(--temperate)"><h3>Temperate Zones</h3><p><strong>23.5° to 66.5°, north and south.</strong> The Sun is never overhead, but its height changes a lot through the year. Strong seasons: long, warm summer days and short, cold winter days. North and south always have opposite seasons.</p></div>
+        <div class="fact zonecard" style="--c:var(--frigid)"><h3>Frigid Zones</h3><p><strong>Beyond 66.5° N and S.</strong> The Sun stays low, so heating is weak all year. At least one day each summer it never sets (midnight sun) and one day each winter it never rises (polar night). At the poles each lasts about six months.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why the edges are where they are</h2>
+      <p>The zone edges come straight from the tilt. The Sun can only be overhead as far as 23.5° from the equator, because that is how far Earth leans. The polar circles sit 23.5° from the poles (90 − 23.5 = 66.5), because that is how far the light reaches past the pole when it leans toward the Sun, and how far the dark reaches when it leans away.</p>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Line</th><th>Latitude</th><th>What happens there</th></tr></thead>
+        <tbody>
+          <tr><td>Arctic Circle</td><td class="num">66.5 N</td><td>24 hours of daylight on the June solstice, 24 hours of night on the December solstice</td></tr>
+          <tr><td>Tropic of Cancer</td><td class="num">23.5 N</td><td>Sun straight overhead at noon on the June solstice</td></tr>
+          <tr><td>Equator</td><td class="num">0</td><td>Sun overhead at the March and September equinoxes; 12-hour days all year</td></tr>
+          <tr><td>Tropic of Capricorn</td><td class="num">23.5 S</td><td>Sun straight overhead at noon on the December solstice</td></tr>
+          <tr><td>Antarctic Circle</td><td class="num">66.5 S</td><td>24 hours of daylight in December, 24 hours of night in June</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <h2>Check yourself</h2>
+      <div class="quiz" data-quiz>
+        <div class="q"><fieldset><legend>1. Where can the Sun ever be straight overhead?</legend><div class="opts">
+          <button type="button" data-right>Only in the Torrid Zone</button>
+          <button type="button">Anywhere, in summer</button>
+          <button type="button">Only at the North Pole</button>
+        </div></fieldset><p class="fb" aria-live="polite" data-why="Right: the overhead Sun only ever travels between the two tropics."></p></div>
+        <div class="q"><fieldset><legend>2. Which zone has the midnight sun?</legend><div class="opts">
+          <button type="button">Torrid</button>
+          <button type="button">Temperate</button>
+          <button type="button" data-right>Frigid</button>
+        </div></fieldset><p class="fb" aria-live="polite" data-why="Right: beyond the polar circles the Sun can stay up for 24 hours or more."></p></div>
+        <div class="q"><fieldset><legend>3. Which zone has the biggest change between summer and winter?</legend><div class="opts">
+          <button type="button">Torrid</button>
+          <button type="button" data-right>Temperate</button>
+          <button type="button">They are all the same</button>
+        </div></fieldset><p class="fb" aria-live="polite" data-why="Right: the temperate zones have the classic four seasons, with big changes in Sun height and day length."></p></div>
+        <p class="score" data-score></p>
+      </div>
+    </section>
+
+    <nav class="pager" aria-label="Lesson navigation"><a href="#seasons">← Lesson 1</a><a class="next" href="#cities">Lesson 3: Cities →</a></nav>
+  </main>
+
+  <!-- ================= LESSON 3 ================= -->
+  <main id="cities" class="view" data-view hidden>
+    <p class="eyebrow">Lesson 3 of 3</p>
+    <h1>Which heat zone is a city in?</h1>
+    <p class="goal">By the end you can use a city's latitude to say which heat zone it is in, and predict its seasons and daylight.</p>
+
+    <div class="figure">
+      <iframe title="Heat zones orrery with a city pinned on the globe" loading="lazy" data-src="figures/heat_zones_orrery.html?th=180&city=10&labels=1"></iframe>
+      <div class="figcap"><span>London is pinned. Use City ▾ to pick another</span><span>Fig. 08</span></div>
+    </div>
+
+    <section>
+      <h2>Try this</h2>
+      <ol class="try">
+        <li><div><h3>Read London</h3><p class="notice">London is pinned at 51.5 N: Temperate. On 21 June the readout shows summer and over 16 hours of daylight.</p></div></li>
+        <li><div><h3>Pick a city in each zone</h3><p class="notice">Open <span class="btn">City ▾</span> and try Singapore (Torrid), Sydney (Temperate, south) and Longyearbyen (Frigid). Each one's zone is shown in the list.</p></div></li>
+        <li><div><h3>Change the date</h3><p class="notice">With Sydney pinned, go to the December solstice. It is summer in Sydney when it is winter in London.</p></div></li>
+        <li><div><h3>Find the extremes</h3><p class="notice">Pin Longyearbyen on the June solstice (midnight sun), then the December solstice (polar night). Pin Singapore and notice its daylight hardly changes.</p></div></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Zone finder</h2>
+      <p>Any place's heat zone depends only on its latitude. Drag to a latitude, or tap a city below.</p>
+      <div class="finder">
+        <label for="lat">Latitude</label>
+        <input id="lat" type="range" min="-90" max="90" step="0.5" value="51.5" aria-describedby="latout">
+        <div class="bar" aria-hidden="true"><i id="latmark"></i></div>
+        <div class="barlbl" aria-hidden="true"><span>90 S</span><span>66.5 S</span><span>23.5 S</span><span>0</span><span>23.5 N</span><span>66.5 N</span><span>90 N</span></div>
+        <output id="latout" for="lat"><span class="lat" id="latnum">51.5 N</span><span class="chip" id="latzone">TEMPERATE</span><span id="latnote"></span></output>
+      </div>
+    </section>
+
+    <section>
+      <h2>Cities and their zones</h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>City</th><th>Latitude</th><th>Heat zone</th><th>What its year is like</th></tr></thead>
+        <tbody id="citybody"></tbody>
+      </table></div>
+    </section>
+
+    <section>
+      <h2>Check yourself</h2>
+      <div class="quiz" data-quiz>
+        <div class="q"><fieldset><legend>1. Mumbai is at 19.1 N. Which zone is it in?</legend><div class="opts">
+          <button type="button" data-right>Torrid</button><button type="button">Temperate</button><button type="button">Frigid</button>
+        </div></fieldset><p class="fb" aria-live="polite" data-why="Right: 19.1 is less than 23.5, so Mumbai is between the tropics."></p></div>
+        <div class="q"><fieldset><legend>2. Reykjavik is at 64.1 N, close to the Arctic Circle. Which zone is it in?</legend><div class="opts">
+          <button type="button">Frigid</button><button type="button" data-right>Temperate</button><button type="button">Torrid</button>
+        </div></fieldset><p class="fb" aria-live="polite" data-why="Right: 64.1 is below 66.5, so it is just inside the North Temperate Zone, though its summer nights are very short."></p></div>
+        <div class="q"><fieldset><legend>3. In December, Cape Town (33.9 S) has…</legend><div class="opts">
+          <button type="button">winter, like London</button><button type="button" data-right>summer, because the south leans toward the Sun</button><button type="button">polar night</button>
+        </div></fieldset><p class="fb" aria-live="polite" data-why="Right: in December the Southern Hemisphere leans toward the Sun."></p></div>
+        <p class="score" data-score></p>
+      </div>
+    </section>
+
+    <nav class="pager" aria-label="Lesson navigation"><a href="#heat-zones">← Lesson 2</a><a class="next" href="#start">Back to contents</a></nav>
+  </main>
+</div>
+
+<script>
+(() => {
+  /* ---------- hash routing: one lesson per view ---------- */
+  const views = [...document.querySelectorAll('[data-view]')];
+  const show = () => {
+    const id = (location.hash || '#start').slice(1);
+    const v = views.find(x => x.id === id) || views[0];
+    views.forEach(x => { x.hidden = x !== v; });
+    document.querySelectorAll('.steps a').forEach(a => { if (a.dataset.v === v.id) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    v.querySelectorAll('[data-src]').forEach(el => { if (!el.getAttribute('src')) el.setAttribute('src', el.dataset.src); });   // load figures only when their lesson opens
+    document.title = v.id === 'start' ? 'Seasons and Heat Zones' : v.querySelector('h1').textContent;
+    window.scrollTo(0, 0);
+  };
+  addEventListener('hashchange', show); show();
+
+  /* ---------- quizzes ---------- */
+  document.querySelectorAll('[data-quiz]').forEach(quiz => {
+    const qs = [...quiz.querySelectorAll('.q')], score = quiz.querySelector('[data-score]');
+    const tally = () => { const done = qs.filter(q => q.dataset.done), ok = qs.filter(q => q.dataset.done === 'right');
+      score.textContent = done.length ? `${ok.length} of ${qs.length} right first time` + (done.length === qs.length && ok.length === qs.length ? ' · well done!' : '') : ''; };
+    qs.forEach(q => {
+      const fb = q.querySelector('.fb');
+      q.querySelectorAll('.opts button').forEach(b => b.addEventListener('click', () => {
+        const right = b.hasAttribute('data-right');
+        b.classList.add(right ? 'right' : 'wrong');
+        if (!q.dataset.done) q.dataset.done = right ? 'right' : 'wrong';
+        fb.className = 'fb ' + (right ? 'right' : 'wrong');
+        fb.textContent = right ? fb.dataset.why : 'Not quite. Try another answer, or use the model above to check.';
+        tally();
+      }));
+    });
+  });
+
+  /* ---------- zone finder + city table ---------- */
+  const COL = { TORRID: 'var(--torrid)', TEMPERATE: 'var(--temperate)', FRIGID: 'var(--frigid)' };
+  const zoneOf = lat => Math.abs(lat) < 23.5 ? 'TORRID' : Math.abs(lat) < 66.5 ? 'TEMPERATE' : 'FRIGID';
+  const fmt = lat => `${Math.abs(lat).toFixed(1)} ${lat > 0 ? 'N' : lat < 0 ? 'S' : ''}`.trim();
+  const NOTE = {
+    TORRID: 'Hot all year, about 12 hours of daylight every day. The Sun is overhead twice a year.',
+    TEMPERATE: 'Four clear seasons. Long summer days, short winter days.',
+    FRIGID: 'Midnight sun in summer and polar night in winter.' };
+  const CITIES = [
+    ['Singapore', 1.35], ['Nairobi', -1.29], ['Mumbai', 19.08], ['Rio de Janeiro', -22.91],
+    ['Delhi', 28.61], ['Cairo', 30.04], ['Sydney', -33.87], ['Cape Town', -33.92],
+    ['Tokyo', 35.68], ['New York', 40.71], ['London', 51.51], ['Reykjavik', 64.15],
+    ['Murmansk', 68.97], ['Tromsø', 69.65], ['Longyearbyen', 78.22], ['McMurdo Station', -77.85] ];
+  const slider = document.getElementById('lat');
+  const update = () => { const lat = +slider.value, z = zoneOf(lat);
+    document.getElementById('latnum').textContent = fmt(lat);
+    const chip = document.getElementById('latzone'); chip.textContent = z + (z === 'TORRID' ? '' : lat > 0 ? ' (NORTH)' : ' (SOUTH)'); chip.style.setProperty('--c', COL[z]);
+    document.getElementById('latnote').textContent = NOTE[z]; };
+  // the bar runs from 90 S on the left to 90 N on the right
+  const place = () => { document.getElementById('latmark').style.left = ((+slider.value + 90) / 180 * 100) + '%'; };
+  slider.addEventListener('input', () => { update(); place(); });
+  const body = document.getElementById('citybody');
+  const desc = (lat, z) => z === 'TORRID' ? NOTE.TORRID : z === 'FRIGID' ? NOTE.FRIGID
+    : (lat > 0 ? 'Summer in June to August, winter in December to February.' : 'Summer in December to February, winter in June to August.');
+  CITIES.forEach(([name, lat]) => { const z = zoneOf(lat), tr = document.createElement('tr');
+    tr.innerHTML = `<td><a href="#cities" data-lat="${lat}">${name}</a></td><td class="num">${fmt(lat)}</td><td><span class="chip" style="--c:${COL[z]}">${z}</span></td><td>${desc(lat, z)}</td>`;
+    body.appendChild(tr); });
+  body.addEventListener('click', e => { const a = e.target.closest('a[data-lat]'); if (!a) return; e.preventDefault();
+    slider.value = a.dataset.lat; update(); place(); slider.focus(); });
+  update(); place();
+})();
+</script>
+</body></html>
