@@ -222,7 +222,7 @@ const EXP = { nose: [90, 0], fuselage: [0, 0], wing: [-20, 100], movables: [-110
 // ------------------------------------------------------------------ scenes
 const S = {};
 // behind the aircraft, camera offset 4 m to the right and low (x = VX + K·(X − XC)/z, y = VY + F/z); lights streak with speed (motion blur)
-function runwayRear(dist, v) { const VX = 1100, VY = 560, K = 159, F = 2600, XC = 4, P = (X, z) => [VX + K * (X - XC) / z, VY + F / z], bl = v * 0.07;
+function runwayRear(dist, v) { const VX = 960, VY = 560, K = 159, F = 2600, XC = 0, P = (X, z) => [VX + K * (X - XC) / z, VY + F / z], bl = v * 0.07;
   const sg = g.createLinearGradient(0, 220, 0, VY); sg.addColorStop(0, "rgba(0,0,0,0)"); sg.addColorStop(0.75, "rgba(255,110,40,.18)"); sg.addColorStop(1, "rgba(255,170,90,.45)"); g.fillStyle = sg; g.fillRect(-100, 220, W + 200, VY - 220);
   const gg = g.createLinearGradient(0, VY, 0, H); gg.addColorStop(0, "#1c1510"); gg.addColorStop(0.25, "#0b0a0a"); gg.addColorStop(1, "#040405"); g.fillStyle = gg; g.fillRect(-100, VY, W + 200, H - VY + 100);
   poly([P(-22.5, 2.6), P(22.5, 2.6), P(22.5, 3000), P(-22.5, 3000)], "#202227"); [-20.5, 20.5].forEach(X => { const a = P(X, 2.6), b = P(X, 3000); line(a[0], a[1], b[0], b[1], "rgba(255,255,255,.55)", 3); });
@@ -245,8 +245,8 @@ S.hook = (t, c, d, tg) => { const L2 = TM.scenes[0].lines[2], M270 = c[2] + ((L2
   let dist = 0; { const n = 100, T = Math.min(t, c[5]); for (let i = 0; i < n; i++) dist += spAt((i + 0.5) / n * T) / 3.6 * T / n; }
   const sp = spAt(t), th = E.io(seg(t, 1.0, 3.0));
   if (t < CUT) {   // 1 · rear three-quarter at the start of the roll, horizon tilted 2°
-    g.save(); g.translate(960, 540); g.rotate(-0.035); g.translate(-960, -540); g.globalAlpha = fin(t, 0, 1.6); runwayRear(dist, sp / 3.6); const sh = (sp / 270) * 2.4;
-    const ps = lerp(1.5, 1.38, seg(t, c[2], CUT)), zW = 2600 / (740 + 84 * ps - 560), cxR = 1100 - 159 * 4 / zW;   // wheels on the centreline: same projection as runwayRear (VX 1100, K 159, F 2600, camera 4 m right)
+    g.save(); g.globalAlpha = fin(t, 0, 1.6); runwayRear(dist, sp / 3.6); const sh = (sp / 270) * 2.4;
+    const ps = lerp(1.5, 1.38, seg(t, c[2], CUT)), zW = 2600 / (740 + 84 * ps - 560), cxR = 960;   // wheels on the centreline: same projection as runwayRear (VX 1100, K 159, F 2600, camera 4 m right)
     planeRear({ x: cxR + Math.sin(tg * 47) * sh, y: 740 + Math.sin(tg * 61) * sh * 0.7, s: ps, gear: 1, glow: th * (0.75 + 0.25 * Math.sin(tg * 31)) }); g.restore(); }
   else if (t < c[5]) {   // 2 · low angle from the runway edge: rotation, liftoff, climb-out (camera tracks the aircraft)
     const fo = 1 - fin(t, c[5] - 0.25, 0.25), pitch = 0.17 * E.io(seg(t, R, R + 1.3)) - 0.04 * E.io(seg(t, Lf + 2, Lf + 4)), climb = 1150 * E.in(seg(t, Lf, Lf + 4.5));
