@@ -1,0 +1,90 @@
+{
+ "total": 46.211,
+ "scenes": [
+  {
+   "id": "open",
+   "start": 0.0,
+   "dur": 46.211,
+   "lines": [
+    {
+     "text": "The twenty-fourth of September, 2014.",
+     "start": 1.6,
+     "end": 4.267,
+     "marks": {}
+    },
+    {
+     "text": "Two hundred and twenty-four million kilometres from Earth, a spacecraft about as tall as a person is falling towards Mars.",
+     "start": 4.587,
+     "end": 12.138,
+     "marks": {}
+    },
+    {
+     "text": "To be captured, it must fire its engine at exactly the right moment, and slow down.",
+     "start": 12.458,
+     "end": 17.394,
+     "marks": {}
+    },
+    {
+     "text": "Nobody on Earth can help. A radio signal takes twelve and a half minutes to get there.",
+     "start": 17.714,
+     "end": 22.785,
+     "marks": {
+      "twelve": 2.866
+     }
+    },
+    {
+     "text": "If the burn fails, it flies past Mars, forever.",
+     "start": 23.105,
+     "end": 25.819,
+     "marks": {}
+    },
+    {
+     "text": "It works.",
+     "start": 27.339,
+     "end": 27.999,
+     "marks": {}
+    },
+    {
+     "text": "India becomes the first Asian country to reach Mars, and the first in the world to get there on its very first try.",
+     "start": 28.319,
+     "end": 35.226,
+     "marks": {}
+    },
+    {
+     "text": "And the whole mission cost about seventy-four million dollars.",
+     "start": 35.546,
+     "end": 38.855,
+     "marks": {
+      "cost": 2.605
+     }
+    },
+    {
+     "text": "That's less than the Hollywood film Gravity.",
+     "start": 39.175,
+     "end": 41.328,
+     "marks": {}
+    },
+    {
+     "text": "So how did India do it?",
+     "start": 42.248,
+     "end": 43.491,
+     "marks": {}
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "name": "success",
+   "t": 27.339
+  },
+  {
+   "name": "hit",
+   "t": 42.248
+  }
+ ],
+ "burn": [
+  15.058,
+  25.305
+ ]
+}

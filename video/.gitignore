@@ -14,3 +14,6 @@ flight4/out/*.wav
 flight4/out/*.mp4
 flight4/out/seg*
 flight4/sfx/raw/
+mars/out/*.wav
+mars/out/*.mp4
+mars/out/seg*

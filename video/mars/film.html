@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mars Cold Open</title>
+<style>
+@font-face { font-family:"Body"; src:url("assets/fonts/montserrat-600.woff2") format("woff2"); font-weight:600; }
+@font-face { font-family:"Body"; src:url("assets/fonts/montserrat-700.woff2") format("woff2"); font-weight:700; }
+@font-face { font-family:"Body"; src:url("assets/fonts/montserrat-800.woff2") format("woff2"); font-weight:800 900; }
+html,body { margin:0; background:#0b1230; overflow:hidden; }
+#root { position:relative; width:1920px; height:1080px; overflow:hidden; background:#0b1230; font-family:"Body",Arial,sans-serif; color:#fff; }
+#gl { position:absolute; inset:0; width:1920px; height:1080px; }
+.t { position:absolute; white-space:nowrap; opacity:0; text-shadow:0 4px 24px rgba(5,8,30,.55); }
+.big { font:900 92px/1 "Body"; letter-spacing:-1px; }
+.mid { font:800 54px/1.05 "Body"; }
+.sm { font:700 26px/1.2 "Body"; color:#ffd9a8; letter-spacing:2px; text-transform:uppercase; }
+.tag { font:800 44px/1 "Body"; color:#1b1440; background:#ffd36b; padding:16px 26px 14px; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.35); }
+#src { position:absolute; right:44px; top:40px; font:600 18px "Body"; color:#c7cdf0; background:rgba(255,255,255,.08); border-radius:8px; padding:7px 14px; }
+#logo { position:absolute; right:34px; bottom:28px; width:128px; height:128px; border-radius:50%; background:url(assets/logo.png) center/104% no-repeat #fbf5e9; box-shadow:0 6px 22px rgba(0,0,0,.45), 0 0 0 3px #e8b548; z-index:9; }
+#vig { position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 60%, rgba(3,4,20,.55) 100%); }
+#flash { position:absolute; inset:0; background:#fff; opacity:0; pointer-events:none; }
+</style>
+</head>
+<body>
+<div id="root">
+  <canvas id="gl"></canvas>
+  <div id="vig"></div>
+  <div class="t big" id="date" style="left:0;width:1920px;text-align:center;top:150px">24 SEPTEMBER 2014</div>
+  <div class="t sm" id="dist" style="left:120px;top:170px">224 million km from Earth</div>
+  <div class="t mid" id="dist2" style="left:120px;top:214px">Falling towards Mars</div>
+  <div class="t sm" id="scale" style="left:0;top:0">≈ 1.5 m tall</div>
+  <div class="t mid" id="burn" style="left:120px;top:170px">One engine burn.<br><span style="color:#ffb35c">One chance.</span></div>
+  <div class="t big" id="clock" style="left:0;width:1920px;text-align:center;top:150px">12.5 <span style="font-size:56px">MIN</span></div>
+  <div class="t sm" id="clock2" style="left:0;width:1920px;text-align:center;top:258px">one way, at the speed of light</div>
+  <div class="t mid" id="miss" style="left:120px;top:170px;color:#ff8f7a">Miss, and it's gone<br>forever.</div>
+  <div class="t big" id="works" style="left:0;width:1920px;text-align:center;top:150px;color:#ffd36b">IT WORKS.</div>
+  <div class="t mid" id="first1" style="left:120px;top:190px">FIRST ASIAN NATION<br><span class="sm" style="font-size:28px">to reach Mars orbit</span></div>
+  <div class="t mid" id="first2" style="left:120px;top:400px">FIRST ON THE<br>FIRST ATTEMPT</div>
+  <div class="t tag" id="price">≈ $74 MILLION</div>
+  <div class="t sm" id="price2" style="left:0;top:0">≈ ₹450 crore</div>
+  <div class="t big" id="title" style="left:0;width:1920px;text-align:center;top:330px">HOW DID INDIA<br>REACH MARS<br><span style="color:#ffd36b">SO CHEAPLY?</span></div>
+  <div id="src"></div>
+  <div id="flash"></div>
+  <div id="logo"></div>
+</div>
+<script type="module" src="film.js"></script>
+</body>
+</html>
