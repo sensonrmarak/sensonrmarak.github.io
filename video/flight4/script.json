@@ -1,0 +1,668 @@
+[
+ {
+  "id": "hook",
+  "title": "",
+  "phase": "RUNWAY",
+  "lines": [
+   {
+    "t": "Full thrust.",
+    "sfx": [
+     [
+      "spool",
+      -0.6
+     ]
+    ]
+   },
+   {
+    "t": "Seventy-nine tonnes of metal, fuel and people, racing down the runway.",
+    "sfx": [
+     [
+      "roll",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "Two hundred and seventy kilometres an hour. The nose lifts.",
+    "sfx": [
+     [
+      "rotate",
+      "@nose"
+     ]
+    ],
+    "pause": 1.7,
+    "marks": {
+     "270": "Two hundred and seventy",
+     "nose": "Two hundred and seventy kilometres an hour. The nose"
+    }
+   },
+   {
+    "t": "And it flies. Nothing is holding it up.",
+    "sfx": [
+     [
+      "liftoff",
+      -1.7
+     ]
+    ]
+   },
+   {
+    "t": "So why doesn't it fall?",
+    "sfx": [
+     [
+      "hit",
+      0.05
+     ]
+    ]
+   },
+   {
+    "t": "Stay to the end, and you'll see why pilots do this on every single landing.",
+    "sfx": [
+     [
+      "clunk",
+      2.4
+     ]
+    ]
+   },
+   {
+    "t": "Let's follow one flight, and pause it every time the physics gets interesting.",
+    "sfx": [
+     [
+      "freeze",
+      "@interesting"
+     ]
+    ],
+    "marks": {
+     "interesting": "Let's follow one flight, and pause it every time the physics gets interesting"
+    }
+   }
+  ],
+  "stops": [
+   [
+    "pause",
+    6,
+    "@interesting",
+    "TAKEOFF ROLL"
+   ]
+  ]
+ },
+ {
+  "id": "forces",
+  "title": "The four forces",
+  "phase": "RUNWAY",
+  "lines": [
+   {
+    "t": "Let's freeze the takeoff roll. Four forces are fighting over this aircraft."
+   },
+   {
+    "t": "Weight pulls it down.",
+    "sfx": [
+     [
+      "pop",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "Lift pushes it up.",
+    "sfx": [
+     [
+      "pop",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "Thrust drives it forward.",
+    "sfx": [
+     [
+      "pop",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "And drag holds it back.",
+    "sfx": [
+     [
+      "pop",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "When lift equals weight, and thrust equals drag, the aircraft flies steadily."
+   },
+   {
+    "t": "To climb, speed up or turn, the pilot simply unbalances them."
+   }
+  ],
+  "card": "PART 1 · TAKEOFF",
+  "stops": [
+   [
+    "resume",
+    6,
+    0.0,
+    "TAKEOFF"
+   ]
+  ]
+ },
+ {
+  "id": "wing",
+  "title": "How a wing makes lift",
+  "phase": "ROTATE",
+  "lines": [
+   {
+    "t": "Back to the moment the nose lifts. The secret is in the wings, so let's slice one open.",
+    "sfx": [
+     [
+      "slice",
+      "@slice"
+     ]
+    ],
+    "marks": {
+     "slice": "Back to the moment the nose lifts. The secret is in the wings, so let's slice"
+    }
+   },
+   {
+    "t": "Inside, it has this shape. It's called an airfoil."
+   },
+   {
+    "t": "It's curved on top, and tilted slightly upward, at what pilots call the angle of attack."
+   },
+   {
+    "t": "As air flows past, the wing bends that air downward."
+   },
+   {
+    "t": "Newton's third law does the rest. The wing pushes air down, so the air pushes the wing up."
+   },
+   {
+    "t": "At the same time, air speeds up over the curved top, so the pressure there drops, while higher pressure below pushes up."
+   },
+   {
+    "t": "There it is. Air pushed down, aircraft pushed up. That's why seventy-nine tonnes don't fall.",
+    "sfx": [
+     [
+      "hit",
+      0.1
+     ]
+    ],
+    "pause": 0.6,
+    "pre": 1.0
+   }
+  ],
+  "stops": [
+   [
+    "rewind",
+    0,
+    0.0,
+    "ROTATION"
+   ],
+   [
+    "pause",
+    0,
+    "@slice",
+    "ROTATION"
+   ]
+  ]
+ },
+ {
+  "id": "myth",
+  "title": "A famous myth",
+  "phase": "ROTATE",
+  "lines": [
+   {
+    "t": "Quick question. Does the air over the top have to race to meet the air underneath, at the back of the wing?",
+    "sfx": [
+     [
+      "tick",
+      0
+     ]
+    ],
+    "pause": 1.0
+   },
+   {
+    "t": "Many textbooks say yes. NASA calls that an incorrect theory.",
+    "sfx": [
+     [
+      "stamp",
+      "@incorrect"
+     ]
+    ],
+    "marks": {
+     "incorrect": "Many textbooks say yes. NASA calls that an"
+    }
+   },
+   {
+    "t": "In reality, the air over the top arrives first, and the two streams never meet again."
+   }
+  ]
+ },
+ {
+  "id": "equation",
+  "title": "How much lift?",
+  "phase": "ROTATE",
+  "lines": [
+   {
+    "t": "So how much lift does a wing make?"
+   },
+   {
+    "t": "NASA's lift equation has four ingredients. Air density. Speed, squared. Wing area. And a lift coefficient, set by the wing's shape and angle."
+   },
+   {
+    "t": "Because speed is squared, doubling the speed gives four times the lift."
+   },
+   {
+    "t": "That's why our airliner needed about two hundred and seventy kilometres an hour on the runway, before the wings could carry its weight.",
+    "sfx": [
+     [
+      "roll",
+      0
+     ],
+     [
+      "liftoff",
+      5.0
+     ]
+    ]
+   }
+  ],
+  "stops": [
+   [
+    "resume",
+    3,
+    0.0,
+    "TAKEOFF"
+   ]
+  ]
+ },
+ {
+  "id": "engine",
+  "title": "Thrust: the turbofan",
+  "phase": "CLIMB",
+  "lines": [
+   {
+    "t": "Climbing out, the engines are working their hardest. Quick guess: which part makes most of the thrust?",
+    "sfx": [
+     [
+      "tick",
+      "@guess"
+     ]
+    ],
+    "pause": 0.7,
+    "marks": {
+     "hardest": "Climbing out, the engines are working their hardest.",
+     "guess": "Climbing out, the engines are working their hardest. Quick guess"
+    }
+   },
+   {
+    "t": "Suck. A giant fan pulls air in.",
+    "sfx": [
+     [
+      "suck",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "Squeeze. Compressor blades pack that air tight.",
+    "sfx": [
+     [
+      "squeeze",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "Bang. Fuel burns in it, at well over a thousand degrees.",
+    "sfx": [
+     [
+      "bang",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "Blow. Hot gas blasts out the back, spinning turbines that drive the fan.",
+    "sfx": [
+     [
+      "blow",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "And the answer? Most of the air never burns at all.",
+    "sfx": [
+     [
+      "hit",
+      1.1
+     ]
+    ]
+   },
+   {
+    "t": "It flows around the core, and NASA says this fan-driven air makes the bulk of the thrust."
+   }
+  ],
+  "stops": [
+   [
+    "pause",
+    0,
+    "@hardest",
+    "CLIMB"
+   ]
+  ]
+ },
+ {
+  "id": "cruise",
+  "title": "Cruising altitude",
+  "phase": "CRUISE",
+  "lines": [
+   {
+    "t": "Now we level off at about thirty-five thousand feet. That's nearly eleven kilometres up, higher than Mount Everest."
+   },
+   {
+    "t": "Why so high? Up here, the air is only about a third as dense as at sea level. Less air means less drag, and less fuel burned."
+   },
+   {
+    "t": "Outside, it's around minus fifty-four degrees Celsius, so the cabin is pressurised and heated.",
+    "sfx": [
+     [
+      "chime",
+      0.3
+     ]
+    ]
+   },
+   {
+    "t": "In January, the India Meteorological Department reported jet stream winds of about one hundred and fifty knots over northwest India."
+   },
+   {
+    "t": "Ride one, and you save time and fuel."
+   },
+   {
+    "t": "And to know exactly where we are, India's GAGAN system, built by ISRO and the Airports Authority of India, sharpens satellite navigation."
+   }
+  ],
+  "card": "PART 2 · CRUISE",
+  "stops": [
+   [
+    "resume",
+    0,
+    1.3,
+    "CRUISE"
+   ]
+  ]
+ },
+ {
+  "id": "drag",
+  "title": "Beating drag",
+  "phase": "CRUISE",
+  "lines": [
+   {
+    "t": "At cruise, drag is the enemy, so everything is shaped to slip through the air."
+   },
+   {
+    "t": "A rounded nose. Smooth skin. Wings swept backward."
+   },
+   {
+    "t": "And upturned wingtips, which weaken the swirling vortices that trail behind each wing."
+   }
+  ],
+  "stops": [
+   [
+    "pause",
+    0,
+    0.3,
+    "CRUISE"
+   ]
+  ]
+ },
+ {
+  "id": "controls",
+  "title": "Steering in three dimensions",
+  "phase": "TURN",
+  "lines": [
+   {
+    "t": "Time to turn towards our destination. To steer, the pilot changes the shape of the wings and tail."
+   },
+   {
+    "t": "Ailerons, on the outer wings, roll the aircraft left and right.",
+    "sfx": [
+     [
+      "servo",
+      0.8
+     ]
+    ]
+   },
+   {
+    "t": "The elevator, on the tail, pitches the nose up and down.",
+    "sfx": [
+     [
+      "servo",
+      0.8
+     ]
+    ]
+   },
+   {
+    "t": "The rudder, on the fin, swings the nose from side to side. That's yaw.",
+    "sfx": [
+     [
+      "servo",
+      0.8
+     ]
+    ]
+   }
+  ],
+  "stops": [
+   [
+    "resume",
+    0,
+    0.0,
+    "CRUISE"
+   ]
+  ]
+ },
+ {
+  "id": "parts",
+  "title": "Inside the machine",
+  "phase": "CRUISE",
+  "lines": [
+   {
+    "t": "While we cruise on autopilot, let's take this machine apart.",
+    "marks": {
+     "apart": "While we cruise on autopilot, let's take this machine"
+    },
+    "sfx": [
+     [
+      "explode",
+      "@apart"
+     ]
+    ]
+   },
+   {
+    "t": "Nine sections. Nose, fuselage, wings, moving surfaces, engines, tail, landing gear, fuel tanks, and the hidden systems."
+   },
+   {
+    "t": "The wings are hollow, and double as fuel tanks.",
+    "sfx": [
+     [
+      "whoosh",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "The engine fan blades are carbon composite, edged with titanium.",
+    "sfx": [
+     [
+      "whoosh",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "On a Boeing seven eight seven, about half the airframe, by weight, is carbon fibre composite."
+   }
+  ],
+  "stops": [
+   [
+    "pause",
+    0,
+    "@apart",
+    "CRUISE"
+   ],
+   [
+    "resume",
+    4,
+    "end",
+    "CRUISE"
+   ]
+  ]
+ },
+ {
+  "id": "stall",
+  "title": "The stall",
+  "phase": "APPROACH",
+  "lines": [
+   {
+    "t": "Now we descend, and slow down for landing. And slow is where it gets dangerous."
+   },
+   {
+    "t": "Lift needs speed. To keep enough lift while slowing down, the wing must tilt further and further."
+   },
+   {
+    "t": "Tilt it beyond about fifteen degrees, and the smooth airflow tears away from the top surface."
+   },
+   {
+    "t": "Lift collapses. That's a stall, and it has nothing to do with the engines.",
+    "sfx": [
+     [
+      "alarm",
+      0
+     ]
+    ]
+   }
+  ],
+  "card": "PART 3 · LANDING",
+  "stops": [
+   [
+    "pause",
+    1,
+    0.0,
+    "APPROACH"
+   ]
+  ]
+ },
+ {
+  "id": "landing",
+  "title": "Landing",
+  "phase": "LANDING",
+  "lines": [
+   {
+    "t": "So pilots change the wing itself. Flaps and slats slide out, making the wing bigger and more curved, for more lift at low speed.",
+    "sfx": [
+     [
+      "flaps",
+      1.2
+     ]
+    ]
+   },
+   {
+    "t": "Wheels down.",
+    "sfx": [
+     [
+      "gear",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "Touchdown.",
+    "sfx": [
+     [
+      "touchdown",
+      0
+     ]
+    ],
+    "pause": 0.5
+   },
+   {
+    "t": "And here's what pilots do on every landing. Spoilers pop up, dumping the lift, so the weight presses onto the wheels and the brakes can bite.",
+    "sfx": [
+     [
+      "clunk",
+      "@spoilers"
+     ]
+    ],
+    "marks": {
+     "spoilers": "And here's what pilots do on every landing. Spoilers"
+    },
+    "pre": 1.0
+   },
+   {
+    "t": "Then reverse thrust and brakes bring seventy-nine tonnes to a stop.",
+    "sfx": [
+     [
+      "reverse",
+      0
+     ]
+    ]
+   }
+  ],
+  "stops": [
+   [
+    "resume",
+    1,
+    0.0,
+    "LANDING"
+   ]
+  ],
+  "post": 6.5,
+  "post_sfx": [
+   [
+    "spooldown",
+    0.3
+   ],
+   [
+    "chime",
+    3.4
+   ]
+  ]
+ },
+ {
+  "id": "recap",
+  "title": "The whole picture",
+  "phase": "",
+  "lines": [
+   {
+    "t": "So, how does an aircraft fly?"
+   },
+   {
+    "t": "Engines make thrust. Thrust makes speed."
+   },
+   {
+    "t": "Speed over the wings makes lift."
+   },
+   {
+    "t": "And when lift beats weight, seventy-nine tonnes rise into the sky."
+   },
+   {
+    "t": "No magic. Just air, and physics.",
+    "sfx": [
+     [
+      "hit",
+      0.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "end",
+  "title": "",
+  "phase": "",
+  "lines": [
+   {
+    "t": "If this changed how you see flight, like this video, subscribe, and tell me what to explain next."
+   }
+  ]
+ }
+]
