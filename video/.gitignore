@@ -7,3 +7,6 @@ flight2/out/*.wav
 flight2/out/*.mp4
 flight2/out/seg_*
 flight2/audio/
+flight3/out/*.wav
+flight3/out/*.mp4
+flight3/out/seg*
