@@ -1,0 +1,469 @@
+{
+ "total": 330.782,
+ "scenes": [
+  {
+   "id": "hook",
+   "title": "",
+   "start": 0.0,
+   "dur": 17.488,
+   "lines": [
+    {
+     "text": "This machine weighs seventy-nine tonnes.",
+     "start": 0.5,
+     "end": 2.62
+    },
+    {
+     "text": "That is about thirteen elephants.",
+     "start": 2.82,
+     "end": 4.517
+    },
+    {
+     "text": "Nothing is holding it up. No strings. No magic.",
+     "start": 4.717,
+     "end": 7.741
+    },
+    {
+     "text": "So why doesn't it fall out of the sky?",
+     "start": 7.941,
+     "end": 9.936
+    },
+    {
+     "text": "This year, airlines expect to carry around five billion passengers, and every one of them is trusting the answer.",
+     "start": 10.136,
+     "end": 16.788
+    }
+   ]
+  },
+  {
+   "id": "forces",
+   "title": "The four forces",
+   "start": 17.488,
+   "dur": 20.241,
+   "lines": [
+    {
+     "text": "Every aircraft in flight is caught in a tug of war between four forces.",
+     "start": 0.7,
+     "end": 4.971
+    },
+    {
+     "text": "Weight pulls it down.",
+     "start": 5.171,
+     "end": 6.344
+    },
+    {
+     "text": "Lift pushes it up.",
+     "start": 6.544,
+     "end": 7.615
+    },
+    {
+     "text": "Thrust drives it forward.",
+     "start": 7.815,
+     "end": 9.213
+    },
+    {
+     "text": "And drag holds it back.",
+     "start": 9.413,
+     "end": 10.706
+    },
+    {
+     "text": "When lift equals weight, and thrust equals drag, the aircraft cruises steadily.",
+     "start": 10.906,
+     "end": 15.461
+    },
+    {
+     "text": "To climb, speed up, or turn, the pilot simply unbalances them.",
+     "start": 15.661,
+     "end": 19.541
+    }
+   ]
+  },
+  {
+   "id": "wing",
+   "title": "How a wing makes lift",
+   "start": 37.729,
+   "dur": 34.195,
+   "lines": [
+    {
+     "text": "Lift comes from the wings.",
+     "start": 0.7,
+     "end": 2.086
+    },
+    {
+     "text": "Slice a wing open, and you find this shape. It is called an airfoil.",
+     "start": 2.286,
+     "end": 6.009
+    },
+    {
+     "text": "It is curved on top, and tilted slightly upward, at what pilots call the angle of attack.",
+     "start": 6.209,
+     "end": 11.664
+    },
+    {
+     "text": "As air flows around it, the wing bends that air downward.",
+     "start": 11.864,
+     "end": 15.287
+    },
+    {
+     "text": "Newton's third law does the rest. The wing pushes air down, so the air pushes the wing up.",
+     "start": 15.487,
+     "end": 20.766
+    },
+    {
+     "text": "At the same time, air speeds up over the curved top, so the pressure there drops, while higher pressure below pushes upward.",
+     "start": 20.966,
+     "end": 28.263
+    },
+    {
+     "text": "These are two descriptions of one event. The wing turns the air, and the air lifts the wing.",
+     "start": 28.463,
+     "end": 33.495
+    }
+   ]
+  },
+  {
+   "id": "myth",
+   "title": "A famous myth",
+   "start": 71.924,
+   "dur": 13.494,
+   "lines": [
+    {
+     "text": "You may have heard that the air on top must race to meet the air below at the back of the wing.",
+     "start": 0.7,
+     "end": 5.498
+    },
+    {
+     "text": "NASA calls that an incorrect theory.",
+     "start": 5.698,
+     "end": 7.61
+    },
+    {
+     "text": "In reality, the air over the top arrives first, and the two streams never meet again.",
+     "start": 7.81,
+     "end": 12.794
+    }
+   ]
+  },
+  {
+   "id": "equation",
+   "title": "How much lift?",
+   "start": 85.417,
+   "dur": 24.401,
+   "lines": [
+    {
+     "text": "So how much lift does a wing make?",
+     "start": 0.7,
+     "end": 2.498
+    },
+    {
+     "text": "NASA's lift equation has four ingredients. Air density. Speed, squared. Wing area. And a lift coefficient, set by the wing's shape and angle.",
+     "start": 2.698,
+     "end": 11.776
+    },
+    {
+     "text": "Because speed is squared, doubling the speed gives four times the lift.",
+     "start": 11.976,
+     "end": 15.944
+    },
+    {
+     "text": "That is why an airliner must reach roughly two hundred and seventy kilometres per hour on the runway, before the wings can carry its weight.",
+     "start": 16.144,
+     "end": 23.701
+    }
+   ]
+  },
+  {
+   "id": "stall",
+   "title": "The stall",
+   "start": 109.818,
+   "dur": 13.917,
+   "lines": [
+    {
+     "text": "But there is a limit.",
+     "start": 0.7,
+     "end": 1.736
+    },
+    {
+     "text": "Tilt the wing too far, beyond about fifteen degrees, and the smooth airflow tears away from the top surface.",
+     "start": 1.936,
+     "end": 8.656
+    },
+    {
+     "text": "Lift collapses. This is a stall, and it has nothing to do with the engines.",
+     "start": 8.856,
+     "end": 13.217
+    }
+   ]
+  },
+  {
+   "id": "engine",
+   "title": "Thrust: the turbofan",
+   "start": 123.735,
+   "dur": 27.507,
+   "lines": [
+    {
+     "text": "Thrust comes from turbofan engines, and they work in four steps.",
+     "start": 0.7,
+     "end": 4.566
+    },
+    {
+     "text": "Suck. A giant fan pulls air in.",
+     "start": 4.766,
+     "end": 6.68
+    },
+    {
+     "text": "Squeeze. Compressor blades pack that air tight.",
+     "start": 6.88,
+     "end": 9.334
+    },
+    {
+     "text": "Bang. Fuel burns in it, at well over a thousand degrees.",
+     "start": 9.534,
+     "end": 13.117
+    },
+    {
+     "text": "Blow. Hot gas blasts out the back, spinning turbines that drive the fan.",
+     "start": 13.317,
+     "end": 17.812
+    },
+    {
+     "text": "Here is the surprise. Most of the air never burns at all.",
+     "start": 18.012,
+     "end": 21.283
+    },
+    {
+     "text": "It bypasses the core, and NASA says that fan-driven air generates the bulk of the thrust.",
+     "start": 21.483,
+     "end": 26.807
+    }
+   ]
+  },
+  {
+   "id": "drag",
+   "title": "Beating drag",
+   "start": 151.241,
+   "dur": 14.309,
+   "lines": [
+    {
+     "text": "Drag is the price of moving through air, so everything is shaped to slip through it.",
+     "start": 0.7,
+     "end": 5.047
+    },
+    {
+     "text": "A rounded nose. Smooth skin. Wings swept backward.",
+     "start": 5.247,
+     "end": 8.481
+    },
+    {
+     "text": "And upturned wingtips, which weaken the swirling vortices that trail behind each wing.",
+     "start": 8.681,
+     "end": 13.609
+    }
+   ]
+  },
+  {
+   "id": "controls",
+   "title": "Steering in three dimensions",
+   "start": 165.55,
+   "dur": 27.992,
+   "lines": [
+    {
+     "text": "To steer, the pilot changes the shape of the wings and tail.",
+     "start": 0.7,
+     "end": 3.975
+    },
+    {
+     "text": "Ailerons, on the outer wings, roll the aircraft left and right.",
+     "start": 4.175,
+     "end": 7.679
+    },
+    {
+     "text": "The elevator, on the tail, pitches the nose up and down.",
+     "start": 7.879,
+     "end": 10.998
+    },
+    {
+     "text": "The rudder, on the fin, swings the nose from side to side. That is yaw.",
+     "start": 11.198,
+     "end": 15.275
+    },
+    {
+     "text": "For takeoff and landing, flaps and slats slide out, making the wing bigger and more curved, for more lift at low speed.",
+     "start": 15.475,
+     "end": 22.725
+    },
+    {
+     "text": "And after touchdown, spoilers pop up, to dump the lift and help the brakes.",
+     "start": 22.925,
+     "end": 27.292
+    }
+   ]
+  },
+  {
+   "id": "parts",
+   "title": "Every part, section by section",
+   "start": 193.542,
+   "dur": 45.214,
+   "lines": [
+    {
+     "text": "Now let's take the whole machine apart, in nine sections.",
+     "start": 0.7,
+     "end": 3.871
+    },
+    {
+     "text": "One. The nose and cockpit, with a radar dome at the very front.",
+     "start": 4.071,
+     "end": 7.901
+    },
+    {
+     "text": "Two. The fuselage, a pressurised tube of aluminium or carbon fibre.",
+     "start": 8.101,
+     "end": 12.626
+    },
+    {
+     "text": "Three. The wings. Long, swept, and hollow.",
+     "start": 12.826,
+     "end": 15.358
+    },
+    {
+     "text": "Four. The moving surfaces. Flaps, slats, ailerons and spoilers.",
+     "start": 15.558,
+     "end": 19.714
+    },
+    {
+     "text": "Five. The engines, with carbon composite fan blades.",
+     "start": 19.914,
+     "end": 23.35
+    },
+    {
+     "text": "Six. The tail. A vertical fin, and a horizontal stabiliser.",
+     "start": 23.55,
+     "end": 27.599
+    },
+    {
+     "text": "Seven. The landing gear, made of high strength steel and titanium.",
+     "start": 27.799,
+     "end": 31.466
+    },
+    {
+     "text": "Eight. The fuel tanks, hidden inside the wings.",
+     "start": 31.666,
+     "end": 34.319
+    },
+    {
+     "text": "Nine. The systems you never see. Hydraulics, electrics, and avionics.",
+     "start": 34.519,
+     "end": 38.773
+    },
+    {
+     "text": "On a Boeing seven eight seven, about half the airframe, by weight, is carbon fibre composite.",
+     "start": 38.973,
+     "end": 44.514
+    }
+   ]
+  },
+  {
+   "id": "journey",
+   "title": "One flight, start to finish",
+   "start": 238.756,
+   "dur": 64.753,
+   "lines": [
+    {
+     "text": "Now put it all together, on one real flight.",
+     "start": 0.7,
+     "end": 3.377
+    },
+    {
+     "text": "Takeoff. Full thrust, flaps out. Speed builds, the nose rises, and lift overcomes weight.",
+     "start": 3.577,
+     "end": 9.132
+    },
+    {
+     "text": "Then the climb, to about thirty-five thousand feet. That is nearly eleven kilometres up.",
+     "start": 9.332,
+     "end": 14.551
+    },
+    {
+     "text": "Why so high? Up there, the air is only about a third as dense as at sea level. Less air means less drag, and less fuel burned.",
+     "start": 14.751,
+     "end": 22.518
+    },
+    {
+     "text": "Outside, it is around minus fifty-four degrees Celsius, so the cabin is pressurised and heated.",
+     "start": 22.718,
+     "end": 28.36
+    },
+    {
+     "text": "This is also where jet streams live. In January, the India Meteorological Department reported jet stream winds of about one hundred and fifty knots, at twelve point six kilometres above northwest India.",
+     "start": 28.56,
+     "end": 41.991
+    },
+    {
+     "text": "Ride one, and you save time and fuel.",
+     "start": 42.191,
+     "end": 44.32
+    },
+    {
+     "text": "For guidance, India's GAGAN system, built by ISRO and the Airports Authority of India, sharpens satellite navigation for precise approaches.",
+     "start": 44.52,
+     "end": 53.796
+    },
+    {
+     "text": "Then the descent. Thrust comes back, and the aircraft glides down.",
+     "start": 53.996,
+     "end": 57.773
+    },
+    {
+     "text": "Finally, landing. Flaps fully out, wheels down, touchdown. Spoilers up, reverse thrust, brakes.",
+     "start": 57.973,
+     "end": 64.053
+    }
+   ]
+  },
+  {
+   "id": "recap",
+   "title": "The whole picture",
+   "start": 303.51,
+   "dur": 14.155,
+   "lines": [
+    {
+     "text": "So, how does an aircraft fly?",
+     "start": 0.7,
+     "end": 2.351
+    },
+    {
+     "text": "Engines make thrust. Thrust makes speed.",
+     "start": 2.551,
+     "end": 5.032
+    },
+    {
+     "text": "Speed over the wings makes lift.",
+     "start": 5.232,
+     "end": 7.091
+    },
+    {
+     "text": "And when lift beats weight, seventy-nine tonnes rise into the sky.",
+     "start": 7.291,
+     "end": 11.081
+    },
+    {
+     "text": "No magic. Just air, and physics.",
+     "start": 11.281,
+     "end": 13.455
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "title": "",
+   "start": 317.665,
+   "dur": 13.117,
+   "lines": [
+    {
+     "text": "If this changed how you see flight, like this video, subscribe, and tell me what to explain next.",
+     "start": 0.7,
+     "end": 6.417
+    }
+   ]
+  }
+ ]
+}

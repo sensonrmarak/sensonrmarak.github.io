@@ -3,3 +3,7 @@ out/
 flight/out/*.wav
 flight/out/*.mp4
 flight/audio/
+flight2/out/*.wav
+flight2/out/*.mp4
+flight2/out/seg_*
+flight2/audio/

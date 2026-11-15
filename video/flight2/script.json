@@ -1,0 +1,87 @@
+[
+ {"id":"hook","title":"","lines":[
+  "This machine weighs seventy-nine tonnes.",
+  "That is about thirteen elephants.",
+  "Nothing is holding it up. No strings. No magic.",
+  "So why doesn't it fall out of the sky?",
+  "This year, airlines expect to carry around five billion passengers, and every one of them is trusting the answer."]},
+ {"id":"forces","title":"The four forces","lines":[
+  "Every aircraft in flight is caught in a tug of war between four forces.",
+  "Weight pulls it down.",
+  "Lift pushes it up.",
+  "Thrust drives it forward.",
+  "And drag holds it back.",
+  "When lift equals weight, and thrust equals drag, the aircraft cruises steadily.",
+  "To climb, speed up, or turn, the pilot simply unbalances them."]},
+ {"id":"wing","title":"How a wing makes lift","lines":[
+  "Lift comes from the wings.",
+  "Slice a wing open, and you find this shape. It is called an airfoil.",
+  "It is curved on top, and tilted slightly upward, at what pilots call the angle of attack.",
+  "As air flows around it, the wing bends that air downward.",
+  "Newton's third law does the rest. The wing pushes air down, so the air pushes the wing up.",
+  "At the same time, air speeds up over the curved top, so the pressure there drops, while higher pressure below pushes upward.",
+  "These are two descriptions of one event. The wing turns the air, and the air lifts the wing."]},
+ {"id":"myth","title":"A famous myth","lines":[
+  "You may have heard that the air on top must race to meet the air below at the back of the wing.",
+  "NASA calls that an incorrect theory.",
+  "In reality, the air over the top arrives first, and the two streams never meet again."]},
+ {"id":"equation","title":"How much lift?","lines":[
+  "So how much lift does a wing make?",
+  "NASA's lift equation has four ingredients. Air density. Speed, squared. Wing area. And a lift coefficient, set by the wing's shape and angle.",
+  "Because speed is squared, doubling the speed gives four times the lift.",
+  "That is why an airliner must reach roughly two hundred and seventy kilometres per hour on the runway, before the wings can carry its weight."]},
+ {"id":"stall","title":"The stall","lines":[
+  "But there is a limit.",
+  "Tilt the wing too far, beyond about fifteen degrees, and the smooth airflow tears away from the top surface.",
+  "Lift collapses. This is a stall, and it has nothing to do with the engines."]},
+ {"id":"engine","title":"Thrust: the turbofan","lines":[
+  "Thrust comes from turbofan engines, and they work in four steps.",
+  "Suck. A giant fan pulls air in.",
+  "Squeeze. Compressor blades pack that air tight.",
+  "Bang. Fuel burns in it, at well over a thousand degrees.",
+  "Blow. Hot gas blasts out the back, spinning turbines that drive the fan.",
+  "Here is the surprise. Most of the air never burns at all.",
+  "It bypasses the core, and NASA says that fan-driven air generates the bulk of the thrust."]},
+ {"id":"drag","title":"Beating drag","lines":[
+  "Drag is the price of moving through air, so everything is shaped to slip through it.",
+  "A rounded nose. Smooth skin. Wings swept backward.",
+  "And upturned wingtips, which weaken the swirling vortices that trail behind each wing."]},
+ {"id":"controls","title":"Steering in three dimensions","lines":[
+  "To steer, the pilot changes the shape of the wings and tail.",
+  "Ailerons, on the outer wings, roll the aircraft left and right.",
+  "The elevator, on the tail, pitches the nose up and down.",
+  "The rudder, on the fin, swings the nose from side to side. That is yaw.",
+  "For takeoff and landing, flaps and slats slide out, making the wing bigger and more curved, for more lift at low speed.",
+  "And after touchdown, spoilers pop up, to dump the lift and help the brakes."]},
+ {"id":"parts","title":"Every part, section by section","lines":[
+  "Now let's take the whole machine apart, in nine sections.",
+  "One. The nose and cockpit, with a radar dome at the very front.",
+  "Two. The fuselage, a pressurised tube of aluminium or carbon fibre.",
+  "Three. The wings. Long, swept, and hollow.",
+  "Four. The moving surfaces. Flaps, slats, ailerons and spoilers.",
+  "Five. The engines, with carbon composite fan blades.",
+  "Six. The tail. A vertical fin, and a horizontal stabiliser.",
+  "Seven. The landing gear, made of high strength steel and titanium.",
+  "Eight. The fuel tanks, hidden inside the wings.",
+  "Nine. The systems you never see. Hydraulics, electrics, and avionics.",
+  "On a Boeing seven eight seven, about half the airframe, by weight, is carbon fibre composite."]},
+ {"id":"journey","title":"One flight, start to finish","lines":[
+  "Now put it all together, on one real flight.",
+  "Takeoff. Full thrust, flaps out. Speed builds, the nose rises, and lift overcomes weight.",
+  "Then the climb, to about thirty-five thousand feet. That is nearly eleven kilometres up.",
+  "Why so high? Up there, the air is only about a third as dense as at sea level. Less air means less drag, and less fuel burned.",
+  "Outside, it is around minus fifty-four degrees Celsius, so the cabin is pressurised and heated.",
+  "This is also where jet streams live. In January, the India Meteorological Department reported jet stream winds of about one hundred and fifty knots, at twelve point six kilometres above northwest India.",
+  "Ride one, and you save time and fuel.",
+  "For guidance, India's GAGAN system, built by ISRO and the Airports Authority of India, sharpens satellite navigation for precise approaches.",
+  "Then the descent. Thrust comes back, and the aircraft glides down.",
+  "Finally, landing. Flaps fully out, wheels down, touchdown. Spoilers up, reverse thrust, brakes."]},
+ {"id":"recap","title":"The whole picture","lines":[
+  "So, how does an aircraft fly?",
+  "Engines make thrust. Thrust makes speed.",
+  "Speed over the wings makes lift.",
+  "And when lift beats weight, seventy-nine tonnes rise into the sky.",
+  "No magic. Just air, and physics."]},
+ {"id":"end","title":"","lines":[
+  "If this changed how you see flight, like this video, subscribe, and tell me what to explain next."]}
+]
