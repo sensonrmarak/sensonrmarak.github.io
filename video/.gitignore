@@ -17,3 +17,6 @@ flight4/sfx/raw/
 mars/out/*.wav
 mars/out/*.mp4
 mars/out/seg*
+mars3d/out/*.wav
+mars3d/out/*.mp4
+mars3d/out/seg*

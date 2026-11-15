@@ -1,0 +1,14 @@
+[
+ {"id": "open", "lines": [
+  {"t": "The twenty-fourth of September, 2014."},
+  {"t": "Two hundred and twenty-four million kilometres from Earth, a spacecraft about as tall as a person is falling towards Mars."},
+  {"t": "To be captured, it must fire its engine at exactly the right moment, and slow down."},
+  {"t": "Nobody on Earth can help. A radio signal takes twelve and a half minutes to get there.", "marks": {"twelve": "Nobody on Earth can help. A radio signal takes"}},
+  {"t": "If the burn fails, it flies past Mars, forever.", "pause": 1.2},
+  {"t": "It works.", "sfx": [["success", 0]]},
+  {"t": "India becomes the first Asian country to reach Mars, and the first in the world to get there on its very first try."},
+  {"t": "And the whole mission cost about seventy-four million dollars.", "marks": {"cost": "And the whole mission cost about seventy-four million"}},
+  {"t": "That's less than the Hollywood film Gravity.", "pause": 0.6},
+  {"t": "So how did India do it?", "sfx": [["hit", 0]]}
+ ]}
+]
