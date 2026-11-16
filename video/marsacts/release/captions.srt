@@ -1,0 +1,399 @@
+1
+00:00:01,600 --> 00:00:04,267
+The twenty-fourth of September, 2014.
+
+2
+00:00:04,587 --> 00:00:08,206
+Two hundred and twenty-four million kilometres from Earth,
+
+3
+00:00:08,206 --> 00:00:12,138
+a spacecraft about as tall as a person is falling towards Mars.
+
+4
+00:00:12,458 --> 00:00:17,394
+To be captured, it must fire its engine at exactly the right moment, and slow down.
+
+5
+00:00:17,714 --> 00:00:19,205
+Nobody on Earth can help.
+
+6
+00:00:19,205 --> 00:00:22,785
+A radio signal takes twelve and a half minutes to get there.
+
+7
+00:00:23,105 --> 00:00:25,819
+If the burn fails, it flies past Mars, forever.
+
+8
+00:00:27,339 --> 00:00:27,999
+It works.
+
+9
+00:00:28,319 --> 00:00:31,469
+India becomes the first Asian country to reach Mars,
+
+10
+00:00:31,469 --> 00:00:35,226
+and the first in the world to get there on its very first try.
+
+11
+00:00:35,546 --> 00:00:38,855
+And the whole mission cost about seventy-four million dollars.
+
+12
+00:00:39,175 --> 00:00:41,328
+That's less than the Hollywood film Gravity.
+
+13
+00:00:42,248 --> 00:00:43,491
+So how did India do it?
+
+14
+00:00:48,733 --> 00:00:51,726
+To see why this was remarkable, start with the problem.
+
+15
+00:00:52,066 --> 00:00:55,506
+Earth and Mars both circle the Sun, at different speeds.
+
+16
+00:00:55,506 --> 00:00:58,208
+So the distance between them keeps changing,
+
+17
+00:00:58,208 --> 00:01:02,631
+from about fifty-five million kilometres to around four hundred million.
+
+18
+00:01:02,971 --> 00:01:07,659
+You can't fly straight there. You launch onto a long, curving path around the Sun,
+
+19
+00:01:07,659 --> 00:01:10,232
+and aim for where Mars will be, months later.
+
+20
+00:01:10,572 --> 00:01:15,258
+Even on the best path, the trip takes many months. Mangalyaan's took about ten.
+
+21
+00:01:15,598 --> 00:01:20,389
+The planets line up for this only once every twenty-six months. Miss the window,
+
+22
+00:01:20,389 --> 00:01:22,365
+and you wait more than two years.
+
+23
+00:01:22,705 --> 00:01:26,224
+And getting there is only half the battle. Over the decades,
+
+24
+00:01:26,224 --> 00:01:30,154
+many missions to Mars have failed. Some on launch, some on the way,
+
+25
+00:01:30,154 --> 00:01:31,679
+some in the final minutes.
+
+26
+00:01:32,019 --> 00:01:35,299
+Until then, India had only ever been as far as the Moon.
+
+27
+00:01:39,139 --> 00:01:41,139
+Even the space powers struggled at first.
+
+28
+00:01:41,479 --> 00:01:47,507
+The Soviet Union's first two Mars probes, in 1960, never even reached orbit.
+
+29
+00:01:47,847 --> 00:01:51,651
+America's first attempt, Mariner three, failed in 1964,
+
+30
+00:01:51,651 --> 00:01:54,418
+when its protective cover wouldn't open.
+
+31
+00:01:54,758 --> 00:01:59,247
+Japan's Nozomi never managed to enter Mars orbit, in 2003.
+
+32
+00:01:59,247 --> 00:02:02,653
+China's first Mars orbiter was lost in 2011,
+
+33
+00:02:02,653 --> 00:02:06,523
+along with the Russian probe that was carrying it.
+
+34
+00:02:06,863 --> 00:02:09,954
+Reaching Mars on the first try was almost unheard of.
+
+35
+00:02:13,793 --> 00:02:18,330
+On the third of August, 2012, the Indian government approved the mission.
+
+36
+00:02:18,670 --> 00:02:22,348
+The next launch window would open in November 2013.
+
+37
+00:02:22,688 --> 00:02:28,110
+That left about fifteen months to build a spacecraft that could survive a journey to another planet.
+
+38
+00:02:31,950 --> 00:02:33,416
+Trick one: a smaller rocket.
+
+39
+00:02:33,756 --> 00:02:40,026
+ISRO's most powerful rocket at the time, the GSLV, had failed twice in 2010.
+
+40
+00:02:40,026 --> 00:02:43,408
+So they chose the smaller, reliable PSLV.
+
+41
+00:02:43,748 --> 00:02:48,396
+On the fifth of November, 2013, it lifted off from Sriharikota.
+
+42
+00:02:48,736 --> 00:02:53,944
+But the PSLV wasn't powerful enough to throw the spacecraft straight to Mars.
+
+43
+00:02:53,944 --> 00:02:57,867
+It could only put it into a long, oval orbit around Earth.
+
+44
+00:02:58,207 --> 00:03:03,293
+So ISRO used a clever trick. Every time the spacecraft swung closest to Earth,
+
+45
+00:03:03,293 --> 00:03:06,163
+where it moves fastest, it fired its engine.
+
+46
+00:03:06,503 --> 00:03:08,933
+Engineers call this the Oberth effect.
+
+47
+00:03:08,933 --> 00:03:13,409
+A push given where you're already moving fastest adds the most energy.
+
+48
+00:03:13,749 --> 00:03:17,116
+Each burn stretched the orbit wider. Over about a month,
+
+49
+00:03:17,116 --> 00:03:22,166
+a series of burns pushed its highest point out beyond a hundred thousand kilometres.
+
+50
+00:03:22,506 --> 00:03:26,773
+Then, on the first of December, one final burn flung it free of Earth,
+
+51
+00:03:26,773 --> 00:03:28,358
+and onto the road to Mars.
+
+52
+00:03:32,198 --> 00:03:33,448
+Trick two: keep it small.
+
+53
+00:03:33,788 --> 00:03:38,324
+At launch it weighed about thirteen hundred and forty kilograms, and most of that,
+
+54
+00:03:38,324 --> 00:03:40,537
+about eight hundred and fifty, was fuel.
+
+55
+00:03:40,877 --> 00:03:44,510
+Mangalyaan carried just five science instruments. Together,
+
+56
+00:03:44,510 --> 00:03:46,789
+they weighed about fifteen kilograms.
+
+57
+00:03:47,129 --> 00:03:51,179
+A camera to photograph the planet. Sensors to study its atmosphere,
+
+58
+00:03:51,179 --> 00:03:52,630
+and to hunt for methane.
+
+59
+00:03:52,970 --> 00:03:57,456
+And its structure and engines were similar to India's first Moon probe,
+
+60
+00:03:57,456 --> 00:04:02,510
+Chandrayaan-one. Proven designs meant less new engineering, and less to pay for.
+
+61
+00:04:06,350 --> 00:04:07,505
+Trick three is people.
+
+62
+00:04:07,845 --> 00:04:11,200
+A large share of any space mission's cost is salaries.
+
+63
+00:04:11,200 --> 00:04:16,729
+And engineers in India earn a fraction of what they would in the United States or Europe.
+
+64
+00:04:17,069 --> 00:04:22,228
+And nearly everything was designed and built in India, avoiding expensive imports.
+
+65
+00:04:22,568 --> 00:04:25,905
+A small team, a tight schedule, and no time for extras.
+
+66
+00:04:29,745 --> 00:04:31,031
+Not everything went to plan.
+
+67
+00:04:31,371 --> 00:04:36,387
+On the eleventh of November, 2013, during the fourth orbit-raising burn,
+
+68
+00:04:36,387 --> 00:04:41,125
+the main engine shut down early. A valve fault had cut off its fuel.
+
+69
+00:04:41,465 --> 00:04:44,861
+Engineers planned an extra burn to make up the difference,
+
+70
+00:04:44,861 --> 00:04:47,027
+and the spacecraft got back on track.
+
+71
+00:04:47,367 --> 00:04:52,690
+Then came the long cruise. For about three hundred days, the main engine sat unused,
+
+72
+00:04:52,690 --> 00:04:54,338
+in the cold of deep space.
+
+73
+00:04:54,678 --> 00:04:56,553
+Would it fire again when it mattered most?
+
+74
+00:04:57,493 --> 00:05:03,175
+On the twenty-second of September, 2014, two days before arrival, ISRO tested it,
+
+75
+00:05:03,175 --> 00:05:05,490
+for just four seconds. It worked.
+
+76
+00:05:05,830 --> 00:05:10,176
+Two days later came the burn you saw at the start. Twenty-four minutes,
+
+77
+00:05:10,176 --> 00:05:12,503
+in Mars's shadow, entirely on its own.
+
+78
+00:05:16,343 --> 00:05:21,706
+Mangalyaan wasn't alone. That same week, NASA's MAVEN orbiter also reached Mars.
+
+79
+00:05:22,046 --> 00:05:24,482
+A bigger spacecraft, with more instruments,
+
+80
+00:05:24,482 --> 00:05:27,201
+and a budget of several hundred million dollars.
+
+81
+00:05:27,541 --> 00:05:29,867
+Both worked. One cost a fraction of the other.
+
+82
+00:05:33,707 --> 00:05:36,120
+Mangalyaan was designed to last six months.
+
+83
+00:05:36,460 --> 00:05:38,330
+It kept working for about eight years.
+
+84
+00:05:38,670 --> 00:05:41,736
+It photographed the whole planet, and its moon, Phobos,
+
+85
+00:05:41,736 --> 00:05:43,687
+and studied the Martian atmosphere.
+
+86
+00:05:44,027 --> 00:05:50,109
+India was so proud of it that Mangalyaan later appeared on the back of the two-thousand-rupee banknote.
+
+87
+00:05:50,449 --> 00:05:56,688
+Contact was finally lost in 2022, when its fuel ran out and its batteries drained.
+
+88
+00:05:57,028 --> 00:06:01,581
+Spread over a journey of roughly six hundred and fifty million kilometres,
+
+89
+00:06:01,581 --> 00:06:06,503
+Prime Minister Modi pointed out, the trip cost about seven rupees per kilometre.
+
+90
+00:06:06,843 --> 00:06:08,448
+Less than an auto-rickshaw ride.
+
+91
+00:06:12,287 --> 00:06:13,715
+So cheap didn't mean careless.
+
+92
+00:06:14,055 --> 00:06:16,618
+It meant choosing simple, proven solutions,
+
+93
+00:06:16,618 --> 00:06:19,957
+and letting physics do the work that money usually does.
+
+94
+00:06:20,297 --> 00:06:21,320
+Nine years later,
+
+95
+00:06:21,320 --> 00:06:26,254
+the same frugal approach helped Chandrayaan-three land near the Moon's south pole,
+
+96
+00:06:26,254 --> 00:06:28,481
+the first mission ever to land there.
+
+97
+00:06:28,821 --> 00:06:32,637
+That's how India reached Mars for less than the cost of a movie,
+
+98
+00:06:32,637 --> 00:06:34,783
+and got there on its very first try.
+
+99
+00:06:39,423 --> 00:06:42,318
+If you enjoyed this, subscribe to Modus and Raison,
+
+100
+00:06:42,318 --> 00:06:44,588
+and tell me what we should explain next.
