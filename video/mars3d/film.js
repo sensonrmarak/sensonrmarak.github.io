@@ -180,8 +180,8 @@ const rings = Array.from({ length: 5 }, () => { const m = new THREE.Mesh(new THR
 const BAR = new THREE.Group(), BO = V(2600, 0, 0); BAR.position.copy(BO); scene.add(BAR);
 const barMat = col => new THREE.MeshPhysicalMaterial({ color: col, metalness: 0.2, roughness: 0.25, clearcoat: 1, clearcoatRoughness: 0.15, envMap: envTex, envMapIntensity: 0.9 });
 const barG = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), barMat(0x5b4bd6)), barM = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), barMat(0xd29a34)); BAR.add(barG, barM);
-const mirror = new Reflector(new THREE.PlaneGeometry(60, 60), { textureWidth: 512 * PR, textureHeight: 512 * PR, color: 0x555566 }); mirror.rotation.x = -Math.PI / 2; BAR.add(mirror);
-const floorVeil = new THREE.Mesh(new THREE.CircleGeometry(30, 64), new THREE.MeshBasicMaterial({ color: 0x05060a, transparent: true, opacity: 0.72 })); floorVeil.rotation.x = -Math.PI / 2; floorVeil.position.y = 0.01; BAR.add(floorVeil);
+const mirror = new Reflector(new THREE.PlaneGeometry(60, 60), { textureWidth: 512 * PR, textureHeight: 512 * PR, color: 0x2a2a36 }); mirror.rotation.x = -Math.PI / 2; BAR.add(mirror);
+const floorVeil = new THREE.Mesh(new THREE.CircleGeometry(30, 64), new THREE.MeshBasicMaterial({ color: 0x05060a, transparent: true, opacity: 0.84 })); floorVeil.rotation.x = -Math.PI / 2; floorVeil.position.y = 0.01; BAR.add(floorVeil);
 const barLight = new THREE.SpotLight(0xffffff, 0, 80, 0.6, 0.6); barLight.position.set(-6, 22, 14); barLight.target.position.set(0, 3, 0); BAR.add(barLight, barLight.target);
 const reel = new THREE.Group(); { const disc = new THREE.Mesh(new THREE.CylinderGeometry(0.9, 0.9, 0.22, 48), new THREE.MeshStandardMaterial({ color: 0x2a2d36, metalness: 0.7, roughness: 0.3, envMap: envTex })); disc.rotation.x = Math.PI / 2; reel.add(disc);
   for (let i = 0; i < 6; i++) { const h = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 0.26, 24), new THREE.MeshBasicMaterial({ color: 0x0b0c12 })); h.rotation.x = Math.PI / 2; h.position.set(Math.cos(i * 1.047) * 0.52, Math.sin(i * 1.047) * 0.52, 0); reel.add(h); } } BAR.add(reel);
@@ -191,7 +191,8 @@ const skipIdx = new Set([plumeCore, plumeGlow, sparks, flash, ...rcs].map(o => c
 const room = new THREE.Scene(), roomCam = new THREE.PerspectiveCamera(44, W / H, 0.1, 200); room.add(new THREE.AmbientLight(0x6070a0, 1.3), new THREE.HemisphereLight(0xbfd4ff, 0x202a40, 1.2)); [-3, 0, 3].forEach(x => { const pl = new THREE.PointLight(0x8fc4ff, 6, 10, 2); pl.position.set(x, 1.6, -0.5); room.add(pl); });
 const roomKey = new THREE.SpotLight(0xbfd4ff, 40, 60, 0.9, 0.7); roomKey.position.set(0, 9, 6); room.add(roomKey, roomKey.target);
 const screenTex = (msg, col) => { const cv = document.createElement("canvas"); cv.width = 1024; cv.height = 400; const x = cv.getContext("2d"); x.fillStyle = "#06101f"; x.fillRect(0, 0, 1024, 400); x.strokeStyle = "rgba(90,170,255,.35)"; for (let i = 0; i < 1024; i += 64) { x.beginPath(); x.moveTo(i, 0); x.lineTo(i, 400); x.stroke(); }
-  x.fillStyle = "#8fc4ff"; x.font = "700 44px Body, Arial"; x.fillText("MARS ORBITER MISSION · ORBIT INSERTION", 40, 80); x.fillStyle = col; x.font = "900 96px Body, Arial"; x.fillText(msg, 40, 230); x.strokeStyle = "#ff9a5a"; x.lineWidth = 4; x.beginPath(); for (let i = 0; i < 900; i += 6) x.lineTo(40 + i, 330 - Math.sin(i * 0.03) * 22 - i * 0.02); x.stroke();
+  const fitText = (txt, wt, size, y, colr) => { x.font = `${wt} ${size}px Body, Arial`; const w = x.measureText(txt).width, sz = w > 944 ? size * 944 / w : size; x.font = `${wt} ${sz}px Body, Arial`; x.fillStyle = colr; x.fillText(txt, 40, y); };   // shrink to fit the 944 px safe width
+  fitText("MARS ORBITER MISSION · ORBIT INSERTION", 700, 44, 80, "#8fc4ff"); fitText(msg, 900, 96, 230, col); x.strokeStyle = "#ff9a5a"; x.lineWidth = 4; x.beginPath(); for (let i = 0; i < 900; i += 6) x.lineTo(40 + i, 330 - Math.sin(i * 0.03) * 22 - i * 0.02); x.stroke();
   const t = new THREE.CanvasTexture(cv); t.colorSpace = THREE.SRGBColorSpace; return t; };
 const waitTex = screenTex("AWAITING SIGNAL", "#ffd36b"), okTex = screenTex("MOI SUCCESSFUL", "#7dffa0");
 const wall = new THREE.Mesh(new THREE.PlaneGeometry(11, 4.3), new THREE.MeshBasicMaterial({ map: waitTex })); wall.position.set(0, 4.2, -6); room.add(wall);
@@ -210,6 +211,9 @@ const toScreen = (v, cam = camera) => { const p = v.clone().project(cam); return
 const show = (id, k, dy = 30, extra = "") => { const e = $(id); e.style.opacity = clamp(k); e.style.transform = `translateY(${((1 - clamp(k)) * dy).toFixed(1)}px) ${extra}`; };
 const wob = (t, a) => V(Math.sin(t * 0.83) * 0.6 + Math.sin(t * 2.1 + 1) * 0.25, Math.sin(t * 0.67 + 2) * 0.5 + Math.sin(t * 1.9) * 0.2, Math.sin(t * 0.71 + 4) * 0.4).multiplyScalar(a);
 let FOCUS = 10, APER = 0.0001;
+const CR_R = 5.2;   // radius of the spacecraft including the solar wing (m)
+const fitD = (fov, fill) => CR_R / Math.tan(fov / 2 * D2R) / fill;   // distance at which the craft fills `fill` of the frame height
+const ctrOf = (cpos) => cpos.clone().add(V(0, 0, 1).applyQuaternion(craft.quaternion).multiplyScalar(3.4));
 const look = (pos, tgt, fov = 35, roll = 0, w = 0, t = 0) => { camera.position.copy(pos).add(wob(t, w)); camera.up.set(Math.sin(roll), Math.cos(roll), 0); camera.lookAt(tgt.clone().add(wob(t + 3.7, w * 0.6))); camera.fov = fov; camera.updateProjectionMatrix(); camera.updateMatrixWorld(); };
 $("#src").textContent = "Sources: ISRO · The Planetary Society · NASA";
 
@@ -236,24 +240,24 @@ function pose(t) {
 }
 function shoot(t) {   // camera for time t; returns post settings
   const { burnK, cpos, vel, orbitK } = pose(t); let fov = 35, exp = 1.0, aper = 0.00012, focus = camera.position.distanceTo(cpos), flare = 1, split = t >= SPLIT && t < SPLIT_END;
-  if (t < c[1]) { const k = seg(t, 0, c[1]); look(cpos.clone().add(V(lerp(-9, 5, k), lerp(2, 0.8, k), lerp(16, 13, k))), cpos.clone().add(V(lerp(30, 4, E.io(k)), 0, -20 * (1 - k))), 32, 0, 0.25, t); aper = 0.00025; }
-  else if (t < c[2]) { const k = E.io(seg(t, c[1], c[2])), back = vel.clone().multiplyScalar(-lerp(15, 11, k)), side = V(0, 1, 0).cross(vel).normalize().multiplyScalar(lerp(6, 9, k));
-    look(cpos.clone().add(back).add(side).add(V(0, lerp(1.6, 0.6, k), 0)), cpos.clone().add(vel.clone().multiplyScalar(9)), lerp(36, 32, k), lerp(0.04, -0.03, k), 0.3, t); exp = 0.68; flare = 0; aper = 0.0002; }
+  if (t < c[1]) { const k = seg(t, 0, c[1]), ctr = ctrOf(cpos), d = fitD(32, 0.6), dir = V(lerp(-0.7, 0.35, k), 0.18, 1).normalize(); look(ctr.clone().add(dir.multiplyScalar(d)), ctr.clone().add(V(0, 3.6, 0)), 32, 0, 0.25, t); aper = 0.00025; }
+  else if (t < c[2]) { const k = E.io(seg(t, c[1], c[2])), ctr = ctrOf(cpos), sideV = V(0, 1, 0).cross(vel).normalize(), dir = vel.clone().multiplyScalar(-lerp(0.8, 0.55, k)).add(sideV.clone().multiplyScalar(lerp(0.45, 0.75, k))).add(V(0, 0.22, 0)).normalize();
+    look(ctr.clone().add(dir.multiplyScalar(fitD(34, 0.62))), ctr.clone().add(V(0, 4.2, 0)).add(vel.clone().multiplyScalar(4)), 34, lerp(0.03, -0.02, k), 0.3, t); exp = 0.68; flare = 0; aper = 0.0002; }
   else if (t < c[3]) { const k = E.io(seg(t, c[2], c[3])), side = V(0, 1, 0).cross(vel).normalize();
-    look(cpos.clone().add(side.clone().multiplyScalar(lerp(14, 11, k))).add(vel.clone().multiplyScalar(lerp(-3, 4, k))).add(V(0, lerp(-2.4, -1, k), 0)), cpos.clone().add(V(0, 0.3, 0)).add(vel.clone().multiplyScalar(-2)), 32, 0.05, 0.2, t); aper = 0.0004; exp = lerp(1.0, 1.1, seg(t, B0 - 0.8, B0 + 0.4)); }
+    const ctr = ctrOf(cpos), dir = side.clone().add(vel.clone().multiplyScalar(lerp(-0.25, 0.1, k))).add(V(0, -0.12, 0)).normalize(); look(ctr.clone().add(dir.multiplyScalar(fitD(34, 0.66))), ctr.clone().add(V(0, 2.4, 0)), 34, 0.04, 0.2, t); aper = 0.0004; exp = lerp(1.0, 1.1, seg(t, B0 - 0.8, B0 + 0.4)); }
   else if (t < SPLIT) { const k = E.io(seg(t, c[3], SPLIT)); look(V(lerp(-150, -120, k), lerp(210, 190, k), lerp(640, 600, k)), V(-290, 15, -430), 42, 0, 1.5, t); aper = 0;
     rings.forEach((m, i) => { const u = ((t - c[3]) * 0.045 + i * 0.05) % 1; m.visible = true; m.position.lerpVectors(EARTH, V(0, 0, 0), 0.07 + u * 0.5); m.lookAt(V(0, 0, 0)); m.scale.setScalar(1 + u * 1.5); m.material.opacity = Math.max(0, 0.9 - u * 1.6); }); craft.scale.setScalar(7); }
   else if (t < WIN) { const k = E.io(seg(t, SPLIT, WIN)); ghost.visible = true; ghost.material.uniforms.p.value = fin(t, c[4] + 0.3, 1.8); ghost.material.uniforms.o.value = fin(t, c[4] + 0.3, 1) * (1 - fin(t, WIN - 0.5, 0.4));
-    look(cpos.clone().add(V(lerp(-14, -18, k), lerp(-3, -4, k), lerp(16, 22, k))), cpos.clone().add(V(20, -8, -30)), 36, -0.08, 0.25, t); aper = 0.0002; exp = 1.25; }
-  else if (t < c[7]) { const k = E.io(seg(t, WIN, WIN + 3)); orbit.visible = true; orbit.material.uniforms.p.value = lerp(0.1, 1, orbitK); orbit.material.uniforms.head.value = 1 - seg(t, WIN + 2.2, WIN + 2.6);
-    const wide = V(lerp(cpos.x - 30, 160, k), lerp(cpos.y + 10, 260, k), lerp(cpos.z + 60, 560, k)), ride = cpos.clone().add(V(-10, 6, 18)), r2 = E.io(seg(t, c[6] + 3, c[7]));
-    look(t < c[6] ? wide : wide.lerp(ride, r2), t < c[6] ? V(lerp(cpos.x, 0, k), 0, lerp(cpos.z, 0, k)) : V(0, 0, 0).lerp(cpos, r2), 36, 0, 1.2 * (1 - r2) + 0.2, t); aper = r2 * 0.0002; }
-  else if (t < c[8]) { const k = E.io(seg(t, c[7], c[8])); look(cpos.clone().add(V(lerp(-10, -7, k), lerp(5, 3, k), lerp(16, 11, k))), cpos.clone().add(V(0, 0.4, 0)), 32, 0, 0.18, t); aper = 0.0005; }
+    const ctr = ctrOf(cpos); look(ctr.clone().add(V(-0.62, -0.14, 0.77).normalize().multiplyScalar(fitD(36, 0.56) * lerp(1, 1.1, k))), ctr.clone().add(V(0, 1.0, 0)), 36, -0.05, 0.25, t); aper = 0.0002; exp = 1.25; }
+  else if (t < c[7]) { const k = E.io(seg(t, WIN, WIN + 3)); orbit.visible = t >= SPLIT_END; orbit.material.uniforms.p.value = lerp(0.1, 1, orbitK); orbit.material.uniforms.head.value = 1 - seg(t, WIN + 2.2, WIN + 2.6);
+    const k2 = E.io(seg(t, SPLIT_END - 0.1, WIN + 4.2)), wide = ctrOf(cpos).add(V(-0.6, 0.14, 0.78).normalize().multiplyScalar(fitD(36, 0.5))).lerp(V(160, 260, 560), E.out(k2)), wd = V(0, 0, 1).applyQuaternion(craft.quaternion), ctr = cpos.clone().add(wd.clone().multiplyScalar(3.2)), ride = ctr.clone().add(V(-16, 9, 26)), r2 = E.io(seg(t, c[6] + 3, c[7]));
+    look(t < c[6] ? wide : wide.lerp(ride, r2), ctr.clone().lerp(V(0, 0, 0), E.in(k2)).lerp(ctr, r2), 36, 0, 1.2 * (1 - r2) + 0.2, t); aper = r2 * 0.0002; }
+  else if (t < c[8]) { const k = E.io(seg(t, c[7], c[8])), ctr = ctrOf(cpos); look(ctr.clone().add(V(-0.52, 0.28, 0.8).normalize().multiplyScalar(fitD(34, lerp(0.66, 0.74, k)))), ctr.clone().add(V(0, -0.8, 0)), 34, 0, 0.18, t); aper = 0.0004; }
   else if (t < c[9] - 0.15) { BAR.visible = true; mars.visible = marsAtmo.visible = marsHaze.visible = false; craft.visible = false; barLight.intensity = 40; const kg = E.out(seg(t, c[8] + 0.1, c[8] + 1.2)), km = E.out(seg(t, c[8] + 0.6, c[8] + 1.7)), Hm = 9;
-    barG.scale.set(2.6, Math.max(0.01, Hm * kg), 2.6); barG.position.set(-2.4, Hm * kg / 2, 0); barM.scale.set(2.6, Math.max(0.01, Hm * 0.74 * km), 2.6); barM.position.set(2.4, Hm * 0.74 * km / 2, 0);
-    reel.position.set(-2.4, Hm * kg + 1.4, 0); reel.rotation.z = t * 1.5; if (!mini.parent) BAR.add(mini); mini.scale.setScalar(0.32); mini.position.set(2.4, Hm * 0.74 * km + 1.3, 0); mini.rotation.y = t * 0.8;
-    const k = seg(t, c[8], c[9]); look(BO.clone().add(V(lerp(-6, 4, k), lerp(5, 7, k), lerp(26, 23, k))), BO.clone().add(V(0, 4.8, 0)), 38, 0, 0.15, t); focus = 25; aper = 0.0002; flare = 0; }
-  else { craft.visible = false; const k = E.io(seg(t, c[9] - 0.15, TM.total)), cam = V(-20, 108, 52).normalize().multiplyScalar(lerp(118, 124, k)), cd = cam.clone().negate().normalize(), T = SUN.clone().sub(cd.clone().multiplyScalar(SUN.dot(cd))).normalize(), a = lerp(0.36, 0.3, k);
+    barG.scale.set(2.6, Math.max(0.01, Hm * kg), 2.6); barG.position.set(-3.4, Hm * kg / 2, 0); barM.scale.set(2.6, Math.max(0.01, Hm * 0.74 * km), 2.6); barM.position.set(3.4, Hm * 0.74 * km / 2, 0);
+    reel.position.set(-3.4, Hm * kg + 1.4, 0); reel.rotation.z = t * 1.5; if (!mini.parent) BAR.add(mini); mini.scale.setScalar(0.32); mini.position.set(3.4, Hm * 0.74 * km + 1.3, 0); mini.rotation.y = t * 0.8;
+    const k = seg(t, c[8], c[9]); look(BO.clone().add(V(lerp(-2.5, 2.5, k), lerp(9, 10, k), lerp(37, 35, k))), BO.clone().add(V(0, 5.6, 0)), 38, 0, 0.15, t); focus = 36; aper = 0.0002; flare = 0; }
+  else { craft.visible = false; const k = E.io(seg(t, c[9] - 0.15, TM.total)), cam = V(-20, 108, 52).normalize().multiplyScalar(lerp(118, 124, k)), cd = cam.clone().negate().normalize(), T = SUN.clone().sub(cd.clone().multiplyScalar(SUN.dot(cd))).normalize(), a = lerp(0.24, 0.2, k);
     look(cam, cam.clone().add(T.clone().multiplyScalar(Math.cos(a)).add(cd.clone().multiplyScalar(Math.sin(a))).multiplyScalar(100)), 46, 0, 0.1, t); aper = 0; flare = 1.3; }
   if (t < c[3] || t >= SPLIT) craft.scale.setScalar(1); if (t >= c[8] && t < c[9] - 0.15) {} else barLight.intensity = 0;
   if (split) camera.setViewOffset(W, H, W * 0.25, 0, W, H); else camera.clearViewOffset(); camera.updateProjectionMatrix();
@@ -285,18 +289,18 @@ function overlays(t, { split, cpos }) {
   const tp = toScreen(cpos.clone().add(V(0, -1.8, 0)));
   show("#date", fin(t, 0.6, 0.8) * (1 - fin(t, c[1] - 0.2, 0.4)));
   show("#dist", fin(t, c[1] + 0.3) * (1 - fin(t, c[2] - 0.2, 0.3))); show("#dist2", fin(t, c[1] + 0.8) * (1 - fin(t, c[2] - 0.2, 0.3)));
-  { const k = fin(t, c[1] + 4.0) * (1 - fin(t, c[2] - 0.2, 0.3)); $("#scale").style.left = tp[0] - 160 + "px"; $("#scale").style.top = tp[1] + 30 + "px"; show("#scale", k); }
+  { const k = fin(t, c[1] + 4.0) * (1 - fin(t, c[2] - 0.2, 0.3)), bx = projBox(parts, camera); if (bx) { $("#scale").style.left = Math.max(60, Math.min(1400, (bx.x0 + bx.x1) / 2 - 190)) + "px"; $("#scale").style.top = Math.min(1000, bx.y1 + 18) + "px"; } show("#scale", k); }
   show("#burn", fin(t, c[2] + 1.5) * (1 - fin(t, c[3] - 0.2, 0.3)));
-  { const e = $("#clock"), e2 = $("#clock2"); e.style.left = e2.style.left = split ? "960px" : "0px"; e.style.width = e2.style.width = split ? "960px" : "1920px"; e.style.top = split ? "880px" : "150px"; e2.style.top = split ? "985px" : "258px"; const left = Math.max(0, 12.5 * 60 * (1 - seg(t, SPLIT, WIN))), mm = Math.floor(left / 60), ss = Math.floor(left % 60);
+  { const e = $("#clock"), e2 = $("#clock2"); e.style.left = e2.style.left = split ? "1000px" : "40px"; e.style.width = e2.style.width = split ? "700px" : "1840px"; e.style.top = split ? "880px" : "150px"; e2.style.top = split ? "985px" : "258px"; const left = Math.max(0, 12.5 * 60 * (1 - seg(t, SPLIT, WIN))), mm = Math.floor(left / 60), ss = Math.floor(left % 60);
     e.innerHTML = split ? `${String(mm).padStart(2, "0")}:${String(ss).padStart(2, "0")}` : '12.5 <span style="font-size:56px">MIN</span>'; e2.textContent = split ? (t < WIN ? "until Earth hears back (time-lapse)" : "signal received") : "one way, at the speed of light";
     show("#clock", fin(t, c[3] + 2.2) * (1 - fin(t, SPLIT_END - 0.3, 0.3))); show("#clock2", fin(t, c[3] + 2.6) * (1 - fin(t, SPLIT_END - 0.3, 0.3))); }
   show("#miss", fin(t, c[4] + 0.5) * (1 - fin(t, WIN - 0.6, 0.4)));
-  { const k = pop(t, WIN + 0.05, 0.45); $("#works").style.opacity = clamp(k * 2) * (1 - fin(t, c[6] - 0.2, 0.3)); $("#works").style.transform = `scale(${(0.6 + 0.4 * k).toFixed(3)})`; $("#works").style.top = split ? "170px" : "150px"; $("#works").style.width = split ? "960px" : "1920px"; }
+  { const k = pop(t, WIN + 0.05, 0.45); $("#works").style.opacity = clamp(k * 2) * (1 - fin(t, c[6] - 0.2, 0.3)); $("#works").style.transform = `scale(${(0.6 + 0.4 * k).toFixed(3)})`; $("#works").style.top = split ? "170px" : "150px"; $("#works").style.width = split ? "880px" : "1840px"; $("#works").style.left = "40px"; }
   show("#first1", fin(t, c[6] + 1.0) * (1 - fin(t, c[7] - 0.3, 0.3))); show("#first2", fin(t, c[6] + 4.0) * (1 - fin(t, c[7] - 0.3, 0.3)));
   if (t >= c[7] && t < c[8]) { const [sx, sy] = toScreen(cpos.clone().add(V(0, 2.6, 0))), e = $("#price"), pk = pop(t, c[7] + 1.2, 0.5); e.style.left = sx - 170 + "px"; e.style.top = sy - 110 + "px"; e.style.opacity = clamp(pk * 3); e.style.transform = `scale(${pk.toFixed(3)}) rotate(-4deg)`; const e2 = $("#price2"); e2.style.left = sx - 110 + "px"; e2.style.top = sy - 28 + "px"; e2.style.opacity = fin(t, c[7] + 1.6); }
   else { $("#price").style.opacity = 0; $("#price2").style.opacity = 0; }
   if (t >= c[8] && t < c[9] - 0.15) { const kg = E.out(seg(t, c[8] + 0.1, c[8] + 1.2)), km = E.out(seg(t, c[8] + 0.6, c[8] + 1.7));
-    [["#barG", `<b>$${Math.round(100 * kg)}M</b><br>GRAVITY<br><small>Hollywood film, 2013</small>`, -2.4], ["#barM", `<b>$${Math.round(74 * km)}M</b><br>MARS ORBITER MISSION<br><small>ISRO, 2013–14</small>`, 2.4]].forEach(([id, h, x]) => { const [sx, sy] = toScreen(BO.clone().add(V(x, -1.4, 0))), e = $(id); e.style.left = sx - 200 + "px"; e.style.top = sy + "px"; e.style.opacity = fin(t, c[8] + 0.6); e.innerHTML = h; }); }
+    [["#barG", `<b>$${Math.round(100 * kg)}M</b><br>GRAVITY<br><small>Hollywood film, 2013</small>`, -3.4], ["#barM", `<b>$${Math.round(74 * km)}M</b><br>MARS ORBITER MISSION<br><small>ISRO, 2013–14</small>`, 3.4]].forEach(([id, h, x]) => { const top = id === "#barG" ? 9 * kg + 2.6 : 9 * 0.74 * km + 2.4, [sx, sy] = toScreen(BO.clone().add(V(x, top, 0))), e = $(id); e.innerHTML = h; e.style.left = sx - 150 + "px"; e.style.top = sy - e.offsetHeight - 8 + "px"; e.style.opacity = fin(t, c[8] + 0.6); e.innerHTML = h; }); }
   else { $("#barG").style.opacity = 0; $("#barM").style.opacity = 0; }
   show("#title", fin(t, c[9] - 0.1, 0.5), 40);
   // telemetry: what the spacecraft is doing, live
@@ -307,5 +311,13 @@ function overlays(t, { split, cpos }) {
   $("#flash").style.opacity = (t > WIN && t < WIN + 0.5 ? 0.25 * (1 - seg(t, WIN, WIN + 0.5)) : 0) + (t > c[9] && t < c[9] + 0.3 ? 0.2 * (1 - seg(t, c[9], c[9] + 0.3)) : 0);
   $("#src").style.opacity = fin(t, 1.0) * (t < c[9] && !split ? 1 : 0); $("#split").style.opacity = split ? 1 : 0;
 }
+// ---------------------------------------------------------------- audit hooks: screen boxes of the 3D subjects for the current frame
+function projBox(objs, cam, dx = 0) { const b = new THREE.Box3(); objs.forEach(o => { if (o.visible !== false) b.expandByObject(o); }); if (b.isEmpty()) return null; let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+  for (let i = 0; i < 8; i++) { const p = V(i & 1 ? b.max.x : b.min.x, i & 2 ? b.max.y : b.min.y, i & 4 ? b.max.z : b.min.z).project(cam); if (p.z > 1) return null; const x = (p.x + 1) / 2 * W + dx, y = (1 - p.y) / 2 * H; x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); } return { x0, y0, x1, y1 }; }
+window.AUDIT3D = function (t) { const out = [], split = t >= SPLIT && t < SPLIT_END;
+  if (craft.visible && craft.scale.x < 2) { const b = projBox(parts, camera); if (b) out.push({ n: "[spacecraft]", ...b, subject: true, panel: split ? [0, 960] : [0, 1920] }); }
+  if (BAR.visible) [["[pillar Gravity]", [barG, reel]], ["[pillar MOM]", [barM, mini]]].forEach(([n, o]) => { const b = projBox(o, camera); if (b) out.push({ n, ...b, subject: true, panel: [0, 1920] }); });
+  if (split) { room_pose(t); const b = projBox([wall], roomCam, 480); if (b) out.push({ n: "[mission-control wall screen]", ...b, subject: true, panel: [960, 1920] }); }
+  return { split, boxes: out }; };
 window.DUR = TM.total;
 await document.fonts.ready; renderAt(parseFloat(Q.get("t")) || 0); window.READY = true;
