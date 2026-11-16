@@ -20,3 +20,6 @@ mars/out/seg*
 mars3d/out/*.wav
 mars3d/out/*.mp4
 mars3d/out/seg*
+marsacts/out/*.wav
+marsacts/out/*.mp4
+marsacts/out/seg*

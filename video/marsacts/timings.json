@@ -1,0 +1,544 @@
+{
+ "total": 365.795,
+ "scenes": [
+  {
+   "id": "hard",
+   "title": "Why Mars is hard",
+   "start": 0.6,
+   "dur": 50.406,
+   "lines": [
+    {
+     "text": "To see why this was remarkable, start with the problem.",
+     "start": 1.9,
+     "end": 4.893,
+     "marks": {}
+    },
+    {
+     "text": "Earth and Mars both circle the Sun, at different speeds. So the distance between them keeps changing, from about fifty-five million kilometres to around four hundred million.",
+     "start": 5.233,
+     "end": 15.798,
+     "marks": {}
+    },
+    {
+     "text": "You can't fly straight there. You launch onto a long, curving path around the Sun, and aim for where Mars will be, months later.",
+     "start": 16.138,
+     "end": 23.399,
+     "marks": {}
+    },
+    {
+     "text": "Even on the best path, the trip takes many months. Mangalyaan's took about ten.",
+     "start": 23.739,
+     "end": 28.425,
+     "marks": {}
+    },
+    {
+     "text": "The planets line up for this only once every twenty-six months. Miss the window, and you wait more than two years.",
+     "start": 28.765,
+     "end": 35.532,
+     "marks": {}
+    },
+    {
+     "text": "And getting there is only half the battle. Over the decades, many missions to Mars have failed. Some on launch, some on the way, some in the final minutes.",
+     "start": 35.872,
+     "end": 44.846,
+     "marks": {}
+    },
+    {
+     "text": "Until then, India had only ever been as far as the Moon.",
+     "start": 45.186,
+     "end": 48.466,
+     "marks": {}
+    }
+   ]
+  },
+  {
+   "id": "first",
+   "title": "Why first tries fail",
+   "start": 51.006,
+   "dur": 34.655,
+   "lines": [
+    {
+     "text": "Even the space powers struggled at first.",
+     "start": 1.9,
+     "end": 3.9,
+     "marks": {}
+    },
+    {
+     "text": "The Soviet Union's first two Mars probes, in 1960, never even reached orbit.",
+     "start": 4.24,
+     "end": 10.268,
+     "marks": {}
+    },
+    {
+     "text": "America's first attempt, Mariner three, failed in 1964, when its protective cover wouldn't open.",
+     "start": 10.608,
+     "end": 17.179,
+     "marks": {}
+    },
+    {
+     "text": "Japan's Nozomi never managed to enter Mars orbit, in 2003. China's first Mars orbiter was lost in 2011, along with the Russian probe that was carrying it.",
+     "start": 17.519,
+     "end": 29.284,
+     "marks": {}
+    },
+    {
+     "text": "Reaching Mars on the first try was almost unheard of.",
+     "start": 29.624,
+     "end": 32.715,
+     "marks": {}
+    }
+   ]
+  },
+  {
+   "id": "clock",
+   "title": "Fifteen months",
+   "start": 85.66,
+   "dur": 18.157,
+   "lines": [
+    {
+     "text": "On the third of August, 2012, the Indian government approved the mission.",
+     "start": 1.9,
+     "end": 6.437,
+     "marks": {}
+    },
+    {
+     "text": "The next launch window would open in November 2013.",
+     "start": 6.777,
+     "end": 10.455,
+     "marks": {}
+    },
+    {
+     "text": "That left about fifteen months to build a spacecraft that could survive a journey to another planet.",
+     "start": 10.795,
+     "end": 16.217,
+     "marks": {}
+    }
+   ]
+  },
+  {
+   "id": "rocket",
+   "title": "Trick one: a smaller rocket",
+   "start": 103.817,
+   "dur": 60.248,
+   "lines": [
+    {
+     "text": "Trick one: a smaller rocket.",
+     "start": 1.9,
+     "end": 3.366,
+     "marks": {}
+    },
+    {
+     "text": "ISRO's most powerful rocket at the time, the GSLV, had failed twice in 2010. So they chose the smaller, reliable PSLV.",
+     "start": 3.706,
+     "end": 13.358,
+     "marks": {}
+    },
+    {
+     "text": "On the fifth of November, 2013, it lifted off from Sriharikota.",
+     "start": 13.698,
+     "end": 18.346,
+     "marks": {}
+    },
+    {
+     "text": "But the PSLV wasn't powerful enough to throw the spacecraft straight to Mars. It could only put it into a long, oval orbit around Earth.",
+     "start": 18.686,
+     "end": 27.817,
+     "marks": {}
+    },
+    {
+     "text": "So ISRO used a clever trick. Every time the spacecraft swung closest to Earth, where it moves fastest, it fired its engine.",
+     "start": 28.157,
+     "end": 36.113,
+     "marks": {}
+    },
+    {
+     "text": "Engineers call this the Oberth effect. A push given where you're already moving fastest adds the most energy.",
+     "start": 36.453,
+     "end": 43.359,
+     "marks": {}
+    },
+    {
+     "text": "Each burn stretched the orbit wider. Over about a month, a series of burns pushed its highest point out beyond a hundred thousand kilometres.",
+     "start": 43.699,
+     "end": 52.116,
+     "marks": {}
+    },
+    {
+     "text": "Then, on the first of December, one final burn flung it free of Earth, and onto the road to Mars.",
+     "start": 52.456,
+     "end": 58.308,
+     "marks": {}
+    }
+   ]
+  },
+  {
+   "id": "small",
+   "title": "Trick two: keep it small",
+   "start": 164.065,
+   "dur": 34.152,
+   "lines": [
+    {
+     "text": "Trick two: keep it small.",
+     "start": 1.9,
+     "end": 3.15,
+     "marks": {}
+    },
+    {
+     "text": "At launch it weighed about thirteen hundred and forty kilograms, and most of that, about eight hundred and fifty, was fuel.",
+     "start": 3.49,
+     "end": 10.239,
+     "marks": {}
+    },
+    {
+     "text": "Mangalyaan carried just five science instruments. Together, they weighed about fifteen kilograms.",
+     "start": 10.579,
+     "end": 16.491,
+     "marks": {}
+    },
+    {
+     "text": "A camera to photograph the planet. Sensors to study its atmosphere, and to hunt for methane.",
+     "start": 16.831,
+     "end": 22.332,
+     "marks": {}
+    },
+    {
+     "text": "And its structure and engines were similar to India's first Moon probe, Chandrayaan-one. Proven designs meant less new engineering, and less to pay for.",
+     "start": 22.672,
+     "end": 32.212,
+     "marks": {}
+    }
+   ]
+  },
+  {
+   "id": "people",
+   "title": "Trick three: people",
+   "start": 198.217,
+   "dur": 23.395,
+   "lines": [
+    {
+     "text": "Trick three is people.",
+     "start": 1.9,
+     "end": 3.055,
+     "marks": {}
+    },
+    {
+     "text": "A large share of any space mission's cost is salaries. And engineers in India earn a fraction of what they would in the United States or Europe.",
+     "start": 3.395,
+     "end": 12.279,
+     "marks": {}
+    },
+    {
+     "text": "And nearly everything was designed and built in India, avoiding expensive imports.",
+     "start": 12.619,
+     "end": 17.778,
+     "marks": {}
+    },
+    {
+     "text": "A small team, a tight schedule, and no time for extras.",
+     "start": 18.118,
+     "end": 21.455,
+     "marks": {}
+    }
+   ]
+  },
+  {
+   "id": "nearly",
+   "title": "It almost went wrong",
+   "start": 221.612,
+   "dur": 46.598,
+   "lines": [
+    {
+     "text": "Not everything went to plan.",
+     "start": 1.9,
+     "end": 3.186,
+     "marks": {}
+    },
+    {
+     "text": "On the eleventh of November, 2013, during the fourth orbit-raising burn, the main engine shut down early. A valve fault had cut off its fuel.",
+     "start": 3.526,
+     "end": 13.28,
+     "marks": {}
+    },
+    {
+     "text": "Engineers planned an extra burn to make up the difference, and the spacecraft got back on track.",
+     "start": 13.62,
+     "end": 19.182,
+     "marks": {}
+    },
+    {
+     "text": "Then came the long cruise. For about three hundred days, the main engine sat unused, in the cold of deep space.",
+     "start": 19.522,
+     "end": 26.493,
+     "marks": {}
+    },
+    {
+     "text": "Would it fire again when it mattered most?",
+     "start": 26.833,
+     "end": 28.708,
+     "marks": {}
+    },
+    {
+     "text": "On the twenty-second of September, 2014, two days before arrival, ISRO tested it, for just four seconds. It worked.",
+     "start": 29.648,
+     "end": 37.645,
+     "marks": {}
+    },
+    {
+     "text": "Two days later came the burn you saw at the start. Twenty-four minutes, in Mars's shadow, entirely on its own.",
+     "start": 37.985,
+     "end": 44.658,
+     "marks": {}
+    }
+   ]
+  },
+  {
+   "id": "maven",
+   "title": "Another orbiter, the same week",
+   "start": 268.21,
+   "dur": 17.364,
+   "lines": [
+    {
+     "text": "Mangalyaan wasn't alone. That same week, NASA's MAVEN orbiter also reached Mars.",
+     "start": 1.9,
+     "end": 7.263,
+     "marks": {}
+    },
+    {
+     "text": "A bigger spacecraft, with more instruments, and a budget of several hundred million dollars.",
+     "start": 7.603,
+     "end": 12.758,
+     "marks": {}
+    },
+    {
+     "text": "Both worked. One cost a fraction of the other.",
+     "start": 13.098,
+     "end": 15.424,
+     "marks": {}
+    }
+   ]
+  },
+  {
+   "id": "payoff",
+   "title": "The payoff",
+   "start": 285.574,
+   "dur": 38.581,
+   "lines": [
+    {
+     "text": "Mangalyaan was designed to last six months.",
+     "start": 1.9,
+     "end": 4.313,
+     "marks": {}
+    },
+    {
+     "text": "It kept working for about eight years.",
+     "start": 4.653,
+     "end": 6.523,
+     "marks": {}
+    },
+    {
+     "text": "It photographed the whole planet, and its moon, Phobos, and studied the Martian atmosphere.",
+     "start": 6.863,
+     "end": 11.88,
+     "marks": {}
+    },
+    {
+     "text": "India was so proud of it that Mangalyaan later appeared on the back of the two-thousand-rupee banknote.",
+     "start": 12.22,
+     "end": 18.302,
+     "marks": {}
+    },
+    {
+     "text": "Contact was finally lost in 2022, when its fuel ran out and its batteries drained.",
+     "start": 18.642,
+     "end": 24.881,
+     "marks": {}
+    },
+    {
+     "text": "Spread over a journey of roughly six hundred and fifty million kilometres, Prime Minister Modi pointed out, the trip cost about seven rupees per kilometre.",
+     "start": 25.221,
+     "end": 34.696,
+     "marks": {}
+    },
+    {
+     "text": "Less than an auto-rickshaw ride.",
+     "start": 35.036,
+     "end": 36.641,
+     "marks": {}
+    }
+   ]
+  },
+  {
+   "id": "meaning",
+   "title": "What it means",
+   "start": 324.154,
+   "dur": 27.136,
+   "lines": [
+    {
+     "text": "So cheap didn't mean careless.",
+     "start": 1.9,
+     "end": 3.328,
+     "marks": {}
+    },
+    {
+     "text": "It meant choosing simple, proven solutions, and letting physics do the work that money usually does.",
+     "start": 3.668,
+     "end": 9.57,
+     "marks": {}
+    },
+    {
+     "text": "Nine years later, the same frugal approach helped Chandrayaan-three land near the Moon's south pole, the first mission ever to land there.",
+     "start": 9.91,
+     "end": 18.094,
+     "marks": {}
+    },
+    {
+     "text": "That's how India reached Mars for less than the cost of a movie, and got there on its very first try.",
+     "start": 18.434,
+     "end": 24.396,
+     "marks": {}
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "title": "",
+   "start": 351.29,
+   "dur": 14.505,
+   "lines": [
+    {
+     "text": "If you enjoyed this, subscribe to Modus and Raison, and tell me what we should explain next.",
+     "start": 1.9,
+     "end": 7.065,
+     "marks": {}
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "name": "fail",
+   "t": 39.672,
+   "scene": "hard"
+  },
+  {
+   "name": "whoosh_in",
+   "t": 0.6,
+   "scene": "hard"
+  },
+  {
+   "name": "fail",
+   "t": 56.745,
+   "scene": "first"
+  },
+  {
+   "name": "whoosh_in",
+   "t": 51.006,
+   "scene": "first"
+  },
+  {
+   "name": "stamp",
+   "t": 90.16,
+   "scene": "clock"
+  },
+  {
+   "name": "tick",
+   "t": 96.455,
+   "scene": "clock"
+  },
+  {
+   "name": "whoosh_in",
+   "t": 85.66,
+   "scene": "clock"
+  },
+  {
+   "name": "clunk",
+   "t": 110.523,
+   "scene": "rocket"
+  },
+  {
+   "name": "launch",
+   "t": 117.515,
+   "scene": "rocket"
+  },
+  {
+   "name": "burn",
+   "t": 135.374,
+   "scene": "rocket"
+  },
+  {
+   "name": "whoosh",
+   "t": 158.273,
+   "scene": "rocket"
+  },
+  {
+   "name": "whoosh_in",
+   "t": 103.817,
+   "scene": "rocket"
+  },
+  {
+   "name": "whoosh_in",
+   "t": 164.065,
+   "scene": "small"
+  },
+  {
+   "name": "whoosh_in",
+   "t": 198.217,
+   "scene": "people"
+  },
+  {
+   "name": "alarm",
+   "t": 229.337,
+   "scene": "nearly"
+  },
+  {
+   "name": "burn",
+   "t": 236.232,
+   "scene": "nearly"
+  },
+  {
+   "name": "burn",
+   "t": 255.66,
+   "scene": "nearly"
+  },
+  {
+   "name": "success",
+   "t": 257.26,
+   "scene": "nearly"
+  },
+  {
+   "name": "whoosh_in",
+   "t": 221.612,
+   "scene": "nearly"
+  },
+  {
+   "name": "whoosh_in",
+   "t": 268.21,
+   "scene": "maven"
+  },
+  {
+   "name": "hit",
+   "t": 290.327,
+   "scene": "payoff"
+  },
+  {
+   "name": "horn",
+   "t": 321.01,
+   "scene": "payoff"
+  },
+  {
+   "name": "whoosh_in",
+   "t": 285.574,
+   "scene": "payoff"
+  },
+  {
+   "name": "whoosh_in",
+   "t": 324.154,
+   "scene": "meaning"
+  },
+  {
+   "name": "whoosh_in",
+   "t": 351.29,
+   "scene": "end"
+  }
+ ]
+}

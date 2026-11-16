@@ -1,0 +1,314 @@
+[
+ {
+  "id": "hard",
+  "title": "Why Mars is hard",
+  "lines": [
+   {
+    "t": "To see why this was remarkable, start with the problem."
+   },
+   {
+    "t": "Earth and Mars both circle the Sun, at different speeds. So the distance between them keeps changing, from about fifty-five million kilometres to around four hundred million."
+   },
+   {
+    "t": "You can't fly straight there. You launch onto a long, curving path around the Sun, and aim for where Mars will be, months later."
+   },
+   {
+    "t": "Even on the best path, the trip takes many months. Mangalyaan's took about ten."
+   },
+   {
+    "t": "The planets line up for this only once every twenty-six months. Miss the window, and you wait more than two years."
+   },
+   {
+    "t": "And getting there is only half the battle. Over the decades, many missions to Mars have failed. Some on launch, some on the way, some in the final minutes.",
+    "sfx": [
+     [
+      "fail",
+      3.2
+     ]
+    ]
+   },
+   {
+    "t": "Until then, India had only ever been as far as the Moon."
+   }
+  ]
+ },
+ {
+  "id": "first",
+  "title": "Why first tries fail",
+  "lines": [
+   {
+    "t": "Even the space powers struggled at first."
+   },
+   {
+    "t": "The Soviet Union's first two Mars probes, in 1960, never even reached orbit.",
+    "sfx": [
+     [
+      "fail",
+      1.5
+     ]
+    ]
+   },
+   {
+    "t": "America's first attempt, Mariner three, failed in 1964, when its protective cover wouldn't open."
+   },
+   {
+    "t": "Japan's Nozomi never managed to enter Mars orbit, in 2003. China's first Mars orbiter was lost in 2011, along with the Russian probe that was carrying it."
+   },
+   {
+    "t": "Reaching Mars on the first try was almost unheard of."
+   }
+  ]
+ },
+ {
+  "id": "clock",
+  "title": "Fifteen months",
+  "lines": [
+   {
+    "t": "On the third of August, 2012, the Indian government approved the mission.",
+    "sfx": [
+     [
+      "stamp",
+      2.6
+     ]
+    ]
+   },
+   {
+    "t": "The next launch window would open in November 2013."
+   },
+   {
+    "t": "That left about fifteen months to build a spacecraft that could survive a journey to another planet.",
+    "sfx": [
+     [
+      "tick",
+      0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "rocket",
+  "title": "Trick one: a smaller rocket",
+  "lines": [
+   {
+    "t": "Trick one: a smaller rocket."
+   },
+   {
+    "t": "ISRO's most powerful rocket at the time, the GSLV, had failed twice in 2010. So they chose the smaller, reliable PSLV.",
+    "sfx": [
+     [
+      "clunk",
+      3.0
+     ]
+    ]
+   },
+   {
+    "t": "On the fifth of November, 2013, it lifted off from Sriharikota.",
+    "sfx": [
+     [
+      "launch",
+      0
+     ]
+    ]
+   },
+   {
+    "t": "But the PSLV wasn't powerful enough to throw the spacecraft straight to Mars. It could only put it into a long, oval orbit around Earth."
+   },
+   {
+    "t": "So ISRO used a clever trick. Every time the spacecraft swung closest to Earth, where it moves fastest, it fired its engine.",
+    "sfx": [
+     [
+      "burn",
+      3.4
+     ]
+    ]
+   },
+   {
+    "t": "Engineers call this the Oberth effect. A push given where you're already moving fastest adds the most energy."
+   },
+   {
+    "t": "Each burn stretched the orbit wider. Over about a month, a series of burns pushed its highest point out beyond a hundred thousand kilometres."
+   },
+   {
+    "t": "Then, on the first of December, one final burn flung it free of Earth, and onto the road to Mars.",
+    "sfx": [
+     [
+      "whoosh",
+      2.0
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "small",
+  "title": "Trick two: keep it small",
+  "lines": [
+   {
+    "t": "Trick two: keep it small."
+   },
+   {
+    "t": "At launch it weighed about thirteen hundred and forty kilograms, and most of that, about eight hundred and fifty, was fuel."
+   },
+   {
+    "t": "Mangalyaan carried just five science instruments. Together, they weighed about fifteen kilograms."
+   },
+   {
+    "t": "A camera to photograph the planet. Sensors to study its atmosphere, and to hunt for methane."
+   },
+   {
+    "t": "And its structure and engines were similar to India's first Moon probe, Chandrayaan-one. Proven designs meant less new engineering, and less to pay for."
+   }
+  ]
+ },
+ {
+  "id": "people",
+  "title": "Trick three: people",
+  "lines": [
+   {
+    "t": "Trick three is people."
+   },
+   {
+    "t": "A large share of any space mission's cost is salaries. And engineers in India earn a fraction of what they would in the United States or Europe."
+   },
+   {
+    "t": "And nearly everything was designed and built in India, avoiding expensive imports."
+   },
+   {
+    "t": "A small team, a tight schedule, and no time for extras."
+   }
+  ]
+ },
+ {
+  "id": "nearly",
+  "title": "It almost went wrong",
+  "lines": [
+   {
+    "t": "Not everything went to plan."
+   },
+   {
+    "t": "On the eleventh of November, 2013, during the fourth orbit-raising burn, the main engine shut down early. A valve fault had cut off its fuel.",
+    "sfx": [
+     [
+      "alarm",
+      4.2
+     ]
+    ]
+   },
+   {
+    "t": "Engineers planned an extra burn to make up the difference, and the spacecraft got back on track.",
+    "sfx": [
+     [
+      "burn",
+      1.0
+     ]
+    ]
+   },
+   {
+    "t": "Then came the long cruise. For about three hundred days, the main engine sat unused, in the cold of deep space."
+   },
+   {
+    "t": "Would it fire again when it mattered most?",
+    "pause": 0.6
+   },
+   {
+    "t": "On the twenty-second of September, 2014, two days before arrival, ISRO tested it, for just four seconds. It worked.",
+    "sfx": [
+     [
+      "burn",
+      4.4
+     ],
+     [
+      "success",
+      6.0
+     ]
+    ]
+   },
+   {
+    "t": "Two days later came the burn you saw at the start. Twenty-four minutes, in Mars's shadow, entirely on its own."
+   }
+  ]
+ },
+ {
+  "id": "maven",
+  "title": "Another orbiter, the same week",
+  "lines": [
+   {
+    "t": "Mangalyaan wasn't alone. That same week, NASA's MAVEN orbiter also reached Mars."
+   },
+   {
+    "t": "A bigger spacecraft, with more instruments, and a budget of several hundred million dollars."
+   },
+   {
+    "t": "Both worked. One cost a fraction of the other."
+   }
+  ]
+ },
+ {
+  "id": "payoff",
+  "title": "The payoff",
+  "lines": [
+   {
+    "t": "Mangalyaan was designed to last six months."
+   },
+   {
+    "t": "It kept working for about eight years.",
+    "sfx": [
+     [
+      "hit",
+      0.1
+     ]
+    ]
+   },
+   {
+    "t": "It photographed the whole planet, and its moon, Phobos, and studied the Martian atmosphere."
+   },
+   {
+    "t": "India was so proud of it that Mangalyaan later appeared on the back of the two-thousand-rupee banknote."
+   },
+   {
+    "t": "Contact was finally lost in 2022, when its fuel ran out and its batteries drained."
+   },
+   {
+    "t": "Spread over a journey of roughly six hundred and fifty million kilometres, Prime Minister Modi pointed out, the trip cost about seven rupees per kilometre."
+   },
+   {
+    "t": "Less than an auto-rickshaw ride.",
+    "sfx": [
+     [
+      "horn",
+      0.4
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "meaning",
+  "title": "What it means",
+  "lines": [
+   {
+    "t": "So cheap didn't mean careless."
+   },
+   {
+    "t": "It meant choosing simple, proven solutions, and letting physics do the work that money usually does."
+   },
+   {
+    "t": "Nine years later, the same frugal approach helped Chandrayaan-three land near the Moon's south pole, the first mission ever to land there."
+   },
+   {
+    "t": "That's how India reached Mars for less than the cost of a movie, and got there on its very first try.",
+    "pause": 0.8
+   }
+  ]
+ },
+ {
+  "id": "end",
+  "title": "",
+  "lines": [
+   {
+    "t": "If you enjoyed this, subscribe to Modus and Raison, and tell me what we should explain next."
+   }
+  ]
+ }
+]
