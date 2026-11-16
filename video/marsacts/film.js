@@ -339,7 +339,7 @@ function shot(tg) {
   }
   else if (id === "clock") {   // fifteen months
     TL.visible = true; const k = isk(c[1] - 0.5, c[2] + 3.0); tlFill.scale.x = Math.max(0.01, TLW * k); tlFill.position.x = -TLW / 2 + TLW * k / 2; ticks.forEach((m, i) => { m.material.emissive.setHex(i / 15 <= k ? 0xffa020 : 0x000000); }); tlHead.position.set(-TLW / 2 + TLW * k, 0, 0);
-    look(V(lerp(-30, 20, k), 26, 120), V(0, -6, 0), 40, 0, 0.3, tg);
+    look(V(lerp(-10, 10, k), 30, 168), V(0, -8, 0), 40, 0, 0.3, tg);
     card("ap", "<span class='k'>APPROVED</span><b>3 Aug 2012</b>", { x: 140, y: 690, w: 330, k: fin(t, c[0] + 2.4) });
     card("lw", "<span class='k'>LAUNCH WINDOW</span><b>Nov 2013</b>", { x: 1440, y: 690, w: 330, k: fin(t, c[1] + 0.6) });
     card("m15", `<b class="huge">${Math.round(15 * k)}</b><br>months`, { x: 760, y: 150, w: 400, k: fin(t, c[1] + 2.0), cls: "center" });
@@ -350,7 +350,7 @@ function shot(tg) {
     if (t < L2) {   // GSLV vs PSLV on the pad
       ROCK.visible = true; STARS.visible = SKY.visible = false; skyDome.material.uniforms.alt.value = 0; pslv.position.set(8, 0, 0); gslv.position.set(-8, 0, 0); exhaust.visible = exGlow.visible = false; tower.position.set(30, 0, -10); SMOKE.forEach(m => m.s.visible = false);
       look(V(lerp(-14, 14, isk(0, L2)), 22, 112), V(0, 24, 0), 40, 0, 0.3, tg); exp = 0.72; bloomK = 0.15;
-      const [gx, gy] = toScreen(V(-11, 28, 0)), [px, py] = toScreen(V(11, 28, 0));
+      const [gx, gy] = toScreen(V(-12.5, 28, 0)), [px, py] = toScreen(V(13.5, 28, 0));
       card("gslv", "<span class='k'>GSLV</span>more powerful<br><span class='red'>failed twice in 2010</span>", { x: gx - 320, y: gy - 50, w: 300, k: fin(t, c[1] + 0.8) });
       card("pslvl", "<span class='k'>PSLV</span>smaller<br><span class='green'>reliable</span>", { x: px + 20, y: py - 50, w: 300, k: fin(t, c[1] + 4.0) });
       SUBJ.push({ n: "[GSLV]", objs: [gslv] }, { n: "[PSLV]", objs: [pslv] });
@@ -358,20 +358,20 @@ function shot(tg) {
       ROCK.visible = true; STARS.visible = SKY.visible = false; gslv.visible = false; const lt = Math.max(0, t - L2 - 0.6), yR = 0.9 * lt * lt; pslv.position.set(0, yR, 0); tower.position.set(6, 0, 0);
       skyDome.material.uniforms.alt.value = clamp(yR / 900); exhaust.visible = exGlow.visible = t > L2 + 0.2; exhaust.material.uniforms.k.value = exGlow.material.uniforms.k.value = fin(t, L2 + 0.2, 0.4); exhaust.material.uniforms.t.value = exGlow.material.uniforms.t.value = tg;
       SMOKE.forEach(({ s, a, sp }, i) => { const age = clamp((t - L2 - 0.2) * sp * 0.6 - i * 0.008); s.visible = age > 0; s.position.set(Math.cos(a) * age * 40, 2 + age * 6, Math.sin(a) * age * 40); s.scale.setScalar(6 + age * 30); s.material.opacity = 0.75 * (1 - age); });
-      look(V(-46, 8 + yR * 0.45, 86), V(0, 22 + yR * 0.92, 0), 40, 0, 0.4, tg); exp = 0.72; bloomK = 0.2;
+      look(V(-52, 20 + yR, 104), V(0, 24 + yR, 0), 40, 0, 0.4, tg); exp = 0.72; bloomK = 0.2;
       card("shar", "<span class='k'>5 NOVEMBER 2013</span><b>Sriharikota</b>", { x: 80, y: 150, w: 380, k: fin(t, L2 + 1.2) * (1 - fin(t, L3 - 0.4, 0.3)) });
-      SUBJ.push({ n: "[PSLV]", objs: [pslv] });
+      SUBJ.push({ n: "[PSLV]", objs: pslv.children.filter(o => o !== exhaust && o !== exGlow) });
     } else {   // around Earth: orbit raising, then the departure burn
       EAR.visible = true; bigEarth.rotation.y = tg * 0.02; bigClouds.rotation.y = tg * 0.026; const stepT = [c[4] + 2.5, c[4] + 3.8, c[5] + 1.5, c[6] - 1.0, c[6] + 0.5], nOrb = 1 + stepT.filter(x => t >= x).length;
       ORBS.forEach((r, i) => { r.visible = i < nOrb; r.material.uniforms.p.value = i < nOrb - 1 ? 1 : fin(t, i ? stepT[i - 1] : L3 + 1, 1.0); r.material.uniforms.o.value = i < nOrb - 1 ? 0.3 : 1; r.material.uniforms.head.value = i < nOrb - 1 ? 0 : 1; });
       periMark.position.set(-PER_U - 0.5, 0, 0); periMark.visible = t > c[4] + 1.5 && t < c[7] + 0.5; periMark.material.opacity = 0.5 + 0.5 * Math.sin(tg * 6);
       const departing = t >= c[7] + 1.5; tmi.visible = departing; tmi.material.uniforms.p.value = fin(t, c[7] + 1.5, 2.4);
-      const camK = isk(L3, c[4] + 1), camOut = isk(c[7] + 1.0, d - 0.5); look(V(lerp(-160, -120, camK), lerp(140, 300, camK) + camOut * 260, lerp(260, 420, camK) + camOut * 500), V(lerp(0, 60, camK), 0, 0), 42, 0, 0.3, tg);
+      const camK = isk(L3, c[4] + 1), camOut = isk(c[7] + 1.0, d - 0.5); look(V(lerp(-210, -120, camK), lerp(180, 300, camK) + camOut * 260, lerp(340, 420, camK) + camOut * 500), V(lerp(0, 60, camK), 0, 0), 42, 0, 0.3, tg);
       card("apo", `<span class='k'>HIGHEST POINT OF ORBIT</span><b>${kmFmt(APO[Math.min(APO.length - 1, nOrb - 1)])} km</b><br><small>orbit sizes not to scale</small>`, { x: 80, y: 150, w: 420, k: fin(t, L3 + 1.2) * (1 - fin(t, c[7] + 1.2, 0.3)) });
       card("ober", "<span class='k'>OBERTH EFFECT</span>Push where you're fastest<br>for the biggest boost", { x: 80, y: 150, w: 420, k: 0 });
       card("tmi", "<span class='k'>1 DECEMBER 2013</span><b>Trans-Mars injection</b>", { x: 80, y: 150, w: 420, k: fin(t, c[7] + 1.4) });
       card("peri", "closest point:<br>engine fires here", { x: 0, y: 0, w: 260, k: 0 });
-      if (t > c[4] + 1.5 && t < c[7]) { const [sx, sy] = toScreen(V(-PER_U, 0, 0)); card("peri", "closest point · engine fires here", { x: sx - 330, y: sy + 30, w: 300, k: fin(t, c[4] + 1.8) * (1 - fin(t, c[7] - 0.3, 0.3)) }); }
+      if (t > c[4] + 1.5 && t < c[7]) { const [sx, sy] = toScreen(V(-PER_U, 0, 0)); const eb = projBox([bigEarth], camera); card("peri", "closest point · engine fires here", { x: Math.max(40, (eb ? eb.x0 : sx) - 330), y: Math.min(880, (eb ? eb.y1 : sy) + 16), w: 300, k: fin(t, c[4] + 1.8) * (1 - fin(t, c[7] - 0.3, 0.3)) }); }
       if (t > c[5] && t < c[6] + 0.5) card("ober", "<span class='k'>OBERTH EFFECT</span>Push where you're fastest<br>for the biggest boost", { x: 1440, y: 150, w: 420, k: fin(t, c[5] + 0.6) * (1 - fin(t, c[6] + 0.2, 0.3)) });
       SUBJ.push({ n: "[Earth]", objs: [bigEarth] });
     }
@@ -387,7 +387,7 @@ function shot(tg) {
   }
   else if (id === "people") {   // mission control, full frame
     useRoom = true; people.forEach(({ arms }, i) => arms.forEach((a, s) => { a.rotation.z = (s ? 1 : -1) * 0.25; })); wall.material.map = waitTex;
-    const k = isk(0, d); roomCam.position.set(lerp(-3, 3, k), lerp(4.2, 3.6, k), lerp(16, 12.5, k)); roomCam.lookAt(0, 2.6, -2); roomCam.updateMatrixWorld(); cam = roomCam;
+    const k = isk(0, d); roomCam.position.set(lerp(-3, 3, k), lerp(4.2, 3.8, k), lerp(16.5, 14.5, k)); roomCam.lookAt(0, 2.6, -2); roomCam.updateMatrixWorld(); cam = roomCam;
     card("sal", "<span class='k'>SALARIES</span>Engineers in India earn a fraction<br>of US or European pay", { x: 80, y: 150, w: 520, k: fin(t, c[1] + 1.0) * (1 - fin(t, c[3] - 0.4, 0.3)) });
     card("built", "<span class='k'>BUILT AT HOME</span>Designed and built in India", { x: 1320, y: 150, w: 520, k: fin(t, c[2] + 0.6) * (1 - fin(t, c[3] - 0.4, 0.3)) });
     card("team", "Small team · tight schedule · no extras", { x: 560, y: 150, w: 800, k: fin(t, c[3] + 0.3), cls: "center big" });
@@ -419,7 +419,7 @@ function shot(tg) {
     const bm = projBox(parts, camera), bv = projBox([maven], camera);
     if (bm) card("lm", "<span class='k'>MANGALYAAN · ISRO</span>≈ $74 million", { x: (bm.x0 + bm.x1) / 2 - 160, y: Math.min(880, bm.y1 + 16), w: 320, k: fin(t, c[1] + 0.4), cls: "center" });
     if (bv) card("lv", "<span class='k'>MAVEN · NASA</span>several hundred<br>million dollars", { x: (bv.x0 + bv.x1) / 2 - 170, y: Math.min(880, bv.y1 + 16), w: 340, k: fin(t, c[1] + 1.4), cls: "center" });
-    card("both", "Both worked. <b class='gold'>One cost a fraction of the other.</b>", { x: 410, y: 150, w: 1100, k: fin(t, c[2] + 0.2), cls: "center big" });
+    card("both", "Both worked. <b class='gold'>One cost a fraction of the other.</b>", { x: 410, y: 900, w: 1100, k: fin(t, c[2] + 0.2), cls: "center big" });
   }
   else if (id === "payoff") {
     mars.visible = marsAtmo.visible = marsHaze.visible = phobos.visible = true; const a = 1.8 + tg * 0.06, p = V(Math.cos(a) * 160, 40, Math.sin(a) * 160);
@@ -471,7 +471,7 @@ window.renderAt = function (tg) {
   const sc = info.sc, fade = Math.min(fin(info.t, 0, 0.35), 1 - fin(info.t, sc.dur - 0.35, 0.35)); $("#veil").style.opacity = sc === TM.scenes[0] ? 1 - fin(info.t, 0, 0.6) : 1 - Math.max(0, fade);
 };
 window.AUDIT3D = function () { const out = []; for (const s of SUBJ) { const b = projBox(s.objs, s.cam || camera); if (b) out.push({ n: s.n, ...b, subject: true, panel: [0, 1920] }); } return { split: false, boxes: out }; };
-function projBox(objs, cam, dx = 0) { const b = new THREE.Box3(); objs.forEach(o => b.expandByObject(o)); if (b.isEmpty()) return null; let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+function projBox(objs, cam, dx = 0) { const b = new THREE.Box3(); objs.forEach(o => { if (!o.visible) return; o.updateMatrixWorld(true); o.traverseVisible(ch => { if ((ch.isMesh || ch.isPoints) && ch.geometry) { if (!ch.geometry.boundingBox) ch.geometry.computeBoundingBox(); b.union(ch.geometry.boundingBox.clone().applyMatrix4(ch.matrixWorld)); } }); }); if (b.isEmpty()) return null; let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
   for (let i = 0; i < 8; i++) { const p = V(i & 1 ? b.max.x : b.min.x, i & 2 ? b.max.y : b.min.y, i & 4 ? b.max.z : b.min.z).project(cam); if (p.z > 1) return null; const x = (p.x + 1) / 2 * W + dx, y = (1 - p.y) / 2 * H; x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); } return { x0, y0, x1, y1 }; }
 window.DUR = TM.total;
 await document.fonts.ready; await Promise.all([...document.images].map(i => i.decode().catch(() => 0))); renderAt(parseFloat(Q.get("t")) || 0); window.READY = true;
