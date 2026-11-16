@@ -5,7 +5,7 @@ const TM = JSON.parse(fs.readFileSync(path.join(__dirname, 'timings.json'))), TO
 for (const s of SEGS) for (let p = 0; p < PARTS; p++) { const a = s * SEG + Math.floor(p * SEG / PARTS), z = Math.min(TOTAL, s * SEG + Math.floor((p + 1) * SEG / PARTS)), f = path.join(OUT, `part_${s}_${p}.mp4`); if (a < z && !fs.existsSync(f)) jobs.push({ s, p, a, z, f }); }
 console.log(jobs.length, 'chunks'); const t0 = Date.now();
 async function worker() { const b = await chromium.launch({ args: ['--ignore-gpu-blocklist', '--enable-unsafe-swiftshader'] }); const pg = await b.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: DSF });
-  await pg.goto(`http://localhost:8765/marsacts/film.html?raw&mb=5&fps=${FPS}&pr=${DSF}`); await pg.waitForFunction('window.READY', null, { timeout: 180000 });
+  await pg.goto(`http://localhost:8765/marsacts/film.html?raw&mb=2&fps=${FPS}&pr=${DSF}`); await pg.waitForFunction('window.READY', null, { timeout: 180000 });
   while (jobs.length) { const j = jobs.shift(), ff = spawn('ffmpeg', ['-v', 'error', '-y', '-f', 'image2pipe', '-c:v', 'mjpeg', '-framerate', String(FPS), '-i', '-', '-c:v', 'libx264', '-preset', 'fast', '-crf', '15', '-pix_fmt', 'yuv420p', j.f + '.part.mp4'], { stdio: ['pipe', 'inherit', 'inherit'] }), closed = new Promise(r => ff.on('close', r));
     for (let f = j.a; f < j.z; f++) { await pg.evaluate(t => renderAt(t), f / FPS); const buf = await pg.screenshot({ type: 'jpeg', quality: 95 }); if (!ff.stdin.write(buf)) await new Promise(r => ff.stdin.once('drain', r)); }
     ff.stdin.end(); if (await closed === 0) { fs.renameSync(j.f + '.part.mp4', j.f); console.log('chunk', j.s, j.p, 'done', ((Date.now() - t0) / 60000).toFixed(1), 'min'); } }
