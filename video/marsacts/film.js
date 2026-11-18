@@ -452,23 +452,23 @@ function shot(tg) {
   }
   else {   // end card
     mars.visible = marsAtmo.visible = marsHaze.visible = true; look(V(0, 60, 420), V(0, 0, 0), 38, 0, 0.3, tg);
-    card("banner", "<img src='assets/banner.png' alt='Everyday Insides banner'>", { x: 460, y: 100, w: 1000, k: fin(t, 0.3, 0.6), cls: "banner" });
+    card("banner", "<img src='assets/banner.png' alt='Noksa Webcasts banner'>", { x: 560, y: 70, w: 800, k: fin(t, 0.3, 0.6), cls: "banner" });
     // like & subscribe: buttons pop in, a cursor clicks LIKE, then SUBSCRIBE, and the bell rings
     const L0 = c[0] + 0.6, CL = c[0] + 2.1, CS = c[0] + 3.4, BELL = CS + 0.35;
     const press = (tc) => t < tc ? 1 : t < tc + 0.09 ? lerp(1, 0.9, (t - tc) / 0.09) : lerp(0.9, 1, E.back(seg(t, tc + 0.09, tc + 0.45)));
     const liked = t >= CL + 0.05, subbed = t >= CS + 0.05;
     const thumb = liked ? 1 + 0.35 * Math.sin(Math.PI * seg(t, CL + 0.05, CL + 0.45)) : 1;
     card("like", `<span style="display:inline-block;transform:scale(${press(CL).toFixed(3)})"><span style="display:inline-block;transform:scale(${thumb.toFixed(3)}) rotate(${liked ? (-14 * Math.sin(Math.PI * seg(t, CL + 0.05, CL + 0.45))).toFixed(1) : 0}deg)">👍</span> ${liked ? "LIKED" : "LIKE"}</span>`,
-      { x: 570, y: 640, w: 320, k: pop(t, L0, 0.5), cls: "btn " + (liked ? "blue on" : "blue") });
+      { x: 570, y: 712, w: 320, k: pop(t, L0, 0.5), cls: "btn " + (liked ? "blue on" : "blue") });
     const ring = Math.sin((t - BELL) * 26) * 22 * Math.exp(-(t - BELL) * 2.2) * (t > BELL ? 1 : 0);
     card("sub", `<span style="display:inline-block;transform:scale(${press(CS).toFixed(3)})">${subbed ? `SUBSCRIBED <span style="display:inline-block;transform-origin:50% 10%;transform:rotate(${ring.toFixed(1)}deg)">🔔</span>` : "SUBSCRIBE"}</span>`,
-      { x: 950, y: 640, w: 380, k: pop(t, L0 + 0.35, 0.5), cls: "btn " + (subbed ? "grey" : "red") });
+      { x: 950, y: 712, w: 380, k: pop(t, L0 + 0.35, 0.5), cls: "btn " + (subbed ? "grey" : "red") });
     // click bursts
     const burst = (id, cx, cy, tc) => { const q = seg(t, tc, tc + 0.55); card(id, "", { x: cx - 120, y: cy - 120, w: 240, k: q > 0 && q < 1 ? 1 - q : 0, cls: "burst" }); OV[id].style.transform = `scale(${(0.4 + q * 0.9).toFixed(3)})`; };
-    burst("bl", 730, 685, CL); burst("bs", 1140, 685, CS);
+    burst("bl", 730, 757, CL); burst("bs", 1140, 757, CS);
     // cursor path: in from the lower right, to LIKE, to SUBSCRIBE, then away
     const pIn = E.io(seg(t, c[0] + 1.2, CL - 0.08)), pMid = E.io(seg(t, CL + 0.35, CS - 0.08)), pOut = E.io(seg(t, CS + 0.6, CS + 1.4));
-    let cx = lerp(1560, 760, pIn), cy = lerp(1000, 705, pIn); cx = lerp(cx, 1170, pMid); cy = lerp(cy, 705, pMid); cx = lerp(cx, 1500, pOut); cy = lerp(cy, 980, pOut);
+    let cx = lerp(1560, 760, pIn), cy = lerp(1040, 777, pIn); cx = lerp(cx, 1170, pMid); cy = lerp(cy, 777, pMid); cx = lerp(cx, 1500, pOut); cy = lerp(cy, 980, pOut);
     card("cur", `<svg width="58" height="64" viewBox="0 0 29 32"><path d="M3 2 L3 25 L9 19.5 L13 29 L17 27.4 L13 18 L21 18 Z" fill="#fff" stroke="#1d2433" stroke-width="2" stroke-linejoin="round"/></svg>`,
       { x: cx, y: cy, w: 60, k: fin(t, c[0] + 1.2, 0.3) * (1 - fin(t, CS + 1.0, 0.4)), cls: "cursor" });
     OV.cur.style.transform = `scale(${(1 - 0.15 * clamp((1 - Math.min(press(CL), press(CS))) / 0.1)).toFixed(3)})`;

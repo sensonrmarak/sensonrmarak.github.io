@@ -1,5 +1,5 @@
 {
- "total": 365.622,
+ "total": 365.649,
  "scenes": [
   {
    "id": "hard",
@@ -403,12 +403,12 @@
    "id": "end",
    "title": "",
    "start": 351.293,
-   "dur": 14.329,
+   "dur": 14.355,
    "lines": [
     {
-     "text": "If you enjoyed this, subscribe to Everyday Insides, and tell me what we should explain next.",
+     "text": "If you enjoyed this, subscribe to Noksa Webcasts, and tell me what we should explain next.",
      "start": 1.9,
-     "end": 6.889,
+     "end": 6.915,
      "marks": {}
     }
    ]
