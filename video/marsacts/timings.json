@@ -1,11 +1,11 @@
 {
- "total": 365.795,
+ "total": 365.622,
  "scenes": [
   {
    "id": "hard",
    "title": "Why Mars is hard",
    "start": 0.6,
-   "dur": 50.406,
+   "dur": 50.404,
    "lines": [
     {
      "text": "To see why this was remarkable, start with the problem.",
@@ -34,19 +34,19 @@
     {
      "text": "The planets line up for this only once every twenty-six months. Miss the window, and you wait more than two years.",
      "start": 28.765,
-     "end": 35.532,
+     "end": 35.533,
      "marks": {}
     },
     {
      "text": "And getting there is only half the battle. Over the decades, many missions to Mars have failed. Some on launch, some on the way, some in the final minutes.",
-     "start": 35.872,
-     "end": 44.846,
+     "start": 35.873,
+     "end": 44.844,
      "marks": {}
     },
     {
      "text": "Until then, India had only ever been as far as the Moon.",
-     "start": 45.186,
-     "end": 48.466,
+     "start": 45.184,
+     "end": 48.464,
      "marks": {}
     }
    ]
@@ -54,8 +54,8 @@
   {
    "id": "first",
    "title": "Why first tries fail",
-   "start": 51.006,
-   "dur": 34.655,
+   "start": 51.004,
+   "dur": 34.659,
    "lines": [
     {
      "text": "Even the space powers struggled at first.",
@@ -66,25 +66,25 @@
     {
      "text": "The Soviet Union's first two Mars probes, in 1960, never even reached orbit.",
      "start": 4.24,
-     "end": 10.268,
+     "end": 10.269,
      "marks": {}
     },
     {
      "text": "America's first attempt, Mariner three, failed in 1964, when its protective cover wouldn't open.",
-     "start": 10.608,
-     "end": 17.179,
+     "start": 10.609,
+     "end": 17.183,
      "marks": {}
     },
     {
      "text": "Japan's Nozomi never managed to enter Mars orbit, in 2003. China's first Mars orbiter was lost in 2011, along with the Russian probe that was carrying it.",
-     "start": 17.519,
-     "end": 29.284,
+     "start": 17.523,
+     "end": 29.288,
      "marks": {}
     },
     {
      "text": "Reaching Mars on the first try was almost unheard of.",
-     "start": 29.624,
-     "end": 32.715,
+     "start": 29.628,
+     "end": 32.719,
      "marks": {}
     }
    ]
@@ -92,7 +92,7 @@
   {
    "id": "clock",
    "title": "Fifteen months",
-   "start": 85.66,
+   "start": 85.663,
    "dur": 18.157,
    "lines": [
     {
@@ -118,8 +118,8 @@
   {
    "id": "rocket",
    "title": "Trick one: a smaller rocket",
-   "start": 103.817,
-   "dur": 60.248,
+   "start": 103.82,
+   "dur": 60.25,
    "lines": [
     {
      "text": "Trick one: a smaller rocket.",
@@ -130,43 +130,43 @@
     {
      "text": "ISRO's most powerful rocket at the time, the GSLV, had failed twice in 2010. So they chose the smaller, reliable PSLV.",
      "start": 3.706,
-     "end": 13.358,
+     "end": 13.36,
      "marks": {}
     },
     {
      "text": "On the fifth of November, 2013, it lifted off from Sriharikota.",
-     "start": 13.698,
-     "end": 18.346,
+     "start": 13.7,
+     "end": 18.348,
      "marks": {}
     },
     {
      "text": "But the PSLV wasn't powerful enough to throw the spacecraft straight to Mars. It could only put it into a long, oval orbit around Earth.",
-     "start": 18.686,
-     "end": 27.817,
+     "start": 18.688,
+     "end": 27.819,
      "marks": {}
     },
     {
      "text": "So ISRO used a clever trick. Every time the spacecraft swung closest to Earth, where it moves fastest, it fired its engine.",
-     "start": 28.157,
-     "end": 36.113,
+     "start": 28.159,
+     "end": 36.115,
      "marks": {}
     },
     {
      "text": "Engineers call this the Oberth effect. A push given where you're already moving fastest adds the most energy.",
-     "start": 36.453,
-     "end": 43.359,
+     "start": 36.455,
+     "end": 43.361,
      "marks": {}
     },
     {
      "text": "Each burn stretched the orbit wider. Over about a month, a series of burns pushed its highest point out beyond a hundred thousand kilometres.",
-     "start": 43.699,
-     "end": 52.116,
+     "start": 43.701,
+     "end": 52.118,
      "marks": {}
     },
     {
      "text": "Then, on the first of December, one final burn flung it free of Earth, and onto the road to Mars.",
-     "start": 52.456,
-     "end": 58.308,
+     "start": 52.458,
+     "end": 58.31,
      "marks": {}
     }
    ]
@@ -174,8 +174,8 @@
   {
    "id": "small",
    "title": "Trick two: keep it small",
-   "start": 164.065,
-   "dur": 34.152,
+   "start": 164.07,
+   "dur": 34.15,
    "lines": [
     {
      "text": "Trick two: keep it small.",
@@ -204,7 +204,7 @@
     {
      "text": "And its structure and engines were similar to India's first Moon probe, Chandrayaan-one. Proven designs meant less new engineering, and less to pay for.",
      "start": 22.672,
-     "end": 32.212,
+     "end": 32.21,
      "marks": {}
     }
    ]
@@ -212,7 +212,7 @@
   {
    "id": "people",
    "title": "Trick three: people",
-   "start": 198.217,
+   "start": 198.22,
    "dur": 23.395,
    "lines": [
     {
@@ -244,7 +244,7 @@
   {
    "id": "nearly",
    "title": "It almost went wrong",
-   "start": 221.612,
+   "start": 221.615,
    "dur": 46.598,
    "lines": [
     {
@@ -294,7 +294,7 @@
   {
    "id": "maven",
    "title": "Another orbiter, the same week",
-   "start": 268.21,
+   "start": 268.213,
    "dur": 17.364,
    "lines": [
     {
@@ -320,7 +320,7 @@
   {
    "id": "payoff",
    "title": "The payoff",
-   "start": 285.574,
+   "start": 285.577,
    "dur": 38.581,
    "lines": [
     {
@@ -370,7 +370,7 @@
   {
    "id": "meaning",
    "title": "What it means",
-   "start": 324.154,
+   "start": 324.157,
    "dur": 27.136,
    "lines": [
     {
@@ -402,13 +402,13 @@
   {
    "id": "end",
    "title": "",
-   "start": 351.29,
-   "dur": 14.505,
+   "start": 351.293,
+   "dur": 14.329,
    "lines": [
     {
-     "text": "If you enjoyed this, subscribe to Modus and Raison, and tell me what we should explain next.",
+     "text": "If you enjoyed this, subscribe to Everyday Insides, and tell me what we should explain next.",
      "start": 1.9,
-     "end": 7.065,
+     "end": 6.889,
      "marks": {}
     }
    ]
@@ -417,7 +417,7 @@
  "events": [
   {
    "name": "fail",
-   "t": 39.672,
+   "t": 39.673,
    "scene": "hard"
   },
   {
@@ -432,112 +432,132 @@
   },
   {
    "name": "whoosh_in",
-   "t": 51.006,
+   "t": 51.004,
    "scene": "first"
   },
   {
    "name": "stamp",
-   "t": 90.16,
+   "t": 90.163,
    "scene": "clock"
   },
   {
    "name": "tick",
-   "t": 96.455,
+   "t": 96.458,
    "scene": "clock"
   },
   {
    "name": "whoosh_in",
-   "t": 85.66,
+   "t": 85.663,
    "scene": "clock"
   },
   {
    "name": "clunk",
-   "t": 110.523,
+   "t": 110.525,
    "scene": "rocket"
   },
   {
    "name": "launch",
-   "t": 117.515,
+   "t": 117.52,
    "scene": "rocket"
   },
   {
    "name": "burn",
-   "t": 135.374,
+   "t": 135.378,
    "scene": "rocket"
   },
   {
    "name": "whoosh",
-   "t": 158.273,
+   "t": 158.277,
    "scene": "rocket"
   },
   {
    "name": "whoosh_in",
-   "t": 103.817,
+   "t": 103.82,
    "scene": "rocket"
   },
   {
    "name": "whoosh_in",
-   "t": 164.065,
+   "t": 164.07,
    "scene": "small"
   },
   {
    "name": "whoosh_in",
-   "t": 198.217,
+   "t": 198.22,
    "scene": "people"
   },
   {
    "name": "alarm",
-   "t": 229.337,
+   "t": 229.34,
    "scene": "nearly"
   },
   {
    "name": "burn",
-   "t": 236.232,
+   "t": 236.235,
    "scene": "nearly"
   },
   {
    "name": "burn",
-   "t": 255.66,
+   "t": 255.663,
    "scene": "nearly"
   },
   {
    "name": "success",
-   "t": 257.26,
+   "t": 257.263,
    "scene": "nearly"
   },
   {
    "name": "whoosh_in",
-   "t": 221.612,
+   "t": 221.615,
    "scene": "nearly"
   },
   {
    "name": "whoosh_in",
-   "t": 268.21,
+   "t": 268.213,
    "scene": "maven"
   },
   {
    "name": "hit",
-   "t": 290.327,
+   "t": 290.33,
    "scene": "payoff"
   },
   {
    "name": "horn",
-   "t": 321.01,
+   "t": 321.013,
    "scene": "payoff"
   },
   {
    "name": "whoosh_in",
-   "t": 285.574,
+   "t": 285.577,
    "scene": "payoff"
   },
   {
    "name": "whoosh_in",
-   "t": 324.154,
+   "t": 324.157,
    "scene": "meaning"
   },
   {
+   "name": "click",
+   "t": 355.293,
+   "scene": "end"
+  },
+  {
+   "name": "pop",
+   "t": 355.343,
+   "scene": "end"
+  },
+  {
+   "name": "click",
+   "t": 356.593,
+   "scene": "end"
+  },
+  {
+   "name": "bell",
+   "t": 356.943,
+   "scene": "end"
+  },
+  {
    "name": "whoosh_in",
-   "t": 351.29,
+   "t": 351.293,
    "scene": "end"
   }
  ]

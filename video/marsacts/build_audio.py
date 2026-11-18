@@ -74,6 +74,13 @@ for e in events:
     elif n_ == "success":
         for f, dt in ((523.25, 0), (659.25, 0.12), (783.99, 0.24), (1046.5, 0.38)): place(sfx, at + dt, tone(f, 2.0, 1.5) * 0.08)
     elif n_ == "hit": place(sfx, at, thump(70, 30, 2.0, 1.0)); place(sfx, at, lpf(noise(int(1.4 * SR)), 40) * np.exp(-np.arange(int(1.4 * SR)) / SR * 4) * 0.35)
+    elif n_ == "click":
+        n = int(0.05 * SR); k = np.arange(n) / SR; place(sfx, at, (lpf(noise(n), 2) * np.exp(-k * 160) * 0.5 + np.sin(2 * np.pi * 2400 * k) * np.exp(-k * 220) * 0.25).astype(np.float32))
+    elif n_ == "pop":
+        n = int(0.18 * SR); k = np.arange(n) / SR; f = 500 + 900 * (1 - np.exp(-k * 30)); place(sfx, at, (np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-k * 18) * 0.22).astype(np.float32))
+    elif n_ == "bell":
+        for f, g in ((1318.5, 0.10), (1975.5, 0.05), (2637.0, 0.03)):
+            for i in range(3): place(sfx, at + i * 0.16, tone(f, 1.6, 2.6) * g * (1 - i * 0.25))
     elif n_ == "horn":
         for dt in (0, 0.32):
             n = int(0.24 * SR); k = np.arange(n) / SR; x = (np.sign(np.sin(2 * np.pi * 420 * k)) * 0.5 + np.sign(np.sin(2 * np.pi * 530 * k)) * 0.5) * env(n, 0.01, 0.04); place(sfx, at + dt, lpf(x.astype(np.float32), 6) * 0.10)

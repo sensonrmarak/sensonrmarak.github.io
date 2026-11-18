@@ -47,15 +47,15 @@ Animation is an artist's impression: sizes, distances and timings are compressed
 
 🎧 Credits
 Rocket launch sound built in part from "Airplane, Boeing, Flyby, Right to Left, A" by InspectorJ (freesound.org/people/InspectorJ), licensed CC BY 4.0 (creativecommons.org/licenses/by/4.0), edited.
-Narration, music, 3D animation and other sound effects: Modus & Raison.
+Narration, music, 3D animation and other sound effects: Everyday Insides.
 
-Subscribe to Modus & Raison for more stories about how things really work.
+Subscribe to Everyday Insides for small thoughts and big perspectives.
 
 #Mangalyaan #ISRO #Mars
 
 ## Tags
 
-Mangalyaan, Mars Orbiter Mission, ISRO, India Mars mission, how India reached Mars, cheapest Mars mission, Mars mission cost, MOM, Mangalyaan explained, India space program, PSLV, Oberth effect, orbit raising, Hohmann transfer, MAVEN, Chandrayaan-3, Indian space research, space explained, science explained, Mars, space documentary, cheaper than Gravity, 3D animation, Modus and Raison
+Mangalyaan, Mars Orbiter Mission, ISRO, India Mars mission, how India reached Mars, cheapest Mars mission, Mars mission cost, MOM, Mangalyaan explained, India space program, PSLV, Oberth effect, orbit raising, Hohmann transfer, MAVEN, Chandrayaan-3, Indian space research, space explained, science explained, Mars, space documentary, cheaper than Gravity, 3D animation, Everyday Insides
 
 ## Other settings
 

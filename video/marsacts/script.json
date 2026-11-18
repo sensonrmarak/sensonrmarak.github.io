@@ -307,7 +307,25 @@
   "title": "",
   "lines": [
    {
-    "t": "If you enjoyed this, subscribe to Modus and Raison, and tell me what we should explain next."
+    "t": "If you enjoyed this, subscribe to Everyday Insides, and tell me what we should explain next.",
+    "sfx": [
+     [
+      "click",
+      2.1
+     ],
+     [
+      "pop",
+      2.15
+     ],
+     [
+      "click",
+      3.4
+     ],
+     [
+      "bell",
+      3.75
+     ]
+    ]
    }
   ]
  }
