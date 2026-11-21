@@ -341,7 +341,7 @@ def main():
         "aerial": dict(cam=(105, 100, 72, 20, 10, 0, 30), sun=(38, 225)),
         "cutaway": dict(cam=(66, 62, 64, 23, 13, 0, 30), sun=(55, 200)),
         "hall": dict(cam=(15.0, 27.0, 5.0, 29, 4, 4.5, 16), sun=(24, 190)),
-        "kitchen": dict(cam=(31.0, 15.4, 5.2, 45, 8.5, 3.6, 16), sun=(24, 160)),
+        "kitchen": dict(cam=(33.6, 15.0, 5.2, 45, 8.5, 3.6, 16), sun=(24, 160)),
         "bed1": dict(cam=(0.9, 17.9, 5.0, 13, 27, 3.0, 16), sun=(18, 250)),
         "library": dict(cam=(13.2, 9.3, 5.0, 1, 2, 4.4, 16), sun=(30, 250)),
     }
@@ -349,8 +349,15 @@ def main():
     setup_world(v["sun"][0], v["sun"][1], 0.45)
     camera(*v["cam"][:6], lens=v["cam"][6])
     if INTERIOR:
-        for (x, y) in ((22, 6), (22, 20), (38, 11.5), (7, 5), (7, 22), (35, 22)):
+        for (x, y) in ((22, 6), (22, 20), (35, 11.5), (41, 11.5), (35, 11.5), (7, 5), (7, 22), (35, 22)):
             area_light(x, y, 11.6, 4, 260)
+        for (x, y, e) in ((38, 12, 1800), (22, 8, 1500), (22, 21, 1500), (7, 5, 900), (35, 22, 900), (7, 22, 900)):
+            pl = bpy.data.lights.new("pt", "POINT")
+            pl.energy = e
+            pl.color = (1, 0.88, 0.72)
+            po = bpy.data.objects.new("pt", pl)
+            po.location = (x, -y, 9.0)
+            bpy.context.collection.objects.link(po)
     sc.render.engine = "CYCLES"
     sc.cycles.device = "CPU"
     sc.cycles.samples = SAMPLES
@@ -368,7 +375,7 @@ def main():
         sc.view_settings.look = "AgX - Punchy"
     except Exception:
         pass
-    sc.view_settings.exposure = (1.5 if VIEW == "library" else 0.6) if INTERIOR else 0.0
+    sc.view_settings.exposure = {"library": 1.0, "hall": 0.9, "kitchen": 1.2}.get(VIEW, 0.6) if INTERIOR else 0.0
     sc.render.filepath = OUT
     bpy.ops.render.render(write_still=True)
     print("WROTE", OUT)
