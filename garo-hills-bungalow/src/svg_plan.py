@@ -1,4 +1,4 @@
-"""Plan drawings: main house ground floor, garage + studio block."""
+"""Plan drawings: main house ground floor, garage block."""
 import math
 from fractions import Fraction
 from data import WALLS, COLUMNS, room_table, garage_table, fi, ff
@@ -21,11 +21,11 @@ def label(cx, cy, name, dims, fs=7):
             f'<text x="{cx:.1f}" y="{cy+fs+1.5:.1f}" font-size="{fs*0.8:.1f}" fill="#1f1f1f" text-anchor="middle" font-family="{SERIF}">{dims}</text>')
 
 
-NAME = {"STU": "MUSIC STUDIO", "AIRL": "AIRLOCK", "STDY": "STUDY", "LIB": "LIBRARY", "BTH1": "BATH 1",
+NAME = {"STDY": "STUDY", "LIB": "LIBRARY", "BTH1": "BATH 1",
         "DRS1": "DRESS 1", "BED1": "BEDROOM #1", "FOY": "FOYER", "HALL": "SITTING HALL", "DIN": "DINING",
         "ALC": "BAR ALCOVE", "KIT": "KITCHEN", "STR": "STORE", "UTL": "UTILITY", "WLB": "WASH",
         "SWC": "TOILET", "SBT": "BATH", "DRS2": "DRESS 2", "BTH2": "BATH 2", "BED2": "BEDROOM #2"}
-LABEL_AT = {"STU": (9, -15.2, 8), "AIRL": (14.2, -2.2, 6), "STDY": (9, 8.2, 7), "LIB": (25.2, 11.2, 6.4),
+LABEL_AT = {"STDY": (9, 8.2, 7), "LIB": (25.2, 11.2, 6.4),
             "BTH1": (5.6, 18.6, 5), "DRS1": (13, 19.3, 5.6), "BED1": (5.6, 29.5, 7.5), "FOY": (41, 7.5, 7),
             "HALL": (34, 17.2, 9), "DIN": (56, 15.6, 7), "ALC": (56, 7.4, 6.4), "KIT": (71, 22.6, 7.5),
             "STR": (67.8, 8.5, 6), "UTL": (77, 8.5, 6), "WLB": (86.3, 11.6, 4.6),
@@ -139,7 +139,7 @@ def dim_v(y0, y1, x, S, ox, oy, label):
 
 def main_plan():
     S = 8.4
-    ox, oy = 46, 335
+    ox, oy = 46, 290
     W, H = ox + 98 * S + 40, oy + 40 * S + 190
     o = [f'<svg viewBox="0 0 {W:.0f} {H:.0f}" xmlns="http://www.w3.org/2000/svg" class="dwg">',
          f'<rect width="{W:.0f}" height="{H:.0f}" fill="{FILL}"/>']
@@ -173,12 +173,8 @@ def main_plan():
         vert = x in (0, 98, 18) or (x, y) in ((62, 17), (80, 17), (80, 24))
         cw, ch = (1.0, 1.5) if vert else (1.5, 1.0)
         o.append(f'<rect x="{_f(ox+(x-cw/2)*S)}" y="{_f(oy+(y-ch/2)*S)}" width="{_f(cw*S)}" height="{_f(ch*S)}" fill="#000"/>')
-    LNG = 13 / 24
-    pts = [(LNG, -27 + LNG), (18 - LNG - 0.9, -27 + LNG), (18 - LNG, -7 - LNG), (LNG, -7 - LNG - 0.7)]
-    o.append('<polygon points="' + " ".join(f"{_f(ox+x*S)},{_f(oy+y*S)}" for x, y in pts) + '" fill="none" stroke="#8a4b2a" stroke-width="1.1" stroke-dasharray="3 2"/>')
-    o.append(f'<rect x="{_f(ox-1.4*S)}" y="{_f(oy-28.4*S)}" width="{_f(34.8*S)}" height="{_f(42.8*S)}" fill="none" stroke="#7b5ea7" stroke-width="1.4" stroke-dasharray="7 4"/>')
-    o.append(tag(ox + 25.5 * S, oy - 24.5 * S, "CREATIVE SUITE", 7.5, "bold", "#7b5ea7"))
-    o.append(tag(ox + 25.5 * S, oy - 24.5 * S + 9, "studio + study + library", 6.2, "normal", "#7b5ea7"))
+    o.append(f'<rect x="{_f(ox-1.4*S)}" y="{_f(oy-1.6*S)}" width="{_f(34.8*S)}" height="{_f(16*S)}" fill="none" stroke="#7b5ea7" stroke-width="1.4" stroke-dasharray="7 4"/>')
+    o.append(tag(ox + 9 * S, oy - 2.4 * S, "LIBRARY + STUDY SUITE", 6.4, "bold", "#7b5ea7"))
     o.append(f'<rect x="{_f(ox+80.6*S)}" y="{_f(oy-1.6*S)}" width="{_f(18.8*S)}" height="{_f(16*S)}" fill="none" stroke="#1d7a8c" stroke-width="1.4" stroke-dasharray="7 4"/>')
     o.append(tag(ox + 90 * S, oy - 2.4 * S, "WET CORNER: TOILET + BATH", 6.4, "bold", "#1d7a8c"))
     o += draw_openings(MAIN, WALLS, S, ox, oy)
@@ -192,12 +188,12 @@ def main_plan():
     # grid dimensions, centre line
     xs = [0, 8, 18, 32, 50, 62, 72, 82, 88, 90, 98]
     for a, b in zip(xs, xs[1:]):
-        o += dim_h(a, b, -33, S, ox, oy, ff(b - a, 0))
-    o += dim_h(0, 98, -36.5, S, ox, oy, "98 ft 0 in overall on centre lines (outer face 98 ft 9 in)")
-    ys = [-27, -7, 0, 13, 22, 40]
+        o += dim_h(a, b, -27, S, ox, oy, ff(b - a, 0))
+    o += dim_h(0, 98, -30.5, S, ox, oy, "98 ft 0 in overall on centre lines (outer face 98 ft 9 in)")
+    ys = [0, 13, 22, 40]
     for a, b in zip(ys, ys[1:]):
         o += dim_v(a, b, -2.6, S, ox, oy, ff(b - a, 0))
-    o += dim_v(-27, 40, -4.6, S, ox, oy, "67 ft 0 in CL, west face")
+    o += dim_v(0, 40, -4.6, S, ox, oy, "40 ft 0 in CL")
     for x in (0, 18, 32, 50, 62, 80, 98):
         o.append(tag(ox + x * S, oy + 60 * S, f"{x}", 6.5, "bold", "#1d4e89"))
     o.append(tag(ox + 49 * S, oy + 62.5 * S, "Grid line offsets in feet, measured east from the west wall centre line. Black = 9 in wall, grey = 4½ in partition shown at true thickness; black squares = RCC columns 12 in x 18 in.", 6.2, fill="#333"))

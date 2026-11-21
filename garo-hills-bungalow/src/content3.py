@@ -21,10 +21,9 @@ def structure():
         ("Columns", "12 in x 18 in, M25, 6 bars of 16 mm, 8 mm ties at 4 in centres for 2 ft 0 in at top and bottom of every column and through every joint (IS 13920)"),
         ("Lintel band (tie level 2)", "9 in wide x 6 in deep, continuous at +8 ft 0 in through all walls, 4 bars of 10 mm; it is the head of every door and window"),
         ("Roof band and ring beam (tie level 3)", "12 in x 21 in at +15 ft 0 in, carries the steel trusses on cast-in base plates with anchor bolts"),
-        ("Beams over open plan lines", "12 in x 24 in at +12 ft 3 in soffit between columns (32, 13) to (50, 13), (50, 13) to (50, 40), (62, 13) to (62, 40)"),
+        ("Beams over open plan lines", "12 in x 24 in at +12 ft 3 in soffit between columns (32, 13) to (50, 13), (50, 13) to (50, 40), and over the passage opening (62, 13) to (62, 17)"),
         ("Infill walls", "9 in brick in 1:4 cement mortar on external and party walls; 4½ in brick in 1:3 with 2 bars of 6 mm every fourth course on partitions; all infill gapped ¾ in below beams and packed with compressible filler so it cannot stiffen the frame"),
         ("Roof", "Galvanised tubular steel trusses at 6 ft 0 in centres (scissor trusses over the hall), Z purlins, 50 mm PIR insulated sandwich panel with 0.5 mm charcoal standing-seam top skin"),
-        ("Music studio wing", "Same frame, 9 in walls all round; inner room is a separate 4½ in stud and double gypsum lining on its own floating slab, 2 in air gap, no rigid contact with the frame"),
     ]
     r = "".join(f"<tr><td><b>{a}</b></td><td>{b}</td></tr>" for a, b in rows)
     return f"""
@@ -55,7 +54,6 @@ def finishes():
         ("Kitchen", "Terrazzo, honed, same as hall", "Lime plaster; 2 ft 0 in high stone backsplash behind counters", "Gypsum, washable matt", "Counters 1¼ in local granite, cabinets marine ply with hardwood fronts"),
         ("Bedrooms 1 and 2", "Hardwood strip (teak or local hollock) 4 in wide on screed with moisture barrier", "Lime wash, cream", "Gypsum, matt", "Timber skirting 4 in"),
         ("Library", "Hardwood strip", "Lime wash; full-height timber shelving on south and east walls", "Timber boarded, oiled", "UV film on W2 glass"),
-        ("Music studio", "Floating floor: 4 in slab on 2 in resilient mineral-wool pads, hardwood finish", "Slatted timber diffusers over 2 in mineral wool absorption; splayed inner lining, no parallel walls", "Splayed ceiling 6° off level, timber slats", "Double-door airlock, sealed cable ducts"),
         ("Bathrooms, shared washroom", "Anti-skid matt vitrified tile 24 in x 24 in, or local stone, falls 1 in 60", "Full height glazed tile in the shower, waist height elsewhere, lime plaster above", "Moisture-resistant gypsum, exhaust fan 6 in on timer", "Walk-in shower, frameless glass screen, no tray, no tub, no seat"),
         ("Utility, store, passage", "Kota or local stone", "Cement plaster, washable paint", "Gypsum", "Floor trap in utility"),
         ("Verandas and porch", "Flamed local stone 1¼ in, falls 1 in 80 outwards", "Cream lime render on stone base", "Exposed timber boarding under roof", "White rendered columns 1 ft 4 in diameter, plain capital and base"),

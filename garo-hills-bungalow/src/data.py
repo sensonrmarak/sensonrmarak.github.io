@@ -46,14 +46,12 @@ def money(rupees):
 EXT, INT = 9, Fraction(9, 2)   # inches
 # (x0, y0, x1, y1, thickness_in, kind)
 WALLS = [
-    (0, 0, 98, 0, EXT, "external, north face (between study and airlock it is the acoustic wall)"),
+    (0, 0, 98, 0, EXT, "external, north face"),
     (0, 40, 98, 40, EXT, "external, south face"),
-    (0, -27, 0, 40, EXT, "external, west face (creative wing and main block, one line)"),
+    (0, 0, 0, 40, EXT, "external, west face"),
     (98, 0, 98, 40, EXT, "external, east face"),
-    (0, -27, 18, -27, EXT, "external, north face of creative wing"),
-    (18, -27, 18, 40, EXT, "external east face of creative wing, then party wall of resident suite"),
-    (0, -7, 18, -7, EXT, "acoustic wall, studio / airlock"),
-    (0, 13, 18, 13, EXT, "acoustic wall, study / resident suite"),
+    (18, 0, 18, 40, EXT, "party wall, study and resident suite to library and hall"),
+    (0, 13, 18, 13, EXT, "wall, study / resident suite"),
     (80, 17, 80, 40, EXT, "party wall, guest suite to kitchen"),
     (8, 13, 8, 22, INT, "partition, bath 1 / dressing 1"),
     (0, 22, 18, 22, INT, "partition, bath and dressing 1 / bedroom 1"),
@@ -67,6 +65,7 @@ WALLS = [
     (88, 6.5, 98, 6.5, INT, "partition, shared toilet / shared bathroom"),
     (62, 13, 98, 13, INT, "partition, service strip / passage and bath 2"),
     (62, 17, 90, 17, INT, "partition, passage / kitchen and dressing 2"),
+    (62, 17, 62, 40, INT, "partition, dining / kitchen (door D2 at y 33)"),
     (90, 13, 90, 24, INT, "partition, dressing 2 / bath 2"),
     (80, 24, 98, 24, INT, "partition, dressing and bath 2 / bedroom 2"),
 ]
@@ -74,7 +73,7 @@ WALLS = [
 # RCC columns 12 in x 18 in (CL positions, ft)
 COLUMNS = [(x, 0) for x in (0, 18, 32, 50, 62, 80, 98)] + \
           [(x, 40) for x in (0, 18, 34, 50, 62, 80, 98)] + \
-          [(0, -27), (18, -27), (0, -7), (18, -7), (0, 13), (0, 22), (98, 13), (98, 24),
+          [(0, 13), (0, 22), (98, 13), (98, 24),
            (18, 13), (50, 13), (62, 13), (62, 17), (80, 13), (80, 17), (80, 24), (32, 13)]
 
 
@@ -96,8 +95,6 @@ def _half(line_axis, coord, a, b):
 # ---------------------------------------------------------------- rooms
 # key, name, x0, x1, y0, y1, ceiling (ft-in text), habitable, circulation
 ROOMS = [
-    ("STU", "Music studio (inside acoustic lining)", 0, 18, -27, -7, "12 ft 0 in", True, False),
-    ("AIRL", "Studio airlock and gear lobby", 0, 18, -7, 0, "10 ft 0 in", False, False),
     ("STDY", "Study", 0, 18, 0, 13, "12 ft 0 in", True, False),
     ("LIB", "Library", 18, 32, 0, 13, "12 ft 0 in", True, False),
     ("BTH1", "Bathroom 1 (attached)", 0, 8, 13, 22, "10 ft 0 in", False, False),
@@ -166,7 +163,6 @@ def garage_table():
 
 # ---------------------------------------------------------------- areas
 MAIN_OUT = ((98 * 12 + 9) / 12, (40 * 12 + 9) / 12)          # outer face size, ft
-WING_OUT = ((18 * 12 + 9) / 12, 27.0)                          # creative wing beyond main north face
 GARAGE_OUT_AREA = (41 * 12 + 9) * (23 * 12 + 9) / 144
 VERANDAS = [  # name, length ft, depth ft
     ("South veranda (9 ft 0 in deep to column line)", 99, 9),
@@ -183,7 +179,7 @@ def areas():
     carpet_house = sum(r["area"] for r in rt)
     carpet_gar = sum(r["area"] for r in gt)
     circ = sum(r["area"] for r in rt if r["circ"])
-    built_house = round(MAIN_OUT[0] * MAIN_OUT[1] + WING_OUT[0] * WING_OUT[1])
+    built_house = round(MAIN_OUT[0] * MAIN_OUT[1])
     built_gar = round(GARAGE_OUT_AREA)
     ver = [(n, l, d, l * d) for n, l, d in VERANDAS]
     ver_total = sum(v[3] for v in ver)

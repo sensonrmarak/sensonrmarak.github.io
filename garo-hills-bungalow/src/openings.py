@@ -15,8 +15,6 @@ SCHEDULE = {
            "Top glass louvre 12 in for ventilation", "Privacy latch, 3 SS hinges, door stop"),
     "D4": ("Utility back door to service yard", "Hardwood ledged frame with MS grille, dark", 36, 90, 0, 96,
            "Upper half 6 mm wired glass", "Barrel bolts inside, padlock hasp outside"),
-    "SD1": ("Studio acoustic door, study to airlock and airlock to studio", "Solid-core hardwood, 2.5 in, perimeter seals and drop seal", 42, 90, 0, 96,
-            "Double-glazed vision panel 9 in x 24 in", "Lift-off hinges, compression latches, automatic drop seal"),
     "D5": ("Pair of glazed doors, library to study", "Hardwood frame, dark stain, 6 mm toughened glass panels", 60, 96, 0, 96,
            "6 mm toughened, clear", "Flush bolts, lever handles, magnetic door holders"),
     "W1": ("Tall casement window with fixed clerestory above lintel", "Black powder-coated aluminium, slim frame", 42, 78, 18, 96,
@@ -33,11 +31,8 @@ SCHEDULE = {
 
 # (mark, orientation of host wall 'h' or 'v', fixed coord, centre along wall, opens to side +1/-1)
 MAIN = [
-    # creative wing
-    ("W1", "v", 0, -17, 1), ("W2", "h", -27, 9, 1), ("W1", "v", 18, -17, -1), ("W3", "v", 0, -3.5, 1),
-    ("SD1", "h", -7, 9, -1), ("SD1", "h", 0, 9, -1),
     # north face y = 0
-    ("W2", "h", 0, 22.5, 1), ("W2", "h", 0, 27.5, 1),
+    ("W2", "h", 0, 9, 1), ("W2", "h", 0, 22.5, 1), ("W2", "h", 0, 27.5, 1),
     ("W1", "h", 0, 35.5, 1), ("D1", "h", 0, 41, 1), ("SL1", "h", 0, 44, 1), ("W1", "h", 0, 47.5, 1),
     ("W1", "h", 0, 56, 1), ("W3", "h", 0, 67, 1), ("D4", "h", 0, 77, 1),
     ("W3", "h", 0, 85, 1), ("W3", "h", 0, 93, 1),
@@ -53,7 +48,7 @@ MAIN = [
     ("D5", "v", 18, 6.5, -1), ("D2", "v", 18, 17.5, -1), ("D3", "v", 8, 17.5, -1), ("D2", "h", 22, 13, 1),
     ("D2", "h", 13, 29, -1), ("D3", "h", 13, 67, -1), ("D3", "h", 13, 77, -1),
     ("D3", "h", 13, 85, -1), ("D3", "v", 88, 3.25, 1), ("D3", "v", 88, 9.75, 1), ("D3", "h", 17, 70, 1),
-    ("D2", "h", 17, 85, 1), ("D3", "v", 90, 20.5, 1), ("D2", "h", 24, 85, 1),
+    ("D2", "h", 17, 85, 1), ("D3", "v", 90, 20.5, 1), ("D2", "h", 24, 85, 1), ("D2", "v", 62, 33, 1),
 ]
 
 GARAGE = [("GD1", "h", 0, 10.5, 1), ("GD2", "h", 0, 25.5, 1), ("D4", "h", 0, 35.5, 1),

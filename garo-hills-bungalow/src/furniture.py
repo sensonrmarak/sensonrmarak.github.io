@@ -189,17 +189,6 @@ class F:
 
 def furnish(S, ox, oy):
     f = F(S, ox, oy)
-    # creative wing: studio
-    f.rug(3, -24, 11, 9)
-    f.piano(4.5, -24.5)
-    f.drums(13.5, -21.5)
-    f.desk(9.5, -12.4, 7, 2.4, "N")
-    f.box(10.2, -12.2, 1.4, 0.7, "", 3)
-    f.box(14.4, -12.2, 1.4, 0.7, "", 3)
-    f.box(1, -12.5, 2, 4.5, "amp", 3.8)
-    # airlock: gear shelves
-    f.shelves(13.2, -6.3, 4.4, 1.4)
-    f.rect(1, -6.3, 5, 1.4, "#fff", 0.6)
     # study
     f.desk(1, 3.5, 2.6, 6, "E")
     f.shelves(5, 11.3, 8, 1.3)
@@ -241,7 +230,6 @@ def furnish(S, ox, oy):
     # dining
     f.table(54.0, 20.5, 4.0, 10.0, 4, 1)
     f.o.append(f'<line x1="{f.X(50):.1f}" y1="{f.Y(13):.1f}" x2="{f.X(50):.1f}" y2="{f.Y(40):.1f}" stroke="#666" stroke-width="0.6" stroke-dasharray="5 4"/>')
-    f.o.append(f'<line x1="{f.X(62):.1f}" y1="{f.Y(17):.1f}" x2="{f.X(62):.1f}" y2="{f.Y(40):.1f}" stroke="#666" stroke-width="0.6" stroke-dasharray="5 4"/>')
     # kitchen
     f.counter(62.4, 17.4, 15.4, 2.0)
     f.range_(68.5, 17.5, 2.6)

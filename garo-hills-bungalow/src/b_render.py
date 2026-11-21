@@ -341,15 +341,15 @@ def main():
     furniture.furnish(1, 0, 0)
     sc = bpy.context.scene
     views = {
-        "front": dict(cam=(-22, -78, 4.6, 40, -6, 6.5, 26), sun=(11, 285)),
+        "front": dict(cam=(-12, -70, 4.6, 42, -4, 6.5, 26), sun=(11, 285)),
         "dbg": dict(cam=(-22, -12, 6, 2, -8, 6, 35), sun=(30, 285)),
         "rear": dict(cam=(72, 112, 3.6, 38, 38, 7.0, 22), sun=(14, 238)),
         "aerial": dict(cam=(175, 175, 105, 45, 15, 0, 32), sun=(38, 225)),
         "cutaway": dict(cam=(120, 98, 120, 48, 8, 0, 30), sun=(55, 200)),
-        "hall": dict(cam=(19.6, 38.3, 5.0, 66, 19, 5.0, 16), sun=(24, 190)),
-        "kitchen": dict(cam=(51.5, 38.5, 5.2, 75, 19, 3.8, 18), sun=(24, 160)),
+        "hall": dict(cam=(19.6, 38.3, 5.0, 62, 17, 5.0, 16), sun=(24, 190)),
+        "kitchen": dict(cam=(64.5, 38.6, 5.2, 78, 19, 3.6, 17), sun=(24, 160)),
         "bed1": dict(cam=(1.2, 23.2, 5.0, 17, 35, 3.0, 17), sun=(18, 250)),
-        "library": dict(cam=(29.4, 11.2, 5.0, 4, 4, 4.6, 18), sun=(30, 250)),
+        "library": dict(cam=(29.4, 11.2, 5.0, 4, 3, 4.6, 18), sun=(30, 250)),
     }
     v = views[VIEW]
     setup_world(v["sun"][0], v["sun"][1], 0.45)

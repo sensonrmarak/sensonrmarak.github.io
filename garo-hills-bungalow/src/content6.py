@@ -6,14 +6,14 @@ from content1 import band
 RD = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "renders")
 
 VIEWS = [
-    ("render_front.png", "Approach from the north-west: car porch, front door, and the studio wing on the right."),
+    ("render_front.png", "Approach from the north-west: car porch, front door and the long north face with its tall windows."),
     ("render_rear.png", "Garden side at a winter sunset: the 9 ft south veranda, with the firehouse in the foreground."),
     ("render_aerial.png", "Aerial view: house, forecourt ring, garage block, firehouse and planting."),
-    ("render_cutaway.png", "Cut-away at 8 ft 6 in, furnished: creative suite on the left, open hall, dining and kitchen in the middle, guest suite and wet corner on the right."),
-    ("render_hall.png", "Sitting hall under the timber-lined vault, looking east into dining and kitchen."),
-    ("render_kitchen.png", "Kitchen with island and breakfast table, opening onto the veranda."),
+    ("render_cutaway.png", "Cut-away at 8 ft 6 in, furnished: library and study at top left, open hall and dining in the middle, the walled kitchen, and the guest suite and wet corner on the right."),
+    ("render_hall.png", "Sitting hall under the timber-lined vault, looking east to the dining area and the kitchen wall."),
+    ("render_kitchen.png", "Kitchen with island and breakfast table, behind its own wall, opening onto the veranda."),
     ("render_bed1.png", "Bedroom 1 (resident): bed against the party wall, armchairs at the south French door."),
-    ("render_library.png", "Creative suite: library shelving, glazed doors to the study, studio door beyond."),
+    ("render_library.png", "Library looking through the glazed doors into the study."),
 ]
 
 

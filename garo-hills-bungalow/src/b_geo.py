@@ -205,8 +205,7 @@ def hip_roof(x0, x1, y0, y1, ze, mat="roof", along="x", name="roof"):
 
 
 # ------------------------------------------------------------------ walls
-OUTER = [((0, -27), (0, 40)), ((0, 40), (98, 40)), ((98, 40), (98, 0)), ((98, 0), (18, 0)),
-         ((18, 0), (18, -27)), ((18, -27), (0, -27))]
+OUTER = [((0, 0), (0, 40)), ((0, 40), (98, 40)), ((98, 40), (98, 0)), ((98, 0), (0, 0))]
 
 
 def _ops_on(ori, c, a0, a1):
@@ -301,13 +300,10 @@ def build_house(cut=None):
             window(*sp)
     # plinth and floor slabs
     box(-0.4, 98.4, -0.4, 40.4, -2.5, 0, "stone", "plinth")
-    box(-0.4, 18.4, -27.4, -0.4, -2.5, 0, "stone", "plinth_w")
     # stone cladding to sill level on the outside faces (z from FFL to 1.5)
     for (ax, ay), (bx, by) in OUTER:
         if ay == by:
             out = 1 if ay in (40,) else -1
-            if ay == 0 and min(ax, bx) >= 18:
-                out = -1
             yy = ay + out * (0.375 + 0.06)
             box(min(ax, bx) - 0.5, max(ax, bx) + 0.5, yy - 0.06, yy + 0.06, -2.5, 1.5, "stone", "clad")
         else:
@@ -318,7 +314,7 @@ def build_house(cut=None):
 
 def build_floors_ceilings(with_ceiling=True):
     from data import room_table
-    wood = {"BED1", "BED2", "LIB", "STDY", "STU", "AIRL", "DRS1", "DRS2"}
+    wood = {"BED1", "BED2", "LIB", "STDY", "DRS1", "DRS2"}
     for r in room_table():
         mat = "wood_floor" if r["key"] in wood else "terrazzo"
         box(r["x0"], r["x1"], r["y0"], r["y1"], -0.05, 0.02, mat, "floor_" + r["key"])
@@ -338,7 +334,6 @@ def build_floors_ceilings(with_ceiling=True):
 
 def build_roofs():
     hip_roof(-3, 101, -3, 41.5, 13.6, along="x", name="roof_main")
-    hip_roof(-3, 21, -30, 0, 13.6, along="y", name="roof_wing")
     hip_roof(29.5, 52.5, -23.5, -3, 11.2, along="y", name="roof_porch")
     # veranda lean-to roofs, 1 in 6
     mesh([(-3, 41.0, 13.35), (101, 41.0, 13.35), (101, 50.5, 11.8), (-3, 50.5, 11.8)], [(0, 1, 2, 3)], "roof", "ver_s", solid=0.25)

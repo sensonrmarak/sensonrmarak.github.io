@@ -16,7 +16,6 @@ def cost_items():
         ("The house", [
             ("Main house, enclosed (built-up)", a["built_house"], "sq ft", 4500),
             ("Verandas and car porch", ver_house, "sq ft", 2400),
-            ("Music studio extra over house rate: floating floor, independent splayed lining, acoustic doors, double glazing", 1, "lump sum", 1100000),
             ("External services: septic tank and soak pit, water pump, electrical service, earthing", 1, "lump sum", 1200000),
         ]),
         ("The firehouse", [
@@ -88,13 +87,13 @@ def checks():
         ("No bathtub anywhere", "Met. Three walk-in showers (bath 1, bath 2, shared bathroom) plus a WC in the shared toilet. No tub is drawn, specified or costed."),
         ("No shower seat", "Met. No seat, ledge or bench in any shower. Wall niches only, at 4 ft 6 in."),
         ("No bathroom, washroom or toilet in the middle of the plan; shared toilet and bathroom in a corner", "Met. The shared toilet and shared bathroom sit together in the north-east corner of the house: the toilet takes the corner itself, the bathroom is directly below it on the east wall. Bath 1 is on the west wall and bath 2 on the east wall. Every one has an outside window."),
-        ("No ceiling under 12 ft in a habitable room", "Met. Bedrooms, hall, dining, kitchen and alcove 12 ft 3 in; library and studio 12 ft 0 in; hall vault to 16 ft 0 in. Service rooms (non-habitable) 9 ft 0 in to 10 ft 0 in."),
+        ("No ceiling under 12 ft in a habitable room", "Met. Bedrooms, hall, dining, kitchen and alcove 12 ft 3 in; library and study 12 ft 0 in; hall vault to 16 ft 0 in. Service rooms (non-habitable) 9 ft 0 in to 10 ft 0 in."),
         ("No metric-only dimension", "Met. Every length is in feet and inches. Litres appear only beside cubic feet for water, and rainfall is in inches."),
         ("No overlapping, broken or floating walls", "Met. The plan is drawn from one list of wall centre lines; every wall ends on another wall or on a column, and the open edges are carried by beams between columns."),
         ("Circulation under 12 per cent", f"Met. {areas()['circ_pct']:.1f} per cent (foyer and service passage)."),
         ("Bedrooms at opposite ends", "Met. The two suite party walls are 62 ft apart, and the bedrooms are reached from different sides of the hall."),
-        ("Studio, library and study clubbed together", "Met. One creative suite at the west end: library opening through glazed doors to the study, studio beyond in its own north wing through a double-door airlock."),
-        ("Studio isolated from bedrooms", "Met. Separated from bedroom 1 by the study, a 9 in acoustic wall and the dressing and bath of the suite; independent splayed lining and floating floor; about 80 ft from bedroom 2."),
+        ("Library and study clubbed together", "Met. Side by side at the west end, joined by a pair of glazed doors. The music studio has been removed at your request."),
+        ("Wall between kitchen and dining", "Met. A 4½ in wall on x 62 with a 3 ft 3 in door at the veranda end. The sitting hall and dining stay open to each other."),
         ("Veranda at least 8 ft on main faces", "Met. South 9 ft 0 in, north 8 ft 0 in."),
     ]
     r = "".join(f"<tr><td><b>{a}</b></td><td>{b}</td></tr>" for a, b in rows)
