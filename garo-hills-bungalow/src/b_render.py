@@ -151,6 +151,8 @@ class F3D:
             G.box(x, x + w, y, y + h, 0, 2.9, "porcelain", "laundry")
         elif label == "DW":
             pass
+        elif label == "PANTRY":
+            G.box(x, x + w, y, y + h, 0, 7.0, "cabinet", "pantry")
         elif label == "amp":
             G.box(x, x + w, y, y + h, 0, 2.2, "black", "amp")
         else:
@@ -223,53 +225,46 @@ def shrub(x, y, r=1.6):
 
 
 def build_site():
+    """Site in house coordinates: site x - 141, site y - 165 (see svg_site)."""
     G.box(-600, 700, -700, 600, -2.6, -2.5, "grass", "ground")
-    # forecourt ring and drive
-    bpy.ops.mesh.primitive_cylinder_add(vertices=64, radius=24, depth=0.1, location=(41, 36, -2.47))
-    bpy.context.active_object.data.materials.append(G.MATS["gravel"])
-    G.cyl(41, -36, -2.5, -1.8, 9, "grass", 48, "island")
-    tree(41, -36, 0.42, "broad")
-    G.box(35, 47, -125, -58, -2.52, -2.44, "gravel", "drive")
-    G.box(17, 41, -20, -14.5, -2.52, -2.44, "gravel", "porchdrive")
-    G.box(41, 70, -20, -14.5, -2.52, -2.44, "gravel", "porchdrive2")
-    G.box(30, 52, -23, -12, -2.52, -2.43, "gravel", "porchapron")
-    # garage block (north-east)
-    G.box(71, 112, -76, -53, -2.5, 10, "render", "garage")
-    G.box(71, 112, -76.2, -53, -2.5, 1.5, "stone", "garage_base")
-    G.box(73, 89, -76.25, -76.0, -2.5, 5.0, "roof", "garage_door")
-    G.hip_roof(68, 115, -79, -50, 9.5, along="x", name="roof_garage")
-    # firehouse
-    G.box(22, 46, 85, 109, -2.5, -1.0, "stone", "fh_platform")
-    G.box(24, 44, 106.6, 107.4, -1.0, 8.5, "stone", "fh_wall")
-    for x, y in ((24, 87), (44, 87), (24, 97), (44, 97), (24, 107), (44, 107)):
-        G.box(x - 0.5, x + 0.5, y - 0.5, y + 0.5, -1.0, 8.5, "white", "fh_col")
-    G.box(23, 45, 86, 108, 8.5, 9.3, "white", "fh_beam")
-    G.hip_roof(21, 47, 84, 110, 9.3, along="x", name="roof_fh")
-    G.cyl(34, 97, -1.0, 0.5, 2.75, "stone", 32, "firepit")
-    G.cyl(34, 97, 0.5, 0.6, 2.0, "black", 32, "ash")
-    G.sphere(34, 97, 1.2, 1.1, "fire", 1, 1, 1.0, "fire")
-    G.box(31, 37, 49.6 + 8, 85, -2.52, -2.44, "paving", "fh_path")
-    # planting along the house
+    G.cyl(23, -30, -2.52, -2.44, 20, "gravel", 64, "turning_circle")
+    G.cyl(23, -30, -2.5, -1.9, 6, "grass", 48, "island")
+    tree(23, -30, 0.35, "broad")
+    G.box(17, 29, -165, -48, -2.52, -2.44, "gravel", "drive")
+    G.box(18.5, 25.5, -12, -9.8, -2.52, -2.44, "gravel", "porch_apron")
+    # carport: steel posts and a sheet roof
+    for x, y in ((-28, -43), (-10, -43), (-28, -23), (-10, -23)):
+        G.box(x - 0.2, x + 0.2, y - 0.2, y + 0.2, -2.5, 6.5, "black", "cp_post")
+    G.mesh([(-29, -44, 7.2), (-9, -44, 7.2), (-9, -22, 6.4), (-29, -22, 6.4)], [(0, 1, 2, 3)], "roof", "cp_roof", solid=0.15)
+    G.box(-28, -10, -43, -23, -2.52, -2.44, "gravel", "cp_floor")
+    # firehouse 12 x 12 ft on four timber posts
+    G.box(16, 30, 70, 84, -2.5, -1.5, "stone", "fh_platform")
+    for x, y in ((17, 71), (29, 71), (17, 83), (29, 83)):
+        G.box(x - 0.25, x + 0.25, y - 0.25, y + 0.25, -1.5, 7.6, "timber", "fh_post")
+    G.box(16.7, 29.3, 70.7, 83.3, 7.6, 8.2, "timber", "fh_beam")
+    G.hip_roof(15, 31, 69, 85, 8.2, along="x", name="roof_fh")
+    G.cyl(23, 77, -1.5, -0.5, 2.5, "stone", 32, "firepit")
+    G.sphere(23, 77, 0.0, 1.0, "fire", 1, 1, 1.0, "fire")
+    G.box(20, 26, 41.9, 70, -4.02, -3.94, "paving", "fh_path") if False else G.box(20, 26, 37, 70, -2.52, -2.44, "paving", "fh_path")
+    # rain tank and planting
+    G.cyl(57, 7, -2.5, 2.0, 5, "stone", 32, "rain_tank")
     random.seed(7)
-    for x in range(2, 98, 4):
-        if not 30 < x < 52:
-            shrub(x + random.uniform(-1, 1), -1.8 if x > 62 or x < 18 else -10.4, random.uniform(1.3, 1.9))
-        if not 15 < x < 35:
-            shrub(x + random.uniform(-1, 1), 51.5, random.uniform(1.2, 1.8))
-    for y in range(-25, 40, 4):
-        shrub(-2.2, y, random.uniform(1.2, 1.8))
-        shrub(100.2, y, random.uniform(1.2, 1.8)) if y > 0 else None
-    # trees and grove
-    for (x, y, s, k) in [(-58, -30, 1.1, "broad"), (-45, 20, 1.3, "broad"), (-35, 70, 1.0, "palm"), (-20, 95, 0.9, "palm"),
-                         (130, -30, 1.2, "broad"), (140, 30, 1.0, "palm"), (125, 75, 0.95, "palm"), (115, 110, 1.2, "broad"),
-                         (-60, -90, 1.4, "bamboo"), (150, -90, 1.2, "bamboo"), (70, 140, 1.4, "broad"), (0, 150, 1.3, "broad"),
-                         (90, 105, 0.9, "palm"), (98, -40, 0.9, "palm")]:
+    for x in range(2, 46, 4):
+        if not 16 < x < 28:
+            shrub(x + random.uniform(-0.5, 0.5), -1.8, random.uniform(1.2, 1.7))
+        if not 2 < x < 13:
+            shrub(x + random.uniform(-0.5, 0.5), 38.4, random.uniform(1.1, 1.6))
+    for y in range(2, 28, 4):
+        shrub(-2.0, y, random.uniform(1.1, 1.6))
+        shrub(48.0, y, random.uniform(1.1, 1.6))
+    for (x, y, s, k) in [(-50, -20, 1.1, "broad"), (-40, 30, 1.2, "broad"), (-30, 65, 1.0, "palm"), (-14, 90, 0.9, "palm"),
+                         (85, -25, 1.1, "broad"), (90, 25, 1.0, "palm"), (78, 70, 0.95, "palm"), (70, 105, 1.2, "broad"),
+                         (-60, -80, 1.4, "bamboo"), (110, -80, 1.2, "bamboo"), (45, 125, 1.3, "broad"), (-5, 130, 1.2, "broad")]:
         tree(x, y, s, k)
     for i in range(60):
         a = random.uniform(0, 2 * math.pi)
-        r = random.uniform(190, 320)
-        tree(49 + r * math.cos(a), 20 + r * math.sin(a), random.uniform(1.0, 1.6), random.choice(["broad", "broad", "palm"]))
-    # distant hills
+        r = random.uniform(150, 280)
+        tree(23 + r * math.cos(a), 14 + r * math.sin(a), random.uniform(1.0, 1.6), random.choice(["broad", "broad", "palm"]))
     for (x, y, sx, sz) in [(-500, -500, 3.5, 0.5), (300, -600, 4, 0.55), (700, -100, 3, 0.45), (-600, 300, 3.5, 0.5), (200, 650, 4.5, 0.5), (-200, -650, 3, 0.4)]:
         G.sphere(x, y, -60, 160, "leaf_dark", sx, sx, sz, "hill")
 
@@ -341,30 +336,21 @@ def main():
     furniture.furnish(1, 0, 0)
     sc = bpy.context.scene
     views = {
-        "front": dict(cam=(-12, -70, 4.6, 42, -4, 6.5, 26), sun=(11, 285)),
-        "dbg": dict(cam=(-22, -12, 6, 2, -8, 6, 35), sun=(30, 285)),
-        "rear": dict(cam=(72, 112, 3.6, 38, 38, 7.0, 22), sun=(14, 238)),
-        "aerial": dict(cam=(175, 175, 105, 45, 15, 0, 32), sun=(38, 225)),
-        "cutaway": dict(cam=(120, 98, 120, 48, 8, 0, 30), sun=(55, 200)),
-        "hall": dict(cam=(19.6, 38.3, 5.0, 62, 17, 5.0, 16), sun=(24, 190)),
-        "kitchen": dict(cam=(64.5, 38.6, 5.2, 78, 19, 3.6, 17), sun=(24, 160)),
-        "bed1": dict(cam=(1.2, 23.2, 5.0, 17, 35, 3.0, 17), sun=(18, 250)),
-        "library": dict(cam=(29.4, 11.2, 5.0, 4, 3, 4.6, 18), sun=(30, 250)),
+        "front": dict(cam=(62, -52, 4.6, 20, 0, 6.0, 24), sun=(11, 300)),
+        "rear": dict(cam=(56, 100, 3.6, 18, 24, 6.0, 22), sun=(14, 238)),
+        "aerial": dict(cam=(105, 100, 72, 20, 10, 0, 30), sun=(38, 225)),
+        "cutaway": dict(cam=(66, 62, 64, 23, 13, 0, 30), sun=(55, 200)),
+        "hall": dict(cam=(15.0, 27.0, 5.0, 29, 4, 4.5, 16), sun=(24, 190)),
+        "kitchen": dict(cam=(31.0, 15.4, 5.2, 45, 8.5, 3.6, 16), sun=(24, 160)),
+        "bed1": dict(cam=(0.9, 17.9, 5.0, 13, 27, 3.0, 16), sun=(18, 250)),
+        "library": dict(cam=(13.2, 9.3, 5.0, 1, 2, 4.4, 16), sun=(30, 250)),
     }
     v = views[VIEW]
     setup_world(v["sun"][0], v["sun"][1], 0.45)
     camera(*v["cam"][:6], lens=v["cam"][6])
     if INTERIOR:
-        for (x, y) in ((26, 20), (40, 20), (26, 33), (40, 33), (56, 20), (56, 33), (71, 22), (71, 34), (9, 31), (25, 6), (9, 6)):
+        for (x, y) in ((22, 6), (22, 20), (38, 11.5), (7, 5), (7, 22), (35, 22)):
             area_light(x, y, 11.6, 4, 260)
-        area_light(89, 32, 11.6, 4, 200)
-        for (x, y) in ((26, 26.5), (42, 26.5), (56, 26.5), (71, 28)):
-            l = bpy.data.lights.new("up", "POINT")
-            l.energy = 900
-            l.color = (1, 0.8, 0.6)
-            o = bpy.data.objects.new("up", l)
-            o.location = (x, -y, 8.5)
-            bpy.context.collection.objects.link(o)
     sc.render.engine = "CYCLES"
     sc.cycles.device = "CPU"
     sc.cycles.samples = SAMPLES

@@ -189,90 +189,57 @@ class F:
 
 def furnish(S, ox, oy):
     f = F(S, ox, oy)
-    # study
-    f.desk(1, 3.5, 2.6, 6, "E")
-    f.shelves(5, 11.3, 8, 1.3)
-    f.chair(12.5, 2.5, 2.8, "N")
-    f.plant(16.5, 2)
-    # library
-    f.shelves(30.6, 0.7, 1.0, 11.6)
-    f.shelves(19, 0.7, 8, 1.0)
-    f.chair(21, 5.5, 2.8, "W")
-    f.chair(25.5, 5.5, 2.8, "E")
-    f.circ(24.4, 6.9, 0.8)
+    # library and study
+    f.desk(0.5, 2.6, 2.6, 5.4, "E")
+    f.shelves(0.8, 8.4, 9.4, 1.1)
+    f.chair(9.0, 1.0, 2.6, "N")
+    f.circ(12.2, 2.3, 0.7)
     # bath 1
-    f.shower(0.4, 13.4, 3.6, 3.6)
-    f.wc(0.4, 20, "E")
-    f.basin(5.2, 21.2, 2.4, 0.4 + 1.2)
+    f.shower(0.4, 10.4, 3.0, 2.9)
+    f.wc(0.4, 15.4, "E")
+    f.basin(3.4, 15.3, 2.2, 1.3)
     # dressing 1
-    f.wardrobe(9.0, 13.4, 8.6, 2.0)
+    f.wardrobe(6.4, 10.4, 7.2, 1.7)
     # bedroom 1
-    f.bed(11.2, 28, 6.4, 6.8, "E")
-    f.nightstand(16.0, 26.2)
-    f.nightstand(16.0, 34.6)
-    f.chair(2.0, 35.5, 2.8, "W")
-    f.chair(5.4, 35.5, 2.8, "E")
-    f.rect(1, 23, 6, 1.8, "#fff", 0.7)
-    # foyer
-    f.rect(33, 1, 6, 1.6, "#fff", 0.7)
-    f.plant(48.4, 1.6)
-    # sitting hall
-    f.rug(22, 20, 22, 14)
-    f.sofa(24.5, 21, 15, 3.2, "N")
-    f.sofa(22.5, 25, 7, 3.0, "W")
-    f.chair(37.5, 30, 3.0, "E")
-    f.chair(33.5, 30, 3.0, "S")
-    f.rect(28, 26, 6, 3, "#fff", 0.8, 0.2)
-    f.rect(19, 30, 1.2, 8, "#fff", 0.6)
-    f.plant(47.5, 37.5)
-    # alcove sideboard
-    f.rect(51, 0.8, 10, 1.8, "#fff", 0.7)
-    # dining
-    f.table(54.0, 20.5, 4.0, 10.0, 4, 1)
-    f.o.append(f'<line x1="{f.X(50):.1f}" y1="{f.Y(13):.1f}" x2="{f.X(50):.1f}" y2="{f.Y(40):.1f}" stroke="#666" stroke-width="0.6" stroke-dasharray="5 4"/>')
-    # kitchen
-    f.counter(62.4, 17.4, 15.4, 2.0)
-    f.range_(68.5, 17.5, 2.6)
-    f.counter(77.6, 17.4, 2.0, 12.6)
-    f.sink(77.8, 21.5, 1.6, 2.8)
-    f.box(77.8, 25.0, 1.6, 2.0, "DW", 4)
-    f.box(62.6, 17.6, 2.6, 2.6, "REF", 4.2)
-    f.rect(66.5, 25, 8, 3.5, "#fff", 0.8)
-    for i in range(3):
-        f.rect(67.6 + i * 2.4, 29, 1.4, 1.4, "#fff", 0.6, 0.3)
-    f.round_table(73.5, 35.5, 1.8, 4)
-    # store and utility
-    f.shelves(62.8, 0.7, 8.4, 1.4)
-    f.shelves(62.8, 2.4, 1.4, 9.8)
-    f.box(72.6, 0.6, 2.6, 2.6, "W", 4.6)
-    f.box(75.4, 0.6, 2.6, 2.6, "D", 4.6)
-    f.sink(78.4, 0.7, 3.0, 1.9)
+    f.bed(7.2, 20.0, 5.0, 6.6, "E")
+    f.nightstand(12.2, 18.2)
+    f.nightstand(12.2, 25.2)
+    f.chair(1.0, 17.8, 2.6, "W")
+    # dining (north part of the hall)
+    f.table(22.5, 5.6, 3.5, 7.0, 3, 1)
+    # sitting
+    f.rug(16.0, 15.5, 12.0, 10.0)
+    f.sofa(17.5, 16.0, 9.0, 3.0, "N")
+    f.chair(16.8, 22.0, 2.6, "S")
+    f.chair(24.6, 22.0, 2.6, "S")
+    f.rect(19.6, 20.0, 5.0, 1.8, "#fff", 0.8, 0.2)
+    f.plant(28.8, 1.4)
     # wash lobby
-    f.counter(82.4, 1.0, 2.0, 8)
-    f.basin(82.5, 2.0, 1.8, 2.2)
-    f.basin(82.5, 5.6, 1.8, 2.2)
-    # shared toilet + bath (NE corner)
-    f.wc(97.6, 3.2, "W")
-    f.basin(91.2, 0.4, 2.2, 1.5)
-    f.shower(94.0, 7.0, 3.6, 5.6)
-    f.basin(90.0, 11.0, 2.4, 1.6)
-    # dressing 2
-    f.wardrobe(80.4, 17.4, 2.0, 6.2)
-    # bath 2
-    f.shower(93.8, 13.4, 3.8, 3.8)
-    f.wc(97.6, 20.2, "W")
-    f.basin(90.5, 21.8, 2.4, 1.8)
+    f.basin(30.5, 0.4, 3.0, 1.6)
+    # shared toilet and bathroom, NE corner
+    f.wc(39.0, 0.4, "S")
+    f.shower(42.6, 0.4, 3.0, 6.2)
+    f.basin(35.0, 0.4, 2.0, 1.4)
+    # kitchen
+    f.counter(33.6, 7.4, 12.0, 2.0)
+    f.range_(36.0, 7.5, 2.5)
+    f.sink(40.0, 7.6, 2.6, 1.6)
+    f.counter(43.6, 9.4, 2.0, 6.2)
+    f.box(30.4, 7.4, 2.6, 2.6, "REF", 4.2)
+    f.box(30.4, 13.4, 2.2, 2.2, "PANTRY", 3.6)
+    f.round_table(41.0, 13.2, 1.4, 2)
     # bedroom 2
-    f.bed(80.4, 30, 6.0, 6.8, "W")
-    f.nightstand(80.4, 28.2)
-    f.nightstand(80.4, 36.2)
-    f.chair(93.5, 35.5, 2.8, "S")
-    f.rect(90.5, 24.4, 6, 1.8, "#fff", 0.7)
-    # verandas
-    for x in (4, 20, 36, 66, 80, 92):
-        f.chair(x, 42.6, 2.6, "N")
-    f.rect(25, 42.6, 6, 2.2, "#fff", 0.7, 0.3)
-    f.rect(71, 42.6, 6, 2.2, "#fff", 0.7, 0.3)
-    f.chair(36, -6.2, 2.4, "N")
-    f.chair(55, -6.2, 2.4, "N")
+    f.bed(34.5, 16.4, 5.0, 6.6, "N")
+    f.nightstand(32.7, 16.4)
+    f.chair(37.6, 25.0, 2.4, "S")
+    # bath 2
+    f.shower(42.9, 16.4, 2.7, 2.8)
+    f.wc(44.2, 21.6, "N")
+    f.basin(40.9, 16.4, 1.7, 1.4)
+    # wardrobe 2
+    f.wardrobe(43.6, 22.4, 2.0, 5.2)
+    # veranda
+    for x in (2.0, 15.0, 20.5, 29.0, 41.0):
+        f.chair(x, 29.4, 2.4, "N")
+    f.rect(24.0, 29.4, 4.0, 1.8, "#fff", 0.7, 0.3)
     return f.o

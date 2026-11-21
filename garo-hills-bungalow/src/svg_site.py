@@ -1,12 +1,13 @@
-"""Site plan (one hectare) and roof drainage plan."""
-import math
+"""Site plan (one hectare) and roof drainage plan for the budget house. Feet throughout."""
+import math, random
 from svg_plan import tag, _f, INK, FILL
+from data import rain
 
-PLOT = 328.08          # ft, square plot = 1 ha
-HX, HY = 115, 120      # house CL origin on site
-GX, GY = 186, 44       # garage block origin on site
-FX, FY = 139, 207      # firehouse CL origin (20 x 20)
-RING = (156, 84, 24, 9)  # forecourt centre x, y, outer r, island r
+PLOT = 328.08
+HX, HY = 141, 165          # house CL origin on site (house is 46 x 28)
+RING = (164, 135, 20)      # gravel turning circle centre x, y, radius
+FX, FY = 158, 236          # firehouse post-centre origin (12 x 12)
+CP = (113, 122, 18, 20)    # carport x, y, w, d
 
 
 def site_plan():
@@ -17,173 +18,128 @@ def site_plan():
     P = lambda x, y: (ox + x * S, oy + y * S)
     o = [f'<svg viewBox="0 0 {W:.0f} {H:.0f}" xmlns="http://www.w3.org/2000/svg" class="dwg">',
          f'<rect width="{W:.0f}" height="{H:.0f}" fill="{FILL}"/>']
-    # zones
-    def zone(x0, y0, x1, y1, col, label, lx=None, ly=None):
+
+    def rect(x0, y0, w, h, col, stroke="none", sw=0.6, dash=None):
         a, b = P(x0, y0)
-        o.append(f'<rect x="{_f(a)}" y="{_f(b)}" width="{_f((x1-x0)*S)}" height="{_f((y1-y0)*S)}" fill="{col}"/>')
-        if label:
-            cx, cy = P(lx if lx is not None else (x0 + x1) / 2, ly if ly is not None else (y0 + y1) / 2)
-            o.append(tag(cx, cy, label, 7, "bold", "#3d4a2a"))
-    zone(0, 0, PLOT, PLOT, "#e4ecd6", None)
-    zone(0, 0, 70, PLOT, "#c9dbb4", "GROVE", 35, 160)
-    zone(258, 0, PLOT, PLOT, "#c9dbb4", "GROVE", 293, 160)
-    zone(0, 268, PLOT, PLOT, "#c9dbb4", "GROVE AND BUFFER (native trees)", 164, 312)
-    zone(70, 236, 258, 268, "#dfe8c0", "ORCHARD: orange, jackfruit, areca, banana", 164, 254)
-    zone(196, 176, 258, 236, "#efe7c4", "KITCHEN", 227, 202)
-    o.append(tag(*P(227, 209), "GARDEN", 7, "bold", "#3d4a2a"))
-    zone(70, 176, 196, 236, "#d6e6c4", None)
-    o.append(tag(*P(110, 200), "PRIVATE", 7, "bold", "#3d4a2a"))
-    o.append(tag(*P(110, 207), "GARDEN", 7, "bold", "#3d4a2a"))
-    # pineapple terraces & bamboo
-    o.append(tag(*P(227, 230), "pineapple terraces", 5.5, fill="#3d4a2a"))
-    o.append(tag(*P(35, 20), "bamboo screen", 5.5, fill="#3d4a2a"))
-    # swales (contours) and pond
-    for y in (172, 232, 266):
+        d = f' stroke-dasharray="{dash}"' if dash else ""
+        o.append(f'<rect x="{_f(a)}" y="{_f(b)}" width="{_f(w*S)}" height="{_f(h*S)}" fill="{col}" stroke="{stroke}" stroke-width="{sw}"{d}/>')
+
+    def lab(x, y, t, fs=7, w="bold", c="#3d4a2a", anchor="middle"):
+        o.append(tag(*P(x, y), t, fs, w, c, anchor))
+    rect(0, 0, PLOT, PLOT, "#e4ecd6")
+    rect(0, 0, 70, PLOT, "#c9dbb4"); lab(35, 160, "GROVE")
+    rect(258, 0, 70.08, PLOT, "#c9dbb4"); lab(293, 160, "GROVE")
+    rect(0, 268, PLOT, 60.08, "#c9dbb4"); lab(164, 312, "GROVE AND BUFFER (native trees, left to grow)")
+    rect(70, 262, 188, 6, "#c9dbb4")
+    rect(70, 236, 188, 26, "#dfe8c0"); lab(110, 252, "ORCHARD: orange, jackfruit, banana", 6.4)
+    rect(200, 160, 50, 55, "#efe7c4"); lab(225, 185, "KITCHEN"); lab(225, 192, "GARDEN")
+    lab(225, 210, "pineapple bed", 5.5, "normal")
+    for y in (222, 258, 300):
         a, b = P(72, y)
         c, d = P(256, y + 4)
         o.append(f'<path d="M {_f(a)} {_f(b)} Q {_f((a+c)/2)} {_f(b+10)} {_f(c)} {_f(d)}" fill="none" stroke="#2c6fa8" stroke-width="1.3" stroke-dasharray="6 3"/>')
-    o.append(tag(*P(262, 238), "swale on contour", 5.5, "normal", "#2c6fa8", "start"))
-    px, py = P(96, 292)
-    o.append(f'<ellipse cx="{_f(px)}" cy="{_f(py)}" rx="{_f(22*S)}" ry="{_f(12*S)}" fill="#b9d6ee" stroke="#2c6fa8"/>')
-    o.append(tag(px, py + 2, "RETENTION POND", 6, "bold", "#1d4e89"))
-    for sx in (130, 150):
-        a, b = P(sx, 296)
-        o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="{_f(3*S)}" fill="none" stroke="#2c6fa8" stroke-width="1"/>')
-    o.append(tag(*P(140, 304), "soakaways", 5.5, fill="#1d4e89"))
-    a, b = P(118, 300)
-    c, d = P(118, PLOT)
-    o.append(f'<line x1="{_f(a)}" y1="{_f(b)}" x2="{_f(c)}" y2="{_f(d)}" stroke="#2c6fa8" stroke-width="1.3" stroke-dasharray="3 2"/>')
-    o.append(tag(*P(121, 324), "overflow to natural stream", 5.5, "normal", "#1d4e89", "start"))
-    # drive, forecourt, spur, visitor bay
-    def poly(pts, fill, stroke="#9c927f"):
-        o.append('<polygon points="' + " ".join(f"{_f(P(x, y)[0])},{_f(P(x, y)[1])}" for x, y in pts) + f'" fill="{fill}" stroke="{stroke}" stroke-width="0.6"/>')
-    poly([(150, 0), (162, 0), (162, 62), (150, 62)], "#d9d2c3")
-    poly([(162, 30), (244, 30), (244, 44), (162, 44)], "#d9d2c3")
-    poly([(118, 70), (134, 70), (134, 88), (118, 88)], "#d9d2c3")
-    cx, cy, R, r = RING
+    lab(258, 226, "swale on contour", 5.5, "normal", "#2c6fa8", "start")
+    px, py = P(100, 300)
+    o.append(f'<ellipse cx="{_f(px)}" cy="{_f(py)}" rx="{_f(15*S)}" ry="{_f(9*S)}" fill="#b9d6ee" stroke="#2c6fa8"/>')
+    lab(100, 302, "POND", 6, "bold", "#1d4e89")
+    a, b = P(164, 0)
+    rect(158, 0, 12, 115, "#d9d2c3", "#9c927f")
+    cx, cy, r = RING
     a, b = P(cx, cy)
-    o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="{_f(R*S)}" fill="#d9d2c3" stroke="#9c927f" stroke-width="0.6"/>')
-    o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="{_f(r*S)}" fill="#bcd3a0" stroke="#6d8a4a"/>')
-    o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="{_f(6*S)}" fill="#7da35a" opacity="0.8"/>')
-    o.append(tag(a, b + 2, "Champak", 5, "bold", "#fff"))
-    o.append(tag(*P(126, 80), "visitor", 5, fill="#444"))
-    o.append(tag(*P(126, 85), "bay", 5, fill="#444"))
-    o.append(tag(*P(167, 18), "DRIVE 12 ft 0 in", 6, "bold", "#444", "start"))
-    o.append(tag(*P(167, 25), "pavers, camber 1 in 50", 5.5, "normal", "#444", "start"))
-    o.append(tag(*P(200, 39), "garage spur", 5.5, "normal", "#444", "middle"))
-    o.append(tag(*P(cx - 46, cy + 30), "forecourt ring 48 ft dia", 5.5, "normal", "#444", "start"))
-    # house, verandas, porch
-    poly([(HX - 0.5, HY + 40), (HX + 98.5, HY + 40), (HX + 98.5, HY + 49), (HX - 0.5, HY + 49)], "#efe6d2")
-    poly([(HX + 18, HY - 8), (HX + 62, HY - 8), (HX + 62, HY), (HX + 18, HY)], "#efe6d2")
-    poly([(HX + 31, HY - 22), (HX + 51, HY - 22), (HX + 51, HY - 8), (HX + 31, HY - 8)], "#e8dcc0")
-    poly([(HX, HY), (HX + 98, HY), (HX + 98, HY + 40), (HX, HY + 40)], "#5a5a5a", "#222")
-    o.append(tag(*P(HX + 49, HY + 22), "MAIN HOUSE", 8, "bold", "#fff"))
-    o.append(tag(*P(HX + 49, HY + 30), "FFL +2 ft 6 in", 5.5, fill="#fff"))
-    poly([(HX + 62, HY - 12), (HX + 80, HY - 12), (HX + 80, HY), (HX + 62, HY)], "#ece6da")
-    o.append(tag(*P(HX + 71, HY - 5), "yard", 5, fill="#444"))
-    # garage block and covered link
-    poly([(GX, GY), (GX + 41, GY), (GX + 41, GY + 23), (GX, GY + 23)], "#6a6a6a", "#222")
-    o.append(tag(*P(GX + 20, GY + 13), "GARAGE", 6, "bold", "#fff"))
-    lx = GX + 35.5
-    poly([(lx - 3, GY + 23), (lx + 3, GY + 23), (lx + 3, HY - 10), (HX + 62, HY - 10), (HX + 62, HY - 16), (lx - 3, HY - 16)], "#efe6d2")
-    o.append(tag(*P(lx + 6, GY + 44), "covered link", 5.5, "normal", "#5b4a2a", "start"))
-    # firehouse and path
-    poly([(HX + 31, HY + 49), (HX + 37, HY + 49), (HX + 37, FY - 2), (HX + 31, FY - 2)], "#d9d2c3")
-    poly([(FX - 2, FY - 2), (FX + 22, FY - 2), (FX + 22, FY + 22), (FX - 2, FY + 22)], "#e8dcc0")
-    poly([(FX, FY), (FX + 20, FY), (FX + 20, FY + 20), (FX, FY + 20)], "#8a6a50", "#222")
-    fx, fy = P(FX + 10, FY + 10)
-    o.append(f'<circle cx="{_f(fx)}" cy="{_f(fy)}" r="{_f(2*S)}" fill="#e07a2f"/>')
-    o.append(tag(fx, fy + 15 * S, "FIREHOUSE", 6.5, "bold", "#3d2a1a"))
-    o.append(tag(*P(HX + 40, HY + 70), "lawn", 5.5, "normal", "#3d4a2a", "start"))
-    # RWH sump
-    poly([(222, 132), (242, 132), (242, 144), (222, 144)], "#b9d6ee", "#2c6fa8")
-    o.append(tag(*P(232, 140), "RWH", 5.5, "bold", "#1d4e89"))
-    o.append(tag(*P(232, 151), "sump 61,000 L", 5, "normal", "#1d4e89"))
-    # compound wall + gate
+    o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="{_f(r*S)}" fill="#d9d2c3" stroke="#9c927f" stroke-width="0.6"/>')
+    o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="{_f(6*S)}" fill="#bcd3a0" stroke="#6d8a4a"/>')
+    lab(164, 137, "Champak", 4.6, "bold", "#2f4a1a")
+    lab(173, 60, "GRAVEL DRIVE 12.00 ft", 6, "bold", "#444", "start")
+    lab(186, 125, "turning circle 40.00 ft dia", 5.5, "normal", "#444", "start")
+    rect(CP[0], CP[1], CP[2], CP[3], "#8d8d8d", "#222"); lab(122, 134, "CARPORT", 5.2, "bold", "#fff")
+    rect(131, 127, 13, 8, "#d9d2c3", "#9c927f")
+    rect(HX - 0.375, HY + 28.375, 46.75, 8, "#efe6d2", "#c8b892")
+    rect(HX + 17, HY - 6.4, 10, 6, "#efe6d2", "#c8b892")
+    rect(HX - 0.375, HY - 0.375, 46.75, 28.75, "#5a5a5a", "#222")
+    lab(HX + 23, HY + 14, "HOUSE", 7, "bold", "#fff")
+    lab(HX + 23, HY + 21, "46.75 x 28.75 ft", 5.2, "normal", "#fff")
+    rect(161, HY + 36.4, 6, FY - HY - 37.4, "#d9d2c3")
+    rect(FX - 1, FY - 1, 14, 14, "#e8dcc0"); rect(FX, FY, 12, 12, "#8a6a50", "#222")
+    a, b = P(FX + 6, FY + 6)
+    o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="{_f(2*S)}" fill="#e07a2f"/>')
+    lab(FX + 6, FY + 19, "FIREHOUSE", 6, "bold", "#3d2a1a")
+    lab(150, 222, "lawn", 5.5, "normal")
+    a, b = P(198, 172)
+    o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="{_f(5*S)}" fill="#b9d6ee" stroke="#2c6fa8"/>')
+    lab(206, 172, "rain tank 10.00 ft dia", 5, "normal", "#1d4e89", "start")
+    rect(118, 186, 6, 4, "#bbb", "#666"); lab(116, 196, "septic + soak pit", 5, "normal", "#444", "start")
     a, b = P(0, 0)
-    o.append(f'<rect x="{_f(a)}" y="{_f(b)}" width="{_f(PLOT*S)}" height="{_f(PLOT*S)}" fill="none" stroke="#3a3a3a" stroke-width="2.4"/>')
-    g0, gy = P(149, 0)
-    o.append(f'<rect x="{_f(g0)}" y="{_f(gy-3)}" width="{_f(14*S)}" height="6" fill="#fff" stroke="#000"/>')
-    o.append(tag(*P(156, -4), "MAIN GATE 14 ft + wicket 3 ft 6 in", 6.5, "bold", "#000"))
-    # trees in grove
-    import random
+    o.append(f'<rect x="{_f(a)}" y="{_f(b)}" width="{_f(PLOT*S)}" height="{_f(PLOT*S)}" fill="none" stroke="#555" stroke-width="1.4" stroke-dasharray="6 3"/>')
+    for x0, x1 in ((128, 158), (173.5, 203.5)):
+        a, b = P(x0, 0)
+        o.append(f'<rect x="{_f(a)}" y="{_f(b-3)}" width="{_f((x1-x0)*S)}" height="6" fill="#9c8f74" stroke="#333"/>')
+    a, b = P(158, 0)
+    o.append(f'<rect x="{_f(a)}" y="{_f(b-3)}" width="{_f(12*S)}" height="6" fill="#fff" stroke="#000"/>')
+    lab(164, -4, "GATE 12.00 ft + wicket 3.50 ft; stone wall 30.00 ft each side; chain-link fence elsewhere", 6.2, "bold", "#000")
     random.seed(4)
     for _ in range(140):
         x, y = random.uniform(5, PLOT - 5), random.uniform(5, PLOT - 5)
-        inside = (x < 66 or x > 262 or y > 272)
-        if inside:
+        if x < 66 or x > 262 or y > 272:
             a, b = P(x, y)
-            o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="{_f(random.uniform(4,7)*S/2.15)}" fill="#7da35a" opacity="0.55"/>')
+            o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="{_f(random.uniform(4,7))}" fill="#7da35a" opacity="0.55"/>')
     for x in range(84, 250, 18):
         a, b = P(x, 244)
         o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="4" fill="#e3a43a" opacity="0.8"/>')
-        a, b = P(x + 9, 260)
+        a, b = P(x + 9, 256)
         o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="4" fill="#6f9a3f" opacity="0.8"/>')
-    # legend, slope, north, scale
     lx0 = ox + PLOT * S + 14
-    items = [("#c9dbb4", "Grove and buffer"), ("#dfe8c0", "Orchard"), ("#efe7c4", "Kitchen garden"),
-             ("#d6e6c4", "Private garden"), ("#d9d2c3", "Drive and paving"), ("#b9d6ee", "Water")]
-    for i, (c, t) in enumerate(items):
+    for i, (c, t) in enumerate([("#c9dbb4", "Grove"), ("#dfe8c0", "Orchard"), ("#efe7c4", "Kitchen garden"),
+                                ("#d9d2c3", "Gravel"), ("#b9d6ee", "Water")]):
         o.append(f'<rect x="{_f(lx0)}" y="{_f(oy+40+i*16)}" width="12" height="10" fill="{c}" stroke="#888" stroke-width="0.4"/>')
         o.append(tag(lx0 + 17, oy + 49 + i * 16, t, 7, anchor="start"))
-    o.append(f'<line x1="{_f(lx0)}" y1="{_f(oy+150)}" x2="{_f(lx0+26)}" y2="{_f(oy+150)}" stroke="#2c6fa8" stroke-width="1.3" stroke-dasharray="6 3"/>')
-    o.append(tag(lx0 + 30, oy + 153, "Swale", 7, anchor="start"))
-    o.append(tag(lx0, oy + 185, "Ground falls", 7, "bold", anchor="start"))
-    o.append(tag(lx0, oy + 195, "north to south,", 7, anchor="start"))
-    o.append(tag(lx0, oy + 205, "about 1 in 15", 7, anchor="start"))
-    o.append(f'<path d="M {_f(lx0+60)} {_f(oy+175)} L {_f(lx0+60)} {_f(oy+215)}" stroke="#555" stroke-width="1.5" marker-end="url(#ar)"/>')
-    o.append('<defs><marker id="ar" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#555"/></marker></defs>')
-    nx, ny = lx0 + 40, oy + 270
+    o.append(tag(lx0, oy + 150, "Ground falls north", 7, "bold", anchor="start"))
+    o.append(tag(lx0, oy + 160, "to south, 1:15", 7, anchor="start"))
+    nx, ny = lx0 + 40, oy + 220
     o.append(f'<path d="M {nx} {ny-18} L {nx-8} {ny+8} L {nx} {ny+3} L {nx+8} {ny+8} Z" fill="{INK}"/>')
     o.append(tag(nx, ny - 22, "N", 9, "bold"))
-    sy = oy + 320
+    sy = oy + 270
     o.append(f'<rect x="{_f(lx0)}" y="{_f(sy)}" width="{_f(50*S)}" height="5" fill="none" stroke="#000"/>')
     o.append(f'<rect x="{_f(lx0)}" y="{_f(sy)}" width="{_f(25*S)}" height="5" fill="#000"/>')
     o.append(tag(lx0, sy + 15, "0", 6.5, anchor="start"))
     o.append(tag(lx0 + 50 * S, sy + 15, "50 ft", 6.5, anchor="end"))
-    o.append(tag(lx0, sy + 40, "Plot 328 ft x 328 ft", 7, "bold", anchor="start"))
-    o.append(tag(lx0, sy + 50, "= 1,07,639 sq ft", 7, anchor="start"))
-    o.append(tag(lx0, sy + 60, "= 1 hectare", 7, anchor="start"))
+    o.append(tag(lx0, sy + 40, "Plot 328.08 x 328.08 ft", 7, "bold", anchor="start"))
+    o.append(tag(lx0, sy + 50, "= 1,07,636 sq ft = 1 ha", 7, anchor="start"))
     o.append("</svg>")
     return "\n".join(o)
 
 
 def roof_plan():
-    S = 5.6
-    ox, oy = 40, 160
-    oy = 200
-    W, H = ox * 2 + 104 * S + 10, oy + 54 * S + 40
+    S = 11.0
+    ox, oy = 50, 130
+    W, H = ox * 2 + 52 * S + 20, oy + 41 * S + 50
     P = lambda x, y: (ox + (x + 3) * S, oy + y * S)
     o = [f'<svg viewBox="0 0 {W:.0f} {H:.0f}" xmlns="http://www.w3.org/2000/svg" class="dwg">',
          f'<rect width="{W:.0f}" height="{H:.0f}" fill="{FILL}"/>']
 
-    def poly(pts, fill, sw=0.8):
-        o.append('<polygon points="' + " ".join(f"{_f(P(x, y)[0])},{_f(P(x, y)[1])}" for x, y in pts) + f'" fill="{fill}" stroke="#222" stroke-width="{sw}"/>')
-    poly([(-3, 40), (101, 40), (101, 50), (-3, 50)], "#8d8d8d")          # veranda roof 1 in 6
-    poly([(-3, -3), (101, -3), (101, 40), (-3, 40)], "#5c5c5c")               # main roof
-    poly([(29.5, -23.5), (52.5, -23.5), (52.5, -3), (29.5, -3)], "#6c6c6c")   # porch roof
-    for (x0, y0), (x1, y1) in [((-3, -3), (18.5, 18.5)), ((101, -3), (79.5, 18.5)), ((-3, 40), (18.5, 18.5)),
-                               ((101, 40), (79.5, 18.5)), ((18.5, 18.5), (79.5, 18.5)),
-                               ((29.5, -23.5), (41, -12)), ((52.5, -23.5), (41, -12)), ((41, -12), (41, -3))]:
+    def poly(pts, fill):
+        o.append('<polygon points="' + " ".join(f"{_f(P(x, y)[0])},{_f(P(x, y)[1])}" for x, y in pts) + f'" fill="{fill}" stroke="#222" stroke-width="0.8"/>')
+    poly([(-3, 29), (49.375, 29), (49.375, 38), (-3, 38)], "#8d8d8d")
+    poly([(-3, -3), (49, -3), (49, 29.5), (-3, 29.5)], "#5c5c5c")
+    poly([(16.5, -7), (27.5, -7), (27.5, -3), (16.5, -3)], "#6c6c6c")
+    for (x0, y0), (x1, y1) in [((-3, -3), (13.25, 13.25)), ((49, -3), (32.75, 13.25)), ((-3, 29.5), (13.25, 13.25)),
+                               ((49, 29.5), (32.75, 13.25)), ((13.25, 13.25), (32.75, 13.25))]:
         a, b = P(x0, y0)
         c, d = P(x1, y1)
         o.append(f'<line x1="{_f(a)}" y1="{_f(b)}" x2="{_f(c)}" y2="{_f(d)}" stroke="#ddd" stroke-width="1"/>')
-    # gutters
-    for pts in ([(-3, -3), (29.5, -3)], [(52.5, -3), (101, -3)], [(-3, 50), (101, 50)],
-                [(29.5, -23.5), (52.5, -23.5)], [(-3, -3), (-3, 40)], [(101, -3), (101, 40)]):
+    for pts in ([(-3, -3), (16.5, -3)], [(27.5, -3), (49, -3)], [(-3, 38), (49.375, 38)], [(16.5, -7), (27.5, -7)],
+                [(-3, -3), (-3, 29)], [(49, -3), (49, 29)]):
         a, b = P(*pts[0])
         c, d = P(*pts[1])
         o.append(f'<line x1="{_f(a)}" y1="{_f(b)}" x2="{_f(c)}" y2="{_f(d)}" stroke="#2c6fa8" stroke-width="2.6"/>')
-    dps = [(5, -3), (24, -3), (60, -3), (80, -3), (96, -3), (29.5, -23.5), (52.5, -23.5),
-           (5, 50), (28, 50), (50, 50), (72, 50), (95, 50), (-3, 20), (101, 20)]
+    dps = [(2, -3), (44, -3), (2, 38), (23, 38), (44, 38), (49, 13)]
     for x, y in dps:
         a, b = P(x, y)
         o.append(f'<circle cx="{_f(a)}" cy="{_f(b)}" r="4.2" fill="#fff" stroke="#1d4e89" stroke-width="1.6"/>')
-    o.append(tag(*P(49, 9), "MAIN HIPPED ROOF, 25° pitch, charcoal standing-seam steel", 7.5, "bold", "#fff"))
-    o.append(tag(*P(49, 30), "hip ridge about 58 ft long, +24 ft 3 in above FFL; wall plate +15 ft 0 in", 6.5, fill="#fff"))
-    o.append(tag(*P(49, 46.6), "VERANDA ROOF, 1 in 6 (9½°), eave 12 ft 5 in above FFL", 6.8, "bold", "#fff"))
-    o.append(tag(*P(41, -15), "PORCH", 6, "bold", "#fff"))
-    o.append(tag(*P(49, 56.5), f"{len(dps)} downpipes of 4 in dia (12 needed at 500 sq ft each), 7 in x 5 in box gutters laid 1 in 200 to outlets", 7, "bold", "#1d4e89"))
-    o.append(tag(*P(60, -27), "3 ft 0 in overhang on north, east and west faces; south face oversails the veranda roof by 1 ft 6 in with a lead-free flashing apron", 6.5, fill="#333"))
+    r = rain()
+    o.append(tag(*P(23, 6), "MAIN ROOF 52.00 x 32.50 ft, 25° hipped, charcoal profile sheet", 7.4, "bold", "#fff"))
+    o.append(tag(*P(23, 34), "VERANDA ROOF 52.38 x 9.00 ft at 1:6", 7, "bold", "#fff"))
+    o.append(tag(*P(22, -4.6), "PORCH", 6, "bold", "#fff"))
+    o.append(tag(*P(23, 40.6), f"Roof area {r['area']:,.2f} sq ft ÷ {500} sq ft per pipe = {r['area']/500:.2f}, so {r['pipes']} needed; {len(dps)} downpipes of 0.33 ft dia provided", 7, "bold", "#1d4e89"))
+    o.append(tag(*P(23, -9.5), "Gutters 0.50 ft wide x 0.33 ft deep, laid 1:200 to the outlets. 3.00 ft overhang on north, east and west.", 6.8, fill="#333"))
     o.append("</svg>")
     return "\n".join(o)

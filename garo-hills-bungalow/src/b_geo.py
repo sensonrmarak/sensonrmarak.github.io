@@ -204,8 +204,9 @@ def hip_roof(x0, x1, y0, y1, ze, mat="roof", along="x", name="roof"):
     return ob
 
 
-# ------------------------------------------------------------------ walls
-OUTER = [((0, 0), (0, 40)), ((0, 40), (98, 40)), ((98, 40), (98, 0)), ((98, 0), (0, 0))]
+# ------------------------------------------------------------------ walls (all in feet)
+OUTER = [((0, 0), (0, 28)), ((0, 28), (46, 28)), ((46, 28), (46, 0)), ((46, 0), (0, 0))]
+EAVE = 13.0 - 3 * K25
 
 
 def _ops_on(ori, c, a0, a1):
@@ -216,60 +217,48 @@ def _ops_on(ori, c, a0, a1):
     return sorted(out, key=lambda t: t[1])
 
 
-def wall_pieces(x0, y0, x1, y1, t_in, top):
-    """Build one wall as boxes around its openings. Returns list of opening specs."""
-    t = t_in / 12
+def wall_pieces(x0, y0, x1, y1, t, top):
     ori = "h" if y0 == y1 else "v"
     c = y0 if ori == "h" else x0
     a0, a1 = (min(x0, x1), max(x0, x1)) if ori == "h" else (min(y0, y1), max(y0, y1))
     ops = _ops_on(ori, c, a0, a1)
     e0, e1 = a0 - t / 2 + 0.03, a1 + t / 2 - 0.03
+    mat = "render" if t >= 0.75 else "wall_int"
 
     def seg(b0, b1, z0, z1):
         if ori == "h":
-            box(b0, b1, c - t / 2, c + t / 2, z0, z1, "render" if t_in == 9 else "wall_int", "wall")
+            box(b0, b1, c - t / 2, c + t / 2, z0, z1, mat, "wall")
         else:
-            box(c - t / 2, c + t / 2, b0, b1, z0, z1, "render" if t_in == 9 else "wall_int", "wall")
+            box(c - t / 2, c + t / 2, b0, b1, z0, z1, mat, "wall")
 
     cur = e0
     specs = []
     for mark, a in ops:
-        w, h, sill = SCHEDULE[mark][2] / 12, SCHEDULE[mark][3] / 12, SCHEDULE[mark][4] / 12
+        w, h, sill = SCHEDULE[mark][2], SCHEDULE[mark][3], SCHEDULE[mark][4]
         o0, o1 = a - w / 2, a + w / 2
         seg(cur, o0, 0, top)
-        head = sill + h
-        vent = mark in ("W1", "FD1") and t_in == 9 and top > 11.5
         if sill > 0:
             seg(o0, o1, 0, sill)
-        if vent:
-            seg(o0, o1, head, 9.0)
-            seg(o0, o1, 11.0, top)
-            specs.append(("V1", ori, c, a, w, 9.0, 11.0, t))
-        else:
-            seg(o0, o1, head, top)
-        specs.append((mark, ori, c, a, w, sill, head, t))
+        seg(o0, o1, sill + h, top)
+        specs.append((mark, ori, c, a, w, sill, sill + h, t))
         cur = o1
     seg(cur, e1, 0, top)
     return specs
 
 
 def window(mark, ori, c, a, w, z0, z1, t):
-    door = mark in ("D1", "D4", "D2", "D3", "D5", "SD1")
-    if mark in ("D2", "D3", "D5", "SD1"):
-        return  # interior doors left open for the views
+    if mark in ("D2", "D3", "OP"):
+        return
     fw = 0.17
+    X0, X1, Yc = a - w / 2, a + w / 2, c
     if ori == "h":
-        X0, X1, Yc = a - w / 2, a + w / 2, c
         B = lambda u0, u1, z0_, z1_, d=0.18, mat="black": box(u0, u1, Yc - d / 2, Yc + d / 2, z0_, z1_, mat, "frame")
     else:
-        X0, X1, Yc = a - w / 2, a + w / 2, c
         B = lambda u0, u1, z0_, z1_, d=0.18, mat="black": box(Yc - d / 2, Yc + d / 2, u0, u1, z0_, z1_, mat, "frame")
-    if door and mark in ("D1", "D4"):
+    if mark == "D1":
         B(X0, X1, z0, z1, 0.15, "hardwood_door")
         B(X0 + 0.5, X1 - 0.5, z1 - 3.2, z1 - 0.8, 0.17, "glass")
-        if mark == "D1":
-            hx = X1 - 0.45
-            B(hx - 0.05, hx + 0.05, 3.2, 4.6, 0.3, "brass")
+        B(X1 - 0.5, X1 - 0.4, 3.2, 4.6, 0.3, "brass")
         return
     B(X0, X1, z0, z0 + fw)
     B(X0, X1, z1 - fw, z1)
@@ -282,28 +271,22 @@ def window(mark, ori, c, a, w, z0, z1, t):
         for f in (0.36, 0.68):
             zz = z0 + (z1 - z0) * f
             B(X0, X1, zz - 0.04, zz + 0.04, 0.1)
-    # white drip mould over exterior openings
     if t >= 0.7:
         if ori == "h":
-            box(X0 - 0.3, X1 + 0.3, c - t / 2 - 0.15, c + t / 2 + 0.15, z1 + 0.05, z1 + 0.3, "white", "drip")
+            box(X0 - 0.3, X1 + 0.3, c - t / 2 - 0.15, c + t / 2 + 0.15, 8.05, 8.3, "white", "drip")
         else:
-            box(c - t / 2 - 0.15, c + t / 2 + 0.15, X0 - 0.3, X1 + 0.3, z1 + 0.05, z1 + 0.3, "white", "drip")
+            box(c - t / 2 - 0.15, c + t / 2 + 0.15, X0 - 0.3, X1 + 0.3, 8.05, 8.3, "white", "drip")
 
 
 def build_house(cut=None):
-    """cut = None for full house, or a height in ft for a dollhouse cut-away."""
-    top = 14.0 if cut is None else cut
+    top = 13.0 if cut is None else cut
     for x0, y0, x1, y1, t, _ in WALLS:
         for sp in wall_pieces(x0, y0, x1, y1, t, top):
-            if cut is not None and sp[0] == "V1":
-                continue
             window(*sp)
-    # plinth and floor slabs
-    box(-0.4, 98.4, -0.4, 40.4, -2.5, 0, "stone", "plinth")
-    # stone cladding to sill level on the outside faces (z from FFL to 1.5)
+    box(-0.4, 46.4, -0.4, 28.4, -2.5, 0, "stone", "plinth")
     for (ax, ay), (bx, by) in OUTER:
         if ay == by:
-            out = 1 if ay in (40,) else -1
+            out = 1 if ay == 28 else -1
             yy = ay + out * (0.375 + 0.06)
             box(min(ax, bx) - 0.5, max(ax, bx) + 0.5, yy - 0.06, yy + 0.06, -2.5, 1.5, "stone", "clad")
         else:
@@ -314,54 +297,38 @@ def build_house(cut=None):
 
 def build_floors_ceilings(with_ceiling=True):
     from data import room_table
-    wood = {"BED1", "BED2", "LIB", "STDY", "DRS1", "DRS2"}
+    wood = {"BED1", "BED2", "LIB", "DRS1", "WRD2"}
     for r in room_table():
         mat = "wood_floor" if r["key"] in wood else "terrazzo"
         box(r["x0"], r["x1"], r["y0"], r["y1"], -0.05, 0.02, mat, "floor_" + r["key"])
         if with_ceiling:
-            if r["key"] == "HALL":
-                # vaulted timber ceiling, 12.25 at walls to 16 at centre (y = 26.5)
-                mesh([(18, 13, 12.25), (50, 13, 12.25), (50, 26.5, 16), (18, 26.5, 16)], [(0, 1, 2, 3)], "timber", "vault_n")
-                mesh([(18, 26.5, 16), (50, 26.5, 16), (50, 40, 12.25), (18, 40, 12.25)], [(0, 1, 2, 3)], "timber", "vault_s")
-                for x in range(20, 50, 6):
-                    box(x - 0.25, x + 0.25, 13, 40, 12.0, 12.25, "timber", "tie")
-            else:
-                ch = 12.0 if r["key"] in ("LIB", "STDY", "STU") else (10.0 if r["key"] in ("BTH1", "BTH2", "SWC", "SBT", "WLB", "STR", "UTL", "AIRL", "DRS1", "DRS2") else 12.25)
-                if r["key"] == "PAS":
-                    ch = 9.0
-                box(r["x0"], r["x1"], r["y0"], r["y1"], ch, ch + 0.1, "timber" if r["key"] in ("LIB", "STU") else "ceiling", "ceil_" + r["key"])
+            ch = r["ceil"]
+            box(r["x0"], r["x1"], r["y0"], r["y1"], ch, ch + 0.1, "timber" if r["key"] == "LIV" else "ceiling", "ceil_" + r["key"])
+            if r["key"] == "LIV":
+                for y in range(3, 28, 5):
+                    box(14, 30, y - 0.25, y + 0.25, ch - 0.6, ch, "timber", "beam")
 
 
 def build_roofs():
-    hip_roof(-3, 101, -3, 41.5, 13.6, along="x", name="roof_main")
-    hip_roof(29.5, 52.5, -23.5, -3, 11.2, along="y", name="roof_porch")
-    # veranda lean-to roofs, 1 in 6
-    mesh([(-3, 41.0, 13.35), (101, 41.0, 13.35), (101, 50.5, 11.8), (-3, 50.5, 11.8)], [(0, 1, 2, 3)], "roof", "ver_s", solid=0.25)
-    mesh([(17, -0.5, 13.35), (63, -0.5, 13.35), (63, -9.5, 11.85), (17, -9.5, 11.85)], [(0, 1, 2, 3)], "roof", "ver_n", solid=0.25)
+    hip_roof(-3, 49, -3, 29.5, EAVE, along="x", name="roof_main")
+    hip_roof(16.5, 27.5, -7, -0.5, 10.0, along="x", name="roof_porch")
+    mesh([(-3, 29.0, 12.9), (49.375, 29.0, 12.9), (49.375, 38.0, 11.4), (-3, 38.0, 11.4)], [(0, 1, 2, 3)], "roof", "ver_s", solid=0.25)
 
 
 def build_verandas():
-    box(-1, 99, 40, 49.6, -2.5, -0.05, "stone", "ver_s_base")
-    box(-1, 99, 40, 49.6, -0.08, 0, "paving", "ver_s_floor")
-    box(17.5, 62.5, -8.6, 0, -2.5, -0.05, "stone", "ver_n_base")
-    box(17.5, 62.5, -8.6, 0, -0.08, 0, "paving", "ver_n_floor")
-    for i in range(8):
-        z = -(i + 1) * 0.625
-        box(16, 34, 49.6 + i, 49.6 + i + 1.0, -5.0, z + 0.625, "stone", "step")
-    # porch floor is at ground level (the drive passes under); 5 risers of 6 in up to the veranda
+    box(-0.4, 46.4, 28.4, 36.9, -2.5, -0.05, "stone", "ver_s_base")
+    box(-0.4, 46.4, 28.4, 36.9, -0.08, 0, "paving", "ver_s_floor")
+    for i in range(5):
+        box(3, 12, 36.9 + i, 37.9 + i, -4.0, -(i + 1) * 0.5 + 0.0 - 0.0, "stone", "step")
+    for x in (0, 11.5, 23, 34.5, 46):
+        cyl(x, 36.375, 0, 11.3, 0.45, "white", name="col_s")
+        box(x - 0.6, x + 0.6, 35.8, 36.95, 0, 0.5, "white", "col_base")
+    box(-0.4, 46.4, 35.9, 36.85, 11.3, 11.9, "white", "beam_s")
+    box(17, 27, -6.4, -0.4, -2.5, 0, "stone", "porch_base")
+    box(17, 27, -6.4, -0.4, -0.08, 0, "paving", "porch_floor")
     for i in range(4):
-        box(34, 48, -8.6 - (i + 1) * 1.0, -8.6 - i * 1.0, -2.5, -(i + 1) * 0.5, "stone", "pstep")
-    for x in range(0, 99, 11):
-        cyl(x, 49, 0, 11.9, 0.62, "white", name="col_s")
-        box(x - 0.8, x + 0.8, 48.2, 49.8, 0, 0.6, "white", "col_base")
-        box(x - 0.85, x + 0.85, 48.15, 49.85, 11.3, 11.9, "white", "col_cap")
-    box(-1, 99, 48.4, 49.6, 11.9, 12.6, "white", "beam_s")
-    for x in (18, 29, 40, 51, 62):
-        cyl(x, -8.6, 0, 11.9, 0.62, "white", name="col_n")
-    box(17.4, 62.6, -9.2, -8.0, 11.9, 12.6, "white", "beam_n")
-    for x, y in ((31, -22), (51, -22), (31, -15), (51, -15)):
-        cyl(x, y, -2.5, 10.6, 0.7, "white", name="col_p")
-        box(x - 1.1, x + 1.1, y - 1.1, y + 1.1, -2.5, -1.5, "stone", "col_p_base")
-    box(29.8, 52.2, -22.6, -14.4, 10.6, 11.2, "white", "beam_p")
-    # porch lantern
-    box(40.6, 41.4, -19.2, -18.4, 8.8, 10.2, "lamp", "lantern")
+        box(18.5, 25.5, -6.4 - (i + 1), -6.4 - i, -2.5, -(i + 1) * 0.625, "stone", "pstep")
+    for x in (17, 27):
+        cyl(x, -6.4, 0, 9.6, 0.4, "white", name="col_p")
+    box(16.6, 27.4, -6.8, -6.0, 9.6, 10.0, "white", "beam_p")
+    box(21.6, 22.4, -4.2, -3.4, 8.2, 9.4, "lamp", "lantern")

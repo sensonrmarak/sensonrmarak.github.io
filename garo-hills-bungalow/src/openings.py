@@ -1,64 +1,42 @@
-"""Door and window positions (centre of opening, CL coordinates in feet)."""
-from fractions import Fraction as F
+"""Door and window positions (centre of opening, CL coordinates) and schedule. All in feet."""
 
-# mark -> type, material, clear width (in), clear height (in), sill (in), lintel (in), glazing, hardware
+# mark -> type, material, clear width ft, clear height ft, sill ft, lintel ft, glazing, hardware
 SCHEDULE = {
-    "D1": ("Main entrance door, single leaf", "Seasoned teak or local hollock, dark oil finish, 2 in thick panelled", 48, 96, 0, 96,
-           "Two vision panels, 6 mm toughened, reeded", "Brass mortice lock, 5-lever; 3 pairs heavy butt hinges; long pull handle; door closer"),
-    "SL1": ("Fixed side light to main door", "Same hardwood frame as D1", 18, 96, 0, 96,
-            "8 mm toughened, reeded", "None, fixed"),
-    "FD1": ("French door, two leaves, opening out to veranda", "Black powder-coated aluminium, slim 2 in sight line", 60, 96, 0, 96,
-            "6 mm toughened, clear; lower panel laminated 6.38 mm", "Multipoint lock, tower bolts, wind hooks, mosquito mesh shutter"),
-    "D2": ("Room door, single leaf", "Flush hardwood-veneered, 1.5 in, dark stain, in hardwood frame", 39, 96, 0, 96,
-           "None", "Mortice lock with lever handle, 3 butt hinges, door stop"),
-    "D3": ("Bath / service door, single leaf", "WPC solid core, hardwood veneer, dark stain", 33, 84, 0, 96,
-           "Top glass louvre 12 in for ventilation", "Privacy latch, 3 SS hinges, door stop"),
-    "D4": ("Utility back door to service yard", "Hardwood ledged frame with MS grille, dark", 36, 90, 0, 96,
-           "Upper half 6 mm wired glass", "Barrel bolts inside, padlock hasp outside"),
-    "D5": ("Pair of glazed doors, library to study", "Hardwood frame, dark stain, 6 mm toughened glass panels", 60, 96, 0, 96,
-           "6 mm toughened, clear", "Flush bolts, lever handles, magnetic door holders"),
-    "W1": ("Tall casement window with fixed clerestory above lintel", "Black powder-coated aluminium, slim frame", 42, 78, 18, 96,
-           "6 mm toughened clear; mosquito mesh to opening sashes", "Friction stays, multipoint handle; lower sashes open for cross ventilation"),
-    "V1": ("Clerestory top-hung vent above every W1 and FD1", "Black powder-coated aluminium", 42, 24, 108, 132,
-           "6 mm toughened clear", "Top-hung, chain winder with pole"),
-    "W2": ("North-light library window, tall", "Black powder-coated aluminium", 42, 84, 12, 96,
-           "6 mm low-iron clear, UV film", "Side-hung lower sash, fixed upper"),
-    "W3": ("Bath / service window, high", "Black powder-coated aluminium", 30, 36, 60, 96,
-           "5 mm frosted toughened, louvred top third", "Top-hung with stay"),
-    "GD1": ("Garage door, sectional overhead", "Insulated steel, charcoal", 192, 90, 0, 96, "None", "Motorised, manual override"),
-    "GD2": ("Two-wheeler bay opening", "Open, MS grille gate in black", 84, 90, 0, 96, "None", "Sliding grille with padlock"),
+    "D1": ("Main entrance door, single leaf", "Local hardwood, dark oil finish, 0.15 ft thick, panelled", 4.0, 8.0, 0.0, 8.0,
+           "One vision panel, toughened, reeded", "Mortice lock, 3 pairs butt hinges, pull handle"),
+    "FD1": ("French door, two leaves, to the veranda", "Steel frame, black enamel", 5.0, 7.5, 0.0, 8.0,
+            "Clear float glass; fixed vent fanlight 0.50 ft above", "Tower bolts, handles, mosquito mesh shutter"),
+    "D2": ("Room door, single leaf", "Flush door, hardwood frame, dark stain", 3.0, 7.5, 0.0, 8.0,
+           "Fixed vent fanlight 0.50 ft above", "Mortice lock with lever handle, 3 butt hinges"),
+    "D3": ("Bath door, single leaf", "PVC or WPC door, hardwood frame", 2.5, 7.0, 0.0, 8.0,
+           "Louvred fanlight 1.00 ft above for ventilation", "Privacy latch, 3 hinges"),
+    "OP": ("Cased opening, no door", "Plastered reveal with timber lining", 3.0, 7.5, 0.0, 8.0, "None", "None"),
+    "W1": ("Tall casement window", "Steel frame, black enamel", 3.0, 6.5, 1.5, 8.0,
+           "Clear float glass, mosquito mesh to opening sashes", "Stays and handles; lower sashes open for cross ventilation"),
+    "W3": ("High window to bath or lobby", "Steel frame, black enamel", 2.0, 3.0, 5.0, 8.0,
+           "Frosted glass, louvred top third", "Top-hung with stay"),
 }
 
-# (mark, orientation of host wall 'h' or 'v', fixed coord, centre along wall, opens to side +1/-1)
+# (mark, host wall orientation 'h' or 'v', fixed coordinate, centre along wall, opens to side +1/-1)
 MAIN = [
     # north face y = 0
-    ("W2", "h", 0, 9, 1), ("W2", "h", 0, 22.5, 1), ("W2", "h", 0, 27.5, 1),
-    ("W1", "h", 0, 35.5, 1), ("D1", "h", 0, 41, 1), ("SL1", "h", 0, 44, 1), ("W1", "h", 0, 47.5, 1),
-    ("W1", "h", 0, 56, 1), ("W3", "h", 0, 67, 1), ("D4", "h", 0, 77, 1),
-    ("W3", "h", 0, 85, 1), ("W3", "h", 0, 93, 1),
-    # south face y = 40
-    ("FD1", "h", 40, 9, -1), ("FD1", "h", 40, 25, -1), ("W1", "h", 40, 30, -1),
-    ("W1", "h", 40, 38, -1), ("FD1", "h", 40, 43, -1), ("FD1", "h", 40, 56, -1),
-    ("W1", "h", 40, 66.5, -1), ("FD1", "h", 40, 74, -1), ("FD1", "h", 40, 89, -1),
+    ("W1", "h", 0, 4, 1), ("W1", "h", 0, 10, 1), ("W1", "h", 0, 17.5, 1), ("D1", "h", 0, 22, 1),
+    ("W1", "h", 0, 26.5, 1), ("W3", "h", 0, 32, 1), ("W3", "h", 0, 40, 1),
+    # south face y = 28
+    ("FD1", "h", 28, 7, -1), ("FD1", "h", 28, 18.5, -1), ("FD1", "h", 28, 25.5, -1), ("FD1", "h", 28, 35.25, -1),
     # west face x = 0
-    ("W1", "v", 0, 6.5, 1), ("W3", "v", 0, 17.5, 1), ("W1", "v", 0, 28, 1), ("W1", "v", 0, 35, 1),
-    # east face x = 98
-    ("W3", "v", 98, 9.75, -1), ("W3", "v", 98, 18.5, -1), ("W1", "v", 98, 29, -1), ("W1", "v", 98, 35.5, -1),
-    # internal doors
-    ("D5", "v", 18, 6.5, -1), ("D2", "v", 18, 17.5, -1), ("D3", "v", 8, 17.5, -1), ("D2", "h", 22, 13, 1),
-    ("D2", "h", 13, 29, -1), ("D3", "h", 13, 67, -1), ("D3", "h", 13, 77, -1),
-    ("D3", "h", 13, 85, -1), ("D3", "v", 88, 3.25, 1), ("D3", "v", 88, 9.75, 1), ("D3", "h", 17, 70, 1),
-    ("D2", "h", 17, 85, 1), ("D3", "v", 90, 20.5, 1), ("D2", "h", 24, 85, 1), ("D2", "v", 62, 33, 1),
+    ("W1", "v", 0, 5, 1), ("W3", "v", 0, 13.5, 1), ("W1", "v", 0, 22.5, 1),
+    # east face x = 46
+    ("W3", "v", 46, 3.5, -1), ("W1", "v", 46, 11.5, -1), ("W3", "v", 46, 19, -1),
+    # internal
+    ("D2", "v", 14, 5, -1), ("D2", "v", 14, 13.5, -1), ("D3", "v", 6, 13.5, -1), ("D2", "h", 17, 10, 1),
+    ("OP", "v", 30, 3.5, 1), ("D3", "v", 34, 3.5, 1), ("D2", "v", 30, 11.5, 1), ("D2", "v", 30, 19.5, 1),
+    ("D3", "v", 40.5, 19, 1), ("OP", "v", 40.5, 25, 1),
 ]
-
-GARAGE = [("GD1", "h", 0, 10.5, 1), ("GD2", "h", 0, 25.5, 1), ("D4", "h", 0, 35.5, 1),
-          ("D4", "h", 23, 35.5, 1), ("W3", "v", 41, 6.5, -1), ("W3", "v", 0, 11.5, 1)]
 
 
 def counts():
     c = {}
-    for m, *_ in MAIN + GARAGE:
+    for m, *_ in MAIN:
         c[m] = c.get(m, 0) + 1
-    # every W1 and FD1 carries a V1 clerestory above it
-    c["V1"] = c.get("W1", 0) + c.get("FD1", 0)
     return c

@@ -1,6 +1,6 @@
 """Assemble the report HTML and print it to a single A4 PDF."""
 import os, subprocess, sys
-import content1 as c1, content2 as c2, content3 as c3, content4 as c4, content5 as c5, content6 as c6
+import content
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.abspath(os.path.join(HERE, ".."))
@@ -30,6 +30,7 @@ table.t td { padding: 3.5pt 5pt; border-bottom: 1px solid #ebe5d7; vertical-alig
 table.t tr { break-inside: avoid; }
 table.small { font-size: 8.6pt; } table.tiny { font-size: 7.5pt; }
 table.t .n { text-align: right; white-space: nowrap; }
+.work { font-size: 7pt; color: #6b5a33; margin-top: 1pt; white-space: normal; }
 tr.grp td { background: #faf7f0; font-weight: 700; color: #6b5a33; }
 tr.tot td { font-weight: 700; border-top: 1.5px solid #c9bfa6; }
 tr.why td { font-size: 7.8pt; color: #6b5a33; font-style: italic; padding-top: 0; }
@@ -52,19 +53,7 @@ figure.hero figcaption, .gallery figcaption { font-size: 7.8pt; color: #555; mar
 
 
 def html():
-    parts = [
-        c1.cover(), c1.statement(), '<div class="pb"></div>', c6.views(),
-        '<div class="pb"></div>', c1.climate(), c1.references(),
-        '<div class="pb"></div>', c2.area_statement(),
-        '<div class="pb"></div>', c2.plan_pages(), c2.room_schedule(),
-        c2.walls_table(), c2.walkthrough(),
-        '<div class="pb"></div>', c3.elevation_section(), c3.structure(),
-        '<div class="pb"></div>', c3.dw_schedule(), c3.finishes(),
-        '<div class="pb"></div>', c4.firehouse(), c4.garage(),
-        '<div class="pb"></div>', c4.landscape(),
-        '<div class="pb"></div>', c4.roof_and_gate(),
-        '<div class="pb"></div>', c5.cost(), c5.checks(),
-    ]
+    parts = content.parts()
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <title>Courtyard Bungalow, Garo Hills</title><style>{CSS}</style></head>
 <body>{''.join(parts)}</body></html>"""
