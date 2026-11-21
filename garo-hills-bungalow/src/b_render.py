@@ -349,7 +349,7 @@ def main():
         "hall": dict(cam=(19.6, 38.3, 5.0, 66, 19, 5.0, 16), sun=(24, 190)),
         "kitchen": dict(cam=(51.5, 38.5, 5.2, 75, 19, 3.8, 18), sun=(24, 160)),
         "bed1": dict(cam=(1.2, 23.2, 5.0, 17, 35, 3.0, 17), sun=(18, 250)),
-        "library": dict(cam=(31.3, 12.4, 5.0, 4, 3, 4.6, 17), sun=(30, 250)),
+        "library": dict(cam=(29.4, 11.2, 5.0, 4, 4, 4.6, 18), sun=(30, 250)),
     }
     v = views[VIEW]
     setup_world(v["sun"][0], v["sun"][1], 0.45)
@@ -382,7 +382,7 @@ def main():
         sc.view_settings.look = "AgX - Punchy"
     except Exception:
         pass
-    sc.view_settings.exposure = 0.6 if INTERIOR else 0.0
+    sc.view_settings.exposure = (1.5 if VIEW == "library" else 0.6) if INTERIOR else 0.0
     sc.render.filepath = OUT
     bpy.ops.render.render(write_still=True)
     print("WROTE", OUT)
