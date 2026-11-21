@@ -61,7 +61,7 @@ def draw_openings(ops, walls, S, ox, oy):
             if ori == "h":
                 out.append(f'<line x1="{_f(ox+a0*S)}" y1="{_f(oy+c*S)}" x2="{_f(ox+a1*S)}" y2="{_f(oy+c*S)}" stroke="{INK}" stroke-width="0.8" stroke-dasharray="4 3"/>')
             continue
-        leaves = [(a0, w / 2, 1), (a1, w / 2, -1)] if mark == "FD1" else [(a0, w, 1)]
+        leaves = [(a0, w / 2, 1), (a1, w / 2, -1)] if mark in ("FD1", "D5") else [(a0, w, 1)]
         for hinge, lw, dirn in leaves:
             off = side * (t / 2)
             if ori == "h":
@@ -85,7 +85,8 @@ def tag(x, y, text, size=8, weight="normal", fill=INK, anchor="middle"):
     return f'<text x="{_f(x)}" y="{_f(y)}" font-size="{size}" font-weight="{weight}" fill="{fill}" text-anchor="{anchor}" font-family="Helvetica, Arial, sans-serif">{text}</text>'
 
 
-SHORT = {"BED1": "BEDROOM 1", "WIC1": "DRESS 1", "BTH1": "BATH 1", "LIB": "LIBRARY", "FOY": "FOYER",
+SHORT = {"SWC": "TOILET", "SBT": "BATH", "STU": "MUSIC STUDIO", "AIRL": "AIRLOCK", "STDY": "STUDY", "DRS1": "DRESS 1", "WLB": "WASH",
+         "BED1": "BEDROOM 1", "WIC1": "DRESS 1", "BTH1": "BATH 1", "LIB": "LIBRARY", "FOY": "FOYER",
          "HALL": "SITTING HALL", "DIN": "DINING", "ALC": "ALCOVE", "KIT": "KITCHEN", "STR": "STORE",
          "UTL": "UTILITY", "PAS": "PASSAGE", "SWC": "WC", "SBT": "SHARED BATH", "DRS2": "DRESS 2",
          "BTH2": "BATH 2", "BED2": "BEDROOM 2"}
@@ -110,8 +111,8 @@ def dim_v(y0, y1, x, S, ox, oy, label):
 
 def main_plan():
     S = 8.4
-    ox, oy = 46, 290
-    W, H = ox + 98 * S + 40, oy + 40 * S + 205
+    ox, oy = 46, 335
+    W, H = ox + 98 * S + 40, oy + 40 * S + 160
     o = [f'<svg viewBox="0 0 {W:.0f} {H:.0f}" xmlns="http://www.w3.org/2000/svg" class="dwg">',
          f'<rect width="{W:.0f}" height="{H:.0f}" fill="{FILL}"/>']
     # verandas and porch (light tint, columns as white circles)
@@ -139,6 +140,14 @@ def main_plan():
         vert = x in (0, 98, 18) or (x, y) in ((62, 17), (80, 17), (80, 24))
         cw, ch = (1.0, 1.5) if vert else (1.5, 1.0)
         o.append(f'<rect x="{_f(ox+(x-cw/2)*S)}" y="{_f(oy+(y-ch/2)*S)}" width="{_f(cw*S)}" height="{_f(ch*S)}" fill="#000"/>')
+    L = 13 / 24
+    pts = [(L, -27 + L), (18 - L - 0.9, -27 + L), (18 - L, -7 - L), (L, -7 - L - 0.7)]
+    o.append('<polygon points="' + " ".join(f"{_f(ox+x*S)},{_f(oy+y*S)}" for x, y in pts) + '" fill="none" stroke="#8a4b2a" stroke-width="1.2" stroke-dasharray="3 2"/>')
+    o.append(f'<rect x="{_f(ox-1.4*S)}" y="{_f(oy-28.4*S)}" width="{_f(34.8*S)}" height="{_f(42.8*S)}" fill="none" stroke="#7b5ea7" stroke-width="1.4" stroke-dasharray="7 4"/>')
+    o.append(tag(ox + 25 * S, oy - 24.5 * S, "CREATIVE SUITE", 7.5, "bold", "#7b5ea7"))
+    o.append(tag(ox + 25 * S, oy - 24.5 * S + 9, "studio + study + library", 6.2, "normal", "#7b5ea7"))
+    o.append(f'<rect x="{_f(ox+80.6*S)}" y="{_f(oy-1.6*S)}" width="{_f(18.8*S)}" height="{_f(16*S)}" fill="none" stroke="#1d7a8c" stroke-width="1.4" stroke-dasharray="7 4"/>')
+    o.append(tag(ox + 90 * S, oy - 2.4 * S, "WET CORNER", 7, "bold", "#1d7a8c"))
     o += draw_openings(MAIN, WALLS, S, ox, oy)
     # labels
     for r in room_table():
@@ -147,9 +156,9 @@ def main_plan():
         if r["key"] == "PAS":
             o.append(tag(cx + 30, cy + 2.5, "PASSAGE 3 ft 6 in clear", 5.6, "bold"))
             continue
-        big = r["key"] in ("HALL", "BED1", "BED2", "KIT", "DIN")
+        big = r["key"] in ("HALL", "BED1", "BED2", "KIT", "DIN", "STU")
         fs = 8 if big else 6
-        if r["key"] in ("SWC", "UTL", "BTH1", "BTH2"):
+        if r["key"] in ("WLB", "BTH2"):
             o.append(f'<g transform="rotate(-90 {_f(cx)} {_f(cy)})">{tag(cx, cy - 1, SHORT[r["key"]], 6, "bold")}{tag(cx, cy + 6.5, fi(r["w"]) + " x " + fi(r["d"]), 5)}</g>')
             continue
         o.append(tag(cx, cy - 2, SHORT[r["key"]], fs, "bold"))
@@ -165,12 +174,12 @@ def main_plan():
     # grid dimensions, centre line
     xs = [0, 8, 18, 32, 50, 62, 72, 80, 86, 90, 98]
     for a, b in zip(xs, xs[1:]):
-        o += dim_h(a, b, -27, S, ox, oy, ff(b - a, 0))
-    o += dim_h(0, 98, -30.5, S, ox, oy, "98 ft 0 in overall on centre lines (outer face 98 ft 9 in)")
-    ys = [0, 13, 17, 24, 40]
+        o += dim_h(a, b, -33, S, ox, oy, ff(b - a, 0))
+    o += dim_h(0, 98, -36.5, S, ox, oy, "98 ft 0 in overall on centre lines (outer face 98 ft 9 in)")
+    ys = [-27, -7, 0, 13, 22, 40]
     for a, b in zip(ys, ys[1:]):
         o += dim_v(a, b, -2.6, S, ox, oy, ff(b - a, 0))
-    o += dim_v(0, 40, -4.6, S, ox, oy, "40 ft 0 in CL")
+    o += dim_v(-27, 40, -4.6, S, ox, oy, "67 ft 0 in CL, west face")
     for x in (0, 18, 32, 50, 62, 80, 98):
         o.append(tag(ox + x * S, oy + 52.5 * S, f"{x}", 6.5, "bold", "#1d4e89"))
     o.append(tag(ox + 49 * S, oy + 55 * S, "Grid line offsets in feet, measured east from the west wall centre line. Black = 9 in wall, grey = 4½ in partition shown at true thickness; black squares = RCC columns 12 in x 18 in.", 6.2, fill="#333"))
@@ -185,7 +194,7 @@ def main_plan():
 
 GARAGE_WALLS = [
     (0, 0, 41, 0, 9, ""), (0, 23, 41, 23, 9, ""), (0, 0, 0, 23, 9, ""), (41, 19, 41, 23, 9, ""),
-    (41, 0, 58, 0, 9, ""), (41, 19, 58, 19, 9, ""), (58, 0, 58, 19, 9, ""), (41, 0, 41, 19, 9, ""),
+    (41, 0, 41, 19, 9, ""),
     (21, 0, 21, 23, 4.5, ""), (30, 0, 30, 23, 9, ""), (30, 13, 41, 13, 4.5, ""),
 ]
 
@@ -193,25 +202,20 @@ GARAGE_WALLS = [
 def garage_plan():
     S = 7.2
     ox, oy = 40, 70
-    W, H = ox + 58 * S + 40, oy + 23 * S + 70
+    W, H = ox + 41 * S + 60, oy + 23 * S + 70
     o = [f'<svg viewBox="0 0 {W:.0f} {H:.0f}" xmlns="http://www.w3.org/2000/svg" class="dwg">',
          f'<rect width="{W:.0f}" height="{H:.0f}" fill="{FILL}"/>']
     for r in garage_table():
         o.append(f'<rect x="{_f(ox+r["x0"]*S)}" y="{_f(oy+r["y0"]*S)}" width="{_f((r["x1"]-r["x0"])*S)}" height="{_f((r["y1"]-r["y0"])*S)}" fill="#f3efe6"/>')
     o += draw_walls(GARAGE_WALLS, S, ox, oy)
-    # splayed studio lining (non-parallel)
-    L = 13 / 24
-    pts = [(41 + L + 0.0, L), (58 - L - 0.9, L), (58 - L, 19 - L), (41 + L, 19 - L - 0.7)]
-    o.append('<polygon points="' + " ".join(f"{_f(ox+x*S)},{_f(oy+y*S)}" for x, y in pts) + f'" fill="none" stroke="#8a4b2a" stroke-width="1.2" stroke-dasharray="3 2"/>')
     o += draw_openings(GARAGE, GARAGE_WALLS, S, ox, oy)
     for r in garage_table():
         cx = ox + (r["x0"] + r["x1"]) / 2 * S
         cy = oy + (r["y0"] + r["y1"]) / 2 * S
-        nm = {"GAR": "GARAGE (2 CARS)", "TWB": "2-WHEELER", "TST": "TOOL STORE", "AIR": "AIRLOCK", "STU": "MUSIC STUDIO"}[r["key"]]
+        nm = {"GAR": "GARAGE (2 CARS)", "TWB": "2-WHEELER", "TST": "TOOL STORE", "GEN": "GENERATOR"}[r["key"]]
         o.append(tag(cx, cy - 2, nm, 7, "bold"))
         o.append(tag(cx, cy + 7, f'{fi(r["w"])} x {fi(r["d"])}', 5.8))
-    o.append(tag(ox + 49.5 * S, oy + 17 * S, "dashed = splayed inner lining", 5.4, fill="#8a4b2a"))
-    xs = [0, 21, 30, 41, 58]
+    xs = [0, 21, 30, 41]
     for a, b in zip(xs, xs[1:]):
         o += dim_h(a, b, -3, S, ox, oy, ff(b - a, 0))
     o += dim_v(0, 23, -3, S, ox, oy, "23 ft 0 in CL")

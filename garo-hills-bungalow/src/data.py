@@ -46,21 +46,25 @@ def money(rupees):
 EXT, INT = 9, Fraction(9, 2)   # inches
 # (x0, y0, x1, y1, thickness_in, kind)
 WALLS = [
-    (0, 0, 98, 0, EXT, "external, north face"),
+    (0, 0, 98, 0, EXT, "external, north face (between study and airlock it is the acoustic wall)"),
     (0, 40, 98, 40, EXT, "external, south face"),
-    (0, 0, 0, 40, EXT, "external, west face"),
+    (0, -27, 0, 40, EXT, "external, west face (creative wing and main block, one line)"),
     (98, 0, 98, 40, EXT, "external, east face"),
-    (18, 0, 18, 40, EXT, "party wall, resident suite to public rooms"),
+    (0, -27, 18, -27, EXT, "external, north face of creative wing"),
+    (18, -27, 18, 40, EXT, "external east face of creative wing, then party wall of resident suite"),
+    (0, -7, 18, -7, EXT, "acoustic wall, studio / airlock"),
+    (0, 13, 18, 13, EXT, "acoustic wall, study / resident suite"),
     (80, 17, 80, 40, EXT, "party wall, guest suite to kitchen"),
-    (80, 0, 80, 13, INT, "partition, utility / shared washroom"),
-    (0, 13, 18, 13, INT, "partition, bath and wardrobe 1 / bedroom 1"),
-    (8, 0, 8, 13, INT, "partition, bath 1 / wardrobe 1"),
+    (8, 13, 8, 22, INT, "partition, bath 1 / dressing 1"),
+    (0, 22, 18, 22, INT, "partition, bath and dressing 1 / bedroom 1"),
     (18, 13, 32, 13, INT, "partition, library / sitting hall"),
     (32, 0, 32, 13, INT, "partition, library / foyer"),
     (50, 0, 50, 13, INT, "partition, foyer / crockery alcove"),
     (62, 0, 62, 13, INT, "partition, crockery alcove / store"),
     (72, 0, 72, 13, INT, "partition, store / utility"),
-    (86, 0, 86, 13, INT, "partition, shared washroom / shared bathroom"),
+    (82, 0, 82, 13, INT, "partition, utility / wash lobby"),
+    (88, 0, 88, 13, INT, "partition, wash lobby / shared toilet and bathroom"),
+    (88, 6.5, 98, 6.5, INT, "partition, shared toilet / shared bathroom"),
     (62, 13, 98, 13, INT, "partition, service strip / passage and bath 2"),
     (62, 17, 90, 17, INT, "partition, passage / kitchen and dressing 2"),
     (90, 13, 90, 24, INT, "partition, dressing 2 / bath 2"),
@@ -70,8 +74,8 @@ WALLS = [
 # RCC columns 12 in x 18 in (CL positions, ft)
 COLUMNS = [(x, 0) for x in (0, 18, 32, 50, 62, 80, 98)] + \
           [(x, 40) for x in (0, 18, 34, 50, 62, 80, 98)] + \
-          [(0, 13), (98, 13), (98, 24), (18, 13), (50, 13), (62, 13), (62, 17),
-           (80, 13), (80, 17), (80, 24), (32, 13)]
+          [(0, -27), (18, -27), (0, -7), (18, -7), (0, 13), (0, 22), (98, 13), (98, 24),
+           (18, 13), (50, 13), (62, 13), (62, 17), (80, 13), (80, 17), (80, 24), (32, 13)]
 
 
 def _half(line_axis, coord, a, b):
@@ -92,20 +96,24 @@ def _half(line_axis, coord, a, b):
 # ---------------------------------------------------------------- rooms
 # key, name, x0, x1, y0, y1, ceiling (ft-in text), habitable, circulation
 ROOMS = [
-    ("BED1", "Master bedroom 1 (resident)", 0, 18, 13, 40, "12 ft 3 in", True, False),
-    ("WIC1", "Wardrobe / dressing 1", 8, 18, 0, 13, "10 ft 0 in", False, False),
-    ("BTH1", "Bathroom 1 (attached)", 0, 8, 0, 13, "10 ft 0 in", False, False),
+    ("STU", "Music studio (inside acoustic lining)", 0, 18, -27, -7, "12 ft 0 in", True, False),
+    ("AIRL", "Studio airlock and gear lobby", 0, 18, -7, 0, "10 ft 0 in", False, False),
+    ("STDY", "Study", 0, 18, 0, 13, "12 ft 0 in", True, False),
     ("LIB", "Library", 18, 32, 0, 13, "12 ft 0 in", True, False),
+    ("BTH1", "Bathroom 1 (attached)", 0, 8, 13, 22, "10 ft 0 in", False, False),
+    ("DRS1", "Dressing 1 (entry lobby to bedroom 1)", 8, 18, 13, 22, "10 ft 0 in", False, False),
+    ("BED1", "Master bedroom 1 (resident)", 0, 18, 22, 40, "12 ft 3 in", True, False),
     ("FOY", "Entrance foyer", 32, 50, 0, 13, "12 ft 3 in", False, True),
     ("HALL", "Sitting hall", 18, 50, 13, 40, "12 ft 3 in at walls, 16 ft 0 in at centre", True, False),
     ("DIN", "Dining", 50, 62, 13, 40, "12 ft 3 in", True, False),
     ("ALC", "Crockery and bar alcove", 50, 62, 0, 13, "12 ft 3 in", True, False),
     ("KIT", "Kitchen with breakfast table", 62, 80, 17, 40, "12 ft 3 in", True, False),
     ("STR", "Store", 62, 72, 0, 13, "10 ft 0 in", False, False),
-    ("UTL", "Utility", 72, 80, 0, 13, "10 ft 0 in", False, False),
+    ("UTL", "Utility", 72, 82, 0, 13, "10 ft 0 in", False, False),
     ("PAS", "Service passage", 62, 90, 13, 17, "9 ft 0 in", False, True),
-    ("SWC", "Shared washroom (WC + basin)", 80, 86, 0, 13, "10 ft 0 in", False, False),
-    ("SBT", "Shared bathroom (walk-in shower)", 86, 98, 0, 13, "10 ft 0 in", False, False),
+    ("WLB", "Wash lobby (shared basin counter)", 82, 88, 0, 13, "10 ft 0 in", False, True),
+    ("SWC", "Shared toilet (WC), north-east corner", 88, 98, 0, 6.5, "10 ft 0 in", False, False),
+    ("SBT", "Shared bathroom (walk-in shower + basin)", 88, 98, 6.5, 13, "10 ft 0 in", False, False),
     ("DRS2", "Dressing 2 (entry lobby to bedroom 2)", 80, 90, 17, 24, "10 ft 0 in", False, False),
     ("BTH2", "Bathroom 2 (attached)", 90, 98, 13, 24, "10 ft 0 in", False, False),
     ("BED2", "Master bedroom 2 (guest)", 80, 98, 24, 40, "12 ft 3 in", True, False),
@@ -116,6 +124,9 @@ def room_clear(r):
     key, name, x0, x1, y0, y1 = r[:6]
     w = (x1 - x0) * 12 - _half("x", x0, y0, y1) - _half("x", x1, y0, y1)
     d = (y1 - y0) * 12 - _half("y", y0, x0, x1) - _half("y", y1, x0, x1)
+    if key == "STU":
+        w -= 2 * LINING
+        d -= 2 * LINING
     return r3(w), r3(d)
 
 
@@ -134,8 +145,7 @@ GARAGE_ROOMS = [
     ("GAR", "Garage, two cars", 0, 21, 0, 23, 9, 9, 9, 4.5, "10 ft 0 in"),
     ("TWB", "Two-wheeler bay", 21, 30, 0, 23, 4.5, 9, 9, 9, "10 ft 0 in"),
     ("TST", "Tool, garden kit and fuel store", 30, 41, 0, 13, 9, 9, 9, 4.5, "10 ft 0 in"),
-    ("AIR", "Studio airlock and gear lobby", 30, 41, 13, 23, 9, 9, 4.5, 9, "10 ft 0 in"),
-    ("STU", "Music studio (inside acoustic lining)", 41, 58, 0, 19, 9, 9, 9, 9, "12 ft 0 in"),
+    ("GEN", "Generator and pump room", 30, 41, 13, 23, 9, 9, 4.5, 9, "10 ft 0 in"),
 ]
 LINING = Fraction(13, 2)   # 4.5 in independent stud lining + 2 in air gap
 
@@ -156,12 +166,13 @@ def garage_table():
 
 # ---------------------------------------------------------------- areas
 MAIN_OUT = ((98 * 12 + 9) / 12, (40 * 12 + 9) / 12)          # outer face size, ft
-GARAGE_OUT_AREA = (41 * 12 + 9) * (23 * 12 + 9) / 144 + (17 * 12 + 9) * (19 * 12 + 9) / 144
+WING_OUT = ((18 * 12 + 9) / 12, 27.0)                          # creative wing beyond main north face
+GARAGE_OUT_AREA = (41 * 12 + 9) * (23 * 12 + 9) / 144
 VERANDAS = [  # name, length ft, depth ft
     ("South veranda (9 ft 0 in deep to column line)", 99, 9),
     ("North veranda, library to alcove", 44, 8),
     ("Entrance porch (car porch)", 20, 14),
-    ("Covered link walk, garage and studio to north veranda", 6, 88),
+    ("Covered link walk, garage to north veranda", 6, 88),
 ]
 FIREHOUSE = dict(size=20, platform=24)
 
@@ -172,7 +183,7 @@ def areas():
     carpet_house = sum(r["area"] for r in rt)
     carpet_gar = sum(r["area"] for r in gt)
     circ = sum(r["area"] for r in rt if r["circ"])
-    built_house = round(MAIN_OUT[0] * MAIN_OUT[1])
+    built_house = round(MAIN_OUT[0] * MAIN_OUT[1] + WING_OUT[0] * WING_OUT[1])
     built_gar = round(GARAGE_OUT_AREA)
     ver = [(n, l, d, l * d) for n, l, d in VERANDAS]
     ver_total = sum(v[3] for v in ver)
