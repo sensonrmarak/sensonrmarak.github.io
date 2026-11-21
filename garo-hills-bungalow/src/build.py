@@ -1,6 +1,6 @@
 """Assemble the report HTML and print it to a single A4 PDF."""
 import os, subprocess, sys
-import content1 as c1, content2 as c2, content3 as c3, content4 as c4, content5 as c5
+import content1 as c1, content2 as c2, content3 as c3, content4 as c4, content5 as c5, content6 as c6
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.abspath(os.path.join(HERE, ".."))
@@ -42,13 +42,19 @@ figure.dwgfig svg { width: 100%; height: auto; display: block; }
 .refs figcaption { font-size: 7.6pt; color: #666; margin-top: 2pt; }
 ul { margin: 0 0 8pt; padding-left: 14pt; } li { margin-bottom: 4pt; }
 .pb { break-before: page; }
+figure.hero img { width: 100%; border-radius: 3px; display: block; }
+figure.hero figcaption, .gallery figcaption { font-size: 7.8pt; color: #555; margin-top: 3pt; }
+.gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; }
+.gallery figure { margin: 0; break-inside: avoid; }
+.gallery img { width: 100%; border-radius: 3px; display: block; }
 .sign { margin-top: 16pt; font-size: 8.4pt; color: #555; border-top: 1px solid #ddd; padding-top: 6pt; }
 """
 
 
 def html():
     parts = [
-        c1.cover(), c1.statement(), c1.climate(), c1.references(),
+        c1.cover(), c1.statement(), '<div class="pb"></div>', c6.views(),
+        '<div class="pb"></div>', c1.climate(), c1.references(),
         '<div class="pb"></div>', c2.area_statement(),
         '<div class="pb"></div>', c2.plan_pages(), c2.room_schedule(),
         c2.walls_table(), c2.walkthrough(),

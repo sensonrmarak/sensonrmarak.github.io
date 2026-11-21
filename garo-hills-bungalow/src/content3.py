@@ -24,7 +24,7 @@ def structure():
         ("Beams over open plan lines", "12 in x 24 in at +12 ft 3 in soffit between columns (32, 13) to (50, 13), (50, 13) to (50, 40), (62, 13) to (62, 40)"),
         ("Infill walls", "9 in brick in 1:4 cement mortar on external and party walls; 4½ in brick in 1:3 with 2 bars of 6 mm every fourth course on partitions; all infill gapped ¾ in below beams and packed with compressible filler so it cannot stiffen the frame"),
         ("Roof", "Galvanised tubular steel trusses at 6 ft 0 in centres (scissor trusses over the hall), Z purlins, 50 mm PIR insulated sandwich panel with 0.5 mm charcoal standing-seam top skin"),
-        ("Studio", "Same frame; inner room is a separate 4½ in stud and double gypsum lining on its own floating slab, 2 in air gap, no rigid contact with the frame"),
+        ("Music studio wing", "Same frame, 9 in walls all round; inner room is a separate 4½ in stud and double gypsum lining on its own floating slab, 2 in air gap, no rigid contact with the frame"),
     ]
     r = "".join(f"<tr><td><b>{a}</b></td><td>{b}</td></tr>" for a, b in rows)
     return f"""

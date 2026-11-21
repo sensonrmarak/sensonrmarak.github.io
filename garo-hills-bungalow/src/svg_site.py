@@ -77,15 +77,15 @@ def site_plan():
     poly([(HX + 18, HY - 8), (HX + 62, HY - 8), (HX + 62, HY), (HX + 18, HY)], "#efe6d2")
     poly([(HX + 31, HY - 22), (HX + 51, HY - 22), (HX + 51, HY - 8), (HX + 31, HY - 8)], "#e8dcc0")
     poly([(HX, HY), (HX + 98, HY), (HX + 98, HY + 40), (HX, HY + 40)], "#5a5a5a", "#222")
+    poly([(HX, HY - 27), (HX + 18, HY - 27), (HX + 18, HY), (HX, HY)], "#6a4f7a", "#222")
+    o.append(tag(*P(HX + 9, HY - 12), "STUDIO", 5, "bold", "#fff"))
     o.append(tag(*P(HX + 49, HY + 22), "MAIN HOUSE", 8, "bold", "#fff"))
     o.append(tag(*P(HX + 49, HY + 30), "FFL +2 ft 6 in", 5.5, fill="#fff"))
     poly([(HX + 62, HY - 12), (HX + 80, HY - 12), (HX + 80, HY), (HX + 62, HY)], "#ece6da")
     o.append(tag(*P(HX + 71, HY - 5), "yard", 5, fill="#444"))
     # garage block and covered link
     poly([(GX, GY), (GX + 41, GY), (GX + 41, GY + 23), (GX, GY + 23)], "#6a6a6a", "#222")
-    poly([(GX + 41, GY), (GX + 58, GY), (GX + 58, GY + 19), (GX + 41, GY + 19)], "#7a5a48", "#222")
     o.append(tag(*P(GX + 20, GY + 13), "GARAGE", 6, "bold", "#fff"))
-    o.append(tag(*P(GX + 49.5, GY + 11), "STUDIO", 5.5, "bold", "#fff"))
     lx = GX + 35.5
     poly([(lx - 3, GY + 23), (lx + 3, GY + 23), (lx + 3, HY - 10), (HX + 62, HY - 10), (HX + 62, HY - 16), (lx - 3, HY - 16)], "#efe6d2")
     o.append(tag(*P(lx + 6, GY + 44), "covered link", 5.5, "normal", "#5b4a2a", "start"))
@@ -153,6 +153,7 @@ def site_plan():
 def roof_plan():
     S = 5.6
     ox, oy = 40, 160
+    oy = 200
     W, H = ox * 2 + 104 * S + 10, oy + 54 * S + 40
     P = lambda x, y: (ox + (x + 3) * S, oy + y * S)
     o = [f'<svg viewBox="0 0 {W:.0f} {H:.0f}" xmlns="http://www.w3.org/2000/svg" class="dwg">',
@@ -161,21 +162,23 @@ def roof_plan():
     def poly(pts, fill, sw=0.8):
         o.append('<polygon points="' + " ".join(f"{_f(P(x, y)[0])},{_f(P(x, y)[1])}" for x, y in pts) + f'" fill="{fill}" stroke="#222" stroke-width="{sw}"/>')
     poly([(-3, 40), (101, 40), (101, 50), (-3, 50)], "#8d8d8d")          # veranda roof 1 in 6
+    poly([(-3, -30), (21, -30), (21, -3), (-3, -3)], "#5c5c5c")               # studio wing roof
     poly([(-3, -3), (101, -3), (101, 40), (-3, 40)], "#5c5c5c")               # main roof
     poly([(29.5, -23.5), (52.5, -23.5), (52.5, -3), (29.5, -3)], "#6c6c6c")   # porch roof
     for (x0, y0), (x1, y1) in [((-3, -3), (18.5, 18.5)), ((101, -3), (79.5, 18.5)), ((-3, 40), (18.5, 18.5)),
                                ((101, 40), (79.5, 18.5)), ((18.5, 18.5), (79.5, 18.5)),
-                               ((29.5, -23.5), (41, -12)), ((52.5, -23.5), (41, -12)), ((41, -12), (41, -3))]:
+                               ((29.5, -23.5), (41, -12)), ((52.5, -23.5), (41, -12)), ((41, -12), (41, -3)),
+                               ((-3, -30), (9, -18)), ((21, -30), (9, -18)), ((9, -18), (9, -3))]:
         a, b = P(x0, y0)
         c, d = P(x1, y1)
         o.append(f'<line x1="{_f(a)}" y1="{_f(b)}" x2="{_f(c)}" y2="{_f(d)}" stroke="#ddd" stroke-width="1"/>')
     # gutters
-    for pts in ([(-3, -3), (29.5, -3)], [(52.5, -3), (101, -3)], [(-3, 50), (101, 50)],
+    for pts in ([(-3, -30), (21, -30)], [(-3, -30), (-3, -3)], [(21, -30), (21, -3)], [(21, -3), (29.5, -3)], [(52.5, -3), (101, -3)], [(-3, 50), (101, 50)],
                 [(29.5, -23.5), (52.5, -23.5)], [(-3, -3), (-3, 40)], [(101, -3), (101, 40)]):
         a, b = P(*pts[0])
         c, d = P(*pts[1])
         o.append(f'<line x1="{_f(a)}" y1="{_f(b)}" x2="{_f(c)}" y2="{_f(d)}" stroke="#2c6fa8" stroke-width="2.6"/>')
-    dps = [(5, -3), (24, -3), (60, -3), (80, -3), (96, -3), (29.5, -23.5), (52.5, -23.5),
+    dps = [(-3, -16), (21, -16), (24, -3), (60, -3), (80, -3), (96, -3), (29.5, -23.5), (52.5, -23.5),
            (5, 50), (28, 50), (50, 50), (72, 50), (95, 50), (-3, 20), (101, 20)]
     for x, y in dps:
         a, b = P(x, y)
@@ -185,6 +188,6 @@ def roof_plan():
     o.append(tag(*P(49, 46.6), "VERANDA ROOF, 1 in 6 (9½°), eave 12 ft 5 in above FFL", 6.8, "bold", "#fff"))
     o.append(tag(*P(41, -15), "PORCH", 6, "bold", "#fff"))
     o.append(tag(*P(49, 56.5), f"{len(dps)} downpipes of 4 in dia (12 needed at 500 sq ft each), 7 in x 5 in box gutters laid 1 in 200 to outlets", 7, "bold", "#1d4e89"))
-    o.append(tag(*P(49, -27), "3 ft 0 in overhang on north, east and west faces; south face oversails the veranda roof by 1 ft 6 in with a lead-free flashing apron", 6.5, fill="#333"))
+    o.append(tag(*P(60, -27), "3 ft 0 in overhang on north, east and west faces; south face oversails the veranda roof by 1 ft 6 in with a lead-free flashing apron", 6.5, fill="#333"))
     o.append("</svg>")
     return "\n".join(o)

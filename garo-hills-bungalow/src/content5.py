@@ -9,23 +9,22 @@ def cost_items():
     v = {n: ar for n, l, d, ar in a["ver"]}
     ver_house = sum(ar for n, ar in v.items() if not n.startswith("Covered link"))
     link = sum(ar for n, ar in v.items() if n.startswith("Covered link"))
-    gar_area = round((41 * 12 + 9) * (23 * 12 + 9) / 144)
-    stu_area = a["built_gar"] - gar_area
+    gar_area = a["built_gar"]
     drive = 12 * 62 + 14 * 82 + round(math.pi * (24 ** 2 - 9 ** 2)) + 10 * 18
     wall = round(4 * 328.08 - 14 - 3.5 - 7)
     groups = [
         ("The house", [
             ("Main house, enclosed (built-up)", a["built_house"], "sq ft", 4500),
             ("Verandas and car porch", ver_house, "sq ft", 2400),
+            ("Music studio extra over house rate: floating floor, independent splayed lining, acoustic doors, double glazing", 1, "lump sum", 1100000),
             ("External services: septic tank and soak pit, water pump, electrical service, earthing", 1, "lump sum", 1200000),
         ]),
         ("The firehouse", [
             ("Pavilion on 24 ft x 24 ft platform", 576, "sq ft", 3200),
             ("Fire pit, smoke lantern, bench, counter with sink", 1, "lump sum", 350000),
         ]),
-        ("Garage and studio block", [
-            ("Garage, two-wheeler bay, tool store, airlock", gar_area, "sq ft", 2800),
-            ("Music studio with floating floor and acoustic lining", stu_area, "sq ft", 7500),
+        ("Garage block", [
+            ("Garage, two-wheeler bay, tool store, generator room", gar_area, "sq ft", 2800),
             ("Covered link walk", link, "sq ft", 1800),
         ]),
         ("Compound wall and gate", [
@@ -86,15 +85,16 @@ def cost():
 
 def checks():
     rows = [
-        ("No bathtub anywhere", "Met. Three walk-in showers (bath 1, bath 2, shared bathroom) plus a WC and basin in the shared washroom. No tub is drawn, specified or costed."),
+        ("No bathtub anywhere", "Met. Three walk-in showers (bath 1, bath 2, shared bathroom) plus a WC in the shared toilet. No tub is drawn, specified or costed."),
         ("No shower seat", "Met. No seat, ledge or bench in any shower. Wall niches only, at 4 ft 6 in."),
-        ("No bathroom, washroom or toilet in the middle of the plan", "Met. Bath 1 is the north-west corner, shared bathroom the north-east corner, bath 2 and the shared washroom on the north and east outside walls. Every one has an outside window."),
+        ("No bathroom, washroom or toilet in the middle of the plan; shared toilet and bathroom in a corner", "Met. The shared toilet and shared bathroom sit together in the north-east corner of the house: the toilet takes the corner itself, the bathroom is directly below it on the east wall. Bath 1 is on the west wall and bath 2 on the east wall. Every one has an outside window."),
         ("No ceiling under 12 ft in a habitable room", "Met. Bedrooms, hall, dining, kitchen and alcove 12 ft 3 in; library and studio 12 ft 0 in; hall vault to 16 ft 0 in. Service rooms (non-habitable) 9 ft 0 in to 10 ft 0 in."),
         ("No metric-only dimension", "Met. Every length is in feet and inches. Litres appear only beside cubic feet for water, and rainfall is in inches."),
         ("No overlapping, broken or floating walls", "Met. The plan is drawn from one list of wall centre lines; every wall ends on another wall or on a column, and the open edges are carried by beams between columns."),
         ("Circulation under 12 per cent", f"Met. {areas()['circ_pct']:.1f} per cent (foyer and service passage)."),
         ("Bedrooms at opposite ends", "Met. The two suite party walls are 62 ft apart, and the bedrooms are reached from different sides of the hall."),
-        ("Studio isolated from bedrooms", "Met. In the garage block, about 80 ft from bedroom 2, behind a double-door airlock."),
+        ("Studio, library and study clubbed together", "Met. One creative suite at the west end: library opening through glazed doors to the study, studio beyond in its own north wing through a double-door airlock."),
+        ("Studio isolated from bedrooms", "Met. Separated from bedroom 1 by the study, a 9 in acoustic wall and the dressing and bath of the suite; independent splayed lining and floating floor; about 80 ft from bedroom 2."),
         ("Veranda at least 8 ft on main faces", "Met. South 9 ft 0 in, north 8 ft 0 in."),
     ]
     r = "".join(f"<tr><td><b>{a}</b></td><td>{b}</td></tr>" for a, b in rows)

@@ -55,6 +55,16 @@ def north_elevation():
         if mark in ("W1",):
             o.append(f'<rect x="{_f(x0)}" y="{_f(Y(11))}" width="{_f(w*S)}" height="{_f(2*S)}" fill="#9fb2bd" stroke="{BLACK}" stroke-width="2"/>')
             o.append(f'<rect x="{_f(x0-0.3*S)}" y="{_f(Y(11.25))}" width="{_f((w+0.6)*S)}" height="{_f(0.25*S)}" fill="#fff" stroke="#999" stroke-width="0.4"/>')
+    # creative wing projecting north at the west end (in front, on the right as seen from the north)
+    o.append(f'<rect x="{_f(X(18.4))}" y="{_f(Y(EAVE_NEW))}" width="{_f(18.8*S)}" height="{_f((EAVE_NEW+2.5)*S)}" fill="{CREAM}" stroke="#d6c9ad" stroke-width="0.6"/>')
+    _stone(o, X(18.4), Y(1.5), 18.8 * S, 4 * S, "stw")
+    wx = X(9 + 1.75)
+    o.append(f'<rect x="{_f(wx)}" y="{_f(Y(8))}" width="{_f(3.5*S)}" height="{_f(7*S)}" fill="#9fb2bd" stroke="{BLACK}" stroke-width="2.2"/>')
+    o.append(f'<line x1="{_f(wx+1.75*S)}" y1="{_f(Y(8))}" x2="{_f(wx+1.75*S)}" y2="{_f(Y(1))}" stroke="{BLACK}" stroke-width="1.4"/>')
+    o.append(f'<rect x="{_f(wx-0.3*S)}" y="{_f(Y(8.25))}" width="{_f(4.1*S)}" height="{_f(0.25*S)}" fill="#fff" stroke="#999" stroke-width="0.4"/>')
+    wr = [(-3, EAVE_NEW), (9, EAVE_NEW + 12 * K), (21, EAVE_NEW)]
+    o.append('<polygon points="' + " ".join(f"{_f(X(x))},{_f(Y(h))}" for x, h in wr) + f'" fill="#34363a" stroke="#222"/>')
+    o.append(tag(X(9), Y(EAVE_NEW + 2.4), "STUDIO WING", 6, "bold", "#fff"))
     # north veranda columns, porch
     for x in (18, 29, 40, 51, 62):
         o.append(f'<rect x="{_f(X(x+0.67))}" y="{_f(Y(12.4))}" width="{_f(1.33*S)}" height="{_f(12.4*S)}" fill="{WHITE}" stroke="#999" stroke-width="0.6"/>')

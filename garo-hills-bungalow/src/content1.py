@@ -38,12 +38,12 @@ def cover():
   <table class="keyfacts">
     <tr><td>Main house carpet area</td><td>{hl(f"{a['carpet_house']:,} sq ft")}</td></tr>
     <tr><td>Main house built-up area</td><td>{hl(f"{a['built_house']:,} sq ft")}</td></tr>
-    <tr><td>Rooms</td><td>2 master bedrooms with dressing and bath, sitting hall, dining, kitchen with utility and store, library, music studio, shared washroom and shared bathroom</td></tr>
+    <tr><td>Rooms</td><td>2 master bedrooms with dressing and bath; sitting hall, dining, kitchen with utility and store; creative suite of library, study and music studio; shared toilet and shared bathroom in the north-east corner</td></tr>
     <tr><td>Ceilings</td><td>{hl("12 ft 3 in")} in every habitable room (library 12 ft 0 in, hall vault to 16 ft 0 in)</td></tr>
     <tr><td>Plinth</td><td>{hl("2 ft 6 in")} above finished ground at the porch</td></tr>
     <tr><td>Structure</td><td>RCC frame, 12 in x 18 in columns, plinth, lintel and roof bands, brick infill</td></tr>
     <tr><td>Firehouse</td><td>20 ft 0 in x 20 ft 0 in open pavilion with 4 ft 0 in stone fire pit</td></tr>
-    <tr><td>Garage block</td><td>2 cars (20 ft 3 in x 22 ft 6 in clear), two-wheeler bay, tool store, music studio</td></tr>
+    <tr><td>Garage block</td><td>2 cars (20 ft 3 in x 22 ft 6 in clear), two-wheeler bay, tool store, generator and pump room</td></tr>
   </table>
   <p class="note">All lengths are in feet and inches, all areas in sq ft, all money in lakh and crore. Room sizes are clear sizes, wall face to wall face, rounded to the nearest 3 in. Set-out dimensions are wall centre lines and are exact.</p>
 </section>"""
@@ -54,7 +54,7 @@ def statement():
 {band("1. The idea of the house", "b1")}
 <p>Think of this house as one long, calm room with two quiet ends. In the middle is the sitting hall, the dining table and the kitchen, all under one vaulted ceiling, with no partitions between them. You define each part by a column, a change of ceiling and the furniture, so the whole space stays generous when you are alone and stretches when friends arrive. At the west end is your own bedroom suite. At the east end, as far away as the plan allows, is the guest suite. A guest and you never share a passage at night, and the guest has a shared bathroom and washroom right beside their door for friends who stay late.</p>
 <p>The house faces south. In the Garo Hills that one decision does most of the climate work. The long south face takes the low winter sun into the sitting hall and both bedrooms, while a deep veranda with a carefully set roof edge blocks the high summer and monsoon sun completely. The service rooms, bathrooms, utility and store, are lined up along the north edge on one continuous plumbing line, where they shield the living rooms from the cold north side and keep every pipe on an outside wall you can reach.</p>
-<p>The library takes the north light it needs, steady and glare-free, beside the front door. The music studio is not in the house at all. It sits at the end of the garage block, through a double-door airlock, about 80 ft from the nearest bedroom, so you can play at midnight without anyone hearing it. A covered walk links it, and the garage, back to the front door, so you can come and go in a monsoon downpour without an umbrella.</p>
+<p>The library, the study and the music studio are clubbed together as one creative suite at the west end, next to the front door. The library takes the steady north light it needs, then opens through a pair of glazed doors into the study. Beyond the study, through a double-door airlock, the music studio sits in its own short wing projecting north. It has floating floors, splayed walls and its own lining, so you can play at midnight while a guest sleeps at the far east end. The shared toilet and bathroom sit together in the north-east corner of the house, each with outside walls and windows. A covered walk links the garage to the front door, so you can come and go in a monsoon downpour without an umbrella.</p>
 <p>Behind the house, across a lawn of about 36 ft, the firehouse closes the garden. It is a smaller cousin of the house, with the same white columns, charcoal roof and stone base, built around a real fire. Beyond it the land steps down through an orchard and a kitchen garden into a grove of native trees that is cheap to keep and right for the hills. The building takes up under 7 per cent of the hectare. The rest is garden, orchard and grove.</p>
 """
 
@@ -92,5 +92,6 @@ def references():
 <li><b>Reference 1</b>: the dark charcoal roof, black window frames, white columns at the entrance and the hanging lantern under the porch. The full stone walls are kept only as a stone base up to sill level, as your brief asks, with cream lime render above.</li>
 <li><b>Reference 2</b>: the deep entrance with paired columns and planters either side of the door, and the idea of a house that sits in a large landscape rather than a lawn.</li>
 <li><b>Reference 3</b>: the honest single-storey plan with bedrooms at the ends and living space in the middle. This design keeps that idea but makes it larger, moves the bathroom out of the middle to the north edge, and drops the tub in favour of walk-in showers.</li>
+<li><b>Your cottage plan reference</b> (a small two-bed plan with a front stoop): the furnished floor plan is now drawn the same way. Rooms are warm yellow, verandas blue and walls solid black. Every room shows its furniture and fixtures, and each name is underlined with its size given as 17'3" X 17'6". Like that plan, the kitchen is open to the living space, marked only by a dashed line, and corridors are kept to a minimum. Its bathtub is not carried over, because your brief rules tubs out.</li>
 </ul>
 """

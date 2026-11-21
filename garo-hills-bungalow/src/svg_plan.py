@@ -3,6 +3,34 @@ import math
 from fractions import Fraction
 from data import WALLS, COLUMNS, room_table, garage_table, fi, ff
 from openings import MAIN, GARAGE, SCHEDULE
+from furniture import furnish
+
+
+def ftin(inches):
+    v = int(round(float(inches)))
+    return f"{v // 12}'{v % 12}\""
+
+
+SERIF = "Georgia, 'Times New Roman', serif"
+
+
+def label(cx, cy, name, dims, fs=7):
+    w = len(name) * fs * 0.62
+    return (f'<text x="{cx:.1f}" y="{cy:.1f}" font-size="{fs}" font-weight="bold" fill="#1f1f1f" text-anchor="middle" font-family="{SERIF}" letter-spacing="0.3">{name}</text>'
+            f'<line x1="{cx-w/2:.1f}" y1="{cy+1.6:.1f}" x2="{cx+w/2:.1f}" y2="{cy+1.6:.1f}" stroke="#1f1f1f" stroke-width="0.6"/>'
+            f'<text x="{cx:.1f}" y="{cy+fs+1.5:.1f}" font-size="{fs*0.8:.1f}" fill="#1f1f1f" text-anchor="middle" font-family="{SERIF}">{dims}</text>')
+
+
+NAME = {"STU": "MUSIC STUDIO", "AIRL": "AIRLOCK", "STDY": "STUDY", "LIB": "LIBRARY", "BTH1": "BATH 1",
+        "DRS1": "DRESS 1", "BED1": "BEDROOM #1", "FOY": "FOYER", "HALL": "SITTING HALL", "DIN": "DINING",
+        "ALC": "BAR ALCOVE", "KIT": "KITCHEN", "STR": "STORE", "UTL": "UTILITY", "WLB": "WASH",
+        "SWC": "TOILET", "SBT": "BATH", "DRS2": "DRESS 2", "BTH2": "BATH 2", "BED2": "BEDROOM #2"}
+LABEL_AT = {"STU": (9, -15.2, 8), "AIRL": (14.2, -2.2, 6), "STDY": (9, 8.2, 7), "LIB": (25.2, 11.2, 6.4),
+            "BTH1": (5.6, 18.6, 5), "DRS1": (13, 19.3, 5.6), "BED1": (5.6, 29.5, 7.5), "FOY": (41, 7.5, 7),
+            "HALL": (34, 17.2, 9), "DIN": (56, 15.6, 7), "ALC": (56, 7.4, 6.4), "KIT": (71, 22.6, 7.5),
+            "STR": (67.8, 8.5, 6), "UTL": (77, 8.5, 6), "WLB": (86.3, 11.6, 4.6),
+            "SWC": (92.6, 4.4, 5), "SBT": (91.3, 9.2, 5), "DRS2": (86, 21.0, 5.4), "BTH2": (91.8, 18.8, 5),
+            "BED2": (92.2, 29.8, 7.5)}
 
 INK = "#2b2b2b"
 WALLC = "#3a3a3a"
@@ -112,67 +140,57 @@ def dim_v(y0, y1, x, S, ox, oy, label):
 def main_plan():
     S = 8.4
     ox, oy = 46, 335
-    W, H = ox + 98 * S + 40, oy + 40 * S + 160
+    W, H = ox + 98 * S + 40, oy + 40 * S + 190
     o = [f'<svg viewBox="0 0 {W:.0f} {H:.0f}" xmlns="http://www.w3.org/2000/svg" class="dwg">',
          f'<rect width="{W:.0f}" height="{H:.0f}" fill="{FILL}"/>']
-    # verandas and porch (light tint, columns as white circles)
-    o.append(f'<rect x="{_f(ox-0.5*S)}" y="{_f(oy+40*S)}" width="{_f(99*S)}" height="{_f(9*S)}" fill="#efe6d2" stroke="#c8b892" stroke-width="0.5"/>')
-    o.append(f'<rect x="{_f(ox+18*S)}" y="{_f(oy-8*S)}" width="{_f(44*S)}" height="{_f(8*S)}" fill="#efe6d2" stroke="#c8b892" stroke-width="0.5"/>')
-    o.append(f'<rect x="{_f(ox+31*S)}" y="{_f(oy-22*S)}" width="{_f(20*S)}" height="{_f(14*S)}" fill="#e8dcc0" stroke="#c8b892" stroke-width="0.5"/>')
-    o.append(f'<rect x="{_f(ox+62*S)}" y="{_f(oy-12*S)}" width="{_f(18*S)}" height="{_f(12*S)}" fill="none" stroke="#9a8f7a" stroke-width="1.2" stroke-dasharray="5 3"/>')
-    o.append(tag(ox + 71 * S, oy - 6 * S, "UTILITY YARD", 6.5, fill="#6b6253"))
-    o.append(tag(ox + 71 * S, oy - 6 * S + 8, "6 ft 6 in screen wall", 5.5, fill="#6b6253"))
+    # verandas and porch: blue, as decks on a presentation plan
+    BLUE, BLUE_E = "#b9dcf2", "#7fb3d8"
+    o.append(f'<rect x="{_f(ox-0.5*S)}" y="{_f(oy+40*S)}" width="{_f(99*S)}" height="{_f(9*S)}" fill="{BLUE}" stroke="{BLUE_E}" stroke-width="0.6"/>')
+    o.append(f'<rect x="{_f(ox+18*S)}" y="{_f(oy-8*S)}" width="{_f(44*S)}" height="{_f(8*S)}" fill="{BLUE}" stroke="{BLUE_E}" stroke-width="0.6"/>')
+    o.append(f'<rect x="{_f(ox+31*S)}" y="{_f(oy-22*S)}" width="{_f(20*S)}" height="{_f(14*S)}" fill="#d6e9f5" stroke="{BLUE_E}" stroke-width="0.6"/>')
+    for i in range(8):
+        o.append(f'<line x1="{_f(ox+16*S)}" y1="{_f(oy+(49.4+i*1.0)*S)}" x2="{_f(ox+34*S)}" y2="{_f(oy+(49.4+i*1.0)*S)}" stroke="#7fae6a" stroke-width="0.8"/>')
+    o.append(f'<rect x="{_f(ox+16*S)}" y="{_f(oy+49*S)}" width="{_f(18*S)}" height="{_f(8.4*S)}" fill="#cfe5c0" fill-opacity="0.55" stroke="#7fae6a" stroke-width="0.8"/>')
+    o.append(f'<rect x="{_f(ox+62*S)}" y="{_f(oy-12*S)}" width="{_f(20*S)}" height="{_f(12*S)}" fill="#f1efe9" stroke="#9a8f7a" stroke-width="1.2" stroke-dasharray="5 3"/>')
+    o.append(tag(ox + 72 * S, oy - 6 * S, "UTILITY YARD", 6.5, fill="#6b6253"))
+    o.append(tag(ox + 72 * S, oy - 6 * S + 8, "6'6\" screen wall", 5.5, fill="#6b6253"))
     for x in range(0, 99, 11):
-        o.append(f'<circle cx="{_f(ox+x*S)}" cy="{_f(oy+49*S)}" r="{_f(0.67*S)}" fill="#fff" stroke="{INK}" stroke-width="0.8"/>')
+        o.append(f'<rect x="{_f(ox+(x-0.6)*S)}" y="{_f(oy+(49-0.6)*S)}" width="{_f(1.2*S)}" height="{_f(1.2*S)}" fill="#111"/>')
     for x in (18, 29, 40, 51, 62):
-        o.append(f'<circle cx="{_f(ox+x*S)}" cy="{_f(oy-8*S)}" r="{_f(0.67*S)}" fill="#fff" stroke="{INK}" stroke-width="0.8"/>')
+        o.append(f'<rect x="{_f(ox+(x-0.6)*S)}" y="{_f(oy-8.6*S)}" width="{_f(1.2*S)}" height="{_f(1.2*S)}" fill="#111"/>')
     for x, y in ((31, -22), (51, -22), (31, -15), (51, -15)):
-        o.append(f'<circle cx="{_f(ox+x*S)}" cy="{_f(oy+y*S)}" r="{_f(0.67*S)}" fill="#fff" stroke="{INK}" stroke-width="0.8"/>')
-    o.append(tag(ox + 49 * S, oy + 45.4 * S, "SOUTH VERANDA, 9 ft 0 in deep to column line, 8 risers down to garden", 7, "bold", "#5b4a2a"))
-    o.append(tag(ox + 41 * S, oy - 18.3 * S, "CAR PORCH 20 ft 0 in x 14 ft 0 in", 7, "bold", "#5b4a2a"))
-    o.append(tag(ox + 41 * S, oy - 17 * S + 4, "drive passes under, east to west", 6, fill="#5b4a2a"))
-    o.append(tag(ox + 24 * S, oy - 3.4 * S, "NORTH VERANDA 8 ft 0 in", 6.5, "bold", "#5b4a2a"))
-    # floor tint for rooms
+        o.append(f'<rect x="{_f(ox+(x-0.6)*S)}" y="{_f(oy+(y-0.6)*S)}" width="{_f(1.2*S)}" height="{_f(1.2*S)}" fill="#111"/>')
+    o.append(label(ox + 49 * S, oy + 47.2 * S, "SOUTH VERANDA", "98'0\" X 9'0\"", 8))
+    o.append(tag(ox + 25 * S, oy + 56.0 * S, "8 steps down to garden", 5.6, fill="#3d5a2a"))
+    o.append(label(ox + 41 * S, oy - 18.6 * S, "CAR PORCH", "20'0\" X 14'0\"", 7.5))
+    o.append(label(ox + 24.5 * S, oy - 3.6 * S, "NORTH VERANDA", "44'0\" X 8'0\"", 6.4))
+    # floor fill for rooms (warm yellow, as on a presentation plan)
     for r in room_table():
-        o.append(f'<rect x="{_f(ox+r["x0"]*S)}" y="{_f(oy+r["y0"]*S)}" width="{_f((r["x1"]-r["x0"])*S)}" height="{_f((r["y1"]-r["y0"])*S)}" fill="{"#f3efe6" if r["hab"] else "#eef1f2"}"/>')
+        o.append(f'<rect x="{_f(ox+r["x0"]*S)}" y="{_f(oy+r["y0"]*S)}" width="{_f((r["x1"]-r["x0"])*S)}" height="{_f((r["y1"]-r["y0"])*S)}" fill="#f8efbf"/>')
+    o += furnish(S, ox, oy)
     o += draw_walls(WALLS, S, ox, oy)
     for x, y in COLUMNS:
         vert = x in (0, 98, 18) or (x, y) in ((62, 17), (80, 17), (80, 24))
         cw, ch = (1.0, 1.5) if vert else (1.5, 1.0)
         o.append(f'<rect x="{_f(ox+(x-cw/2)*S)}" y="{_f(oy+(y-ch/2)*S)}" width="{_f(cw*S)}" height="{_f(ch*S)}" fill="#000"/>')
-    L = 13 / 24
-    pts = [(L, -27 + L), (18 - L - 0.9, -27 + L), (18 - L, -7 - L), (L, -7 - L - 0.7)]
-    o.append('<polygon points="' + " ".join(f"{_f(ox+x*S)},{_f(oy+y*S)}" for x, y in pts) + '" fill="none" stroke="#8a4b2a" stroke-width="1.2" stroke-dasharray="3 2"/>')
+    LNG = 13 / 24
+    pts = [(LNG, -27 + LNG), (18 - LNG - 0.9, -27 + LNG), (18 - LNG, -7 - LNG), (LNG, -7 - LNG - 0.7)]
+    o.append('<polygon points="' + " ".join(f"{_f(ox+x*S)},{_f(oy+y*S)}" for x, y in pts) + '" fill="none" stroke="#8a4b2a" stroke-width="1.1" stroke-dasharray="3 2"/>')
     o.append(f'<rect x="{_f(ox-1.4*S)}" y="{_f(oy-28.4*S)}" width="{_f(34.8*S)}" height="{_f(42.8*S)}" fill="none" stroke="#7b5ea7" stroke-width="1.4" stroke-dasharray="7 4"/>')
-    o.append(tag(ox + 25 * S, oy - 24.5 * S, "CREATIVE SUITE", 7.5, "bold", "#7b5ea7"))
-    o.append(tag(ox + 25 * S, oy - 24.5 * S + 9, "studio + study + library", 6.2, "normal", "#7b5ea7"))
+    o.append(tag(ox + 25.5 * S, oy - 24.5 * S, "CREATIVE SUITE", 7.5, "bold", "#7b5ea7"))
+    o.append(tag(ox + 25.5 * S, oy - 24.5 * S + 9, "studio + study + library", 6.2, "normal", "#7b5ea7"))
     o.append(f'<rect x="{_f(ox+80.6*S)}" y="{_f(oy-1.6*S)}" width="{_f(18.8*S)}" height="{_f(16*S)}" fill="none" stroke="#1d7a8c" stroke-width="1.4" stroke-dasharray="7 4"/>')
-    o.append(tag(ox + 90 * S, oy - 2.4 * S, "WET CORNER", 7, "bold", "#1d7a8c"))
+    o.append(tag(ox + 90 * S, oy - 2.4 * S, "WET CORNER: TOILET + BATH", 6.4, "bold", "#1d7a8c"))
     o += draw_openings(MAIN, WALLS, S, ox, oy)
-    # labels
+    # labels: underlined room name, clear size below
     for r in room_table():
-        cx = ox + (r["x0"] + r["x1"]) / 2 * S
-        cy = oy + (r["y0"] + r["y1"]) / 2 * S
-        if r["key"] == "PAS":
-            o.append(tag(cx + 30, cy + 2.5, "PASSAGE 3 ft 6 in clear", 5.6, "bold"))
+        if r["key"] not in LABEL_AT:
             continue
-        big = r["key"] in ("HALL", "BED1", "BED2", "KIT", "DIN", "STU")
-        fs = 8 if big else 6
-        if r["key"] in ("WLB", "BTH2"):
-            o.append(f'<g transform="rotate(-90 {_f(cx)} {_f(cy)})">{tag(cx, cy - 1, SHORT[r["key"]], 6, "bold")}{tag(cx, cy + 6.5, fi(r["w"]) + " x " + fi(r["d"]), 5)}</g>')
-            continue
-        o.append(tag(cx, cy - 2, SHORT[r["key"]], fs, "bold"))
-        o.append(tag(cx, cy + fs, f'{fi(r["w"])} x {fi(r["d"])}', fs - 1.5))
-        if big:
-            o.append(tag(cx, cy + 2 * fs + 1, f'{r["area"]} sq ft', fs - 2, fill="#7a5a20"))
-    o.append(tag(ox + 34 * S, oy + 30 * S, "open to dining and kitchen: no partitions,", 5.8, fill="#555"))
-    o.append(tag(ox + 34 * S, oy + 30 * S + 7, "spaces defined by columns, rug and vaulted ceiling", 5.8, fill="#555"))
-    o.append(tag(ox + 71 * S, oy + 37.6 * S, "island 8 ft 0 in x 3 ft 6 in", 5.6, fill="#555"))
-    o.append(f'<rect x="{_f(ox+67*S)}" y="{_f(oy+32.5*S)}" width="{_f(8*S)}" height="{_f(3.5*S)}" fill="none" stroke="#777" stroke-width="0.7"/>')
-    o.append(f'<rect x="{_f(ox+62.4*S)}" y="{_f(oy+17.4*S)}" width="{_f(17.2*S)}" height="{_f(2*S)}" fill="none" stroke="#777" stroke-width="0.6"/>')
-    o.append(tag(ox + 71 * S, oy + 18.9 * S, "counter 2 ft 0 in deep, hob + chimney", 5.2, fill="#555"))
+        lx, ly, fs = LABEL_AT[r["key"]]
+        o.append(label(ox + lx * S, oy + ly * S, NAME[r["key"]], f'{ftin(r["w"])} X {ftin(r["d"])}', fs))
+    o.append(tag(ox + 76 * S, oy + 15.4 * S, "PASSAGE 3'6\"", 5.6, "bold"))
     # grid dimensions, centre line
-    xs = [0, 8, 18, 32, 50, 62, 72, 80, 86, 90, 98]
+    xs = [0, 8, 18, 32, 50, 62, 72, 82, 88, 90, 98]
     for a, b in zip(xs, xs[1:]):
         o += dim_h(a, b, -33, S, ox, oy, ff(b - a, 0))
     o += dim_h(0, 98, -36.5, S, ox, oy, "98 ft 0 in overall on centre lines (outer face 98 ft 9 in)")
@@ -181,9 +199,9 @@ def main_plan():
         o += dim_v(a, b, -2.6, S, ox, oy, ff(b - a, 0))
     o += dim_v(-27, 40, -4.6, S, ox, oy, "67 ft 0 in CL, west face")
     for x in (0, 18, 32, 50, 62, 80, 98):
-        o.append(tag(ox + x * S, oy + 52.5 * S, f"{x}", 6.5, "bold", "#1d4e89"))
-    o.append(tag(ox + 49 * S, oy + 55 * S, "Grid line offsets in feet, measured east from the west wall centre line. Black = 9 in wall, grey = 4½ in partition shown at true thickness; black squares = RCC columns 12 in x 18 in.", 6.2, fill="#333"))
-    o.append(tag(ox + 49 * S, oy + 56.5 * S + 3, "FFL +2 ft 6 in above finished ground at the north porch. Bath, WC, utility, store floors 1 in below room FFL with 1 in 60 falls to floor traps.", 6.2, fill="#333"))
+        o.append(tag(ox + x * S, oy + 60 * S, f"{x}", 6.5, "bold", "#1d4e89"))
+    o.append(tag(ox + 49 * S, oy + 62.5 * S, "Grid line offsets in feet, measured east from the west wall centre line. Black = 9 in wall, grey = 4½ in partition shown at true thickness; black squares = RCC columns 12 in x 18 in.", 6.2, fill="#333"))
+    o.append(tag(ox + 49 * S, oy + 64 * S + 3, "FFL +2 ft 6 in above finished ground at the north porch. Bath, WC, utility, store floors 1 in below room FFL with 1 in 60 falls to floor traps.", 6.2, fill="#333"))
     # north arrow
     nx, ny = W - 34, 40
     o.append(f'<path d="M {nx} {ny-16} L {nx-7} {ny+8} L {nx} {ny+3} L {nx+7} {ny+8} Z" fill="{INK}"/>')
